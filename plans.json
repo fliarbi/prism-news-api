@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "product": "prism_api",
+    "note": "Plan catalog for the Prism News Exploration API (product id `prism_api`). ONE key works on both the general API (prism-news-api) and the business API (prism-business-news-api); quotas are per ACCOUNT per calendar month (UTC). Prices are DRAFT (set 2026-09-13, awaiting owner approval) and EXCLUSIVE of GST. razorpay_plan_id is null until the owner creates the Razorpay plans; until then paid tiers are granted manually.",
+    "quota_fields": "requests_per_month = every authenticated call except /v1/me, /v1/status, /v1/classes*, /v1/vocabulary (free metadata). exports_per_month = full-article bodies delivered (GET /v1/articles/{id} = 1, POST /v1/export = number of articles returned). max_results = hard cap on `limit` for list endpoints. max_export_batch = cap on one POST /v1/export. rate_per_minute = sliding per-account limit. history_days = how far back `since` may go (null = whole corpus). max_keys = active API keys per account.",
+    "defaults": "The owner's stated defaults: 100 headlines per query and 100 full articles per export, on every tier including free."
+  },
+  "free": {
+    "label": "Free",
+    "requests_per_month": 1000,
+    "exports_per_month": 100,
+    "max_results": 100,
+    "max_export_batch": 100,
+    "rate_per_minute": 30,
+    "history_days": 365,
+    "max_keys": 2,
+    "business_api": true,
+    "price_monthly_inr": 0,
+    "price_monthly_usd": 0,
+    "razorpay_plan_id": null
+  },
+  "pro": {
+    "label": "Pro",
+    "requests_per_month": 25000,
+    "exports_per_month": 2500,
+    "max_results": 100,
+    "max_export_batch": 100,
+    "rate_per_minute": 120,
+    "history_days": null,
+    "max_keys": 5,
+    "business_api": true,
+    "price_monthly_inr": 4000,
+    "price_monthly_usd": 49,
+    "razorpay_plan_id": null,
+    "razorpay_plan_id_live": null
+  },
+  "business": {
+    "label": "Business",
+    "requests_per_month": 150000,
+    "exports_per_month": 15000,
+    "max_results": 500,
+    "max_export_batch": 500,
+    "rate_per_minute": 600,
+    "history_days": null,
+    "max_keys": 10,
+    "business_api": true,
+    "price_monthly_inr": 15000,
+    "price_monthly_usd": 180,
+    "razorpay_plan_id": null,
+    "razorpay_plan_id_live": null
+  },
+  "enterprise": {
+    "label": "Enterprise",
+    "requests_per_month": 2000000,
+    "exports_per_month": 200000,
+    "max_results": 1000,
+    "max_export_batch": 1000,
+    "rate_per_minute": 3000,
+    "history_days": null,
+    "max_keys": 25,
+    "business_api": true,
+    "price_monthly_inr": null,
+    "price_monthly_usd": null,
+    "razorpay_plan_id": null,
+    "contact_sales": true
+  }
+}
