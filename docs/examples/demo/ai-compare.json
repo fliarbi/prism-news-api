@@ -1,0 +1,93 @@
+{
+ "name": "ai-compare",
+ "kind": "illustrative",
+ "captured_at": null,
+ "request": {
+  "method": "POST",
+  "path": "/v1/compare",
+  "body": {
+   "queries": [
+    {
+     "name": "AI regulation",
+     "filters": {
+      "q": "AI regulation",
+      "since": "2026-03-02",
+      "until": "2026-04-26"
+     }
+    },
+    {
+     "name": "AI investment",
+     "filters": {
+      "q": "AI investment",
+      "since": "2026-03-02",
+      "until": "2026-04-26"
+     }
+    }
+   ]
+  }
+ },
+ "response": {
+  "ok": true,
+  "feature": "news.compare",
+  "subject": {
+   "queries": [
+    "AI regulation",
+    "AI investment"
+   ]
+  },
+  "data": {
+   "items": [
+    {
+     "name": "AI regulation",
+     "count": 8850,
+     "share_pct": 38.78,
+     "filters": {
+      "since": "2026-03-02",
+      "until": "2026-04-26",
+      "q": "AI regulation",
+      "match": "any"
+     },
+     "window": {
+      "since": "2026-03-02",
+      "until": "2026-04-26",
+      "days": 56
+     }
+    },
+    {
+     "name": "AI investment",
+     "count": 15280,
+     "share_pct": 66.96,
+     "filters": {
+      "since": "2026-03-02",
+      "until": "2026-04-26",
+      "q": "AI investment",
+      "match": "any"
+     },
+     "window": {
+      "since": "2026-03-02",
+      "until": "2026-04-26",
+      "days": 56
+     }
+    }
+   ],
+   "matched": 22820,
+   "share_basis": "articles matching at least one query",
+   "sets_may_overlap": true
+  },
+  "window": {
+   "since": "2026-03-02",
+   "until": "2026-04-26",
+   "days": 56,
+   "data_through": "2026-08-24",
+   "freshness": "volume thins after 2026-05; the last months are partial"
+  },
+  "meta": {
+   "coverage": {
+    "available": true
+   },
+   "notes": [
+    "Illustrative response: fictional articles, publishers and counts in the real response shape."
+   ]
+  }
+ }
+}

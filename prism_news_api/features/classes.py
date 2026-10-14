@@ -10,6 +10,8 @@ is thin the map is still served with `articles_30d: null` and a note rather
 than a 503 — a volume that is absent is not a partial count."""
 from __future__ import annotations
 
+import logging
+
 import time
 
 from .. import ch, config, envelope, filters, quota, taxonomy
@@ -19,6 +21,7 @@ from . import _common as c
 from . import headlines as _headlines
 
 CLASS_LABEL_EXPR = f"arrayMap(x -> x.1, arrayFilter(x -> x.2 > {config.CLASS_THRESHOLD}, classification))"
+log = logging.getLogger("prism_news_api.classes")
 CLASS_CARRIER = f"arrayExists(x -> x.2 > {config.CLASS_THRESHOLD}, classification)"
 
 
@@ -28,7 +31,8 @@ def _volumes() -> tuple[dict | None, str | None, str | None]:
         dt = ch.data_through()
         return c.baseline("classes", CLASS_LABEL_EXPR, CLASS_CARRIER, dt), dt, None
     except ApiError as e:
-        return None, None, f"30-day volumes unavailable: {e.reason[:160]}"
+        log.warning("class volumes unavailable: %s", e.reason)
+        return None, None, "30-day article volumes are temporarily unavailable; codes and paths are complete."
 
 
 def list_classes(p: Principal, q: str | None = None, prefix: str | None = None, limit: int = 5) -> dict:

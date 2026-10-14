@@ -58,6 +58,59 @@ Headline and export requests default to 100; higher limits depend on your plan. 
 
 Read the **[User guide](docs/USER_GUIDE.md)** for authentication, filters, theme drilldown, pagination, exports, comparisons, freshness, quotas, errors and the endpoint reference. The guide is also served as Markdown at `/guide` on your supplied API base. For company events and funding, see the [Business News API guide](https://github.com/fliarbi/prism-business-news-api/blob/main/docs/USER_GUIDE.md).
 
+<!-- demos:start -->
+## See the API in a research UI
+
+[6 animated Claude Code / Codex workflow concepts](docs/ANIMATED_USE_CASES.md) show
+what an assistant can build on this API. They cover theme discovery, a weekly sentiment shift, comparing two topics, critical alerts, GCP content-class codes and full-article export. Each GIF labels saved API
+responses or illustrative data; these are client-built UI concepts, not recordings of
+official client interfaces or claims of live service availability. Open the
+[interactive gallery](docs/demos/index.html) locally for prompts and request recipes.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>EV theme discovery</h3>
+      <a href="docs/demos/media/ev-theme-discovery.gif"><img src="docs/demos/media/ev-theme-discovery.gif" width="420" alt="Discover the themes behind a topic"></a>
+      <p>Ask a broad topic, get ranked themes, then open the coverage behind the strongest one. Illustrative data.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Tariff sentiment shift</h3>
+      <a href="docs/demos/media/tariff-sentiment.gif"><img src="docs/demos/media/tariff-sentiment.gif" width="420" alt="Watch the tone of a story change week by week"></a>
+      <p>See when a story turned, how far it moved from the archive norm, and which headlines drove it. Illustrative data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Compare two topics</h3>
+      <a href="docs/demos/media/ai-topic-compare.gif"><img src="docs/demos/media/ai-topic-compare.gif" width="420" alt="Compare two narratives over the same window"></a>
+      <p>Put two narratives on one scale, with exact overlap and per-topic criticality. Illustrative data.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Critical news alerts</h3>
+      <a href="docs/demos/media/critical-alerts.gif"><img src="docs/demos/media/critical-alerts.gif" width="420" alt="Surface the critical stories in a busy topic"></a>
+      <p>Quantify how much of a topic is urgent, then read just those stories. Illustrative data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>GCP class code map</h3>
+      <a href="docs/demos/media/class-code-map.gif"><img src="docs/demos/media/class-code-map.gif" width="420" alt="Turn a topic into GCP content-class codes"></a>
+      <p>Find the right content-class codes by name, then filter any endpoint by them. Saved API responses.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Full articles to CSV</h3>
+      <a href="docs/demos/media/full-article-export.gif"><img src="docs/demos/media/full-article-export.gif" width="420" alt="Export full article text to a spreadsheet"></a>
+      <p>Move from a filter to full article text in a file your analysis tools can read. Illustrative data.</p>
+    </td>
+  </tr>
+</table>
+<!-- demos:end -->
+
+
+
+
+
 ## Running the service
 
 Copy `.env.example` to `.env` and fill in the deployment's addresses, credentials and table names. `.env` is never committed. Then:

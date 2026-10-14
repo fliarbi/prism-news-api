@@ -1,0 +1,319 @@
+{
+ "name": "tariff-sentiment",
+ "kind": "illustrative",
+ "captured_at": null,
+ "request": {
+  "method": "POST",
+  "path": "/v1/sentiment",
+  "body": {
+   "q": "tariffs",
+   "since": "2026-03-02",
+   "until": "2026-04-26",
+   "granularity": "weekly"
+  }
+ },
+ "response": {
+  "ok": true,
+  "feature": "news.sentiment",
+  "subject": {
+   "filters": {
+    "since": "2026-03-02",
+    "until": "2026-04-26",
+    "limit": 100,
+    "sort": "newest",
+    "match": "any",
+    "q": "tariffs"
+   },
+   "granularity": "weekly"
+  },
+  "data": {
+   "matched": 18930,
+   "carrying": 17460,
+   "carrier_share_pct": 92.23,
+   "labels": [
+    {
+     "label": "extreme_neg",
+     "group": "negative",
+     "count": 0,
+     "share": 0.0
+    },
+    {
+     "label": "very_neg",
+     "group": "negative",
+     "count": 4296,
+     "share": 24.6
+    },
+    {
+     "label": "fair_neg",
+     "group": "negative",
+     "count": 3341,
+     "share": 19.14
+    },
+    {
+     "label": "slight_neg",
+     "group": "negative",
+     "count": 1913,
+     "share": 10.96
+    },
+    {
+     "label": "none",
+     "group": "neutral",
+     "count": 2310,
+     "share": 13.23
+    },
+    {
+     "label": "slight_pos",
+     "group": "positive",
+     "count": 3360,
+     "share": 19.24
+    },
+    {
+     "label": "fair_pos",
+     "group": "positive",
+     "count": 2240,
+     "share": 12.83
+    },
+    {
+     "label": "very_pos",
+     "group": "positive",
+     "count": 0,
+     "share": 0.0
+    },
+    {
+     "label": "extreme_pos",
+     "group": "positive",
+     "count": 0,
+     "share": 0.0
+    }
+   ],
+   "groups": [
+    {
+     "group": "negative",
+     "count": 9550,
+     "share": 54.7
+    },
+    {
+     "group": "neutral",
+     "count": 2310,
+     "share": 13.23
+    },
+    {
+     "group": "positive",
+     "count": 5600,
+     "share": 32.07
+    }
+   ],
+   "negative_to_positive_ratio": 1.71,
+   "baseline": {
+    "since": "2026-07-26",
+    "until": "2026-08-24",
+    "days": 30,
+    "articles": 1800000,
+    "carrying": 1700000,
+    "note": "Archive comparison over the 30 days ending at data_through",
+    "groups": {
+     "negative": {
+      "count": 610000,
+      "share": 35.88
+     },
+     "neutral": {
+      "count": 330000,
+      "share": 19.41
+     },
+     "positive": {
+      "count": 760000,
+      "share": 44.71
+     }
+    },
+    "negative_to_positive_ratio": 0.8
+   },
+   "vs_baseline_ratio": 2.13,
+   "granularity": "weekly",
+   "timeline": [
+    {
+     "period": "2026-03-02",
+     "total": 1210,
+     "negative": 520,
+     "neutral": 240,
+     "positive": 450,
+     "negative_share": 42.98,
+     "positive_share": 37.19,
+     "labels": {
+      "extreme_neg": 0,
+      "very_neg": 234,
+      "fair_neg": 182,
+      "slight_neg": 104,
+      "none": 240,
+      "slight_pos": 270,
+      "fair_pos": 180,
+      "very_pos": 0,
+      "extreme_pos": 0
+     },
+     "partial_period": false
+    },
+    {
+     "period": "2026-03-09",
+     "total": 1340,
+     "negative": 610,
+     "neutral": 250,
+     "positive": 480,
+     "negative_share": 45.52,
+     "positive_share": 35.82,
+     "labels": {
+      "extreme_neg": 0,
+      "very_neg": 274,
+      "fair_neg": 213,
+      "slight_neg": 123,
+      "none": 250,
+      "slight_pos": 288,
+      "fair_pos": 192,
+      "very_pos": 0,
+      "extreme_pos": 0
+     },
+     "partial_period": false
+    },
+    {
+     "period": "2026-03-16",
+     "total": 2980,
+     "negative": 1810,
+     "neutral": 270,
+     "positive": 900,
+     "negative_share": 60.74,
+     "positive_share": 30.2,
+     "labels": {
+      "extreme_neg": 0,
+      "very_neg": 814,
+      "fair_neg": 633,
+      "slight_neg": 363,
+      "none": 270,
+      "slight_pos": 540,
+      "fair_pos": 360,
+      "very_pos": 0,
+      "extreme_pos": 0
+     },
+     "partial_period": false
+    },
+    {
+     "period": "2026-03-23",
+     "total": 3420,
+     "negative": 2140,
+     "neutral": 300,
+     "positive": 980,
+     "negative_share": 62.57,
+     "positive_share": 28.65,
+     "labels": {
+      "extreme_neg": 0,
+      "very_neg": 963,
+      "fair_neg": 749,
+      "slight_neg": 428,
+      "none": 300,
+      "slight_pos": 588,
+      "fair_pos": 392,
+      "very_pos": 0,
+      "extreme_pos": 0
+     },
+     "partial_period": false
+    },
+    {
+     "period": "2026-03-30",
+     "total": 2650,
+     "negative": 1520,
+     "neutral": 290,
+     "positive": 840,
+     "negative_share": 57.36,
+     "positive_share": 31.7,
+     "labels": {
+      "extreme_neg": 0,
+      "very_neg": 684,
+      "fair_neg": 532,
+      "slight_neg": 304,
+      "none": 290,
+      "slight_pos": 504,
+      "fair_pos": 336,
+      "very_pos": 0,
+      "extreme_pos": 0
+     },
+     "partial_period": false
+    },
+    {
+     "period": "2026-04-06",
+     "total": 2210,
+     "negative": 1180,
+     "neutral": 310,
+     "positive": 720,
+     "negative_share": 53.39,
+     "positive_share": 32.58,
+     "labels": {
+      "extreme_neg": 0,
+      "very_neg": 531,
+      "fair_neg": 413,
+      "slight_neg": 236,
+      "none": 310,
+      "slight_pos": 432,
+      "fair_pos": 288,
+      "very_pos": 0,
+      "extreme_pos": 0
+     },
+     "partial_period": false
+    },
+    {
+     "period": "2026-04-13",
+     "total": 1890,
+     "negative": 930,
+     "neutral": 330,
+     "positive": 630,
+     "negative_share": 49.21,
+     "positive_share": 33.33,
+     "labels": {
+      "extreme_neg": 0,
+      "very_neg": 418,
+      "fair_neg": 325,
+      "slight_neg": 187,
+      "none": 330,
+      "slight_pos": 378,
+      "fair_pos": 252,
+      "very_pos": 0,
+      "extreme_pos": 0
+     },
+     "partial_period": false
+    },
+    {
+     "period": "2026-04-20",
+     "total": 1760,
+     "negative": 840,
+     "neutral": 320,
+     "positive": 600,
+     "negative_share": 47.73,
+     "positive_share": 34.09,
+     "labels": {
+      "extreme_neg": 0,
+      "very_neg": 378,
+      "fair_neg": 294,
+      "slight_neg": 168,
+      "none": 320,
+      "slight_pos": 360,
+      "fair_pos": 240,
+      "very_pos": 0,
+      "extreme_pos": 0
+     },
+     "partial_period": false
+    }
+   ]
+  },
+  "window": {
+   "since": "2026-03-02",
+   "until": "2026-04-26",
+   "days": 56,
+   "data_through": "2026-08-24",
+   "freshness": "volume thins after 2026-05; the last months are partial"
+  },
+  "meta": {
+   "coverage": {
+    "available": true
+   },
+   "notes": [
+    "Illustrative response: fictional articles, publishers and counts in the real response shape."
+   ]
+  }
+ }
+}

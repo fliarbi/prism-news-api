@@ -29,3 +29,13 @@ def test_smoke_csv_header_matches_export():
     smoke = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(smoke)
     assert smoke.CSV_COLUMNS == export.CSV_COLUMNS
+
+
+def test_engine_errors_in_notes_are_replaced():
+    from prism_news_api.public import response
+    raw = ('30-day volumes unavailable: the corpus is not fully available right now; no partial answer is returned. '
+           'CHError: CH 500: ["Code: 279. DB::Exception: All connection tries failed.')
+    out = response({"ok": True, "data": {}, "meta": {"notes": [raw, "volume thins after 2026-05"]}})
+    text = " ".join(out["meta"]["notes"])
+    assert "CHError" not in text and "DB::" not in text and "Code: 279" not in text
+    assert "volume thins after 2026-05" in text

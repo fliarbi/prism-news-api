@@ -1,0 +1,130 @@
+{
+ "name": "semiconductor-priority",
+ "kind": "illustrative",
+ "captured_at": null,
+ "request": {
+  "method": "POST",
+  "path": "/v1/priority",
+  "body": {
+   "q": "semiconductor",
+   "since": "2026-03-02",
+   "until": "2026-04-26"
+  }
+ },
+ "response": {
+  "ok": true,
+  "feature": "news.priority",
+  "subject": {
+   "filters": {
+    "since": "2026-03-02",
+    "until": "2026-04-26",
+    "limit": 100,
+    "sort": "newest",
+    "match": "any",
+    "q": "semiconductor"
+   }
+  },
+  "data": {
+   "matched": 8600,
+   "carrying": 8500,
+   "carrier_share_pct": 98.84,
+   "bands": [
+    {
+     "band": 1,
+     "count": 0,
+     "share": 0.0,
+     "critical": false,
+     "baseline_share": 0.4
+    },
+    {
+     "band": 2,
+     "count": 30,
+     "share": 0.35,
+     "critical": false,
+     "baseline_share": 2.1
+    },
+    {
+     "band": 3,
+     "count": 210,
+     "share": 2.47,
+     "critical": false,
+     "baseline_share": 6.3
+    },
+    {
+     "band": 4,
+     "count": 1840,
+     "share": 21.65,
+     "critical": false,
+     "baseline_share": 22.0
+    },
+    {
+     "band": 5,
+     "count": 2630,
+     "share": 30.94,
+     "critical": false,
+     "baseline_share": 31.5
+    },
+    {
+     "band": 6,
+     "count": 1910,
+     "share": 22.47,
+     "critical": false,
+     "baseline_share": 21.0
+    },
+    {
+     "band": 7,
+     "count": 1240,
+     "share": 14.59,
+     "critical": true,
+     "baseline_share": 11.4
+    },
+    {
+     "band": 8,
+     "count": 520,
+     "share": 6.12,
+     "critical": true,
+     "baseline_share": 4.4
+    },
+    {
+     "band": 9,
+     "count": 120,
+     "share": 1.41,
+     "critical": true,
+     "baseline_share": 0.9
+    }
+   ],
+   "critical": {
+    "min_band": 7,
+    "count": 1880,
+    "share": 22.12
+   },
+   "mean_priority": 5.1,
+   "baseline": {
+    "since": "2026-07-26",
+    "until": "2026-08-24",
+    "days": 30,
+    "articles": 1800000,
+    "carrying": 1700000,
+    "note": "Archive comparison over the 30 days ending at data_through",
+    "critical_share": 16.7,
+    "mean_priority": 4.9
+   },
+   "vs_baseline_critical": 1.32
+  },
+  "window": {
+   "since": "2026-03-02",
+   "until": "2026-04-26",
+   "days": 56,
+   "data_through": "2026-08-24",
+   "freshness": "volume thins after 2026-05; the last months are partial"
+  },
+  "meta": {
+   "coverage": {
+    "available": true
+   },
+   "notes": [
+    "Illustrative response: fictional articles, publishers and counts in the real response shape."
+   ]
+  }
+ }
+}

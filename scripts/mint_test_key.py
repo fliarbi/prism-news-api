@@ -3,7 +3,7 @@
 
 Production keys are issued by the dashboard blueprint (radar :5100
 /api_keys/create). This script exists so the API can be smoke-tested before
-that ships. It writes exactly the document shape in docs/DESIGN.md §2 and
+that ships. It writes the api_keys document shape the API reads and
 prints the key ONCE; only its SHA-256 is stored.
 
     python3 scripts/mint_test_key.py you@example.com --name "smoke test"

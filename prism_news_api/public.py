@@ -18,7 +18,8 @@ _INTERNAL = re.compile(
     r"\btags\b|country_pri|pri_organization|pri_person|target_id|collection_name|"
     + _configured_names() +
     r"|/home/|/mnt/|/srv/|127\.0\.0\.1|\b(?:10|192\.168|172\.(?:1[6-9]|2\d|3[01])|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7]))\.\d{1,3}\.\d{1,3}|"
-    r"\bSELECT\b.+\bFROM\b|article.store|\bnode\s+\d+", re.I)
+    r"\bSELECT\b.+\bFROM\b|article.store|\bnode\s+\d+|"
+    r"\bCH\s*\d{3}\b|\w+Error\b|\w*Exception\b|DB::|Code:\s*\d+|Traceback|connection tries", re.I)
 _PRIVATE_KEYS = {"table", "tables", "article_store", "sql", "extra_sql", "query_sql", "subcats",
                  "tags", "collection_name", "strict_shard_read", "ring_nodes", "node",
                  "expected", "floor", "ttl_seconds", "checked_at", "address", "host"}

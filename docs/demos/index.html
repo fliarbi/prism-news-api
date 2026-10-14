@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Prism News workflow gallery</title>
+  <meta name="description" content="6 animated research UI concepts for the Prism News API: theme discovery, sentiment shifts, topic comparison, critical alerts, content-class codes and full-article export.">
+  <link rel="stylesheet" href="demo.css">
+  <script src="demo-data.js" defer></script><script src="gallery.js" defer></script>
+</head>
+<body class="gallery-body">
+  <header class="gallery-top"><span class="prism-mark" aria-hidden="true"></span><a class="wordmark" href="index.html" style="color:inherit;text-decoration:none">Prism News</a><span class="top-divider" aria-hidden="true"></span><span class="top-name">Workflow gallery</span><span class="private">Private preview</span></header>
+  <main class="gallery-main">
+    <div class="gallery-intro"><h1>See what a connected<br>news assistant can build.</h1><p>Write a brief in Claude Code or Codex. The Prism News API supplies filtered headlines, themes, tone, priority and full articles; your client turns them into a useful view.</p></div>
+    <div class="gallery-grid">
+      <nav class="story-tabs" id="story-tabs" aria-label="Choose a workflow"></nav>
+      <div>
+        <section class="gallery-player" aria-label="Animated workflow demonstration">
+          <img id="demo-image" width="1280" height="800" src="media/ev-theme-discovery.png" alt="Discover the themes behind a topic">
+          <div class="player-controls"><button id="play" class="primary" type="button">Play animation</button><button id="replay" type="button">Replay</button><span id="duration"></span><a id="download" href="media/ev-theme-discovery.gif" download>Download GIF</a><a id="poster" href="media/ev-theme-discovery.png" download>Still image</a><a id="full-size" href="media/ev-theme-discovery.gif" target="_blank" rel="noopener">Open full size</a></div>
+        </section>
+        <div class="gallery-detail">
+          <section><h2>Try this research brief</h2><p class="prompt-card" id="prompt"></p><div class="prompt-actions"><button class="copy-prompt" id="copy-prompt" type="button">Copy prompt</button><span id="copy-status" class="copy-status" role="status" aria-live="polite"></span></div></section>
+          <section class="evidence-card"><span id="data-label" class="data-label"></span><h2>What you would see</h2><p id="takeaway"></p><p id="data-note" style="margin-top:10px"></p><a id="guide" href="../USER_GUIDE.md#discover-themes-and-read-articles">Read the API guide</a><details class="recipe"><summary>Inspect the request recipe</summary><pre id="recipe"></pre></details></section>
+        </div>
+        <div class="disclosure"><p><b>These are UI concepts, not recordings of the official Claude Code or Codex interfaces.</b> Each GIF opens with a large typed prompt, slides the search box away and presents a full-screen chart followed by detailed results. The request recipes beneath the player are the API calls behind each view. The page makes no API calls and stores no credentials.</p><p>Green badges cite saved API responses. Purple badges mark illustrative fixtures: fictional articles, publishers (.example domains) and counts in the exact response shape, used while the archive cannot be captured in full. Rerunning scripts/capture_demo_examples.py replaces them with real captures.</p><p><a href="../ANIMATED_USE_CASES.md">Read all 6 walkthroughs and provenance notes</a></p></div>
+      </div>
+    </div>
+    <noscript><p class="no-js">Enable JavaScript to use the gallery, or browse <a href="../ANIMATED_USE_CASES.md">all GIFs and their text descriptions</a>.</p></noscript>
+  </main>
+</body>
+</html>
