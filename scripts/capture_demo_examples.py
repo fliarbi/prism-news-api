@@ -38,7 +38,7 @@ CAPTURES: dict[str, tuple[str, str, dict]] = {
                                                       "themes": {"$from": "ev-themes", "$theme": 0}}),
     "tariff-sentiment": ("POST", "/v1/sentiment", {"q": "tariffs", **WINDOW, "granularity": "weekly"}),
     "tariff-negative-headlines": ("POST", "/v1/headlines", {"q": "tariffs", **WINDOW, "sentiment": ["negative"],
-                                                            "priority_min": 7, "limit": 6}),
+                                                            "priority_min": 6, "limit": 20}),
     "ai-compare": ("POST", "/v1/compare", {"queries": [
         {"name": "AI regulation", "filters": {"q": "AI regulation", **WINDOW}},
         {"name": "AI investment", "filters": {"q": "AI investment", **WINDOW}}]}),
@@ -46,10 +46,10 @@ CAPTURES: dict[str, tuple[str, str, dict]] = {
     "ai-investment-trends": ("POST", "/v1/trends", {"q": "AI investment", **WINDOW, "granularity": "weekly"}),
     "semiconductor-priority": ("POST", "/v1/priority", {"q": "semiconductor", **WINDOW}),
     "semiconductor-critical": ("POST", "/v1/headlines", {"q": "semiconductor", **WINDOW, "priority_min": 7,
-                                                         "limit": 6}),
+                                                         "limit": 20}),
     "class-map-vehicle": ("GET", "/v1/classes", {"q": "vehicle", "limit": 5}),
     "class-map-banking": ("GET", "/v1/classes", {"q": "banking", "limit": 5}),
-    "battery-export": ("POST", "/v1/export", {"q": "battery recycling", **WINDOW, "limit": 5, "format": "json"}),
+    "battery-export": ("POST", "/v1/export", {"q": "battery storage", **WINDOW, "limit": 15, "format": "json"}),
 }
 
 PRIVATE_META = ("plan", "quota", "key", "account")
@@ -98,6 +98,8 @@ def capture(base: str, key: str, name: str) -> str:
         return f"not captured: HTTP {status} {(payload.get('error') or {}).get('kind')}"
     payload["meta"] = {k: v for k, v in (payload.get("meta") or {}).items() if k not in PRIVATE_META}
     record = {"name": name, "kind": "captured",
+              # set with PRISM_PARTIAL_CAPTURE runs, e.g. "93% of archive rows (1 of 14 shards offline)"
+              **({"coverage_note": os.environ["PRISM_CAPTURE_COVERAGE"]} if os.environ.get("PRISM_CAPTURE_COVERAGE") else {}),
               "captured_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
               "request": {"method": method, "path": path, "body": body}, "response": payload}
     DEST.mkdir(parents=True, exist_ok=True)

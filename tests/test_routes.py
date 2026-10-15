@@ -465,3 +465,25 @@ def test_theme_previous_period_does_not_read_beyond_plan_history(client):
     assert data["previous_period"] is None
     assert all(i["previous_period_count"] is None and i["delta_pct"] is None for i in data["items"])
     assert not any("2025-07-" in sql for sql in client.fake.sql)
+
+
+def test_partial_capture_is_off_by_default_and_only_relaxes_the_gate_when_set(monkeypatch):
+    from prism_news_api import ch, config
+    from prism_news_api.envelope import ApiError
+    assert config.PARTIAL_CAPTURE is False and ch._params(None)["skip_unavailable_shards"] == "0"
+    monkeypatch.setattr(ch, "coverage", lambda force=False: {"partial": True, "rows": 90, "expected": 100})
+    import pytest as _pytest
+    with _pytest.raises(ApiError):
+        ch.require_coverage()
+    monkeypatch.setattr(config, "PARTIAL_CAPTURE", True)
+    assert ch._params(None)["skip_unavailable_shards"] == "1"
+    assert ch.require_coverage()["rows"] == 90
+
+
+def test_export_delivers_republished_copies_once(client, monkeypatch, fake_redis):
+    ids = list(REC)[:2]
+    copy = {**REC[ids[0]], "url": REC[ids[0]]["url"] + "-176/"}
+    monkeypatch.setattr(articles, "resolve", lambda req, full=False: ({req[0]: REC[ids[0]], req[1]: copy}, []))
+    b = client.post("/v1/export", json={"limit": 2}, headers=H(client)).json()
+    assert b["data"]["returned"] == 1 and b["data"]["duplicates_dropped"] == 1 and b["data"]["charged_exports"] == 1
+    assert fake_redis.get(f"pna:exp:u:{principal_id()}:{quota.month_key()}") == "1"

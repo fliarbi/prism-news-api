@@ -72,24 +72,24 @@ official client interfaces or claims of live service availability. Open the
     <td width="50%" valign="top">
       <h3>EV theme discovery</h3>
       <a href="docs/demos/media/ev-theme-discovery.gif"><img src="docs/demos/media/ev-theme-discovery.gif" width="420" alt="Discover the themes behind a topic"></a>
-      <p>Ask a broad topic, get ranked themes, then open the coverage behind the strongest one. Illustrative data.</p>
+      <p>Ask a broad topic, get ranked themes, then open the coverage behind the strongest one. Saved API responses.</p>
     </td>
     <td width="50%" valign="top">
       <h3>Tariff sentiment shift</h3>
       <a href="docs/demos/media/tariff-sentiment.gif"><img src="docs/demos/media/tariff-sentiment.gif" width="420" alt="Watch the tone of a story change week by week"></a>
-      <p>See when a story turned, how far it moved from the archive norm, and which headlines drove it. Illustrative data.</p>
+      <p>See when a story turned, how far it moved from the archive norm, and which headlines drove it. Saved API responses.</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>Compare two topics</h3>
       <a href="docs/demos/media/ai-topic-compare.gif"><img src="docs/demos/media/ai-topic-compare.gif" width="420" alt="Compare two narratives over the same window"></a>
-      <p>Put two narratives on one scale, with exact overlap and per-topic criticality. Illustrative data.</p>
+      <p>Put two narratives on one scale, with exact overlap and per-topic criticality. Saved API responses.</p>
     </td>
     <td width="50%" valign="top">
       <h3>Critical news alerts</h3>
       <a href="docs/demos/media/critical-alerts.gif"><img src="docs/demos/media/critical-alerts.gif" width="420" alt="Surface the critical stories in a busy topic"></a>
-      <p>Quantify how much of a topic is urgent, then read just those stories. Illustrative data.</p>
+      <p>Quantify how much of a topic is urgent, then read just those stories. Saved API responses.</p>
     </td>
   </tr>
   <tr>
@@ -101,15 +101,11 @@ official client interfaces or claims of live service availability. Open the
     <td width="50%" valign="top">
       <h3>Full articles to CSV</h3>
       <a href="docs/demos/media/full-article-export.gif"><img src="docs/demos/media/full-article-export.gif" width="420" alt="Export full article text to a spreadsheet"></a>
-      <p>Move from a filter to full article text in a file your analysis tools can read. Illustrative data.</p>
+      <p>Move from a filter to full article text in a file your analysis tools can read. Saved API responses.</p>
     </td>
   </tr>
 </table>
 <!-- demos:end -->
-
-
-
-
 
 ## Running the service
 

@@ -17,13 +17,17 @@ screen. The [walkthroughs](../ANIMATED_USE_CASES.md) explain each case.
 
 ## Data
 
-Five of the six news demos currently read **illustrative fixtures** (fictional
-articles, `.example` publishers and counts in the exact response shape), written by
-`scripts/illustrative_demo_fixtures.py`, because the news archive could not be read in
-full when the demos were built and the API correctly refuses partial answers. The
-class-code demo uses captured responses. When the archive is available, run the
-capture step: every successful capture replaces its fixture, and the badge of each story
-switches from "Illustrative data" to "Captured data" on the next build.
+All six news demos read **captured responses** (15 Oct 2026). They were captured
+while one of the archive's 14 shards was offline: 93% of rows were readable, and part
+of the article store was unreachable. The capture ran with `PRISM_PARTIAL_CAPTURE=1`, a
+demo-capture switch that is off by default and must never be set on a serving
+deployment, so every count shown is a lower bound and each badge says so. Headline and
+export demos state how many matching articles could not be fetched. Re-run the capture
+with the archive fully available (and without the switch) to replace them.
+
+`scripts/illustrative_demo_fixtures.py` can still write fictional stand-ins in the real
+response shape (labelled "Illustrative data") for any capture that is missing; it
+never overwrites a real capture.
 
 Saved responses live in [../examples/demo/](../examples/demo/). Plan, quota and key
 details are stripped before saving; the checker fails if account data appears.
@@ -36,6 +40,8 @@ WebSocket), Chrome/Chromium, FFmpeg with GIF palette filters, and Pillow. Set
 
 ```bash
 PRISM_API_BASE=http://127.0.0.1:8800 PRISM_API_KEY=pna_... python3 scripts/capture_demo_examples.py
+# during a shard outage only, against a separate capture instance started with PRISM_PARTIAL_CAPTURE=1:
+#   PRISM_CAPTURE_COVERAGE="93% of archive rows (1 of 14 shards offline)" python3 scripts/capture_demo_examples.py
 python3 scripts/build_use_case_demos.py
 node scripts/render_use_case_demos.mjs --inspect     # layout check frames in qa/private/inspect
 node scripts/render_use_case_demos.mjs --fps 10      # GIFs + posters

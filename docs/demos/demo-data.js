@@ -6,18 +6,18 @@ window.PRISM_DEMOS = [
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Request activity is animated; no live requests run.",
     "id": "ev-theme-discovery",
     "brand": "Prism News",
-    "kind": "illustrative",
-    "badge": "Illustrative data · fictional articles and counts",
+    "kind": "captured",
+    "badge": "Captured data · 15 Oct 2026 · 93% of archive rows",
     "sources": [
       {
         "file": "../examples/demo/ev-themes.json",
-        "sha256": "c96f14d92ac1862a42b18d613f62144063da22565aa3bacd1dc9f20d399b1b57",
-        "kind": "illustrative"
+        "sha256": "56c335a95d92406736c0f6505e8183bf70f1147f59f2355757e3f2c75562e56e",
+        "kind": "captured"
       },
       {
         "file": "../examples/demo/ev-theme-headlines.json",
-        "sha256": "b71f0edf7a2bb74128f44fec948dc849e7533c59fc29312c344362b4ae351618",
-        "kind": "illustrative"
+        "sha256": "f60920a8ca5712d8a80c48388299519971d2ebc585083be61e82c32cfaa3a42d",
+        "kind": "captured"
       }
     ],
     "nav": "EV theme discovery",
@@ -48,7 +48,7 @@ window.PRISM_DEMOS = [
           "until": "2026-04-26",
           "limit": 6,
           "themes": [
-            "charging network buildout"
+            "new model year updates and changes"
           ]
         },
         "label": "Read the selected theme's headlines"
@@ -62,51 +62,52 @@ window.PRISM_DEMOS = [
     "overview": {
       "type": "bars",
       "title": "Five themes behind electric-vehicle coverage",
-      "subtitle": "Ranked by lift over the 30-day archive share · 3,870 matching articles",
+      "labelWidth": 500,
+      "subtitle": "Ranked by lift over the 30-day archive share · 13,389 matching articles",
       "axisLabel": "Lift: theme share vs archive share",
       "rows": [
         {
-          "label": "Charging network buildout",
-          "sub": "412 articles · +25% vs previous period",
-          "value": 4.1,
-          "display": "4.1× lift"
+          "label": "New model year updates and changes",
+          "sub": "1,388 articles · +235% vs previous period",
+          "value": 392.35,
+          "display": "392× lift"
         },
         {
-          "label": "Battery supply agreements",
-          "sub": "366 articles · +25% vs previous period",
-          "value": 3.2,
-          "display": "3.2× lift"
+          "label": "Hybrid vs electric vehicle reviews",
+          "sub": "659 articles · -20% vs previous period",
+          "value": 0,
+          "display": "new vs baseline"
         },
         {
-          "label": "EV price cuts and incentives",
-          "sub": "298 articles · +25% vs previous period",
-          "value": 2.7,
-          "display": "2.7× lift"
+          "label": "Electric vehicle (EV) technology and…",
+          "sub": "2,960 articles · +46% vs previous period",
+          "value": 193.09,
+          "display": "193× lift"
         },
         {
-          "label": "Autonomous driving pilots",
-          "sub": "171 articles · +25% vs previous period",
-          "value": 1.9,
-          "display": "1.9× lift"
+          "label": "Hybrid electric vehicle (HEV)…",
+          "sub": "510 articles · +59% vs previous period",
+          "value": 432.49,
+          "display": "432× lift"
         },
         {
-          "label": "Plant retooling and jobs",
-          "sub": "143 articles · +25% vs previous period",
-          "value": 1.6,
-          "display": "1.6× lift"
+          "label": "Luxury SUV interior design & technology",
+          "sub": "457 articles · +376% vs previous period",
+          "value": 387.54,
+          "display": "388× lift"
         }
       ],
       "stats": [
         {
-          "value": "3,870",
+          "value": "13,389",
           "label": "matching articles"
         },
         {
-          "value": "2,140",
+          "value": "9,626",
           "label": "carry theme labels"
         },
         {
-          "value": "55%",
+          "value": "72%",
           "label": "theme coverage"
         },
         {
@@ -117,12 +118,12 @@ window.PRISM_DEMOS = [
     },
     "detail": {
       "type": "cards",
-      "title": "Headlines for “charging network buildout”",
-      "subtitle": "222 matching headlines · newest first · sentiment and priority kept",
+      "title": "Headlines for “new model year updates and changes”",
+      "subtitle": "1,388 matching headlines · newest first · sentiment and priority kept",
       "items": [
         {
-          "headline": "Northwind Motors opens 400 fast-charging bays along the coastal corridor",
-          "meta": "dailyauto.example · 24 Apr",
+          "headline": "Renault developing new 1.2-litre MPFi engine for Bridger - Introduction | Autocar India",
+          "meta": "autocarindia.com · 25 Apr",
           "tags": [
             {
               "text": "fair pos",
@@ -133,105 +134,69 @@ window.PRISM_DEMOS = [
               "tone": ""
             },
             {
-              "text": "class 63",
+              "text": "class 638",
               "tone": ""
             }
           ]
         },
         {
-          "headline": "City council approves curbside chargers for apartment districts",
-          "meta": "metro-ledger.example · 22 Apr",
+          "headline": "Mercedes-Benz CLA EV India Launch Price, Range, Features",
+          "meta": "motorbeam.com · 25 Apr",
+          "tags": [
+            {
+              "text": "fair pos",
+              "tone": "positive"
+            },
+            {
+              "text": "priority 5",
+              "tone": ""
+            },
+            {
+              "text": "class 425",
+              "tone": ""
+            }
+          ]
+        },
+        {
+          "headline": "New Mercedes CLA Electric India Launch Price Rs 55 L - Up To 792 Km Range",
+          "meta": "rushlane.com · 25 Apr",
+          "tags": [
+            {
+              "text": "fair pos",
+              "tone": "positive"
+            },
+            {
+              "text": "priority 6",
+              "tone": ""
+            },
+            {
+              "text": "class 425",
+              "tone": ""
+            }
+          ]
+        },
+        {
+          "headline": "Forget the new BYD Atto 3! An even newer one has just arrived | Auto Express",
+          "meta": "autoexpress.co.uk · 24 Apr",
           "tags": [
             {
               "text": "slight pos",
               "tone": "positive"
             },
             {
-              "text": "priority 5",
-              "tone": ""
-            },
-            {
-              "text": "class 63",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Charging operator Voltway raises tariffs at highway sites",
-          "meta": "energywire.example · 17 Apr",
-          "tags": [
-            {
-              "text": "slight neg",
-              "tone": "negative"
-            },
-            {
               "text": "priority 6",
               "tone": ""
             },
             {
-              "text": "class 63",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Fleet operators report longer queues at urban charging hubs",
-          "meta": "logistics-today.example · 9 Apr",
-          "tags": [
-            {
-              "text": "fair neg",
-              "tone": "negative"
-            },
-            {
-              "text": "priority 5",
-              "tone": ""
-            },
-            {
-              "text": "class 63",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Contoso Energy and Northwind sign shared charging-network deal",
-          "meta": "dailyauto.example · 30 Mar",
-          "tags": [
-            {
-              "text": "fair pos",
-              "tone": "positive"
-            },
-            {
-              "text": "priority 7",
-              "tone": "warn"
-            },
-            {
-              "text": "class 63",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Regional grid operator studies peak load from new charging sites",
-          "meta": "energywire.example · 11 Mar",
-          "tags": [
-            {
-              "text": "none",
-              "tone": "neutral"
-            },
-            {
-              "text": "priority 5",
-              "tone": ""
-            },
-            {
-              "text": "class 63",
+              "text": "class 176",
               "tone": ""
             }
           ]
         }
       ],
-      "note": "Headlines omit theme metadata; the theme was selected through discovery and passed as a filter."
+      "note": "Headlines omit theme metadata; the theme was selected through discovery and passed as a filter. 2 matching article(s) were unavailable from the article store at capture."
     },
-    "footnote": "Lift is relative prominence against a 30-day archive baseline, not a reliability score.",
+    "footnote": "Lower-bound counts (1 of 14 shards offline). Lift compares with a 30-day archive baseline ending at data_through, when ingest is thin; it is relative prominence, not reliability.",
     "takeaway": "Ask a broad topic, get ranked themes, then open the coverage behind the strongest one.",
     "evidence_summary": "Theme discovery plus headlines for the top theme",
     "guide": "../USER_GUIDE.md#discover-themes-and-read-articles"
@@ -243,25 +208,25 @@ window.PRISM_DEMOS = [
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Request activity is animated; no live requests run.",
     "id": "tariff-sentiment",
     "brand": "Prism News",
-    "kind": "illustrative",
-    "badge": "Illustrative data · fictional articles and counts",
+    "kind": "captured",
+    "badge": "Captured data · 15 Oct 2026 · 93% of archive rows",
     "sources": [
       {
         "file": "../examples/demo/tariff-sentiment.json",
-        "sha256": "fd5ee4c8e20ae002fd00b8e35997539e488d43c8f445d57eb5da3b279cc0319f",
-        "kind": "illustrative"
+        "sha256": "f949165156cddd30af9949fc8e14af44c363545454b89b89170d2667a064da01",
+        "kind": "captured"
       },
       {
         "file": "../examples/demo/tariff-negative-headlines.json",
-        "sha256": "230a8f54adcda8c3ef479fcc1e0f90b41396aa57296f823cdc555747e8858fe1",
-        "kind": "illustrative"
+        "sha256": "e3c0360b9e6949a9171ca9a626809d20812b6d0892a33331afde35266dcee4da",
+        "kind": "captured"
       }
     ],
     "nav": "Tariff sentiment shift",
     "client": "Codex",
     "heading": "Track how coverage turns",
     "title": "Watch the tone of a story change week by week",
-    "prompt": "Track the tone of tariff coverage week by week from March to April 2026. When did it turn negative, and which critical headlines drove it?",
+    "prompt": "Track the tone of tariff coverage week by week from March to April 2026. When was it most negative, and which important headlines carried that tone?",
     "steps": [
       {
         "type": "api",
@@ -286,10 +251,10 @@ window.PRISM_DEMOS = [
           "sentiment": [
             "negative"
           ],
-          "priority_min": 7,
-          "limit": 6
+          "priority_min": 6,
+          "limit": 20
         },
-        "label": "Critical negative headlines"
+        "label": "Negative headlines, priority 6+"
       },
       {
         "type": "client",
@@ -318,112 +283,76 @@ window.PRISM_DEMOS = [
           "name": "Negative",
           "tone": "negative",
           "values": [
-            520,
-            610,
-            1810,
-            2140,
-            1520,
-            1180,
-            930,
-            840
+            1629,
+            1176,
+            939,
+            1348,
+            1788,
+            1922,
+            1496,
+            1361
           ]
         },
         {
           "name": "Neutral",
           "tone": "neutral",
           "values": [
-            240,
-            250,
-            270,
-            300,
-            290,
-            310,
-            330,
-            320
+            63,
+            44,
+            49,
+            101,
+            101,
+            91,
+            77,
+            96
           ]
         },
         {
           "name": "Positive",
           "tone": "positive",
           "values": [
-            450,
-            480,
-            900,
-            980,
-            840,
-            720,
-            630,
-            600
+            547,
+            421,
+            444,
+            708,
+            610,
+            701,
+            653,
+            545
           ]
         }
       ],
       "height": 270,
       "stats": [
         {
-          "value": "18,930",
+          "value": "16,916",
           "label": "matching articles"
         },
         {
-          "value": "55%",
+          "value": "69%",
           "label": "negative share"
         },
         {
-          "value": "1.71 : 1",
+          "value": "2.52 : 1",
           "label": "negative to positive"
         },
         {
-          "value": "23 Mar",
-          "label": "peak negative week (63%)"
+          "value": "6 Apr",
+          "label": "peak negative week (71%)"
         }
       ]
     },
     "detail": {
       "type": "cards",
-      "title": "The critical negative headlines",
-      "subtitle": "sentiment = negative · priority ≥ 7 · same window",
+      "title": "Negative tariff headlines that mattered",
+      "subtitle": "sentiment = negative · priority ≥ 6 · same window · newest first",
       "items": [
         {
-          "headline": "Importers warn of shelf-price rises as new tariff schedule takes effect",
-          "meta": "tradeweekly.example · 24 Mar",
+          "headline": "Deloitte plans benefit cuts for select US staff starting 2027: Report",
+          "meta": "financialexpress.com · 26 Apr",
           "tags": [
             {
-              "text": "very neg",
-              "tone": "negative"
-            },
-            {
-              "text": "priority 8",
-              "tone": "warn"
-            },
-            {
-              "text": "class 0",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Port of Eastbay reports 18% drop in container bookings after levy",
-          "meta": "harbor-news.example · 26 Mar",
-          "tags": [
-            {
-              "text": "very neg",
-              "tone": "negative"
-            },
-            {
-              "text": "priority 8",
-              "tone": "warn"
-            },
-            {
-              "text": "class 0",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Fabrikam Foods cuts outlook, citing tariff costs on packaging",
-          "meta": "markets-desk.example · 31 Mar",
-          "tags": [
-            {
-              "text": "fair neg",
+              "text": "slight neg",
               "tone": "negative"
             },
             {
@@ -431,17 +360,17 @@ window.PRISM_DEMOS = [
               "tone": "warn"
             },
             {
-              "text": "class 0",
+              "text": "class 95",
               "tone": ""
             }
           ]
         },
         {
-          "headline": "Small exporters seek emergency credit lines amid retaliatory duties",
-          "meta": "tradeweekly.example · 2 Apr",
+          "headline": "Your guide to the California governor primary race",
+          "meta": "sanluisobispo.com · 26 Apr",
           "tags": [
             {
-              "text": "very neg",
+              "text": "slight neg",
               "tone": "negative"
             },
             {
@@ -449,17 +378,17 @@ window.PRISM_DEMOS = [
               "tone": "warn"
             },
             {
-              "text": "class 0",
+              "text": "class 20",
               "tone": ""
             }
           ]
         },
         {
-          "headline": "Retail association files challenge against tariff expansion",
-          "meta": "metro-ledger.example · 8 Apr",
+          "headline": "US will have nearly 50 percent of chip market \"very soon\", Trump claims",
+          "meta": "thestandard.com.hk · 26 Apr",
           "tags": [
             {
-              "text": "fair neg",
+              "text": "slight neg",
               "tone": "negative"
             },
             {
@@ -467,17 +396,17 @@ window.PRISM_DEMOS = [
               "tone": "warn"
             },
             {
-              "text": "class 0",
+              "text": "class 130",
               "tone": ""
             }
           ]
         },
         {
-          "headline": "Electronics distributors pause orders pending tariff clarification",
-          "meta": "markets-desk.example · 14 Apr",
+          "headline": "John Whelan: Irish exporters set for payback of ‘Liberation Day' tariffs",
+          "meta": "irishexaminer.com · 26 Apr",
           "tags": [
             {
-              "text": "fair neg",
+              "text": "slight neg",
               "tone": "negative"
             },
             {
@@ -485,17 +414,17 @@ window.PRISM_DEMOS = [
               "tone": "warn"
             },
             {
-              "text": "class 0",
+              "text": "class 120",
               "tone": ""
             }
           ]
         }
       ],
-      "note": "Baseline negative-to-positive ratio is 0.8; this window runs 2.13× the archive norm."
+      "note": "Baseline negative-to-positive ratio is 0.741; this window runs 3.4× the archive norm. 11 matching article(s) were unavailable from the article store at capture."
     },
-    "footnote": "Shares divide by articles carrying a sentiment label. A recent decline can reflect thinner coverage.",
+    "footnote": "Lower-bound counts (1 of 14 shards offline). Shares divide by articles carrying a sentiment label. A recent decline can reflect thinner coverage.",
     "takeaway": "See when a story turned, how far it moved from the archive norm, and which headlines drove it.",
-    "evidence_summary": "Weekly sentiment timeline plus critical negative headlines",
+    "evidence_summary": "Weekly sentiment timeline plus negative headlines",
     "guide": "../USER_GUIDE.md#tone-priority-and-trends"
   },
   {
@@ -505,23 +434,23 @@ window.PRISM_DEMOS = [
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Request activity is animated; no live requests run.",
     "id": "ai-topic-compare",
     "brand": "Prism News",
-    "kind": "illustrative",
-    "badge": "Illustrative data · fictional counts",
+    "kind": "captured",
+    "badge": "Captured data · 15 Oct 2026 · 93% of archive rows",
     "sources": [
       {
         "file": "../examples/demo/ai-compare.json",
-        "sha256": "fcf9e175505159d55bf77efb65ffe2f92f21689829d0ed61166753c53267d27c",
-        "kind": "illustrative"
+        "sha256": "da02e638147a9f5df24c3df45519246a54a771e1a1ce223369dee1dc755d37a3",
+        "kind": "captured"
       },
       {
         "file": "../examples/demo/ai-regulation-trends.json",
-        "sha256": "b43b44fe62a356f6524d02b3569cd25d1bc59d6759720430836e38fa39fd4662",
-        "kind": "illustrative"
+        "sha256": "9fcff968f92d1fb9b25dab4ed69c3ecfb3afa12c7ff8d564fb40f94a8d38ee73",
+        "kind": "captured"
       },
       {
         "file": "../examples/demo/ai-investment-trends.json",
-        "sha256": "8491c9dbdea45628993208d1b0f68ee451371a28c18ca5720fef6e5e033dd14d",
-        "kind": "illustrative"
+        "sha256": "072e1837403cf908ee97c19d5d9da206748c392a31887f534803ebbd49b0c6a2",
+        "kind": "captured"
       }
     ],
     "nav": "Compare two topics",
@@ -602,46 +531,46 @@ window.PRISM_DEMOS = [
           "name": "AI regulation",
           "color": "#c0453b",
           "values": [
-            820,
-            860,
-            910,
-            1460,
-            1690,
-            1180,
-            990,
-            940
+            27,
+            14,
+            22,
+            33,
+            14,
+            18,
+            23,
+            28
           ]
         },
         {
           "name": "AI investment",
           "color": "#3b4fd8",
           "values": [
-            1520,
-            1610,
-            1580,
-            1640,
-            1910,
-            2230,
-            2410,
-            2380
+            22,
+            25,
+            44,
+            39,
+            31,
+            35,
+            37,
+            63
           ]
         }
       ],
       "stats": [
         {
-          "value": "8,850",
+          "value": "179",
           "label": "AI regulation articles"
         },
         {
-          "value": "15,280",
+          "value": "296",
           "label": "AI investment articles"
         },
         {
-          "value": "22,820",
+          "value": "475",
           "label": "match at least one (exact union)"
         },
         {
-          "value": "1,310",
+          "value": "0",
           "label": "articles in both"
         }
       ]
@@ -671,14 +600,14 @@ window.PRISM_DEMOS = [
             "sub": "q = “AI regulation”"
           },
           {
-            "num": "8,850"
+            "num": "179"
           },
           {
-            "num": "38.8%"
+            "num": "37.7%"
           },
-          "30 Mar",
+          "23 Mar",
           {
-            "num": "34.2%"
+            "num": "75.4%"
           }
         ],
         [
@@ -687,24 +616,24 @@ window.PRISM_DEMOS = [
             "sub": "q = “AI investment”"
           },
           {
-            "num": "15,280"
+            "num": "296"
           },
           {
-            "num": "67.0%"
+            "num": "62.3%"
           },
-          "13 Apr",
+          "20 Apr",
           {
-            "num": "13.6%"
+            "num": "80.7%"
           }
         ]
       ],
       "stats": [
         {
-          "value": "22,820",
+          "value": "475",
           "label": "union: match at least one"
         },
         {
-          "value": "5.7%",
+          "value": "0.0%",
           "label": "of the union match both"
         },
         {
@@ -712,9 +641,9 @@ window.PRISM_DEMOS = [
           "label": "complete periods, no partial buckets"
         }
       ],
-      "note": "Regulation coverage spikes and fades; investment coverage climbs steadily. Overlapping articles are counted once in the union."
+      "note": "Second half vs first half of the window: AI regulation -14%, AI investment +28%. Overlapping articles are counted once in the union."
     },
-    "footnote": "Sets may overlap. Keep dates, content-class scope and matching mode identical when comparing.",
+    "footnote": "Lower-bound counts (1 of 14 shards offline). Sets may overlap. Keep dates, content-class scope and matching mode identical when comparing.",
     "takeaway": "Put two narratives on one scale, with exact overlap and per-topic criticality.",
     "evidence_summary": "Compare union counts plus weekly trends per query",
     "guide": "../USER_GUIDE.md#compare-25-named-queries"
@@ -726,18 +655,18 @@ window.PRISM_DEMOS = [
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Request activity is animated; no live requests run.",
     "id": "critical-alerts",
     "brand": "Prism News",
-    "kind": "illustrative",
-    "badge": "Illustrative data · fictional articles and counts",
+    "kind": "captured",
+    "badge": "Captured data · 15 Oct 2026 · 93% of archive rows",
     "sources": [
       {
         "file": "../examples/demo/semiconductor-priority.json",
-        "sha256": "1e3fef8b4d3319bdf01030b4e52bd4774f625979fdd514aef4832671baf12a68",
-        "kind": "illustrative"
+        "sha256": "bbfaca93517d762e0d0d2c38289c5386525bd293a10a875fc4fa07faf2114e7a",
+        "kind": "captured"
       },
       {
         "file": "../examples/demo/semiconductor-critical.json",
-        "sha256": "e4fdc547475965599e73215d9b50b148034c04499017ccd4ee876ec7ff15aa29",
-        "kind": "illustrative"
+        "sha256": "d5fa102019b33f099f17532bc9d764595bcd123edacdbf9cb6005cc8aee57deb",
+        "kind": "captured"
       }
     ],
     "nav": "Critical news alerts",
@@ -766,7 +695,7 @@ window.PRISM_DEMOS = [
           "since": "2026-03-02",
           "until": "2026-04-26",
           "priority_min": 7,
-          "limit": 6
+          "limit": 20
         },
         "label": "Critical headlines only"
       }
@@ -803,33 +732,33 @@ window.PRISM_DEMOS = [
         {
           "name": "Articles",
           "values": [
-            0,
-            30,
-            210,
-            1840,
-            2630,
-            1910,
-            1240,
-            520,
-            120
+            10,
+            27,
+            641,
+            3731,
+            1407,
+            1344,
+            4216,
+            1944,
+            14
           ]
         }
       ],
       "stats": [
         {
-          "value": "8,500",
+          "value": "13,334",
           "label": "articles with a priority"
         },
         {
-          "value": "1,880",
+          "value": "6,174",
           "label": "critical (7–9)"
         },
         {
-          "value": "22.1%",
-          "label": "critical share (archive 16.7%)"
+          "value": "46.3%",
+          "label": "critical share (archive 40.59%)"
         },
         {
-          "value": "5.1",
+          "value": "5.79",
           "label": "mean priority"
         }
       ]
@@ -840,117 +769,77 @@ window.PRISM_DEMOS = [
       "subtitle": "priority_min = 7 · newest first",
       "items": [
         {
-          "headline": "Fab outage at Tailspin Semiconductor halts 12-inch wafer output",
-          "meta": "chipwire.example · 23 Apr",
+          "headline": "Closing the Reality Gap: A New Architecture for 1.8-Tb/s Chiplet Governance",
+          "meta": "semiwiki.com · 26 Apr",
           "tags": [
             {
-              "text": "very neg",
-              "tone": "negative"
-            },
-            {
-              "text": "priority 9",
-              "tone": "warn"
-            },
-            {
-              "text": "class 0",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Export licence review delays shipments of advanced lithography tools",
-          "meta": "tradeweekly.example · 18 Apr",
-          "tags": [
-            {
-              "text": "fair neg",
-              "tone": "negative"
-            },
-            {
-              "text": "priority 8",
-              "tone": "warn"
-            },
-            {
-              "text": "class 0",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Litware wins $2.1B subsidy for new packaging plant",
-          "meta": "markets-desk.example · 15 Apr",
-          "tags": [
-            {
-              "text": "fair pos",
+              "text": "very pos",
               "tone": "positive"
             },
             {
-              "text": "priority 8",
+              "text": "priority 7",
+              "tone": "warn"
+            }
+          ]
+        },
+        {
+          "headline": "Intel, Advanced Micro, And Texas Instruments Are Among Top 10 Large-Cap Gainers Last Week (April 20-April",
+          "meta": "benzinga.com · 26 Apr",
+          "tags": [
+            {
+              "text": "slight pos",
+              "tone": "positive"
+            },
+            {
+              "text": "priority 7",
               "tone": "warn"
             },
             {
-              "text": "class 0",
+              "text": "class 5",
               "tone": ""
             }
           ]
         },
         {
-          "headline": "Memory prices jump 9% week on week as supply tightens",
-          "meta": "chipwire.example · 10 Apr",
+          "headline": "America Trembles as Transportation Secretary Announces Plans for Air Traffic Controllers to Lean on AI Tools",
+          "meta": "futurism.com · 26 Apr",
+          "tags": [
+            {
+              "text": "slight pos",
+              "tone": "positive"
+            },
+            {
+              "text": "priority 7",
+              "tone": "warn"
+            },
+            {
+              "text": "class 50",
+              "tone": ""
+            }
+          ]
+        },
+        {
+          "headline": "Samsung chip workers want 15% of AI profits and are ready to strike for it - Startup Fortune",
+          "meta": "startupfortune.com · 26 Apr",
           "tags": [
             {
               "text": "slight neg",
               "tone": "negative"
             },
             {
-              "text": "priority 7",
+              "text": "priority 8",
               "tone": "warn"
             },
             {
-              "text": "class 0",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Automakers flag microcontroller shortages for third quarter",
-          "meta": "dailyauto.example · 2 Apr",
-          "tags": [
-            {
-              "text": "fair neg",
-              "tone": "negative"
-            },
-            {
-              "text": "priority 7",
-              "tone": "warn"
-            },
-            {
-              "text": "class 0",
-              "tone": ""
-            }
-          ]
-        },
-        {
-          "headline": "Wide World Devices recalls modules over firmware defect",
-          "meta": "chipwire.example · 27 Mar",
-          "tags": [
-            {
-              "text": "very neg",
-              "tone": "negative"
-            },
-            {
-              "text": "priority 7",
-              "tone": "warn"
-            },
-            {
-              "text": "class 0",
+              "text": "class 130",
               "tone": ""
             }
           ]
         }
       ],
-      "note": "Priority is the pipeline's urgency rating; it is not a measure of factual reliability."
+      "note": "Priority is the pipeline's urgency rating, not a reliability measure. Repeated headlines are shown once. 4 matching article(s) were unavailable from the article store at capture."
     },
-    "footnote": "Critical share divides by articles carrying a priority, not by all matching articles.",
+    "footnote": "Lower-bound counts (1 of 14 shards offline). Critical share divides by articles carrying a priority, not by all matching articles.",
     "takeaway": "Quantify how much of a topic is urgent, then read just those stories.",
     "evidence_summary": "Priority bands plus critical headlines",
     "guide": "../USER_GUIDE.md#sentiment-and-priority"
@@ -963,16 +852,16 @@ window.PRISM_DEMOS = [
     "id": "class-code-map",
     "brand": "Prism News",
     "kind": "captured",
-    "badge": "Captured data · 14 Oct 2026",
+    "badge": "Captured data · 15 Oct 2026 · 93% of archive rows",
     "sources": [
       {
         "file": "../examples/demo/class-map-vehicle.json",
-        "sha256": "0c33ec0acde86e71b25b82e5ce2a5a84ec20957e84f731a085f4c8bb160d3b2c",
+        "sha256": "8e28957430bceb810d7009a36fad140752c2896ac172d7b098d6892677bb0800",
         "kind": "captured"
       },
       {
         "file": "../examples/demo/class-map-banking.json",
-        "sha256": "0360d968e9f971dae0fc6a01678c5e80f290e839e707df188bd0aa4f493428d5",
+        "sha256": "ea05b8cca3d8d503eae566abdb7c494bf2ee30bfe736dc8707b36c21fb558050",
         "kind": "captured"
       }
     ],
@@ -1017,36 +906,20 @@ window.PRISM_DEMOS = [
           "query": "vehicle",
           "items": [
             {
-              "code": 63,
-              "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
-              "depth": 3,
-              "parent": "/Autos & Vehicles/Motor Vehicles (By Type)",
-              "parent_code": null,
-              "articles_30d": null
-            },
-            {
-              "code": 89,
-              "path": "/Autos & Vehicles/Vehicle Shopping/Vehicle Specs, Reviews & Comparisons",
-              "depth": 3,
-              "parent": "/Autos & Vehicles/Vehicle Shopping",
-              "parent_code": null,
-              "articles_30d": null
-            },
-            {
-              "code": 121,
-              "path": "/Autos & Vehicles/Vehicle Parts & Services/Vehicle Parts & Accessories",
-              "depth": 3,
-              "parent": "/Autos & Vehicles/Vehicle Parts & Services",
-              "parent_code": null,
-              "articles_30d": null
-            },
-            {
               "code": 122,
               "path": "/Autos & Vehicles/Vehicle Codes & Driving Laws/Other",
               "depth": 3,
               "parent": "/Autos & Vehicles/Vehicle Codes & Driving Laws",
               "parent_code": null,
-              "articles_30d": null
+              "articles_30d": 52
+            },
+            {
+              "code": 63,
+              "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
+              "depth": 3,
+              "parent": "/Autos & Vehicles/Motor Vehicles (By Type)",
+              "parent_code": null,
+              "articles_30d": 23
             },
             {
               "code": 141,
@@ -1054,7 +927,23 @@ window.PRISM_DEMOS = [
               "depth": 3,
               "parent": "/Autos & Vehicles/Motor Vehicles (By Type)",
               "parent_code": null,
-              "articles_30d": null
+              "articles_30d": 20
+            },
+            {
+              "code": 189,
+              "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Motorcycles",
+              "depth": 3,
+              "parent": "/Autos & Vehicles/Motor Vehicles (By Type)",
+              "parent_code": null,
+              "articles_30d": 15
+            },
+            {
+              "code": 89,
+              "path": "/Autos & Vehicles/Vehicle Shopping/Vehicle Specs, Reviews & Comparisons",
+              "depth": 3,
+              "parent": "/Autos & Vehicles/Vehicle Shopping",
+              "parent_code": null,
+              "articles_30d": 14
             }
           ]
         },
@@ -1067,7 +956,7 @@ window.PRISM_DEMOS = [
               "depth": 3,
               "parent": "/Finance/Banking",
               "parent_code": null,
-              "articles_30d": null
+              "articles_30d": 42
             },
             {
               "code": 180,
@@ -1075,15 +964,7 @@ window.PRISM_DEMOS = [
               "depth": 3,
               "parent": "/Finance/Banking",
               "parent_code": null,
-              "articles_30d": null
-            },
-            {
-              "code": 316,
-              "path": "/Business & Industrial/Business Finance/Investment Banking",
-              "depth": 3,
-              "parent": "/Business & Industrial/Business Finance",
-              "parent_code": null,
-              "articles_30d": null
+              "articles_30d": 3
             },
             {
               "code": 496,
@@ -1091,15 +972,23 @@ window.PRISM_DEMOS = [
               "depth": 3,
               "parent": "/Finance/Banking",
               "parent_code": null,
-              "articles_30d": null
+              "articles_30d": 3
             },
             {
-              "code": 678,
-              "path": "/Finance/Banking/Money Transfer & Wire Services",
+              "code": 702,
+              "path": "/Finance/Banking/ATMs & Branch Locations",
               "depth": 3,
               "parent": "/Finance/Banking",
               "parent_code": null,
-              "articles_30d": null
+              "articles_30d": 1
+            },
+            {
+              "code": 316,
+              "path": "/Business & Industrial/Business Finance/Investment Banking",
+              "depth": 3,
+              "parent": "/Business & Industrial/Business Finance",
+              "parent_code": null,
+              "articles_30d": 0
             }
           ]
         }
@@ -1114,57 +1003,17 @@ window.PRISM_DEMOS = [
         "Code",
         "Class",
         "Parent path",
+        "30-day articles",
         "Filter"
       ],
       "widths": [
-        10,
-        34,
-        38,
-        18
+        9,
+        30,
+        32,
+        13,
+        16
       ],
       "rows": [
-        [
-          {
-            "num": "63"
-          },
-          {
-            "main": "Hybrid & Alternative Vehicles"
-          },
-          {
-            "sub": "/Autos & Vehicles/Motor Vehicles (By Type)"
-          },
-          {
-            "tag": "classes=63"
-          }
-        ],
-        [
-          {
-            "num": "89"
-          },
-          {
-            "main": "Vehicle Specs, Reviews & Comparisons"
-          },
-          {
-            "sub": "/Autos & Vehicles/Vehicle Shopping"
-          },
-          {
-            "tag": "classes=89"
-          }
-        ],
-        [
-          {
-            "num": "121"
-          },
-          {
-            "main": "Vehicle Parts & Accessories"
-          },
-          {
-            "sub": "/Autos & Vehicles/Vehicle Parts & Services"
-          },
-          {
-            "tag": "classes=121"
-          }
-        ],
         [
           {
             "num": "122"
@@ -1176,7 +1025,61 @@ window.PRISM_DEMOS = [
             "sub": "/Autos & Vehicles/Vehicle Codes & Driving Laws"
           },
           {
+            "num": "52"
+          },
+          {
             "tag": "classes=122"
+          }
+        ],
+        [
+          {
+            "num": "63"
+          },
+          {
+            "main": "Hybrid & Alternative Vehicles"
+          },
+          {
+            "sub": "/Autos & Vehicles/Motor Vehicles (By Type)"
+          },
+          {
+            "num": "23"
+          },
+          {
+            "tag": "classes=63"
+          }
+        ],
+        [
+          {
+            "num": "141"
+          },
+          {
+            "main": "Trucks, Vans & SUVs"
+          },
+          {
+            "sub": "/Autos & Vehicles/Motor Vehicles (By Type)"
+          },
+          {
+            "num": "20"
+          },
+          {
+            "tag": "classes=141"
+          }
+        ],
+        [
+          {
+            "num": "189"
+          },
+          {
+            "main": "Motorcycles"
+          },
+          {
+            "sub": "/Autos & Vehicles/Motor Vehicles (By Type)"
+          },
+          {
+            "num": "15"
+          },
+          {
+            "tag": "classes=189"
           }
         ],
         [
@@ -1188,6 +1091,9 @@ window.PRISM_DEMOS = [
           },
           {
             "sub": "/Finance/Banking"
+          },
+          {
+            "num": "42"
           },
           {
             "tag": "classes=42"
@@ -1204,27 +1110,33 @@ window.PRISM_DEMOS = [
             "sub": "/Finance/Banking"
           },
           {
+            "num": "3"
+          },
+          {
             "tag": "classes=180"
           }
         ],
         [
           {
-            "num": "316"
+            "num": "496"
           },
           {
-            "main": "Investment Banking"
+            "main": "Savings Accounts"
           },
           {
-            "sub": "/Business & Industrial/Business Finance"
+            "sub": "/Finance/Banking"
           },
           {
-            "tag": "classes=316"
+            "num": "3"
+          },
+          {
+            "tag": "classes=496"
           }
         ]
       ],
-      "note": "30-day article volumes were unavailable at capture time; codes and paths are complete."
+      "note": "30-day volumes count the 30 days ending at data_through, when ingest is thin; use them to compare classes, not as totals."
     },
-    "footnote": "Class matches use the pipeline's 0.39 score threshold. One article can carry several classes.",
+    "footnote": "Lower-bound counts (1 of 14 shards offline). Class matches use the pipeline's 0.39 score threshold. One article can carry several classes.",
     "takeaway": "Find the right content-class codes by name, then filter any endpoint by them.",
     "evidence_summary": "Class discovery for two topics",
     "guide": "../USER_GUIDE.md#find-a-gcp-content-code"
@@ -1236,30 +1148,30 @@ window.PRISM_DEMOS = [
     "disclosure": "Concept UI, not a recording of Claude Code or Codex. Request activity is animated; no live requests run.",
     "id": "full-article-export",
     "brand": "Prism News",
-    "kind": "illustrative",
-    "badge": "Illustrative data · fictional articles",
+    "kind": "captured",
+    "badge": "Captured data · 15 Oct 2026 · 93% of archive rows",
     "sources": [
       {
         "file": "../examples/demo/battery-export.json",
-        "sha256": "62760c9c014e9355bd7f5fa3ae052ad696e5567f7a4225a1593dd667fd6114d1",
-        "kind": "illustrative"
+        "sha256": "21b9ff0498cf4d6b930c70ba68e3da0fc44a74e99a99998953f888020086e06b",
+        "kind": "captured"
       }
     ],
     "nav": "Full articles to CSV",
     "client": "Codex",
     "heading": "Export full articles for analysis",
     "title": "Export full article text to a spreadsheet",
-    "prompt": "Export the full text of battery-recycling articles from March–April 2026 to a CSV with headline, publisher, date, sentiment, priority and classes.",
+    "prompt": "Export the full text of battery-storage articles from March–April 2026 to a CSV with headline, publisher, date, sentiment, priority and classes.",
     "steps": [
       {
         "type": "api",
         "method": "POST",
         "path": "/v1/export",
         "body": {
-          "q": "battery recycling",
+          "q": "battery storage",
           "since": "2026-03-02",
           "until": "2026-04-26",
-          "limit": 5,
+          "limit": 15,
           "format": "json"
         },
         "label": "Export a batch of full articles"
@@ -1274,38 +1186,38 @@ window.PRISM_DEMOS = [
       "type": "bars",
       "title": "Full bodies, not ledes",
       "labelWidth": 470,
-      "subtitle": "5 articles delivered of 214 matches · characters of full text",
+      "subtitle": "5 articles delivered of 1,731 matches · characters of full text",
       "axisLabel": "Characters of article body",
       "rows": [
         {
-          "label": "Proseware opens closed-loop battery…",
-          "sub": "energywire.example · 21 Apr",
-          "value": 2870,
-          "display": "2,870 chars · lede 314"
+          "label": "Fortescue to invest $952M in Pilbara…",
+          "sub": "esdnews.com.au · 26 Apr",
+          "value": 2034,
+          "display": "2,034 chars · lede 350"
         },
         {
-          "label": "Recyclers push for standard battery…",
-          "sub": "tradeweekly.example · 16 Apr",
-          "value": 1230,
-          "display": "1,230 chars · lede 314"
+          "label": "EU Commission sets out AccelerateEU…",
+          "sub": "pveurope.eu · 26 Apr",
+          "value": 2664,
+          "display": "2,664 chars · lede 349"
         },
         {
-          "label": "Black-mass prices slide as new…",
-          "sub": "markets-desk.example · 7 Apr",
-          "value": 1845,
-          "display": "1,845 chars · lede 314"
+          "label": "Sick of power outages, this remote…",
+          "sub": "inkl.com · 26 Apr",
+          "value": 6079,
+          "display": "6,079 chars · lede 340"
         },
         {
-          "label": "Automaker signs recovered-nickel…",
-          "sub": "dailyauto.example · 25 Mar",
-          "value": 4305,
-          "display": "4,305 chars · lede 314"
+          "label": "Smartphones : l'UE va imposer des…",
+          "sub": "capital.fr · 25 Apr",
+          "value": 561,
+          "display": "561 chars · lede 288"
         },
         {
-          "label": "Fire at storage yard prompts safety…",
-          "sub": "metro-ledger.example · 12 Mar",
-          "value": 820,
-          "display": "820 chars · lede 314"
+          "label": "Adani Green Energy Posts Record 5.1…",
+          "sub": "themachinemaker.com · 25 Apr",
+          "value": 3017,
+          "display": "3,017 chars · lede 331"
         }
       ],
       "stats": [
@@ -1314,15 +1226,15 @@ window.PRISM_DEMOS = [
           "label": "exports charged"
         },
         {
-          "value": "0",
-          "label": "unresolved"
+          "value": "10",
+          "label": "unavailable, not charged"
         },
         {
           "value": "0",
-          "label": "duplicate URLs dropped"
+          "label": "duplicates dropped, not charged"
         },
         {
-          "value": "214",
+          "value": "1,731",
           "label": "matching articles"
         }
       ]
@@ -1331,7 +1243,7 @@ window.PRISM_DEMOS = [
       "type": "sheet",
       "title": "Full articles, as a CSV file",
       "subtitle": "The export's CSV columns, one row per delivered article",
-      "filename": "battery-recycling.csv",
+      "filename": "battery-storage.csv",
       "status": "format=csv · next batch via cursor (json)",
       "headers": [
         "headline",
@@ -1351,64 +1263,64 @@ window.PRISM_DEMOS = [
       ],
       "rows": [
         [
-          "Proseware opens closed-loop battery recycling line",
-          "energywire.example",
-          "2026-04-21",
+          "Fortescue to invest $952M in Pilbara Green…",
+          "esdnews.com.au",
+          "2026-04-26",
           {
-            "tag": "fair_pos",
+            "tag": "very_pos",
             "tone": "positive"
           },
-          "6",
-          "63"
+          "7",
+          "45"
         ],
         [
-          "Recyclers push for standard battery passports",
-          "tradeweekly.example",
-          "2026-04-16",
+          "EU Commission sets out AccelerateEU energy…",
+          "pveurope.eu",
+          "2026-04-26",
+          {
+            "tag": "very_pos",
+            "tone": "positive"
+          },
+          "7",
+          "45"
+        ],
+        [
+          "Sick of power outages, this remote…",
+          "inkl.com",
+          "2026-04-26",
           {
             "tag": "slight_pos",
             "tone": "positive"
           },
-          "5",
-          "63"
+          "7",
+          "45"
         ],
         [
-          "Black-mass prices slide as new capacity arrives",
-          "markets-desk.example",
-          "2026-04-07",
+          "Smartphones : l'UE va imposer des…",
+          "capital.fr",
+          "2026-04-25",
           {
-            "tag": "slight_neg",
-            "tone": "negative"
+            "tag": "slight_pos",
+            "tone": "positive"
           },
           "6",
-          "63"
+          "40"
         ],
         [
-          "Automaker signs recovered-nickel supply agreement",
-          "dailyauto.example",
-          "2026-03-25",
+          "Adani Green Energy Posts Record 5.1 GW…",
+          "themachinemaker.com",
+          "2026-04-25",
           {
-            "tag": "fair_pos",
+            "tag": "very_pos",
             "tone": "positive"
           },
           "7",
-          "63"
-        ],
-        [
-          "Fire at storage yard prompts safety review",
-          "metro-ledger.example",
-          "2026-03-12",
-          {
-            "tag": "very_neg",
-            "tone": "negative"
-          },
-          "7",
-          "63"
+          "45|0"
         ]
       ],
       "note": "The body column holds the complete article text; it is omitted here for width."
     },
-    "footnote": "Exports are charged per delivered article. Save IDs across batches to deduplicate a full download.",
+    "footnote": "Lower-bound counts (1 of 14 shards offline). Exports are charged per delivered article. Save IDs across batches to deduplicate a full download.",
     "takeaway": "Move from a filter to full article text in a file your analysis tools can read.",
     "evidence_summary": "One full-article export batch",
     "guide": "../USER_GUIDE.md#full-articles-and-exports"

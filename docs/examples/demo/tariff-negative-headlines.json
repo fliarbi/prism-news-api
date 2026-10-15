@@ -1,7 +1,8 @@
 {
  "name": "tariff-negative-headlines",
- "kind": "illustrative",
- "captured_at": null,
+ "kind": "captured",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "captured_at": "2026-10-15T17:26:40Z",
  "request": {
   "method": "POST",
   "path": "/v1/headlines",
@@ -12,8 +13,8 @@
    "sentiment": [
     "negative"
    ],
-   "priority_min": 7,
-   "limit": 6
+   "priority_min": 6,
+   "limit": 20
   }
  },
  "response": {
@@ -23,36 +24,150 @@
    "filters": {
     "since": "2026-03-02",
     "until": "2026-04-26",
-    "limit": 6,
+    "limit": 20,
     "sort": "newest",
-    "match": "any",
     "q": "tariffs",
+    "match": "any",
     "sentiment": [
-     "negative"
+     "extreme_neg",
+     "very_neg",
+     "fair_neg",
+     "slight_neg"
     ],
-    "priority_min": 7
+    "priority_min": 6
    }
   },
   "data": {
    "items": [
     {
-     "id": "illustr00000000000000011",
-     "headline": "Importers warn of shelf-price rises as new tariff schedule takes effect",
-     "url": "https://tradeweekly.example/news/11",
-     "publisher": "tradeweekly.example",
-     "published_at": "2026-03-24T10:15:00",
-     "lede": "Importers warn of shelf-price rises as new tariff schedule takes effect",
+     "id": "69efab15727212302c5f435d",
+     "headline": "Deloitte plans benefit cuts for select US staff starting 2027: Report",
+     "url": "https://www.financialexpress.com/business/news/deloitte-plans-benefit-cuts-for-select-us-staff-starting-2027-report/4218957/",
+     "publisher": "financialexpress.com",
+     "published_at": "2026-04-26T16:49:36",
+     "lede": "deloitte is planning to scale back certain employee benefits for a segment of its us workforce starting january 1, 2027, according to business insider report. the move is part of a broader restructuring effort aimed at aligning perks with evolving business needs and market standards. also read$20 billion investment, tariff",
      "sentiment": {
-      "label": "very_neg",
-      "score": 0.81,
+      "label": "slight_neg",
+      "score": 0.48,
+      "group": "negative"
+     },
+     "priority": 7,
+     "classes": [
+      {
+       "code": 95,
+       "path": "/Business & Industrial/Business Operations/Human Resources",
+       "score": 0.47
+      }
+     ],
+     "country": "united states",
+     "organizations": [
+      "business insider",
+      "deloitte"
+     ],
+     "people": []
+    },
+    {
+     "id": "6a2b33085cefb83fe889ec3c",
+     "headline": "Your guide to the California governor primary race",
+     "url": "https://www.sanluisobispo.com/news/politics-government/election/voter-guide/article315281369.html",
+     "publisher": "sanluisobispo.com",
+     "published_at": "2026-04-26T13:00:00",
+     "lede": "voter guide your guide to the california governor primary race this year’s governor’s race is unlike any in recent memory. less than two months ahead of the june 2 primary, voters have yet to coalesce behind a candidate for the top job in california. former rep. eric swalwell was beginning",
+     "sentiment": {
+      "label": "slight_neg",
+      "score": 0.56,
+      "group": "negative"
+     },
+     "priority": 7,
+     "classes": [
+      {
+       "code": 20,
+       "path": "/News/Politics/Campaigns & Elections",
+       "score": 0.84
+      },
+      {
+       "code": 1,
+       "path": "/News/Politics/Other",
+       "score": 0.47
+      },
+      {
+       "code": 2,
+       "path": "/Law & Government/Government/Other",
+       "score": 0.44
+      }
+     ],
+     "country": null,
+     "organizations": [],
+     "people": []
+    },
+    {
+     "id": "6a2a96e0c37f6c5e66d48f76",
+     "headline": "US will have nearly 50 percent of chip market \"very soon\", Trump claims",
+     "url": "https://www.thestandard.com.hk/innovation/article/330318/US-will-have-nearly-50-percent-of-chip-market-very-soon-Trump-claims",
+     "publisher": "thestandard.com.hk",
+     "published_at": "2026-04-26T12:59:02",
+     "lede": "the united states will have nearly 50 percent of the chip market from “virtually nothing” “very soon”, president donald trump claimed, as he renewed his threat to impose tariffs on chipmakers who do not have factories in the country. advertisement scroll to continue with content they will face a tremendous",
+     "sentiment": {
+      "label": "slight_neg",
+      "score": 0.5,
+      "group": "negative"
+     },
+     "priority": 7,
+     "classes": [
+      {
+       "code": 130,
+       "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+       "score": 0.8
+      }
+     ],
+     "country": null,
+     "organizations": [],
+     "people": []
+    },
+    {
+     "id": "69f1cf7f399b489398e29f24",
+     "headline": "John Whelan: Irish exporters set for payback of ‘Liberation Day' tariffs",
+     "url": "https://www.irishexaminer.com/business/companies/arid-41834093.html",
+     "publisher": "irishexaminer.com",
+     "published_at": "2026-04-26T11:30:00",
+     "lede": "last week, the us customs authorities launched an online portal to facilitate importers to process claims for the refund of donald trump’s ‘liberation day' tariffs that were declared unconstitutional by the us supreme court. the move is expected to see the flow back of up to $166bn (€141bn) globally to",
+     "sentiment": {
+      "label": "slight_neg",
+      "score": 0.62,
+      "group": "negative"
+     },
+     "priority": 7,
+     "classes": [
+      {
+       "code": 120,
+       "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+       "score": 0.85
+      }
+     ],
+     "country": "united states",
+     "organizations": [],
+     "people": [
+      "donald trump"
+     ]
+    },
+    {
+     "id": "6a0eaaabc0b414d24a0f2773",
+     "headline": "Forget Tariffs! This Is the Single Greatest Threat to the Trump Bull Market, and It's Expected to Become a Reality on May 15. | The Motley Fool",
+     "url": "https://www.fool.com/investing/2026/04/26/forget-tariffs-greatest-threat-trump-bull-market/",
+     "publisher": "fool.com",
+     "published_at": "2026-04-26T10:36:00",
+     "lede": "from a statistical standpoint, wall street has loved having donald trump in the white house. although the dow jones industrial average (^dji +0.26%), s&p 500 (^gspc +0.25%), and nasdaq composite (^ixic +0.21%) usually rise under most presidents, the annualized returns under president trump have been well above average. during his",
+     "sentiment": {
+      "label": "slight_neg",
+      "score": 0.36,
       "group": "negative"
      },
      "priority": 8,
      "classes": [
       {
-       "code": 0,
-       "path": "/News/Business News/Company News",
-       "score": 0.74
+       "code": 5,
+       "path": "/News/Business News/Financial Markets News",
+       "score": 0.72
       }
      ],
      "country": null,
@@ -60,136 +175,137 @@
      "people": []
     },
     {
-     "id": "illustr00000000000000012",
-     "headline": "Port of Eastbay reports 18% drop in container bookings after levy",
-     "url": "https://harbor-news.example/news/12",
-     "publisher": "harbor-news.example",
-     "published_at": "2026-03-26T11:15:00",
-     "lede": "Port of Eastbay reports 18% drop in container bookings after levy",
+     "id": "69f0e8acd32561089420d2e6",
+     "headline": "The Oil Companies Posting Record Profits While the Global Economy Slows - The Numbers Are Difficult to Justify",
+     "url": "https://www.financial-news.co.uk/the-oil-companies-posting-record-profits-while-the-global-economy-slows-the-numbers-are-difficult-to-justify/",
+     "publisher": "financial-news.co.uk",
+     "published_at": "2026-04-26T10:22:18",
+     "lede": "the way oil companies report their earnings has an almost theatrical quality. at seven in the morning, new york time, the press release is delivered. the cable business channels unveiled the same chart within an hour: a steep blue bar that towered over the modest cousin from the previous quarter.",
      "sentiment": {
-      "label": "very_neg",
-      "score": 0.81,
+      "label": "slight_neg",
+      "score": 0.41,
       "group": "negative"
      },
      "priority": 8,
      "classes": [
       {
+       "code": 32,
+       "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+       "score": 0.96
+      }
+     ],
+     "country": "united states",
+     "organizations": [],
+     "people": []
+    },
+    {
+     "id": "69f1ce58a5706a322e1271a7",
+     "headline": "India–New Zealand FTA set to be signed, bringing zero-duty access",
+     "url": "https://organiser.org/2026/04/26/350603/bharat/india-new-zealand-fta-set-to-be-signed-bringing-zero-duty-access-20-billion-investment-and-job-opportunities/",
+     "publisher": "organiser.org",
+     "published_at": "2026-04-26T09:00:06",
+     "lede": "new delhi: the india–new zealand free trade agreement (fta) will be signed in delhi on april 27. the agreement was finalised in record time last december after just nine months of negotiations. the signing was first announced by new zealand prime minister christopher luxon. under the agreement, all 8,284 products",
+     "sentiment": {
+      "label": "slight_neg",
+      "score": 0.44,
+      "group": "negative"
+     },
+     "priority": 8,
+     "classes": [
+      {
+       "code": 120,
+       "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+       "score": 0.66
+      },
+      {
+       "code": 15,
+       "path": "/News/Business News/Economy News",
+       "score": 0.54
+      },
+      {
+       "code": 33,
+       "path": "/People & Society/Social Sciences/Political Science",
+       "score": 0.43
+      },
+      {
+       "code": 1,
+       "path": "/News/Politics/Other",
+       "score": 0.41
+      }
+     ],
+     "country": "india",
+     "organizations": [],
+     "people": [
+      "christopher luxon"
+     ]
+    },
+    {
+     "id": "69f22daf27117df83f94d827",
+     "headline": "Puma Aktie: Maximaler Fortschritt erzielt",
+     "url": "https://www.boerse-express.com/news/articles/puma-aktie-maximaler-fortschritt-erzielt-897802",
+     "publisher": "boerse-express.com",
+     "published_at": "2026-04-26T04:15:10",
+     "lede": "nike is stumbling massively, puma is pulling away from the stock exchanges. at the moment, reality and mood are far apart from the two sports goods manufacturers. the puma share closed on friday at exactly 25.00 euros. this means that shareholders can look back on a strong monthly increase of",
+     "sentiment": {
+      "label": "slight_neg",
+      "score": 0.55,
+      "group": "negative"
+     },
+     "priority": 6,
+     "classes": [
+      {
        "code": 0,
        "path": "/News/Business News/Company News",
-       "score": 0.74
+       "score": 0.73
+      },
+      {
+       "code": 409,
+       "path": "/Shopping/Apparel/Athletic Apparel",
+       "score": 0.41
       }
      ],
      "country": null,
+     "organizations": [],
+     "people": []
+    },
+    {
+     "id": "69efaa97a84b609af2b2d6fd",
+     "headline": "Ongoing US-China Trade War Could Lead To Boeing 787 Groundings, Experts Warn",
+     "url": "https://simpleflying.com/ongoing-us-china-trade-war-lead-boeing-787-groundings-experts/",
+     "publisher": "simpleflying.com",
+     "published_at": "2026-04-26T03:30:18",
+     "lede": "the trade war between the united states and china has opened up a new front in commercial aviation, and a handful of problems have come along with it. the possibility that politics, not maintenance alone, could determine whether some boeing aircraft keep flying is not a new threat, but certainly",
+     "sentiment": {
+      "label": "slight_neg",
+      "score": 0.53,
+      "group": "negative"
+     },
+     "priority": 7,
+     "classes": [
+      {
+       "code": 33,
+       "path": "/People & Society/Social Sciences/Political Science",
+       "score": 0.58
+      },
+      {
+       "code": 71,
+       "path": "/Business & Industrial/Aerospace & Defense/Aviation Industry",
+       "score": 0.54
+      }
+     ],
+     "country": "united states",
      "organizations": [
-      "port of eastbay"
+      "boeing"
      ],
-     "people": []
-    },
-    {
-     "id": "illustr00000000000000013",
-     "headline": "Fabrikam Foods cuts outlook, citing tariff costs on packaging",
-     "url": "https://markets-desk.example/news/13",
-     "publisher": "markets-desk.example",
-     "published_at": "2026-03-31T12:15:00",
-     "lede": "Fabrikam Foods cuts outlook, citing tariff costs on packaging",
-     "sentiment": {
-      "label": "fair_neg",
-      "score": 0.81,
-      "group": "negative"
-     },
-     "priority": 7,
-     "classes": [
-      {
-       "code": 0,
-       "path": "/News/Business News/Company News",
-       "score": 0.74
-      }
-     ],
-     "country": null,
-     "organizations": [
-      "fabrikam foods"
-     ],
-     "people": []
-    },
-    {
-     "id": "illustr00000000000000014",
-     "headline": "Small exporters seek emergency credit lines amid retaliatory duties",
-     "url": "https://tradeweekly.example/news/14",
-     "publisher": "tradeweekly.example",
-     "published_at": "2026-04-02T13:15:00",
-     "lede": "Small exporters seek emergency credit lines amid retaliatory duties",
-     "sentiment": {
-      "label": "very_neg",
-      "score": 0.81,
-      "group": "negative"
-     },
-     "priority": 7,
-     "classes": [
-      {
-       "code": 0,
-       "path": "/News/Business News/Company News",
-       "score": 0.74
-      }
-     ],
-     "country": null,
-     "organizations": [],
-     "people": []
-    },
-    {
-     "id": "illustr00000000000000015",
-     "headline": "Retail association files challenge against tariff expansion",
-     "url": "https://metro-ledger.example/news/15",
-     "publisher": "metro-ledger.example",
-     "published_at": "2026-04-08T14:15:00",
-     "lede": "Retail association files challenge against tariff expansion",
-     "sentiment": {
-      "label": "fair_neg",
-      "score": 0.81,
-      "group": "negative"
-     },
-     "priority": 7,
-     "classes": [
-      {
-       "code": 0,
-       "path": "/News/Business News/Company News",
-       "score": 0.74
-      }
-     ],
-     "country": null,
-     "organizations": [],
-     "people": []
-    },
-    {
-     "id": "illustr00000000000000016",
-     "headline": "Electronics distributors pause orders pending tariff clarification",
-     "url": "https://markets-desk.example/news/16",
-     "publisher": "markets-desk.example",
-     "published_at": "2026-04-14T15:15:00",
-     "lede": "Electronics distributors pause orders pending tariff clarification",
-     "sentiment": {
-      "label": "fair_neg",
-      "score": 0.81,
-      "group": "negative"
-     },
-     "priority": 7,
-     "classes": [
-      {
-       "code": 0,
-       "path": "/News/Business News/Company News",
-       "score": 0.74
-      }
-     ],
-     "country": null,
-     "organizations": [],
      "people": []
     }
    ],
-   "returned": 6,
-   "total_estimate": 222,
-   "next_cursor": "illustrative",
-   "unresolved": 0,
+   "returned": 9,
+   "total_estimate": 11078,
+   "next_cursor": "eyJ2IjoxLCJzIjoibmV3ZXN0IiwiZCI6IjIwMjYtMDQtMjYgMDM6MzA6MTgiLCJpIjoiNjllZmFhOTdhODRiNjA5YWYyYjJkNmZkIn0",
+   "unresolved": 11,
    "duplicates_dropped": 0,
-   "limit": 6,
+   "limit": 20,
    "sort": "newest"
   },
   "window": {
@@ -200,12 +316,15 @@
    "freshness": "volume thins after 2026-05; the last months are partial"
   },
   "meta": {
+   "seconds": 7.065,
    "coverage": {
-    "available": true
+    "available": false
    },
    "notes": [
-    "Illustrative response: fictional articles, publishers and counts in the real response shape."
-   ]
+    "Some requested articles are temporarily unavailable.",
+    "11 requested article(s) are unavailable"
+   ],
+   "request_seconds": 7.069
   }
  }
 }

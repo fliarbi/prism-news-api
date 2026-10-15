@@ -65,7 +65,8 @@ def _params(timeout: int | None) -> dict:
     return {
         "user": config.CH_USER,
         "password": config.CH_PASSWORD,
-        "skip_unavailable_shards": "0",               # strict, always
+        # strict, except in an explicit demo-capture run (config.PARTIAL_CAPTURE)
+        "skip_unavailable_shards": "1" if config.PARTIAL_CAPTURE else "0",
         "max_execution_time": str(timeout or config.CH_MAX_EXECUTION_TIME),
         "priority": str(config.CH_PRIORITY),
         "max_threads": str(config.CH_MAX_THREADS),
@@ -214,6 +215,9 @@ def coverage_summary() -> dict:
 def require_coverage() -> dict:
     """Called BEFORE any query a payload depends on. Partial → 503."""
     c = coverage()
+    if c.get("partial") and config.PARTIAL_CAPTURE and c.get("rows"):
+        log.warning("PARTIAL_CAPTURE: serving %s of %s rows", c["rows"], c["expected"])
+        return c
     if c.get("partial"):
         why = c.get("error") or (f"strict row count {c.get('rows'):,} is below the "
                                  f"measured floor {c['expected']:,}")

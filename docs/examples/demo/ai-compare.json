@@ -1,7 +1,8 @@
 {
  "name": "ai-compare",
- "kind": "illustrative",
- "captured_at": null,
+ "kind": "captured",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "captured_at": "2026-10-15T17:25:33Z",
  "request": {
   "method": "POST",
   "path": "/v1/compare",
@@ -30,7 +31,7 @@
   "ok": true,
   "feature": "news.compare",
   "subject": {
-   "queries": [
+   "names": [
     "AI regulation",
     "AI investment"
    ]
@@ -39,55 +40,59 @@
    "items": [
     {
      "name": "AI regulation",
-     "count": 8850,
-     "share_pct": 38.78,
+     "count": 179,
+     "share_pct": 37.68,
      "filters": {
       "since": "2026-03-02",
       "until": "2026-04-26",
-      "q": "AI regulation",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai regulation",
       "match": "any"
      },
      "window": {
       "since": "2026-03-02",
       "until": "2026-04-26",
-      "days": 56
+      "days": 56,
+      "data_through": "2026-08-24",
+      "freshness": "volume thins after 2026-05; the last months are partial"
      }
     },
     {
      "name": "AI investment",
-     "count": 15280,
-     "share_pct": 66.96,
+     "count": 296,
+     "share_pct": 62.32,
      "filters": {
       "since": "2026-03-02",
       "until": "2026-04-26",
-      "q": "AI investment",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai investment",
       "match": "any"
      },
      "window": {
       "since": "2026-03-02",
       "until": "2026-04-26",
-      "days": 56
+      "days": 56,
+      "data_through": "2026-08-24",
+      "freshness": "volume thins after 2026-05; the last months are partial"
      }
     }
    ],
-   "matched": 22820,
-   "share_basis": "articles matching at least one query",
+   "matched": 475,
+   "share_basis": "articles matching at least one set",
    "sets_may_overlap": true
   },
   "window": {
-   "since": "2026-03-02",
-   "until": "2026-04-26",
-   "days": 56,
    "data_through": "2026-08-24",
    "freshness": "volume thins after 2026-05; the last months are partial"
   },
   "meta": {
-   "coverage": {
-    "available": true
-   },
+   "seconds": 2.09,
    "notes": [
-    "Illustrative response: fictional articles, publishers and counts in the real response shape."
-   ]
+    "Set windows are shown individually. Overlapping shares may sum above 100%."
+   ],
+   "request_seconds": 2.094
   }
  }
 }

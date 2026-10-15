@@ -41,6 +41,12 @@ def captured_on(names: list[str]) -> str:
     return date.fromisoformat(stamp[:10]).strftime("%-d %b %Y")
 
 
+def coverage_note(names: list[str]) -> str | None:
+    """A partial-archive note carried by any captured source (counts are lower bounds)."""
+    notes = {read(n).get("coverage_note") for n in names} - {None}
+    return "; ".join(sorted(notes)) or None
+
+
 def local(label: str, detail: str) -> dict:
     return {"type": "client", "label": label, "detail": detail}
 
@@ -193,5 +199,4 @@ official client interfaces or claims of live service availability. Open the
 <table>
 {rows}
 </table>
-{README_END}
-"""
+{README_END}"""

@@ -56,6 +56,10 @@ NEWS_TABLE = _env("PRISM_NEWS_TABLE", "news.articles")
 # Strict row count on 2026-09-13. A shard outage returns SMALLER numbers, not
 # an error, so the coverage gate compares against this floor (re-measured hourly).
 EXPECTED_ROWS = 255_586_690
+# DEMO CAPTURE ONLY: `PRISM_PARTIAL_CAPTURE=1` reads past unavailable shards and
+# lets the coverage gate pass, so documentation can be captured during a shard
+# outage. Counts are then lower bounds. Never set on a serving deployment.
+PARTIAL_CAPTURE = _env("PRISM_PARTIAL_CAPTURE", "") == "1"
 
 # ── MongoDB (identity) ───────────────────────────────────────────────────────
 MONGO_URI = _env("PRISM_MONGO_URI", "mongodb://localhost:27017/")

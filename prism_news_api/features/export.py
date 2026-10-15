@@ -18,6 +18,7 @@ Charged per article DELIVERED. Default and cap 100 per call on every tier
 from __future__ import annotations
 
 import csv
+import hashlib
 import io
 import json
 import time
@@ -83,10 +84,16 @@ def run(p: Principal, req: ExportRequest, endpoint: str = "/v1/export") -> dict:
             if not rec or not rec.get("url"):
                 unresolved += 1
                 continue
-            if rec["url"] in seen:
+            # Republished copies often differ only in a URL suffix (…-175/, …-176/):
+            # the same body from the same publisher is one article, delivered once.
+            body_key = (rec.get("publisher"), hashlib.sha1((rec.get("body") or "").encode()).hexdigest()) \
+                if rec.get("body") else None
+            if rec["url"] in seen or (body_key and body_key in seen):
                 dups += 1
                 continue
             seen.add(rec["url"])
+            if body_key:
+                seen.add(body_key)
             items.append(c.item_of(row, rec, full=True))
     except BaseException:
         quota.refund_exports(p.user_id, p.key_id, granted)
