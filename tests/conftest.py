@@ -78,6 +78,26 @@ class FakeRedis:
     def ping(self):
         return True
 
+    # sorted sets (concurrent-request slots)
+    def zadd(self, k, mapping):
+        z = self.d.setdefault(k, {})
+        z.update(mapping)
+        return len(mapping)
+
+    def zrem(self, k, *members):
+        z = self.d.get(k) or {}
+        return sum(1 for m in members if z.pop(m, None) is not None)
+
+    def zremrangebyscore(self, k, lo, hi):
+        z = self.d.get(k) or {}
+        gone = [m for m, sc in z.items() if lo <= sc <= hi]
+        for m in gone:
+            z.pop(m)
+        return len(gone)
+
+    def zcard(self, k):
+        return len(self.d.get(k) or {})
+
     def pipeline(self):
         return FakePipeline(self)
 

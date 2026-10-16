@@ -116,7 +116,7 @@ DEFAULT_GRANULARITY = "weekly"
 EXPORT_FORMATS = ("json", "ndjson", "csv")
 
 PUBLIC_PLAN_FIELDS = ("label", "requests_per_month", "exports_per_month",
-                      "max_results", "max_export_batch", "rate_per_minute",
+                      "max_results", "max_export_batch", "rate_per_minute", "concurrent_requests",
                       "history_days", "max_keys", "business_api",
                       "price_monthly_inr", "price_monthly_usd", "contact_sales")
 

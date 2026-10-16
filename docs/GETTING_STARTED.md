@@ -30,16 +30,20 @@ curl -fsSL https://raw.githubusercontent.com/fliarbi/prism-news-api/main/scripts
 | `GH_TOKEN` | — | Only for installing from a private fork; read from stdin by curl, never written to disk |
 | `PRISM_BIN_DIR` | `~/.local/bin` | Where `prism-news` and `prism-business-news` are placed |
 | `PRISM_REF` | `main` | Branch, tag or commit to install |
+| `PRISM_NO_PROFILE` | `0` | `1` = do not add the env.sh line to your shell startup files |
 | `PRISM_REPO` | `fliarbi/prism-news-api` | Repository to download the client from |
 
 The installer downloads one file (`scripts/prism_cli.py`) to `~/.local/share/prism-cli/`,
-compiles it as a check, and writes two small launchers. It never uses sudo, edits shell
-profiles or starts a service. Run `bash install.sh --help` for the same table.
+compiles it as a check and writes two small launchers. It also writes
+`~/.config/prism/env.sh` with the default base URLs (`PRISM_API_BASE`,
+`PRISM_BUSINESS_API_BASE`) and the command folder, and adds one line that loads it to
+`~/.bashrc`, `~/.zshrc` and `~/.profile`. Set `PRISM_NO_PROFILE=1` to skip that line.
+It never uses sudo or starts a service. Run `bash install.sh --help` for the same table.
 
 **Without the installer:** download `scripts/prism_cli.py` and run
 `PRISM_CLI_PRODUCT=prism-news python3 prism_cli.py status`.
 
-**Uninstall:** `rm ~/.local/bin/prism-news ~/.local/bin/prism-business-news && rm -r ~/.local/share/prism-cli ~/.config/prism`.
+**Uninstall:** `rm ~/.local/bin/prism-news ~/.local/bin/prism-business-news && rm -r ~/.local/share/prism-cli ~/.config/prism`, then delete the line ending in `# prism-news` from your shell startup files.
 
 ## 3. Log in once
 

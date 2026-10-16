@@ -554,3 +554,25 @@ def test_export_beyond_plan_charges_credits_only_for_delivered_articles(client, 
     assert b["data"]["returned"] == 2 and b["data"]["charged_exports"] == 1 and b["data"]["charged_credits"] == 1
     assert credits["reserve"][-1]["units"] == 1 and credits["settle"][-1] == {"request_id": "r1", "actual": 1}
     assert fake_redis.get(f"pna:exp:u:{principal_id()}:{quota.month_key()}") == "1"
+
+
+def test_concurrent_requests_are_limited_and_slots_released(client, principal, fake_redis):
+    principal.plan_cfg["concurrent_requests"] = 1
+    assert client.get("/v1/headlines", headers=H(client)).status_code == 200
+    assert fake_redis.zcard(f"pna:conc:u:{principal_id()}") == 0          # released after the response
+    import time as _t
+    fake_redis.zadd(f"pna:conc:u:{principal_id()}", {"busy": _t.time()})   # another request in flight
+    r = client.get("/v1/headlines", headers=H(client))
+    assert r.status_code == 429 and "at once" in r.json()["error"]["reason"]
+
+
+def test_usage_level_lifts_plan_limits_from_level_two():
+    from prism_news_api.auth import Principal
+    p = Principal(user_id="u", key_id="k", key_prefix="", key_name="", email=None, plan="free",
+                  plan_cfg={"rate_per_minute": 30, "concurrent_requests": 2}, source="free", expired=False,
+                  expires=None, account_flag=None)
+    assert p.limit("rate_per_minute", 30) == 30
+    p.level = {"level": 1, "rate_per_minute": 60, "concurrent_requests": 3}
+    assert p.limit("rate_per_minute", 30) == 30 and p.limit("concurrent_requests", 2) == 2
+    p.level = {"level": 3, "rate_per_minute": 300, "concurrent_requests": 10}
+    assert p.limit("rate_per_minute", 30) == 300 and p.limit("concurrent_requests", 2) == 10

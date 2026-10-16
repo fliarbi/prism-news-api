@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Install the Prism News command-line client for the current user.
-# Never uses sudo, never edits shell profiles and never starts a service.
+# Never uses sudo and never starts a service. Sets PRISM_API_BASE / PRISM_BUSINESS_API_BASE
+# through ~/.config/prism/env.sh, loaded by one line in your shell startup files
+# (skip with PRISM_NO_PROFILE=1).
 set -euo pipefail
 umask 077
 
@@ -15,6 +17,7 @@ Environment:
   PRISM_BIN_DIR     Where the commands go (default: ~/.local/bin)
   PRISM_REF         Branch, tag or commit to install from (default: main)
   PRISM_REPO        Source repository (default: fliarbi/prism-news-api)
+  PRISM_NO_PROFILE  1 = do not add the env.sh line to ~/.bashrc, ~/.zshrc, ~/.profile
 Existing commands of the same name are replaced; your saved key in ~/.config/prism is kept.
 HELP
   exit 0
@@ -66,11 +69,31 @@ for name in prism-news prism-business-news; do
   install -m 700 "$stage/$name" "$bin_dir/$name"
 done
 echo "Installed prism-news and prism-business-news in $bin_dir."
-case ":$PATH:" in *":$bin_dir:"*) ;; *) echo "Add $bin_dir to your PATH to run them by name.";; esac
+
+# Default base URLs (and the command folder on PATH) for curl, Python and the CLI.
+conf_dir=${XDG_CONFIG_HOME:-$HOME/.config}/prism
+mkdir -p -- "$conf_dir"
+cat > "$conf_dir/env.sh" <<ENV
+# Prism News APIs: written by the Prism installer. Safe to edit.
+export PRISM_API_BASE="\${PRISM_API_BASE:-https://radar-api.fliarbi.com/news}"
+export PRISM_BUSINESS_API_BASE="\${PRISM_BUSINESS_API_BASE:-https://radar-api.fliarbi.com/business-news}"
+case ":\$PATH:" in *":$bin_dir:"*) ;; *) export PATH="$bin_dir:\$PATH" ;; esac
+ENV
+chmod 644 "$conf_dir/env.sh"
+line="[ -f \"$conf_dir/env.sh\" ] && . \"$conf_dir/env.sh\"  # prism-news"
+if [[ ${PRISM_NO_PROFILE:-0} != 1 ]]; then
+  for rc in "$HOME/.bashrc" "$HOME/.zshrc" "$HOME/.profile"; do
+    [[ $rc == "$HOME/.profile" || -f $rc ]] || continue
+    grep -qs '# prism-news$' "$rc" || printf '\n%s\n' "$line" >> "$rc"
+  done
+  echo "PRISM_API_BASE and PRISM_BUSINESS_API_BASE are set for new shells (from $conf_dir/env.sh)."
+else
+  echo "Load the base URLs with: . $conf_dir/env.sh"
+fi
 cat <<NEXT
 
-Next:
-  prism-news login        # paste the API base URL(s) and your API key once
+Next (open a new terminal, or run: . ${XDG_CONFIG_HOME:-$HOME/.config}/prism/env.sh):
+  prism-news login        # paste your API key once; the base URLs are already set
   prism-news status
   prism-news headlines "electric vehicle" --since 2026-01-01 --until 2026-04-30 --limit 10 --table
 NEXT

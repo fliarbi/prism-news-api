@@ -57,6 +57,15 @@ class Principal:
     expires: Optional[str]
     account_flag: Optional[str]
     notes: list = field(default_factory=list)
+    level: Optional[dict] = None          # usage level from the shared credit wallet (rdr_ keys)
+
+    def limit(self, name: str, default: int) -> int:
+        """Plan limit, lifted by the usage level from level 2 up (higher of the two)."""
+        plan = int(self.plan_cfg.get(name) or default)
+        lv = self.level or {}
+        if int(lv.get("level") or 1) >= 2 and lv.get(name):
+            return max(plan, int(lv[name]))
+        return plan
 
     def as_me(self) -> dict:
         return {"key": {"id": self.key_id, "name": self.key_name, "prefix": self.key_prefix},
@@ -64,7 +73,10 @@ class Principal:
                 "plan": {"name": self.plan, "label": self.plan_cfg.get("label"),
                          "source": self.source, "expired": self.expired,
                          "expires": self.expires, "account_flag": self.account_flag},
-                "limits": config.public_plan(self.plan_cfg)}
+                "limits": {**config.public_plan(self.plan_cfg),
+                           "rate_per_minute": self.limit("rate_per_minute", 30),
+                           "concurrent_requests": self.limit("concurrent_requests", 2)},
+                "level": self.level}
 
 
 # ── stores ───────────────────────────────────────────────────────────────────
@@ -245,7 +257,8 @@ def _lookup_radar(key: str) -> Principal:
                      key_prefix="rdr_…" + str(info.get("last4") or ""), key_name=str(info.get("name") or ""),
                      email=user.get("email"), plan=ctx["plan"], plan_cfg=ctx["plan_cfg"],
                      source=ctx["source"], expired=ctx["expired"], expires=ctx["expires"],
-                     account_flag=ctx["account_flag"], notes=ctx["notes"])
+                     account_flag=ctx["account_flag"], notes=ctx["notes"],
+                     level=info.get("level") if isinstance(info.get("level"), dict) else None)
 
 
 def touch_last_used(key_id: str) -> None:

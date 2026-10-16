@@ -77,8 +77,9 @@ official client interfaces or claims of live service availability. Open the
 ## Install in one line
 
 Requires Bash, curl and Python 3.8+. The installer adds `prism-news` and
-`prism-business-news` (one client for both APIs) to `~/.local/bin`. It never uses
-sudo, edits shell profiles or starts services.
+`prism-business-news` (one client for both APIs) to `~/.local/bin` and sets
+`PRISM_API_BASE` and `PRISM_BUSINESS_API_BASE` for every new shell, so curl, Python
+and the CLI work without configuring a URL. It never uses sudo or starts services.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/fliarbi/prism-news-api/main/scripts/install.sh | bash
@@ -110,35 +111,48 @@ See [Getting started](docs/GETTING_STARTED.md) for options, every command and tr
 
 ## Plans and prices
 
-| Plan | Price / month (excl. GST) | Requests | Full-text exports | Headlines per call | History |
-|---|---|---:|---:|---:|---|
-| Free | ₹0 | 1,000 | 100 | 100 | Last 365 days |
-| Pro | ₹4,000 (US$49) | 25,000 | 2,500 | 100 | Full history |
-| Business | ₹15,000 (US$180) | 150,000 | 15,000 | 500 | Full history |
-| Enterprise | Custom | 2,000,000 | 200,000 | 1,000 | Full history |
+| Plan | Price | Requests / month | Full-text exports / month | Requests / min | At once | Headlines per call | History |
+|---|---|---:|---:|---:|---:|---:|---|
+| Free | ₹0 | 1,000 | 100 | 30 | 2 | 100 | Last 365 days |
+| **Pay as you go** | **₹0.84 / US$0.01 per credit** | 1 credit each | 1 credit each | by level | by level | your plan's | your plan's |
+| Pro | ₹4,000 (US$49) / month | 25,000 | 2,500 | 120 | 5 | 100 | Full history |
+| Business | ₹15,000 (US$180) / month | 150,000 | 15,000 | 600 | 10 | 500 | Full history |
+| Enterprise | Custom | 2,000,000 | 200,000 | 3,000 | 25 | 1,000 | Full history |
 
-One plan covers both the Prism News API and the Prism Business News API. Upgrade in the
-[Fliar dashboard](https://fliarbi.com/radar/dashboard?ws=marketai&tab=radarapi) under
-**API keys → Prism News API plans**; Enterprise is by arrangement with Fliar. `/v1/me`
-always shows the limits that apply to your key.
+Prices exclude GST. One plan covers both the Prism News API and the Prism Business News API.
 
-**Pay as you go.** When a plan's monthly allowance is used up, requests continue on
-prepaid credits instead of stopping: **1 credit per request and 1 per full-text article**
-delivered (₹0.84 or US$0.01 per credit; minimum top-up 500 credits, US$5). Credits are
-bought on the [API key page](https://fliarbi.com/radar-api/developer), are shared with
-the Radar API, and stop at the monthly spending limit you set there. Failed requests are
+**Pay as you go** needs no subscription. Buy prepaid credits (minimum 500 credits, US$5)
+on the [API key page](https://fliarbi.com/radar-api/developer); one credit pays for one
+request or one full-text article. On Free it starts after the free allowance; on a paid
+plan, after the plan's monthly allowance, so nothing stops when you run out. The same
+wallet pays for Radar API calls. You set a monthly spending limit, failed requests are
 refunded, and a response paid with credits says so in `meta.notes`.
+
+**Usage levels.** The more credits an account has used in total (Radar and Prism News
+together), the higher its limits. Levels apply automatically and never go down; from
+Growth up, your limits are the higher of your plan's and your level's.
+
+| Level | Credits used (lifetime) | Requests / min | Requests at once | Prepaid credits / day |
+|---|---:|---:|---:|---:|
+| Starter | 0 | plan | plan | 5,000 |
+| Growth | 10,000 | 120 | 5 | 25,000 |
+| Scale | 100,000 | 300 | 10 | 100,000 |
+| Premier | 1,000,000 | 600 | 20 | 500,000 |
+
+Upgrade or buy credits in the [Fliar dashboard](https://fliarbi.com/radar/dashboard?ws=marketai&tab=radarapi)
+under **API keys**; Enterprise is by arrangement with Fliar. `/v1/me` shows your plan,
+level and effective limits.
 
 ## Make a first request with curl or Python
 
 1. Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi), open **API keys** (in the Radar or the Fliar Prism workspace) and choose **Create or manage API keys**. On the key page, choose **Connect Radar session**, pick **All data** or **News only** access and create a key. It starts with `rdr_` and also works on the Radar API.
-2. Set `API_BASE=https://radar-api.fliarbi.com/news` and `PRISM_API_KEY` to your issued key. Keep the key private.
+2. The installer sets `PRISM_API_BASE`; without it, `export PRISM_API_BASE=https://radar-api.fliarbi.com/news`. Set `PRISM_API_KEY` to your key and keep it private.
 3. Check your access, then search:
 
 ```bash
-curl -sS "$API_BASE/v1/me" -H "X-API-Key: $PRISM_API_KEY"
+curl -sS "$PRISM_API_BASE/v1/me" -H "X-API-Key: $PRISM_API_KEY"
 
-curl -sS --get "$API_BASE/v1/headlines" \
+curl -sS --get "$PRISM_API_BASE/v1/headlines" \
   -H "X-API-Key: $PRISM_API_KEY" \
   --data-urlencode 'q=electric vehicle' \
   --data-urlencode 'sentiment=negative' \
@@ -154,7 +168,7 @@ import os
 import requests
 
 response = requests.get(
-    os.environ["API_BASE"].rstrip("/") + "/v1/headlines",
+    os.environ.get("PRISM_API_BASE", "https://radar-api.fliarbi.com/news") + "/v1/headlines",
     headers={"X-API-Key": os.environ["PRISM_API_KEY"]},
     params={"q": "electric vehicle", "limit": 100},
     timeout=60,

@@ -99,13 +99,13 @@ prism-news headlines "air pollution" --since 2026-01-01 --until 2026-04-30 --mat
 Or with curl (each request below is one of the five captured calls):
 
 ```bash
-curl -sS "$API_BASE/v1/overview" -H "X-API-Key: $PRISM_API_KEY" -H 'Content-Type: application/json' \
+curl -sS "$PRISM_API_BASE/v1/overview" -H "X-API-Key: $PRISM_API_KEY" -H 'Content-Type: application/json' \
   -d '{"q": "air pollution", "since": "2026-01-01", "until": "2026-04-30"}'
 ```
 
 ```python
 import os, requests
-r = requests.post(os.environ["API_BASE"] + "/v1/headlines", headers={"X-API-Key": os.environ["PRISM_API_KEY"]},
+r = requests.post(os.environ.get("PRISM_API_BASE", "https://radar-api.fliarbi.com/news") + "/v1/headlines", headers={"X-API-Key": os.environ["PRISM_API_KEY"]},
                   json={"q": "air pollution", "since": "2026-01-01", "until": "2026-04-30", "match": "focused", "priority_min": 6, "sort": "priority", "limit": 25}, timeout=60)
 for a in r.json()["data"]["items"]:
     print(a["published_at"][:10], a["priority"], a["headline"])

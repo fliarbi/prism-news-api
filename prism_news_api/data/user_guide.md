@@ -28,16 +28,16 @@ Explore **450M+ historical and real-time news articles** from Fliar. Discover re
 For an interactive Bash session:
 
 ```bash
-API_BASE=https://radar-api.fliarbi.com/news
+PRISM_API_BASE=https://radar-api.fliarbi.com/news
 read -r -s -p 'API key: ' PRISM_API_KEY
-export API_BASE PRISM_API_KEY
+export PRISM_API_BASE PRISM_API_KEY
 ```
 
 Send either authentication header, using your issued key:
 
 ```bash
-curl -sS "$API_BASE/v1/me" -H "X-API-Key: $PRISM_API_KEY"
-curl -sS "$API_BASE/v1/me" -H "Authorization: Bearer $PRISM_API_KEY"
+curl -sS "$PRISM_API_BASE/v1/me" -H "X-API-Key: $PRISM_API_KEY"
+curl -sS "$PRISM_API_BASE/v1/me" -H "Authorization: Bearer $PRISM_API_KEY"
 ```
 
 `/v1/me` returns `data.key`, `data.plan`, `data.limits` and `data.usage`. It does not return your full secret. One key is accepted by both APIs, and requests, exports and rate limits are shared by the account. Creating another key does not create another allowance. Revoke or replace keys through the dashboard once available; use your access contact during preview if key management is unavailable.
@@ -49,7 +49,7 @@ After access is enabled, `/guide` serves this user guide as Markdown. `/docs` an
 Start with a phrase and inspect the dates as well as the headlines:
 
 ```bash
-curl -sS --get "$API_BASE/v1/headlines" \
+curl -sS --get "$PRISM_API_BASE/v1/headlines" \
   -H "X-API-Key: $PRISM_API_KEY" \
   --data-urlencode 'q=electric vehicle' \
   --data-urlencode 'limit=100'
@@ -58,7 +58,7 @@ curl -sS --get "$API_BASE/v1/headlines" \
 Endpoints marked `GET/POST` accept the same filter names in a GET query string or a flat POST JSON object. POST is convenient for lists:
 
 ```bash
-curl -sS "$API_BASE/v1/headlines" \
+curl -sS "$PRISM_API_BASE/v1/headlines" \
   -H "X-API-Key: $PRISM_API_KEY" \
   -H 'Content-Type: application/json' \
   --data '{"q":"electric vehicle","sentiment":["negative"],"priority_min":7,"classes":[0],"limit":100}'
@@ -70,7 +70,7 @@ The following Python helper, using `requests`, is reused in the examples below. 
 import os
 import requests
 
-BASE = os.environ["API_BASE"].rstrip("/")
+BASE = os.environ.get("PRISM_API_BASE", "https://radar-api.fliarbi.com/news")
 session = requests.Session()
 session.headers["X-API-Key"] = os.environ["PRISM_API_KEY"]
 
@@ -149,13 +149,13 @@ These filters can be used alone or together:
 GCP content codes map to public standardized content paths. `/v1/classes` requires a meaningful `q` (2–120 characters, at least two alphanumeric characters) or a nonroot `prefix` such as `/Finance`. `limit` is 1–5, default 5. Class detail returns the selected code, volume information and at most five children; it does not return themes.
 
 ```bash
-curl -sS --get "$API_BASE/v1/classes" \
+curl -sS --get "$PRISM_API_BASE/v1/classes" \
   -H "X-API-Key: $PRISM_API_KEY" \
   --data-urlencode 'q=company' --data-urlencode 'limit=5'
 
-curl -sS "$API_BASE/v1/classes/0" -H "X-API-Key: $PRISM_API_KEY"
+curl -sS "$PRISM_API_BASE/v1/classes/0" -H "X-API-Key: $PRISM_API_KEY"
 
-curl -sS --get "$API_BASE/v1/classes/0/headlines" \
+curl -sS --get "$PRISM_API_BASE/v1/classes/0/headlines" \
   -H "X-API-Key: $PRISM_API_KEY" \
   --data-urlencode 'sentiment=negative' \
   --data-urlencode 'priority_min=7' --data-urlencode 'limit=100'
@@ -168,7 +168,7 @@ Code `0` maps to `/News/Business News/Company News`. Use returned `code` values 
 Theme discovery **requires a specific `q` of 2–120 characters, including at least two alphanumeric characters**. `limit` defaults to **5** and accepts only **1–5**; a larger value returns `400 bad_request`, rather than being reduced. `cursor` is rejected. Select an exact returned theme; discovery has no browse-all operation or dictionary pagination.
 
 ```bash
-curl -sS --get "$API_BASE/v1/themes" \
+curl -sS --get "$PRISM_API_BASE/v1/themes" \
   -H "X-API-Key: $PRISM_API_KEY" \
   --data-urlencode 'q=electric vehicle' \
   --data-urlencode 'sentiment=negative' \
@@ -247,7 +247,7 @@ print(full["data"]["article"]["body"])
 For batches, send common filters plus `format` to `POST /v1/export`. The default is 100 full articles per call. Your plan’s `max_export_batch` determines the cap; remaining export allowance can reduce the batch further.
 
 ```bash
-curl -sS "$API_BASE/v1/export" \
+curl -sS "$PRISM_API_BASE/v1/export" \
   -H "X-API-Key: $PRISM_API_KEY" \
   -H 'Content-Type: application/json' \
   --data '{"q":"electric vehicle","sentiment":"negative","priority_min":7,"classes":[0],"limit":100,"format":"json"}'
@@ -286,14 +286,14 @@ Export failures return a JSON error envelope even if you requested CSV or NDJSON
 Use overview for an initial subject summary, comparison for named alternatives, geography for a bounded location breakdown, and coverage to assess whether a result supports your analysis. These endpoints are part of the preview contract; check availability on the base URL supplied with access.
 
 ```bash
-curl -sS --get "$API_BASE/v1/overview" \
+curl -sS --get "$PRISM_API_BASE/v1/overview" \
   -H "X-API-Key: $PRISM_API_KEY" --data-urlencode 'q=electric vehicle'
 
-curl -sS --get "$API_BASE/v1/geography" \
+curl -sS --get "$PRISM_API_BASE/v1/geography" \
   -H "X-API-Key: $PRISM_API_KEY" \
   --data-urlencode 'q=electric vehicle' --data-urlencode 'limit=5'
 
-curl -sS --get "$API_BASE/v1/coverage" \
+curl -sS --get "$PRISM_API_BASE/v1/coverage" \
   -H "X-API-Key: $PRISM_API_KEY" --data-urlencode 'q=electric vehicle'
 ```
 
@@ -392,7 +392,7 @@ Counts describe reporting in available coverage. They are not counts of unique r
 
 ## Quotas, errors and retry
 
-Check `/v1/me` for `data.limits` and `data.usage`; it is authoritative for your key. Upgrade in the Fliar dashboard under **API keys → Prism News API plans**. After the plan allowance, requests and full-text articles continue pay-as-you-go on prepaid credits (1 credit each, ₹0.84 or US$0.01) bought on the API key page, up to the monthly spending limit you set; a paid response says so in `meta.notes`, and export responses report `charged_exports` (plan) and `charged_credits` (prepaid). Relevant limits include `requests_per_month`, `exports_per_month`, `rate_per_minute`, `history_days`, `max_results` and `max_export_batch`.
+Check `/v1/me` for `data.limits` and `data.usage`; it is authoritative for your key. Upgrade in the Fliar dashboard under **API keys → Prism News API plans**. After the plan allowance, requests and full-text articles continue pay-as-you-go on prepaid credits (1 credit each, ₹0.84 or US$0.01) bought on the API key page, up to the monthly spending limit you set; a paid response says so in `meta.notes`, and export responses report `charged_exports` (plan) and `charged_credits` (prepaid). Each account may also run a limited number of requests at once (`concurrent_requests`: 2 on Free, 5 on Pro, 10 on Business, 25 on Enterprise); extra requests receive `429 rate_limited` with `Retry-After`. Usage levels lift the per-minute and concurrent limits as an account's lifetime prepaid credit usage grows (Growth from 10,000 credits, Scale from 100,000, Premier from 1,000,000); `/v1/me` returns `data.level` and the effective `data.limits`. Relevant limits include `requests_per_month`, `exports_per_month`, `rate_per_minute`, `history_days`, `max_results` and `max_export_batch`.
 
 Both headlines and exports default to **100**, on every plan. The caps per plan are below; your `/v1/me` response is authoritative for your access. Discovery remains capped at five regardless of plan.
 

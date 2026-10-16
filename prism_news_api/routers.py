@@ -94,7 +94,12 @@ def _maybe_refresh_quota(request: Request) -> None:
 
 
 def settle_payg(request: Request, ok: bool) -> None:
-    """Charge the request's pay-as-you-go credit on success; refund it otherwise."""
+    """Charge the request's pay-as-you-go credit on success; refund it otherwise.
+    Also frees the request's concurrent-request slot."""
+    p = _state(request, "principal")
+    if p is not None and _state(request, "slot"):
+        quota.release_slot(p.user_id, request.state.slot)
+        request.state.slot = None
     for rid, units in _state(request, "payg") or []:
         payg.settle(rid, units if ok else 0)
     request.state.payg = []
@@ -165,13 +170,14 @@ def principal_dep(request: Request) -> Principal:
 
 
 def _rate(request: Request, p: Principal) -> dict:
-    rate = quota.check_rate(p.user_id, int(p.plan_cfg.get("rate_per_minute") or 30))
+    rate = quota.check_rate(p.user_id, p.limit("rate_per_minute", 30))
     request.state.rate = rate
     return rate
 
 
 def metered(request: Request, p: Principal = Depends(principal_dep)) -> Principal:
     rate = _rate(request, p)
+    request.state.slot = quota.acquire_slot(p.user_id, p.limit("concurrent_requests", 2))
     try:
         quota.check_requests(p.user_id, p.key_id, int(p.plan_cfg.get("requests_per_month") or 0))
     except ApiError as e:

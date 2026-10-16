@@ -104,6 +104,38 @@ def check_rate(user_id: str, limit: int) -> dict:
     return _guard(run)
 
 
+# ── concurrent requests ──────────────────────────────────────────────────────
+def acquire_slot(user_id: str, limit: int) -> str:
+    """Hold one of the account's concurrent-request slots (a sorted set of request
+    tokens; slots older than two minutes are abandoned). Over the limit -> 429."""
+    import secrets as _secrets
+    token = _secrets.token_hex(8)
+
+    def run():
+        r, key, now = _r(), f"{config.REDIS_PREFIX}conc:u:{user_id}", time.time()
+        pipe = r.pipeline()
+        pipe.zremrangebyscore(key, 0, now - 120)
+        pipe.zadd(key, {token: now})
+        pipe.zcard(key)
+        pipe.expire(key, 300)
+        held = pipe.execute()[2]
+        if held > int(limit):
+            r.zrem(key, token)
+            raise ApiError("rate_limited", f"at most {int(limit)} requests may run at once for this account; "
+                                           "retry when one finishes", headers={"Retry-After": "2"})
+        return token
+    return _guard(run)
+
+
+def release_slot(user_id: str, token: str | None) -> None:
+    if not token:
+        return
+    try:
+        _r().zrem(f"{config.REDIS_PREFIX}conc:u:{user_id}", token)
+    except Exception as e:                 # the slot expires on its own
+        log.debug("slot release skipped: %s", e)
+
+
 # ── request quota ────────────────────────────────────────────────────────────
 def check_requests(user_id: str, key_id: str, limit: int) -> dict:
     """INCR the account's monthly request counter; roll back and 402 past the
