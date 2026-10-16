@@ -93,7 +93,7 @@ See [Getting started](docs/GETTING_STARTED.md) for options, every command and tr
 
 | Step | Do this | You get |
 |---:|---|---|
-| 1 | Request a preview API key from Fliar (dashboard self-service is not live yet) | One key for both News APIs (shared monthly quota) and the base URLs |
+| 1 | [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi) → **API keys** → **Create or manage API keys** → create a key with **All data** or **News only** access | One `rdr_` key for both News APIs and the Radar API |
 | 2 | Run the one-line installer above | The `prism-news` and `prism-business-news` commands |
 | 3 | `prism-news login` | Base URLs and key saved owner-only in `~/.config/prism/config.json` |
 | 4 | `prism-news status`, then `prism-news me` | Data dates, your plan, limits and this month's usage |
@@ -113,7 +113,7 @@ See [Getting started](docs/GETTING_STARTED.md) for options, every command and tr
 
 ## Make a first request with curl or Python
 
-1. Request a preview API key from Fliar. Self-service key creation in the Fliar dashboard is not live yet; it will appear there when the API launches.
+1. Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi), open **API keys** (in the Radar or the Fliar Prism workspace) and choose **Create or manage API keys**. On the key page, choose **Connect Radar session**, pick **All data** or **News only** access and create a key. It starts with `rdr_` and also works on the Radar API.
 2. Set `API_BASE` to the News API base URL supplied with your access and `PRISM_API_KEY` to your issued key. Keep the key private.
 3. Check your access, then search:
 

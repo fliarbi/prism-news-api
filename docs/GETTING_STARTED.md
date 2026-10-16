@@ -7,11 +7,15 @@ then lists every command of the `prism-news` client.
 
 ## 1. Get a key
 
-During the private preview, API keys are issued by Fliar on request: ask Fliar for a
-preview key and you receive the key and the API base URL(s). Self-service key creation
-in the Fliar dashboard is not live yet; it will appear there when the API launches. One
-key works on both the News API and the Business News API, and both share one monthly
-quota. Keep the key private; it is shown once.
+Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi) and open
+**API keys** (it is in both the Radar and the Fliar Prism workspace), then choose
+**Create or manage API keys**. On the key page, choose **Connect Radar session**, enter an
+application name, pick **All data** or **News only** access and an expiry, and create the
+key. Copy it when shown; it is displayed once.
+
+The key starts with `rdr_` and works on the Prism News API, the Prism Business News API
+and the Radar API. Each API meters its own usage; the two News APIs share one monthly
+quota. Older `pna_` keys keep working.
 
 ## 2. Install the client in one line
 
