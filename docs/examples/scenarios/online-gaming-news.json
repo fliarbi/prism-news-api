@@ -1,0 +1,833 @@
+{
+ "slug": "online-gaming-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:10:20Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "online gaming",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "online gaming",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8849,
+     "tone": {
+      "carrying": 8841,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1823,
+        "share_pct": 20.62
+       },
+       {
+        "group": "neutral",
+        "count": 139,
+        "share_pct": 1.57
+       },
+       {
+        "group": "positive",
+        "count": 6879,
+        "share_pct": 77.81
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 8849,
+      "count": 2014,
+      "share_pct": 22.76
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.515,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.518
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "online gaming",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "online gaming",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1334,
+       "critical": 254,
+       "critical_pct": 19.0,
+       "negative": 227,
+       "positive": 1065,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1191,
+       "critical": 224,
+       "critical_pct": 18.8,
+       "negative": 227,
+       "positive": 942,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1372,
+       "critical": 327,
+       "critical_pct": 23.8,
+       "negative": 355,
+       "positive": 993,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2664,
+       "critical": 1470,
+       "critical_pct": 55.2,
+       "negative": 986,
+       "positive": 1634,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1785,
+       "critical": 584,
+       "critical_pct": 32.7,
+       "negative": 451,
+       "positive": 1105,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1383,
+       "critical": 412,
+       "critical_pct": 29.8,
+       "negative": 368,
+       "positive": 1004,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1778,
+       "critical": 417,
+       "critical_pct": 23.5,
+       "negative": 387,
+       "positive": 1378,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1220,
+       "critical": 274,
+       "critical_pct": 22.5,
+       "negative": 267,
+       "positive": 928,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1870,
+       "critical": 375,
+       "critical_pct": 20.1,
+       "negative": 373,
+       "positive": 1467,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2060,
+       "critical": 526,
+       "critical_pct": 25.5,
+       "negative": 526,
+       "positive": 1506,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2119,
+       "critical": 438,
+       "critical_pct": 20.7,
+       "negative": 420,
+       "positive": 1663,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2800,
+       "critical": 675,
+       "critical_pct": 24.1,
+       "negative": 504,
+       "positive": 2243,
+       "partial_period": false
+      }
+     ],
+     "total": 21576,
+     "critical_total": 5976,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.005,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.007
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "online gaming",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "online gaming",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8849,
+     "carrying": 3692,
+     "availability_pct": 41.72,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1352,
+       "share_pct": 15.28
+      },
+      {
+       "country": "india",
+       "count": 503,
+       "share_pct": 5.68
+      },
+      {
+       "country": "australia",
+       "count": 385,
+       "share_pct": 4.35
+      },
+      {
+       "country": "united kingdom",
+       "count": 305,
+       "share_pct": 3.45
+      },
+      {
+       "country": "canada",
+       "count": 120,
+       "share_pct": 1.36
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1027
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.01,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.012
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "online gaming",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "online gaming",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "online gambling forums and communities",
+       "count": 632,
+       "share": 14.19,
+       "lift": 231.71,
+       "baseline_count": 5,
+       "previous_period_count": 94,
+       "delta_pct": 572.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gambling-related software tools (e.g., odds calculators)",
+       "count": 195,
+       "share": 4.38,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 54,
+       "delta_pct": 261.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "gambling-themed mobile applications",
+       "count": 690,
+       "share": 15.5,
+       "lift": 180.7,
+       "baseline_count": 7,
+       "previous_period_count": 111,
+       "delta_pct": 521.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "social casino gaming platforms and apps",
+       "count": 874,
+       "share": 19.63,
+       "lift": 145.65,
+       "baseline_count": 11,
+       "previous_period_count": 212,
+       "delta_pct": 312.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gambling-themed entertainment content",
+       "count": 426,
+       "share": 9.57,
+       "lift": 195.23,
+       "baseline_count": 4,
+       "previous_period_count": 78,
+       "delta_pct": 446.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 8849,
+     "carrying": 4453,
+     "carrier_share_pct": 50.32,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.216,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.219
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "online gaming",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "online gaming",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e31a01660da7a6a2ffdfb7",
+       "headline": "Man jailed after grooming girl he met on Roblox",
+       "url": "https://www.aol.com/articles/man-jailed-grooming-girl-met-135941315.html",
+       "publisher": "aol.com",
+       "published_at": "2026-04-09T16:50:33",
+       "lede": "carlo tritta admitted several sexual offences at a previous hearing a man who groomed a 14-year-old girl he met on the online gaming platform roblox has been jailed for 28 months. carlo tritta, now 19, repeatedly messaged the teenager and encouraged her to send him sexually explicit images of herself.",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.91,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.86
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.49
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "roblox"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e4f955d5e7fc42ee0b4774",
+       "headline": "Karnataka MBBS Student Dies By Suicide After Losing Money In Online Gaming",
+       "url": "https://www.ndtv.com/india-news/bidar-student-suicide-karnataka-mbbs-student-dies-by-suicide-after-losing-money-in-online-gaming-11259501",
+       "publisher": "ndtv.com",
+       "published_at": "2026-03-24T10:56:41",
+       "lede": "the death of a 21-year-old medical student in karnataka&amp;#039;s bidar has yet again brought to light the dangers of online gaming. anishkar chouhan, a native of kalaburagi, was found dead in his hostel room at brims medical college last night, police said. investigations have found that the final-year student had",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.84,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.51
+        },
+        {
+         "code": 390,
+         "path": "/Sensitive Subjects/Self-Harm",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc105efd89557e8dc389d7",
+       "headline": "Ghaziabad: Police urge UP govt to ban 5 game apps",
+       "url": "https://www.hindustantimes.com/cities/noida-news/ghaziabad-police-urge-up-govt-to-ban-5-game-apps-101770665635605.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-02-10T01:38:18",
+       "lede": "police in ghaziabad have written to the state government urging a ban on five online gaming applications that allegedly led three minor girls to jump to their deaths from a high-rise last week. the girls had mentioned the games in their suicide note, police said. an investigation in the case",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbe5cd06e4186dc314eefb",
+       "headline": "Homem é investigado por abuso virtual contra ao menos 459 crianças na Austrália e em outros 15 países",
+       "url": "https://oglobo.globo.com/mundo/epoca/noticia/2026/02/05/homem-e-investigado-por-crimes-de-abuso-online-contra-ao-menos-459-criancas-na-australia-e-outros-15-paises.ghtml",
+       "publisher": "oglobo.globo.com",
+       "published_at": "2026-02-05T09:01:12",
+       "lede": "queensland police, australia, investigates a 27-year-old man suspected of committing a series of child abuse crimes in the digital environment. according to the researchers, he actively watched children through social networks and online gaming platforms, in an action described as deliberate to locate victims. the authorities say the suspect is",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.78
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.64
+        },
+        {
+         "code": 23,
+         "path": "/Law & Government/Public Safety/Law Enforcement",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986075eca3bd326c779b251",
+       "headline": "Three sisters aged 12, 14, 16 die after jumping from high-rise in Ghaziabad; Online gaming angle suspected",
+       "url": "https://www.india.com/news/india/three-sisters-aged-12-14-16-die-after-jumping-from-high-rise-in-ghaziabad-online-gaming-angle-suspected-8292672/",
+       "publisher": "india.com",
+       "published_at": "2026-02-04T06:14:50",
+       "lede": "homenewsthree sisters aged 12, 14, 16 die after jumping from high-rise in ghaziabad; online gaming angle suspectedthree sisters aged 12, 14, 16 die after jumping from high-rise in ghaziabad; online gaming angle suspectedthree minor sisters died after jumping from a ninth-floor apartment in ghaziabad, sparking investigation into online gaming influence,",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.87,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.68
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6985f4edca3bd326c77962ed",
+       "headline": "Three minor sisters die by suicide in Ghaziabad; police probing addiction to Korean task game",
+       "url": "https://www.newindianexpress.com/nation/2026/Feb/04/three-minor-sisters-die-by-suicide-in-ghaziabad-police-probing-addiction-to-korean-task-game",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-02-04T05:10:58",
+       "lede": "lucknow: three minor sisters died after allegedly jumping from the balcony of their ninth-floor apartment in ghaziabad in the early hours of wednesday, with the police suspecting that the incident followed a dispute at home over excessive online gaming.the victims--nishika (16), prachi (14) and pakhi (12)--were found lying on the",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.82,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.6
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e91a7285a58da6f1b1633",
+       "headline": "New online gaming rules from May 1: Violations will see 3 year jail term, ₹1 crore in fines - BusinessToday",
+       "url": "https://www.businesstoday.in/technology/story/new-online-gaming-rules-from-may-1-violations-will-see-3-year-jail-term-rs1-crore-in-fines-528355-2026-04-30",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-30T15:50:15",
+       "lede": "india is set to usher in a sweeping regulatory overhaul of its online gaming sector, with the online gaming rules, 2026 coming into force on may 1. the framework operationalises the promotion and regulation of online gaming (prog) act, 2025, marking a shift from policy intent to enforceable regulation. advertisement",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 231,
+         "path": "/Games/Gambling/Other",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad8635cefb83fe8491c50",
+       "headline": "New Online Gaming Rules To Come Into Force From May 1: Here Are The Changes Explained - Outlook Money",
+       "url": "https://outlookmoney.com/news/new-online-gaming-rules-to-come-into-force-from-may-1-here-are-the-changes-explained",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-30T10:49:17",
+       "lede": "new online gaming rules will be rolled out from may 1, 2026real money gaming has been banned while e-sports are allowedindia’s new online gaming regime is set to come into force from may 1, 2026, marking a significant overhaul of how the sector will be governed. the rules operationalise the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 231,
+         "path": "/Games/Gambling/Other",
+         "score": 0.57
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec4ba8e67a2fcb3cc03af",
+       "headline": "Roblox Names Sunil Rao India Managing Director",
+       "url": "https://technosports.co.in/roblox-appoints-sunil-rao-as-managing-director/",
+       "publisher": "technosports.co.in",
+       "published_at": "2026-04-30T09:47:16",
+       "lede": "roblox, the global online gaming and creation platform, has announced the appointment of sunil rao as its managing director for india. rao is set to assume his role in may, aiming to bolster the company’s operational footprint and strategic initiatives within the indian market. in his new capacity, rao will",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.9,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8ab158937ef12fc0b1158",
+       "headline": "New Rules From May 1, 2026: From New Banking, PF, and LPG; List of Rule Changes That Will Impact Your Wallet | 📝 LatestLY",
+       "url": "https://www.latestly.com/india/information/new-rules-from-may-1-2026-from-new-banking-pf-and-lpg-list-of-rule-changes-that-will-impact-your-wallet-7413044.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-04-30T06:36:18",
+       "lede": "from may 1, 2026, several financial and regulatory changes are expected to come into effect in india, impacting banking customers, employees, insurance policyholders, and online gaming platforms. the updates include stricter digital compliance measures, changes in salary structure rules, and revisions in insurance premiums and banking charges. the changes are",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 231,
+         "path": "/Games/Gambling/Other",
+         "score": 0.69
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a70a8c37f6c5e66baf94a",
+       "headline": "India's Online Gaming Law Goes Live May 1: What's at Stake for Operators",
+       "url": "https://www.india-briefing.com/news/india-online-gaming-regulation-2026-what-operators-must-know-44355.html/",
+       "publisher": "india-briefing.com",
+       "published_at": "2026-04-28T12:05:13",
+       "lede": "india’s new online gaming act takes effect may 1, 2026: key changes explained india’s regulatory framework for online gaming is set to undergo a major shift with the enforcement of the promotion and regulation of online gaming act, 2025, and its accompanying rules from may 1, 2026. the new regime",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e409836d28f995cb7a42",
+       "headline": "Know your laws: New online gaming rules from May 1 amid compliance challenges",
+       "url": "https://www.indiatoday.in/india/law-news/story/know-your-laws-new-online-gaming-rules-from-may-1-amid-compliance-challenges-2902662-2026-04-28",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-04-28T09:24:42",
+       "lede": "india’s online gaming sector is entering a new regulatory phase with the notification of the online gaming rules by the ministry of electronics and information technology, effective from may 1. these rules are expected to streamline a fragmented legal landscape while balancing innovation, consumer protection, and concerns around real-money gaming.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "ministry of electronics and information technology"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e3c8d325610894208424",
+       "headline": "Gaming’s Big Reset: With India tightening rules, cos are redefining growth playbook - Exchange4media",
+       "url": "https://www.exchange4media.com/digital-news/gamings-big-reset-with-india-tightening-rules-cos-are-redefining-growth-playbook-154198.html",
+       "publisher": "exchange4media.com",
+       "published_at": "2026-04-28T03:20:28",
+       "lede": "india’s online gaming industry is entering a defining phase. after years of operating in a grey zone marked by explosive growth, legal ambiguity, and uneven enforcement, the rollout of the new rules under the online gaming authority of india signals a decisive pivot toward structure and accountability. what was once",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 757,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAxNzo0MTozNiIsImkiOiI2OWYxYzdiYzFlMzkzM2E2ZGQ4ZTJlNmEiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.742,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.744
+    }
+   }
+  }
+ ]
+}

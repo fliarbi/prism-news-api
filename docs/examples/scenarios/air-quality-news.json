@@ -1,0 +1,876 @@
+{
+ "slug": "air-quality-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:28Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "air quality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "air quality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6308,
+     "tone": {
+      "carrying": 6286,
+      "availability_pct": 99.65,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3822,
+        "share_pct": 60.8
+       },
+       {
+        "group": "neutral",
+        "count": 144,
+        "share_pct": 2.29
+       },
+       {
+        "group": "positive",
+        "count": 2320,
+        "share_pct": 36.91
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6305,
+      "count": 4364,
+      "share_pct": 69.21
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.513,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.515
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "air quality",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "air quality",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1130,
+       "critical": 573,
+       "critical_pct": 50.7,
+       "negative": 625,
+       "positive": 479,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1129,
+       "critical": 679,
+       "critical_pct": 60.1,
+       "negative": 609,
+       "positive": 483,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1199,
+       "critical": 711,
+       "critical_pct": 59.3,
+       "negative": 662,
+       "positive": 500,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1505,
+       "critical": 972,
+       "critical_pct": 64.6,
+       "negative": 980,
+       "positive": 495,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 998,
+       "critical": 577,
+       "critical_pct": 57.8,
+       "negative": 465,
+       "positive": 496,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2114,
+       "critical": 1564,
+       "critical_pct": 74.0,
+       "negative": 1411,
+       "positive": 668,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 3324,
+       "critical": 2265,
+       "critical_pct": 68.1,
+       "negative": 2040,
+       "positive": 1240,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2846,
+       "critical": 2245,
+       "critical_pct": 78.9,
+       "negative": 2017,
+       "positive": 777,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1653,
+       "critical": 1231,
+       "critical_pct": 74.5,
+       "negative": 1103,
+       "positive": 512,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1598,
+       "critical": 1095,
+       "critical_pct": 68.5,
+       "negative": 913,
+       "positive": 649,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1356,
+       "critical": 917,
+       "critical_pct": 67.6,
+       "negative": 805,
+       "positive": 513,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1701,
+       "critical": 1121,
+       "critical_pct": 65.9,
+       "negative": 1001,
+       "positive": 646,
+       "partial_period": false
+      }
+     ],
+     "total": 20553,
+     "critical_total": 13950,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-11-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.825,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.827
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "air quality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "air quality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6308,
+     "carrying": 3253,
+     "availability_pct": 51.57,
+     "items": [
+      {
+       "country": "india",
+       "count": 1731,
+       "share_pct": 27.44
+      },
+      {
+       "country": "united states",
+       "count": 838,
+       "share_pct": 13.28
+      },
+      {
+       "country": "united kingdom",
+       "count": 85,
+       "share_pct": 1.35
+      },
+      {
+       "country": "china",
+       "count": 62,
+       "share_pct": 0.98
+      },
+      {
+       "country": "thailand",
+       "count": 44,
+       "share_pct": 0.7
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 493
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.383,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.385
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "air quality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "air quality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "air quality and pollution levels",
+       "count": 667,
+       "share": 14.98,
+       "lift": 1222.43,
+       "baseline_count": 1,
+       "previous_period_count": 1498,
+       "delta_pct": -55.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "air quality improvement initiatives",
+       "count": 2225,
+       "share": 49.96,
+       "lift": 453.09,
+       "baseline_count": 9,
+       "previous_period_count": 4084,
+       "delta_pct": -45.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "environmental policy and legislation",
+       "count": 864,
+       "share": 19.4,
+       "lift": 263.91,
+       "baseline_count": 6,
+       "previous_period_count": 926,
+       "delta_pct": -6.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "eco-friendly transportation alternatives",
+       "count": 134,
+       "share": 3.01,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 141,
+       "delta_pct": -5.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "climate change and public health",
+       "count": 111,
+       "share": 2.49,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 280,
+       "delta_pct": -60.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6308,
+     "carrying": 4454,
+     "carrier_share_pct": 70.61,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.517,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.519
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "air quality",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "air quality",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2ee21883fc01faba5b70ad",
+       "headline": "'A nightmare' — Russians in Tuapse in disbelief after Ukrainian drones bring the war home",
+       "url": "https://www.yahoo.com/news/articles/nightmare-russians-tuapse-disbelief-ukrainian-132704016.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T13:27:04",
+       "lede": "air quality in the russian city of tuapse has deteriorated significantly following a major fire at a local oil refinery struck by ukrainian drones on april 20, with residents expressing fear for their safety as conditions in the city continue to worsen. a fire broke out at the oil facility",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7912c37f6c5e66c07161",
+       "headline": "Report Finds 33 Million US Children Exposed to Harmful Air Pollution Across the Country",
+       "url": "https://newsable.asianetnews.com/international/climate-change/report-finds-33-million-us-children-exposed-to-harmful-air-pollution-across-the-country-articleshow-dvpq9ay",
+       "publisher": "newsable.asianetnews.com",
+       "published_at": "2026-04-22T12:12:51",
+       "lede": "a new report has shown a concerning trend in air quality across the united states, revealing that almost half of all children are living in areas where air pollution levels are unsafe. these findings come from the 27th annual state of the air report by the american lung association (ala),",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e2ea5cfa3e5ba54fac84",
+       "headline": "Toxic haze in the North triggers lung risks: expert",
+       "url": "https://www.bangkokpost.com/thailand/general/3239455/toxic-haze-in-the-north-triggers-lung-risks-expert",
+       "publisher": "bangkokpost.com",
+       "published_at": "2026-04-19T00:50:00",
+       "lede": "air quality in chiang mai remained at crisis levels on saturday, with thick haze blanketing the city and severely reducing visibility.at chiang mai university in muang district, pm2.5 surged to 360 micrograms per cubic metre (&micro;g/m&sup3;), far exceeding the safety standard of 37.5 &micro;g/m&sup3;. the situation coincided with ongoing wildfires,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.57
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.44
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "chiang mai university"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d1d43117c374136f8346e5",
+       "headline": "Northern Thailand chokes on hazardous haze as Pattaya breathes easier for now - Pattaya Mail",
+       "url": "https://www.pattayamail.com/news/northern-thailand-chokes-on-hazardous-haze-as-pattaya-breathes-easier-for-now-541504",
+       "publisher": "pattayamail.com",
+       "published_at": "2026-04-01T00:33:49",
+       "lede": "pattaya, thailand – air quality across northern thailand has deteriorated sharply, with chiang mai once again engulfed in dense haze as forest fires and agricultural burning drive pollution to dangerous levels. authorities reported nearly 3,000 hotspot fires over the past seven days, with almost 800 recorded in a single day",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.67
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.49
+        }
+       ],
+       "country": "thailand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "629b89fdcd71d220c722879a",
+       "headline": "Mortality impacts of long-term PM2.5 and NO2 exposure in Great Britain under national and international air quality limits.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41960439/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-01T00:00:00",
+       "lede": "mortality impacts of long-term pm2.5 and no2 exposure in great britain under national and international air quality limits.pm2.5 and no2 are two of the most dangerous air pollutants, contributing to substantial excess mortality across europe. in 2021, the world health organization (who) revised its air quality (aq) guidelines, decreasing the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.68
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d150fdb63306cd5fc6fad5",
+       "headline": "Chiang Mai under a blanket of toxic air as warning signs reach Pattaya - Pattaya Mail",
+       "url": "https://www.pattayamail.com/news/chiang-mai-under-a-blanket-of-toxic-air-as-warning-signs-reach-pattaya-541465",
+       "publisher": "pattayamail.com",
+       "published_at": "2026-03-31T00:07:50",
+       "lede": "pattaya, thailand – chiang mai has once again climbed to the top of the world’s worst air quality rankings on march 30, with pollution levels reaching alarming and dangerous extremes — raising concerns that other parts of thailand, including pattaya, could soon feel the impact. a thick blanket of toxic",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.72
+        }
+       ],
+       "country": "thailand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d0a38abf4b924b35182f40",
+       "headline": "Breathing danger: WHO identifies world’s most polluted countries and cleanest nations",
+       "url": "https://euroweeklynews.com/2026/03/29/breathing-danger-who-identifies-worlds-most-polluted-countries-and-cleanest-nations/",
+       "publisher": "euroweeklynews.com",
+       "published_at": "2026-03-29T21:11:27",
+       "lede": "by molly grace • published: 29 mar 2026 • 23:11 • 4 minutes read the report also highlights where air pollution remains a critical problem. photo credit: tr stok/shutterstock a new global air quality report has revealed that only thirteen countries and territories worldwide maintain levels of air pollution that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.82
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c441e7fdc6f6629da0628d",
+       "headline": "Finland Has Europe’s Cleanest Air, But Pollution Still a Concern | 2025 Report - Time News",
+       "url": "https://time.news/finland-has-europes-cleanest-air-but-pollution-still-a-concern-2025-report/",
+       "publisher": "time.news",
+       "published_at": "2026-03-25T15:12:32",
+       "lede": "across europe, the air we breathe is far from universally clean. a new report from iqair, a swiss air quality technology company, reveals a stark disparity: while some nations enjoy remarkably fresh air, others grapple with dangerously high levels of pollution. the 2025 world air quality report, analyzing data from",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.78
+        }
+       ],
+       "country": "turkey",
+       "organizations": [
+        "iqair"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbf733d652ae4c39907640",
+       "headline": "Global air quality worsened in 2025 - Taipei Times",
+       "url": "https://www.taipeitimes.com/News/world/archives/2026/03/25/2003854448",
+       "publisher": "taipeitimes.com",
+       "published_at": "2026-03-24T16:00:00",
+       "lede": "global air quality worsened in 2025pollution: pakistan and bangladesh had the highest average pm2.5 concentrations, while french polynesia and puerto rico recorded the lowest, iqair group saidbloombergglobal air quality declined in 2025, with more cities reporting standards below international health guidelines on the impact of severe wildfires and pollution from",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.81
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [
+        "iqair"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c4368ea3bcecce613bb2cd",
+       "headline": "Pakistan Air Pollution: World’s Highest PM2.5 Levels in 2025 - Time News",
+       "url": "https://time.news/pakistan-air-pollution-worlds-highest-pm2-5-levels-in-2025/",
+       "publisher": "time.news",
+       "published_at": "2026-03-24T14:24:31",
+       "lede": "islamabad – pakistan’s air quality reached crisis levels in 2025, with the country registering the highest concentrations of hazardous fine particulate matter, known as pm2.5, globally, according to a new report released tuesday by iqair, a swiss air quality monitoring firm. the findings reveal that pakistan’s average pm2.5 level reached",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.7
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "tajikistan",
+       "organizations": [
+        "iqair"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c42a3d80c609dd0bf8a7ef",
+       "headline": "Pakistan ranked world's most polluted country in 2025: IQAir report",
+       "url": "https://www.aninews.in/news/world/asia/pakistan-ranked-worlds-most-polluted-country-in-2025-iqair-report20260324141232",
+       "publisher": "aninews.in",
+       "published_at": "2026-03-24T08:42:32",
+       "lede": "islamabad [pakistan], march 24 (ani): pakistan has been ranked the world's most polluted country in 2025, with levels of hazardous fine particulate matter far exceeding global health standards, dawn reported on tuesday.the annual report by swiss air quality monitoring firm iqair found that concentrations of pm2.5, tiny airborne particles that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.81
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [
+        "iqair"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c426cb7c4635ab38e7cc49",
+       "headline": "Global air quality worsened in 2025 and poses threat to growth",
+       "url": "https://www.businesstimes.com.sg/esg/global-air-quality-worsened-2025-and-poses-threat-growth",
+       "publisher": "businesstimes.com.sg",
+       "published_at": "2026-03-24T05:21:42",
+       "lede": "pm2.5 is regarded as a greater risk to human health than larger particulatesthe world’s 25 most polluted cities were all located in india, pakistan and china. photo: epa[tokyo] global air quality declined in 2025, with more cities reporting standards below international health guidelines on the impact of severe wildfires and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.79
+        }
+       ],
+       "country": "switzerland",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1d1e6be295898c6dc2204",
+       "headline": "Opinion | No bigger cause",
+       "url": "https://kathmandupost.com/editorial/2026/03/12/no-bigger-cause",
+       "publisher": "kathmandupost.com",
+       "published_at": "2026-03-12T00:00:00",
+       "lede": "a thick haze has enveloped most parts of nepal for a week now, with no relief in sight until the country receives ample rainfall. over the past few years, during the winter and pre-monsoon seasons, kathmandu is often ranked the world’s most polluted city. with an air quality index of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.76
+        }
+       ],
+       "country": "nepal",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1bf2cbe295898c6dbe29b",
+       "headline": "Kathmandu ranked world’s third most polluted city at Friday noon",
+       "url": "https://kathmandupost.com/health/2026/03/06/kathmandu-ranked-world-s-third-most-polluted-city-at-friday-noon",
+       "publisher": "kathmandupost.com",
+       "published_at": "2026-03-06T00:00:00",
+       "lede": "the economic consequences are severe. “it affects labour productivity due to increased health-related absences and impaired cognition. the negative impact on the tourism industry and the aviation sector is also significant. the economic cost of poor air quality is estimated to exceed six percent of nepal’s gdp each year,” reads",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.41
+        }
+       ],
+       "country": "nepal",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 2065,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0wNiAwMDowMDowMCIsImkiOiI2OWUxYmYyY2JlMjk1ODk4YzZkYmUyOWIiLCJwIjo5fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.065,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.068
+    }
+   }
+  }
+ ]
+}

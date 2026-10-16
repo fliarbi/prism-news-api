@@ -1,0 +1,959 @@
+{
+ "slug": "gene-therapy-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:15Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "gene therapy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gene therapy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2990,
+     "tone": {
+      "carrying": 2986,
+      "availability_pct": 99.87,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 176,
+        "share_pct": 5.89
+       },
+       {
+        "group": "neutral",
+        "count": 32,
+        "share_pct": 1.07
+       },
+       {
+        "group": "positive",
+        "count": 2778,
+        "share_pct": 93.03
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2989,
+      "count": 2563,
+      "share_pct": 85.75
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.182,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.186
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "gene therapy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gene therapy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 695,
+       "critical": 611,
+       "critical_pct": 87.9,
+       "negative": 75,
+       "positive": 612,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 498,
+       "critical": 424,
+       "critical_pct": 85.1,
+       "negative": 61,
+       "positive": 430,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 606,
+       "critical": 525,
+       "critical_pct": 86.6,
+       "negative": 145,
+       "positive": 452,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 488,
+       "critical": 413,
+       "critical_pct": 84.6,
+       "negative": 47,
+       "positive": 423,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 732,
+       "critical": 605,
+       "critical_pct": 82.7,
+       "negative": 35,
+       "positive": 669,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 602,
+       "critical": 530,
+       "critical_pct": 88.0,
+       "negative": 38,
+       "positive": 557,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 623,
+       "critical": 549,
+       "critical_pct": 88.1,
+       "negative": 46,
+       "positive": 552,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 693,
+       "critical": 606,
+       "critical_pct": 87.4,
+       "negative": 32,
+       "positive": 637,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 810,
+       "critical": 732,
+       "critical_pct": 90.4,
+       "negative": 27,
+       "positive": 780,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 750,
+       "critical": 626,
+       "critical_pct": 83.5,
+       "negative": 68,
+       "positive": 674,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 631,
+       "critical": 526,
+       "critical_pct": 83.4,
+       "negative": 58,
+       "positive": 564,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 799,
+       "critical": 679,
+       "critical_pct": 85.0,
+       "negative": 23,
+       "positive": 760,
+       "partial_period": false
+      }
+     ],
+     "total": 7927,
+     "critical_total": 6826,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.433,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.437
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "gene therapy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gene therapy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2990,
+     "carrying": 1157,
+     "availability_pct": 38.7,
+     "items": [
+      {
+       "country": "united states",
+       "count": 713,
+       "share_pct": 23.85
+      },
+      {
+       "country": "united kingdom",
+       "count": 79,
+       "share_pct": 2.64
+      },
+      {
+       "country": "central african republic",
+       "count": 45,
+       "share_pct": 1.51
+      },
+      {
+       "country": "switzerland",
+       "count": 44,
+       "share_pct": 1.47
+      },
+      {
+       "country": "china",
+       "count": 42,
+       "share_pct": 1.4
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 234
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.125,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.129
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "gene therapy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gene therapy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "gene therapy and crispr technologies",
+       "count": 899,
+       "share": 45.5,
+       "lift": 3713.83,
+       "baseline_count": 1,
+       "previous_period_count": 854,
+       "delta_pct": 5.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease therapies and orphan drugs",
+       "count": 677,
+       "share": 34.26,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 593,
+       "delta_pct": 14.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "biotechnology innovations in medicine",
+       "count": 581,
+       "share": 29.4,
+       "lift": 2400.15,
+       "baseline_count": 1,
+       "previous_period_count": 477,
+       "delta_pct": 21.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stem cell research and applications",
+       "count": 493,
+       "share": 24.95,
+       "lift": 2036.62,
+       "baseline_count": 1,
+       "previous_period_count": 486,
+       "delta_pct": 1.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "personalized medicine and genomics",
+       "count": 293,
+       "share": 14.83,
+       "lift": 605.2,
+       "baseline_count": 2,
+       "previous_period_count": 250,
+       "delta_pct": 17.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2990,
+     "carrying": 1976,
+     "carrier_share_pct": 66.09,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.995,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.033
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "gene therapy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "gene therapy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2accc7963d76f4af088599",
+       "headline": "Gene therapy pioneer David Liu among 2026 Franklin Institute honorees",
+       "url": "https://www.inquirer.com/health/franklin-institute-david-liu-honored-gene-therapy-20260430.html",
+       "publisher": "inquirer.com",
+       "published_at": "2026-04-30T18:22:56",
+       "lede": "listen to article • 0:00 min a gene therapy pioneer whose invention was pivotal to a first-of-its-kind personalized gene-editing treatment for a philadelphia-area infant is among the winners of this year’s franklin institute awards. david liu, a professor at harvard university, won the $250,000 bower award and prize for achievement",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 127,
+         "path": "/Hobbies & Leisure/Merit Prizes & Contests",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d54e713680636eecacde",
+       "headline": "MoCo sickle cell patient makes MD history",
+       "url": "https://thedailyrecord.com/2026/04/30/moco-woman-a-sickle-cell-patient-makes-md-history/",
+       "publisher": "thedailyrecord.com",
+       "published_at": "2026-04-30T17:23:22",
+       "lede": "listen to this article listen to this article a silver spring woman who has lived with sickle cell disease for most of her life has become the first adult patient with the condition in maryland to receive u.s. food and drug administration-approved gene therapy, the university of maryland medical system",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.68
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.53
+        },
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "university of maryland medical system",
+        "gene therapy"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e9dd583fc01faba1ae857",
+       "headline": "Genprex, Inc. Files Form 8-K With SEC: Company Information, Nasdaq Listing, and Regulatory Details",
+       "url": "https://www.minichart.com.sg/2026/04/30/genprex-inc-files-form-8-k-with-sec-company-information-nasdaq-listing-and-regulatory-details/",
+       "publisher": "minichart.com.sg",
+       "published_at": "2026-04-30T16:32:51",
+       "lede": "genprex, inc. receives new patent grant in israel for reqorsa® combination therapy genprex, inc. secures israeli patent for reqorsa® gene therapy in combination with pd-1 antibodies for cancer treatment key highlights from the report patent granted in israel: on april 30, 2026, genprex, inc. (“genprex” or the “company”) announced it",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.82
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a51dd5cefb83fe8ee6f08",
+       "headline": "Genprex Receives Patent Grant from The Israel Patent Office for the Combination of Reqorsa® Gene Therapy and PD-1 Antibodies to Treat Cancer",
+       "url": "https://www.biospace.com/press-releases/genprex-receives-patent-grant-from-the-israel-patent-office-for-the-combination-of-reqorsa-gene-therapy-and-pd-1-antibodies-to-treat-cancer",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-30T14:09:40",
+       "lede": "strengthens patent estate and expands protection in another target market austin, texas, april 30, 2026 /prnewswire/ -- genprex, inc. (\"genprex\" or the \"company\") (nasdaq: gnpx), a clinical-stage gene therapy company focused on developing life-changing therapies for patients with cancer and diabetes, today announced that the israel patent office (ilpo) has",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.85
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9a3de540a46fb53d8c43",
+       "headline": "Ray Therapeutics receives EMA PRIME status for gene therapy",
+       "url": "https://www.yahoo.com/news/articles/ray-therapeutics-receives-ema-prime-102115316.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T10:21:15",
+       "lede": "ray therapeutics has received priority medicines (prime) designation from the european medicines agency (ema) for its rtx-015 gene therapy to treat retinitis pigmentosa (rp). the designation recognises the potential of rtx-015 to address significant unmet medical needs in patients with severe retinal degeneration. it advances the therapy’s regulatory support following",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.93,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a9438937ef12fc0b004f",
+       "headline": "UMass Chan Licenses Maple Syrup Urine Disease Gene Therapy to Plowshare Therapies",
+       "url": "https://www.precisiononcologynews.com/business-news/umass-chan-licenses-maple-syrup-urine-disease-gene-therapy-plowshare-therapies",
+       "publisher": "precisiononcologynews.com",
+       "published_at": "2026-04-29T14:18:42",
+       "lede": "new york – umass chan medical school announced this week that it has licensed a gene therapy its researchers developed for a rare, inherited pediatric metabolic disease to plowshare therapies. researchers led by dan wang, an assistant professor of genetic and cellular medicine, and guangping gao, the director of the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "gene therapy",
+        "wang"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f228dec6105443aa5ccc37",
+       "headline": "Rocket to sell PRV for $180m to advance gene therapy pipeline",
+       "url": "https://www.pharmaceutical-business-review.com/news/rocket-to-sell-prv-180m-gene-therapy/",
+       "publisher": "pharmaceutical-business-review.com",
+       "published_at": "2026-04-29T09:55:00",
+       "lede": "rocket pharmaceuticals has signed an agreement to sell its rare paediatric disease priority review voucher (prv) for $180m to advance its gene therapy pipeline. the prv was awarded after the us food and drug administration (fda) granted accelerated approval for the kresladi (marnetegragene autotemcel) gene therapy. kresladi comprises the patient’s",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "gene therapy"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2aa99f963d76f4afef5ce8",
+       "headline": "Dr. Jennifer Doudna highlights the future of gene therapy for sickle cell disease - Children's National",
+       "url": "https://innovationdistrict.childrensnational.org/dr-jennifer-doudna-highlights-the-future-of-gene-therapy-for-sickle-cell-disease/",
+       "publisher": "innovationdistrict.childrensnational.org",
+       "published_at": "2026-04-29T09:26:28",
+       "lede": "gene therapy for families affected by sickle cell disease is transitioning from a theoretical concept to an achievable clinical reality. that reality was on full display at children’s national hospital as nobel laureate jennifer doudna, phd, professor of chemistry and molecular and cell biology at the university of california, berkeley,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.49
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c8df399b489398df750b",
+       "headline": "Why Neurogene chose a brain-delivery route for Rett gene therapy",
+       "url": "https://www.stocktitan.net/news/NGNE/neurogene-announces-upcoming-presentation-on-the-therapeutic-4o3x45d1ixut.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-28T11:30:00",
+       "lede": "presentation at asgct meeting will feature icv as a routine neurosurgical procedure that provides broad biodistribution of gene therapy to the brain and nervous system safety and efficacy of ngn-401 for rett syndrome, delivered via icv administration, to be highlighted new york --(business wire)-- neurogene inc. (nasdaq: ngne ), a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.72
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.53
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "gene therapy",
+        "neurogene",
+        "icv"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cfd3399b489398e2d8fc",
+       "headline": "In diabetic mice, Genprex gene therapy reversed high blood sugar in 4 weeks",
+       "url": "https://www.stocktitan.net/news/GNPX/genprex-collaborators-to-present-positive-preclinical-data-on-npmupd2n532g.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-28T11:00:00",
+       "lede": "pdx1/mafa gene therapy reversed hyperglycemia in type 2 diabetic models within four weeks austin, texas , april 28, 2026 /prnewswire/ -- genprex, inc. (\"genprex\" or the \"company\") (nasdaq: gnpx ), a clinical-stage gene therapy company focused on developing life-changing therapies for patients with cancer and diabetes, today announced that its",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.92,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.81
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.61
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "gene therapy",
+        "genprex"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f22b3f122c4392e0cfd358",
+       "headline": "News Archives - Pharmaceutical Business review",
+       "url": "https://www.pharmaceutical-business-review.com/news/rocket-to-sell-prv-180m-gene-therapy/privacy-policy/privacy-policy/privacy-policy/privacy-policy/",
+       "publisher": "pharmaceutical-business-review.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "the move comes after asahi kasei signed a definitive agreement to acquire all issued shares of aicuris for approximately €780m ($920.7m) earlier this year. the acquisition aligns with asahi kasei’s the european commission (ec) has approved novartis’ rhapsido (remibrutinib) for certain csu patients, becoming the first oral treatment for the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.74
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "csu",
+        "novartis",
+        "aicuris",
+        "asahi kasei"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f22a7127117df83f947782",
+       "headline": "News Archives - Pharmaceutical Business review",
+       "url": "https://www.pharmaceutical-business-review.com/news/arcera-fosun-sign-mou-neuroscience-innovation/privacy-policy/privacy-policy/privacy-policy/privacy-policy/privacy-policy/privacy-policy/",
+       "publisher": "pharmaceutical-business-review.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "the move comes after asahi kasei signed a definitive agreement to acquire all issued shares of aicuris for approximately €780m ($920.7m) earlier this year. the acquisition aligns with asahi kasei’s the european commission (ec) has approved novartis’ rhapsido (remibrutinib) for certain csu patients, becoming the first oral treatment for the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.74
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "csu",
+        "novartis",
+        "aicuris",
+        "asahi kasei"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f229a727117df83f942c24",
+       "headline": "News Archives - Pharmaceutical Business review",
+       "url": "https://www.pharmaceutical-business-review.com/news/arcera-fosun-sign-mou-neuroscience-innovation/privacy-policy/privacy-policy/privacy-policy/privacy-policy/privacy-policy/",
+       "publisher": "pharmaceutical-business-review.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "the move comes after asahi kasei signed a definitive agreement to acquire all issued shares of aicuris for approximately €780m ($920.7m) earlier this year. the acquisition aligns with asahi kasei’s the european commission (ec) has approved novartis’ rhapsido (remibrutinib) for certain csu patients, becoming the first oral treatment for the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.74
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "csu",
+        "novartis",
+        "aicuris",
+        "asahi kasei"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f228c1c6105443aa5cbdbd",
+       "headline": "News Archives - Pharmaceutical Business review",
+       "url": "https://www.pharmaceutical-business-review.com/news/rocket-to-sell-prv-180m-gene-therapy/privacy-policy/privacy-policy/privacy-policy/privacy-policy/privacy-policy/",
+       "publisher": "pharmaceutical-business-review.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "the move comes after asahi kasei signed a definitive agreement to acquire all issued shares of aicuris for approximately €780m ($920.7m) earlier this year. the acquisition aligns with asahi kasei’s the european commission (ec) has approved novartis’ rhapsido (remibrutinib) for certain csu patients, becoming the first oral treatment for the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.74
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "csu",
+        "novartis",
+        "aicuris",
+        "asahi kasei"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f218a0da8ae7be8d222a81",
+       "headline": "News Archives - Pharmaceutical Business review",
+       "url": "https://www.pharmaceutical-business-review.com/news/arcera-fosun-sign-mou-neuroscience-innovation/privacy-policy/privacy-policy/privacy-policy/",
+       "publisher": "pharmaceutical-business-review.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "the move comes after asahi kasei signed a definitive agreement to acquire all issued shares of aicuris for approximately €780m ($920.7m) earlier this year. the acquisition aligns with asahi kasei’s the european commission (ec) has approved novartis’ rhapsido (remibrutinib) for certain csu patients, becoming the first oral treatment for the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.74
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "csu",
+        "novartis",
+        "aicuris",
+        "asahi kasei"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1223,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAwMDowMDowMCIsImkiOiI2OWYyMTg3YWRhOGFlN2JlOGQyMjE2MDIiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.516,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.519
+    }
+   }
+  }
+ ]
+}

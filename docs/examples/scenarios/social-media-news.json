@@ -1,0 +1,1047 @@
+{
+ "slug": "social-media-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:10:25Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "social media",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "social media",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 215697,
+     "tone": {
+      "carrying": 215003,
+      "availability_pct": 99.68,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 116206,
+        "share_pct": 54.05
+       },
+       {
+        "group": "neutral",
+        "count": 3264,
+        "share_pct": 1.52
+       },
+       {
+        "group": "positive",
+        "count": 95533,
+        "share_pct": 44.43
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 215442,
+      "count": 93217,
+      "share_pct": 43.27
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.427,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.46
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "social media",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "social media",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 37489,
+       "critical": 15035,
+       "critical_pct": 40.1,
+       "negative": 19915,
+       "positive": 16753,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 32612,
+       "critical": 12484,
+       "critical_pct": 38.3,
+       "negative": 17783,
+       "positive": 14217,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 42427,
+       "critical": 14936,
+       "critical_pct": 35.2,
+       "negative": 22509,
+       "positive": 19133,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 44562,
+       "critical": 17246,
+       "critical_pct": 38.7,
+       "negative": 23389,
+       "positive": 20342,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 43209,
+       "critical": 20985,
+       "critical_pct": 48.6,
+       "negative": 24929,
+       "positive": 17445,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 34403,
+       "critical": 13966,
+       "critical_pct": 40.6,
+       "negative": 17570,
+       "positive": 16203,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 32141,
+       "critical": 13546,
+       "critical_pct": 42.1,
+       "negative": 16716,
+       "positive": 14867,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 36244,
+       "critical": 15155,
+       "critical_pct": 41.8,
+       "negative": 18542,
+       "positive": 17002,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 38566,
+       "critical": 16276,
+       "critical_pct": 42.2,
+       "negative": 20421,
+       "positive": 17418,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 50677,
+       "critical": 22651,
+       "critical_pct": 44.7,
+       "negative": 28087,
+       "positive": 21735,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 55115,
+       "critical": 24695,
+       "critical_pct": 44.8,
+       "negative": 30423,
+       "positive": 23655,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 71339,
+       "critical": 29595,
+       "critical_pct": 41.5,
+       "negative": 37275,
+       "positive": 32725,
+       "partial_period": false
+      }
+     ],
+     "total": 518784,
+     "critical_total": 216570,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 6.731,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 6.748
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "social media",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "social media",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 215697,
+     "carrying": 90519,
+     "availability_pct": 41.97,
+     "items": [
+      {
+       "country": "united states",
+       "count": 40002,
+       "share_pct": 18.55
+      },
+      {
+       "country": "india",
+       "count": 19187,
+       "share_pct": 8.9
+      },
+      {
+       "country": "united kingdom",
+       "count": 4929,
+       "share_pct": 2.29
+      },
+      {
+       "country": "australia",
+       "count": 1925,
+       "share_pct": 0.89
+      },
+      {
+       "country": "china",
+       "count": 1399,
+       "share_pct": 0.65
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 23077
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.02,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.024
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "social media",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "social media",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mental health and support communities",
+       "count": 3687,
+       "share": 3.28,
+       "lift": 133.92,
+       "baseline_count": 2,
+       "previous_period_count": 1652,
+       "delta_pct": 123.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "parenting and family-oriented social groups",
+       "count": 2772,
+       "share": 2.47,
+       "lift": 100.68,
+       "baseline_count": 2,
+       "previous_period_count": 1433,
+       "delta_pct": 93.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "social media marketing campaigns",
+       "count": 1152,
+       "share": 1.03,
+       "lift": 83.68,
+       "baseline_count": 1,
+       "previous_period_count": 935,
+       "delta_pct": 23.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "impact of technology on family bonds",
+       "count": 2783,
+       "share": 2.48,
+       "lift": 28.88,
+       "baseline_count": 7,
+       "previous_period_count": 1813,
+       "delta_pct": 53.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "social media platforms for connecting friends and family",
+       "count": 627,
+       "share": 0.56,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 228,
+       "delta_pct": 175.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 215697,
+     "carrying": 112373,
+     "carrier_share_pct": 52.1,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.974,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.977
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "social media",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "social media",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f880638937ef12fc070865",
+       "headline": "West Warwick police say viral KKK video was hoax created by two brothers",
+       "url": "https://www.providencejournal.com/story/news/crime/2026/04/30/ri-police-say-brothers-were-behind-viral-video-of-klan-lookalike/89880908007/",
+       "publisher": "providencejournal.com",
+       "published_at": "2026-04-30T21:28:31",
+       "lede": "april 30, 2026, 5:28 p.m. et two brothers admitted to creating a video of a person in a ku klux klan-style robe in west warwick. the individuals stated their motive was to gain attention on social media and in the news. police have closed the case, stating no crime was",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.6
+        },
+        {
+         "code": 99,
+         "path": "/Sensitive Subjects/Other",
+         "score": 0.41
+        },
+        {
+         "code": 173,
+         "path": "/People & Society/Social Issues & Advocacy/Discrimination & Identity Relations",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "social media"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e533ebf10c43d2971a7fd",
+       "headline": "David Allen Coe’s estranged daughter claims she was ‘not given the opportunity’ to see him before his death",
+       "url": "https://www.yahoo.com/entertainment/music/articles/david-allen-coe-estranged-daughter-203114596.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T20:31:14",
+       "lede": "david allen coe’s estranged daughter tanya montana coe claims she wasn’t “given the opportunity” to see him before he died. the country legend died wednesday at 86, his rep confirmed, though no cause of death was given. after the news broke, tanya wrote an emotional social media post noting she",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.88
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8816043843dd771cf18bf",
+       "headline": "Scots mum guilty of baby's murder posted disturbing TikTok videos after newborn's death",
+       "url": "https://www.glasgowlive.co.uk/news/glasgow-news/scots-mum-guilty-babys-murder-33866226",
+       "publisher": "glasgowlive.co.uk",
+       "published_at": "2026-04-30T12:23:15",
+       "lede": "the scottish mother found guilty of murdering her newborn baby posted a series of erratic videos to social media in the days following her death. nicole blain, 30, was convicted of killing 19-day-old thea jane wilson at the high court in glasgow on wednesday (april 29). the court heard that",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.86,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.54
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.48
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "social media"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f880ac43843dd771ceaa92",
+       "headline": "Trump appears to mix up Ukraine and Iran in latest blunder: 'We are so screwed'",
+       "url": "https://www.indy100.com/politics/trump/trump-ukraine-iran-mix-up",
+       "publisher": "indy100.com",
+       "published_at": "2026-04-30T08:32:51",
+       "lede": "donald trump has come in for criticism on social media after appearing to completely mix up ukraine and iran while speaking to press at the white house. the president was speaking to reporters in the oval office while joined by the artemis ii lunar mission crew in a rambling address.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.82,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.88
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "social media"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69f9d518a088760d34bf6a51",
+       "headline": "Iran war propaganda and free speech questions swirl | Opinion",
+       "url": "https://www.poughkeepsiejournal.com/story/opinion/2026/04/30/iran-war-propaganda-free-speech/89837287007/",
+       "publisher": "poughkeepsiejournal.com",
+       "published_at": "2026-04-30T08:03:51",
+       "lede": "rob miraldi special to the usa today network april 30, 2026, 4:03 a.m. et the horrifying images show the uss abraham lincoln — one of the largest nuclear-powered warships ever built — damaged and sinking after an iranian ballistic missile strike. the ship, currently in the arabian sea helping to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.56
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e3e763a4d098b40b5363a",
+       "headline": "Disturbing video shows man taking his own life",
+       "url": "https://punchng.com/disturbing-video-shows-man-taking-his-own-life/",
+       "publisher": "punchng.com",
+       "published_at": "2026-04-29T19:15:43",
+       "lede": "a disturbing video circulating on social media has captured the moments of a yet- to- be indentified man who reportedly died after a self-harm incident on the balcony of a building. the video, shared on x on wednesday by user teddyusd, showed the man standing on the balcony of the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8829c8937ef12fc084751",
+       "headline": "Kasoa: Pregnant woman dies after C-section request allegedly denied due to lack of bed - Adomonline.com",
+       "url": "https://www.adomonline.com/kasoa-pregnant-woman-dies-after-c-section-request-allegedly-denied-due-to-lack-of-bed/",
+       "publisher": "adomonline.com",
+       "published_at": "2026-04-29T19:08:29",
+       "lede": "a pregnant woman has reportedly died after health workers at kasoa mother and child hospital allegedly denied her request for a caesarean section due to the unavailability of a bed in the recovery ward. the deceased, opoku abigail, was initially taken to a private health facility for delivery but was",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.79
+        },
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "malta",
+       "organizations": [],
+       "people": [
+        "abigail"
+       ]
+      },
+      {
+       "id": "69f231efc6105443aa5fb5d7",
+       "headline": "Who Is Janette MacAusland? 'Failed Murder-Suicide' Speculation Goes Viral After Deaths of Her Two Children",
+       "url": "https://www.ibtimes.co.uk/speculation-surrounds-janette-macausland-tragic-childrens-deaths-1794353",
+       "publisher": "ibtimes.co.uk",
+       "published_at": "2026-04-29T15:07:34",
+       "lede": "a heartbreaking tragedy in massachusetts has left a community in mourning and sparked an intense global debate over the power of online speculation.the deaths of two young siblings, identified as seven-year-old kai and six-year-old ella, are currently at the centre of a complex janette macausland investigation. emergency responders discovered the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.73
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.72
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ella",
+        "kai"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cfbfa5706a322e13597b",
+       "headline": "VIDEO: Father Beats Up Son With Belt On Instagram LIVE! Internet Divided",
+       "url": "https://www.timesnownews.com/viral/viral-video-father-beats-up-son-with-belt-on-instagram-live-internet-divided-article-154196813",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-29T08:46:47",
+       "lede": "it’s one thing to discipline a kid, and it’s a completely different thing to discipline a young child live on social media! a video is circulating on the internet, leaving netizens debating between ‘good vs bad parenting’. the video, in actuality, is an instagram live, which showed a man beating",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.95,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.8
+        },
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "social media",
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cfa7a5706a322e134702",
+       "headline": "Mother Makes Son Break His PS5 The Same Way He Abused Family’s Pet Cat",
+       "url": "https://www.timesnownews.com/viral/mother-makes-son-break-his-ps5-the-same-way-he-abused-family-pet-cat-viral-video-article-154196150",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-29T07:48:03",
+       "lede": "‘befitting punishment’ vs ‘extreme parenting’- was the debate that is going on on the internet across the world- after a video of a houston mother and son went viral online. the clip showed the mother recording the young son, who had his playstation in his hand. next, the woman was",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.67
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eeea883fc01faba682b02",
+       "headline": "Elon Musk Criticized for ‘Assassinate’ Comment After White House Correspondents’ Dinner Scare",
+       "url": "https://www.yahoo.com/news/articles/elon-musk-criticized-assassinate-white-211149511.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T21:11:49",
+       "lede": "elon musk spoke out about the recent shooting at the white house correspondents’ dinner, but several social media users slammed him for his remark. “if they’re willing to die to assassinate, imagine what they will do if they gain political power,” musk, 54, wrote via x on sunday, april 26,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.69
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.41
+        },
+        {
+         "code": 99,
+         "path": "/Sensitive Subjects/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8be3c37f6c5e66cd1794",
+       "headline": "Missing girl last seen in Union City found",
+       "url": "https://www.yahoo.com/news/articles/missing-girl-last-seen-union-173052381.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T17:30:52",
+       "lede": "sweden should introduce a minimum age of 15 for the use ‌of social media, a government-appointed commission recommended on ‌tuesday. • several european nations are seeking to rein in children's ​use of social media after australia took the lead with a world-first ban on under-16s in december last year. •",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c666a5706a322e0e7772",
+       "headline": "Agents armed with search warrants keep focus on Minnesota in public fraud probe",
+       "url": "https://www.durangoherald.com/articles/agents-serve-search-warrants-in-federal-fraud-probe-in-minnesota/",
+       "publisher": "durangoherald.com",
+       "published_at": "2026-04-28T15:59:18",
+       "lede": "× minneapolis (ap) — federal agents executed multiple searches in minnesota on tuesday, seizing records and other evidence in an ongoing fraud investigation by the trump administration of publicly funded social programs for children, authorities said. no details about possible crimes were disclosed, though armed agents were seen at childcare",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c9df1e3933a6dd8f3ee2",
+       "headline": "Agents armed with search warrants keep focus on Minnesota in public fraud probe",
+       "url": "https://www.baltimoresun.com/2026/04/28/fraud-warrants-minnesota/",
+       "publisher": "baltimoresun.com",
+       "published_at": "2026-04-28T15:30:41",
+       "lede": "by mark vancleave and alanna durkin richer, associated press minneapolis (ap) — federal agents executed multiple searches in minnesota on tuesday, seizing records and other evidence in an ongoing fraud investigation by the trump administration of publicly funded social programs for children, authorities said. no details about possible crimes were",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "associated press",
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c99e399b489398dfc893",
+       "headline": "Agents armed with search warrants keep focus on Minnesota in public fraud probe",
+       "url": "https://www.themorningsun.com/2026/04/28/fraud-warrants-minnesota/",
+       "publisher": "themorningsun.com",
+       "published_at": "2026-04-28T15:30:41",
+       "lede": "by mark vancleave and alanna durkin richer, associated press minneapolis (ap) — federal agents executed multiple searches in minnesota on tuesday, seizing records and other evidence in an ongoing fraud investigation by the trump administration of publicly funded social programs for children, authorities said. no details about possible crimes were",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "associated press",
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c66d1e3933a6dd8d4a4d",
+       "headline": "Agents armed with search warrants keep focus on Minnesota in public fraud probe",
+       "url": "https://www.presstelegram.com/2026/04/28/fraud-warrants-minnesota/",
+       "publisher": "presstelegram.com",
+       "published_at": "2026-04-28T15:30:41",
+       "lede": "by mark vancleave and alanna durkin richer, associated press minneapolis (ap) — federal agents executed multiple searches in minnesota on tuesday, seizing records and other evidence in an ongoing fraud investigation by the trump administration of publicly funded social programs for children, authorities said. no details about possible crimes were",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "associated press",
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2eee058e67a2fcb3f5dd28",
+       "headline": "Ohio teacher fired after post about Trump assassination attempt",
+       "url": "https://www.yahoo.com/news/articles/ohio-teacher-fired-post-trump-135655953.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T13:56:55",
+       "lede": "a cincinnati-area daycare teacher was fired after posting a message on social media about president donald trump following a shooting at the white house correspondents’ dinner that federal officials are calling an attempted assassination. corrine baum was instructing young students at brightpath bridgetown child care center as of april 26.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c928399b489398df9307",
+       "headline": "Jimmy Kimmel Defends Joke About Melania Trump Looking Like A Widow",
+       "url": "https://www.cinemablend.com/television/jimmy-kimmel-defends-joke-melania-trump-looking-like-widow",
+       "publisher": "cinemablend.com",
+       "published_at": "2026-04-28T13:50:19",
+       "lede": "just hours after both president donald trump and first lady melania trump called for his firing, jimmy kimmel responded during his opening monologue on last night’s show. he defended the joke they were both incensed about and said it wasn’t a call to violence but instead a “light roast” that",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.73
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "melania trump",
+        "melania trump",
+        "donald trump",
+        "jimmy kimmel"
+       ]
+      },
+      {
+       "id": "69f1cc19399b489398e0c7f7",
+       "headline": "LIZ PEEK: Angry, affluent and adrift — what's driving some young Americans to violence",
+       "url": "https://www.foxnews.com/opinion/liz-peek-angry-affluent-adrift-whats-driving-young-americans-violence",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-28T09:00:33",
+       "lede": "it’s 2026, and america’s youth are not ok. young people in the u.s. are angry and miserable, surveys show, despite living in the most prosperous nation on earth. they are likely to stay that way. they hate capitalism, despair about climate change and social justice, have devalued the things that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.77
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 19,
+     "total_estimate": 67973,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAwOTowMDozMyIsImkiOiI2OWYxY2MxOTM5OWI0ODkzOThlMGM3ZjciLCJwIjo5fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.001,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.005
+    }
+   }
+  }
+ ]
+}

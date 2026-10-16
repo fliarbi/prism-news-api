@@ -1,0 +1,1047 @@
+{
+ "slug": "hedge-fund-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:01Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "hedge fund",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "hedge fund",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3841,
+     "tone": {
+      "carrying": 3839,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1026,
+        "share_pct": 26.73
+       },
+       {
+        "group": "neutral",
+        "count": 39,
+        "share_pct": 1.02
+       },
+       {
+        "group": "positive",
+        "count": 2774,
+        "share_pct": 72.26
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3841,
+      "count": 2632,
+      "share_pct": 68.52
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.194,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.198
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "hedge fund",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "hedge fund",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 382,
+       "critical": 185,
+       "critical_pct": 48.4,
+       "negative": 122,
+       "positive": 254,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 267,
+       "critical": 129,
+       "critical_pct": 48.3,
+       "negative": 86,
+       "positive": 179,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 435,
+       "critical": 230,
+       "critical_pct": 52.9,
+       "negative": 170,
+       "positive": 258,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 507,
+       "critical": 285,
+       "critical_pct": 56.2,
+       "negative": 159,
+       "positive": 341,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 411,
+       "critical": 261,
+       "critical_pct": 63.5,
+       "negative": 158,
+       "positive": 245,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 313,
+       "critical": 193,
+       "critical_pct": 61.7,
+       "negative": 92,
+       "positive": 215,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 442,
+       "critical": 300,
+       "critical_pct": 67.9,
+       "negative": 180,
+       "positive": 260,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 285,
+       "critical": 180,
+       "critical_pct": 63.2,
+       "negative": 92,
+       "positive": 187,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 378,
+       "critical": 185,
+       "critical_pct": 48.9,
+       "negative": 114,
+       "positive": 261,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 534,
+       "critical": 340,
+       "critical_pct": 63.7,
+       "negative": 185,
+       "positive": 338,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 598,
+       "critical": 375,
+       "critical_pct": 62.7,
+       "negative": 163,
+       "positive": 426,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2331,
+       "critical": 1732,
+       "critical_pct": 74.3,
+       "negative": 564,
+       "positive": 1749,
+       "partial_period": false
+      }
+     ],
+     "total": 6883,
+     "critical_total": 4395,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.603,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.605
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "hedge fund",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "hedge fund",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3841,
+     "carrying": 1608,
+     "availability_pct": 41.86,
+     "items": [
+      {
+       "country": "united states",
+       "count": 910,
+       "share_pct": 23.69
+      },
+      {
+       "country": "united kingdom",
+       "count": 111,
+       "share_pct": 2.89
+      },
+      {
+       "country": "iran",
+       "count": 110,
+       "share_pct": 2.86
+      },
+      {
+       "country": "china",
+       "count": 58,
+       "share_pct": 1.51
+      },
+      {
+       "country": "japan",
+       "count": 57,
+       "share_pct": 1.48
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 362
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.972,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.975
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "hedge fund",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "hedge fund",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "exchange-traded funds (etfs) for currency exposure",
+       "count": 378,
+       "share": 14.27,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 20,
+       "delta_pct": 1790.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "cryptocurrency and blockchain-focused funds",
+       "count": 328,
+       "share": 12.38,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 23,
+       "delta_pct": 1326.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "derivatives trading (futures, options)",
+       "count": 188,
+       "share": 7.1,
+       "lift": 289.66,
+       "baseline_count": 2,
+       "previous_period_count": 6,
+       "delta_pct": 3033.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "cryptocurrency market developments",
+       "count": 389,
+       "share": 14.68,
+       "lift": 171.25,
+       "baseline_count": 7,
+       "previous_period_count": 39,
+       "delta_pct": 897.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hedge fund performance analysis",
+       "count": 190,
+       "share": 7.17,
+       "lift": 195.16,
+       "baseline_count": 3,
+       "previous_period_count": 167,
+       "delta_pct": 13.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3841,
+     "carrying": 2649,
+     "carrier_share_pct": 68.97,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.401,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.406
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "hedge fund",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "hedge fund",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a0e9375c0b414d24afe51e7",
+       "headline": "Bill Ackman's Pershing Square USA tumbles 18% in its stock-market debut",
+       "url": "https://www.businessinsider.com/bill-ackman-ps-psus-pershing-square-usa-ipo-trading-investing-2026-4",
+       "publisher": "businessinsider.com",
+       "published_at": "2026-04-29T20:08:30",
+       "lede": "pershing square usa had a tough first day of trading&comma; falling double digits during wednesday&apos;s session.the ipo marked bill ackman&apos;s public trading trading debut. the hedge fund legend has been vocal about his aspirations to operate a fund like warren buffett&apos;s berkshire hathaway.pershing square usa&comma; the firm&apos;s close-end fund&comma; trades",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.67
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.54
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ecc03e540a46fb56a7ff9",
+       "headline": "Austin-based hedge fund manager pleads guilty to tax evasion",
+       "url": "https://www.yahoo.com/news/articles/austin-based-hedge-fund-manager-210726197.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-20T21:07:26",
+       "lede": "a hedge fund manager formerly based in austin pleaded guilty on monday to $1.5 million in federal income tax evasion. according to the u.s. department of justice (doj), justin ryan schmidt is accused of earning a total of more than $6 million from his cryptocurrency-focused hedge fund between 2020 and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.79
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e0eb7bb1410d4cd3129f",
+       "headline": "Zanzibar Probes Crypto Exec Joe McCann After Fiancee's Death",
+       "url": "https://www.cryptobreaking.com/zanzibar-probes-crypto-exec-joe/",
+       "publisher": "cryptobreaking.com",
+       "published_at": "2026-04-17T04:31:01",
+       "lede": "police in zanzibar are reportedly holding joe mccann, the founder of crypto hedge fund asymmetric, for questioning after the death of his fiancée, ashly robinson, during a vacation in the archipelago. robinson, 31, died in hospital on april 9, after staff at a zanzibar hotel found the couple the day",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.84
+        }
+       ],
+       "country": "tanzania",
+       "organizations": [],
+       "people": [
+        "joe mccann"
+       ]
+      },
+      {
+       "id": "69e8dd3d9baafc7356d93ed9",
+       "headline": "Ken Griffin: If the Strait of Hormuz Closed for More Than Six Months, a Global Recession Is Unavoidable",
+       "url": "https://nai500.com/blog/2026/04/ken-griffin-if-the-strait-of-hormuz-closed-for-more-than-six-months-a-global-recession-is-unavoidable/",
+       "publisher": "nai500.com",
+       "published_at": "2026-04-16T03:09:26",
+       "lede": "ken griffin: if the strait of hormuz closed for more than six months, a global recession is unavoidable just as markets breathed a sigh of relief over a temporary us-iran ceasefire, the world’s most successful hedge fund manager issued a grave warning. ken griffin, ceo of citadel, delivered his starkest",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.84
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ba529baafc7356bc46ac",
+       "headline": "Financier Crispin Odey abandons his libel claim against the FT - Matrix Chambers",
+       "url": "https://www.matrixlaw.co.uk/news/financier-crispin-odey-abandons-his-libel-claim-against-the-ft/",
+       "publisher": "matrixlaw.co.uk",
+       "published_at": "2026-04-13T08:19:24",
+       "lede": "the former hedge fund manager and owner of odey asset management llp, crispin odey, has discontinued his libel claim against the ft three months before trial. the claim concerned two articles published by the ft in the summer of 2023 which alleged that over several decades mr odey had repeatedly",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 30,
+         "path": "/Law & Government/Legal/Other",
+         "score": 0.42
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "crispin odey"
+       ]
+      },
+      {
+       "id": "69e8495e7bb1410d4c64a2f5",
+       "headline": "Bill Ackman Plans New Fund to Replicate Pandemic Doomsday Trade Success - Time News",
+       "url": "https://time.news/bill-ackman-plans-new-fund-to-replicate-pandemic-doomsday-trade-success/",
+       "publisher": "time.news",
+       "published_at": "2026-04-09T09:06:16",
+       "lede": "bill ackman is reportedly in talks to launch a new fund in a bid to pounce on investor complacency, seeking to replicate the high-stakes success of the “doomsday” trades he executed during the early stages of the covid-19 pandemic. the billionaire hedge fund manager is eyeing a strategy centered on",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.8
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        }
+       ],
+       "country": "netherlands",
+       "organizations": [],
+       "people": [
+        "bill ackman"
+       ]
+      },
+      {
+       "id": "69e2e051c1991f786cf5bb7c",
+       "headline": "Waiting for DeepSeek: New model to test China’s AI ambitions",
+       "url": "https://www.straitstimes.com/asia/east-asia/waiting-for-deepseek-new-model-to-test-chinas-ai-ambitions",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-09T03:30:00",
+       "lede": "sign up now: get insights on asia's fast-moving developments deepseek started life in 2023 as a side project of a hedge fund that had access to a cache of powerful nvidia processors. tokyo – for weeks now, the global tech industry has been waiting for a major artificial intelligence launch",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.76
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e63e602461615d5f41f831",
+       "headline": "Fed Holds Rates at 3.75% as Iran Ceasefire Talks and April 9 Tariff Deadline Create Binary Week",
+       "url": "https://www.openpr.com/news/4460818/fed-holds-rates-at-3-75-as-iran-ceasefire-talks-and-april-9-tariff",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-08T20:27:12",
+       "lede": "fed holds rates at 3.75% as iran ceasefire talks and april 9 tariff deadline create binary week defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund the federal reserve held its benchmark rate at 3.50-3.75% this week, keeping borrowing costs elevated while two geopolitical catalysts converge. iran ceasefire negotiations",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.74
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.58
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "defi",
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e508e6430a4927fdc8b5ee",
+       "headline": "Ethereum (ETH) Price Prediction: 200.4 Million Q1 Transactions Set Record but Price Falls 37% YTD",
+       "url": "https://www.openpr.com/news/4460716/ethereum-eth-price-prediction-200-4-million-q1-transactions",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-08T19:12:16",
+       "lede": "ethereum (eth) price prediction: 200.4 million q1 transactions set record but price falls 37% ytd defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund the ethereum price prediction conversation is shifting as a record 200.4 million mainnet transactions in q1 2026 failed to lift eth above its $2,114",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.9
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.85
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ethereum",
+        "defi"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2d0b5dc480588dca7da2c",
+       "headline": "Iran Ceasefire Talks Spark 3.7% Ethereum (ETH) Rally as Risk Assets Test Recovery Levels",
+       "url": "https://www.openpr.com/news/4460695/iran-ceasefire-talks-spark-3-7-ethereum-eth-rally-as-risk",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-08T18:57:11",
+       "lede": "iran ceasefire talks spark 3.7% ethereum (eth) rally as risk assets test recovery levels defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund reports of active us-iran ceasefire negotiations sent eth from $2,030 to $2,130, a 3.7% gain that outperformed both bitcoin and the s&p 500 in the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.61
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.5
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "defi",
+        "bitcoin",
+        "ethereum"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e50062430a4927fdc37a14",
+       "headline": "Bitcoin (BTC) Price Prediction: $400M in Weekly Liquidations Clear Leveraged Positions Before Recovery",
+       "url": "https://www.openpr.com/news/4460504/bitcoin-btc-price-prediction-400m-in-weekly-liquidations",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-08T16:25:40",
+       "lede": "bitcoin (btc) price prediction: $400m in weekly liquidations clear leveraged positions before recovery defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund over $400m in leveraged crypto positions were liquidated this week, with $280m wiped in a single 24-hour window that caught traders on both sides of the market.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "defi",
+        "bitcoin",
+        "btc"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2b497277be6ed2d9f0f53",
+       "headline": "Solana (SOL) Spot ETFs Record Weakest Inflows Since Launch as Analysts Debate $80 Support Level",
+       "url": "https://www.openpr.com/news/4458892/solana-sol-spot-etfs-record-weakest-inflows-since-launch-as",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-07T18:18:09",
+       "lede": "solana (sol) spot etfs record weakest inflows since launch as analysts debate $80 support level defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund solana spot etfs have posted their weakest weekly inflows since products launched earlier this year, pulling in just $12.4 million against $890 million",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.98
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "defi",
+        "solana"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2b0e7bd7b10565a3b5a05",
+       "headline": "Solana (SOL) Sits 71.7% Below All-Time High as Analysts Debate $50 Floor vs. $120 Recovery Target",
+       "url": "https://www.openpr.com/news/4458879/solana-sol-sits-71-7-below-all-time-high-as-analysts-debate",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-07T18:03:02",
+       "lede": "solana (sol) sits 71.7% below all-time high as analysts debate $50 floor vs. $120 recovery target defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund solana sits 71.7% below its $294 all-time high at $79.94, with $80 as the last major support before a deeper decline. banklesstimes warns",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.88
+        }
+       ],
+       "country": "belgium",
+       "organizations": [
+        "defi",
+        "solana"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e3206226054a607ddad79d",
+       "headline": "S&P 500 Closes Q1 Down 5.1% While Solana (SOL) Tests $80 Support Level for First Time Since 2024",
+       "url": "https://www.openpr.com/news/4458858/s-p-500-closes-q1-down-5-1-while-solana-sol-tests-80-support",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-07T17:47:57",
+       "lede": "s&p 500 closes q1 down 5.1% while solana (sol) tests $80 support level for first time since 2024 defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund the s&p 500 closed q1 2026 down 5.1%, its worst opening quarter since 2022. the index sits at 6,541 as investors",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.87
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.62
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "solana",
+        "defi"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2aff9bd7b10565a3b262b",
+       "headline": "XRP Stalls at $1.32 Despite 6 Live ETFs Holding $1B as Fund Managers Build Positions Below $1.50",
+       "url": "https://www.openpr.com/news/4458672/xrp-stalls-at-1-32-despite-6-live-etfs-holding-1b-as-fund",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-07T15:17:04",
+       "lede": "xrp stalls at $1.32 despite 6 live etfs holding $1b as fund managers build positions below $1.50 defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund xrp trades at $1.32, down 25% year to date and 53% from its october 2025 peak. six spot xrp etfs now hold",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.91
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.82
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "defi",
+        "xrp"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2b025d754bf662cd9d8ce",
+       "headline": "Oil Crosses $103 and the Fear Index Holds at 12 for 49 Consecutive Days Signaling Yield Rotation",
+       "url": "https://www.openpr.com/news/4458671/oil-crosses-103-and-the-fear-index-holds-at-12-for-49-consecutive",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-07T15:15:28",
+       "lede": "oil crosses $103 and the fear index holds at 12 for 49 consecutive days signaling yield rotation defi hedge fund decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund oil prices crossed $103 per barrel last week as iran ceasefire talks collapsed and the april 9 tariff reciprocation deadline drew closer. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.81
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "defi"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d159256753a2d526b818c2",
+       "headline": "Hedera (HBAR) Has 31 Council Members and Most Holders Are Still 83% Underwater on Entry",
+       "url": "https://www.openpr.com/news/4449385/hedera-hbar-has-31-council-members-and-most-holders-are-still",
+       "publisher": "openpr.com",
+       "published_at": "2026-03-31T20:36:02",
+       "lede": "hedera (hbar) has 31 council members and most holders are still 83% underwater on entry t4urox decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund # hedera (hbar) has 31 council members and most holders are still 83% underwater on entryyou bought hbar because google, ibm, and boeing sat on the governing council.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ibm",
+        "rwa",
+        "google",
+        "boeing"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d1142e0fb3296461587381",
+       "headline": "Solana (SOL) Price Prediction: Alpenglow Upgrade Targets 150ms Finality, $17B Stablecoin Supply",
+       "url": "https://www.openpr.com/news/4449225/solana-sol-price-prediction-alpenglow-upgrade-targets-150ms",
+       "publisher": "openpr.com",
+       "published_at": "2026-03-31T18:09:23",
+       "lede": "solana (sol) price prediction: alpenglow upgrade targets 150ms finality, $17b stablecoin supply t4urox decentralized hedge fund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund https://bit.ly/ai-hedgefund # solana (sol) price prediction: alpenglow upgrade targets 150ms finality, $17b stablecoin supplysolana's alpenglow consensus upgrade will reduce finality from 12.8 seconds to roughly 150 milliseconds, a performance leap that positions",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.96
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "solana",
+        "alpenglow"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 235,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0zMSAxODowOToyMyIsImkiOiI2OWQxMTQyZTBmYjMyOTY0NjE1ODczODEiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.077,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.081
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,946 @@
+{
+ "slug": "tax-news-today",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:40Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 90619,
+     "tone": {
+      "carrying": 90527,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 38812,
+        "share_pct": 42.87
+       },
+       {
+        "group": "neutral",
+        "count": 7534,
+        "share_pct": 8.32
+       },
+       {
+        "group": "positive",
+        "count": 44181,
+        "share_pct": 48.8
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 90583,
+      "count": 49304,
+      "share_pct": 54.43
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.532,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.566
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "tax",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "tax",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 19336,
+       "critical": 10750,
+       "critical_pct": 55.6,
+       "negative": 9493,
+       "positive": 7664,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 13917,
+       "critical": 8271,
+       "critical_pct": 59.4,
+       "negative": 7221,
+       "positive": 5480,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 21937,
+       "critical": 12621,
+       "critical_pct": 57.5,
+       "negative": 11936,
+       "positive": 8422,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 24385,
+       "critical": 14694,
+       "critical_pct": 60.3,
+       "negative": 12570,
+       "positive": 10424,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 19930,
+       "critical": 11845,
+       "critical_pct": 59.4,
+       "negative": 8748,
+       "positive": 9747,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 16140,
+       "critical": 10146,
+       "critical_pct": 62.9,
+       "negative": 8151,
+       "positive": 6848,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 14628,
+       "critical": 8959,
+       "critical_pct": 61.2,
+       "negative": 6828,
+       "positive": 6758,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 31421,
+       "critical": 8584,
+       "critical_pct": 27.3,
+       "negative": 6607,
+       "positive": 23557,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 15184,
+       "critical": 8891,
+       "critical_pct": 58.6,
+       "negative": 6517,
+       "positive": 7466,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 22987,
+       "critical": 14399,
+       "critical_pct": 62.6,
+       "negative": 10180,
+       "positive": 11087,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 25563,
+       "critical": 11428,
+       "critical_pct": 44.7,
+       "negative": 9240,
+       "positive": 14214,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 26885,
+       "critical": 14586,
+       "critical_pct": 54.3,
+       "negative": 12875,
+       "positive": 11414,
+       "partial_period": false
+      }
+     ],
+     "total": 252313,
+     "critical_total": 135174,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.733,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.735
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 90619,
+     "carrying": 34074,
+     "availability_pct": 37.6,
+     "items": [
+      {
+       "country": "united states",
+       "count": 17053,
+       "share_pct": 18.82
+      },
+      {
+       "country": "india",
+       "count": 5103,
+       "share_pct": 5.63
+      },
+      {
+       "country": "united kingdom",
+       "count": 2581,
+       "share_pct": 2.85
+      },
+      {
+       "country": "nigeria",
+       "count": 920,
+       "share_pct": 1.02
+      },
+      {
+       "country": "australia",
+       "count": 770,
+       "share_pct": 0.85
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 7647
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.413,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.416
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "personal income tax filing strategies",
+       "count": 2526,
+       "share": 4.99,
+       "lift": 407.54,
+       "baseline_count": 1,
+       "previous_period_count": 1030,
+       "delta_pct": 145.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "government taxation and revenue systems",
+       "count": 9656,
+       "share": 19.08,
+       "lift": 81.99,
+       "baseline_count": 19,
+       "previous_period_count": 7303,
+       "delta_pct": 32.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "government fiscal policy implementation",
+       "count": 6574,
+       "share": 12.99,
+       "lift": 70.71,
+       "baseline_count": 15,
+       "previous_period_count": 4662,
+       "delta_pct": 41.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: tax reform implications",
+       "count": 947,
+       "share": 1.87,
+       "lift": 152.79,
+       "baseline_count": 1,
+       "previous_period_count": 1399,
+       "delta_pct": -32.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "retirement account tax implications (ira, 401k)",
+       "count": 900,
+       "share": 1.78,
+       "lift": 145.2,
+       "baseline_count": 1,
+       "previous_period_count": 504,
+       "delta_pct": 78.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 90619,
+     "carrying": 50596,
+     "carrier_share_pct": 55.83,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.845,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.85
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "tax",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2aa8f05cefb83fe827596f",
+       "headline": "California's Wealth Tax Plan Fuels UHNW Anxiety",
+       "url": "https://www.thinkadvisor.com/2026/04/30/californias-proposed-wealth-tax-fuels-uhnw-anxiety/",
+       "publisher": "thinkadvisor.com",
+       "published_at": "2026-04-30T15:12:46",
+       "lede": "what you need to know voters in california will be asked to decide in november on a one-time 5% tax on billionaires to fund healthcare. a handful of billionaires rushed to relocate to other states ahead of the jan. 1 deadline to avoid the proposed tax. advisors say wealthy clients",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.52
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2afb9d5cefb83fe8614ffd",
+       "headline": "Kemi Badenoch: Conservatives are the only party that actually stands up to Sadiq Khan",
+       "url": "http://standard.co.uk/comment/kemi-badenoch-conservative-party-stands-up-to-sadiq-khan-london-elections-b1280520.html",
+       "publisher": "standard.co.uk",
+       "published_at": "2026-04-30T10:40:41",
+       "lede": "at the same time, many londoners feel squeezed. they are paying more but getting less in return. people are priced out of housing because of khan’s abject failure to build the homes we need, while prices in shops and restaurants tick steadily upwards due to rachel reeves’s toxic tax rises.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f885318937ef12fc09ba3c",
+       "headline": "Kemi Badenoch: Conservatives are the only party that actually stands up to Sadiq Khan",
+       "url": "https://www.standard.co.uk/comment/kemi-badenoch-conservative-party-stands-up-to-sadiq-khan-london-elections-b1280520.html",
+       "publisher": "standard.co.uk",
+       "published_at": "2026-04-30T10:40:41",
+       "lede": "at the same time, many londoners feel squeezed. they are paying more but getting less in return. people are priced out of housing because of khan’s abject failure to build the homes we need, while prices in shops and restaurants tick steadily upwards due to rachel reeves’s toxic tax rises.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.64
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5f59963d76f4afbf5d15",
+       "headline": "Sergey Brin, Who Fled The Soviet Union, Now Warns California Could Head The Same Way As He Spends $57 Mil",
+       "url": "https://www.benzinga.com/markets/treasuries/26/04/52161131/sergey-brin-who-fled-the-soviet-union-now-warns-california-could-head-the-same-way-as-he-spends-57-million-fighting-billionaire-tax",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-30T09:53:45",
+       "lede": "alphabet inc. (nasdaq:goog) (nasdaq:googl) board member and google co-founder sergey brin, who is also a former resident of california, has warned that the state risks becoming a socialist system like the soviet union, as he escalates a $57 million campaign against the proposed billionaire tax. from soviet refugee to billionaire",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5f45c37f6c5e66b024c2",
+       "headline": "Taxe sur les superprofits de Total, présidentielle 2027... Le \"8h30 franceinfo\" de Boris Vallaud",
+       "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/taxe-sur-les-superprofits-de-total-presidentielle-2027-le-8h30-franceinfo-de-boris-vallaud_7942385.html",
+       "publisher": "franceinfo.fr",
+       "published_at": "2026-04-30T08:32:15",
+       "lede": "boris vallaud, president of the socialists group in the national assembly, was the guest of the \"8h30 franceinfo\", thursday 30 april 2026. tax on superprofits, many candidates left in the presidential election... he answered questions from madjid khiat and agathe lambret.tax on oil superprofits: \"a measure of justice\"the tax on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0eb3ec285a58da6f3383ce",
+       "headline": "The debt crisis Congress has been ignoring could cost the average U.S. household $18,000 a year, according to a Brookings analysis | Fortune",
+       "url": "https://fortune.com/2026/04/30/national-debt-today-crisis-solutions-tax-brookings/",
+       "publisher": "fortune.com",
+       "published_at": "2026-04-30T07:00:00",
+       "lede": "an excellent new study from the nonpartisan brookings institution provides an ultra-sobering view of the potential tax increase u.s. families face in taming the runaway debt and deficits crisis that’s been near-roundly ignored in congress and the white house. we all know the hit to either incomes, shopping tabs, social",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.43
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ea4e5e540a46fb545aa1f",
+       "headline": "State Pension rise pushes UK pensioners near tax threshold",
+       "url": "https://www.mirror.co.uk/money/triple-lock-state-pension-rise-37088259",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-04-30T04:16:00",
+       "lede": "financial experts have cautioned that the recent state pension increase under the triple lock is pushing more pensioners towards paying income tax. the triple lock mechanism ensures the state pension rises annually by whichever is greater: earnings growth, the consumer price index (cpi) inflation rate, or 2.5 per cent. the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 263,
+         "path": "/Finance/Financial Planning & Management/Retirement & Pension",
+         "score": 0.83
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a4eed963d76f4afb3690e",
+       "headline": "Adani Power Q4 Results",
+       "url": "https://www.newsdrum.in/business/adani-power-q4-net-profit-jumps-64-pc-to-rs-4271-cr-11778729",
+       "publisher": "newsdrum.in",
+       "published_at": "2026-04-29T11:15:37",
+       "lede": "&amp;quot;new delhi (pti): adani power on wednesday reported over 64 per cent growth in consolidated net profit to rs 4,271.40 crore during the quarter ended march 31, mainly driven by higher revenues and lower tax expenses. it had reported a net profit of rs 2,599.23 crore in the year-ago quarter,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.86
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9b09963d76f4afe5ccbc",
+       "headline": "HRA Alert: Income Tax Dept Using AI to Spot Fake Rent Claims",
+       "url": "https://studycafe.in/hra-alert-income-tax-dept-using-ai-to-spot-fake-rent-claims-418529.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-29T04:14:08",
+       "lede": "vanshika verma | apr 29, 2026 | hra alert: income tax dept using ai to spot fake rent claims india’s income tax department is now using artificial intelligence (ai) and data analysis tools to catch people who make fake house rent allowance (hra) claims or show wrong deductions in their",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.51
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ecdea83fc01faba46ae75",
+       "headline": "Sergey Brin joins the fight against socialism — better late than never",
+       "url": "https://www.yahoo.com/news/articles/sergey-brin-joins-fight-against-002229089.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-29T00:22:29",
+       "lede": "sergey brin knows the evil of socialism — and he’s decided to stop it from coming to california. the google co-founder issued a rare statement this week slamming the left’s “billionaire tax” — to which gov. gavin newsom has only offered the weakest opposition. “i fled socialism with my family",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c952399b489398dfa410",
+       "headline": "Sergey Brin opens up about harrowing Soviet past — says California lost its way - Amed Post",
+       "url": "https://amedpost.com/sergey-brin-opens-up-about-harrowing-soviet-past-says-california-lost-its-way/",
+       "publisher": "amedpost.com",
+       "published_at": "2026-04-29T00:04:40",
+       "lede": "a resurfaced interview of google co-founder sergey brin detailed his dramatic journey from the soviet union to silicon valley — a background that has led him to oppose california’s proposed billionaire tax. brin broke his silence in a new york times report monday on why he’s pouring money into campaigns",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": [
+        "sergey brin"
+       ]
+      },
+      {
+       "id": "6a2b120e5cefb83fe8712fa5",
+       "headline": "Sergey Brin opens up about harrowing Soviet past — says California lost its way",
+       "url": "https://www.yahoo.com/news/articles/sergey-brin-opens-harrowing-soviet-222933217.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T22:29:33",
+       "lede": "a resurfaced interview of google co-founder sergey brin detailed his dramatic journey from the soviet union to silicon valley — a background that has led him to oppose california’s proposed billionaire tax. brin broke his silence in a new york times report monday on why he’s pouring money into campaigns",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6941e3933a6dd8d65e7",
+       "headline": "Ray Dalio’s wealth tax warning for California voters - Amed Post",
+       "url": "https://amedpost.com/ray-dalios-wealth-tax-warning-for-california-voters/",
+       "publisher": "amedpost.com",
+       "published_at": "2026-04-28T20:59:39",
+       "lede": "billionaire investment guru ray dalio is warning that the california billionaire tax isn’t the answer to inequality — issuing a stark two-word wake-up call on the controversial wealth tax. dalio raised the alarm about spiraling inequality and debt but called the billionaire tax — which will hit california ballots in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.49
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": [
+        "ray dalio"
+       ]
+      },
+      {
+       "id": "69f1c8f1399b489398df7da4",
+       "headline": "California Billionaire Tax Gets Closer to Ballot. Billionaires Fight Back.",
+       "url": "https://www.barrons.com/articles/california-wealth-tax-new-york-billionaires-8af2bfef",
+       "publisher": "barrons.com",
+       "published_at": "2026-04-28T18:33:00",
+       "lede": "wealth california’s wealth tax gains steam. billionaires fight back. by abby schultz share resize reprints google co-founder sergey brin and others are pushing back against a proposal to tax california’s billionaires. (michael tran/afp via getty images) a tax on california’s billionaires took a step forward this week as proponents of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "getty images",
+        "google"
+       ],
+       "people": [
+        "sergey brin"
+       ]
+      },
+      {
+       "id": "69f1ca6c1e3933a6dd8f9368",
+       "headline": "Exclusive | Bruce Blakeman blasts Hochul, Mamdani over pied-à-terre tax proposal: ‘Losing businesses and jobs each and every day’",
+       "url": "https://nypost.com/2026/04/28/business/bruce-blakeman-blasts-hochul-mamdani-pied-a-terre-tax-proposal/",
+       "publisher": "nypost.com",
+       "published_at": "2026-04-28T18:04:12",
+       "lede": "nassau county executive bruce blakeman, who is currently running for new york governor, ripped gov. kathy hochul and mayor mamdani’s pied-à-terre tax proposal in an interview with the post — branding it the latest left-wing policy that is “losing businesses and jobs each and every day”. the proposed tax on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "the post"
+       ],
+       "people": [
+        "bruce blakeman",
+        "kathy hochul",
+        "kathy hochul"
+       ]
+      },
+      {
+       "id": "69f1c6ab1e3933a6dd8d77a0",
+       "headline": "Google Co-Founder Sergey Brin Shifts to the Right Thanks to 'Really Wonderful MAGA Girlfriend'",
+       "url": "https://www.breitbart.com/tech/2026/04/28/google-co-founder-sergey-brin-shifts-rightward-spending-millions-to-fight-california-billionaire-tax/",
+       "publisher": "breitbart.com",
+       "published_at": "2026-04-28T16:48:35",
+       "lede": "google co-founder sergey brin, whose company serves as the highwater mark of woke leftist hysteria in silicon valley, is now taking positions contrary to his left-wing peers, including standing against california’s proposed wealth tax. he is reportedly been pushed to the right by his trump-supporting girlfriend, who the president called",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.65
+        },
+        {
+         "code": 20,
+         "path": "/News/Politics/Campaigns & Elections",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": [
+        "sergey brin"
+       ]
+      },
+      {
+       "id": "69f1c6b71e3933a6dd8d7fc0",
+       "headline": "California billionaire tax measure secures signatures for November ballot",
+       "url": "https://www.ktvu.com/news/california-billionaire-wealth-tax-ballot-2026",
+       "publisher": "ktvu.com",
+       "published_at": "2026-04-28T15:22:36",
+       "lede": "<a href=\"https://www.foxla.com/tag/us/ca\" target=\"_blank\" rel=\"noopener\">california</a> voters may decide this november whether to impose a historic one-time tax on the state&apos;s wealthiest residents.&#xa0;the initiative, spearheaded by <a href=\"https://www.foxla.com/tag/health-care\" target=\"_blank\" rel=\"noopener\">healthcare</a> labor unions, seeks to capture a fraction of billionaire net worth to stabilize a healthcare system reeling from federal budget reductions.the service",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.28,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.5
+        },
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 4529,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAxNToyMjozNiIsImkiOiI2OWYxYzZiNzFlMzkzM2E2ZGQ4ZDdmYzAiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.026,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.029
+    }
+   }
+  }
+ ]
+}

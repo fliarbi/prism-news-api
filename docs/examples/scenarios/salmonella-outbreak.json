@@ -1,0 +1,965 @@
+{
+ "slug": "salmonella-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:00:59Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "salmonella",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "salmonella",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2508,
+     "tone": {
+      "carrying": 2499,
+      "availability_pct": 99.64,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1288,
+        "share_pct": 51.54
+       },
+       {
+        "group": "neutral",
+        "count": 75,
+        "share_pct": 3.0
+       },
+       {
+        "group": "positive",
+        "count": 1136,
+        "share_pct": 45.46
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2504,
+      "count": 1964,
+      "share_pct": 78.43
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.068,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.071
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "salmonella",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "salmonella",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 556,
+       "critical": 445,
+       "critical_pct": 80.0,
+       "negative": 330,
+       "positive": 212,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 422,
+       "critical": 335,
+       "critical_pct": 79.4,
+       "negative": 226,
+       "positive": 183,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 453,
+       "critical": 304,
+       "critical_pct": 67.1,
+       "negative": 221,
+       "positive": 214,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 688,
+       "critical": 537,
+       "critical_pct": 78.1,
+       "negative": 456,
+       "positive": 218,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 539,
+       "critical": 420,
+       "critical_pct": 77.9,
+       "negative": 255,
+       "positive": 269,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 495,
+       "critical": 394,
+       "critical_pct": 79.6,
+       "negative": 214,
+       "positive": 263,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 513,
+       "critical": 365,
+       "critical_pct": 71.2,
+       "negative": 221,
+       "positive": 277,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 601,
+       "critical": 460,
+       "critical_pct": 76.5,
+       "negative": 244,
+       "positive": 321,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 703,
+       "critical": 565,
+       "critical_pct": 80.4,
+       "negative": 306,
+       "positive": 367,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 550,
+       "critical": 454,
+       "critical_pct": 82.5,
+       "negative": 275,
+       "positive": 253,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 503,
+       "critical": 373,
+       "critical_pct": 74.2,
+       "negative": 245,
+       "positive": 241,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 752,
+       "critical": 572,
+       "critical_pct": 76.1,
+       "negative": 462,
+       "positive": 275,
+       "partial_period": false
+      }
+     ],
+     "total": 6775,
+     "critical_total": 5224,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.017,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.02
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "salmonella",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "salmonella",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2508,
+     "carrying": 725,
+     "availability_pct": 28.91,
+     "items": [
+      {
+       "country": "united states",
+       "count": 459,
+       "share_pct": 18.3
+      },
+      {
+       "country": "united kingdom",
+       "count": 47,
+       "share_pct": 1.87
+      },
+      {
+       "country": "india",
+       "count": 38,
+       "share_pct": 1.52
+      },
+      {
+       "country": "canada",
+       "count": 29,
+       "share_pct": 1.16
+      },
+      {
+       "country": "china",
+       "count": 27,
+       "share_pct": 1.08
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 125
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.051,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.055
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "salmonella",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "salmonella",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "antimicrobial stewardship programs",
+       "count": 228,
+       "share": 12.93,
+       "lift": 1055.08,
+       "baseline_count": 1,
+       "previous_period_count": 182,
+       "delta_pct": 25.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "antimicrobial-resistant pathogens",
+       "count": 287,
+       "share": 16.27,
+       "lift": 189.73,
+       "baseline_count": 7,
+       "previous_period_count": 230,
+       "delta_pct": 24.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "product safety and recall notices",
+       "count": 76,
+       "share": 4.31,
+       "lift": 351.69,
+       "baseline_count": 1,
+       "previous_period_count": 91,
+       "delta_pct": -16.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "treatment of multidrug-resistant organisms",
+       "count": 153,
+       "share": 8.67,
+       "lift": 236.01,
+       "baseline_count": 3,
+       "previous_period_count": 111,
+       "delta_pct": 37.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "food safety regulation compliance",
+       "count": 373,
+       "share": 21.15,
+       "lift": 143.84,
+       "baseline_count": 12,
+       "previous_period_count": 365,
+       "delta_pct": 2.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2508,
+     "carrying": 1764,
+     "carrier_share_pct": 70.33,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.469,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.472
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "salmonella",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "salmonella",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f8b59b43843dd771d2c6bf",
+       "headline": "One dead in German Salmonella outbreak | Food and Farming | Before It's News",
+       "url": "https://beforeitsnews.com/food-and-farming/2026/04/one-dead-in-german-salmonella-outbreak-2543829.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-20T01:17:02",
+       "lede": "% of readers think this story is fact. add your two cents. an adult has died in a salmonella outbreak in germany tied to a brand of nut nougat spread. the robert koch institute (rki) is part of a team investigating the outbreak of salmonella bochum. this rare strain has",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.72
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "robert koch institute"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e94878e67a2fcb3a2803d",
+       "headline": "Salmonella Outbreak Across 13 States Has Been Linked To Backyard Chickens",
+       "url": "https://www.yahoo.com/news/articles/salmonella-outbreak-across-13-states-201337475.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T20:13:37",
+       "lede": "maintaining your own backyard chicken coop comes with many benefits, with fresh eggs at the top of the list. but raising chickens is not without its pitfalls, as many people are now realizing. over 30 people across 13 different states have succumbed to salmonella poisoning that has since been linked",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.79
+        },
+        {
+         "code": 218,
+         "path": "/Business & Industrial/Agriculture & Forestry/Livestock",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22e6ac6105443aa5e2ab1",
+       "headline": "Alert after salmonella outbreak leaves 50 sick including a dozen Brits",
+       "url": "https://www.thescottishsun.co.uk/health/16206465/salmonella-outbreak-hits-brits-salad-sprouts/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-04-29T09:24:39",
+       "lede": "a salmonella outbreak linked to contaminated salad has sickened 50 people – including a dozen brits. aside from the uk, the outbreak is affecting at least six european countries, with the source suspected to be sprout seeds imported from italy. sign up for scottish sun newsletter thank you! email address",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.66
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee5028e67a2fcb3ecc434",
+       "headline": "The CDC Has Identified the Source of the Latest Multistate Salmonella Outbreak",
+       "url": "https://www.yahoo.com/news/articles/cdc-identified-source-latest-multistate-200801515.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T20:08:01",
+       "lede": "the centers for disease control and prevention (cdc) says it has found the root cause of a multistate salmonella outbreak that has sickened 34 people across 13 states. and it all looks to be due to backyard poultry farms. here's everthing you need to know. what exactly is going on?",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.77
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c9ba399b489398dfd98c",
+       "headline": "The CDC Has Identified the Source of the Latest Multistate Salmonella Outbreak",
+       "url": "https://www.goodhousekeeping.com/health/a71152784/cdc-multistate-salmonella-outbreak/",
+       "publisher": "goodhousekeeping.com",
+       "published_at": "2026-04-28T20:08:01",
+       "lede": "the centers for disease control and prevention (cdc) says it has found the root cause of a multistate salmonella outbreak that has sickened 34 people across 13 states. and it all looks to be due to backyard poultry farms.here's everthing you need to know.what exactly is going on?according to the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.76
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "centers for disease control and prevention"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c9011e3933a6dd8ecbf1",
+       "headline": "Backyard poultry linked to salmonella outbreak sickening dozens",
+       "url": "https://www.fox5ny.com/news/backyard-poultry-linked-salmonella-outbreak-sickening-dozens",
+       "publisher": "fox5ny.com",
+       "published_at": "2026-04-28T19:31:16",
+       "lede": "public health officials are investigating a salmonella outbreak that has caused nearly three dozen illnesses across several states. health officials believe the illnesses are linked to backyard poultry that carry the germ.the center for disease control has collected and tracked data for the month of march and determined 34 people",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.63
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6e2399b489398de5ba7",
+       "headline": "Backyard poultry linked to salmonella outbreak sickening dozens",
+       "url": "https://www.livenowfox.com/news/backyard-poultry-linked-salmonella-outbreak-sickening-dozens",
+       "publisher": "livenowfox.com",
+       "published_at": "2026-04-28T19:31:16",
+       "lede": "public health officials are investigating a salmonella outbreak that has caused nearly three dozen illnesses across several states. health officials believe the illnesses are linked to backyard poultry that carry the germ.the center for disease control has collected and tracked data for the month of march and determined 34 people",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.63
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c87e1e3933a6dd8e9256",
+       "headline": "Backyard Chickens Are Spreading Antibiotic-Resistant Salmonella Across the US, CDC Warns",
+       "url": "https://gizmodo.com/backyard-chickens-are-spreading-antibiotic-resistant-salmonella-across-the-us-cdc-warns-2000751707",
+       "publisher": "gizmodo.com",
+       "published_at": "2026-04-28T16:20:22",
+       "lede": "backyard chicken lovers beware: an outbreak of drug-resistant salmonella bacteria linked to these birds is spreading across the country. officials at the centers for disease control and prevention first reported on the outbreak late last week. there have been over 30 reported cases in multiple states, along with several hospitalizations.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.86
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "centers for disease control and prevention"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0369eec2856acf8e8a938b",
+       "headline": "Salmonella outbreak spreads across Europe | Food and Farming | Before It's News",
+       "url": "https://beforeitsnews.com/food-and-farming/2026/04/salmonella-outbreak-spreads-across-europe-2543897.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-28T00:49:02",
+       "lede": "% of readers think this story is fact. add your two cents. a multi-country outbreak of salmonella has sickened nearly 50 people with suspicions again falling on sprout seeds from italy. according to the european centre for disease prevention and control (ecdc), the outbreak is affecting at least six european",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.67
+        },
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8b51fbbf1d314559a9d4c",
+       "headline": "Children sick in Danish Salmonella outbreak | Food and Farming | Before It's News",
+       "url": "https://beforeitsnews.com/food-and-farming/2026/04/children-sick-in-danish-salmonella-outbreak-2543894.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-28T00:49:02",
+       "lede": "% of readers think this story is fact. add your two cents. a salmonella outbreak has been reported in denmark with eight young people sick so far. since january 2026, the statens serum institut (ssi) has recorded eight cases of salmonella stanley. ssi, the danish veterinary, food, agriculture and fisheries",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.89
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.52
+        }
+       ],
+       "country": "denmark",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a041c4b9c4aac09354964fa",
+       "headline": "CDC Warns of Antibiotic-Resistant Salmonella in Backyard Flocks - Drugs.com MedNews",
+       "url": "https://www.drugs.com/news/cdc-warns-antibiotic-resistant-salmonella-backyard-flocks-129823.html",
+       "publisher": "drugs.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "cdc warns of antibiotic-resistant salmonella in backyard flocks by deanna neff healthday reporter medically reviewed by carmen pope, senior medical editor, b. pharm. last updated on april 28, 2026. via healthday tuesday, april 28, 2026 — a surge of salmonella infections reported in 13 states has been linked to backyard",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.9
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b235fc37f6c5e66382077",
+       "headline": "Urgent 'do not eat' warnings for Aldi, Tesco and M&S products this week",
+       "url": "https://www.dailystar.co.uk/news/latest-news/urgent-do-not-eat-warnings-37071423",
+       "publisher": "dailystar.co.uk",
+       "published_at": "2026-04-26T11:36:01",
+       "lede": "a number of products have been recalled amid fears that they could make people poorly. supermarket giants including aldi, tesco, sainsbury's and m&s are recalling popular salad toppers, yoghurts and other food items for a few reasons, including a possible salmonella contamination. symptoms of salmonella include fever, diarrhoea and abdominal",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 236,
+         "path": "/Shopping/Consumer Resources/Consumer Advocacy & Protection",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea45cb7e2e51112024e55f",
+       "headline": "Cantaloupes recalled nationwide over salmonella fears — what shoppers need to know",
+       "url": "https://www.ktvu.com/news/cantaloupes-recalled-nationwide-over-salmonella-fears-what-shoppers-need-know",
+       "publisher": "ktvu.com",
+       "published_at": "2026-04-23T01:42:51",
+       "lede": "a <a href=\"https://www.foxbusiness.com/category/fox-news-florida\" target=\"_blank\" rel=\"noopener\"><u>florida</u></a> produce distributor has recalled thousands of cantaloupes due to a potential risk of salmonella contamination, and now the u.s. food and drug administration (fda) is warning of an increased risk.the recall was first initiated last month, but the fda upgraded it to class i on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.57
+        },
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9aa3bbdd09a23d095bb3f",
+       "headline": "Cantaloupes recalled nationwide over salmonella fears — what shoppers need to know",
+       "url": "http://www.fox29.com/news/cantaloupes-recalled-nationwide-over-salmonella-fears-what-shoppers-need-know",
+       "publisher": "fox29.com",
+       "published_at": "2026-04-23T01:42:51",
+       "lede": "a <a href=\"https://www.foxbusiness.com/category/fox-news-florida\" target=\"_blank\" rel=\"noopener\"><u>florida</u></a> produce distributor has recalled thousands of cantaloupes due to a potential risk of salmonella contamination, and now the u.s. food and drug administration (fda) is warning of an increased risk.the recall was first initiated last month, but the fda upgraded it to class i on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.57
+        },
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a9fabdd09a23d095b428",
+       "headline": "Cantaloupes recalled nationwide over salmonella fears — what shoppers need to know",
+       "url": "https://www.fox29.com/news/cantaloupes-recalled-nationwide-over-salmonella-fears-what-shoppers-need-know",
+       "publisher": "fox29.com",
+       "published_at": "2026-04-23T01:42:51",
+       "lede": "a <a href=\"https://www.foxbusiness.com/category/fox-news-florida\" target=\"_blank\" rel=\"noopener\"><u>florida</u></a> produce distributor has recalled thousands of cantaloupes due to a potential risk of salmonella contamination, and now the u.s. food and drug administration (fda) is warning of an increased risk.the recall was first initiated last month, but the fda upgraded it to class i on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.57
+        },
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a8e975f157062cb3aca5",
+       "headline": "Cantaloupes recalled nationwide over salmonella fears — what shoppers need to know",
+       "url": "https://www.fox5ny.com/news/cantaloupes-recalled-nationwide-over-salmonella-fears-what-shoppers-need-know",
+       "publisher": "fox5ny.com",
+       "published_at": "2026-04-23T01:42:51",
+       "lede": "a <a href=\"https://www.foxbusiness.com/category/fox-news-florida\" target=\"_blank\" rel=\"noopener\"><u>florida</u></a> produce distributor has recalled thousands of cantaloupes due to a potential risk of salmonella contamination, and now the u.s. food and drug administration (fda) is warning of an increased risk.the recall was first initiated last month, but the fda upgraded it to class i on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.57
+        },
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 724,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMyAwMTo0Mjo1MSIsImkiOiI2OWU5OTQyOGQ0N2ZjMDI4MzIxMzU3NWMiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 2,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.445,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.447
+    }
+   }
+  }
+ ]
+}

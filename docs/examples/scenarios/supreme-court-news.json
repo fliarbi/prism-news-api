@@ -1,0 +1,865 @@
+{
+ "slug": "supreme-court-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:03Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "supreme court",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "supreme court",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 86389,
+     "tone": {
+      "carrying": 86188,
+      "availability_pct": 99.77,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 68769,
+        "share_pct": 79.79
+       },
+       {
+        "group": "neutral",
+        "count": 4764,
+        "share_pct": 5.53
+       },
+       {
+        "group": "positive",
+        "count": 12655,
+        "share_pct": 14.68
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 86361,
+      "count": 77626,
+      "share_pct": 89.89
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.513,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.516
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "supreme court",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "supreme court",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 19679,
+       "critical": 16704,
+       "critical_pct": 84.9,
+       "negative": 14954,
+       "positive": 2951,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 13406,
+       "critical": 11297,
+       "critical_pct": 84.3,
+       "negative": 10987,
+       "positive": 1622,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 21743,
+       "critical": 15482,
+       "critical_pct": 71.2,
+       "negative": 18143,
+       "positive": 2612,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 29698,
+       "critical": 24077,
+       "critical_pct": 81.1,
+       "negative": 24289,
+       "positive": 4125,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 20366,
+       "critical": 18152,
+       "critical_pct": 89.1,
+       "negative": 15960,
+       "positive": 3130,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 13770,
+       "critical": 12066,
+       "critical_pct": 87.6,
+       "negative": 10683,
+       "positive": 2252,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 15477,
+       "critical": 13883,
+       "critical_pct": 89.7,
+       "negative": 12145,
+       "positive": 2359,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 12736,
+       "critical": 11505,
+       "critical_pct": 90.3,
+       "negative": 9976,
+       "positive": 2018,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 12919,
+       "critical": 11534,
+       "critical_pct": 89.3,
+       "negative": 9848,
+       "positive": 2240,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 29474,
+       "critical": 26917,
+       "critical_pct": 91.3,
+       "negative": 24326,
+       "positive": 3882,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 18315,
+       "critical": 16305,
+       "critical_pct": 89.0,
+       "negative": 14301,
+       "positive": 2794,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 25681,
+       "critical": 22870,
+       "critical_pct": 89.1,
+       "negative": 20294,
+       "positive": 3739,
+       "partial_period": false
+      }
+     ],
+     "total": 233264,
+     "critical_total": 200792,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.838,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.841
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "supreme court",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "supreme court",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 86389,
+     "carrying": 43938,
+     "availability_pct": 50.86,
+     "items": [
+      {
+       "country": "united states",
+       "count": 25211,
+       "share_pct": 29.18
+      },
+      {
+       "country": "india",
+       "count": 11508,
+       "share_pct": 13.32
+      },
+      {
+       "country": "philippines",
+       "count": 793,
+       "share_pct": 0.92
+      },
+      {
+       "country": "china",
+       "count": 571,
+       "share_pct": 0.66
+      },
+      {
+       "country": "united kingdom",
+       "count": 552,
+       "share_pct": 0.64
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 5303
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.395,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.399
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "supreme court",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "supreme court",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "supreme court rulings and decisions",
+       "count": 5701,
+       "share": 9.84,
+       "lift": 200.88,
+       "baseline_count": 4,
+       "previous_period_count": 2798,
+       "delta_pct": 103.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "judicial appointments and confirmations",
+       "count": 1439,
+       "share": 2.48,
+       "lift": 202.82,
+       "baseline_count": 1,
+       "previous_period_count": 1110,
+       "delta_pct": 29.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gerrymandering controversies",
+       "count": 1186,
+       "share": 2.05,
+       "lift": 167.16,
+       "baseline_count": 1,
+       "previous_period_count": 1126,
+       "delta_pct": 5.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "judicial independence and accountability",
+       "count": 980,
+       "share": 1.69,
+       "lift": 138.13,
+       "baseline_count": 1,
+       "previous_period_count": 478,
+       "delta_pct": 105.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "human rights law and judicial enforcement",
+       "count": 1389,
+       "share": 2.4,
+       "lift": 97.89,
+       "baseline_count": 2,
+       "previous_period_count": 792,
+       "delta_pct": 75.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 86389,
+     "carrying": 57916,
+     "carrier_share_pct": 67.04,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.414,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.418
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "supreme court",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "supreme court",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9d4bba088760d34bf2dbb",
+       "headline": "Evening news wrap: SC asks Centre to consider abortion beyond 20 weeks for rape survivors; & more | India News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/india/evening-news-wrap-sc-asks-centre-to-consider-abortion-beyond-20-weeks-for-rape-survivors-more/articleshow/130631908.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-30T11:26:00",
+       "lede": "the supreme court urged the centre to consider a law change to allow abortions beyond 20 weeks for rape survivors, saying no time limit should apply in such cases.defence research and development organisation (drdo) and the navy carried out the first-ever salvo launch of indigenous nasm-sr anti-ship missiles from a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.5
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a6cfbbf1d314559a288e",
+       "headline": "Supreme Court: 'Imagine the pain, humiliation': Supreme Court urges Centre to allow abortion beyond 20 weeks for rape survivors | India News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/india/imagine-the-pain-humiliation-supreme-court-urges-centre-to-allow-abortion-beyond-20-weeks-for-rape-survivors/articleshow/130625509.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-30T06:27:00",
+       "lede": "new delhi: the supreme court on thursday pulled up centre and asked it to consider amending the law to permit rape survivors to terminate unwanted pregnancies even beyond 20 weeks.while hearing a plea by aiims seeking to set aside its order allowing a 15-year-old girl to medically terminate her 30-week",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.74
+        },
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "cameroon",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0418a89c4aac093547b676",
+       "headline": "SC asks Centre to consider amending law on terminating pregnancy of rape survivors",
+       "url": "https://economictimes.indiatimes.com/news/india/sc-asks-centre-to-consider-amending-law-on-terminating-pregnancy-of-rape-survivors/articleshow/130625368.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T06:25:00",
+       "lede": "new delhi: the supreme court on thursday took strong exception to a plea by aiims seeking to set aside its order allowing a 15-year-old girl to medically terminate her 30-week pregnancy, and asked the centre to consider amending the law to permit rape survivors to terminate unwanted pregnancies even beyond",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8814c8937ef12fc079775",
+       "headline": "California Attorney General seeks review of overturned murder conviction in Sierra LaMar case",
+       "url": "https://www.cbsnews.com/sanfrancisco/news/sierra-lamar-case-antolin-garcia-torres-overturned-kidnapping-murder-conviction-review-sought/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-04-29T19:53:46",
+       "lede": "california attorney general rob bonta's office is requesting the state supreme court to review a ruling that overturned the conviction of the man found guilty of murdering and kidnapping sierra lamar in 2012.on april 8, bonta's office filed a petition with the court to review a february decision by the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 30,
+         "path": "/Law & Government/Legal/Other",
+         "score": 0.67
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.51
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.43
+        },
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "lamar"
+       ],
+       "people": [
+        "rob bonta"
+       ]
+      },
+      {
+       "id": "6a2a52af5cefb83fe8ef0125",
+       "headline": "Cubs place left-handed reliever Caleb Thielbar on injured list, 8th pitcher to get hurt",
+       "url": "https://apnews.com/article/cubs-lopez-velasquez-thielbar-hodge-8ebedf8c9b3b154c41a910f3e8963bb4",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-25T01:15:52",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories 9 missing after washington paper mill tank rupture and officials say there's no hope of survivors us supreme court settles long-running water dispute over dwindling rio grande ex-cia official charged with stealing millions of dollars in gold bars",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2adbe7963d76f4af130c49",
+       "headline": "Dozens of Thai opposition figures to go on trial over bid to amend royal insult law",
+       "url": "https://www.thestandard.com.hk/world/article/330216/Dozens-of-Thai-opposition-figures-to-go-on-trial-over-bid-to-amend-royal-insult-law",
+       "publisher": "thestandard.com.hk",
+       "published_at": "2026-04-24T10:00:48",
+       "lede": "thailand's supreme court said on friday that 44 current and former opposition lawmakers will go on trial over an attempt to amend a law that protects the monarchy from criticism, in another blow to the country's progressive movement. advertisement scroll to continue with content the 44 facing trial from june",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.56
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.49
+        },
+        {
+         "code": 30,
+         "path": "/Law & Government/Legal/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7660963d76f4afcd843e",
+       "headline": "'Her Choice Comes First, Unwanted Pregnancy Cannot Be Forced': SC Allows Teen To Terminate 7-Month Pregnancy",
+       "url": "https://newsable.asianetnews.com/india/supreme-court-says-woman-cannot-be-forced-to-continue-unwanted-pregnancy-allows-teen-to-terminate-7-month-pregnancy-articleshow-tqts6uw",
+       "publisher": "newsable.asianetnews.com",
+       "published_at": "2026-04-24T06:27:47",
+       "lede": "in an important decision, the supreme court has made it clear that no woman can be forced to continue an unwanted pregnancy simply because the child could be given up for adoption later. the court said the wishes, health and dignity of the pregnant woman must always come first. it",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.5
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea240573206aa299ec67cd",
+       "headline": "Supreme Court revives wounded veteran’s lawsuit against a contractor over suicide bombing",
+       "url": "https://www.ajc.com/news/2026/04/supreme-court-revives-wounded-veterans-lawsuit-against-a-contractor-over-suicide-bombing/",
+       "publisher": "ajc.com",
+       "published_at": "2026-04-22T19:42:40",
+       "lede": "nation & world news supreme court revives wounded veteran’s lawsuit against a contractor over suicide bombing the supreme court is clearing the way for a veteran wounded by a suicide bomb in afghanistan to sue the government contractor for whom the attacker was working when he built the explosive the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.76
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e864ff5cfa3e5ba5f2603c",
+       "headline": "BOOK: Liberal Justice Kagan Screamed \"So Loudly\" at Justice Breyer After Dobbs Draft Leak that the 'Wall Was Shaking' | The Gateway Pundit | by Cristina Laila",
+       "url": "https://www.thegatewaypundit.com/2026/04/book-liberal-justice-kagan-screamed-so-loudly-justice/",
+       "publisher": "thegatewaypundit.com",
+       "published_at": "2026-04-18T19:40:42",
+       "lede": "following the leak of the dobbs draft, liberal supreme court justice elena kagan reportedly screamed “so loudly” at then-justice stephen breyer that the “wall was shaking.” a draft of the supreme court’s decision to overturn roe v. wade was leaked to politico’s senior legal reporter josh gerstein in may 2022.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.6
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "politico"
+       ],
+       "people": [
+        "elena kagan",
+        "stephen breyer"
+       ]
+      },
+      {
+       "id": "69e85e655cfa3e5ba5ee7542",
+       "headline": "Trump ‘prepared’ to nominate new Supreme Court justice if Alito, Thomas retire",
+       "url": "https://thehill.com/homenews/administration/5831975-trump-prepared-name-supreme-justice/",
+       "publisher": "thehill.com",
+       "published_at": "2026-04-15T12:51:05",
+       "lede": "president trump said he is “prepared” to name another justice to the supreme court if one of the older members retires. no justice has suggested they plan to step down from their lifetime appointment, but there has been speculation surrounding justice samuel alito, 76, who was hospitalized in march. “it",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.81
+        },
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "samuel alito",
+        "samuel alito",
+        "samuel alito"
+       ]
+      },
+      {
+       "id": "69e8cb005cfa3e5ba53cc810",
+       "headline": "Underworld figure Gavin Preston, 50, was gunned down by two men dressed in black while eating breakfast at a cafe in Melbourne's northwest on September 9, 2023. Jaeden Tito, 25, and Rabii Zahabe, 26, faced the Supreme Court in Melbourne on Tuesday for their first day on trial accused of Mr Preston's",
+       "url": "https://www.riverineherald.com.au/national/duo-face-trial-for-planned-underworld-hit-at-cafe/",
+       "publisher": "riverineherald.com.au",
+       "published_at": "2026-04-14T07:30:11",
+       "lede": "underworld figure gavin preston, 50, was gunned down by two men dressed in black while eating breakfast at a cafe in melbourne's northwest on september 9, 2023. jaeden tito, 25, and rabii zahabe, 26, faced the supreme court in melbourne on tuesday for their first day on trial accused of",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.69
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.56
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.52
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e6fae8043b81af20d6f687",
+       "headline": "Underworld figure Gavin Preston, 50, was gunned down by two men dressed in black while eating breakfast at a cafe in Melbourne's northwest on September 9, 2023. Jaeden Tito, 25, and Rabii Zahabe, 26, faced the Supreme Court in Melbourne on Tuesday for their first day on trial accused of Mr Preston's",
+       "url": "https://www.kyfreepress.com.au/national/duo-face-trial-for-planned-underworld-hit-at-cafe/",
+       "publisher": "kyfreepress.com.au",
+       "published_at": "2026-04-14T07:30:11",
+       "lede": "underworld figure gavin preston, 50, was gunned down by two men dressed in black while eating breakfast at a cafe in melbourne's northwest on september 9, 2023. jaeden tito, 25, and rabii zahabe, 26, faced the supreme court in melbourne on tuesday for their first day on trial accused of",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.69
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.56
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.52
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 30115,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNCAwNzozMDoxMSIsImkiOiI2OWU2Zjk3NjBmMWFhNTAwM2UxMmZmYjkiLCJwIjo5fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 9.267,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 9.269
+    }
+   }
+  }
+ ]
+}

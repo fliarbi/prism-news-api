@@ -1,0 +1,882 @@
+{
+ "slug": "ethanol-blending-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:48Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "ethanol blending",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ethanol blending",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 306,
+     "tone": {
+      "carrying": 306,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 48,
+        "share_pct": 15.69
+       },
+       {
+        "group": "neutral",
+        "count": 9,
+        "share_pct": 2.94
+       },
+       {
+        "group": "positive",
+        "count": 249,
+        "share_pct": 81.37
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 304,
+      "count": 152,
+      "share_pct": 50.0
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.643,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.646
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "ethanol blending",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ethanol blending",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 12,
+       "critical": 10,
+       "critical_pct": 83.3,
+       "negative": 1,
+       "positive": 11,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 11,
+       "critical": 9,
+       "critical_pct": 81.8,
+       "negative": 3,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 31,
+       "critical": 21,
+       "critical_pct": 67.7,
+       "negative": 7,
+       "positive": 24,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 83,
+       "critical": 42,
+       "critical_pct": 50.6,
+       "negative": 15,
+       "positive": 67,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 64,
+       "critical": 48,
+       "critical_pct": 75.0,
+       "negative": 31,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 23,
+       "critical": 20,
+       "critical_pct": 87.0,
+       "negative": 8,
+       "positive": 15,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 76,
+       "critical": 9,
+       "critical_pct": 11.8,
+       "negative": 3,
+       "positive": 73,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 20,
+       "critical": 12,
+       "critical_pct": 60.0,
+       "negative": 0,
+       "positive": 20,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 17,
+       "critical": 16,
+       "critical_pct": 94.1,
+       "negative": 2,
+       "positive": 15,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 13,
+       "critical": 6,
+       "critical_pct": 46.2,
+       "negative": 1,
+       "positive": 10,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 143,
+       "critical": 41,
+       "critical_pct": 28.7,
+       "negative": 17,
+       "positive": 124,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 133,
+       "critical": 89,
+       "critical_pct": 66.9,
+       "negative": 28,
+       "positive": 100,
+       "partial_period": false
+      }
+     ],
+     "total": 626,
+     "critical_total": 323,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.39,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.393
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "ethanol blending",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ethanol blending",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 306,
+     "carrying": 111,
+     "availability_pct": 36.27,
+     "items": [
+      {
+       "country": "india",
+       "count": 85,
+       "share_pct": 27.78
+      },
+      {
+       "country": "united states",
+       "count": 8,
+       "share_pct": 2.61
+      },
+      {
+       "country": "brazil",
+       "count": 6,
+       "share_pct": 1.96
+      },
+      {
+       "country": "iran",
+       "count": 5,
+       "share_pct": 1.63
+      },
+      {
+       "country": "nepal",
+       "count": 2,
+       "share_pct": 0.65
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 5
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.957,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.961
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "ethanol blending",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ethanol blending",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "biofuel production & algae-based energy",
+       "count": 37,
+       "share": 22.02,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 14,
+       "delta_pct": 164.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "vehicle dimensions and cargo space specs",
+       "count": 18,
+       "share": 10.71,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "crude oil refining methods",
+       "count": 14,
+       "share": 8.33,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 2,
+       "delta_pct": 600.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "emission control & catalytic converters",
+       "count": 14,
+       "share": 8.33,
+       "lift": 680.25,
+       "baseline_count": 1,
+       "previous_period_count": 7,
+       "delta_pct": 100.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy in agriculture (biogas, solar irrigation)",
+       "count": 11,
+       "share": 6.55,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 9,
+       "delta_pct": 22.2,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 306,
+     "carrying": 168,
+     "carrier_share_pct": 54.9,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.403,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.414
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "ethanol blending",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ethanol blending",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e997bad47fc02832164984",
+       "headline": "Gadkari calls for 100% ethanol blending as West Asia crisis exposes supply vulnerabilities",
+       "url": "https://www.auto.economictimes.indiatimes.com/news/industry/indias-push-for-100-ethanol-blending-amid-west-asia-energy-crisis/130416738",
+       "publisher": "auto.economictimes.indiatimes.com",
+       "published_at": "2026-04-21T17:14:42",
+       "lede": "nitin gadkarinew delhi: road transport and highways minister nitin gadkari on tuesday said india should aspire to achieve 100 per cent ethanol blending in the near future, as supply vulnerabilities caused by the ongoing west asia crisis have reinforced the need for the country to become self-reliant in the energy",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.62
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "nitin gadkari"
+       ]
+      },
+      {
+       "id": "6a0ef7152c33d6ff9832029f",
+       "headline": "West Asia Conflict: Govt hints at 21% ethanol blending",
+       "url": "https://www.thehindubusinessline.com/economy/west-asia-conflict-govt-hints-at-21-ethanol-blending/article70858219.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-13T15:29:18",
+       "lede": "the government on monday hinted that india can increase ethanol blending in petrol to 21 per cent from the current 20 per cent. citing the bureau of indian standards (bis), ministry of heavy industries (mhi) additional secretary hanif qureshi said that e21 can “be there.” speaking at the inter-ministerial briefing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.72
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c933e7a5dd771f46a15ebd",
+       "headline": "Ethanol blending to cut fuel imports: PM's big E20 push amid Hormuz crisis",
+       "url": "https://www.indiatoday.in/india/story/ethanol-blending-fuel-imports-pm-modi-e20-push-hormuz-iran-west-asia-middle-east-crisis-2888577-2026-03-29",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-03-29T02:30:52",
+       "lede": "amid the energy crisis triggered by the middle east war, prime minister narendra modi on saturday lauded the centre's ethanol blending policy for helping india reduce its dependence on imported crude oil.speaking at the inauguration of the noida international airport in jewar, pm modi thanked sugarcane farmers of western up",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.54
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "ist"
+       ],
+       "people": [
+        "narendra modi",
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "69cbe61406e4186dc314f29c",
+       "headline": "India looks to accelerate ethanol push as oil price shock creates fresh urgency to cut import dependence",
+       "url": "https://www.fortuneindia.com/business-news/india-looks-to-accelerate-ethanol-push-as-oil-price-shock-creates-fresh-urgency-to-cut-import-dependence/131539",
+       "publisher": "fortuneindia.com",
+       "published_at": "2026-03-24T08:09:53",
+       "lede": "the government’s confidence stems from the scale already achieved. ethanol blending in india has risen from just 1.5% in 2013 to 20% now - an expansion that chopra described as once “improbable”. between 2014 and december 2025, the programme has helped substitute about 277 lakh metric tonnes of crude oil",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.68
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.47
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a8b091d406e0ba14b394",
+       "headline": "Crisis in West Asia created negative impact on world economy, people: PM Modi in Lok Sabha. | Newsalert",
+       "url": "https://www.devdiscourse.com/article/Newsalert/3847011-crisis-in-west-asia-created-negative-impact-on-world-economy-people-pm-modi-in-lok-sabha",
+       "publisher": "devdiscourse.com",
+       "published_at": "2026-03-23T08:36:35",
+       "lede": "also read lok sabha clash: shambhavi's qawwali comeback increase in ethanol blending has ensured that we import 4.5 crore barrels of less crude per year: pm modi in lok sabha. west asia war set unprecedented challenges for india too: pm modi in lok sabha. finance minister introduces high-stakes corporate laws",
+       "sentiment": {
+        "label": "none",
+        "score": 0.4,
+        "group": "neutral"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.51
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "lok sabha"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a6278c37f6c5e66b286ae",
+       "headline": "From Fields to Fuel: The Agricultural Side of India’s Bioenergy Push",
+       "url": "https://eng.ruralvoice.in/opinion/from-fields-to-fuel-the-agricultural-side-of-india’s-bioenergy-push.html",
+       "publisher": "eng.ruralvoice.in",
+       "published_at": "2026-03-07T11:20:59",
+       "lede": "india’s bioenergy transition is increasingly tied to agriculture as biofuel mandates boost demand for biomass. ethanol blending, biogas, and saf targets are expanding rapidly, but weak biomass supply chains, feedstock competition, and food-fuel conflicts pose challenges. strengthening farm-level aggregation, logistics, and biomass markets will be crucial for india’s sustainable biofuel",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6988a9054727a5abdc89d16d",
+       "headline": "Ethanol Blending at Twenty Percent Cuts India’s Forex Outgo by $19.3 Billion | Chemical Industry Digest",
+       "url": "https://chemindigest.com/ethanol-blending-at-twenty-percent-cuts-indias-forex-outgo-by-19-3-billion/",
+       "publisher": "chemindigest.com",
+       "published_at": "2026-01-28T06:23:58",
+       "lede": "india achieved nearly 20 percent ethanol blending in the ethanol supply year (esy) 2025, resulting in foreign exchange savings of about $19.3 billion and direct payments exceeding $15 billion to farmers over the past decade, union minister for petroleum and natural gas hardeep singh puri said.bioenergy push anchors india’s transition",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.79
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "bioenergy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bbbadf7d96d936fd1c4fab",
+       "headline": "India's $19.3B Forex Savings from 20% Ethanol Blending, 100 GW Nuclear Goal",
+       "url": "https://www.newkerala.com/news/a/india-saved-usd-193-billion-forex-20-ethanol-445.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-01-27T12:12:06",
+       "lede": "india has achieved nearly 20% ethanol blending, resulting in significant foreign exchange savings and substantial direct payments to farmers over the last decade. the government is pursuing a diversified energy strategy, including a major expansion of nuclear power capacity to 100 gw by 2047. minister hardeep singh puri emphasized that",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.53
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "hardeep singh puri"
+       ]
+      },
+      {
+       "id": "6a0405039c4aac09353ee5ae",
+       "headline": "Govt clears legal path for 100% ethanol-powered vehicles",
+       "url": "https://www.thehindubusinessline.com/incoming/govt-clears-legal-path-for-100-ethanol-powered-vehicles/article70921054.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-29T14:35:47",
+       "lede": "to push an ambitious shift towards 100 per cent ethanol blending, the government has moved to align vehicle regulations to formally integrate e100 (100 per cent ethanol) into the country’s regulatory architecture, effectively legalising the certification and mass production of flex-fuel vehicles (ffvs). while the e20 (20 per cent ethanol)",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 121,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Vehicle Parts & Accessories",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a58f43843dd771d237b7",
+       "headline": "Government could raise ethanol blending in petrol - Introduction | Autocar India",
+       "url": "https://www.autocarindia.com/industry/government-pushes-to-raise-ethanol-blending-439584",
+       "publisher": "autocarindia.com",
+       "published_at": "2026-04-28T13:45:26",
+       "lede": "the indian government could raise ethanol blending in petrol beyond the existing 20 percent (e20), deepak ballani, director general of the indian sugar & bio-energy manufacturers association, had mentioned in an interview with autocar india. this expected increase in ethanol content in petrol follows a draft notification prepared by the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.56
+        },
+        {
+         "code": 121,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Vehicle Parts & Accessories",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cce8a5706a322e11ca70",
+       "headline": "Ethanol Blending: Govt pushes ethanol blending beyond 20%; vehicle impact remains concern | India News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/india/govt-pushes-ethanol-blending-beyond-20-vehicle-impact-remains-concern/articleshow/130538626.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-26T18:51:00",
+       "lede": "new delhi: amid govtâs strong pitch to increase ethanol blending in petrol to cut import dependence in view of the west asia crisis-triggered energy supply, what remains a sticky issue is how the fuel would impact the large share of vehicles that are not even fully compatible with the current",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 63,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
+         "score": 0.44
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99b3c75f157062caf81c1",
+       "headline": "Govt Clears Ethanol Blending In ATF, New Rules Aim To Boost SAF And Cut Oil Imports",
+       "url": "https://www.freepressjournal.in/business/govt-clears-ethanol-blending-in-atf-new-rules-aim-to-boost-saf-and-cut-oil-imports",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-04-22T11:48:19",
+       "lede": "the government has allowed ethanol blending in aviation turbine fuel to promote cleaner flying and reduce oil imports. | new delhi: the government has taken a key step towards cleaner aviation by allowing ethanol blending in aviation turbine fuel (atf). the ministry of petroleum and natural gas issued a notification",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 71,
+         "path": "/Business & Industrial/Aerospace & Defense/Aviation Industry",
+         "score": 0.85
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.58
+        },
+        {
+         "code": 121,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Vehicle Parts & Accessories",
+         "score": 0.55
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99b99d47fc02832194732",
+       "headline": "India Considering Higher Ethanol Blending in Petrol and Diesel, Ministry Tells Republic",
+       "url": "http://www.republicworld.com/business/india-considering-higher-ethanol-blending-in-petrol-and-diesel-ministry-tells-republic",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-22T11:16:50",
+       "lede": "the union government is examining the feasibility of increasing ethanol blending in petroleum products, including petrol and diesel, as part of efforts to reduce india’s heavy reliance on crude oil imports. responding to republic tv’s question during an inter-ministerial briefing in delhi on the west asia crisis, sujata sharma, joint",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.77
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "sujata sharma"
+       ]
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 59,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAwMDowMDowMCIsImkiOiI2OWU4ODFkYzliYWFmYzczNTY5MDM1MGIiLCJwIjo3fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.162,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.164
+    }
+   }
+  }
+ ]
+}

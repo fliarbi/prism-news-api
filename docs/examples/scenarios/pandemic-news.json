@@ -1,0 +1,941 @@
+{
+ "slug": "pandemic-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:03Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "pandemic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "pandemic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 21747,
+     "tone": {
+      "carrying": 21698,
+      "availability_pct": 99.77,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 11103,
+        "share_pct": 51.17
+       },
+       {
+        "group": "neutral",
+        "count": 663,
+        "share_pct": 3.06
+       },
+       {
+        "group": "positive",
+        "count": 9932,
+        "share_pct": 45.77
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 21740,
+      "count": 14542,
+      "share_pct": 66.89
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.217,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.229
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "pandemic",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "pandemic",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 11303,
+       "critical": 6990,
+       "critical_pct": 61.8,
+       "negative": 6114,
+       "positive": 4556,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 4668,
+       "critical": 2920,
+       "critical_pct": 62.6,
+       "negative": 2370,
+       "positive": 2072,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 10001,
+       "critical": 5075,
+       "critical_pct": 50.7,
+       "negative": 5867,
+       "positive": 3939,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 22752,
+       "critical": 13508,
+       "critical_pct": 59.4,
+       "negative": 13662,
+       "positive": 8717,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 5330,
+       "critical": 3527,
+       "critical_pct": 66.2,
+       "negative": 2615,
+       "positive": 2507,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 4266,
+       "critical": 2818,
+       "critical_pct": 66.1,
+       "negative": 1931,
+       "positive": 2170,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4396,
+       "critical": 2876,
+       "critical_pct": 65.4,
+       "negative": 2116,
+       "positive": 2126,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 4998,
+       "critical": 3508,
+       "critical_pct": 70.2,
+       "negative": 2487,
+       "positive": 2358,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 5240,
+       "critical": 3589,
+       "critical_pct": 68.5,
+       "negative": 2501,
+       "positive": 2532,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 5330,
+       "critical": 3551,
+       "critical_pct": 66.6,
+       "negative": 2597,
+       "positive": 2590,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 5340,
+       "critical": 3541,
+       "critical_pct": 66.3,
+       "negative": 2886,
+       "positive": 2268,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 5837,
+       "critical": 3861,
+       "critical_pct": 66.1,
+       "negative": 3119,
+       "positive": 2542,
+       "partial_period": false
+      }
+     ],
+     "total": 89461,
+     "critical_total": 55764,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.359,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.362
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "pandemic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "pandemic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 21747,
+     "carrying": 8204,
+     "availability_pct": 37.72,
+     "items": [
+      {
+       "country": "united states",
+       "count": 4268,
+       "share_pct": 19.63
+      },
+      {
+       "country": "india",
+       "count": 713,
+       "share_pct": 3.28
+      },
+      {
+       "country": "united kingdom",
+       "count": 638,
+       "share_pct": 2.93
+      },
+      {
+       "country": "china",
+       "count": 314,
+       "share_pct": 1.44
+      },
+      {
+       "country": "canada",
+       "count": 230,
+       "share_pct": 1.06
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 2041
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.781,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.784
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "pandemic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "pandemic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "covid-19 public health policies and lockdown measures",
+       "count": 1123,
+       "share": 8.71,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 934,
+       "delta_pct": 20.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "covid-19 mental health impact and pandemic-related stress",
+       "count": 1094,
+       "share": 8.49,
+       "lift": 692.92,
+       "baseline_count": 1,
+       "previous_period_count": 1033,
+       "delta_pct": 5.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 epidemiology and transmission modeling",
+       "count": 307,
+       "share": 2.38,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 292,
+       "delta_pct": 5.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "covid-19 long-term effects (long covid) and complications",
+       "count": 299,
+       "share": 2.32,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 323,
+       "delta_pct": -7.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "covid-19 variants (alpha, delta, omicron) and mutations",
+       "count": 280,
+       "share": 2.17,
+       "lift": 177.35,
+       "baseline_count": 1,
+       "previous_period_count": 313,
+       "delta_pct": -10.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 21747,
+     "carrying": 12888,
+     "carrier_share_pct": 59.26,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.195,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.2
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "pandemic",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "pandemic",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2efc1983fc01faba7032e7",
+       "headline": "Lorraine Kelly admits 'I burst into tears' as she addresses 'false' diagnosis",
+       "url": "https://www.mirror.co.uk/3am/celebrity-news/lorraine-kelly-admits-i-burst-37074394",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-04-27T08:59:37",
+       "lede": "lorraine kelly “burst into tears” after her father was given a “false diagnosis”. lorraine’s dad john kelly went into hospital during the covid pandemic and was diagnosed with lung cancer. the 66-year-old tv presenter says the experience was “hellish” and described it as the “worst possible time” to get the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfae2a43415b9885aa348a",
+       "headline": "Italy’s coronavirus deaths soar to over 1,800 with nearly 25k infected",
+       "url": "http://www.rt.com/newsline/483187-italys-coronavirus-deaths-record/",
+       "publisher": "rt.com",
+       "published_at": "2026-04-08T00:00:00",
+       "lede": "italian officials have revealed 368 additional covid-19 related deaths with the new total standing at 1,809 people. this represents a record toll for one-day in the pandemic. the number of infected patients within the locked-down country has also risen dramatically from 21,157 to 24,747, according to the country's civil protection",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.83
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.66
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.42
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c436b7bcb4bea65814a6cb",
+       "headline": "Five Plead Guilty in $14.6M Fraud Diverting Funds Intended for Child Nutrition Funds",
+       "url": "https://www.ibtimes.co.uk/five-plead-guilty-146m-fraud-diverting-funds-intended-child-nutrition-funds-1788023",
+       "publisher": "ibtimes.co.uk",
+       "published_at": "2026-03-24T17:12:44",
+       "lede": "a major us pandemic fraud case has taken another turn after five more defendants admitted their roles in a scheme that siphoned millions from a federal programme designed to feed vulnerable children.according to the us department of justice, the latest guilty pleas form part of the sprawling 'feeding our future'",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ef58383fc01faba6eea2d",
+       "headline": "Covid-19 Inquiry verdict today amid warning UK is unprepared for next pandemic",
+       "url": "https://www.mirror.co.uk/news/health/covid-19-inquiry-gives-verdict-36887360",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-03-19T06:00:00",
+       "lede": "the harrowing impact of the coronavirus pandemic on the nhs is to be laid bare today in a new report. the covid-19 public inquiry will today give its verdict on how the healthcare system coped in the face of the virus and the impact on patients and staff. campaigners warn",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.81
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.49
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2991ebd7b10565a367bee",
+       "headline": "COVID-19 death toll in early days of the pandemic undercounted by over 150K: study",
+       "url": "https://us.headtopics.com/news/covid-19-death-toll-in-early-days-of-the-pandemic-81163043",
+       "publisher": "us.headtopics.com",
+       "published_at": "2026-03-18T20:18:00",
+       "lede": "covid-19 death toll in early days of the pandemic undercounted by over 150k: study today&amp;#39;s video headlines: 03/18/26 was much higher than the official us count, according to a new study that spotlights dramatic disparities in the uncounted deaths. about 840,000 covid-19 deaths were reported on death certificates in 2020",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.93
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.55
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.55
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eedc083fc01faba673fa2",
+       "headline": "COVID probably killed 150,000 more people in its first two years than official U.S. tolls show",
+       "url": "https://www.yahoo.com/news/articles/covid-probably-killed-150-000-180000951.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-18T18:00:00",
+       "lede": "covid may have killed significantly more people in the u.s. in the first two years of the pandemic than official records indicate, with as many as one overlooked death for every five recorded ones. that brings the total to nearly one million deaths just in 2020 and 2021. that calculation",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.96
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.58
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69de328b96b93a27985fefc0",
+       "headline": "Americans reflect on hardship and loss from the pandemic",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/1-million-lives-tape-1652389963",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-13T00:00:00",
+       "lede": "as we approach the tragic milestone of 1 million deaths from covid-19 in the u.s. we wanted to bring you reflections from some of the people we’ve met over the past two years of this pandemic. a paramedic, a nurse, a single mom, a sister, a daughter, a student --",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69de3224310ccb30573f57b9",
+       "headline": "How the pandemic made housing inequality worse",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/rising-rents-1626382104",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-13T00:00:00",
+       "lede": "the pandemic uprooted thousands of people, leaving a glut of luxury apartments available in cities at the same time it undercut the earning potential of renters in the middle class. due to the economic pressure of eviction moratoriums coupled with illegal housing practices, many are finding few options for safe,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.67
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1f3f4f7b7ddc2fcdfe160",
+       "headline": "ADHD medication shortage strains patients and families",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/adhd-drug-shortage-1698700721",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-12T00:00:00",
+       "lede": "since the pandemic eased, millions of americans have had to deal with several drug shortages. for those with adhd, it's been an especially difficult year as they and their families have struggled to get through ordinary daily routines. stephanie sy has the story for our ongoing series, early warnings: america’s",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": [
+        "stephanie sy"
+       ]
+      },
+      {
+       "id": "69e1f1e9f7b7ddc2fcdfd71e",
+       "headline": "COVID-19 vaccines and children: What you need to know",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/covid-19-vaccines-and-children-what-you-need-to-know-1638040761",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-12T00:00:00",
+       "lede": "millions of children over five across america have been vaccinated against the coronavirus – advancing the fight against the pandemic. still, parents have concerns about potential side effects and possible booster shots. dr. sallie permar, pediatrician-in-chief at new york presbyterian hospital and chair of the pediatric department at weill-cornell medical",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.73
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69de3103663c1a92686db79b",
+       "headline": "Colombia protests enter week three as violence escalates",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/colombia-protests-enter-week-three-as-violence-escalates-1621191964",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-12T00:00:00",
+       "lede": "at least 42 people have died, thousands have been injured and hundreds are believed to be missing as widespread protests and violence across colombia continued for the third week. the demonstrations began over a pandemic-related tax policy and escalated over charges of police violence against protesters. sandra borda guzman, associate",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9b4c83fc01faba190116",
+       "headline": "Three SC men indicted for ‘millions’ of thefts in flawed COVID testing scheme",
+       "url": "https://www.yahoo.com/news/articles/three-sc-men-indicted-millions-172350205.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-11T17:23:50",
+       "lede": "a federal grand jury has indicted three south carolina men, alleging they billed the government “millions” of dollars for worthless covid tests during the height of the pandemic. hundreds of thousands of covid-19 tests the company ran in their quest for illegal profits were “unreliable,” the eight-page, 16-count indictment said.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.48
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e3fb9bf10c43d29657eb9",
+       "headline": "As Covid hits again, New Zealand confronts its pandemic past",
+       "url": "https://rnz.co.nz/news/thedetail/589319/as-covid-hits-again-new-zealand-confronts-its-pandemic-past",
+       "publisher": "rnz.co.nz",
+       "published_at": "2026-03-11T16:52:04",
+       "lede": "photo: rnz / marika khabazi a deadly covid wave returns, just as new zealand gets its final pandemic report card another wave of covid-19 is circulating again through new zealand communities, pushing up hospitalisations and deaths, and reminding kiwis of a time they hoped was a distant memory. the arrival",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.83
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.69
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03fcf2220687a966a60afd",
+       "headline": "As Covid hits again, New Zealand confronts its pandemic past",
+       "url": "http://www.radionz.co.nz/news/corrections/589319/as-covid-hits-again-new-zealand-confronts-its-pandemic-past",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-03-11T16:52:04",
+       "lede": "photo: rnz / marika khabazi a deadly covid wave returns, just as new zealand gets its final pandemic report card another wave of covid-19 is circulating again through new zealand communities, pushing up hospitalisations and deaths, and reminding kiwis of a time they hoped was a distant memory. the arrival",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.83
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.69
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc1e122ca99408382d6310",
+       "headline": "As Covid hits again, New Zealand confronts its pandemic past",
+       "url": "https://www.rnz.co.nz/news/corrections/589319/as-covid-hits-again-new-zealand-confronts-its-pandemic-past",
+       "publisher": "rnz.co.nz",
+       "published_at": "2026-03-11T16:52:04",
+       "lede": "photo: rnz / marika khabazia deadly covid wave returns, just as new zealand gets its final pandemic report cardanother wave of covid-19 is circulating again through new zealand communities, pushing up hospitalisations and deaths, and reminding kiwis of a time they hoped was a distant memory.the arrival of the ninth",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.83
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.69
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 2199,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xMSAxNjo1MjowNCIsImkiOiI2OWNjMWUxMjJjYTk5NDA4MzgyZDYzMTAiLCJwIjo5fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.342,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.345
+    }
+   }
+  }
+ ]
+}

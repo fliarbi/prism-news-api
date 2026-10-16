@@ -1,0 +1,849 @@
+{
+ "slug": "nasdaq-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:28Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "nasdaq",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nasdaq",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 158036,
+     "tone": {
+      "carrying": 157993,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 29225,
+        "share_pct": 18.5
+       },
+       {
+        "group": "neutral",
+        "count": 4059,
+        "share_pct": 2.57
+       },
+       {
+        "group": "positive",
+        "count": 124709,
+        "share_pct": 78.93
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 158018,
+      "count": 52308,
+      "share_pct": 33.1
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.824,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.827
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "nasdaq",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nasdaq",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 18282,
+       "critical": 8215,
+       "critical_pct": 44.9,
+       "negative": 3794,
+       "positive": 14207,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 19345,
+       "critical": 6347,
+       "critical_pct": 32.8,
+       "negative": 3043,
+       "positive": 16074,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 12174,
+       "critical": 6826,
+       "critical_pct": 56.1,
+       "negative": 2839,
+       "positive": 9072,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 18250,
+       "critical": 8511,
+       "critical_pct": 46.6,
+       "negative": 3388,
+       "positive": 14602,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 25653,
+       "critical": 10935,
+       "critical_pct": 42.6,
+       "negative": 3883,
+       "positive": 21350,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 22072,
+       "critical": 11395,
+       "critical_pct": 51.6,
+       "negative": 4485,
+       "positive": 16136,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 22495,
+       "critical": 12279,
+       "critical_pct": 54.6,
+       "negative": 5389,
+       "positive": 16460,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 21119,
+       "critical": 10604,
+       "critical_pct": 50.2,
+       "negative": 4543,
+       "positive": 15563,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 31990,
+       "critical": 9863,
+       "critical_pct": 30.8,
+       "negative": 4648,
+       "positive": 26576,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 36886,
+       "critical": 13029,
+       "critical_pct": 35.3,
+       "negative": 6115,
+       "positive": 29919,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 33078,
+       "critical": 13480,
+       "critical_pct": 40.8,
+       "negative": 7737,
+       "positive": 24450,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 56082,
+       "critical": 15936,
+       "critical_pct": 28.4,
+       "negative": 10725,
+       "positive": 43764,
+       "partial_period": false
+      }
+     ],
+     "total": 317426,
+     "critical_total": 127420,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.686,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.706
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "nasdaq",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nasdaq",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 158036,
+     "carrying": 77231,
+     "availability_pct": 48.87,
+     "items": [
+      {
+       "country": "united states",
+       "count": 61352,
+       "share_pct": 38.82
+      },
+      {
+       "country": "china",
+       "count": 2963,
+       "share_pct": 1.87
+      },
+      {
+       "country": "canada",
+       "count": 1201,
+       "share_pct": 0.76
+      },
+      {
+       "country": "united kingdom",
+       "count": 1186,
+       "share_pct": 0.75
+      },
+      {
+       "country": "iran",
+       "count": 940,
+       "share_pct": 0.59
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 9589
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.25,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.255
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "nasdaq",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nasdaq",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "options trading for stocks",
+       "count": 4260,
+       "share": 3.85,
+       "lift": 157.29,
+       "baseline_count": 2,
+       "previous_period_count": 2299,
+       "delta_pct": 85.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 2514,
+       "share": 2.27,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1046,
+       "delta_pct": 140.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "market volatility indicators",
+       "count": 3921,
+       "share": 3.55,
+       "lift": 144.78,
+       "baseline_count": 2,
+       "previous_period_count": 3451,
+       "delta_pct": 13.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stock splits and reverse splits",
+       "count": 2373,
+       "share": 2.15,
+       "lift": 175.24,
+       "baseline_count": 1,
+       "previous_period_count": 786,
+       "delta_pct": 201.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "initial public offerings (ipos)",
+       "count": 4121,
+       "share": 3.73,
+       "lift": 101.44,
+       "baseline_count": 3,
+       "previous_period_count": 2432,
+       "delta_pct": 69.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 158036,
+     "carrying": 110539,
+     "carrier_share_pct": 69.95,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.207,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.213
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "nasdaq",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "nasdaq",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2b22905cefb83fe87cdeb1",
+       "headline": "Elon Musk Questions COVID-19 Vaccine Dosage As He Recounts Near-Hospitalization Ordeal: 'Felt Like I Was",
+       "url": "https://www.benzinga.com/news/health-care/26/04/51773724/elon-musk-questions-covid-19-vaccine-dosage-says-it-was-obviously-too-high",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-13T10:01:28",
+       "lede": "tesla inc. (nasdaq:tsla) ceo elon musk expressed his concerns over the covid-19 vaccine dosage, citing his own adverse experience. musk took to x on sunday and claimed that his second vaccine shot was so severe that it almost led him to hospitalization. \"my second vaccine shot almost sent me to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.85
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.82
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e507e7d5e7fc42ee13ac4e",
+       "headline": "Elon Musk Questions COVID-19 Vaccine Dosage As He Recounts Near-Hospitalization Ordeal: 'Felt Like I Was",
+       "url": "https://benzinga.com/news/health-care/26/04/51773724/elon-musk-questions-covid-19-vaccine-dosage-says-it-was-obviously-too-high",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-13T10:01:28",
+       "lede": "tesla inc. (nasdaq:tsla) ceo elon musk expressed his concerns over the covid-19 vaccine dosage, citing his own adverse experience. musk took to x on sunday and claimed that his second vaccine shot was so severe that it almost led him to hospitalization. \"my second vaccine shot almost sent me to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.85
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.82
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.51
+        }
+       ],
+       "country": "germany",
+       "organizations": [],
+       "people": [
+        "elon musk"
+       ]
+      },
+      {
+       "id": "69e8df197bb1410d4cd1a1e5",
+       "headline": "Oil falls below $100, Dow futures soar 1,000 points on Iran ceasefire deal",
+       "url": "https://qz.com/trump-iran-war-ceasefire-deal-oil-prices-stocks-markets",
+       "publisher": "qz.com",
+       "published_at": "2026-04-08T02:21:44",
+       "lede": "protesters during a demonstration against u.s. military action in iran on april 7, 2026 in new york city. (ryan murphy/getty images) president donald trump announced a two-week ceasefire with iran late tuesday, sending oil prices sharply lower and u.s. stock futures soaring after pakistan brokered a last-minute agreement to allow",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.71
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.67
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.53
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.52
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69d10b861840dd4fe07bd68a",
+       "headline": "Trump reportedly willing to end Iran war without reopening the Strait of Hormuz",
+       "url": "https://sherwood.news/markets/trump-reportedly-willing-end-iran-war-without-reopening-strait-of-hormuz/",
+       "publisher": "sherwood.news",
+       "published_at": "2026-03-31T13:05:49",
+       "lede": "futures for the s&p 500 and nasdaq 100 rose after the report. over the past month, the closure of the strait to all but a minuscule amount of tanker traffic has sent oil prices skyrocketing and pushed major indexes down. president trump told aides he’s willing to pull out of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f885fdbbf1d3145599a815",
+       "headline": "Evernorth XRP names OpenAI CFO to its board",
+       "url": "https://crypto.news/evernorth-xrp-names-openai-cfo-to-its-board/",
+       "publisher": "crypto.news",
+       "published_at": "2026-04-30T22:45:00",
+       "lede": "ripple-backed xrp treasury company evernorth has named openai foundation cfo robert kaiden and antalpha coo derar islim as independent directors in its second sec s-4 amendment, bringing ai and institutional finance expertise onto the board of the company aiming to list on nasdaq under ticker xrpn. summary the evernorth xrp",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.88
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "xrp"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b2819c37f6c5e663bdd81",
+       "headline": "Apple Stock Pops On Strong Q3 Guidance: Details - Apple (NASDAQ:AAPL)",
+       "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52201788/apple-stock-pops-on-strong-q3-guidance-details",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-30T22:04:02",
+       "lede": "apple inc. (nasdaq:aapl) shares popped about 2% during the company's earnings call, as investors reacted to stronger-than-expected june-quarter guidance and a notable shift in apple's capital-return framework. aapl stock is up. see the chart and price action here. management guided for june-quarter revenue growth of 14% to 17%, well ahead",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e9307c0b414d24afe05a0",
+       "headline": "XMax puts AWS-hosted AI platform online, opens new investor site",
+       "url": "https://www.stocktitan.net/news/XWIN/x-max-inc-launches-ai-inference-platform-and-new-ai-and-corporate-c91bdl3n0r2r.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-30T21:26:00",
+       "lede": "los angeles, april 30, 2026 (globe newswire) -- xmax inc. (nasdaq: xwin , the “company” or “xmax”)), today announced the successful launch of its ai inference platform through its wholly owned subsidiary, xmax ai inc., along with two new websites: ai.xmax.com , dedicated to its ai platform services, and xmax.com",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.84,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a91f25cefb83fe8183732",
+       "headline": "Apple (AAPL) Q2 FY26 sales, earnings beat estimates amid strong iPhone  sales",
+       "url": "https://news.alphastreet.com/apple-aapl-q2-fy26-sales-earnings-beat-estimates-amid-strong-iphone-sales/",
+       "publisher": "news.alphastreet.com",
+       "published_at": "2026-04-30T20:38:43",
+       "lede": "apple inc. (nasdaq: aapl) reported higher sales and profit for the second quarter of fiscal 2026, reflecting continued strong demand for iphone. both revenue and earnings exceeded analysts’ forecasts. the tech giant’s net sales for the second quarter rose to $111.2 billion from $95.4 billion in the comparable quarter of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03ef8d62bbf617b039d257",
+       "headline": "US stocks today: US market ends higher, S&P 500, Nasdaq notch biggest monthly gains in years",
+       "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-us-market-ends-higher-sp-500-nasdaq-notch-biggest-monthly-gains-in-years/articleshow/130651806.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T20:02:00",
+       "lede": "u.s. stocks advanced on thursday and the s&p 500 and the nasdaq logged their biggest monthly gains in years as solid corporate earnings offset the war-related oil supply shock that has rattled markets and sent crude prices to four-year highs. but oil prices eased and economic data showed the u.s.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.68
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7b9e5cefb83fe809bdc6",
+       "headline": "Meta Seeks $25 Billion Bond Sale As AI Spending Soars",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/meta-seeks-25-billion-bond-190420800.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-04-30T19:04:20",
+       "lede": "this article first appeared on gurufocus. meta platforms (nasdaq:meta) is moving back into the bond market with a massive ai funding message. the facebook parent is looking to sell between $20 billion and $25 billion of investment-grade bonds on thursday, according to people familiar with the transaction, as the company",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.65
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b17295cefb83fe874cab1",
+       "headline": "Why Is Opendoor Technologies Stock Sliding On Thursday? - Opendoor Technologies (NASDAQ:OPEN)",
+       "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52186563/why-is-opendoor-technologies-stock-sliding-on-thursday",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-30T17:51:38",
+       "lede": "opendoor technologies inc. (nasdaq:open) shares fell during thursday's session. the real estate tech firm faces a difficult mix of hot inflation data and heavy short-seller activity. • opendoor technologies shares are retreating from recent levels. what's weighing on open shares? macro headwinds dampen sentiment the bureau of economic analysis reported",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed28483fc01faba4b9d71",
+       "headline": "Alphabet Soars, Meta Sinks As Big Tech Splits — ETFs Let You Pick The Right Side - Alphabet (NASDAQ:GOOGL",
+       "url": "https://www.benzinga.com/etfs/sector-etfs/26/04/52178697/alphabet-soars-meta-sinks-as-big-tech-splits-etfs-let-you-pick-the-right-side",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-30T15:27:41",
+       "lede": "the latest earnings from microsoft corp (nasdaq:msft), meta platforms inc (nasdaq:meta), amazon.com inc (nasdaq:amzn), and alphabet, inc (nasdaq:googl) (nasdaq:goog) didn't just move stocks, they challenged the once-unified \"magnificent seven\" trade. for etf investors, that split is becoming an opportunity. • direxion daily msft bear 1x etf stock is among today's",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.79
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 18907,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAxNDozNjo1MiIsImkiOiI2YTJhZGVlZTVjZWZiODNmZTg0ZGFiMTAiLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.293,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.3
+    }
+   }
+  }
+ ]
+}

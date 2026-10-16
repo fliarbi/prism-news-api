@@ -1,0 +1,864 @@
+{
+ "slug": "diabetes-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:04:24Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "diabetes",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "diabetes",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 18660,
+     "tone": {
+      "carrying": 18635,
+      "availability_pct": 99.87,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4967,
+        "share_pct": 26.65
+       },
+       {
+        "group": "neutral",
+        "count": 892,
+        "share_pct": 4.79
+       },
+       {
+        "group": "positive",
+        "count": 12776,
+        "share_pct": 68.56
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 18657,
+      "count": 15635,
+      "share_pct": 83.8
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.672,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.677
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "diabetes",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "diabetes",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 4177,
+       "critical": 3288,
+       "critical_pct": 78.7,
+       "negative": 961,
+       "positive": 2980,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 3621,
+       "critical": 2869,
+       "critical_pct": 79.2,
+       "negative": 769,
+       "positive": 2636,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 4140,
+       "critical": 3077,
+       "critical_pct": 74.3,
+       "negative": 980,
+       "positive": 2920,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 4401,
+       "critical": 3435,
+       "critical_pct": 78.1,
+       "negative": 1085,
+       "positive": 3090,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 4400,
+       "critical": 3588,
+       "critical_pct": 81.5,
+       "negative": 1071,
+       "positive": 3128,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 3912,
+       "critical": 3185,
+       "critical_pct": 81.4,
+       "negative": 809,
+       "positive": 2871,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4548,
+       "critical": 3780,
+       "critical_pct": 83.1,
+       "negative": 1071,
+       "positive": 3233,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 4677,
+       "critical": 3935,
+       "critical_pct": 84.1,
+       "negative": 922,
+       "positive": 3471,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 5451,
+       "critical": 4806,
+       "critical_pct": 88.2,
+       "negative": 1067,
+       "positive": 3987,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3776,
+       "critical": 3035,
+       "critical_pct": 80.4,
+       "negative": 790,
+       "positive": 2815,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 4023,
+       "critical": 3262,
+       "critical_pct": 81.1,
+       "negative": 915,
+       "positive": 2949,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 5410,
+       "critical": 4532,
+       "critical_pct": 83.8,
+       "negative": 2195,
+       "positive": 3025,
+       "partial_period": false
+      }
+     ],
+     "total": 52536,
+     "critical_total": 42792,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.128,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.15
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "diabetes",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "diabetes",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 18660,
+     "carrying": 4931,
+     "availability_pct": 26.43,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2834,
+       "share_pct": 15.19
+      },
+      {
+       "country": "india",
+       "count": 759,
+       "share_pct": 4.07
+      },
+      {
+       "country": "united kingdom",
+       "count": 304,
+       "share_pct": 1.63
+      },
+      {
+       "country": "china",
+       "count": 128,
+       "share_pct": 0.69
+      },
+      {
+       "country": "canada",
+       "count": 97,
+       "share_pct": 0.52
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 809
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.981,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.985
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "diabetes",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "diabetes",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "diabetes medication management",
+       "count": 1548,
+       "share": 14.66,
+       "lift": 1196.51,
+       "baseline_count": 1,
+       "previous_period_count": 1335,
+       "delta_pct": 16.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "public health initiatives and programs",
+       "count": 860,
+       "share": 8.14,
+       "lift": 664.73,
+       "baseline_count": 1,
+       "previous_period_count": 759,
+       "delta_pct": 13.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "patient safety and quality improvement studies",
+       "count": 830,
+       "share": 7.86,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 687,
+       "delta_pct": 20.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "health disparities and equity research",
+       "count": 1405,
+       "share": 13.3,
+       "lift": 361.99,
+       "baseline_count": 3,
+       "previous_period_count": 1229,
+       "delta_pct": 14.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "nutritional science and dietary health research",
+       "count": 1257,
+       "share": 11.9,
+       "lift": 323.86,
+       "baseline_count": 3,
+       "previous_period_count": 1227,
+       "delta_pct": 2.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 18660,
+     "carrying": 10561,
+     "carrier_share_pct": 56.6,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.127,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.13
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "diabetes",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "diabetes",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "696fedf4b778af2e9565f4ef",
+       "headline": "'The Thing' Actor T.K. Carter Had Recent Health Issues Before Death",
+       "url": "https://www.tmz.com/2026/01/13/tk-carter-recent-health-issues-before-death/",
+       "publisher": "tmz.com",
+       "published_at": "2026-01-13T17:33:04",
+       "lede": "t.k. carter died at his home after battling serious health issues ... according to his family and authorities.the actor’s older brother, harold, tells tmz ... the 69-year-old had been dealing with multiple medical problems in the months leading up to his death -- including diabetes and ongoing heart issues.law enforcement",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.8
+        },
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a51dd5cefb83fe8ee6f08",
+       "headline": "Genprex Receives Patent Grant from The Israel Patent Office for the Combination of Reqorsa® Gene Therapy and PD-1 Antibodies to Treat Cancer",
+       "url": "https://www.biospace.com/press-releases/genprex-receives-patent-grant-from-the-israel-patent-office-for-the-combination-of-reqorsa-gene-therapy-and-pd-1-antibodies-to-treat-cancer",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-30T14:09:40",
+       "lede": "strengthens patent estate and expands protection in another target market austin, texas, april 30, 2026 /prnewswire/ -- genprex, inc. (\"genprex\" or the \"company\") (nasdaq: gnpx), a clinical-stage gene therapy company focused on developing life-changing therapies for patients with cancer and diabetes, today announced that the israel patent office (ilpo) has",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.85
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22fc0c6105443aa5eb16c",
+       "headline": "Damon Wayans reveals the scary symptom that led to his type 2 diabetes diagnosis",
+       "url": "https://www.foxnews.com/health/damon-wayans-reveals-scary-symptom-led-type-2-diabetes-diagnosis",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-29T11:00:59",
+       "lede": "comedy icon damon wayans has gone from spreading laughter to spreading awareness about diabetes risk. the actor, best known for his roles in \"in living color,\" \"major payne\" and \"my wife and kids,\" has lived several years with his own case of type 2 diabetes, which runs in his family.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.68
+        },
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "damon wayans"
+       ]
+      },
+      {
+       "id": "69f9d90a713680636eef6824",
+       "headline": "Dr Reddy's gets Health Canada nod for generic semaglutide injection",
+       "url": "https://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/dr-reddys-gets-health-canada-nod-for-generic-semaglutide-injection/articleshow/130596904.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-29T05:25:00",
+       "lede": "new delhi: dr reddy's laboratories on wednesday said it has received a notice of compliance (noc) from health canada for its generic semaglutide injection indicated for the management of type-2 diabetes. dr reddy's becomes the first company to receive the market authorisation for generic semaglutide injection in canada, ahead of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.83
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.54
+        }
+       ],
+       "country": "canada",
+       "organizations": [
+        "health canada"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d925713680636eef7bfb",
+       "headline": "Man claiming he's proof 'Ozempic penis' exists makes x-rated confession about how it's impacted his life",
+       "url": "https://uniladtech.com/news/ozempic-penis-x-rated-confession-943643-20260428",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-04-28T15:17:43",
+       "lede": "weight loss injections have transformed the lives of millions of people around the world, and the stories keep coming. originally designed to treat diabetes, glp-1 drugs like ozempic, wegovy and mounjaro have become one of the most talked-about medical revolutions of recent years. numerous online influencers have been showing off",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 377,
+         "path": "/Beauty & Fitness/Weight Loss",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eead68e67a2fcb3f2adb8",
+       "headline": "From strangers to family: Kidney transplant brings two Texans together",
+       "url": "https://www.yahoo.com/lifestyle/articles/strangers-family-kidney-transplant-brings-020723936.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T02:07:23",
+       "lede": "two strangers met for the first time — soon to be forever connected through the power of a kidney donation. for more than two years, michael miller has been fighting a battle his body couldn’t win on its own. a diabetes diagnosis led to high blood pressure and eventually kidney",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ea06683fc01faba1cdf52",
+       "headline": "From strangers to family: Kidney transplant brings two Texans together",
+       "url": "https://www.yahoo.com/lifestyle/articles/strangers-family-kidney-transplant-brings-020723154.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T02:07:23",
+       "lede": "two strangers met for the first time — soon to be forever connected through the power of a kidney donation. for more than two years, michael miller has been fighting a battle his body couldn’t win on its own. a diabetes diagnosis led to high blood pressure and eventually kidney",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e99c3e540a46fb53d2f64",
+       "headline": "From strangers to family: Kidney transplant brings two Texans together",
+       "url": "https://www.yahoo.com/lifestyle/articles/strangers-family-kidney-transplant-brings-020723168.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T02:07:23",
+       "lede": "two strangers met for the first time — soon to be forever connected through the power of a kidney donation. for more than two years, michael miller has been fighting a battle his body couldn’t win on its own. a diabetes diagnosis led to high blood pressure and eventually kidney",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e5304e6594f7eba00e89b",
+       "headline": "From strangers to family: Kidney transplant brings two Texans together",
+       "url": "https://www.yahoo.com/lifestyle/articles/strangers-family-kidney-transplant-brings-020723066.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T02:07:23",
+       "lede": "two strangers met for the first time — soon to be forever connected through the power of a kidney donation. for more than two years, michael miller has been fighting a battle his body couldn’t win on its own. a diabetes diagnosis led to high blood pressure and eventually kidney",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4fb23a4d098b40bf8fdc",
+       "headline": "From strangers to family: Kidney transplant brings two Texans together",
+       "url": "https://www.yahoo.com/lifestyle/articles/strangers-family-kidney-transplant-brings-020723373.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T02:07:23",
+       "lede": "two strangers met for the first time — soon to be forever connected through the power of a kidney donation. for more than two years, michael miller has been fighting a battle his body couldn’t win on its own. a diabetes diagnosis led to high blood pressure and eventually kidney",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "fb332f5440d77e15d8cef6f3",
+       "headline": "Protein-Encapsulated DNA Metal Nanocluster as a Fluorescent Nanoprobe for Detecting Insulin.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42047329/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "protein-encapsulated dna metal nanocluster as a fluorescent nanoprobe for detecting insulin.the exploration of insulin detection is of great significance for achieving diabetes monitoring and treatment. in this study, a protamine-encapsulated dna copper nanocluster (prot@dnacunc) was synthesized as a novel fluorescent nanoprobe for detecting insulin, a unique biomarker of diabetes. prot@dnacunc",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.95,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "9f278ebe05f6768f9588c8f7",
+       "headline": "Synthesis, characterization, and α-glucosidase inhibitory activity of methyl proline derivatives of phenylpropanoid.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42095105/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "synthesis, characterization, and α-glucosidase inhibitory activity of methyl proline derivatives of phenylpropanoid.to discover novel α-glucosidase inhibitors for diabetes management, a series of six proline methyl ester phenylpropanoid derivatives were synthesized through a seven-step synthetic route involving bromination and nucleophilic substitution. the structures of the target compounds (2f-7f) were confirmed by",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "473970ec1d4beddfc283916e",
+       "headline": "Considerations for the clinical use of teplizumab in stage 2 Type 1 diabetes: A Consensus Statement from the British Society of Paediatric Endocrinology and Diabetes (BSPED) and the Association of British Clinical Diabetologists (ABCD).",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42051156/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "considerations for the clinical use of teplizumab in stage 2 type 1 diabetes: a consensus statement from the british society of paediatric endocrinology and diabetes (bsped) and the association of british clinical diabetologists (abcd).introduction: in 2025, the medicines and healthcare products regulatory agency (mhra) approved the use of teplizumab (a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.82
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.8
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.51
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee9b9e540a46fb5892c8d",
+       "headline": "As heart, kidney and metabolic health worsen, cancer risk may rise, study finds",
+       "url": "https://www.yahoo.com/news/articles/heart-kidney-metabolic-health-worsen-163217520.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-27T16:32:17",
+       "lede": "as heart, kidney and metabolic problems progress to more advanced stages, a person's risk of developing several cancers also rises sharply, a new study finds. cardiovascular-kidney-metabolic (ckm) syndrome is a disorder that occurs when heart disease, kidney problems and metabolic issues including obesity and diabetes all happen together, according to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.59
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c92da5706a322e102509",
+       "headline": "Synthetic Semaglutide vs Ozempic: Comparable Efficacy in Type 2 Diabetes",
+       "url": "https://www.clinicaladvisor.com/news/synthetic-semaglutide-vs-ozempic-type-2-diabetes/",
+       "publisher": "clinicaladvisor.com",
+       "published_at": "2026-04-27T15:15:08",
+       "lede": "a new synthetic semaglutide injection made by sun pharma, compared with the branded ozempic® (semaglutide) formulation, provides similar results irrespective of baseline postprandial and fasting glucose levels among patients with type 2 diabetes, according to study results presented at the american association of clinical endocrinology (aace) annual meeting held in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.94
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "sun pharma"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 3957,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAxMDozMjowMiIsImkiOiI2YTJlOTNhNzgzZmMwMWZhYmExMzU3ZjYiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.124,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.129
+    }
+   }
+  }
+ ]
+}

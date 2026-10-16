@@ -1,0 +1,957 @@
+{
+ "slug": "hiv-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:00:47Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "HIV",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "hiv",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 14493,
+     "tone": {
+      "carrying": 14455,
+      "availability_pct": 99.74,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4120,
+        "share_pct": 28.5
+       },
+       {
+        "group": "neutral",
+        "count": 569,
+        "share_pct": 3.94
+       },
+       {
+        "group": "positive",
+        "count": 9766,
+        "share_pct": 67.56
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 14481,
+      "count": 8113,
+      "share_pct": 56.03
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.951,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.954
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "HIV",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "hiv",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2453,
+       "critical": 1443,
+       "critical_pct": 58.8,
+       "negative": 842,
+       "positive": 1527,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2301,
+       "critical": 1274,
+       "critical_pct": 55.4,
+       "negative": 613,
+       "positive": 1599,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 3132,
+       "critical": 1757,
+       "critical_pct": 56.1,
+       "negative": 1124,
+       "positive": 1891,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3257,
+       "critical": 1951,
+       "critical_pct": 59.9,
+       "negative": 1098,
+       "positive": 2026,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3011,
+       "critical": 1829,
+       "critical_pct": 60.7,
+       "negative": 999,
+       "positive": 1909,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 3142,
+       "critical": 1853,
+       "critical_pct": 59.0,
+       "negative": 897,
+       "positive": 2140,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2791,
+       "critical": 1666,
+       "critical_pct": 59.7,
+       "negative": 763,
+       "positive": 1925,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 3309,
+       "critical": 2121,
+       "critical_pct": 64.1,
+       "negative": 955,
+       "positive": 2203,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2958,
+       "critical": 1822,
+       "critical_pct": 61.6,
+       "negative": 777,
+       "positive": 2051,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3759,
+       "critical": 2122,
+       "critical_pct": 56.5,
+       "negative": 1163,
+       "positive": 2506,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3438,
+       "critical": 1888,
+       "critical_pct": 54.9,
+       "negative": 943,
+       "positive": 2334,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 4338,
+       "critical": 2281,
+       "critical_pct": 52.6,
+       "negative": 1237,
+       "positive": 2875,
+       "partial_period": false
+      }
+     ],
+     "total": 37889,
+     "critical_total": 22007,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.669,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.672
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "HIV",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "hiv",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 14493,
+     "carrying": 8888,
+     "availability_pct": 61.33,
+     "items": [
+      {
+       "country": "india",
+       "count": 4164,
+       "share_pct": 28.73
+      },
+      {
+       "country": "united states",
+       "count": 1787,
+       "share_pct": 12.33
+      },
+      {
+       "country": "italy",
+       "count": 659,
+       "share_pct": 4.55
+      },
+      {
+       "country": "canada",
+       "count": 318,
+       "share_pct": 2.19
+      },
+      {
+       "country": "japan",
+       "count": 239,
+       "share_pct": 1.65
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1721
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.058,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.061
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "HIV",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "hiv",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "public health initiatives and programs",
+       "count": 538,
+       "share": 6.47,
+       "lift": 527.78,
+       "baseline_count": 1,
+       "previous_period_count": 549,
+       "delta_pct": -2.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "global health research collaborations",
+       "count": 285,
+       "share": 3.43,
+       "lift": 279.59,
+       "baseline_count": 1,
+       "previous_period_count": 295,
+       "delta_pct": -3.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infectious disease research and prevention",
+       "count": 403,
+       "share": 4.84,
+       "lift": 197.67,
+       "baseline_count": 2,
+       "previous_period_count": 348,
+       "delta_pct": 15.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "epidemiology and disease control studies",
+       "count": 714,
+       "share": 8.58,
+       "lift": 140.09,
+       "baseline_count": 5,
+       "previous_period_count": 704,
+       "delta_pct": 1.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "community health outreach programs",
+       "count": 241,
+       "share": 2.9,
+       "lift": 236.42,
+       "baseline_count": 1,
+       "previous_period_count": 252,
+       "delta_pct": -4.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 14493,
+     "carrying": 8321,
+     "carrier_share_pct": 57.41,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.811,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.813
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "HIV",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "hiv",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69efabd18a54b8f07c972a8a",
+       "headline": "Uk Man Sentenced For Infecting With Hiv: UK man jailed for life after deliberately infecting seven victims with HIV over years | World News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/world/uk/uk-man-jailed-for-life-after-deliberately-infecting-seven-victims-with-hiv-over-years/articleshow/130492723.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-24T11:54:00",
+       "lede": "a man in the uk has been given a life sentence after he was found guilty of infecting several young men and teenage boys with hiv, in what the court described as a deliberate and harmful pattern of abuse.adam hall, 43, was sentenced at a court in newcastle to life",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.75
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.61
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.59
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "adam hall"
+       ]
+      },
+      {
+       "id": "69ea7e92f4d3fc85b350ba3c",
+       "headline": "Washington rapist jailed for deliberate HIV infections",
+       "url": "https://www.namibian.com.na/washington-rapist-jailed-for-deliberate-hiv-infections/",
+       "publisher": "namibian.com.na",
+       "published_at": "2026-04-23T18:00:54",
+       "lede": "a “dangerous” rapist who deliberately infected five young men and two boys aged 15 and 17 with hiv has been handed a life sentence with a minimum jail term of 23 years. adam hall (43) wanted to inflict “pain and harm” on “vulnerable” men he targeted online or at bars",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.87
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "adam hall"
+       ]
+      },
+      {
+       "id": "69ea50b2b0517977015d7fce",
+       "headline": "‘Monster’ who deliberately spread HIV jailed for life as checks urged for possible Yorkshire-based victims",
+       "url": "https://www.yorkshirepost.co.uk/news/crime/monster-who-deliberately-spread-hiv-jailed-for-life-as-checks-urged-for-possible-yorkshire-based-victims-7297918",
+       "publisher": "yorkshirepost.co.uk",
+       "published_at": "2026-04-23T15:39:49",
+       "lede": "adam hall, 43, of washington, tyne and wear, hid his hiv status from partners, failed to take medication to keep his viral load low, then had unprotected sex with men, sometimes raping them. he was convicted of five counts of rape and seven counts of causing grievous bodily harm –",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.8
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.76
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "adam hall"
+       ]
+      },
+      {
+       "id": "6a2e98eb83fc01faba173d4e",
+       "headline": "HIV predator's youngest victim got doctor's call after getting off school bus",
+       "url": "https://www.mirror.co.uk/news/uk-news/adam-hall-victim-school-bus-37057489",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-04-23T14:50:41",
+       "lede": "the youngest victim of adam hall was told he was hiv-positive just after he climbed off the school bus. hall, 43, of washington, tyne and wear, hid his hiv status from partners, failed to take medication to keep his viral load low, then had unprotected sex with men, sometimes raping",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.9
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69eaf96ccb232e514c41bc08",
+       "headline": "Con jeringas reutilizadas y medicamentos reciclados: asÃ­ operaba el hospital que infectÃ³ de VIH a mÃ¡s de 300 niÃ±os",
+       "url": "https://heraldodemexico.com.mx/mundo/2026/4/16/con-jeringas-reutilizadas-medicamentos-reciclados-asi-operaba-el-hospital-que-infecto-de-vih-mas-de-300-ninos-797152.html",
+       "publisher": "heraldodemexico.com.mx",
+       "published_at": "2026-04-16T15:42:00",
+       "lede": "a public hospital located in punjab province, pakistan, is under review after being signaled for alleged irregularities in medical practices after an hiv outbreak in minors was reported. the case became relevant after a periodic investigation identified possible failures in hygiene protocols and use of inputs, which triggered health warnings",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.86
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8cbfe5cfa3e5ba53d9314",
+       "headline": "Syringe reuse at Pakistan hospital infects 331 children with HIV, probe reveals",
+       "url": "https://gulfnews.com/world/asia/pakistan/syringe-reuse-at-pakistan-hospital-infects-331-children-with-hiv-probe-reveals-1.500506424",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-04-14T10:36:54",
+       "lede": "dubai: an undercover investigation by bbc news has exposed serious infection control failures at a government hospital in pakistan, where staff were filmed reusing syringes on children—practices experts say may have fuelled a surge in hiv infections..the footage, recorded over 32 hours inside thq hospital taunsa in punjab, captured repeated",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.74
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.43
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [
+        "bbc news",
+        "bbc"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8a13e9baafc7356a78816",
+       "headline": "पूर्व मंगेतर ने जबरदस्ती लगाया HIV का इंजेक्शन, परेशान युवती ने दी जान",
+       "url": "https://www.patrika.com/national-news/crime-news-woman-dies-by-sucide-after-ex-fiance-injected-her-with-hiv-injection-in-hyderabad-20491691",
+       "publisher": "patrika.com",
+       "published_at": "2026-04-11T08:43:41",
+       "lede": "a recent shocking and sensitive matter has been revealed in hyderabad. a 22-year-old girl gave her life by suicide. as per the information found from the police, before the month, the girl’s former dynasty had injected her hiv-infected blood. the girl was in mental stress, after which she took this",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.92,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e64c982461615d5f4a2e6b",
+       "headline": "Hyderabad Shocker: Woman Ends Life Days After Being Forcibly Injected With HIV-Positive Blood",
+       "url": "https://www.republicworld.com/india/hyderabad-hiv-injection-case-woman-suicide-trauma",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-11T07:08:07",
+       "lede": "hyderabad: a 24-year-old woman died by suicide on friday morning, weeks after a man allegedly injected her with hiv-infected blood in hyderabad. the incident has sparked widespread outrage across the state, raising concerns regarding women&#39;s safety. the victim was found at her grandmother’s residence in the pocharam it corridor area,",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.91,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.84
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eb1ed83fc01faba2c86aa",
+       "headline": "Hyderabad HIV Injection Suicide 2026: Trauma Leads to Tragic Death - Business League",
+       "url": "https://www.businessleague.in/hyderabad-hiv-injection-suicide-2026-trauma-leads-to-tragic-death/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-11T07:06:24",
+       "lede": "now a harrowing case of biological assault has reached a devastating conclusion in the pocharam area. a 24-year-old woman, who was targeted in a calculated \"hiv attack\" last month, has died by suicide. first, the incident began on march 11 when a man named manohar forcibly injected her with his",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a316ca94fbcb83aecff1",
+       "headline": "Pensacola Police Officer Charged for Hiding He was HIV-Positive from Woman He Got Pregnant",
+       "url": "https://www.ibtimes.sg/pensacola-police-officer-charged-hiding-he-was-hiv-positive-woman-he-got-pregnant-84588",
+       "publisher": "ibtimes.sg",
+       "published_at": "2026-03-21T06:08:03",
+       "lede": "a pensacola police officer has been charged with a felony for failing to disclose his hiv status to a woman he impregnated.according to the officer's arrest report, pensacola police officer pierce cotton told the pregnant woman he \"i'm sick\" after another mother that he had a child with in a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbe5941c2c193028d596d0",
+       "headline": "शादी टूटने से भड़का शख्स, युवती को लगा दिया HIV संक्रमित खून का इंजेक्शन",
+       "url": "https://www.livehindustan.com/national/telangana-man-gave-hiv-infected-blood-to-girl-after-marriage-was-canceled-arrested-201773504865546.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-03-14T17:17:18",
+       "lede": "the police officer said, ‘when he was infected with hiv, the father of the girl canceled her daughter’s marriage. ‘he told that the accused took such a step by thinking that the girl will marry her. 24-year-old man in darabad gave hiv-infected blood to the 22-year-old woman after marriage is",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.59
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bcee8c59b1861412d95b69",
+       "headline": "Sexual predator convicted of multiple counts of rape and intentional transmission of HIV",
+       "url": "https://www.warrington-worldwide.co.uk/2026/03/06/sexual-predator-convicted-of-multiple-counts-of-rape-and-intentional-transmission-of-hiv/",
+       "publisher": "warrington-worldwide.co.uk",
+       "published_at": "2026-03-06T08:35:38",
+       "lede": "a sexual predator known to have travelled the country seeking his victims has been convicted of multiple counts of rape and grievous bodily harm through the intentional transmission of hiv.adam hall, previously of the washington area, tyne and wear, was yesterday (thursday) brought to justice thanks to the bravery of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.77
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.55
+        },
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.54
+        },
+        {
+         "code": 30,
+         "path": "/Law & Government/Legal/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "adam hall"
+       ]
+      },
+      {
+       "id": "69bc90a1edbbccf9199fdf8f",
+       "headline": "Denmark becomes first country in the European Union to eliminate mother-to-child transmission of HIV and syphilis",
+       "url": "https://www.kbc.co.ke/denmark-becomes-first-country-in-the-european-union-to-eliminate-mother-to-child-transmission-of-hiv-and-syphilis/",
+       "publisher": "kbc.co.ke",
+       "published_at": "2026-02-28T06:01:01",
+       "lede": "denmark has become the first eu country to eliminate the mother-to-child transmission of hiv and syphilis, the world health organization (who) said on feb 27.“the elimination of mother-to-child transmission of hiv and syphilis marks a major public health achievement for denmark,” who chief tedros adhanom ghebreyesus said in a statement.the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.26,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.69
+        },
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.45
+        }
+       ],
+       "country": "denmark",
+       "organizations": [],
+       "people": [
+        "tedros adhanom ghebreyesus"
+       ]
+      },
+      {
+       "id": "69e8c3d19baafc7356c46f40",
+       "headline": "WHO says Denmark is first EU country to halt mother-to-child HIV transmission",
+       "url": "https://philstarlife.com/news-and-views/883310-who-denmark-first-eu-country-halt-mother-to-child-hiv-transmission",
+       "publisher": "philstarlife.com",
+       "published_at": "2026-02-28T00:00:00",
+       "lede": "denmark has become the first eu country to eliminate the mother-to-child transmission of hiv and syphilis, the world health organization said. \"the elimination of mother-to-child transmission of hiv and syphilis marks a major public health achievement for denmark,\" who chief tedros adhanom ghebreyesus said in a statement. the international health",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.22,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "denmark",
+       "organizations": [],
+       "people": [
+        "tedros adhanom ghebreyesus"
+       ]
+      },
+      {
+       "id": "698d4f158d29a990b6d404d7",
+       "headline": "Woman Stages Road Accident To Inject HIV Virus Into Ex-Lover's Wife In Andhra - What Happened Next",
+       "url": "https://www.timesnownews.com/crime/woman-stages-road-accident-to-inject-hiv-virus-into-ex-lovers-wife-in-andhra-pradesh-what-happened-next-article-153503650",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-01-25T09:50:29",
+       "lede": "a shocking incident emerged from andhra pradesh, where a woman allegedly staged a road accident to inject her ex-lover's wife with an hiv injection. the incident, which happened in kurnool, led to the arrest of four persons, police said on sunday. the accused worked as a nurse at a private",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 569,
+         "path": "/Health/Health Conditions/AIDS & HIV",
+         "score": 0.76
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.56
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "698e25529ca02490ec086da8",
+       "headline": "8-year-old boy brings mother’s body for autopsy after HIV-related death in UP - The Tribune",
+       "url": "https://www.tribuneindia.com/news/india/8-year-old-boy-brings-mothers-body-for-autopsy-after-hiv-related-death-in-up/",
+       "publisher": "tribuneindia.com",
+       "published_at": "2026-01-16T11:09:31",
+       "lede": "an eight-year-old boy found himself alone at a hospital as he arranged the postmortem examination of his mother, who died of hiv-related infection, until local police stepped in to help him with legal formalities and the last rites.advertisementthe boy accompanied his mother’s body to the morgue for the autopsy, telling",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.66
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.46
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 1092,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMS0wNyAxODoxOTozNSIsImkiOiI2OTkxYzVhYjdhMTEzNTMwMTdhMjg1MTEiLCJwIjo5fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.203,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.205
+    }
+   }
+  }
+ ]
+}

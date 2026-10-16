@@ -1,0 +1,832 @@
+{
+ "slug": "stroke-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:11Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "stroke",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "stroke",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10761,
+     "tone": {
+      "carrying": 10743,
+      "availability_pct": 99.83,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2980,
+        "share_pct": 27.74
+       },
+       {
+        "group": "neutral",
+        "count": 331,
+        "share_pct": 3.08
+       },
+       {
+        "group": "positive",
+        "count": 7432,
+        "share_pct": 69.18
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10758,
+      "count": 8166,
+      "share_pct": 75.91
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.716,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.725
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "stroke",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "stroke",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2477,
+       "critical": 1794,
+       "critical_pct": 72.4,
+       "negative": 744,
+       "positive": 1640,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1853,
+       "critical": 1444,
+       "critical_pct": 77.9,
+       "negative": 479,
+       "positive": 1280,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2255,
+       "critical": 1630,
+       "critical_pct": 72.3,
+       "negative": 690,
+       "positive": 1502,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2641,
+       "critical": 1809,
+       "critical_pct": 68.5,
+       "negative": 866,
+       "positive": 1695,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2315,
+       "critical": 1781,
+       "critical_pct": 76.9,
+       "negative": 638,
+       "positive": 1601,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2382,
+       "critical": 1927,
+       "critical_pct": 80.9,
+       "negative": 598,
+       "positive": 1700,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2258,
+       "critical": 1895,
+       "critical_pct": 83.9,
+       "negative": 597,
+       "positive": 1571,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2335,
+       "critical": 1889,
+       "critical_pct": 80.9,
+       "negative": 506,
+       "positive": 1731,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3104,
+       "critical": 2694,
+       "critical_pct": 86.8,
+       "negative": 595,
+       "positive": 2385,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2304,
+       "critical": 1746,
+       "critical_pct": 75.8,
+       "negative": 654,
+       "positive": 1579,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2303,
+       "critical": 1691,
+       "critical_pct": 73.4,
+       "negative": 680,
+       "positive": 1551,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3050,
+       "critical": 2035,
+       "critical_pct": 66.7,
+       "negative": 1051,
+       "positive": 1917,
+       "partial_period": false
+      }
+     ],
+     "total": 29277,
+     "critical_total": 22335,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.131,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.133
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "stroke",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "stroke",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10761,
+     "carrying": 2628,
+     "availability_pct": 24.42,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1424,
+       "share_pct": 13.23
+      },
+      {
+       "country": "united kingdom",
+       "count": 255,
+       "share_pct": 2.37
+      },
+      {
+       "country": "india",
+       "count": 248,
+       "share_pct": 2.3
+      },
+      {
+       "country": "australia",
+       "count": 85,
+       "share_pct": 0.79
+      },
+      {
+       "country": "china",
+       "count": 78,
+       "share_pct": 0.72
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 538
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.976,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.012
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "stroke",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "stroke",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "clinical trial methodologies",
+       "count": 399,
+       "share": 6.42,
+       "lift": 524.14,
+       "baseline_count": 1,
+       "previous_period_count": 316,
+       "delta_pct": 26.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "medical imaging technique handbooks",
+       "count": 339,
+       "share": 5.46,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 309,
+       "delta_pct": 9.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "public health initiatives and programs",
+       "count": 331,
+       "share": 5.33,
+       "lift": 434.82,
+       "baseline_count": 1,
+       "previous_period_count": 281,
+       "delta_pct": 17.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "medical journal publications and research papers",
+       "count": 420,
+       "share": 6.76,
+       "lift": 275.87,
+       "baseline_count": 2,
+       "previous_period_count": 352,
+       "delta_pct": 19.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "epidemiology and disease control studies",
+       "count": 763,
+       "share": 12.28,
+       "lift": 200.46,
+       "baseline_count": 5,
+       "previous_period_count": 698,
+       "delta_pct": 9.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 10761,
+     "carrying": 6214,
+     "carrier_share_pct": 57.75,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.329,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.36
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "stroke",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "stroke",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f22889122c4392e0cec5c5",
+       "headline": "Combination therapy pill could reduce stroke risk by 40%  - Drug Discovery World (DDW)",
+       "url": "https://www.ddw-online.com/combination-therapy-pill-could-reduce-stroke-risk-by-40-41445-202604/",
+       "publisher": "ddw-online.com",
+       "published_at": "2026-04-29T10:37:14",
+       "lede": "a single pill low-dose combination therapy could reduce the risk of recurrent stroke by almost 40%, trial results show. gmrx2, developed by biopharmaceutical company george medicines, reduced recurrent stroke risk in patients with previous intracerebral haemorrhage (ich) by 39% compared to placebo, according to results published in the new england",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.85
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.69
+        },
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "george medicines"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0ea97e9341f3dc2ae3254f",
+       "headline": "‘Back in six weeks’: Kamikamica sets footy return date after terrifying stroke",
+       "url": "https://www.watoday.com.au/sport/nrl/back-in-six-weeks-kamikamica-sets-footy-return-date-after-terrifying-stroke-20260429-p5zs6g.html",
+       "publisher": "watoday.com.au",
+       "published_at": "2026-04-29T09:20:00",
+       "lede": "advertisement sportnrlnrl 2026 ‘back in six weeks’: kamikamica sets footy return date after terrifying stroke adrian proszenko april 29, 2026 — 5:20pm save you have reached your maximum number of saved items. remove items from your saved list to add more. share a a a melbourne prop tui kamikamica has",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.28,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 3,
+         "path": "/News/Sports News",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c71ca5706a322e0efd68",
+       "headline": "India faces growing stroke threat",
+       "url": "https://www.thehansindia.com/life-style/health/india-faces-growing-stroke-threat-1070270",
+       "publisher": "thehansindia.com",
+       "published_at": "2026-04-29T05:15:59",
+       "lede": "dr. srinivas deshmukh, senior consultant neurologist, warns that stroke is becoming a major health issue in india, affecting thousands every year. stroke occurs when blood supply to the brain is blocked or a blood vessel ruptures, causing rapid brain cell damage and potentially long-term disability or death. increasingly, younger adults",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.87
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.75
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.61
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eeeea8e67a2fcb3f6c63f",
+       "headline": "Fifth Grader Saves Mom After She Has a Stroke During a 10K: 'I've Never Been Called a Hero'",
+       "url": "https://www.yahoo.com/lifestyle/articles/fifth-grader-saves-mom-she-183048103.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T18:30:48",
+       "lede": "need to know leilani cienega, 10, stayed calm and called for help after her mom collapsed during a school 10k event paramedics praised cienega's quick thinking, which doctors said prevented her mom's stroke from becoming more severe cienega was honored with a surprise school assembly attended by her family, paramedics,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.25,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e16e836d28f995cb46a9",
+       "headline": "1 in 7 Stroke Patients in India Are Under 44, Says ICMR: Why It’s Rising",
+       "url": "https://www.timesnownews.com/health/1-in-7-stroke-patients-in-india-are-under-44-says-icmr-why-its-rising-article-154188522",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-28T10:51:38",
+       "lede": "stroke is no longer a disease confined to old age. a new analysis by the indian council of medical research (icmr) reveals a troubling trend: 1 in 7 stroke patients in india are between 18 and 44 years old. the findings, based on over 34,000 cases, signal a major shift",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.68
+        },
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.58
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.57
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "indian council of medical research"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e3ff45272de32e8c07cd",
+       "headline": "1 In 7 stroke patients in India are between ages 18-44: Here’s what happens if you reach hospital after 24 hours of symptom onset",
+       "url": "https://indianexpress.com/article/lifestyle/health/1-in-7-stroke-patients-in-india-are-between-ages-18-44-heres-what-happens-if-you-reach-hospital-after-24-hours-of-symptom-onset-10659926/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-28T09:30:12",
+       "lede": "a recent study by the indian council of medical research has flagged a worrying trend: 1 in 7 stroke patients in india are aged 18–44, and nearly 2 in 5 reach hospital after 24 hours of symptom onset—delays that can severely impact recovery. the analysis covered 34,792 stroke cases registered",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.95
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.78
+        },
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.47
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "d59d68ef9c313ee30f433d06",
+       "headline": "Systematic review and meta-analysis of stroke blood biomarker data highlights need for more translational research methods.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42062243/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "systematic review and meta-analysis of stroke blood biomarker data highlights need for more translational research methods.stroke is one of the most frequently mistriaged medical emergencies. as a result, significant efforts have been made to identify blood biomarkers that could aid in stroke recognition. large numbers of studies have reported candidate",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.86
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.62
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.59
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0412db9c4aac093544eb73",
+       "headline": "RHOBH star nearly suffers a STROKE after diagnosis with 'silent killer' disease",
+       "url": "https://www.the-sun.com/tv/16281389/rhobh-crystal-kung-minkoff-stroke-blood-pressure-diagnosis-killer/",
+       "publisher": "the-sun.com",
+       "published_at": "2026-04-27T19:28:40",
+       "lede": "real housewives of beverly hills alum crystal kung minkoff has opened up about recent health issues that nearly led to a stroke. the reality star revealed she made an emergency visit to see her doctor after her blood pressure was alarmingly high. sign up for the entertainment newsletter thank you!",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 41,
+         "path": "/Arts & Entertainment/TV & Video/TV Shows & Programs",
+         "score": 0.63
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ec0a49341f3dc2af3e32f",
+       "headline": "How Can I Lower My Stroke Risk? | Members Only",
+       "url": "http://www.aarp.org/health/healthy-living/ask-dr-adam-how-to-reduce-stroke-risk/",
+       "publisher": "aarp.org",
+       "published_at": "2026-04-27T16:49:00",
+       "lede": "my mother had a serious stroke. is there any way i can reduce my risk? when a parent has a stroke, it understandably sharpens the awareness of our own risk. family history matters, but it’s only one part of the picture. there is a great deal you can do to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.82
+        },
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.58
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed90583fc01faba5271c0",
+       "headline": "“RHOBH”'s Crystal Kung Minkoff Says She Nearly Had a Stroke in Recent Health Scare: ‘The Silent Killer’",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/rhobh-crystal-kung-minkoff-says-154356082.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-27T15:43:56",
+       "lede": "need to know crystal kung minkoff revealed she nearly suffered a stroke due to dangerously high blood pressure her doctor diagnosed her with an enlarged heart and emphasized the need for regular cardio and weightlifting minkoff previously experienced a health scare during an episode of rhobh where her blood pressure",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.82
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a87a45cefb83fe811bd7c",
+       "headline": "Stroke: The Silent Global Emergency We Can No Longer Ignore",
+       "url": "https://odishabytes.com/brain-stroke-the-silent-global-emergency-we-can-no-longer-ignore/",
+       "publisher": "odishabytes.com",
+       "published_at": "2026-04-27T06:01:18",
+       "lede": "with stroke emerging as a rapidly escalating global health emergency, immediate and coordinated action is our most powerful tool to save lives and protect communities. the global health landscape is facing an unprecedented crisis. noncommunicable diseases (ncds) claim an estimated 43.8 million lives each year, with stroke alone accounting for",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 1269,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNSAwNzozMDowOCIsImkiOiI2YTJhYWFkMzVjZWZiODNmZTgyOGFhNjAiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.006,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.011
+    }
+   }
+  }
+ ]
+}

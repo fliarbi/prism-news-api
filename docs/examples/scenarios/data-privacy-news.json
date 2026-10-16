@@ -1,0 +1,968 @@
+{
+ "slug": "data-privacy-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:49Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "data privacy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "data privacy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 30580,
+     "tone": {
+      "carrying": 30575,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 6175,
+        "share_pct": 20.2
+       },
+       {
+        "group": "neutral",
+        "count": 11536,
+        "share_pct": 37.73
+       },
+       {
+        "group": "positive",
+        "count": 12864,
+        "share_pct": 42.07
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 30576,
+      "count": 9450,
+      "share_pct": 30.91
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.608,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.633
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "data privacy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "data privacy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 5029,
+       "critical": 1868,
+       "critical_pct": 37.1,
+       "negative": 1294,
+       "positive": 1391,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 4318,
+       "critical": 1530,
+       "critical_pct": 35.4,
+       "negative": 1028,
+       "positive": 1203,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 5232,
+       "critical": 1803,
+       "critical_pct": 34.5,
+       "negative": 1496,
+       "positive": 1337,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3950,
+       "critical": 1561,
+       "critical_pct": 39.5,
+       "negative": 1097,
+       "positive": 1347,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3907,
+       "critical": 1541,
+       "critical_pct": 39.4,
+       "negative": 985,
+       "positive": 1487,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 4141,
+       "critical": 1655,
+       "critical_pct": 40.0,
+       "negative": 888,
+       "positive": 1934,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 3839,
+       "critical": 1614,
+       "critical_pct": 42.0,
+       "negative": 902,
+       "positive": 1519,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 4107,
+       "critical": 1589,
+       "critical_pct": 38.7,
+       "negative": 970,
+       "positive": 1499,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 5303,
+       "critical": 1889,
+       "critical_pct": 35.6,
+       "negative": 1120,
+       "positive": 2306,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 6920,
+       "critical": 2910,
+       "critical_pct": 42.1,
+       "negative": 2097,
+       "positive": 2433,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 7032,
+       "critical": 1978,
+       "critical_pct": 28.1,
+       "negative": 1285,
+       "positive": 2937,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 11325,
+       "critical": 2673,
+       "critical_pct": 23.6,
+       "negative": 1673,
+       "positive": 5188,
+       "partial_period": false
+      }
+     ],
+     "total": 65103,
+     "critical_total": 22611,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.036,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.039
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "data privacy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "data privacy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 30580,
+     "carrying": 7988,
+     "availability_pct": 26.12,
+     "items": [
+      {
+       "country": "united states",
+       "count": 5112,
+       "share_pct": 16.72
+      },
+      {
+       "country": "india",
+       "count": 643,
+       "share_pct": 2.1
+      },
+      {
+       "country": "united kingdom",
+       "count": 630,
+       "share_pct": 2.06
+      },
+      {
+       "country": "colombia",
+       "count": 173,
+       "share_pct": 0.57
+      },
+      {
+       "country": "china",
+       "count": 129,
+       "share_pct": 0.42
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1301
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.44,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.449
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "data privacy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "data privacy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "/people & society/social issues & advocacy/digital divide & technology access",
+       "count": 1098,
+       "share": 13.73,
+       "lift": 373.69,
+       "baseline_count": 3,
+       "previous_period_count": 880,
+       "delta_pct": 24.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "/people & society/social issues & advocacy/ethical technology & data privacy advocacy",
+       "count": 1502,
+       "share": 18.79,
+       "lift": 255.59,
+       "baseline_count": 6,
+       "previous_period_count": 1249,
+       "delta_pct": 20.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "data loss prevention (dlp) in networks",
+       "count": 289,
+       "share": 3.61,
+       "lift": 147.54,
+       "baseline_count": 2,
+       "previous_period_count": 238,
+       "delta_pct": 21.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "regulatory compliance frameworks",
+       "count": 146,
+       "share": 1.83,
+       "lift": 149.07,
+       "baseline_count": 1,
+       "previous_period_count": 53,
+       "delta_pct": 175.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "social media platform updates",
+       "count": 104,
+       "share": 1.3,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 84,
+       "delta_pct": 23.8,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 30580,
+     "carrying": 7995,
+     "carrier_share_pct": 26.14,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.939,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.942
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "data privacy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "data privacy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a0e9e9cc0b414d24a064f84",
+       "headline": "NTT DATA’s new research 2026 Global AI Report: A Playbook for Private and Sovereign AI, revealing that enterprise AI is outgrowing the architecture and infrastructure beneath it as data privacy and sovereignty requirements tighten. Data cannot always move with the speed and fluidity many AI systems ",
+       "url": "https://www.itnewsafrica.com/2026/05/ntt-data-research-reveals-growing-privacy-sovereignty-barriers/",
+       "publisher": "itnewsafrica.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "ntt data’s new research 2026 global ai report: a playbook for private and sovereign ai, revealing that enterprise ai is outgrowing the architecture and infrastructure beneath it as data privacy and sovereignty requirements tighten. data cannot always move with the speed and fluidity many ai systems expect, making jurisdiction a",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.69
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87fb143843dd771ce15b9",
+       "headline": "Foreign AI Tools Raise Data Privacy Fears: Governments Worldwide Tighten Scrutiny",
+       "url": "https://www.indiaherald.com/Technology/Read/994889382/Foreign-AI-Tools-Raise-Data-Privacy-Fears-Governments-Worldwide-Tighten-Scrutiny",
+       "publisher": "indiaherald.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "the rapid rise of foreign ai tools like chatgpt, gemini, deepseek, and other large language models has triggered growing data privacy and national security concerns across governments worldwide. while ai adoption is accelerating, regulators are increasingly worried about where data goes, how it is stored, and who can access it.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.87
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d7cc7b2d589e844d267b",
+       "headline": "Congress tries again on national preemptive data privacy law",
+       "url": "https://www.route-fifty.com/digital-government/2026/04/congress-tries-again-national-preemptive-data-privacy-law/413164/",
+       "publisher": "route-fifty.com",
+       "published_at": "2026-04-29T17:00:00",
+       "lede": "house republicans rolled out yet another proposal for national data privacy legislation that once again would preempt existing state laws, drawing a torrent of criticism. leaders on the house energy and commerce and financial services committees unveiled two pieces of legislation last week: the securing and establishing consumer uniform rights",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.6
+        },
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.44
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.44
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f215b8da8ae7be8d21ca78",
+       "headline": "Encrypted Notes App Market Hits New High | Major Giants Microsoft, Google, Apple, Evernote, Zoho",
+       "url": "https://www.openpr.com/news/4494589/encrypted-notes-app-market-hits-new-high-major-giants",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-29T09:29:10",
+       "lede": "encrypted notes app market hits new high | major giants microsoft, google, apple, evernote, zoho encrypted notes app market https://www.htfmarketintelligence.com/sample-report/global-encrypted-notes-app-market https://www.htfmarketintelligence.com/buy-now?format=1&report=29053-global-encrypted-notes-app-market 📊 encrypted notes app market outlook 2033the global encrypted notes app market is entering a strong growth phase as individuals, professionals, and enterprises prioritize data privacy, secure communication, and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 213,
+         "path": "/Science/Mathematics/Other",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ada62963d76f4af1202e3",
+       "headline": "Mathematical Certainty in Security: The Rise of Fully Homomorphic Encryption - Embedded Computing Design",
+       "url": "https://embedded-computing.com/technology/security/software-security/mathematical-certainty-in-security-the-rise-of-fully-homomorphic-encryption",
+       "publisher": "embedded-computing.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "mathematical certainty in security: the rise of fully homomorphic encryption by david archer chief technology officer niobium blog interest in fully homomorphic encryption (fhe) is growing as companies seek more robust data privacy solutions in an increasingly regulated world. fhe allows data to be processed without ever being decrypted, a",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 518,
+         "path": "/Science/Computer Science/Other",
+         "score": 0.93
+        },
+        {
+         "code": 213,
+         "path": "/Science/Mathematics/Other",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c864a5706a322e0fc48a",
+       "headline": "Supreme Court Weighs Arguments Over How Police Request Location Data to Solve Crimes",
+       "url": "https://www.cnet.com/news/privacy/supreme-court-hears-arguments-on-google-geofencing-warrants-case/",
+       "publisher": "cnet.com",
+       "published_at": "2026-04-28T21:20:32",
+       "lede": "the way police seek location information and data from tech companies to investigate crimes is under a microscope at the highest us court, in a closely watched case with broad implications for data privacy and law enforcement. after about 2 hours of oral arguments in a case involving geofence warrants",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 30,
+         "path": "/Law & Government/Legal/Other",
+         "score": 0.57
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.45
+        },
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cc36a5706a322e1166d7",
+       "headline": "Scholly founder Christopher Gray sues Sallie Mae, alleging wrongful termination and sale of student data including minors",
+       "url": "https://thenextweb.com/news/scholly-founder-sues-sallie-mae-student-data",
+       "publisher": "thenextweb.com",
+       "published_at": "2026-04-28T20:49:57",
+       "lede": "tl;drchristopher gray, founder of shark tank-backed scholarship app scholly (5m users), is suing acquirer sallie mae in delaware superior court and has filed an sec whistleblower complaint. he alleges sallie mae laid off his co-founders, fired him for raising data privacy concerns, and is selling users’ personal information, including minors’",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.25,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.66
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "sallie mae",
+        "scholly"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c662399b489398de020c",
+       "headline": "Angst as FG Drops $32.8m Fine on Meta for Data Breach",
+       "url": "https://www.nigeriacommunicationsweek.com.ng/angst-as-fg-drops-32-8m-fine-on-meta-for-data-breach/",
+       "publisher": "nigeriacommunicationsweek.com.ng",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "kindly share this post decision to cancel the $32.8 million fine previously imposed on meta for alleged data privacy violations was taken as far back as october 30, 2025. the development has raised concerns over the country’s approach to data protection enforcement and regulatory transparency. this followed a confidential, out-of-court",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.68
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e555d325610894209e29",
+       "headline": "Nigeria Fined Meta $32 Million For Privacy Violations. Behind Closed Doors, The Government Quietly Reached A Settlement",
+       "url": "https://techlabari.com/nigeria-fined-meta-32-million-for-privacy-violations-behind-closed-doors-the-government-quietly-reached-a-settlement/",
+       "publisher": "techlabari.com",
+       "published_at": "2026-04-26T17:25:00",
+       "lede": "in february 2025, nigeria made headlines across the continent. the nigeria data protection commission (ndpc) had slapped meta — parent company of facebook and instagram — with a $32.8 million fine following a 17-month investigation into data privacy violations affecting over 60 million nigerian users. eight months later, that fine",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa9a58a54b8f07c958036",
+       "headline": "CT Senate passes bill protecting consumer data, biological and genetic data",
+       "url": "https://www.courant.com/2026/04/24/ct-senate-passes-bill-protecting-consumer-data-biological-and-genetic-data/",
+       "publisher": "courant.com",
+       "published_at": "2026-04-24T09:21:17",
+       "lede": "for the second time this week, the state senate spent hours discussing complicated technology legislation, with lawmakers once again advancing a bill over strong objections that regulating rapidly changing technology could negatively affect local businesses. in a 31-4 vote, the senate passed s.b. 4, wide-ranging data privacy legislation that establishes",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.71
+        },
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c8d5399b489398df70b8",
+       "headline": "Federal judge whose son was killed in home attack cautions against weakening state data privacy laws",
+       "url": "https://www.abajournal.com/news/article/federal-judge-whose-son-was-killed-in-home-attack-cautions-against-weakening-state-data-privacy-laws",
+       "publisher": "abajournal.com",
+       "published_at": "2026-04-24T00:00:00",
+       "lede": "home daily news federal judge whose son was killed in home… privacy law federal judge whose son was killed in home attack cautions against weakening state data privacy laws u.s. district judge esther salas of the district of new jersey delivers remarks at a news conference in newark, new jersey,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "esther salas"
+       ]
+      },
+      {
+       "id": "69ea218575c44d9ce8823be4",
+       "headline": "Mythos is a threat and opportunity for the fintech ecosystem, says DFS secretary M. Nagaraju | Today News",
+       "url": "https://www.livemint.com/news/mythos-is-a-threat-and-opportunity-for-the-fintech-ecosystem-says-dfs-secretary-m-nagaraju-11776943189385.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-23T12:52:28",
+       "lede": "emerging ai systems such as claude mythos present both risks and opportunities for the financial sector, said m. nagaraju, the secretary of the department of financial services (dfs), on thursday, underlining the need for responsible adoption of technology alongside stronger safeguards for cybersecurity and data privacy.“mythos is a threat and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aba9dc37f6c5e66ed3c60",
+       "headline": "House Republicans Target State Data Privacy Patchwork with New Bills",
+       "url": "https://www.accountsrecovery.net/2026/04/23/house-republicans-target-state-data-privacy-patchwork-with-new-bills/",
+       "publisher": "accountsrecovery.net",
+       "published_at": "2026-04-23T11:54:41",
+       "lede": "<!-- wp:paragraph --> <p>if you’ve been waiting for washington to finally step in and clean up the data privacy patchwork, this might be the moment to watch. house republicans this week unveiled a pair of bills aimed at doing something the industry has talked about for years: creating a single,",
+       "sentiment": {
+        "label": "none",
+        "score": 0.36,
+        "group": "neutral"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e3fcd325610894208743",
+       "headline": "Data Privacy Bill to Replace State Laws Floated by House GOP (1)",
+       "url": "https://news.bloomberglaw.com/privacy-and-data-security/house-republicans-float-data-privacy-bill-overriding-state-laws",
+       "publisher": "news.bloomberglaw.com",
+       "published_at": "2026-04-22T14:31:23",
+       "lede": "house republicans on wednesday released highly anticipated legislation that would establish a national data privacy standard and override state laws, aiming to fulfill longtime demands from industry and advocacy officials for a single framework. the new bill, if passed by congress, would create consumer privacy rights at the national level",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.62
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        },
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1f9c963d76f4af42650f",
+       "headline": "Impac Mortgage Holdings, Inc. Data Breach: Edelson Lechtzin LLP Launches Investigation Into Exposure of Personal Information",
+       "url": "https://www.prnewswire.com/news-releases/impac-mortgage-holdings-inc-data-breach-edelson-lechtzin-llp-launches-investigation-into-exposure-of-personal-information-302749618.html",
+       "publisher": "prnewswire.com",
+       "published_at": "2026-04-22T03:40:00",
+       "lede": "national class action firm offering free case evaluations to individuals impacted by the impac mortgage holdings, inc. cybersecurity incident newport beach, calif., april 21, 2026 /prnewswire/ -- edelson lechtzin llp, a national class action law firm, is investigating data privacy claims arising from the impac mortgage holdings, inc. data breach.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e993b9d47fc0283212f87f",
+       "headline": "Study Finds Widespread Non-Compliance With California Privacy Law by Websites | PYMNTS.com",
+       "url": "https://www.pymnts.com/cpi-posts/study-finds-widespread-non-compliance-with-california-privacy-law-by-websites/",
+       "publisher": "pymnts.com",
+       "published_at": "2026-04-21T18:34:17",
+       "lede": "a new audit of website behavior conducted by privacy research firm webxray is raising fresh questions about the effectiveness of california’s landmark data privacy regime, suggesting that noncompliance with key consumer protections may be widespread across the internet. by completing this form, you agree to receive marketing communications from pymnts",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e995b4bdd09a23d08d44a8",
+       "headline": "Union takes legal action against Build a Rocket Boy over alleged data privacy violations",
+       "url": "https://www.gamesindustry.biz/union-takes-legal-action-against-build-a-rocket-boy-over-alleged-data-privacy-violations",
+       "publisher": "gamesindustry.biz",
+       "published_at": "2026-04-21T13:44:58",
+       "lede": "the independent workers' union of great britain (iwgb) has initiated legal action against mindseye developer build a rocket boy over alleged data privacy violations. earlier this year, gamesindustry.biz reported that staff discovered barb management had installed teramind surveillance software on their pcs without informing them. the iwgb alleged that this",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 927,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMSAxMjo1NzowOCIsImkiOiI2OWU4ODY4YjVjZmEzZTViYTUwNzczNzEiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.312,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.315
+    }
+   }
+  }
+ ]
+}

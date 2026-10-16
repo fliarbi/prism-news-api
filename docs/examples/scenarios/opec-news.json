@@ -1,0 +1,884 @@
+{
+ "slug": "opec-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:15:13Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "OPEC",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "opec",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8528,
+     "tone": {
+      "carrying": 8525,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 6654,
+        "share_pct": 78.05
+       },
+       {
+        "group": "neutral",
+        "count": 141,
+        "share_pct": 1.65
+       },
+       {
+        "group": "positive",
+        "count": 1730,
+        "share_pct": 20.29
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 8527,
+      "count": 6968,
+      "share_pct": 81.72
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.292,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 4.294
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "OPEC",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "opec",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1266,
+       "critical": 916,
+       "critical_pct": 72.4,
+       "negative": 794,
+       "positive": 445,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1134,
+       "critical": 891,
+       "critical_pct": 78.6,
+       "negative": 822,
+       "positive": 295,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1226,
+       "critical": 825,
+       "critical_pct": 67.3,
+       "negative": 747,
+       "positive": 464,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1375,
+       "critical": 958,
+       "critical_pct": 69.7,
+       "negative": 853,
+       "positive": 505,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1074,
+       "critical": 851,
+       "critical_pct": 79.2,
+       "negative": 609,
+       "positive": 449,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1114,
+       "critical": 895,
+       "critical_pct": 80.3,
+       "negative": 688,
+       "positive": 413,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1162,
+       "critical": 938,
+       "critical_pct": 80.7,
+       "negative": 732,
+       "positive": 421,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1030,
+       "critical": 839,
+       "critical_pct": 81.5,
+       "negative": 688,
+       "positive": 331,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1681,
+       "critical": 1461,
+       "critical_pct": 86.9,
+       "negative": 1293,
+       "positive": 363,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1295,
+       "critical": 1018,
+       "critical_pct": 78.6,
+       "negative": 807,
+       "positive": 458,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1972,
+       "critical": 1729,
+       "critical_pct": 87.7,
+       "negative": 1651,
+       "positive": 298,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3580,
+       "critical": 2760,
+       "critical_pct": 77.1,
+       "negative": 2903,
+       "positive": 611,
+       "partial_period": false
+      }
+     ],
+     "total": 17909,
+     "critical_total": 14081,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.973,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.976
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "OPEC",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "opec",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8528,
+     "carrying": 5538,
+     "availability_pct": 64.94,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2318,
+       "share_pct": 27.18
+      },
+      {
+       "country": "united arab emirates",
+       "count": 880,
+       "share_pct": 10.32
+      },
+      {
+       "country": "india",
+       "count": 400,
+       "share_pct": 4.69
+      },
+      {
+       "country": "china",
+       "count": 268,
+       "share_pct": 3.14
+      },
+      {
+       "country": "iran",
+       "count": 243,
+       "share_pct": 2.85
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1429
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.861,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.863
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "OPEC",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "opec",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economic impact of oil exports",
+       "count": 1610,
+       "share": 25.57,
+       "lift": 521.86,
+       "baseline_count": 4,
+       "previous_period_count": 422,
+       "delta_pct": 281.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "geopolitical factors in oil supply",
+       "count": 2501,
+       "share": 39.72,
+       "lift": 294.79,
+       "baseline_count": 11,
+       "previous_period_count": 892,
+       "delta_pct": 180.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil and gas market trends",
+       "count": 2763,
+       "share": 43.89,
+       "lift": 132.68,
+       "baseline_count": 27,
+       "previous_period_count": 1247,
+       "delta_pct": 121.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil tanker transportation logistics",
+       "count": 793,
+       "share": 12.6,
+       "lift": 146.88,
+       "baseline_count": 7,
+       "previous_period_count": 193,
+       "delta_pct": 310.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "international certifications for oil & gas",
+       "count": 214,
+       "share": 3.4,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 43,
+       "delta_pct": 397.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 8528,
+     "carrying": 6296,
+     "carrier_share_pct": 73.83,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.315,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.317
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "OPEC",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "opec",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e2abeac1991f786ce9d80a",
+       "headline": "OPEC nations agree to adjust oil production: What to know",
+       "url": "https://www.newsweek.com/opec-nations-agree-to-adjust-oil-production-what-to-know-11785259",
+       "publisher": "newsweek.com",
+       "published_at": "2026-04-05T16:59:47",
+       "lede": "with gas prices climbing across much of the world and the iran war continuing to disrupt global energy flows, the eight countries who are a part of the organization of the petroleum exporting countries (opec) met on sunday to implement a new round of voluntary oil‑production adjustments, reaffirming their commitment",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.62
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f88023bbf1d31455961304",
+       "headline": "UAE Departure Foreshadows New Era for Opec",
+       "url": "https://www.energyintel.com/0000019d-da5d-df5e-addf-dbdf54240000",
+       "publisher": "energyintel.com",
+       "published_at": "2026-04-30T20:59:25",
+       "lede": "the stunning announcement that the united arab emirates will cease its membership in opec and opec-plus starting may 1 signals the start of what could be a challenging new phase for the producer group. while the loss of opec's third-largest producer will reverberate, the group, formed in 1960, has endured",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.91
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87ff843843dd771ce3e89",
+       "headline": "UAE exit signals OPECs declining grip on oil markets - IndiaVision India News & Information",
+       "url": "https://www.indiavision.com/international/uae-exit-signals-opecs-declining-grip-on-oil-markets/602177/",
+       "publisher": "indiavision.com",
+       "published_at": "2026-04-30T19:05:58",
+       "lede": "uae exit signals opecs declining grip on oil markets **shifting sands: uae departure from opec signals evolving oil market dynamics** the united arab emirates’ (uae) decision to withdraw from the organization of the petroleum exporting countries (opec) is poised to significantly reshape the global oil market’s landscape, potentially diminishing the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.95
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d5aca088760d34bfceff",
+       "headline": "Gulf within: On the UAE leaving OPEC",
+       "url": "https://www.thehindu.com/opinion/op-ed/gulf-within-on-the-uae-leaving-opec/article70925606.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-04-30T18:50:00",
+       "lede": "the uae has withdrawn from the organization of the petroleum exporting countries (opec), a cartel that it joined in 1967, and opec+. it was opec’s fourth-largest producer (3.12 million barrels per day) and its third-largest exporter (2.88 mbd) in 2025, behind saudi arabia and iraq. the emiratis clearly sought to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.96
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0361d0c2856acf8e86c5f1",
+       "headline": "UAE's exit from Opec signals shift towards competitive oil order",
+       "url": "https://www.newindianexpress.com/editorial/2026/Apr/30/uaes-exit-from-opec-signals-shift-towards-competitive-oil-order",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-30T18:30:00",
+       "lede": "the uae’s exit from opec after nearly six decades is not just a cartel rupture. it is a clear signal that the model of coordinated oil market control is weakening under pressure from geopolitics, volatility and energy transition. for a group built on cohesion, largely anchored by saudi arabia and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f881088937ef12fc076f00",
+       "headline": "UAE Opec Exit Signals Wider Gulf Divide",
+       "url": "https://www.energyintel.com/0000019d-ddcf-dd89-abff-dddff2740000",
+       "publisher": "energyintel.com",
+       "published_at": "2026-04-30T17:46:29",
+       "lede": "the united arab emirates' decision has been anticipated for at least five years, as abu dhabi grew frustrated seeing its barrels constrained by opec quotas that left over 1 million barrels per day of its actual capacity off-limits. the timing, however, suggests the move may be driven by more than",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.74
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [
+        "abu dhabi"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f87f718937ef12fc0675cb",
+       "headline": "UAE to exit OPEC+: What it means for global oil prices and markets",
+       "url": "https://qazinform.com/news/uae-exit-from-opec-shakes-oil-market-outlook-e31e4c",
+       "publisher": "qazinform.com",
+       "published_at": "2026-04-30T17:13:00",
+       "lede": "according to al jazeera, the uae said it would leave opec and opec+. the decision is set to take effect on may 1. the uae, a member of opec since 1967, cited national interests and its long-term energy strategy as key reasons for the move. with a production capacity of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03eebc9c4aac093536686c",
+       "headline": "Trump, Fox News praise UAE decision to leave Opec",
+       "url": "http://www.middleeasteye.net/news/trump-fox-news-praise-uae-decision-to-leave-opec-oil-cartel",
+       "publisher": "middleeasteye.net",
+       "published_at": "2026-04-30T16:57:23",
+       "lede": "us president donald trump on wednesday indicated that he approved of the decision by the united arab emirates to leave the organization of petroleum exporting countries (opec) amid the fallout from the us-israeli war on iran. \"i think it's great. i know him very well. mohamed. very smart, and he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87fda43843dd771ce2de8",
+       "headline": "Trump, Fox News praise UAE decision to leave Opec",
+       "url": "https://www.middleeasteye.net/news/trump-fox-news-praise-uae-decision-to-leave-opec-oil-cartel",
+       "publisher": "middleeasteye.net",
+       "published_at": "2026-04-30T16:57:23",
+       "lede": "us president donald trump on wednesday indicated that he approved of the decision by the united arab emirates to leave the organization of petroleum exporting countries (opec) amid the fallout from the us-israeli war on iran. \"i think it's great. i know him very well. mohamed. very smart, and he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.67
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a041b719c4aac093548fbbe",
+       "headline": "Las consecuencias petroleras que generarÃ­a la salida de Emiratos Ãrabes de la OPEP",
+       "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/30/las-consecuencias-petroleras-que-generaria-la-salida-de-emiratos-arabes-de-la-opep.shtml",
+       "publisher": "biobiochile.cl",
+       "published_at": "2026-04-30T16:52:07",
+       "lede": "<p>united arab emirates (uae) <a href=\"https://www.biobiochile.cl/news/economic/present-economic/2026/04/28/emirate-arabes-anunce-su-out-of-the-opep-by-the-crisis-in-the-stratum-of-ormuz.shtml\" rel=\"noopener\" target=\"_blank\">abandoned</a> opec in order to increase its oil production independently. </p>saudi arabia lost a key partner and the break creates uncertainty about the future of the organisation.</p> <h2>why did the eua decided to abandon opec now?</h2> <p>the <strong>opec</strong>\" world cartel of oil-producing countries,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87fc8bbf1d3145595daa3",
+       "headline": "Indonesia: Ties Unruffled with UAE Following OPEC Exit",
+       "url": "https://en.tempo.co/read/2101261/indonesia-ties-unruffled-with-uae-following-opec-exit",
+       "publisher": "en.tempo.co",
+       "published_at": "2026-04-30T15:06:19",
+       "lede": "tempo.co, jakarta - the bilateral ties between indonesia and the united arab emirates (uae) are not affected by abu dhabi's exit from the organization of the petroleum exporting countries (opec), the indonesian ministry of foreign affairs assured.\"the uae's policy does not affect the bilateral relations that have been established, as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.64
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.56
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d552a088760d34bf922d",
+       "headline": "Opec's days of manipulating the market are over | The National",
+       "url": "https://www.thenationalnews.com/opinion/comment/2026/04/30/uae-opec-saudi-arabia-us-russia-oil-iran-war-strait-of-hormuz/",
+       "publisher": "thenationalnews.com",
+       "published_at": "2026-04-30T15:00:00",
+       "lede": "as suhail al mazrouei, the uae minister of energy and infrastructure, made his rounds in the media on tuesday to <a href=\"https://www.thenationalnews.com/business/energy/2026/04/28/opec-exit-purely-a-policy-move-uae-energy-minister-says/\" target=\"_blank\" rel=\"noreferrer\" title=\"https://www.thenationalnews.com/business/energy/2026/04/28/opec-exit-purely-a-policy-move-uae-energy-minister-says/\">announce the country’s departure from opec</a> – an unprecedented 16 interviews in one day – you may have noticed that the oil price barely moved. that’s",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d486713680636eec230a",
+       "headline": "Opec's days of manipulating the market are over | The National",
+       "url": "https://thenational.ae/opinion/comment/2026/04/30/uae-opec-saudi-arabia-us-russia-oil-iran-war-strait-of-hormuz/",
+       "publisher": "thenational.ae",
+       "published_at": "2026-04-30T15:00:00",
+       "lede": "as suhail al mazrouei, the uae minister of energy and infrastructure, made his rounds in the media on tuesday to <a href=\"https://www.thenationalnews.com/business/energy/2026/04/28/opec-exit-purely-a-policy-move-uae-energy-minister-says/\" target=\"_blank\" rel=\"noreferrer\" title=\"https://www.thenationalnews.com/business/energy/2026/04/28/opec-exit-purely-a-policy-move-uae-energy-minister-says/\">announce the country’s departure from opec</a> – an unprecedented 16 interviews in one day – you may have noticed that the oil price barely moved. that’s",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a7e68937ef12fc0aec87",
+       "headline": "Opec's days of manipulating the market are over | The National",
+       "url": "https://www.thenational.ae/opinion/comment/2026/04/30/uae-opec-saudi-arabia-us-russia-oil-iran-war-strait-of-hormuz/",
+       "publisher": "thenational.ae",
+       "published_at": "2026-04-30T15:00:00",
+       "lede": "as suhail al mazrouei, the uae minister of energy and infrastructure, made his rounds in the media on tuesday to <a href=\"https://www.thenationalnews.com/business/energy/2026/04/28/opec-exit-purely-a-policy-move-uae-energy-minister-says/\" target=\"_blank\" rel=\"noreferrer\" title=\"https://www.thenationalnews.com/business/energy/2026/04/28/opec-exit-purely-a-policy-move-uae-energy-minister-says/\">announce the country’s departure from opec</a> – an unprecedented 16 interviews in one day – you may have noticed that the oil price barely moved. that’s",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9c4d5cefb83fe81efca2",
+       "headline": "United Arab Emirates To Quit OPEC After 59 Years",
+       "url": "https://techmgzn.com/united-arab-emirates-to-quit-opec-after-59-years/",
+       "publisher": "techmgzn.com",
+       "published_at": "2026-04-30T13:32:01",
+       "lede": "the uae will leave opec and opec+ on may 1, 2026, ending a 59-year membership and changing its role in global energy markets. the decision was announced in a government statement carried by state news agency wam after what abu dhabi described as a broad review of its production policy",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1690,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAxMzoyMTo1NiIsImkiOiI2OWY4ODA2YTg5MzdlZjEyZmMwNzBjODQiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.704,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.706
+    }
+   }
+  }
+ ]
+}

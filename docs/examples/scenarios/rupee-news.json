@@ -1,0 +1,874 @@
+{
+ "slug": "rupee-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:27Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "rupee",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rupee",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6820,
+     "tone": {
+      "carrying": 6812,
+      "availability_pct": 99.88,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4759,
+        "share_pct": 69.86
+       },
+       {
+        "group": "neutral",
+        "count": 63,
+        "share_pct": 0.92
+       },
+       {
+        "group": "positive",
+        "count": 1990,
+        "share_pct": 29.21
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6815,
+      "count": 4261,
+      "share_pct": 62.52
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.788,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.793
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "rupee",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rupee",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 594,
+       "critical": 353,
+       "critical_pct": 59.4,
+       "negative": 304,
+       "positive": 285,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 563,
+       "critical": 286,
+       "critical_pct": 50.8,
+       "negative": 335,
+       "positive": 224,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 744,
+       "critical": 372,
+       "critical_pct": 50.0,
+       "negative": 465,
+       "positive": 270,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1251,
+       "critical": 688,
+       "critical_pct": 55.0,
+       "negative": 758,
+       "positive": 464,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1170,
+       "critical": 729,
+       "critical_pct": 62.3,
+       "negative": 726,
+       "positive": 425,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 711,
+       "critical": 396,
+       "critical_pct": 55.7,
+       "negative": 350,
+       "positive": 353,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 761,
+       "critical": 395,
+       "critical_pct": 51.9,
+       "negative": 479,
+       "positive": 277,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1804,
+       "critical": 1171,
+       "critical_pct": 64.9,
+       "negative": 1227,
+       "positive": 539,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1076,
+       "critical": 718,
+       "critical_pct": 66.7,
+       "negative": 727,
+       "positive": 338,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 961,
+       "critical": 543,
+       "critical_pct": 56.5,
+       "negative": 411,
+       "positive": 536,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1945,
+       "critical": 1445,
+       "critical_pct": 74.3,
+       "negative": 1492,
+       "positive": 435,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2838,
+       "critical": 1555,
+       "critical_pct": 54.8,
+       "negative": 2129,
+       "positive": 681,
+       "partial_period": false
+      }
+     ],
+     "total": 14418,
+     "critical_total": 8651,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.744,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.747
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "rupee",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rupee",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6820,
+     "carrying": 3998,
+     "availability_pct": 58.62,
+     "items": [
+      {
+       "country": "india",
+       "count": 2074,
+       "share_pct": 30.41
+      },
+      {
+       "country": "united states",
+       "count": 1131,
+       "share_pct": 16.58
+      },
+      {
+       "country": "iran",
+       "count": 305,
+       "share_pct": 4.47
+      },
+      {
+       "country": "china",
+       "count": 64,
+       "share_pct": 0.94
+      },
+      {
+       "country": "singapore",
+       "count": 50,
+       "share_pct": 0.73
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 374
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.396,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.399
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "rupee",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rupee",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "emerging markets economic updates",
+       "count": 1756,
+       "share": 33.68,
+       "lift": 2749.18,
+       "baseline_count": 1,
+       "previous_period_count": 1494,
+       "delta_pct": 17.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 2206,
+       "share": 42.31,
+       "lift": 1726.85,
+       "baseline_count": 2,
+       "previous_period_count": 1811,
+       "delta_pct": 21.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "asian financial market developments",
+       "count": 1328,
+       "share": 25.47,
+       "lift": 2079.11,
+       "baseline_count": 1,
+       "previous_period_count": 1127,
+       "delta_pct": 17.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forex spot market trading",
+       "count": 659,
+       "share": 12.64,
+       "lift": 1031.73,
+       "baseline_count": 1,
+       "previous_period_count": 436,
+       "delta_pct": 51.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forex market volatility analysis",
+       "count": 491,
+       "share": 9.42,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 291,
+       "delta_pct": 68.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6820,
+     "carrying": 5214,
+     "carrier_share_pct": 76.45,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.531,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.535
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "rupee",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "rupee",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a60a9c37f6c5e66b134ce",
+       "headline": "Rupee Sinks to Record Low 95.23: Oil Price Spike and Fed Stance Crush INR - Business League",
+       "url": "https://www.businessleague.in/rupee-sinks-to-record-low-95-23-oil-price-spike-and-fed-stance-crush-inr/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-30T12:30:53",
+       "lede": "now the indian rupee crashed to a record low thursday. the currency breached the 95.23 mark against the us dollar. therefore, importers face a massive surge in costs. meanwhile, brent crude prices climbed above $125 per barrel. a hawkish us federal reserve also added significant pressure. thus, the indian economy",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.67
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a91bbbf1d314559a487d",
+       "headline": "Rupee hits record low: Currency slips to 95.34 against US dollar as crude oil prices tops $120 per barrel - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/business/india-business/rupee-hits-record-low-of-95-20-against-us-dollar-slides-32-paise-in-early-trade/articleshow/130623920.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-30T05:17:00",
+       "lede": "new delhi: rupee slid to a fresh lifetime intraday low of 95.34 against the us dollar on thursday, weighed down by soaring global crude oil prices and selling pressure in domestic equities amid the west asia crisis.at the interbank foreign exchange market, the rupee opened weaker at 95.01 against the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a662bbf1d314559a21f4",
+       "headline": "Rupee closes at new low of 94.85 as West Asia peace talks stall - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/business/india-business/rupee-closes-at-new-low-of-94-85-as-west-asia-peace-talks-stall/articleshow/130620522.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-30T00:31:00",
+       "lede": "mumbai: the rupee fell to a record closing low of 94.85 per dollar on wednesday, declining by 31 paise from its previous close of 94.54, as rising oil prices, stalled geopolitical developments, and continued foreign outflows weighed on the currency.pressure on the rupee came amid a broader weakening across asian",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.64
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a04009562bbf617b0401b45",
+       "headline": "Rupee closes at new low of 94.85 as West Asia peace talks stall - Times of India",
+       "url": "https://timesofindia.indiatimes.com/articleshowprint/130620522.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "mumbai: the rupee fell to a record closing low of 94.85 per dollar on wednesday, declining by 31 paise from its previous close of 94.54, as rising oil prices, stalled geopolitical developments, and continued foreign outflows weighed on the currency.pressure on the rupee came amid a broader weakening across asian",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.64
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2152e187a3fe46c577b7c",
+       "headline": "Rupee falls 14 paise to close near all-time low level at 94.82 against US dollar",
+       "url": "https://www.deccanherald.com/business/markets/rupee-settles-at-all-time-closing-low-of-9486-against-us-dollar-3985079",
+       "publisher": "deccanherald.com",
+       "published_at": "2026-04-29T10:19:17",
+       "lede": "&lt;p&gt;mumbai: the rupee depreciated 14 paise to close near its all-time low at 94.82 (provisional) against the us dollar on wednesday, pressured by rising brent crude oil prices, hovering around usd 115 per barrel, and continued foreign capital outflows.&lt;/p&gt;&lt;p&gt;forex traders said the elevated crude oil price is likely to sharply",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.49
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a9b0bbf1d314559a4da8",
+       "headline": "Why rupee is falling in April 2026, more volatility ahead? - BusinessToday",
+       "url": "https://www.businesstoday.in/markets/market-commentary/story/why-rupee-is-falling-in-april-2026-more-volatility-ahead-528027-2026-04-29",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-29T09:34:09",
+       "lede": "rupee in a downtrend: the indian rupee is on a weak wicket in april due to fii outflows and persistently high crude oil prices. an increase in fii outflows leads to a fall in rupee since the mass selling raises demand for dollars to repatriate funds. a rise in oil",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "fii"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a4dc75cefb83fe8eb6d35",
+       "headline": "New Low for Rupee: Why the Indian Currency is Falling Against USD as Global Oil Crisis Deepens",
+       "url": "https://www.republicworld.com/business/indian-rupee-hits-all-time-low-vs-usd-april-2026-oil-prices",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-28T06:11:50",
+       "lede": "the indian rupee hit a historic low on tuesday, sending a fresh wave of anxiety through the domestic markets. the currency depreciated 24 paise to touch 94.39 against the u.s. dollar in early trade. this slump comes as india, the world&#39;s third-largest oil consumer, grapples with the fallout of the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e26b45272de32e8beec5",
+       "headline": "Rupee falls for fifth straight session as oil trades over $100 – Iran conflict weighs on currency",
+       "url": "https://www.financialexpress.com/market/rupee-falls-for-fifth-straight-session-as-oil-trades-over-100-iran-conflict-weighs-on-currency-4219372/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-27T06:29:29",
+       "lede": "the indian rupee has been under constant pressure due to surging oil prices. the currency opened at the 94.23 mark against the us dollar. while the opening was nearly unchanged from its friday close, the domestic currency fell to the 94.27 mark against the greenback in early trade. why is",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.58
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8637963d76f4afd82e87",
+       "headline": "Dollar demand, rising oil prices drag Rupee lower to 94.27 - Connected to India News I Singapore l UAE l UK l USA l NRI",
+       "url": "https://www.connectedtoindia.com/dollar-demand-rising-oil-prices-drag-rupee-lower-to-94-27/",
+       "publisher": "connectedtoindia.com",
+       "published_at": "2026-04-27T04:26:15",
+       "lede": "the rupee depreciated 11 paise to 94.27 against us dollar in early trade on monday, april 27, driven by persistent dollar demand and a broader shift toward safe-haven assets. the indian rupee depreciated further on monday, april 27, 2026. photo courtesy: ai generated forex traders said the indian rupee has",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.89
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efabac8a54b8f07c970ac9",
+       "headline": "Rupee vs dollar: India faces currency dilemma amid weak manufacturing",
+       "url": "https://www.deccanherald.com/opinion/the-rupees-dilemma-pride-vs-practicality-3981138",
+       "publisher": "deccanherald.com",
+       "published_at": "2026-04-25T20:21:18",
+       "lede": "&lt;p&gt;in india, the rupee has always been more than a currency. its exchange rate is treated as a symbol of national pride – a “strong rupee” equated with stability, a “falling rupee” with weakness. importers and stock market operators cheer a strong rupee because it keeps costs predictable. policymakers, too,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.43
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec4c48e67a2fcb3cc0e9d",
+       "headline": "INDIA RUPEE-Rupee tracks Asian peers lower but state-run banks' dollar sales cushion",
+       "url": "https://bfsi.economictimes.indiatimes.com/news/industry/india-rupee-rupee-tracks-asian-peers-lower-but-state-run-banks-dollar-sales-cushion/130485421",
+       "publisher": "bfsi.economictimes.indiatimes.com",
+       "published_at": "2026-04-24T12:34:07",
+       "lede": "(updates post market open)by jaspreet kalramumbai, - the indian &#8203;rupee slipped on friday, &#8203;tracking a decline in regional currencies, as uncertainty over &#8203;u.s.-iran peace talks kept oil prices perched above $100 per barrel, also sparking weakness in local stocks and bonds.the rupee declined 0.2% to 94.2850 &zwnj;as of &#8288;11:20 a.m.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a692d5cefb83fe8fef0b2",
+       "headline": "USD/INR: 5-day Gains Beckon on Escalating Geopolitical Tensions",
+       "url": "https://www.investingcube.com/forex/usd-inr-5-day-gains-beckon-on-escalating-geopolitical-tensions/",
+       "publisher": "investingcube.com",
+       "published_at": "2026-04-24T11:08:37",
+       "lede": "current setup and live chart the usd/inr remains one of the currencies most sensitive to the current oil shock, given the greenback's role as a safe-haven currency and net exporter of crude oil, and the rupee's position as the currency of the 3rd-largest oil importer. the usd/inr forecasts continue to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.68
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.49
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.47
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ec1e09836bff4eb9757f97",
+       "headline": "Rupee ‘fundamentally undervalued’, says chief economic adviser Nageswaran",
+       "url": "https://theprint.in/india/rupee-fundamentally-undervalued-says-chief-economic-adviser-nageswaran/2913152/",
+       "publisher": "theprint.in",
+       "published_at": "2026-04-24T09:25:26",
+       "lede": "the rupee has been under pressure this week, with brent above $100 a barrel. the currency has given up much of the gains fueled by the central bank’s recent measures to curb speculative arbitrage bets that had pushed the rupee to record lows last month, as tensions in the middle",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.58
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.56
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.56
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 706,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNCAwOToyNToyNiIsImkiOiI2OWVjMWUwOTgzNmJmZjRlYjk3NTdmOTciLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.088,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.091
+    }
+   }
+  }
+ ]
+}

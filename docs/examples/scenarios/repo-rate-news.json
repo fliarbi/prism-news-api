@@ -1,0 +1,809 @@
+{
+ "slug": "repo-rate-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:21Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "repo rate",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "repo rate",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 981,
+     "tone": {
+      "carrying": 981,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 251,
+        "share_pct": 25.59
+       },
+       {
+        "group": "neutral",
+        "count": 169,
+        "share_pct": 17.23
+       },
+       {
+        "group": "positive",
+        "count": 561,
+        "share_pct": 57.19
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 981,
+      "count": 735,
+      "share_pct": 74.92
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.979,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.982
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "repo rate",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "repo rate",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 115,
+       "critical": 61,
+       "critical_pct": 53.0,
+       "negative": 35,
+       "positive": 72,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 774,
+       "critical": 515,
+       "critical_pct": 66.5,
+       "negative": 279,
+       "positive": 437,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 205,
+       "critical": 121,
+       "critical_pct": 59.0,
+       "negative": 76,
+       "positive": 104,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 437,
+       "critical": 299,
+       "critical_pct": 68.4,
+       "negative": 143,
+       "positive": 237,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 131,
+       "critical": 86,
+       "critical_pct": 65.6,
+       "negative": 42,
+       "positive": 52,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 242,
+       "critical": 169,
+       "critical_pct": 69.8,
+       "negative": 50,
+       "positive": 160,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 100,
+       "critical": 77,
+       "critical_pct": 77.0,
+       "negative": 49,
+       "positive": 31,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 495,
+       "critical": 378,
+       "critical_pct": 76.4,
+       "negative": 171,
+       "positive": 276,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 110,
+       "critical": 86,
+       "critical_pct": 78.2,
+       "negative": 43,
+       "positive": 60,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 377,
+       "critical": 269,
+       "critical_pct": 71.4,
+       "negative": 63,
+       "positive": 236,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 75,
+       "critical": 53,
+       "critical_pct": 70.7,
+       "negative": 31,
+       "positive": 35,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 419,
+       "critical": 327,
+       "critical_pct": 78.0,
+       "negative": 114,
+       "positive": 230,
+       "partial_period": false
+      }
+     ],
+     "total": 3480,
+     "critical_total": 2441,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-06-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.445,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.448
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "repo rate",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "repo rate",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 981,
+     "carrying": 459,
+     "availability_pct": 46.79,
+     "items": [
+      {
+       "country": "india",
+       "count": 287,
+       "share_pct": 29.26
+      },
+      {
+       "country": "united states",
+       "count": 95,
+       "share_pct": 9.68
+      },
+      {
+       "country": "iran",
+       "count": 28,
+       "share_pct": 2.85
+      },
+      {
+       "country": "south africa",
+       "count": 22,
+       "share_pct": 2.24
+      },
+      {
+       "country": "china",
+       "count": 6,
+       "share_pct": 0.61
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 21
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.853,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.857
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "repo rate",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "repo rate",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economy news: monetary policy changes",
+       "count": 312,
+       "share": 47.63,
+       "lift": 777.67,
+       "baseline_count": 5,
+       "previous_period_count": 355,
+       "delta_pct": -12.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: central bank interest rate decisions",
+       "count": 311,
+       "share": 47.48,
+       "lift": 775.17,
+       "baseline_count": 5,
+       "previous_period_count": 361,
+       "delta_pct": -13.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 115,
+       "share": 17.56,
+       "lift": 716.6,
+       "baseline_count": 2,
+       "previous_period_count": 96,
+       "delta_pct": 19.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: inflation rate analysis",
+       "count": 274,
+       "share": 41.83,
+       "lift": 379.42,
+       "baseline_count": 9,
+       "previous_period_count": 305,
+       "delta_pct": -10.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "emerging markets economic updates",
+       "count": 56,
+       "share": 8.55,
+       "lift": 697.91,
+       "baseline_count": 1,
+       "previous_period_count": 57,
+       "delta_pct": -1.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 981,
+     "carrying": 655,
+     "carrier_share_pct": 66.77,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.621,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.623
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "repo rate",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "repo rate",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69ea1fe673206aa299ebfff3",
+       "headline": "RBI Maintains Repo Rate at 5.25% Amid Global Economic Uncertainty",
+       "url": "https://currentaffairs.adda247.com/rbi-maintains-repo-rate-at-5-25-amid-global-economic-uncertainty/",
+       "publisher": "currentaffairs.adda247.com",
+       "published_at": "2026-04-23T10:20:44",
+       "lede": "the reserve bank of india (rbi) has decided to keep the repo rate unchanged at the 5.25% following the latest monetary policy committee (mpc) meeting. the decision signals the cautious approach amid rising the global uncertainties and particularly due to tensions in the west asia region. all the six members",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.6
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "mpc"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ebce9e540a46fb55bb7d9",
+       "headline": "RBI holds the line: Stability signal amid global storm, growth engine intact",
+       "url": "https://navjeevanexpress.com/rbi-holds-the-line-stability-signal-amid-global-storm-growth-engine-intact/",
+       "publisher": "navjeevanexpress.com",
+       "published_at": "2026-04-09T07:12:40",
+       "lede": "<ul> <li><strong>policy pause, strategic play: repo rate steady at 5.25%</strong></li> <li><strong>growth resilient at 7.6%, but global risks cast long shadow</strong></li> <li><strong>inflation eases, yet oil &amp; geopolitics remain wildcards</strong></li> <li><strong>real estate &amp; office markets draw confidence from stability</strong></li> <li><strong>forex buffer strong at $697 billion, fdi momentum improves</strong></li> <li><strong>tier 2 &amp; 3",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d1dd90d9a716b4c7f99e",
+       "headline": "RBI holds repo rate, sees GDP growth slowing to 6.9% in FY27",
+       "url": "https://indianexpress.com/article/business/economy/rbi-holds-repo-rate-sees-gdp-growth-slowing-to-6-9-in-fy27-10626603/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-08T20:10:34",
+       "lede": "the reserve bank of india’s (rbi) monetary policy committee (mpc) wednesday left the main policy instrument, the repo rate, unchanged at 5.25%. the move underscores a cautious and calculated approach as economic risks resulting from the west asia conflict have led to heightened uncertainty for both the inflation and growth",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.68
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.5
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "mpc"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2c57adc480588dca54cdc",
+       "headline": "RBI Keeps Repo Rate Unchanged, Experts Back Cautious Stance",
+       "url": "https://www.newkerala.com/news/a/economists-industry-leaders-support-rbis-cautious-stance-as-923.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-08T15:57:14",
+       "lede": "the reserve bank of india has maintained the repo rate at 5.25% in its first policy review of fy27, adopting a cautious stance due to global uncertainties. economists widely expected the decision, noting that rising energy prices and the west asia conflict pose significant upside risks to inflation. industry leaders",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.64
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c80cc1991f786cf021be",
+       "headline": "RBI Pauses Rates: Analysts See Balanced Inflation, Growth Stance",
+       "url": "https://www.newkerala.com/news/a/rbis-rate-pause-balances-inflation-control-growth-support-804.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-08T14:32:19",
+       "lede": "the reserve bank of india has decided to maintain the repo rate at 5.25%, a move analysts describe as a balanced approach to controlling inflation while supporting economic growth. experts expected the pause due to risks from el nino, crude oil prices, and global uncertainty. the central bank has projected",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f3bed5e7fc42ee080883",
+       "headline": "Banks, NBFCs back RBI status quo; expect steady rates to support credit growth",
+       "url": "https://www.fortuneindia.com/markets/banks-nbfcs-back-rbi-status-quo-expect-steady-rates-to-support-credit-growth/132041",
+       "publisher": "fortuneindia.com",
+       "published_at": "2026-04-08T13:14:01",
+       "lede": "the reserve bank of india’s decision to keep the repo rate unchanged at 5.25% while maintaining a neutral stance has drawn a broadly positive response from banks, nbfcs, and fund houses, which view the move as a prudent balancing act amid global uncertainty. at a time when geopolitical tensions in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e94afe540a46fb53957f0",
+       "headline": "RBI Maintains Repo Rate at 5.25% Amid Global Tensions",
+       "url": "https://theunn.com/rbi-maintains-repo-rate-at-525-amid-global-tensions/",
+       "publisher": "theunn.com",
+       "published_at": "2026-04-08T13:11:23",
+       "lede": "the reserve bank of india has decided to keep the repo rate unchanged at 5.25%, while projecting india’s gdp growth at 6.9% amid global geopolitical tensions. on april 8, 2026, the reserve bank of india (rbi) announced its decision to maintain the repo rate at 5.25% during the monetary policy",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f4659d0e7fe4699fa4ed",
+       "headline": "RBI policy seen as dovish, but experts warn hikes may return if oil and rupee risks worsen - CNBC TV18",
+       "url": "https://www.cnbctv18.com/economy/rbi-monetary-policy-dovish-external-pressures-rate-hike-forecasts-economists-ws-l-19883134.htm",
+       "publisher": "cnbctv18.com",
+       "published_at": "2026-04-08T12:12:00",
+       "lede": "the reserve bank of india’s decision to keep the repo rate unchanged at 5.25% has been viewed as dovish by market participants, but experts caution that external pressures could prompt rate hikes later in the year.the monetary policy committee left the policy stance neutral and kept the sdf and msf",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "sdf"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2c6b29b322e6b3ea567cd",
+       "headline": "RBI Projects FY27 GDP Growth At 6.9%, Holds Rates Amid Global Risks",
+       "url": "https://www.freepressjournal.in/business/rbi-projects-fy27-gdp-growth-at-69-holds-rates-amid-global-risks",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-04-08T11:41:13",
+       "lede": "rbi kept repo rate unchanged at 5.25 percent and retained a neutral stance. | mumbai: the reserve bank of india (rbi) has taken a cautious but balanced approach in its latest monetary policy committee (mpc) meeting held on april 8, 2026, as it tries to support growth while keeping risks",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.79
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "mpc"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a95b35cefb83fe81ae428",
+       "headline": "RBI sounds alarm: 5 big risks for India as Iran war threatens economy",
+       "url": "https://m.economictimes.indiatimes.com/news/economy/indicators/rbi-sounds-alarm-5-big-risks-for-india-as-iran-war-threatens-economy/videoshow/130111527.cms",
+       "publisher": "m.economictimes.indiatimes.com",
+       "published_at": "2026-04-08T11:10:00",
+       "lede": "the reserve bank of india has kept the repo rate unchanged at 5.25%, maintaining a neutral stance. but the bigger takeaway from the mpc were the 5 key risks flagged by rbi governor sanjay malhotra. the central bank warned that the ongoing middle east war could impact india’s inflation, growth,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3c957549ba8a8662fc59f",
+       "headline": "AU Small Finance Bank Comments on RBI Monetary Policy - Online Media Cafe",
+       "url": "https://onlinemediacafe.com/business/au-small-finance-bank-comments-on-rbi-monetary-policy/",
+       "publisher": "onlinemediacafe.com",
+       "published_at": "2026-04-08T10:46:25",
+       "lede": "share post share by sanjay agarwal, founder, md & ceo, au small finance bank on rbi mpc announcement today, for your perusal. “by choosing to hold the repo rate steady at 5.25 per cent and monetary policy stance unchanged in today’s policy, the monetary policy committee essentially signals that while",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.6
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "au small finance bank"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 308,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOCAxMDo0NjoyMiIsImkiOiI2YTJhY2NmNDVjZWZiODNmZTg0MTBiMjgiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.337,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.34
+    }
+   }
+  }
+ ]
+}

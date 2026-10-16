@@ -1,0 +1,984 @@
+{
+ "slug": "dow-jones-news-today",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:56:24Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "dow jones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "dow jones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10177,
+     "tone": {
+      "carrying": 10175,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5717,
+        "share_pct": 56.19
+       },
+       {
+        "group": "neutral",
+        "count": 353,
+        "share_pct": 3.47
+       },
+       {
+        "group": "positive",
+        "count": 4105,
+        "share_pct": 40.34
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10176,
+      "count": 4927,
+      "share_pct": 48.42
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.797,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.801
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "dow jones",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "dow jones",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1573,
+       "critical": 833,
+       "critical_pct": 53.0,
+       "negative": 746,
+       "positive": 771,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1277,
+       "critical": 637,
+       "critical_pct": 49.9,
+       "negative": 677,
+       "positive": 539,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1982,
+       "critical": 991,
+       "critical_pct": 50.0,
+       "negative": 1148,
+       "positive": 767,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1903,
+       "critical": 1082,
+       "critical_pct": 56.9,
+       "negative": 900,
+       "positive": 943,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2194,
+       "critical": 1002,
+       "critical_pct": 45.7,
+       "negative": 930,
+       "positive": 1164,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1810,
+       "critical": 1117,
+       "critical_pct": 61.7,
+       "negative": 832,
+       "positive": 956,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1595,
+       "critical": 909,
+       "critical_pct": 57.0,
+       "negative": 779,
+       "positive": 786,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1520,
+       "critical": 659,
+       "critical_pct": 43.4,
+       "negative": 677,
+       "positive": 795,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1420,
+       "critical": 661,
+       "critical_pct": 46.5,
+       "negative": 664,
+       "positive": 712,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2683,
+       "critical": 1197,
+       "critical_pct": 44.6,
+       "negative": 1335,
+       "positive": 1286,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2537,
+       "critical": 1443,
+       "critical_pct": 56.9,
+       "negative": 1718,
+       "positive": 764,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3537,
+       "critical": 1626,
+       "critical_pct": 46.0,
+       "negative": 2000,
+       "positive": 1343,
+       "partial_period": false
+      }
+     ],
+     "total": 24031,
+     "critical_total": 12157,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.532,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.538
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "dow jones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "dow jones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10177,
+     "carrying": 3723,
+     "availability_pct": 36.58,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2554,
+       "share_pct": 25.1
+      },
+      {
+       "country": "iran",
+       "count": 323,
+       "share_pct": 3.17
+      },
+      {
+       "country": "china",
+       "count": 198,
+       "share_pct": 1.95
+      },
+      {
+       "country": "united kingdom",
+       "count": 134,
+       "share_pct": 1.32
+      },
+      {
+       "country": "india",
+       "count": 94,
+       "share_pct": 0.92
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 420
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.13,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.134
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "dow jones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "dow jones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 1473,
+       "share": 19.52,
+       "lift": 796.83,
+       "baseline_count": 2,
+       "previous_period_count": 505,
+       "delta_pct": 191.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market volatility indicators",
+       "count": 1110,
+       "share": 14.71,
+       "lift": 600.46,
+       "baseline_count": 2,
+       "previous_period_count": 644,
+       "delta_pct": 72.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market volatility and risk assessment",
+       "count": 1394,
+       "share": 18.48,
+       "lift": 502.73,
+       "baseline_count": 3,
+       "previous_period_count": 481,
+       "delta_pct": 189.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "trade wars and geopolitical impacts",
+       "count": 2920,
+       "share": 38.7,
+       "lift": 287.2,
+       "baseline_count": 11,
+       "previous_period_count": 1972,
+       "delta_pct": 48.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stock market index composition",
+       "count": 934,
+       "share": 12.38,
+       "lift": 505.25,
+       "baseline_count": 2,
+       "previous_period_count": 543,
+       "delta_pct": 72.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 10177,
+     "carrying": 7545,
+     "carrier_share_pct": 74.14,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.107,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.111
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "dow jones",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "dow jones",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a03fcae220687a966a5eba0",
+       "headline": "S&P 500 Edges Higher Amid Mixed Mega-Cap Earnings; Dow Leads Market Indexes Overall | The Motley Fool",
+       "url": "https://www.fool.com/investing/2026/04/30/sp-500-edges-higher-amid-mixed-mega-cap-earnings-d/",
+       "publisher": "fool.com",
+       "published_at": "2026-04-30T18:20:31",
+       "lede": "the three major u.s. stock indexes moved higher by midday thursday, though the gains were uneven. the themes of the day were earnings reports, oil prices, and artificial intelligence (ai). as usual, right? the dow jones industrial average ^dji 0.63% ) caterpillar cat 3.37% ) the s&p 500 ^gspc 0.38%",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2edb32e540a46fb57aa04c",
+       "headline": "Wall Street recule, la Fed temporise, le pétrole flambe !",
+       "url": "https://boursier.com/indices/actualites/news/wall-street-recule-la-fed-temporise-le-petrole-flambe-984479.html",
+       "publisher": "boursier.com",
+       "published_at": "2026-04-29T20:30:00",
+       "lede": "(bourseier.com) — the us position was uncertain after a session to correct technological values. dow jones lost 0.57% to 48.861 pts, while s&p 500 lost 0.04% to 7.135 pts. nasdaq won 0.04% at 24,673 pts. the situation in iran is becoming more and more tense day after day, which has",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f228b8122c4392e0cedfd8",
+       "headline": "Dow Jones estancado; S&P 500 y Nasdaq buscan rebotar antes de la Fed y los ‘magníficos’",
+       "url": "https://www.estrategiasdeinversion.com/actualidad/noticias/bolsa-eeuu/dow-jones-busca-un-timido-rebote-a-la-espera-de-n-912665",
+       "publisher": "estrategiasdeinversion.com",
+       "published_at": "2026-04-29T12:40:00",
+       "lede": "futures linked to the #dowjones index are kept flat at 49.135.60 points, while s&amp;p500s are progressing by 0.05%, at 7.142.00 points. the nasdaq 100's futures rise 0.31% to 27,113.40 points. &nbsp; wall street comes from a day down yesterday tuesday, in which the dow jones finishes closing with a slight",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.78
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cbd8399b489398e0aabe",
+       "headline": "U.S. Stock Futures Edge Higher Ahead of Big Tech Earnings and Fed Decision - EconoTimes",
+       "url": "https://econotimes.com/US-Stock-Futures-Edge-Higher-Ahead-of-Big-Tech-Earnings-and-Fed-Decision-1740296",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-29T03:44:21",
+       "lede": "u.s. stock index futures moved slightly higher on tuesday evening after a weak wall street session, as investors turned their attention to upcoming big tech earnings and the federal reserve’s policy decision. s&p 500 futures rose 0.2% to 7,185.75, nasdaq 100 futures gained 0.4% to 27,278.0, and dow jones futures",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.88
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0ec6e45272de32e8c7d43",
+       "headline": "US stock markets today (April 28, 2026): Dow holds firm, Nasdaq weakens as AI doubts and oil spike shake tech - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/business/international-business/us-stock-markets-today-april-28-2026-dow-holds-firm-nasdaq-weakens-as-ai-doubts-and-oil-spike-shake-tech/articleshow/130583735.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-28T14:54:00",
+       "lede": "us markets opened on a mixed note tuesday, with the dow jones holding modest gains while the nasdaq retreated as pressure on technology shares offset strength in defensive names and select consumer stocks.by 9:59 am et, the dow jones industrial average was up 57.59 points, or 0.12 per cent, at",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.82
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.7
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0ea6745272de32e8c7007",
+       "headline": "El Dow Jones cerró en 49.167,79 puntos, con una caída de 62,92 puntos (-0,13%)",
+       "url": "https://www.negocios.com/articulo/dow-jones/dow-jones-cerro-49167-79-puntos-caida-6292-puntos-013/20260428065809484950.html",
+       "publisher": "negocios.com",
+       "published_at": "2026-04-28T04:58:09",
+       "lede": "the us stock exchange ends with a contained gesture: m&iacute;nimas rises in the s&amp;amp;p 500 (+0.12%), nasdaq 100 pr&acute;cactically flat and a dow jones that starts with -0.13% before stabilizing. the detonator was not a macro data, but geopol&iacute;tica. marco rubio elev&oacute; the tone when he said that washington &ldquo;does",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e9da69341f3dc2ada92fa",
+       "headline": "us market outlook bullish bias Intact",
+       "url": "https://www.thehindubusinessline.com/portfolio/technical-analysis/us-market-outlook-bullish-bias-intact/article70904361.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-25T16:53:31",
+       "lede": "the dow jones industrial average snapped its three-week rally. the index was down 0.44 per cent. the s&p 500 and the nasdaq composite index were up for the fourth consecutive week. the s&p 500 was up marginally by 0.55 per cent. the nasdaq composite index on the other hand retained",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa9aba84b609af2b2211a",
+       "headline": "Dow Jones se atasca pendiente de Ormuz; Intel tira hacia arriba de S&P 500 y Nasdaq",
+       "url": "https://www.estrategiasdeinversion.com/actualidad/noticias/bolsa-eeuu/dow-jones-cerrara-la-semana-a-la-baja-intel-tira-n-911201",
+       "publisher": "estrategiasdeinversion.com",
+       "published_at": "2026-04-24T13:30:00",
+       "lede": "the #dow jones index yields a slight 0.17% to 49.226.79 points. amgen&nbsp; and visa, with ca&iacute;das of 1.20%, are the most penalized values. leads procter&amp;gamble advances, which is scored 4%. the &nbsp;s&amp;p 500 rises by 0.26%, at 7,127.22 points, while the nasdaq advances&nbsp;by 0.68% to 24,604.69 points. wall street comes",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.73
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69fa3a947b2d589e8453eb69",
+       "headline": "Dow Jones, S&P 500, Nasdaq: RekordstÃ¤nde â Eine US-BÃ¶rse schlieÃt besonders stark",
+       "url": "http://www.handelsblatt.com/finanzen/maerkte/marktberichte/dow-jones-sp-500-nasdaq-rekordstaende-eine-us-boerse-schliesst-besonders-stark/100219764.html",
+       "publisher": "handelsblatt.com",
+       "published_at": "2026-04-24T12:47:00",
+       "lede": "the prospect of possible peace talks between the usa and iran as well as a price jump at intel have given the us-börsen on friday record times. the dow jones index of default values lost 0.2 percent to 49,230 points. the broader s&p 500 recorded 0.8 percent higher at 7.165",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaaaba84b609af2b2e5bf",
+       "headline": "Dow Jones, S&P 500, Nasdaq: RekordstÃ¤nde â Eine US-BÃ¶rse schlieÃt besonders stark",
+       "url": "https://www.handelsblatt.com/finanzen/maerkte/marktberichte/dow-jones-sp-500-nasdaq-rekordstaende-eine-us-boerse-schliesst-besonders-stark/100219764.html",
+       "publisher": "handelsblatt.com",
+       "published_at": "2026-04-24T12:47:00",
+       "lede": "the prospect of possible peace talks between the usa and iran as well as a price jump at intel have given the us-börsen on friday record times. the dow jones index of default values lost 0.2 percent to 49,230 points. the broader s&p 500 recorded 0.8 percent higher at 7.165",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4f353a4d098b40bf45ed",
+       "headline": "Wall Street: Verschnaufpause – Bilanzen im Fokus",
+       "url": "https://www.deraktionaer.de/artikel/aktien/wall-street-verschnaufpause-bilanzen-im-fokus-20399637.html",
+       "publisher": "deraktionaer.de",
+       "published_at": "2026-04-23T14:55:00",
+       "lede": "the record-breaking hunt on wall street will stop on thursday. after yesterday's peak, investors are more cautious about the coming reporting season. about an hour before trading began in new york, the futures were down on the major indices. the dow jones lost 196 points, 0.39 percent, to 49,472 points.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0363967b84f58d6f7119fa",
+       "headline": "Dow Jones, S&P 500, Nasdaq: US-BÃ¶rsen schlieÃen nach Rekorden im Minus",
+       "url": "http://www.handelsblatt.com/finanzen/maerkte/marktberichte/dow-jones-sp-500-nasdaq-us-boersen-schliessen-nach-rekorden-im-minus/100219442.html",
+       "publisher": "handelsblatt.com",
+       "published_at": "2026-04-23T14:08:51",
+       "lede": "the optimism towards the midweek on wall street almost completely disappeared on thursday. after the most important indices have reached new record levels again on wednesday, the us benchmarks closed with losses on thursday. the dow jones default loses 0.4 percent to 49,310 points. the s&p 500 can beat its",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea377c8266d9339996ab09",
+       "headline": "Dow Jones and Nasdaq drop back as ServiceNow, IBM and Tesla slide on earnings",
+       "url": "https://www.proactiveinvestors.com/companies/news/1091068/dow-jones-and-nasdaq-drop-back-as-servicenow-ibm-and-tesla-slide-on-earnings-1091068.html",
+       "publisher": "proactiveinvestors.com",
+       "published_at": "2026-04-23T07:19:00",
+       "lede": "10am: dow and nasdaq dip at open, servicenow, freeport-mcmoran and ibm fall most us stocks have joined in with european peers and opened lower. the dow jones and nasdaq are both down 0.3% with the s&p 500 slipping 0.1%. biggest fallers on the s&p are all on the back of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.45
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "servicenow",
+        "freeport-mcmoran",
+        "ibm",
+        "freeport-mcmoran"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e9affd75f157062cb42f5a",
+       "headline": "Wall Street abre al alza luego que Donald Trump extiende el alto el fuego con Irán",
+       "url": "https://elcomercio.pe/economia/mercados/wall-street-abre-al-alza-luego-que-donald-trump-extiende-el-alto-el-fuego-con-iran-l-wall-street-l-ultimas-noticia/",
+       "publisher": "elcomercio.pe",
+       "published_at": "2026-04-22T15:05:27",
+       "lede": "wall street opened up on wednesday and its main indicator, the dow jones of industrials, won 0.79% after us president donald trump announced the extension of the ceasefire in iran. at the opening of the new york park, the dow jones earned 389 points up to 49,539; the selective s&amp;p",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8dfad5cfa3e5ba54d19bd",
+       "headline": "Wall Street avança com prorrogação de cessar-fogo entre EUA e Irã – Money Times",
+       "url": "https://www.moneytimes.com.br/wall-street-abertura-22-4-26-lils/",
+       "publisher": "moneytimes.com.br",
+       "published_at": "2026-04-22T13:42:30",
+       "lede": "(image: istock/maciek905) the wall street indices started wednesday (22) in a positive tone with a fire stopover between the united states and iran, as well as corporate balances on radar. continue after the publicity continue after the publicity check the performance of the indexes immediately after the opening: dow jones:",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e998fc75f157062cadddbe",
+       "headline": "Dow Jones futures rise as US-Iran ceasefire extends",
+       "url": "https://bitcoinethereumnews.com/finance/dow-jones-futures-rise-as-us-iran-ceasefire-extends/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-22T08:57:35",
+       "lede": "dow jones futures gain 0.59% above 49,600, with s&p 500 and nasdaq 100 futures also advancing 0.63% and 0.81% to near 7,150 and 26,850, respectively, during the european hours on wednesday ahead of the united states (us) regular opening. us stock futures advance amid improving market sentiment after us president",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a81d1963d76f4afd54388",
+       "headline": "Dow Jones pulls back after a three-week rally - London Business News | Londonlovesbusiness.com",
+       "url": "https://londonlovesbusiness.com/dow-jones-pulls-back-after-a-three-week-rally/",
+       "publisher": "londonlovesbusiness.com",
+       "published_at": "2026-04-22T08:32:17",
+       "lede": "the dow jones declined 0.59% in the previous session, marking its second consecutive loss following a strong rally, suggesting that upward momentum is beginning to slow and transition into a short-term rebalancing phase. however, this pullback is not purely technical in nature, but rather reflects a notable shift in how",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e883b57bb1410d4c8905ca",
+       "headline": "El Dow Jones pierde 300 puntos y vuelve el pánico",
+       "url": "https://www.negocios.com/articulo/mercados/dow-jones-pierde-300-puntos-vuelve-panico/20260422063256484548.html",
+       "publisher": "negocios.com",
+       "published_at": "2026-04-22T04:32:56",
+       "lede": "&amp;nbsp; the dow jones is left 293 points and deleted an intrad&iacute;a rebound of 400. the s&amp;amp;p 500 cay&oacute; 0.6% and nasdaq cedi&oacute; another 0.6%, after flirting with new m&acute;xims. the market returned to quote oriente pr&oacute;ximo, no balance sheets: the ceasefire clock already marked the sesi&oacute;n. and the raw",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 2277,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAwNDozMjo1NiIsImkiOiI2OWU4ODNiNTdiYjE0MTBkNGM4OTA1Y2EiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.921,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.925
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,832 @@
+{
+ "slug": "lithium-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:27Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "lithium",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "lithium",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 9189,
+     "tone": {
+      "carrying": 9182,
+      "availability_pct": 99.92,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1609,
+        "share_pct": 17.52
+       },
+       {
+        "group": "neutral",
+        "count": 225,
+        "share_pct": 2.45
+       },
+       {
+        "group": "positive",
+        "count": 7348,
+        "share_pct": 80.03
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 9188,
+      "count": 6324,
+      "share_pct": 68.83
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.712,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.715
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "lithium",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "lithium",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1647,
+       "critical": 1131,
+       "critical_pct": 68.7,
+       "negative": 338,
+       "positive": 1250,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1266,
+       "critical": 898,
+       "critical_pct": 70.9,
+       "negative": 184,
+       "positive": 1048,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1602,
+       "critical": 1159,
+       "critical_pct": 72.3,
+       "negative": 279,
+       "positive": 1296,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1572,
+       "critical": 1156,
+       "critical_pct": 73.5,
+       "negative": 319,
+       "positive": 1228,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1874,
+       "critical": 1380,
+       "critical_pct": 73.6,
+       "negative": 420,
+       "positive": 1412,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2105,
+       "critical": 1523,
+       "critical_pct": 72.4,
+       "negative": 401,
+       "positive": 1657,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1675,
+       "critical": 1206,
+       "critical_pct": 72.0,
+       "negative": 227,
+       "positive": 1408,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1651,
+       "critical": 1227,
+       "critical_pct": 74.3,
+       "negative": 258,
+       "positive": 1336,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2163,
+       "critical": 1622,
+       "critical_pct": 75.0,
+       "negative": 327,
+       "positive": 1787,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2145,
+       "critical": 1446,
+       "critical_pct": 67.4,
+       "negative": 336,
+       "positive": 1757,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1972,
+       "critical": 1328,
+       "critical_pct": 67.3,
+       "negative": 324,
+       "positive": 1589,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2909,
+       "critical": 1928,
+       "critical_pct": 66.3,
+       "negative": 622,
+       "positive": 2215,
+       "partial_period": false
+      }
+     ],
+     "total": 22581,
+     "critical_total": 16004,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.873,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.875
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "lithium",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "lithium",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 9189,
+     "carrying": 3848,
+     "availability_pct": 41.88,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1462,
+       "share_pct": 15.91
+      },
+      {
+       "country": "china",
+       "count": 377,
+       "share_pct": 4.1
+      },
+      {
+       "country": "canada",
+       "count": 359,
+       "share_pct": 3.91
+      },
+      {
+       "country": "india",
+       "count": 281,
+       "share_pct": 3.06
+      },
+      {
+       "country": "australia",
+       "count": 145,
+       "share_pct": 1.58
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1224
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.267,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.27
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "lithium",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "lithium",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "battery charging systems",
+       "count": 1227,
+       "share": 20.25,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1016,
+       "delta_pct": 20.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "battery backup systems for electronics",
+       "count": 988,
+       "share": 16.3,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 771,
+       "delta_pct": 28.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mineral exploration drilling techniques",
+       "count": 289,
+       "share": 4.77,
+       "lift": 389.29,
+       "baseline_count": 1,
+       "previous_period_count": 230,
+       "delta_pct": 25.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "lithium-ion battery advancements for evs",
+       "count": 232,
+       "share": 3.83,
+       "lift": 312.51,
+       "baseline_count": 1,
+       "previous_period_count": 135,
+       "delta_pct": 71.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "ev battery recycling and sustainability",
+       "count": 215,
+       "share": 3.55,
+       "lift": 289.61,
+       "baseline_count": 1,
+       "previous_period_count": 127,
+       "delta_pct": 69.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 9189,
+     "carrying": 6060,
+     "carrier_share_pct": 65.95,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.175,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.177
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "lithium",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "lithium",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2af028963d76f4af211357",
+       "headline": "Expanding the lifespan of solid-state batteries",
+       "url": "https://www.mpg.de/26391218/how-dendrites-shorten-the-lifespan-of-solid-state-batteries",
+       "publisher": "mpg.de",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "expanding the lifespan of solid-state batteries lithium dendrites propagate through a solid electrolyte like water cracks a rock - it could be prevented with a different design tortuous path towards a short-circuit: in solid-state batteries, lithium dendrites make their way through the ceramic electrolyte until a short circuit eventually occurs",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 670,
+         "path": "/Home & Garden/Household Supplies/Household Batteries",
+         "score": 0.81
+        },
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eb59c8e67a2fcb3bd9bbb",
+       "headline": "Carbon neutrality mission: India’s clean energy future hinges on access to critical minerals | Mint",
+       "url": "http://livemint.com/opinion/online-views/carbon-neutrality-mission-india-clean-energy-future-critical-minerals-fossil-fuel-china-cobalt-lithium-rare-earths-11776934859342.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-26T10:30:39",
+       "lede": "india has begun to respond. over the past year, it has stepped up efforts to secure overseas resources, including agreements with brazil and argentina to access lithium and other minerals. it has also expanded engagement with australia and africa. these moves signal a shift from passive import dependence to active",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.73
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9cb9e540a46fb53f722e",
+       "headline": "Tesla’s ‘Clean’ Lithium Supply Faces Questions After Toxic Metals Found in Wastewater",
+       "url": "https://www.yahoo.com/news/articles/tesla-clean-lithium-supply-faces-213000842.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-25T21:30:00",
+       "lede": "autoblog and yahoo may earn commission from links in this article. for all the promises of a zero-emission future, the reality of electric vehicle manufacturing remains a dirty business. in south texas, the consequences are flowing directly into local waterways. tesla’s billion-dollar lithium refinery outside corpus christi—marketed by ceo elon",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 176,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Tesla Motors",
+         "score": 0.81
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efabfc8a54b8f07c975153",
+       "headline": "Elevra Lithium Q3 Earnings Call Highlights",
+       "url": "https://www.defenseworld.net/2026/04/25/elevra-lithium-q3-earnings-call-highlights.html",
+       "publisher": "defenseworld.net",
+       "published_at": "2026-04-25T05:06:27",
+       "lede": "get alerts: elevra lithium (nasdaq:elvr) highlighted improved operating execution and a return to meaningful operating cash generation in its march 2026 quarterly update, pointing to stronger performance at its north american lithium (nal) operation and continued advancement across its broader development portfolio. operational performance at nal improves managing director and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.75
+        },
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "nal"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2aab43963d76f4aff08627",
+       "headline": "Siemens and Vulcan Energy partner to scale Europe’s sustainable lithium supply - theenergyst.com",
+       "url": "https://theenergyst.com/siemens-and-vulcan-energy-partner-to-scale-europes-sustainable-lithium-supply/",
+       "publisher": "theenergyst.com",
+       "published_at": "2026-04-23T08:26:59",
+       "lede": "siemens and vulcan energy have joined forces to advance europe’s first fully integrated lithium and renewable energy project, with the two companies signing a framework agreement for the lionheart lithium and renewable energy project in germany’s upper rhine valley. the companies have also signed a memorandum of understanding (mou), making",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.55
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5636963d76f4afb8b0c5",
+       "headline": "Tesla's Texas Lithium Refinery Discharge Contains Toxic Metals, Independent Lab Testing Finds—Drainage Di",
+       "url": "https://www.benzinga.com/markets/tech/26/04/51962611/teslas-texas-lithium-refinery-discharge-contains-toxic-metals-independent-lab-testing-finds-drainage-district-demands-cease-and-desist",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-22T10:52:07",
+       "lede": "wastewater discharge from elon musk-led tesla inc.'s (nasdaq:tsla) texas lithium refinery reportedly contains toxic metals despite securing a discharge approval and compliance from the texas commission on environmental quality (tceq). arsenic, carcinogens in wastewater on tuesday, electrek reported that the nueces county drainage district no. 2, which is responsible for",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8be409baafc7356bf9940",
+       "headline": "Rio Tinto trying to meet U.S. aluminum demand as Middle East war roils supply chains",
+       "url": "https://www.theglobeandmail.com/business/article-rio-tinto-trying-to-meet-us-aluminum-demand-as-middle-east-war-roils/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-20T09:00:00",
+       "lede": "open this photo in gallery: jérome pécresse, chief executive of aluminum and lithium at rio tinto, in a boardroom at the company's offices in montreal, on april 15.roger lemoyne photographer/the globe and mail rio tinto group rio-n is moving to squeeze as much aluminum as it can from its canadian",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.85
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "rio tinto"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a03efd562bbf617b039ed66",
+       "headline": "Albemarle Stock 2026: Buy or Sell? Lithium Rebound Sparks 16% Surge as Analysts Eye Further Upside",
+       "url": "https://ibtimes.com.au/albemarle-stock-2026-buy-sell-lithium-rebound-sparks-16-surge-analysts-eye-further-upside-1866851",
+       "publisher": "ibtimes.com.au",
+       "published_at": "2026-04-17T10:02:57",
+       "lede": "charlotte, n.c. &mdash; albemarle corporation shares exploded higher on april 16, 2026, closing at $215.62 after a stunning 16.31 percent single-day gain on heavy volume, as lithium prices continued their sharp 2026 rebound and bullish analyst actions reinforced optimism for the world's largest lithium producer. the dramatic move has investors",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.55
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2edb7b83fc01faba54ebf6",
+       "headline": "Laufey, \"Die Queen\", \"Stirb langsam 3\": TV-Tipps für Freitag",
+       "url": "https://www.derstandard.at/story/3000000315682/laufey-die-queen-stirb-langsam-3-tv-tipps-fuer-freitag",
+       "publisher": "derstandard.at",
+       "published_at": "2026-04-17T04:00:00",
+       "lede": "in addition, a report on europe's lithium hunger and a \"universum history\" about the sudeten germans 19.40 reportage \"re: europe's lithium hunger, who pays the price? one of the largest lithium deposits in europe is located in the serbian jadar valley. for years, rio tinto has been trying to degrade",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e84b209baafc73566dac7a",
+       "headline": "Lithium Reduces Risk of Suicide and Recurrent Episodes of Bipolar and Major Depressive Disorders | Psychiatric Times",
+       "url": "https://www.psychiatrictimes.com/view/lithium-reduces-risk-of-suicide-and-recurrent-episodes-of-bipolar-and-major-depressive-disorders",
+       "publisher": "psychiatrictimes.com",
+       "published_at": "2026-04-15T08:36:24",
+       "lede": "patients treated for bipolar or major depressive disorder were less likely to have recurrent episodes of illness, suicidal ideation, or to attempt suicide in the 1-year after the addition of lithium than in the year before, in a within-subject, naturalistic outpatient study.1 &quot;the present findings indicate that including lithium in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 310,
+         "path": "/Health/Mental Health/Other",
+         "score": 0.75
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.58
+        },
+        {
+         "code": 390,
+         "path": "/Sensitive Subjects/Self-Harm",
+         "score": 0.57
+        },
+        {
+         "code": 622,
+         "path": "/Health/Mental Health/Depression",
+         "score": 0.46
+        }
+       ],
+       "country": "italy",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfcf5cc1e955063e1599fe",
+       "headline": "Government announces royalty rate on mining of Lithium, Niobuim and Rare Earth Elements  | Autocar Professional",
+       "url": "https://www.autocarpro.in/news/government-announces-royalty-rate-on-mining-of-lithium-niobuim-and-rare-earth-elements--117235",
+       "publisher": "autocarpro.in",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "today’s approval of the union cabinet of specification of rate of royalty will enable the central government to auction blocks for lithium, niobium and rees for the first time in the country. the union cabinet chaired by the prime minister narendra modi approved the amendment of the second schedule of",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.86
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "69e8c67b7bb1410d4cbdea16",
+       "headline": "How to Fix Unusual Traffic Detected from Your Computer Network - Time News",
+       "url": "https://time.news/how-to-fix-unusual-traffic-detected-from-your-computer-network-32/",
+       "publisher": "time.news",
+       "published_at": "2026-04-14T03:49:58",
+       "lede": "the global transition toward sustainable energy has placed a spotlight on the critical minerals required to build the next generation of batteries, and few materials are as pivotal as lithium. as nations race to secure their supply chains, the emergence of new extraction technologies is shifting the geopolitical and economic",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.82
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 1044,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wNyAxOTo1OTo1OCIsImkiOiI2OWUzMjY5YzY2MGRhN2E2YTIwMmQ0YzkiLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 11.059,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 11.061
+    }
+   }
+  }
+ ]
+}

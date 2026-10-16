@@ -1,0 +1,963 @@
+{
+ "slug": "export-controls-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:51Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "export controls",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "export controls",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 923,
+     "tone": {
+      "carrying": 923,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 587,
+        "share_pct": 63.6
+       },
+       {
+        "group": "neutral",
+        "count": 33,
+        "share_pct": 3.58
+       },
+       {
+        "group": "positive",
+        "count": 303,
+        "share_pct": 32.83
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 923,
+      "count": 780,
+      "share_pct": 84.51
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.628,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.631
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "export controls",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "export controls",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 332,
+       "critical": 292,
+       "critical_pct": 88.0,
+       "negative": 242,
+       "positive": 89,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 346,
+       "critical": 293,
+       "critical_pct": 84.7,
+       "negative": 245,
+       "positive": 91,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 328,
+       "critical": 246,
+       "critical_pct": 75.0,
+       "negative": 198,
+       "positive": 122,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 191,
+       "critical": 169,
+       "critical_pct": 88.5,
+       "negative": 121,
+       "positive": 62,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 179,
+       "critical": 152,
+       "critical_pct": 84.9,
+       "negative": 114,
+       "positive": 59,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1651,
+       "critical": 1498,
+       "critical_pct": 90.7,
+       "negative": 1292,
+       "positive": 324,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 316,
+       "critical": 273,
+       "critical_pct": 86.4,
+       "negative": 220,
+       "positive": 83,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 252,
+       "critical": 207,
+       "critical_pct": 82.1,
+       "negative": 140,
+       "positive": 98,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 208,
+       "critical": 177,
+       "critical_pct": 85.1,
+       "negative": 129,
+       "positive": 70,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 221,
+       "critical": 192,
+       "critical_pct": 86.9,
+       "negative": 140,
+       "positive": 76,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 217,
+       "critical": 183,
+       "critical_pct": 84.3,
+       "negative": 144,
+       "positive": 64,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 277,
+       "critical": 228,
+       "critical_pct": 82.3,
+       "negative": 174,
+       "positive": 93,
+       "partial_period": false
+      }
+     ],
+     "total": 4518,
+     "critical_total": 3910,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-10-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.788,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.798
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "export controls",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "export controls",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 923,
+     "carrying": 496,
+     "availability_pct": 53.74,
+     "items": [
+      {
+       "country": "united states",
+       "count": 258,
+       "share_pct": 27.95
+      },
+      {
+       "country": "china",
+       "count": 141,
+       "share_pct": 15.28
+      },
+      {
+       "country": "india",
+       "count": 15,
+       "share_pct": 1.63
+      },
+      {
+       "country": "japan",
+       "count": 10,
+       "share_pct": 1.08
+      },
+      {
+       "country": "singapore",
+       "count": 10,
+       "share_pct": 1.08
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 62
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.342,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.347
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "export controls",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "export controls",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "semiconductor industry updates",
+       "count": 64,
+       "share": 11.23,
+       "lift": 458.27,
+       "baseline_count": 2,
+       "previous_period_count": 60,
+       "delta_pct": 6.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "political economy and resource allocation",
+       "count": 38,
+       "share": 6.67,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 42,
+       "delta_pct": -9.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "semiconductor devices and components",
+       "count": 21,
+       "share": 3.68,
+       "lift": 300.74,
+       "baseline_count": 1,
+       "previous_period_count": 10,
+       "delta_pct": 110.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "trade agreements and free trade zones",
+       "count": 20,
+       "share": 3.51,
+       "lift": 286.42,
+       "baseline_count": 1,
+       "previous_period_count": 27,
+       "delta_pct": -25.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "metal export-import regulations",
+       "count": 18,
+       "share": 3.16,
+       "lift": 257.78,
+       "baseline_count": 1,
+       "previous_period_count": 29,
+       "delta_pct": -37.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 923,
+     "carrying": 570,
+     "carrier_share_pct": 61.76,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.071,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.074
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "export controls",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "export controls",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8dcbb5cfa3e5ba54ac0c0",
+       "headline": "ASML boosts 2026 sales forecast despite shrinking China sales",
+       "url": "https://www.scmp.com/tech/article/3350243/asml-boosts-2026-sales-forecast-despite-shrinking-china-sales",
+       "publisher": "scmp.com",
+       "published_at": "2026-04-16T03:29:22",
+       "lede": "dutch chipmaker asml upgraded its 2026 sales outlook on wednesday, citing strong demand, even as china’s share of global shipments continued to decline and the firm braced for a potential new round of us export controls targeting china. the company projected net sales for the year to fall between €36",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.66
+        },
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.48
+        },
+        {
+         "code": 184,
+         "path": "/Computers & Electronics/Electronics & Electrical/Electronic Components",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "asml"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e84c395cfa3e5ba5e400e6",
+       "headline": "Russia places temporary export controls on helium",
+       "url": "https://www.gasworld.com/story/russia-places-temporary-export-controls-on-helium/2246455.article/\\",
+       "publisher": "gasworld.com",
+       "published_at": "2026-04-14T16:20:38",
+       "lede": "russia has introduced temporary export controls on helium to maintain consistent supplies to the domestic market, according to a reuters report. the world’s third largest helium supplier needs the gas to produce fibre optics which are used by its army to control drones. the move marks another pressure point on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8452e7bb1410d4c61f48c",
+       "headline": "Russia places temporary export controls on helium",
+       "url": "https://www.gasworld.com/story/russia-places-temporary-export-controls-on-helium/2246455.article/",
+       "publisher": "gasworld.com",
+       "published_at": "2026-04-14T16:20:38",
+       "lede": "russia has introduced temporary export controls on helium to maintain consistent supplies to the domestic market, according to a reuters report. the world’s third largest helium supplier needs the gas to produce fibre optics which are used by its army to control drones. the move marks another pressure point on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8cece9baafc7356cdb41e",
+       "headline": "Russia Introduces Helium Export Controls Amid Global Shortage - The Moscow Times",
+       "url": "https://www.themoscowtimes.com/2026/04/14/russia-introduces-helium-export-controls-amid-global-shortage-a92496",
+       "publisher": "themoscowtimes.com",
+       "published_at": "2026-04-14T13:05:00",
+       "lede": "the russian government has introduced export controls on helium until the end of 2027 after the war in iran sparked a global shortage of the rare gas, which is used in everything from semiconductor production and medical imaging to rocket fuels and welding. russia is the world’s third-largest helium producer",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.66
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.42
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9b72963d76f4afe608e2",
+       "headline": "YMTC Plans New Chip Factories Amid US-China Trade Tensions",
+       "url": "https://www.electronicsforyou.biz/industry-buzz/ymtc-plans-new-chip-factories-amid-us-china-trade-tensions",
+       "publisher": "electronicsforyou.biz",
+       "published_at": "2026-04-14T07:39:18",
+       "lede": "facing tightening export controls, ymtc accelerates factory expansion, aiming to secure china’s memory chip ambitions. chinese memory chipmaker yangtze memory technologies co. (ymtc) is preparing to expand its semiconductor manufacturing operations as trade frictions between china and the united states continue to influence the global chip industry. according to sources",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.77
+        },
+        {
+         "code": 184,
+         "path": "/Computers & Electronics/Electronics & Electrical/Electronic Components",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e6f7050f1aa5003e11481f",
+       "headline": "YMTC Plans New Chip Factories Amid US-China Trade Tensions",
+       "url": "https://www.electronicsforyou.biz/industry-buzz/ymtc-plans-new-chip-factories-amid-us-china-trade-tensions/",
+       "publisher": "electronicsforyou.biz",
+       "published_at": "2026-04-14T07:39:18",
+       "lede": "facing tightening export controls, ymtc accelerates factory expansion, aiming to secure china’s memory chip ambitions. chinese memory chipmaker yangtze memory technologies co. (ymtc) is preparing to expand its semiconductor manufacturing operations as trade frictions between china and the united states continue to influence the global chip industry. according to sources",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.77
+        },
+        {
+         "code": 184,
+         "path": "/Computers & Electronics/Electronics & Electrical/Electronic Components",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "yangtze memory technologies"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ddff76ab4f746d3af09b17",
+       "headline": "U.S. Tightens Export Controls to Cover Subsidiaries of Blacklisted Firms",
+       "url": "https://www.caixinglobal.com/2025-09-30/us-tightens-export-controls-to-cover-subsidiaries-of-blacklisted-firms-102367784.html",
+       "publisher": "caixinglobal.com",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "digest hub digest hub back explore the story in 30 seconds the u.s. expanded export controls to cover any company 50% or more owned by blacklisted entities, closing a major loophole, effective september 29. over 1,300 chinese-affiliated entities are currently on the entity list, and china has strongly condemned the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3408833f261aedad8bf63",
+       "headline": "China Reveals $92 Mn AI Servers Using Restricted Nvidia Chips",
+       "url": "https://www.electronicsforyou.biz/industry-buzz/china-reveals-92-mn-ai-servers-using-restricted-nvidia-chips/",
+       "publisher": "electronicsforyou.biz",
+       "published_at": "2026-04-10T08:22:32",
+       "lede": "fresh disclosure of restricted ai hardware highlights growing challenges in enforcing global semiconductor export curbs. a chinese artificial intelligence company has revealed that it operates advanced ai servers worth nearly $92 million powered by chips from nvidia, drawing renewed attention to the effectiveness of us export controls targeting high-performance semiconductor",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.58
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.55
+        },
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e852ff7bb1410d4c6a8163",
+       "headline": "US lawmakers push new bill to tighten chip equipment curbs on China | Communications Today",
+       "url": "https://www.communicationstoday.co.in/us-lawmakers-push-new-bill-to-tighten-chip-equipment-curbs-on-china/",
+       "publisher": "communicationstoday.co.in",
+       "published_at": "2026-04-09T10:14:46",
+       "lede": "the latest bill proposed by us lawmakers to further restrict china’s access to advanced chipmaking equipment marks a fresh escalation in washington’s efforts to throttle the country’s semiconductor ambitions, as it seeks to bring allies such as the netherlands and japan into closer alignment on export controls, analysts said. introduced",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "china",
+       "organizations": [
+        "shi"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e4f240430a4927fdbba232",
+       "headline": "Why Enforcement Will Determine the Chip Security Act’s Success",
+       "url": "https://nationalinterest.org/blog/techland/why-enforcement-will-determine-the-chip-security-acts-success",
+       "publisher": "nationalinterest.org",
+       "published_at": "2026-04-08T19:59:28",
+       "lede": "export controls are only as strong as their enforcement, and without operational capacity, us semiconductor restrictions will continue to fail in practice. the house foreign affairs committee advanced the chip security act during markup, making it eligible for consideration by the full house of representatives. the legislation supports president donald",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c992277be6ed2da3ba1c",
+       "headline": "Rare earths need financing overhaul as China threat looms: IEA",
+       "url": "https://www.gtreview.com/news/global/rare-earths-need-financing-overhaul-as-china-threat-looms-iea/",
+       "publisher": "gtreview.com",
+       "published_at": "2026-04-08T14:05:50",
+       "lede": "chinese export controls on rare earth elements could hit economic activity in the us and europe by us$3tn, yet limited access to financing and market volatility are holding back investment in diversifying supply. demand for rare earths is projected to increase by 50% by 2035, driven by the development of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0407c09c4aac09353ff223",
+       "headline": "America’s New Way of Economic War",
+       "url": "https://foreignaffairs.com/united-states/americas-new-way-economic-war",
+       "publisher": "foreignaffairs.com",
+       "published_at": "2026-03-27T04:00:00",
+       "lede": "president donald trump’s decision late last year to start seizing venezuelan oil tankers throughout the high seas marks a significant shift in american economic statecraft. for more than two decades, washington drew a clear line between its use of economic tools, notably sanctions and export controls, and its use of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.64
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c5393aab8d96aa39e476",
+       "headline": "America’s New Way of Economic War",
+       "url": "http://www.foreignaffairs.com/united-states/americas-new-way-economic-war",
+       "publisher": "foreignaffairs.com",
+       "published_at": "2026-03-27T04:00:00",
+       "lede": "president donald trump’s decision late last year to start seizing venezuelan oil tankers throughout the high seas marks a significant shift in american economic statecraft. for more than two decades, washington drew a clear line between its use of economic tools, notably sanctions and export controls, and its use of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.64
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69c441e48eec988c1c8d838a",
+       "headline": "US-China Tech War: AI, Chips & Biotech Become New Fronts",
+       "url": "https://www.newkerala.com/news/a/us-sharpens-tech-war-china-across-ai-chips-334.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-03-25T08:35:57",
+       "lede": "senior us lawmakers have framed the technological competition with china across ai, semiconductors, and biotech as a critical \"moral fight\" for global power. they advocate for a multi-pronged strategy combining stricter export controls on advanced chips, prioritizing domestic customers, and building resilient supply chains. the discussions highlight a significant policy",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbf22f3a0ed6ac902c900c",
+       "headline": "China’s use of open‑source AI threatens the US lead in AI development, US Commission warns",
+       "url": "https://www.computerworld.com/article/4149313/chinas-use-of-open%e2%80%91source-ai-threatens-the-us-lead-in-ai-development-us-commission-warns.html",
+       "publisher": "computerworld.com",
+       "published_at": "2026-03-24T00:00:00",
+       "lede": "china’s open-source ai strategy is building a self-reinforcing competitive advantage that us export controls were not designed to counter, the us-china economic and security review commission has warned.“us export controls primarily target the digital loop, restricting access to advanced chips used for frontier model training — but are not well",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.63
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.41
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a38d29aae2bd4e2d49b2",
+       "headline": "Supermicro stock plunges 33% after US charges co-founder with conspiracy to smuggle Nvidia chips to China",
+       "url": "https://finance.yahoo.com/news/supermicro-stock-plunges-33-after-us-charges-co-founder-with-conspiracy-to-smuggle-nvidia-chips-to-china-201013177.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-03-20T20:10:13",
+       "lede": "supermicro (smci) stock plummeted 33% on friday after an unsealed indictment revealed that the us charged two supermicro employees and a contractor with smuggling servers containing nvidia (nvda) chips to china, in violation of us export controls.the us attorney’s office for the southern district of new york charged supermicro's co-founder,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "supermicro",
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b27ea5cefb83fe8810ff5",
+       "headline": "3 men are charged with conspiring to smuggle US artificial intelligence to China",
+       "url": "https://www.yahoo.com/news/articles/3-men-charged-conspiring-smuggle-004537679.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-20T00:45:37",
+       "lede": "new york (ap) — a senior vice president of super micro computer inc. and two others affiliated with the company were charged thursday with conspiring to smuggle billions of dollars of computer servers containing advanced nvidia chips to china. the men violated u.s. export controls laws by scheming to divert",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 217,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xNSAwNjo0NTowMCIsImkiOiI2OWM0MzZiZTcwZGFkOWZhYjk2MzgwZWEiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.594,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.632
+    }
+   }
+  }
+ ]
+}

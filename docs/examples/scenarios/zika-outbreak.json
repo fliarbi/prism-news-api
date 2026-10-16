@@ -1,0 +1,861 @@
+{
+ "slug": "zika-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:22Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "zika",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "zika",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 466,
+     "tone": {
+      "carrying": 465,
+      "availability_pct": 99.79,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 145,
+        "share_pct": 31.18
+       },
+       {
+        "group": "neutral",
+        "count": 23,
+        "share_pct": 4.95
+       },
+       {
+        "group": "positive",
+        "count": 297,
+        "share_pct": 63.87
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 465,
+      "count": 362,
+      "share_pct": 77.85
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.146,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.159
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "zika",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "zika",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 923,
+       "critical": 667,
+       "critical_pct": 72.3,
+       "negative": 525,
+       "positive": 342,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 151,
+       "critical": 121,
+       "critical_pct": 80.1,
+       "negative": 78,
+       "positive": 66,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 155,
+       "critical": 115,
+       "critical_pct": 74.2,
+       "negative": 76,
+       "positive": 76,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 215,
+       "critical": 156,
+       "critical_pct": 72.6,
+       "negative": 133,
+       "positive": 76,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 106,
+       "critical": 92,
+       "critical_pct": 86.8,
+       "negative": 34,
+       "positive": 68,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 123,
+       "critical": 88,
+       "critical_pct": 71.5,
+       "negative": 35,
+       "positive": 85,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 113,
+       "critical": 78,
+       "critical_pct": 69.0,
+       "negative": 34,
+       "positive": 74,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 121,
+       "critical": 105,
+       "critical_pct": 86.8,
+       "negative": 38,
+       "positive": 80,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 138,
+       "critical": 111,
+       "critical_pct": 80.4,
+       "negative": 49,
+       "positive": 79,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 115,
+       "critical": 96,
+       "critical_pct": 83.5,
+       "negative": 25,
+       "positive": 85,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 118,
+       "critical": 86,
+       "critical_pct": 72.9,
+       "negative": 35,
+       "positive": 79,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 95,
+       "critical": 69,
+       "critical_pct": 72.6,
+       "negative": 36,
+       "positive": 54,
+       "partial_period": false
+      }
+     ],
+     "total": 2373,
+     "critical_total": 1784,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.845,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.853
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "zika",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "zika",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 466,
+     "carrying": 108,
+     "availability_pct": 23.18,
+     "items": [
+      {
+       "country": "united states",
+       "count": 66,
+       "share_pct": 14.16
+      },
+      {
+       "country": "italy",
+       "count": 5,
+       "share_pct": 1.07
+      },
+      {
+       "country": "nigeria",
+       "count": 5,
+       "share_pct": 1.07
+      },
+      {
+       "country": "brazil",
+       "count": 4,
+       "share_pct": 0.86
+      },
+      {
+       "country": "canada",
+       "count": 3,
+       "share_pct": 0.64
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 25
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.178,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.18
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "zika",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "zika",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "vector-borne disease epidemiology",
+       "count": 147,
+       "share": 40.83,
+       "lift": 833.31,
+       "baseline_count": 4,
+       "previous_period_count": 113,
+       "delta_pct": 30.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "travel-related infectious disease risks",
+       "count": 78,
+       "share": 21.67,
+       "lift": 884.32,
+       "baseline_count": 2,
+       "previous_period_count": 62,
+       "delta_pct": 25.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "global health emerging threats",
+       "count": 42,
+       "share": 11.67,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 48,
+       "delta_pct": -12.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "vector-borne disease mitigation",
+       "count": 31,
+       "share": 8.61,
+       "lift": 702.92,
+       "baseline_count": 1,
+       "previous_period_count": 22,
+       "delta_pct": 40.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "global health challenges",
+       "count": 27,
+       "share": 7.5,
+       "lift": 612.22,
+       "baseline_count": 1,
+       "previous_period_count": 18,
+       "delta_pct": 50.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 466,
+     "carrying": 360,
+     "carrier_share_pct": 77.25,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.485,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.497
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "zika",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "zika",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e2a6faff2654c79d66ffe9",
+       "headline": "Belize Issues Urgent Health Alert as Mosquito-Borne Diseases Surge, Prompting Crucial Travel Warnings for U.S. Tourists Ahead of 2026 Peak Season - Travel And Tour World",
+       "url": "https://www.travelandtourworld.com/news/article/belize-issues-urgent-health-alert-as-mosquito-borne-diseases-surge-prompting-crucial-travel-warnings-for-u-s-tourists-ahead-of-2026-peak-season/",
+       "publisher": "travelandtourworld.com",
+       "published_at": "2026-04-07T10:49:11",
+       "lede": "belize issues urgent health alert as mosquito-borne diseases surge, prompting crucial travel warnings for u.s. tourists ahead of 2026 peak season image generated with ai as belize prepares for its 2026 peak travel season, u.s. tourists are being warned of a significant rise in mosquito-borne diseases such as dengue, zika,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.63
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8d3c685010bf77700cf19",
+       "headline": "Mosquito Bites: New Gut Mechanism Could Reduce Feeding & Reproduction - Time News",
+       "url": "https://time.news/mosquito-bites-new-gut-mechanism-could-reduce-feeding-reproduction/",
+       "publisher": "time.news",
+       "published_at": "2026-03-29T04:44:01",
+       "lede": "the persistent buzz of mosquitoes is more than just a summer annoyance; it’s a public health concern, driving the spread of diseases like malaria, dengue fever, and zika virus. now, a modern study published in the journal current biology offers a potentially groundbreaking approach to mosquito control, shifting the focus",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.8,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.79
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69df504b0738f1679fa7f56d",
+       "headline": "Fighting an epidemic | Texas Children's",
+       "url": "https://www.texaschildrens.org/content/media/fighting-epidemic",
+       "publisher": "texaschildrens.org",
+       "published_at": "2026-02-02T00:00:00",
+       "lede": "transmitted largely through bites from infected mosquitoes, zika mainly causes mild, flu-like symptoms which resolve on their own. in pregnant women, however, the disease poses significant risks through “vertical transmission.” the disease is passed from mother to child in the womb, leading to significant birth defects in up to 42",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.49
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "8a131249cf63aa2ee5800b8b",
+       "headline": "Opportunities and Challenges of mRNA and VLP Technologies for Pan-Flavivirus Vaccine Development: Focus on Conserved Quaternary Epitope Conformations.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41596723/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-01-21T00:00:00",
+       "lede": "opportunities and challenges of mrna and vlp technologies for pan-flavivirus vaccine development: focus on conserved quaternary epitope conformations.mosquito-borne flaviviruses, including dengue virus (denv), japanese encephalitis virus (jev), west nile virus (wnv), yellow fever virus (yfv), and zika virus (zikv), continue to present a significant threat to public health worldwide. in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.81
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.66
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "933d4bb1ed0749bc7144d597",
+       "headline": "Arbovirus-Host Epigenetic Interplay: Unraveling the Neurological Mechanisms and Therapeutic Opportunities.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41351464/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-01-01T00:00:00",
+       "lede": "arbovirus-host epigenetic interplay: unraveling the neurological mechanisms and therapeutic opportunities.globally, arboviral infections are major public health threats, and diseases caused by arboviruses-mainly zika virus, dengue virus, west nile virus, and japanese encephalitis virus-affect many people. arboviruses can induce severe neurological disorders through complex interactions with host cellular and immune pathways.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "290b92e6434eaee08e6f8cc0",
+       "headline": "Agent-Based Modeling Approach for Population Dynamics of the Biological Vector Aedes Aegypti.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42013888/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "agent-based modeling approach for population dynamics of the biological vector aedes aegypti.background: the invasive mosquito aedes aegypti is a major vector of arboviruses, such as dengue, zika, chikungunya and yellow fever.\nobjective: as a first step toward a transmission model for vector-borne diseases, a weather-dependent population dynamic simulation for ae. aegypti",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8d33e5cfa3e5ba5433e3d",
+       "headline": "¿Cuánto gasta Guatemala en combatir el zancudo que transmite el dengue y chinkungunya?",
+       "url": "https://www.prensalibre.com/guatemala/comunitario/salud-destina-q189-8-millones-para-combatir-dengue-chikungunya-y-zika-guatemala/",
+       "publisher": "prensalibre.com",
+       "published_at": "2026-04-15T06:05:00",
+       "lede": "this year, the ministry of health has a budget of q189,8 million for the prevention, control and surveillance of dengue, zika and chikungunya, diseases that are transmitted by stilts. until february 28, the portfolio reported 3,862 suspected dengue cases, of which 181 were confirmed, distributed throughout the national territory; while,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.89
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e83f609baafc7356667521",
+       "headline": "Com alta de casos e mortes, MPMS reforÃ§a fiscalizaÃ§Ã£o contra dengue e chikungunya em Dourados - RCN67",
+       "url": "https://www.rcn67.com.br/dourados/com-alta-de-casos-e-mortes-mpms-reforca-fiscalizacao-contra-dengue-e-chikungunya-em-dourados/",
+       "publisher": "rcn67.com.br",
+       "published_at": "2026-04-14T11:45:53",
+       "lede": "the 10th district attorney of justice of the golden district intensified its work in the face of the advancement of dengue, zika and chikungunya cases in the city, especially after the decree of state of emergency in public health by the municipal executive branch. the public prosecutor's office of mato",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f3c5d5e7fc42ee080cb7",
+       "headline": "How Mosquitoes Find Humans: New AI Model Decodes Flight Patterns - Time News",
+       "url": "https://time.news/how-mosquitoes-find-humans-new-ai-model-decodes-flight-patterns/",
+       "publisher": "time.news",
+       "published_at": "2026-04-11T13:54:12",
+       "lede": "mosquito-borne illnesses, including malaria, dengue fever, and zika, remain among the most lethal threats to global health, claiming more than 770,000 lives annually. whereas scientists have long known that these insects are attracted to heat and odors, the precise mechanics of how they navigate toward a victim have remained elusive.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.59
+        },
+        {
+         "code": 554,
+         "path": "/Science/Mathematics/Statistics",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e89af95cfa3e5ba5165375",
+       "headline": "Retiraron 40 toneladas de chatarra | La Municipalidad de Salta realizó un nuevo operativo de descacharrado",
+       "url": "https://flipr.com.ar/salta/cuatro/retiraron-40-toneladas-de-chatarra-la-municipalidad-de-salta-realizo-un-nuevo-operativo-de-descacharrado/",
+       "publisher": "flipr.com.ar",
+       "published_at": "2026-04-10T14:02:09",
+       "lede": "the aim is to eradicate foci that favor the formation of breeding sites of the aedes aegypti mosquito, vector of dengue, zika and chikungunya. to date, nearly 2,000 tons were withdrawn in two years of management. within the framework of the plan to fight dengue, the municipality carried out a",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3257662c473c381f5a313",
+       "headline": "So real ist die Dengue-Gefahr in Deutschland",
+       "url": "https://www.gmx.net/magazine/gesundheit/gross-dengue-bedrohung-deutschland-42093548",
+       "publisher": "gmx.net",
+       "published_at": "2026-04-09T05:35:17",
+       "lede": "tiger mosquitoes can transmit diseases such as dengue fever, the zika virus or chikungunya. the spread of mosquitoes is no longer limited to tropical regions, and outbreaks have occurred in europe as well. what does this mean for the infection in this country? diseases that have long been considered \"tropical\"",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.86
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "0f6ba00c79777bc88fcdaf39",
+       "headline": "Operational strategies among infectious disease clinical trial sites during pandemics: a scoping review.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41943131/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-07T00:00:00",
+       "lede": "operational strategies among infectious disease clinical trial sites during pandemics: a scoping review.purpose: the aim of this study is to examine documented strategies, challenges, and lessons related to clinical trial site operations during pandemics.\nmethods: this review focused on seven major pandemics: covid-19, hiv/aids, ebola, sars, mers, h1n1, and zika. searches",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.8
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.52
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2a2653aab8d96aa325919",
+       "headline": "Ramírez sobre chikungunya: “primero descartamos dengue y después tomamos muestras aleatorias”",
+       "url": "https://flipr.com.ar/misiones/misiones-misiones/elterritorio/ramirez-sobre-chikungunya-primero-descartamos-dengue-y-despues-tomamos-muestras-aleatorias/",
+       "publisher": "flipr.com.ar",
+       "published_at": "2026-04-06T18:08:16",
+       "lede": "generating summary with ai... based on the article and its multimedia content missions maintains active surveillance against the advance of arbovirus such as dengue, chikungunya and zika, due to its border integration and seasonal mobility. this is what javier ramírez, director of epidemiology of the ministry of health of the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.89
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 70,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wNiAxODowODoxNiIsImkiOiI2OWUyYTI2NTNhYWI4ZDk2YWEzMjU5MTkiLCJwIjo3fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.101,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.122
+    }
+   }
+  }
+ ]
+}

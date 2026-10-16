@@ -1,0 +1,944 @@
+{
+ "slug": "fssai-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:53Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "FSSAI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "fssai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1088,
+     "tone": {
+      "carrying": 1087,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 409,
+        "share_pct": 37.63
+       },
+       {
+        "group": "neutral",
+        "count": 36,
+        "share_pct": 3.31
+       },
+       {
+        "group": "positive",
+        "count": 642,
+        "share_pct": 59.06
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1088,
+      "count": 734,
+      "share_pct": 67.46
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.806,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.819
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "FSSAI",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "fssai",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 122,
+       "critical": 76,
+       "critical_pct": 62.3,
+       "negative": 32,
+       "positive": 84,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 206,
+       "critical": 115,
+       "critical_pct": 55.8,
+       "negative": 62,
+       "positive": 139,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 273,
+       "critical": 147,
+       "critical_pct": 53.8,
+       "negative": 85,
+       "positive": 183,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 254,
+       "critical": 163,
+       "critical_pct": 64.2,
+       "negative": 66,
+       "positive": 176,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 215,
+       "critical": 133,
+       "critical_pct": 61.9,
+       "negative": 53,
+       "positive": 158,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 259,
+       "critical": 169,
+       "critical_pct": 65.3,
+       "negative": 88,
+       "positive": 153,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 290,
+       "critical": 161,
+       "critical_pct": 55.5,
+       "negative": 87,
+       "positive": 193,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 250,
+       "critical": 163,
+       "critical_pct": 65.2,
+       "negative": 90,
+       "positive": 153,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 177,
+       "critical": 136,
+       "critical_pct": 76.8,
+       "negative": 71,
+       "positive": 101,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 239,
+       "critical": 157,
+       "critical_pct": 65.7,
+       "negative": 83,
+       "positive": 152,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 252,
+       "critical": 139,
+       "critical_pct": 55.2,
+       "negative": 74,
+       "positive": 152,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 420,
+       "critical": 302,
+       "critical_pct": 71.9,
+       "negative": 181,
+       "positive": 237,
+       "partial_period": false
+      }
+     ],
+     "total": 2957,
+     "critical_total": 1861,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.614,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.622
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "FSSAI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "fssai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1088,
+     "carrying": 604,
+     "availability_pct": 55.51,
+     "items": [
+      {
+       "country": "india",
+       "count": 459,
+       "share_pct": 42.19
+      },
+      {
+       "country": "united states",
+       "count": 73,
+       "share_pct": 6.71
+      },
+      {
+       "country": "united kingdom",
+       "count": 12,
+       "share_pct": 1.1
+      },
+      {
+       "country": "china",
+       "count": 10,
+       "share_pct": 0.92
+      },
+      {
+       "country": "austria",
+       "count": 5,
+       "share_pct": 0.46
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 45
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.948,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.952
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "FSSAI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "fssai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "agricultural policy and regulatory compliance",
+       "count": 66,
+       "share": 11.56,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 17,
+       "delta_pct": 288.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "farm-to-table logistics and distribution",
+       "count": 29,
+       "share": 5.08,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 14,
+       "delta_pct": 107.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "food safety regulation compliance",
+       "count": 149,
+       "share": 26.09,
+       "lift": 177.51,
+       "baseline_count": 12,
+       "previous_period_count": 99,
+       "delta_pct": 50.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "public health nutrition programs",
+       "count": 22,
+       "share": 3.85,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 6,
+       "delta_pct": 266.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "post-harvest storage and preservation",
+       "count": 44,
+       "share": 7.71,
+       "lift": 209.67,
+       "baseline_count": 3,
+       "previous_period_count": 22,
+       "delta_pct": 100.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1088,
+     "carrying": 571,
+     "carrier_share_pct": 52.48,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.804,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.808
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "FSSAI",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "fssai",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e87fe65cfa3e5ba503363b",
+       "headline": "Central regulator FSSAI seeks detailed report on suspected food poisoning incident in Gujarat",
+       "url": "https://www.dailyexcelsior.com/central-regulator-fssai-seeks-detailed-report-on-suspected-food-poisoning-incident-in-gujarat/",
+       "publisher": "dailyexcelsior.com",
+       "published_at": "2026-04-21T22:55:43",
+       "lede": "new delhi, apr 21 : food safety regulator fssai on tuesday sought a detailed report from gujarat authorities on a suspected mass food poisoning incident affecting over 200 people at a wedding feast in the state and said the guilty will be punished. after consuming food at a feast in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.57
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "food safety"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e997d475f157062cacf5b5",
+       "headline": "Gujarat Horror Update: FSSAI Launches Probe into Wedding Food Poisoning; Over 400 Hospitalised, Statewide Crackdown Ordered",
+       "url": "https://www.republicworld.com/india/gujarat-horror-update-fssai-launches-probe-into-wedding-food-poisoning-60-hospitalised-statewide-crackdown-ordered",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-21T12:24:19",
+       "lede": "new delhi: the food safety and standards authority of india (fssai) has stepped in to probe a mass food poisoning incident at a wedding in gujarat, underscoring growing concerns about food safety during the peak summer season.&amp;nbsp; the central regulator confirmed on tuesday that it has sought a detailed report",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.63
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "food safety and standards authority of india",
+        "food safety"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ea8988e67a2fcb3b227a7",
+       "headline": "FSSAI Directs States to Enforce Ban on Calcium Carbide for Fruit Ripening | Biz News Desk",
+       "url": "https://biznewsdesk.com/news/fssai-directs-states-to-enforce-ban-on-calcium-carbide-for-fruit-ripening/",
+       "publisher": "biznewsdesk.com",
+       "published_at": "2026-04-18T08:02:26",
+       "lede": "new delhi, april 18(bnp): the food safety and standards authority of india (fssai) has directed all states and union territories to strictly enforce regulations against the use of prohibited artificial fruit ripening agents. according to a recent update shared by the authority, states have been instructed to ensure stringent checks",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.57
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e10d7bb1410d4cd32eba",
+       "headline": "FSSAI Directs States to Enforce Ban on Calcium Carbide for Fruit Ripening",
+       "url": "https://mediabulletins.com/news/fssai-directs-states-to-enforce-ban-on-calcium-carbide-for-fruit-ripening/",
+       "publisher": "mediabulletins.com",
+       "published_at": "2026-04-18T08:02:22",
+       "lede": "new delhi, april 18(bnp): the food safety and standards authority of india (fssai) has directed all states and union territories to strictly enforce regulations against the use of prohibited artificial fruit ripening agents. according to a recent update shared by the authority, states have been instructed to ensure stringent checks",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.57
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "food safety and standards authority of india",
+        "food safety"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e864917bb1410d4c74f49a",
+       "headline": "FSSAI Directs States to Enforce Ban on Calcium Carbide for Fruit Ripening",
+       "url": "https://businessnewsthisweek.com/news/fssai-directs-states-to-enforce-ban-on-calcium-carbide-for-fruit-ripening/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-04-18T08:02:18",
+       "lede": "new delhi, april 18(bnp): the food safety and standards authority of india (fssai) has directed all states and union territories to strictly enforce regulations against the use of prohibited artificial fruit ripening agents. according to a recent update shared by the authority, states have been instructed to ensure stringent checks",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.57
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "food safety and standards authority of india",
+        "food safety"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b09c05cefb83fe86b5b07",
+       "headline": "India tightens enforcement on illegal fruit ripening agents",
+       "url": "https://www.freshplaza.com/north-america/article/9830448/india-tightens-enforcement-on-illegal-fruit-ripening-agents/",
+       "publisher": "freshplaza.com",
+       "published_at": "2026-04-17T13:11:00",
+       "lede": "india's food safety and standards authority of india (fssai) has issued new directions to states to strengthen enforcement against the use of artificial fruit ripening agents. in a directive dated april 16, 2026, fssai reiterated that calcium carbide, commonly referred to as \"masala,\" is banned for fruit ripening. \"use of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.61
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.5
+        },
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e0e99baafc7356dc399d",
+       "headline": "India tightens enforcement on illegal fruit ripening agents",
+       "url": "https://www.freshplaza.com/asia/article/9830448/india-tightens-enforcement-on-illegal-fruit-ripening-agents/",
+       "publisher": "freshplaza.com",
+       "published_at": "2026-04-17T13:11:00",
+       "lede": "india's food safety and standards authority of india (fssai) has issued new directions to states to strengthen enforcement against the use of artificial fruit ripening agents. in a directive dated april 16, 2026, fssai reiterated that calcium carbide, commonly referred to as \"masala,\" is banned for fruit ripening. \"use of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.61
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.5
+        },
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.46
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "food safety and standards authority of india",
+        "food safety and standards authority of india",
+        "food safety"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e866079baafc73567e3055",
+       "headline": "FSSAI Bans Calcium Carbide for Fruit Ripening, Orders Vigilance",
+       "url": "https://www.newkerala.com/news/a/fssai-orders-strict-vigilance-against-illegal-fruit-ripening-967.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-17T08:46:46",
+       "lede": "the food safety and standards authority of india (fssai) has ordered strict enforcement against the illegal use of calcium carbide, commonly called 'masala', for artificially ripening fruits like mangoes and bananas. the authority reiterated that the chemical is prohibited due to serious health risks including vomiting and skin ulcers. fssai",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.6
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "food safety and standards authority of india",
+        "food safety and standards authority of india"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e504c3d5e7fc42ee11aca5",
+       "headline": "The Supreme Court of India has Reserved order on a Public Interest Litigation - Food Marketing Technology",
+       "url": "https://fmtmagazine.in/the-supreme-court-of-india-has-reserved-order-on-a-public-interest-litigation/",
+       "publisher": "fmtmagazine.in",
+       "published_at": "2026-04-13T04:48:37",
+       "lede": "the supreme court of india has reserved order on a public interest litigation (pil) that sought the establishment of a specialised national task force to oversee the food safety and standards authority of india (fssai) enforcement activities. as per reports, the petitioner had argued that current enforcement mechanisms are insufficient",
+       "sentiment": {
+        "label": "none",
+        "score": 0.35,
+        "group": "neutral"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.61
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "national task force",
+        "food safety and standards authority of india"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a5cfc963d76f4afbd9c07",
+       "headline": "States Lead Crackdown as FSSAI Steps Up Food Safety Enforcement in FY26 - Agro & Food Processing",
+       "url": "https://agronfoodprocessing.com/states-lead-crackdown-as-fssai-steps-up-food-safety-enforcement-in-fy26/",
+       "publisher": "agronfoodprocessing.com",
+       "published_at": "2026-04-09T09:40:09",
+       "lede": "the food safety and standards authority of india (fssai) significantly intensified its food safety enforcement drive in fy 2025–26, with states playing a pivotal role in inspections, testing, and legal action nationwide. according to official sources, nearly 3,97,009 inspections were conducted at food establishments during the year. in parallel, 1,65,747",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.78
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d3d3d754bf662ce1d977",
+       "headline": "Police action targets data leak, not media: FSSAI sources - www.lokmattimes.com",
+       "url": "https://www.lokmattimes.com/national/police-action-targets-data-leak-not-media-fssai-sources/",
+       "publisher": "lokmattimes.com",
+       "published_at": "2026-04-09T05:52:44",
+       "lede": "new delhi [india], april 9 : government sources have clarified that the recent fir lodged with the delhi police in connection with the leakage of information of an inquiry conducted by the food safety and standards authority of india (fssai) is not aimed at silencing the media, but for identifying",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "food safety and standards authority of india"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2dd61d754bf662ce3fb92",
+       "headline": "Rs 155 crore penalty imposed for misbranding and substandard food products - The Tribune",
+       "url": "https://www.tribuneindia.com/news/india/rs-155-crore-penalty-imposed-for-misbranding-and-substandard-food-products/",
+       "publisher": "tribuneindia.com",
+       "published_at": "2026-04-09T04:01:38",
+       "lede": "in the financial year 2025-26, the food safety and standards authority of india (fssai) imposed financial penalties amounting to rs 154.87 crore as a measure against misbranding and substandard products.in the last financial year, authorities conducted 3,97,009 inspections across food establishments, signalling intensified scrutiny of compliance levels.in parallel, 1,65,747 food",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.81
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.75
+        },
+        {
+         "code": 326,
+         "path": "/Science/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "food safety",
+        "food safety and standards authority of india"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e6444b2461615d5f458516",
+       "headline": "FSSAI Data Leak FIR Targets Leakers, Not Media: Sources",
+       "url": "https://www.newkerala.com/news/a/police-action-targets-data-leak-not-media-fssai-736.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-09T04:01:21",
+       "lede": "government sources have clarified that an fir lodged over a leaked fssai inquiry targets those responsible for the breach, not the media. the leak involves portions of an ongoing, internal fssai recruitment probe that were circulated on social media. officials state such leaks compromise the investigation by alerting potential wrongdoers",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d0c5ff2654c79d705ba5",
+       "headline": "Police action targets data leak, not media: FSSAI sources",
+       "url": "https://www.aninews.in/news/national/general-news/police-action-targets-data-leak-not-media-fssai-sources20260409002244",
+       "publisher": "aninews.in",
+       "published_at": "2026-04-08T18:52:44",
+       "lede": "new delhi [india], april 9 (ani): government sources have clarified that the recent fir lodged with the delhi police in connection with the leakage of information of an inquiry conducted by the food safety and standards authority of india (fssai) is not aimed at silencing the media, but for identifying",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "food safety and standards authority of india"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2bbd9c1991f786ced6d9e",
+       "headline": "NHRC Notice to Health Ministry, FSSAI After Complaint Over Action Taken against Whistleblowers",
+       "url": "https://www.deccanchronicle.com/news/nhrc-notice-to-health-ministry-fssai-after-complaint-over-action-taken-against-whistleblowers-1949215",
+       "publisher": "deccanchronicle.com",
+       "published_at": "2026-04-08T03:16:49",
+       "lede": "new delhi: the nhrc has issued a notice to the health ministry, fssai and delhi police following a complaint that \"action\" was taken against \"whistleblowers\" who had raised their voice against alleged wrongdoing in the larger public interest, according to the proceedings of the case.the rights panel also sought an",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 279,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOCAwMzoxNjo0OSIsImkiOiI2OWUyYmJkOWMxOTkxZjc4NmNlZDZkOWUiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.209,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.212
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,524 @@
+{
+ "slug": "copper-price-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:09Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "copper price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "copper price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 66,
+     "tone": {
+      "carrying": 66,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 24,
+        "share_pct": 36.36
+       },
+       {
+        "group": "neutral",
+        "count": 0,
+        "share_pct": 0.0
+       },
+       {
+        "group": "positive",
+        "count": 42,
+        "share_pct": 63.64
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 66,
+      "count": 24,
+      "share_pct": 36.36
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.746,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.749
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "copper price",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "copper price",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 12,
+       "critical": 5,
+       "critical_pct": 41.7,
+       "negative": 2,
+       "positive": 10,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 8,
+       "critical": 2,
+       "critical_pct": 25.0,
+       "negative": 3,
+       "positive": 5,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 12,
+       "critical": 4,
+       "critical_pct": 33.3,
+       "negative": 1,
+       "positive": 11,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 8,
+       "critical": 5,
+       "critical_pct": 62.5,
+       "negative": 3,
+       "positive": 5,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 16,
+       "critical": 6,
+       "critical_pct": 37.5,
+       "negative": 6,
+       "positive": 10,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 10,
+       "critical": 3,
+       "critical_pct": 30.0,
+       "negative": 5,
+       "positive": 5,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2,
+       "critical": 2,
+       "critical_pct": 100.0,
+       "negative": 2,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 16,
+       "critical": 4,
+       "critical_pct": 25.0,
+       "negative": 2,
+       "positive": 14,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 12,
+       "critical": 2,
+       "critical_pct": 16.7,
+       "negative": 5,
+       "positive": 7,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 19,
+       "critical": 8,
+       "critical_pct": 42.1,
+       "negative": 6,
+       "positive": 13,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 14,
+       "critical": 6,
+       "critical_pct": 42.9,
+       "negative": 5,
+       "positive": 9,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 21,
+       "critical": 8,
+       "critical_pct": 38.1,
+       "negative": 8,
+       "positive": 13,
+       "partial_period": false
+      }
+     ],
+     "total": 150,
+     "critical_total": 55,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.741,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.744
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "copper price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "copper price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 66,
+     "carrying": 16,
+     "availability_pct": 24.24,
+     "items": [
+      {
+       "country": "united states",
+       "count": 8,
+       "share_pct": 12.12
+      },
+      {
+       "country": "canada",
+       "count": 2,
+       "share_pct": 3.03
+      },
+      {
+       "country": "australia",
+       "count": 1,
+       "share_pct": 1.52
+      },
+      {
+       "country": "china",
+       "count": 1,
+       "share_pct": 1.52
+      },
+      {
+       "country": "democratic republic of the congo",
+       "count": 1,
+       "share_pct": 1.52
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 3
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.397,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.399
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "copper price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "copper price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "industrial metal market analysis",
+       "count": 10,
+       "share": 23.26,
+       "lift": 949.19,
+       "baseline_count": 2,
+       "previous_period_count": 6,
+       "delta_pct": 66.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "metal commodity trading trends",
+       "count": 6,
+       "share": 13.95,
+       "lift": 1139.02,
+       "baseline_count": 1,
+       "previous_period_count": 6,
+       "delta_pct": 0.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "derivatives trading (futures, options)",
+       "count": 8,
+       "share": 18.6,
+       "lift": 759.35,
+       "baseline_count": 2,
+       "previous_period_count": 4,
+       "delta_pct": 100.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 6,
+       "share": 13.95,
+       "lift": 569.51,
+       "baseline_count": 2,
+       "previous_period_count": 1,
+       "delta_pct": 500.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "commodity trading and price changes",
+       "count": 17,
+       "share": 39.53,
+       "lift": 322.72,
+       "baseline_count": 10,
+       "previous_period_count": 8,
+       "delta_pct": 112.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 66,
+     "carrying": 43,
+     "carrier_share_pct": 65.15,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.312,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.314
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "copper price",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "copper price",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69d14ea7db97e87a05297fc2",
+       "headline": "Copper Price Crash: 2 महीने में ₹400 सस्ता हुआ कॉपर, अब आई तेजी; खरीदें या नहीं, टारगेट क्या? 6 सवालों में समझें\n - copper price today expert analysis targets investment",
+       "url": "https://www.jagran.com/business/commodity-copper-price-today-expert-analysis-targets-investment-40189123.html",
+       "publisher": "jagran.com",
+       "published_at": "2026-03-30T18:27:00",
+       "lede": "new delhi industrial school gold i.e. copper has been cheaper than rs. 400 in the last two months (copper price crash). on 29th january it had made all time high record (copper price all time high) by reaching rs.1559.75. however, since then it continues to decline continuously. but the price",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 1,
+     "total_estimate": 2,
+     "next_cursor": null,
+     "unresolved": 1,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.895,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "1 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.897
+    }
+   }
+  }
+ ]
+}

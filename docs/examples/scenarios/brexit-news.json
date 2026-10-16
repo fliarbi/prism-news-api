@@ -1,0 +1,841 @@
+{
+ "slug": "brexit-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:06:00Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "brexit",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "brexit",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 9745,
+     "tone": {
+      "carrying": 9738,
+      "availability_pct": 99.93,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5787,
+        "share_pct": 59.43
+       },
+       {
+        "group": "neutral",
+        "count": 453,
+        "share_pct": 4.65
+       },
+       {
+        "group": "positive",
+        "count": 3498,
+        "share_pct": 35.92
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 9742,
+      "count": 6074,
+      "share_pct": 62.35
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.455,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.458
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "brexit",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "brexit",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3575,
+       "critical": 2261,
+       "critical_pct": 63.2,
+       "negative": 1907,
+       "positive": 1337,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1693,
+       "critical": 920,
+       "critical_pct": 54.3,
+       "negative": 877,
+       "positive": 686,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2530,
+       "critical": 1415,
+       "critical_pct": 55.9,
+       "negative": 1429,
+       "positive": 943,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1851,
+       "critical": 1049,
+       "critical_pct": 56.7,
+       "negative": 1094,
+       "positive": 644,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2279,
+       "critical": 1396,
+       "critical_pct": 61.3,
+       "negative": 1294,
+       "positive": 845,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1910,
+       "critical": 1166,
+       "critical_pct": 61.0,
+       "negative": 1041,
+       "positive": 801,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1897,
+       "critical": 1176,
+       "critical_pct": 62.0,
+       "negative": 1096,
+       "positive": 736,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2073,
+       "critical": 1315,
+       "critical_pct": 63.4,
+       "negative": 1221,
+       "positive": 759,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2021,
+       "critical": 1237,
+       "critical_pct": 61.2,
+       "negative": 1183,
+       "positive": 742,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2747,
+       "critical": 1742,
+       "critical_pct": 63.4,
+       "negative": 1633,
+       "positive": 994,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2398,
+       "critical": 1504,
+       "critical_pct": 62.7,
+       "negative": 1448,
+       "positive": 833,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2579,
+       "critical": 1591,
+       "critical_pct": 61.7,
+       "negative": 1523,
+       "positive": 929,
+       "partial_period": false
+      }
+     ],
+     "total": 27553,
+     "critical_total": 16772,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.026,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.03
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "brexit",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "brexit",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 9745,
+     "carrying": 4828,
+     "availability_pct": 49.54,
+     "items": [
+      {
+       "country": "united kingdom",
+       "count": 2121,
+       "share_pct": 21.77
+      },
+      {
+       "country": "united states",
+       "count": 1301,
+       "share_pct": 13.35
+      },
+      {
+       "country": "belgium",
+       "count": 252,
+       "share_pct": 2.59
+      },
+      {
+       "country": "bahrain",
+       "count": 113,
+       "share_pct": 1.16
+      },
+      {
+       "country": "china",
+       "count": 102,
+       "share_pct": 1.05
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 939
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.044,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.051
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "brexit",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "brexit",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "hate crime legislation and enforcement",
+       "count": 153,
+       "share": 2.45,
+       "lift": 199.61,
+       "baseline_count": 1,
+       "previous_period_count": 10,
+       "delta_pct": 1430.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "domestic violence intervention programs",
+       "count": 380,
+       "share": 6.07,
+       "lift": 45.07,
+       "baseline_count": 11,
+       "previous_period_count": 29,
+       "delta_pct": 1210.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "juvenile justice and delinquency prevention",
+       "count": 380,
+       "share": 6.07,
+       "lift": 41.31,
+       "baseline_count": 12,
+       "previous_period_count": 29,
+       "delta_pct": 1210.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "sex offender registration and community notification",
+       "count": 381,
+       "share": 6.09,
+       "lift": 33.14,
+       "baseline_count": 15,
+       "previous_period_count": 30,
+       "delta_pct": 1170.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "biometric data collection for visas",
+       "count": 54,
+       "share": 0.86,
+       "lift": 70.45,
+       "baseline_count": 1,
+       "previous_period_count": 50,
+       "delta_pct": 8.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 9745,
+     "carrying": 6257,
+     "carrier_share_pct": 64.21,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.415,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.417
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "brexit",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "brexit",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2abe03963d76f4affdcd6b",
+       "headline": "UK should brace for fuel rationing over Iran war crisis, Starmer warned",
+       "url": "http://www.independent.co.uk/news/uk/politics/uk-oil-prices-fuel-rationing-starmer-iran-war-b2939318.html",
+       "publisher": "independent.co.uk",
+       "published_at": "2026-03-16T14:44:53",
+       "lede": "sign up to our free brexit newsletter for our analysis of the continuing impact of brexit on the uk sign up to our free newsletter for the latest analysis on brexit's impact sign up to our free newsletter for the latest analysis on brexit's impact email * sign up i",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfb436a9936a33b35c2a15",
+       "headline": "Brexit countdown: UK producers face uncertainty over EU shoots",
+       "url": "https://www.screendaily.com/news/brexit-countdown-uk-producers-face-uncertainty-over-eu-shoots/5137702.article",
+       "publisher": "screendaily.com",
+       "published_at": "2026-02-06T00:00:00",
+       "lede": "after a week of political maelstrom in the uk, with the country seemingly no closer to a solution to the ongoing brexit conundrum, some producers in the country who are lining up shoots in europe this summer are in the dark over whether those will be adversely affected. the latest",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d661a088760d34c04c66",
+       "headline": "Polanski accuses ‘authoritarian’ Labour of ‘using Jewish pain’ to ban marches",
+       "url": "https://www.independent.co.uk/news/uk/politics/polanski-mahmood-ban-marches-pro-palestine-jewish-b2967950.html",
+       "publisher": "independent.co.uk",
+       "published_at": "2026-04-30T18:30:59",
+       "lede": "sign up to our free brexit newsletter for our analysis of the continuing impact of brexit on the uk sign up to our free newsletter for the latest analysis on brexit's impact sign up to our free newsletter for the latest analysis on brexit's impact email * sign up i",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.8
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8850d43843dd771d104e3",
+       "headline": "Reform hopeful slammed for previous anti-Brexit statement despite party stance",
+       "url": "https://www.thenational.scot/news/26068358.reform-hopeful-slammed-previous-anti-brexit-statement-despite-party-stance/",
+       "publisher": "thenational.scot",
+       "published_at": "2026-04-30T16:04:03",
+       "lede": "julie macdougall, standing for nigel farage’s party in kirkcaldy next week, warned that brexit left the nhs “on its knees”, and also claimed the country’s exit from the eu had left britain in a “state of disarray”. reform uk were originally founded as the brexit party in 2018 on the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.81
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "reform uk"
+       ],
+       "people": [
+        "nigel farage"
+       ]
+      },
+      {
+       "id": "6a2ad46d5cefb83fe8465bb1",
+       "headline": "Keir Starmer accused of losing control of his party after failing to suspend rebels",
+       "url": "http://www.independent.co.uk/news/uk/politics/keir-starmer-mandelson-rebel-labour-suspend-b2967287.html",
+       "publisher": "independent.co.uk",
+       "published_at": "2026-04-29T18:48:06",
+       "lede": "sign up to our free brexit newsletter for our analysis of the continuing impact of brexit on the uk sign up to our free newsletter for the latest analysis on brexit's impact sign up to our free newsletter for the latest analysis on brexit's impact email * sign up i",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.87
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2abc63963d76f4affca4c3",
+       "headline": "Keir Starmer accused of losing control of his party after failing to suspend rebels",
+       "url": "https://independent.co.uk/news/uk/politics/starmer-labour-mps-pmqs-mandelson-live-updates-b2966940.html",
+       "publisher": "independent.co.uk",
+       "published_at": "2026-04-29T18:48:06",
+       "lede": "sign up to our free brexit newsletter for our analysis of the continuing impact of brexit on the uk sign up to our free newsletter for the latest analysis on brexit's impact sign up to our free newsletter for the latest analysis on brexit's impact email * sign up i",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.87
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa2f7963d76f4afeaea47",
+       "headline": "Keir Starmer accused of losing control of his party after failing to suspend rebels",
+       "url": "http://www.independent.co.uk/news/uk/politics/starmer-labour-mps-pmqs-mandelson-live-updates-b2966940.html",
+       "publisher": "independent.co.uk",
+       "published_at": "2026-04-29T18:48:06",
+       "lede": "sign up to our free brexit newsletter for our analysis of the continuing impact of brexit on the uk sign up to our free newsletter for the latest analysis on brexit's impact sign up to our free newsletter for the latest analysis on brexit's impact email * sign up i",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.87
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22ef727117df83f9582d9",
+       "headline": "Are Rachel Reeves’ days as chancellor numbered?",
+       "url": "https://www.independent.co.uk/news/uk/politics/rachel-reeves-chancellor-sacked-reshuffle-starmer-b2967250.html",
+       "publisher": "independent.co.uk",
+       "published_at": "2026-04-29T13:59:51",
+       "lede": "sign up to our free brexit newsletter for our analysis of the continuing impact of brexit on the uk sign up to our free newsletter for the latest analysis on brexit's impact sign up to our free newsletter for the latest analysis on brexit's impact email * sign up i",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.72
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f231f7c6105443aa5fbca8",
+       "headline": "Pig sector warns EU reset could weaken UK biosecurity defences",
+       "url": "https://www.farminguk.com/news/pig-sector-warns-eu-reset-could-weaken-uk-biosecurity-defences_68411.html",
+       "publisher": "farminguk.com",
+       "published_at": "2026-04-29T10:00:22",
+       "lede": "fresh warnings over illegal meat imports have intensified pressure on the government to avoid weakening uk border controls in any post-brexit reset with the eu. the national pig association (npa) said more than 14 tonnes of illegal meat seized at dover in march alone underlines the scale of the biosecurity",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 218,
+         "path": "/Business & Industrial/Agriculture & Forestry/Livestock",
+         "score": 0.68
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22956c6105443aa5cfc86",
+       "headline": "What If Reform Wins? by Peter Chappell review – a massive wake-up call",
+       "url": "https://www.theguardian.com/books/2026/apr/29/what-if-reform-wins-by-peter-chappell-review-a-massive-wake-up-call",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-29T08:00:50",
+       "lede": "for some years now, mainstream british politics has revolved increasingly obsessively around the question of how to stop nigel farage. what started a decade ago with brexit may yet end in a general election that boils down to one question: do you or don’t you want to risk putting this",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.82,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.8
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "nigel farage",
+        "nigel farage"
+       ]
+      },
+      {
+       "id": "69f1c93c399b489398df9b32",
+       "headline": "Starmer survives crucial vote – but at a cost to his MPs and parliament",
+       "url": "https://www.independent.co.uk/news/uk/politics/keir-starmer-privileges-committee-vote-b2966524.html",
+       "publisher": "independent.co.uk",
+       "published_at": "2026-04-28T17:29:41",
+       "lede": "sign up to our free brexit newsletter for our analysis of the continuing impact of brexit on the uk sign up to our free newsletter for the latest analysis on brexit's impact sign up to our free newsletter for the latest analysis on brexit's impact email * sign up i",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.77
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9801c37f6c5e66d5514d",
+       "headline": "British businesses 'need a bazooka' to take on Trump, China and the effects of Brexit - Business Biscuit",
+       "url": "https://businessbiscuit.com/business-news/economy-news/uk-needs-a-trade-bazooka/",
+       "publisher": "businessbiscuit.com",
+       "published_at": "2026-04-27T19:59:48",
+       "lede": "british businesses ‘need a bazooka’ to take on trump, china and the effects of brexit the uk government needs to deploy a “trade bazooka” to defend british businesses against mounting global economic pressures, according to a new report from the british chambers of commerce. the business group says uk firms",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e3c4d325610894208310",
+       "headline": "More and more people realising those Brexiters sold them a pup",
+       "url": "https://www.heraldscotland.com/politics/viewpoint/26052365.brexit-sold-pup-reality-snp-greens-libdems-say/",
+       "publisher": "heraldscotland.com",
+       "published_at": "2026-04-27T04:35:00",
+       "lede": "as we approach the 10th anniversary of the uk’s vote to leave the european union, brexit remains very much in the spotlight. given the scale of the damage visited upon us all by former conservative prime minister boris johnson’s hard brexit - which essentially took effect more than four-and-a-half years",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.76
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "boris johnson"
+       ]
+      },
+      {
+       "id": "69f0e393836d28f995cb6f96",
+       "headline": "More and more people realising those Brexiters sold them a pup",
+       "url": "https://www.heraldscotland.com/news/26052365.people-realising-brexiters-sold-pup/",
+       "publisher": "heraldscotland.com",
+       "published_at": "2026-04-27T04:35:00",
+       "lede": "as we approach the 10th anniversary of the uk’s vote to leave the european union, brexit remains very much in the spotlight. given the scale of the damage visited upon us all by former conservative prime minister boris johnson’s hard brexit - which essentially took effect more than four-and-a-half years",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.76
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "boris johnson"
+       ]
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 787,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAwNDozNTowMCIsImkiOiI2OWYwZTM5MzgzNmQyOGY5OTVjYjZmOTYiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.396,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.399
+    }
+   }
+  }
+ ]
+}

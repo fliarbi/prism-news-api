@@ -1,0 +1,875 @@
+{
+ "slug": "epidemic-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:11Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "epidemic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "epidemic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2834,
+     "tone": {
+      "carrying": 2828,
+      "availability_pct": 99.79,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1660,
+        "share_pct": 58.7
+       },
+       {
+        "group": "neutral",
+        "count": 119,
+        "share_pct": 4.21
+       },
+       {
+        "group": "positive",
+        "count": 1049,
+        "share_pct": 37.09
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2834,
+      "count": 2267,
+      "share_pct": 79.99
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.744,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.746
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "epidemic",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "epidemic",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1299,
+       "critical": 1020,
+       "critical_pct": 78.5,
+       "negative": 929,
+       "positive": 317,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 610,
+       "critical": 472,
+       "critical_pct": 77.4,
+       "negative": 353,
+       "positive": 232,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 848,
+       "critical": 595,
+       "critical_pct": 70.2,
+       "negative": 597,
+       "positive": 228,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1390,
+       "critical": 1068,
+       "critical_pct": 76.8,
+       "negative": 1035,
+       "positive": 333,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 614,
+       "critical": 473,
+       "critical_pct": 77.0,
+       "negative": 367,
+       "positive": 225,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 650,
+       "critical": 539,
+       "critical_pct": 82.9,
+       "negative": 411,
+       "positive": 225,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 689,
+       "critical": 523,
+       "critical_pct": 75.9,
+       "negative": 421,
+       "positive": 249,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 896,
+       "critical": 668,
+       "critical_pct": 74.6,
+       "negative": 526,
+       "positive": 328,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 783,
+       "critical": 629,
+       "critical_pct": 80.3,
+       "negative": 412,
+       "positive": 337,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 660,
+       "critical": 521,
+       "critical_pct": 78.9,
+       "negative": 386,
+       "positive": 240,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 622,
+       "critical": 509,
+       "critical_pct": 81.8,
+       "negative": 379,
+       "positive": 215,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 769,
+       "critical": 608,
+       "critical_pct": 79.1,
+       "negative": 483,
+       "positive": 257,
+       "partial_period": false
+      }
+     ],
+     "total": 9830,
+     "critical_total": 7625,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.816,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.82
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "epidemic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "epidemic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2834,
+     "carrying": 819,
+     "availability_pct": 28.9,
+     "items": [
+      {
+       "country": "united states",
+       "count": 406,
+       "share_pct": 14.33
+      },
+      {
+       "country": "india",
+       "count": 84,
+       "share_pct": 2.96
+      },
+      {
+       "country": "united kingdom",
+       "count": 55,
+       "share_pct": 1.94
+      },
+      {
+       "country": "nigeria",
+       "count": 22,
+       "share_pct": 0.78
+      },
+      {
+       "country": "mexico",
+       "count": 17,
+       "share_pct": 0.6
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 235
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.32,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.325
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "epidemic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "epidemic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "global health challenges",
+       "count": 120,
+       "share": 6.94,
+       "lift": 566.22,
+       "baseline_count": 1,
+       "previous_period_count": 81,
+       "delta_pct": 48.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infectious disease control strategies",
+       "count": 78,
+       "share": 4.51,
+       "lift": 368.04,
+       "baseline_count": 1,
+       "previous_period_count": 61,
+       "delta_pct": 27.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 public health policies and lockdown measures",
+       "count": 78,
+       "share": 4.51,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 72,
+       "delta_pct": 8.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "immunization strategies for rare diseases",
+       "count": 63,
+       "share": 3.64,
+       "lift": 297.27,
+       "baseline_count": 1,
+       "previous_period_count": 61,
+       "delta_pct": 3.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "public health emergency preparedness",
+       "count": 182,
+       "share": 10.52,
+       "lift": 171.75,
+       "baseline_count": 5,
+       "previous_period_count": 134,
+       "delta_pct": 35.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2834,
+     "carrying": 1730,
+     "carrier_share_pct": 61.04,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.072,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.074
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "epidemic",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "epidemic",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e29da9d754bf662cd60f7d",
+       "headline": "Israel says antisemitism raging in Netherlands after Jewish school blast",
+       "url": "https://www.thehindu.com/news/international/israel-says-antisemitism-raging-in-netherlands-after-jewish-school-blast/article70744242.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-03-14T17:31:27",
+       "lede": "israel’s foreign ministry said on saturday (march 14, 2026) that “an antisemitism epidemic is raging” in the netherlands, after an overnight blast outside a jewish school in amsterdam. “where will the next attack be? the dutch government needs to do much more to fight antisemitism,” the ministry said, in a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cb5d84dafc42354b1118fe",
+       "headline": "États-Unis : L’épidémie de rougeole s’intensifie et menace le statut sanitaire du pays",
+       "url": "https://burkina24.com/2026/01/21/etats-unis-lepidemie-de-rougeole-sintensifie-et-menace-le-statut-sanitaire-du-pays/",
+       "publisher": "burkina24.com",
+       "published_at": "2026-01-21T10:32:16",
+       "lede": "measles is resurfaced in the united states, with a particularly worrying upsurge in south carolina, which has become the epicenter of the epidemic. since last autumn, more than 600 cases have been recorded in the state, a situation that has been described by local health authorities as the worst epidemic",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.9
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ba8d9baafc7356bc7730",
+       "headline": "Odisha’s growth story is dying of kidney disease",
+       "url": "https://sambadenglish.com/columns-and-analysis/odishas-growth-story-is-dying-of-kidney-disease-11015417",
+       "publisher": "sambadenglish.com",
+       "published_at": "2026-01-20T10:00:15",
+       "lede": "&amp;quot;by charudutta panigrahi odisha today stands at a dangerous crossroads. while policymakers and investors celebrate rising gdp figures and the promise of “smart cities,” a silent epidemic is eroding the very foundation of the state&amp;amp;quot;s future: chronic kidney disease (ckd). the numbers are stark, the causes are preventable, and the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc1ec06760819e3846c2c1",
+       "headline": "Time for decisive action on substance-use disorder treatment",
+       "url": "https://www.ama-assn.org/public-health/behavioral-health/time-decisive-action-substance-use-disorder-treatment",
+       "publisher": "ama-assn.org",
+       "published_at": "2026-01-13T13:00:00",
+       "lede": "ama news wire time for decisive action on substance-use disorder treatmentalthough opioid-related overdose deaths declined last year, the epidemic remains widespread and increasingly complex, driven by mixing opioids and other substances and an unpredictable illicit drug supply, according to a new report from the ama.the new ama report (pdf) outlines",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 117,
+         "path": "/Sensitive Subjects/Recreational Drugs",
+         "score": 0.64
+        },
+        {
+         "code": 576,
+         "path": "/Health/Substance Abuse/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ama",
+        "pdf"
+       ],
+       "people": []
+      },
+      {
+       "id": "695ec4a462c336f10e9ee380",
+       "headline": "Flu Epidemic 2024: US Hospitalizations & Deaths Surge - TIme News",
+       "url": "https://time.news/flu-epidemic-2024-us-hospitalizations-deaths-surge/",
+       "publisher": "time.news",
+       "published_at": "2026-01-07T13:00:49",
+       "lede": "u.s. flu season surges: deaths exceed 5,000, hospitalizations at 30-year higha severe influenza epidemic is sweeping across the united states, resulting in at least 5,000 deaths and 120,000 hospitalizations – the highest hospitalization rates seen in three decades. the current outbreak, described as the worst since the covid-19 pandemic, is",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.63
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.55
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.55
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8cf0c79a596b4f7c172ee",
+       "headline": "Transmitted by Rats and Rodents: Warnings of a Potential Leptospirosis Outbreak in Gaza - Jordan News | Latest News from Jordan, MENA",
+       "url": "https://www.jordannews.jo/Section-20/Middle-East/Transmitted-by-Rats-and-Rodents-Warnings-of-a-Potential-Leptospirosis-Outbreak-in-Gaza-47779",
+       "publisher": "jordannews.jo",
+       "published_at": "2026-01-01T17:00:00",
+       "lede": "اضافة اعلانthe director of medical relief in gaza, dr. bassam zaqout, warned of serious concerns over the possible emergence of a new epidemic in the strip, amid a sharp deterioration in health and environmental conditions and the widespread presence of rodents among the tents of displaced people.zaqout said medical authorities",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "palestine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a08b1f14a7a0d94c1232a5e",
+       "headline": "Prix du carburant : « Une nouvelle mobilisation des gilets jaunes n’est pas à redouter  »",
+       "url": "https://www.la-croix.com/a-vif/prix-du-carburant-une-nouvelle-mobilisation-des-gilets-jaunes-n-est-pas-a-redouter-20260423",
+       "publisher": "la-croix.com",
+       "published_at": "2026-04-23T10:17:21",
+       "lede": "the two quinquennats of emmanuel macron will probably remain like those of all crises, especially social ones. covid's epidemic, a challenge to the reform of pensions or the consequences of the war in ukraine, at every subsaute the fractures have been deepened. yet, to date, the movement of yellow vests",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea31ad8266d9339995f312",
+       "headline": "How Delaware can prevent gun violence before it happens | Opinion",
+       "url": "https://www.delawareonline.com/story/opinion/2026/04/23/delaware-gun-regulations/89735314007/",
+       "publisher": "delawareonline.com",
+       "published_at": "2026-04-23T08:32:13",
+       "lede": "denise marks special to the usa today network april 23, 2026, 4:32 a.m. et as a nurse, i spent decades on the frontlines, caring for those most impacted by delaware’s gun violence epidemic. i saw firsthand how bullets tear through flesh and bone, changing people’s lives completely. and this connection",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 207,
+         "path": "/Sensitive Subjects/Firearms & Weapons",
+         "score": 0.98
+        },
+        {
+         "code": 30,
+         "path": "/Law & Government/Legal/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "c3d306bb59756a7e70a5b020",
+       "headline": "Targeting the virus-host interface for the development of therapeutics against filoviruses.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42001552/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "targeting the virus-host interface for the development of therapeutics against filoviruses.until relatively recently, treatment for filovirus infections was limited to supportive care measures, but the occurrence of several large outbreaks in past years, including a multinational epidemic in west africa from 2013 to 2016, has spurred the advancement of several",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.8
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfb18bda2167bba6fff240",
+       "headline": "Niël Terblanché In a pressing announcement, the Ministry of Health and Social Services (MoHSS) of Namibia has officially declared a malaria epidemic across various districts, following alarming statistics that have emerged in recent weeks. The announcement comes in the wake of over 12 fatalities and",
+       "url": "https://www.observer24.com.na/malaria-epidemic-alert-registered-in-namibia/",
+       "publisher": "observer24.com.na",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "niël terblanché in a pressing announcement, the ministry of health and social services (mohss) of namibia has officially declared a malaria epidemic across various districts, following alarming statistics that have emerged in recent weeks. the announcement comes in the wake of over 12 fatalities and the hospitalization of 133 individuals",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.77
+        }
+       ],
+       "country": "namibia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d9f2ff2654c79d727256",
+       "headline": "Tuberculose Au Mali | Un Défi De Santé Publique Persistant Malgré Des Efforts Accrus",
+       "url": "https://maliactu.net/tuberculose-au-mali-un-defi-de-sante-publique-persistant-malgre-des-efforts-accrus/",
+       "publisher": "maliactu.net",
+       "published_at": "2026-04-09T02:34:47",
+       "lede": "tuberculosis, a still active threat in mali tuberculosis (tb) remains a major challenge for public health in mali, with recent figures highlighting the persistence of the epidemic. in 2025, the country reported 8,993 cases of tuberculosis, a rate of 38 cases per 100,000 inhabitants. this infectious disease continues to affect",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.88
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.49
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e28da63aab8d96aa2e751b",
+       "headline": "Application of TE Series Ultrasound against COVID-19 - Mindray",
+       "url": "https://www.mindray.com/en/covid-19-response/application-of-te-series-ultrasound-against-covid-19",
+       "publisher": "mindray.com",
+       "published_at": "2026-04-04T00:00:00",
+       "lede": "te7 ace provides unique one transducer solution for fast scanning. with cw support, the assessment of lung, heart, abdomen, etc. can be evaluated by just using a single transducer. in the current epidemic situation, making rapid diagnosis without changing transducers will greatly increase the efficiency and reduce the risk of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.48
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.44
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e28abf277be6ed2d96d796",
+       "headline": "How software can help tackle rising school absences | IRIS",
+       "url": "https://www.iris.co.uk/blog/education/how-software-can-help-tackle-rising-school-absences/",
+       "publisher": "iris.co.uk",
+       "published_at": "2026-04-01T08:45:10",
+       "lede": "in recent months, ever-increasing student absenteeism has been referred to as the new epidemic facing schools. prior to the pandemic, school absence rates hovered around 4.7%, but according to the dfe, these rates have now risen to 7.5%. to make matters worse, the rates for persistent absenteeism in which students",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.78
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.66
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 256,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wMSAwODo0NToxMCIsImkiOiI2OWUyOGFiZjI3N2JlNmVkMmQ5NmQ3OTYiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 11.54,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 11.542
+    }
+   }
+  }
+ ]
+}

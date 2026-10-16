@@ -1,0 +1,993 @@
+{
+ "slug": "fuel-prices-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:08Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "fuel prices",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "fuel prices",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 31980,
+     "tone": {
+      "carrying": 31959,
+      "availability_pct": 99.93,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 25881,
+        "share_pct": 80.98
+       },
+       {
+        "group": "neutral",
+        "count": 537,
+        "share_pct": 1.68
+       },
+       {
+        "group": "positive",
+        "count": 5541,
+        "share_pct": 17.34
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 31971,
+      "count": 19659,
+      "share_pct": 61.49
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.695,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.697
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "fuel prices",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "fuel prices",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 843,
+       "critical": 320,
+       "critical_pct": 38.0,
+       "negative": 588,
+       "positive": 218,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 651,
+       "critical": 294,
+       "critical_pct": 45.2,
+       "negative": 478,
+       "positive": 165,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 755,
+       "critical": 349,
+       "critical_pct": 46.2,
+       "negative": 522,
+       "positive": 202,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 616,
+       "critical": 296,
+       "critical_pct": 48.1,
+       "negative": 430,
+       "positive": 170,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 605,
+       "critical": 334,
+       "critical_pct": 55.2,
+       "negative": 452,
+       "positive": 141,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 584,
+       "critical": 302,
+       "critical_pct": 51.7,
+       "negative": 404,
+       "positive": 163,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 576,
+       "critical": 318,
+       "critical_pct": 55.2,
+       "negative": 392,
+       "positive": 174,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 559,
+       "critical": 263,
+       "critical_pct": 47.0,
+       "negative": 376,
+       "positive": 173,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 726,
+       "critical": 340,
+       "critical_pct": 46.8,
+       "negative": 500,
+       "positive": 199,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 894,
+       "critical": 431,
+       "critical_pct": 48.2,
+       "negative": 590,
+       "positive": 282,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 12975,
+       "critical": 8188,
+       "critical_pct": 63.1,
+       "negative": 10951,
+       "positive": 1794,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 17385,
+       "critical": 10700,
+       "critical_pct": 61.5,
+       "negative": 13840,
+       "positive": 3266,
+       "partial_period": false
+      }
+     ],
+     "total": 37169,
+     "critical_total": 22135,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.427,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.43
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "fuel prices",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "fuel prices",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 31980,
+     "carrying": 14677,
+     "availability_pct": 45.89,
+     "items": [
+      {
+       "country": "united states",
+       "count": 4601,
+       "share_pct": 14.39
+      },
+      {
+       "country": "india",
+       "count": 1170,
+       "share_pct": 3.66
+      },
+      {
+       "country": "iran",
+       "count": 1079,
+       "share_pct": 3.37
+      },
+      {
+       "country": "australia",
+       "count": 900,
+       "share_pct": 2.81
+      },
+      {
+       "country": "philippines",
+       "count": 876,
+       "share_pct": 2.74
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 6051
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.716,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.718
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "fuel prices",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "fuel prices",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "aviation fuel management",
+       "count": 1208,
+       "share": 5.73,
+       "lift": 467.83,
+       "baseline_count": 1,
+       "previous_period_count": 24,
+       "delta_pct": 4933.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "air travel carbon offset initiatives",
+       "count": 1136,
+       "share": 5.39,
+       "lift": 439.95,
+       "baseline_count": 1,
+       "previous_period_count": 18,
+       "delta_pct": 6211.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil and gas market trends",
+       "count": 6686,
+       "share": 31.72,
+       "lift": 95.9,
+       "baseline_count": 27,
+       "previous_period_count": 397,
+       "delta_pct": 1584.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gasoline production technologies",
+       "count": 2453,
+       "share": 11.64,
+       "lift": 135.71,
+       "baseline_count": 7,
+       "previous_period_count": 271,
+       "delta_pct": 805.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economic impact of oil exports",
+       "count": 1535,
+       "share": 7.28,
+       "lift": 148.62,
+       "baseline_count": 4,
+       "previous_period_count": 29,
+       "delta_pct": 5193.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 31980,
+     "carrying": 21078,
+     "carrier_share_pct": 65.91,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.895,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.898
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "fuel prices",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "fuel prices",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a64f15cefb83fe8fc3ee3",
+       "headline": "World Bank Warns Middle East Conflict Could Push 2.4 Million Kenyans Into Poverty",
+       "url": "https://businesstoday.co.ke/iran-could-push-kenyans-into-poverty/",
+       "publisher": "businesstoday.co.ke",
+       "published_at": "2026-04-27T10:48:05",
+       "lede": "kenya could see millions more people pushed into poverty this year as the economic shock from the ongoing middle east conflict ripples through fuel prices, food costs and household incomes, according to a new world bank warning. in its april 2026 africa economic update, the world bank says kenya’s poverty",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.51
+        },
+        {
+         "code": 279,
+         "path": "/People & Society/Social Issues & Advocacy/Poverty & Hunger",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9903d75f157062ca6e176",
+       "headline": "Trump managing Iran war based on conflicting caprices that blindside his aides — report",
+       "url": "https://www.timesofisrael.com/trump-managing-iran-war-based-on-conflicting-caprices-that-blindside-his-aides-report/",
+       "publisher": "timesofisrael.com",
+       "published_at": "2026-04-19T13:39:43",
+       "lede": "us president donald trump has been making key decisions about the war in iran in a slapdash manner without input from his advisers, and was eager for a ceasefire to address rising fuel prices, according to a saturday report from the wall street journal. the report, which cited several unnamed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.9
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.72
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "the wall street journal"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e8cc729baafc7356cbc52e",
+       "headline": "New update on when UK petrol and diesel prices will 'go other way'",
+       "url": "https://www.express.co.uk/finance/personalfinance/2193448/new-update-when-uk-petrol-diesel-prices-finally-start-go-other-way",
+       "publisher": "express.co.uk",
+       "published_at": "2026-04-13T11:47:00",
+       "lede": "uk drivers have been hit hard the surge in fuel prices since the outbreak of the middle east conflict has almost ground to a halt, new figures reveal. average pump prices at uk forecourts rose for the 43rd consecutive day on monday to hit 158.3p per litre for petrol and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.86
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea2ffc75c44d9ce88395d1",
+       "headline": "Iran war leaves crisis-scarred countries counting the cost - The Economic Times",
+       "url": "http://economictimes.indiatimes.com/news/international/world-news/iran-war-leaves-crisis-scarred-countries-counting-the-cost/printarticle/130225551.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-13T05:17:00",
+       "lede": "london/colombo/islamabad: sanoj weeratunge thought this would finally be the year his tour firm put sri lanka's spate of crises behind it. then the iran war erupted 2,700 miles away, the government hiked fuel prices by 35% and business slumped almost a third. we have had a very difficult road over",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.65
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.56
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.49
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8c65d5cfa3e5ba5390ebe",
+       "headline": "Iran war leaves crisis-scarred countries counting the cost",
+       "url": "https://economictimes.indiatimes.com/news/international/world-news/iran-war-leaves-crisis-scarred-countries-counting-the-cost/articleshow/130225551.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-13T05:17:00",
+       "lede": "london/colombo/islamabad: sanoj weeratunge thought this would finally be the year his tour firm put sri lanka's spate of crises behind it. then the iran war erupted 2,700 miles away, the government hiked fuel prices by 35% and business slumped almost a third. we have had a very difficult road over",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.65
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.56
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.49
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69fa3ac2713680636ef54364",
+       "headline": "In der Regierung liegen die Nerven blank – Friedensforscherin im Gespräch über Lösungen",
+       "url": "https://t-online.de/nachrichten/tagesanbruch/id_101207448/spritpreise-steigen-golfkrise-treibt-kosten-regierung-streitet-um-kurs.html",
+       "publisher": "t-online.de",
+       "published_at": "2026-04-11T03:09:47",
+       "lede": "read out current time: 0:00 total time: 0:00 1 x now new at t-online: customize font size! share article good morning, dear reader, dear reader, the shock waves of the crisis in the persian gulf are shaking the republic. yesterday fuel prices rose by more than nine cents, and drivers",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.69
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.51
+        },
+        {
+         "code": 81,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Maritime Transport",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3cb72b8c34c1508f5ac5b",
+       "headline": "In der Regierung liegen die Nerven blank – Friedensforscherin im Gespräch über Lösungen",
+       "url": "https://www.t-online.de/nachrichten/tagesanbruch/id_101207448/spritpreise-steigen-golfkrise-treibt-kosten-regierung-streitet-um-kurs.html",
+       "publisher": "t-online.de",
+       "published_at": "2026-04-11T03:09:47",
+       "lede": "read out current time: 0:00 total time: 0:00 1 x now new at t-online: customize font size! share article good morning, dear reader, dear reader, the shock waves of the crisis in the persian gulf are shaking the republic. yesterday fuel prices rose by more than nine cents, and drivers",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.69
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.51
+        },
+        {
+         "code": 81,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Maritime Transport",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8caa07bb1410d4cc157f9",
+       "headline": "Dublín dice que protestas por el precio de la energía pueden provocar corte de suministro",
+       "url": "https://www.infobae.com/america/agencias/2026/04/10/dublin-dice-que-protestas-por-el-precio-de-la-energia-pueden-provocar-corte-de-suministro/",
+       "publisher": "infobae.com",
+       "published_at": "2026-04-10T14:30:41",
+       "lede": "dubl=237;n, 10 apr (efe).- irish prime minister 233;s, miche=225;l martin, advirti=243; this friday that pa=237;s is <=225; &quot;n> near&quot; to be forced to refuse entry to petr=243;leo due to protesters keeping blocked by fourth d=237;a with veh=237;heavy roads and energy facilities233;tic, in protest at the fuel prices caused by the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2de7f601121844c438b71",
+       "headline": "Fuel prices should fall ‘by end of weekend or next week’ says French PM",
+       "url": "https://www.connexionfrance.com/practical/fuel-prices-should-fall-by-end-of-weekend-or-next-week-says-french-pm/782735",
+       "publisher": "connexionfrance.com",
+       "published_at": "2026-04-09T08:12:02",
+       "lede": "french prime minister sébastien lecornu has requested that fuel prices drop “by the end of the weekend [or] the start of next week,” following the announcement of a two-week ceasefire in the middle east. he also said that he is not opposed to requests by five eu countries, including germany,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.76
+        }
+       ],
+       "country": "france",
+       "organizations": [],
+       "people": [
+        "sébastien lecornu"
+       ]
+      },
+      {
+       "id": "69e8420d9baafc735668289a",
+       "headline": "Strait of Hormuz open or close? Only a 'trickle' of oil leaving right now despite ceasefire - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/business/international-business/strait-of-hormuz-open-or-close-only-a-trickle-of-oil-leaving-right-now-despite-ceasefire/articleshow/130128831.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-09T04:57:00",
+       "lede": "the tussle over the opening of the strait of hormuz continues as the middle east crisis intensifies, with oil shipments yet to return to normal levels. according to a senior gulf oil adviser, any impact on fuel prices in the united states is likely to take time.tom kloza, the companyâs",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.82
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.58
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "gulf oil"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2d881ff2654c79d7220cb",
+       "headline": "Fuel prices on edge as ceasefire shows 'fragility'",
+       "url": "https://www.businessnews.com.au/article/Fuel-prices-on-edge-as-ceasefire-shows-fragility",
+       "publisher": "businessnews.com.au",
+       "published_at": "2026-04-09T00:50:06",
+       "lede": "australians are being warned not to expect an immediate drop in fuel prices, as a 'fragile' ceasefire between iran and the us nears breaking point. in exchange for american attacks being put on hold for two weeks, iran had agreed to allow tankers to resume travelling through the critical shipping",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.66
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.6
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.54
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c9847f3a572cf4b324c8",
+       "headline": "Video: Soaring costs, fuel shortage fears drive Pakistan to electric bikes",
+       "url": "https://www.theglobeandmail.com/world/video-soaring-costs-fuel-shortage-fears-drive-pakistan-to-electric-bikes/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-08T12:03:22",
+       "lede": "soaring costs, fuel shortage fears drive pakistan to electric bikes reuters published 1 hour ago while rising fuel prices driven by the middle east crisis are compounding economic pain for pakistanis, industry officials and analysts expect it to to supercharge a rush for electric motorbikes in the country. reuters please",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "united kingdom",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2b114dc480588dca0c1fb",
+       "headline": "Traffic protests may herald summer of discontent with implications for politics",
+       "url": "https://www.irishtimes.com/politics/2026/04/07/traffic-protests-may-herald-summer-of-discontent-with-implications-for-politics/",
+       "publisher": "irishtimes.com",
+       "published_at": "2026-04-07T18:35:41",
+       "lede": "there was gridlock on many of the republic’s roads on tuesday as truck drivers and farmers, furious about spiralling fuel prices, conducted their slow-moving convoys and protests. the government was the target of much of their ire, with claims that it has not done enough to help them with rising",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.46
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.42
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e299a290d9a716b4bbbdd6",
+       "headline": "Tragic Missile Strike in Haifa: Four Lives Lost | Law-Order",
+       "url": "https://www.devdiscourse.com/article/law-order/3863773-tragic-missile-strike-in-haifa-four-lives-lost",
+       "publisher": "devdiscourse.com",
+       "published_at": "2026-04-06T10:20:53",
+       "lede": "latest news in puducherry, bjp leader amit shah lampoons rahul gandhi for claiming increase in fuel prices. bengal sir: sc asks calcutta hc cj to set up 3-judge panel to prescribe procedures for tribunals to decide appeals against deletions. public borrowings will have to be smart in view of global",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.75
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": [
+        "amit shah",
+        "rahul gandhi"
+       ]
+      },
+      {
+       "id": "69e2a49c9b322e6b3e9df0e4",
+       "headline": "Fuel rationing warning as EU warns of ‘long-lasting’ energy crisis from Iran war",
+       "url": "https://www.express.co.uk/news/world/2190166/fuel-rationing-warning-energy-crisis-iran",
+       "publisher": "express.co.uk",
+       "published_at": "2026-04-05T03:31:00",
+       "lede": "fuel prices have surged in the uk a fuel rationing warning has been issued as the war in the middle east rages on. european energy commissioner dan jorgensen said the eu is preparing for a \"long-lasting\" energy crisis as iran continues to block the strait of hormuz. the eu is",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.92
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "european energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2acc2a85be7e5065e0a72",
+       "headline": "U.S. searches for airman shot down in Iran, while Trump posts ultimatum",
+       "url": "https://www.ideastream.org/2026-04-04/u-s-searches-for-airman-shot-down-in-iran-while-trump-posts-ultimatum",
+       "publisher": "ideastream.org",
+       "published_at": "2026-04-04T21:15:24",
+       "lede": "rob schmitz, host: tomorrow is easter. this week is also passover, and the holy land is at war. today marks six weeks since the u.s. and israel began attacking iran, triggering retaliation against u.s. allies in the gulf, an invasion of lebanon, a spike in fuel prices, global market turmoil",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.5
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 8031,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wMSAwMDozNDowMCIsImkiOiI2OWQxNTgxM2RiOTdlODdhMDUyYWM4YTciLCJwIjo5fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.931,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.934
+    }
+   }
+  }
+ ]
+}

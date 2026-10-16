@@ -1,0 +1,914 @@
+{
+ "slug": "rbi-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:56:00Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "RBI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rbi",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 44419,
+     "tone": {
+      "carrying": 44340,
+      "availability_pct": 99.82,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 14706,
+        "share_pct": 33.17
+       },
+       {
+        "group": "neutral",
+        "count": 1554,
+        "share_pct": 3.5
+       },
+       {
+        "group": "positive",
+        "count": 28080,
+        "share_pct": 63.33
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 44396,
+      "count": 22233,
+      "share_pct": 50.08
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.517,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.522
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "RBI",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rbi",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 10335,
+       "critical": 4135,
+       "critical_pct": 40.0,
+       "negative": 2770,
+       "positive": 7019,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 8468,
+       "critical": 4244,
+       "critical_pct": 50.1,
+       "negative": 2560,
+       "positive": 5549,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 9361,
+       "critical": 4206,
+       "critical_pct": 44.9,
+       "negative": 3202,
+       "positive": 5762,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 20704,
+       "critical": 9772,
+       "critical_pct": 47.2,
+       "negative": 8160,
+       "positive": 11882,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 10545,
+       "critical": 5611,
+       "critical_pct": 53.2,
+       "negative": 3873,
+       "positive": 6228,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 8484,
+       "critical": 4986,
+       "critical_pct": 58.8,
+       "negative": 2799,
+       "positive": 5424,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 7423,
+       "critical": 4205,
+       "critical_pct": 56.6,
+       "negative": 2423,
+       "positive": 4802,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 8120,
+       "critical": 5096,
+       "critical_pct": 62.8,
+       "negative": 2920,
+       "positive": 4941,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 6107,
+       "critical": 3496,
+       "critical_pct": 57.2,
+       "negative": 1992,
+       "positive": 3959,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 9851,
+       "critical": 5248,
+       "critical_pct": 53.3,
+       "negative": 2342,
+       "positive": 7156,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 11060,
+       "critical": 5438,
+       "critical_pct": 49.2,
+       "negative": 3856,
+       "positive": 6796,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 17401,
+       "critical": 8051,
+       "critical_pct": 46.3,
+       "negative": 6516,
+       "positive": 10169,
+       "partial_period": false
+      }
+     ],
+     "total": 127859,
+     "critical_total": 64488,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.763,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.765
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "RBI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rbi",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 44419,
+     "carrying": 27998,
+     "availability_pct": 63.03,
+     "items": [
+      {
+       "country": "united states",
+       "count": 13935,
+       "share_pct": 31.37
+      },
+      {
+       "country": "india",
+       "count": 7621,
+       "share_pct": 17.16
+      },
+      {
+       "country": "united kingdom",
+       "count": 1565,
+       "share_pct": 3.52
+      },
+      {
+       "country": "iran",
+       "count": 381,
+       "share_pct": 0.86
+      },
+      {
+       "country": "china",
+       "count": 347,
+       "share_pct": 0.78
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 4149
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.232,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.237
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "RBI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rbi",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "emerging markets economic updates",
+       "count": 1625,
+       "share": 5.23,
+       "lift": 426.85,
+       "baseline_count": 1,
+       "previous_period_count": 1443,
+       "delta_pct": 12.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 1950,
+       "share": 6.27,
+       "lift": 256.11,
+       "baseline_count": 2,
+       "previous_period_count": 1636,
+       "delta_pct": 19.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "asian financial market developments",
+       "count": 1069,
+       "share": 3.44,
+       "lift": 280.8,
+       "baseline_count": 1,
+       "previous_period_count": 1018,
+       "delta_pct": 5.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "central bank monetary policy announcements",
+       "count": 1516,
+       "share": 4.88,
+       "lift": 66.37,
+       "baseline_count": 6,
+       "previous_period_count": 1397,
+       "delta_pct": 8.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "interest rate decisions and impacts",
+       "count": 1690,
+       "share": 5.44,
+       "lift": 55.49,
+       "baseline_count": 8,
+       "previous_period_count": 1481,
+       "delta_pct": 14.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 44419,
+     "carrying": 31076,
+     "carrier_share_pct": 69.96,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.546,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 6.553
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "RBI",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "rbi",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69bb3b69eec96a73430153e9",
+       "headline": "12-year-old boy found hanging In Palakkad | Kochi News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/city/kochi/12-year-old-boy-found-hanging-in-palakkad/articleshow/127951363.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-02-06T01:22:00",
+       "lede": "islamabad suicide blast, bangladesh crisis, rbi's fraud compensation and morekochi: a 12-year-old boy was found hanging in the bathroom of his house in palakkad on thursday morning. the deceased has been identified as viswajith, 12, son of sivaprasad, of pokkanthod, elapully.he went for a bath in the morning. after noticing",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.75
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "viswajith"
+       ]
+      },
+      {
+       "id": "69f9dde7713680636ef381be",
+       "headline": "India central bank's FX forward book balloons to over $100bln as Iran war pummels rupee",
+       "url": "https://www.zawya.com/en/world/indian-sub-continent/india-central-banks-fx-forward-book-balloons-to-over-100bln-as-iran-war-pummels-rupee-j6qk9p72",
+       "publisher": "zawya.com",
+       "published_at": "2026-04-30T15:12:06",
+       "lede": "the reserve bank of india's short dollar positions in the fx market ballooned to a ⁠record high $104 billion in march, data showed on thursday, highlighting its efforts to defend the rupee from the threat posed bythe iran war to india's economic outlook. the rbi's short-dollar forward book expanded by",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.49
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "fx"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d750a088760d34c0eff9",
+       "headline": "Centre reviews Hyderabad Police’s Operation Octopus, pushes anti-fraud AI tool",
+       "url": "https://www.siasat.com/centre-reviews-hyderabad-polices-operation-octopus-pushes-anti-fraud-ai-tool-3462916/",
+       "publisher": "siasat.com",
+       "published_at": "2026-04-30T13:44:17",
+       "lede": "hyderabad:&nbsp;the department of financial services (dfs) has directed banks to adopt the reserve bank of india (rbi)-developed artificial intelligence tool mulehunter.ai at the earliest to detect and block mule accounts being used by cyber criminals to siphon money from victims of digital financial fraud. the instruction came at a high-level",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.78
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.56
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e3f073a4d098b40b590fa",
+       "headline": "RBI Permits Banks To Provide Relief Without Borrowers’ Request In Disaster-affected Areas - Outlook Money",
+       "url": "https://outlookmoney.com/banking/rbi-permits-banks-to-provide-relief-without-borrowers-request-in-disaster-affected-areas",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-30T08:20:46",
+       "lede": "rbi has allowed banks to extend relief without borrower requestsborrowers have been given opt-out option within 135 daysadditional 5 per cent provisioning has been mandated for restructured&nbsp;the reserve bank of india (rbi) has permitted banks and financial institutions to extend relief measures to borrowers in disaster-stricken regions without waiting for",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f88213bbf1d314559738c0",
+       "headline": "How long-term bet on rupee saved Rs 14,000 crore of forex in February",
+       "url": "https://indianexpress.com/article/business/market/how-long-term-bet-on-rupee-saved-rs-14000-crore-of-forex-in-february-10663112/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-29T22:55:43",
+       "lede": "the war in west asia has exacerbated a key pain point for the country's economy: the rupee’s value. after closing around 91-per-dollar on february 27, the rupee fell by as much as 4.5% to 95.24 in march before action by the rbi to curb speculative bets helped it gain some",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.77
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.55
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0b072347abc155c293c098",
+       "headline": "Banks allowed to offer natural calamity relief suo motu from July 1",
+       "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/banks-allowed-to-offer-natural-calamity-relief-suo-motu-from-july-1/articleshow/130617158.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-29T19:22:00",
+       "lede": "mumbai: the reserve bank of india (rbi) on wednesday allowed banks to extend relief measures to borrowers affected by natural calamities without waiting for formal requests, and deferred the implementation of its resolution framework by a quarter to july 1.the relaxation follows stakeholder feedback and amid rising weather-related disruptions impacting",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ec017c0b414d24a1e9111",
+       "headline": "RBI overhauls framework for Banks for handling loans affected by natural disasters",
+       "url": "https://www.thehindubusinessline.com/money-and-banking/rbi-overhauls-framework-for-banks-for-handling-loans-affected-by-natural-disasters/article70921629.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-29T15:48:43",
+       "lede": "the reserve bank of india (rbi) has overhauled the framework for banks for handling loans affected by natural disasters in a bid to streamline relief measures and ensure faster support to borrowers. the new rules titled “resolution of accounts impacted by calamities,” under the “reserve bank of india (commercial banks",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ec0e9c0b414d24a1f5a44",
+       "headline": "Prashant Bhushan urges RBI to intervene in the proposed re-appointment of Bakhshi as ICICI Bank’s MD and CEO",
+       "url": "https://www.thehindubusinessline.com/money-and-banking/prashant-bhushan-urges-rbi-to-intervene-in-the-proposed-re-appointment-of-bakhshi-as-icici-banks-md-and-ceo/article70921239.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-29T15:10:51",
+       "lede": "a representation by prashant bhushan, senior advocate, supreme court, has urged the reserve bank of india (rbi) to intervene in the proposed re-appointment of sandeep bakhshi as managing director and ceo of icici bank, citing alleged persistent regulatory violations, systemic governance failures, widespread frauds and egregious labour law violations. in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.6
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22e2d27117df83f952bfd",
+       "headline": "RBIâs new disaster loan relief rules explained: Banks can help borrowers automatically; what changes from July 1 - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/business/india-business/rbis-new-disaster-loan-relief-rules-explained-banks-can-help-borrowers-automatically-what-changes-from-july-1/articleshow/130610752.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-29T14:48:00",
+       "lede": "banks will be allowed to extend relief measures to borrowers in calamity-hit areas without waiting for individual requests, under revised reserve bank of india guidelines that will come into force from july 1, 2026.the rbi on wednesday issued fresh directions after considering stakeholder feedback on draft norms covering relief measures",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23248c6105443aa6001d2",
+       "headline": "Why RBI Cancelled Paytm Payments Bank Licence: Vijay Shekhar Sharma Exit And Fintech Shake-Up Explained",
+       "url": "https://www.newsx.com/business/why-rbi-cancelled-paytm-payments-bank-licence-vijay-shekhar-sharma-exit-and-fintech-shake-up-explained-207198/",
+       "publisher": "newsx.com",
+       "published_at": "2026-04-29T10:56:23",
+       "lede": "the reserve bank of india (rbi) shutting down paytm payments bank limited (ppbl) marks one of the most significant regulatory interventions in india’s fast-evolving digital payments ecosystem. what might look like a sudden withdrawal of licence, however, is the end point of a long process of compliance issues, repeated warnings",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.79
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "paytm payments bank",
+        "paytm"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f231f4c6105443aa5fba16",
+       "headline": "Digital Arrest: 2-3 घंटे में ब्लॉक हो जाएगा सिम कार्ड, डिजिटल अरेस्ट को रोकने की पूरी तैयारी, व्हाट्सऐप ने भी उठाए ये सख्त कदम",
+       "url": "https://navbharattimes.indiatimes.com/tech/gadgets-news/new-system-block-fraud-sim-card-within-2-3-hour-to-stop-digital-arrest-scam-whatsapp-banned-9400-accounts/articleshow/130597463.cms",
+       "publisher": "navbharattimes.indiatimes.com",
+       "published_at": "2026-04-29T05:56:05",
+       "lede": "digital arrest scam: digital arrest scam cases are going to grow. the central government has told the supreme court that several levels of action has been taken together with telecom regulator, service provider, rbi, tech veterans and cbi to tackle the growing threat of digital arrest scam. not only that,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d7e3a088760d34c15781",
+       "headline": "RBI Revokes Paytm Payments Bank Licence",
+       "url": "https://paymentsindustryintelligence.com/rbi-revokes-paytm-payments-bank-licence/",
+       "publisher": "paymentsindustryintelligence.com",
+       "published_at": "2026-04-28T17:14:18",
+       "lede": "the reserve bank of india’s decision to cancel the banking licence of paytm payments bank marks a significant regulatory moment for india’s digital finance sector. announced on 24 april 2026, the action follows years of supervisory pressure and effectively brings the paytm unit’s banking activities to an end. the rbi",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.8
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "paytm payments bank",
+        "paytm"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ac6b9963d76f4af041820",
+       "headline": "RBI Notifies Fresh IRAC Guidelines; Old Framework Replaced with Amendments",
+       "url": "https://studycafe.in/rbi-notifies-fresh-irac-guidelines-old-framework-replaced-with-amendments-418502.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-28T16:12:54",
+       "lede": "rbi notifies fresh irac guidelines; old framework replaced with amendments the reserve bank of india has issued the final directions on asset classification, provisioning, and income recognition for commercial banks on april 27, 2026. these directions follow the draft framework released on october 7, 2025, which invited stakeholder feedback. after",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e24c836d28f995cb54f8",
+       "headline": "WhatsApp disables 9,400 accounts linked to digital arrest scams, govt tells Supreme Court | Today News",
+       "url": "https://www.livemint.com/news/india/whatsapp-disables-9-400-accounts-linked-to-digital-arrest-scams-govt-tells-supreme-court-11777381519053.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-28T14:09:17",
+       "lede": "a comprehensive initiative involving telecom regulators and service providers, the rbi, technology companies, and the cbi has been launched to combat the surge in digital arrest scams. as part of the initiative, whatsapp has disabled 9,400 accounts linked to these crimes, the government informed the supreme court on tuesday.these efforts",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.23,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.49
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0eaa6d32561089420edd4",
+       "headline": "WhatsApp banned 9,400 accounts involved in digital arrest scams since January this year: Centre to SC",
+       "url": "https://www.dtnext.in/news/business/whatsapp-banned-9400-accounts-involved-in-digital-arrest-scams-since-january-this-year-centre-to-sc",
+       "publisher": "dtnext.in",
+       "published_at": "2026-04-28T13:30:20",
+       "lede": "new delhi: a multi-pronged action involving telecom regulators, service providers, the rbi, tech giants and the cbi has been taken to tackle the rising menace of digital arrest scams, besides whatsapp banning 9,400 accounts involved in such offences, the centre has told the supreme court..the action was detailed by the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e193d32561089420654a",
+       "headline": "Govt tells SC: 9,400 WhatsApp accounts banned in scam crackdown",
+       "url": "https://telanganatoday.com/govt-tells-sc-9400-whatsapp-accounts-banned-in-scam-crackdown",
+       "publisher": "telanganatoday.com",
+       "published_at": "2026-04-28T13:24:37",
+       "lede": "new delhi: a multi-pronged action involving telecom regulators, service providers, the rbi, tech giants and the cbi has been taken to tackle the rising menace of digital arrest scams, besides whatsapp banning 9,400 accounts involved in such offences, the centre has told the supreme court. the action was detailed by",
+       "sentiment": null,
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 5333,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAxMzoyNDozNyIsImkiOiI2OWYwZTE5M2QzMjU2MTA4OTQyMDY1NGEiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.272,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.291
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,875 @@
+{
+ "slug": "3d-printing-industry",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:52:21Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "3d printing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "3d printing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4828,
+     "tone": {
+      "carrying": 4826,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 304,
+        "share_pct": 6.3
+       },
+       {
+        "group": "neutral",
+        "count": 40,
+        "share_pct": 0.83
+       },
+       {
+        "group": "positive",
+        "count": 4482,
+        "share_pct": 92.87
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4828,
+      "count": 2527,
+      "share_pct": 52.34
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.747,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.749
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "3d printing",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "3d printing",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 966,
+       "critical": 502,
+       "critical_pct": 52.0,
+       "negative": 37,
+       "positive": 921,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 915,
+       "critical": 508,
+       "critical_pct": 55.5,
+       "negative": 27,
+       "positive": 883,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1082,
+       "critical": 577,
+       "critical_pct": 53.3,
+       "negative": 42,
+       "positive": 1032,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1036,
+       "critical": 549,
+       "critical_pct": 53.0,
+       "negative": 29,
+       "positive": 1002,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 994,
+       "critical": 589,
+       "critical_pct": 59.3,
+       "negative": 35,
+       "positive": 953,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1031,
+       "critical": 594,
+       "critical_pct": 57.6,
+       "negative": 59,
+       "positive": 963,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1119,
+       "critical": 587,
+       "critical_pct": 52.5,
+       "negative": 36,
+       "positive": 1070,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1002,
+       "critical": 590,
+       "critical_pct": 58.9,
+       "negative": 41,
+       "positive": 958,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1049,
+       "critical": 586,
+       "critical_pct": 55.9,
+       "negative": 56,
+       "positive": 980,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1226,
+       "critical": 686,
+       "critical_pct": 56.0,
+       "negative": 89,
+       "positive": 1125,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1227,
+       "critical": 604,
+       "critical_pct": 49.2,
+       "negative": 98,
+       "positive": 1123,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1326,
+       "critical": 651,
+       "critical_pct": 49.1,
+       "negative": 61,
+       "positive": 1254,
+       "partial_period": false
+      }
+     ],
+     "total": 12973,
+     "critical_total": 7023,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.067,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.07
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "3d printing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "3d printing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4828,
+     "carrying": 1585,
+     "availability_pct": 32.83,
+     "items": [
+      {
+       "country": "united states",
+       "count": 798,
+       "share_pct": 16.53
+      },
+      {
+       "country": "united kingdom",
+       "count": 114,
+       "share_pct": 2.36
+      },
+      {
+       "country": "china",
+       "count": 113,
+       "share_pct": 2.34
+      },
+      {
+       "country": "india",
+       "count": 86,
+       "share_pct": 1.78
+      },
+      {
+       "country": "japan",
+       "count": 50,
+       "share_pct": 1.04
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 424
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.014,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.016
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "3d printing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "3d printing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "3d printers and additive manufacturing devices",
+       "count": 1782,
+       "share": 50.78,
+       "lift": 4145.47,
+       "baseline_count": 1,
+       "previous_period_count": 1385,
+       "delta_pct": 28.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "additive manufacturing technologies",
+       "count": 309,
+       "share": 8.81,
+       "lift": 718.83,
+       "baseline_count": 1,
+       "previous_period_count": 336,
+       "delta_pct": -8.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "industrial 3d printing applications",
+       "count": 289,
+       "share": 8.24,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 317,
+       "delta_pct": -8.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "prototyping and rapid manufacturing",
+       "count": 190,
+       "share": 5.41,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 230,
+       "delta_pct": -17.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "nanotechnology in drug delivery systems",
+       "count": 63,
+       "share": 1.8,
+       "lift": 146.56,
+       "baseline_count": 1,
+       "previous_period_count": 57,
+       "delta_pct": 10.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4828,
+     "carrying": 3509,
+     "carrier_share_pct": 72.68,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.027,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.03
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "3d printing",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "3d printing",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "4d7c613902d10475ff079949",
+       "headline": "Artificial Intelligence Enabled Precise 3D Printing of Polyvinylidene Fluoride (PVDF) Microfibers for Ultrasensitive Sensors.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41974611/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "artificial intelligence enabled precise 3d printing of polyvinylidene fluoride (pvdf) microfibers for ultrasensitive sensors.the pursuit of sustainable green energy has intensified the demand for self-powered materials, which are capable of efficiently converting ambient mechanical energy into electrical signals. herein, polyvinylidene fluoride (pvdf) fabricated by electro-assisted fused deposition modeling (e-fdm) 3d",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.96,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "4216dc2fbede80aeeda9ba92",
+       "headline": "3D printed photo-sensitized microfiltration membranes for simultaneous water filtration and pathogen management.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41734203/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "3d printed photo-sensitized microfiltration membranes for simultaneous water filtration and pathogen management.3d printing is emerging as a transformative approach in functional materials fabrication, enabling precise control over structural parameters, offering opportunities to custom-design permeability, selectivity, and fouling resistance of membrane materials. the ability to fabricate membranes with near-isoporous pore size",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.83,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e882ec9baafc735690f1d9",
+       "headline": "Printed neurons communicate with living brain cells: A computer efficiency boost?",
+       "url": "https://www.digitaljournal.com/tech-science/printed-neurons-communicate-with-living-brain-cells-a-computer-efficiency-boost/article",
+       "publisher": "digitaljournal.com",
+       "published_at": "2026-04-21T03:33:12",
+       "lede": "3d printing and advanced computing. image by tim sandle a new device can mimic complex brain signals. in turn, this points to more energy-efficient computing. at the heart of this is printed artificial neurons which can generate realistic brain-like signals that activate living neurons. engineers have successfully printed artificial neurons",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 383,
+         "path": "/Science/Biological Sciences/Neuroscience",
+         "score": 0.75
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87d437bb1410d4c84d8db",
+       "headline": "Supercapacitor-Powered Electric Wind-Up Plane",
+       "url": "https://www.circuitdigest.com/news/supercapacitor-powered-electric-wind-up-plane",
+       "publisher": "circuitdigest.com",
+       "published_at": "2026-04-20T11:20:24",
+       "lede": "we have all seen old rubber band wind-up planes built by crazy makers. tom stanton, a youtuber, just turned one into a 21st century electric wind-up plane powered by a supercapacitor. he is an engineer and a maker who loves to mix physics, 3d printing and clean energy storage. instead",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e847b87bb1410d4c639e9f",
+       "headline": "Scientists Used AI to Design a Steel That's 30% Stronger, Never Rusts, and Was Built for 3D Printing From the Start",
+       "url": "https://indiandefencereview.com/scientists-used-ai-design-steel-30-stronger-never-rusts-built-for-3d-printing/",
+       "publisher": "indiandefencereview.com",
+       "published_at": "2026-04-14T14:30:00",
+       "lede": "for years, the metals used in 3d printing have carried a fundamental design flaw, not in the metals themselves, but in their origins. as reported by 3dprint.com, most of today’s additive metal materials were originally developed for forging or casting, and only later adapted for 3d-printing purposes. that makeshift fit",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.98
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9a055cefb83fe81dc181",
+       "headline": "L&rsquo;apprentissage automatique conçoit un acier économique et inoxydable pour l&rsquo;impression 3D",
+       "url": "https://www.enerzine.com/lapprentissage-automatique-concoit-un-acier-economique-et-inoxydable-pour-limpression-3d/185293-2026-04",
+       "publisher": "enerzine.com",
+       "published_at": "2026-04-10T06:10:00",
+       "lede": "<!-- wp:paragraph --> <p><strong>a new class of ultra-resistant and ductile 3d printing steel has been generated by a machine learning strategy that is cheaper, rust resistant and requires only a fraction of the usual processing time.</strong></p> <!-- /wp:paragraph --> <!-- wp:paragraph --> <p>in <a href=\"https://iopscience.iop.org/journal/2631-7990\" target=\"_blank\" rel=\"noreferrer noopener\"><em>international journal of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.72
+        },
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.64
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2de0da85be7e506693293",
+       "headline": "DTU 3D Prints New Fuel Cell Design With 5x Power Boost - 3DPrint.com | Additive Manufacturing Business",
+       "url": "https://3dprint.com/325013/dtu-3d-prints-new-fuel-cell-design-with-5x-power-boost/",
+       "publisher": "3dprint.com",
+       "published_at": "2026-04-07T12:00:30",
+       "lede": "technical university of denmark (dtu) researchers have used lithoz ceramics 3d printing to make more efficient hydrogen fuel cells. with a part made from lithoz yttria fully stabilized zirconia (8ysz), a thin-walled component saw a 500% increase in power-to-weight ratio. the part in question is a solid oxide fuel cell.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.96,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.63
+        }
+       ],
+       "country": "denmark",
+       "organizations": [
+        "dtu",
+        "technical university of denmark",
+        "lithoz"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2aa9885cefb83fe827c482",
+       "headline": "The Industrial Science Report: 3D printing drives programmable industrial materials and new levels of process control",
+       "url": "https://www.plantservices.com/industrial-science-report/article/55368527/atownshend@endeavorb2b.com",
+       "publisher": "plantservices.com",
+       "published_at": "2026-04-03T00:00:00",
+       "lede": "porous copper 3d printing unlocks material behavior for security and energy copper is ubiquitous in industry and a long-time staple of electronics and energy systems for its electrical conductivity, strength, and durability. recently, researchers have developed a copper material via additive manufacturing that would fall apart in oxygen. but what",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.93
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d10eb71840dd4fe07c0c7f",
+       "headline": "Lucknow News: केजीएमयू ने 10 रुपये की लागत से बनी कृत्रिम आंख बनाई",
+       "url": "https://www.amarujala.com/lucknow/kgmu-develops-artificial-eye-costing-rs-10-lucknow-news-c-13-knp1002-1670436-2026-04-01",
+       "publisher": "amarujala.com",
+       "published_at": "2026-03-31T20:49:18",
+       "lede": "lucknow. king george medical university (kgmu) has achieved a revolutionary achievement in the field of medical science. the department of eye diseases of kgmu has prepared such a customized pla implant with the help of artificial intelligence (ai) and 3d printing, which will prove to be boon for innocences suffering",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dcdb7ccefa445fe2337e26",
+       "headline": "Volumetric Printing with Light - ASME",
+       "url": "https://www.asme.org/topics-resources/content/volumetric-printing-with-light",
+       "publisher": "asme.org",
+       "published_at": "2026-03-25T00:00:00",
+       "lede": "metamask and resin improvement over traditional methods large scale production a nanoscale metasurface mask is the key to triggering polymer curing and metal formation simultaneously with a single beam of light, resulting in a new 3d printing method that has the potential to revolutionize the production of semiconductor chips, according",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.85
+        },
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "canada",
+       "organizations": [
+        "metamask"
+       ],
+       "people": []
+      },
+      {
+       "id": "69dcd606778f2c454e15c384",
+       "headline": "Volumetric Printing with Light - ASME",
+       "url": "https://www.asme.org/Topics-Resources/Content/Volumetric-Printing-with-Light",
+       "publisher": "asme.org",
+       "published_at": "2026-03-25T00:00:00",
+       "lede": "metamask and resin improvement over traditional methods large scale production a nanoscale metasurface mask is the key to triggering polymer curing and metal formation simultaneously with a single beam of light, resulting in a new 3d printing method that has the potential to revolutionize the production of semiconductor chips, according",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.85
+        },
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "canada",
+       "organizations": [
+        "metamask"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c8cc0eb146d801d054f117",
+       "headline": "3D Bioprinting of Elastic Ear Cartilage - 3Dnatives",
+       "url": "https://www.3dnatives.com/en/3d-bioprinting-of-elastic-ear-cartilage-20032026/",
+       "publisher": "3dnatives.com",
+       "published_at": "2026-03-20T11:42:03",
+       "lede": "3d bioprinting of elastic ear cartilagelily-swann published on march 20, 2026 bythere is a widespread belief that we are on the verge of 3d printing functional organs, but the reality in the lab is far more complex. although that goal remains distant, a team of researchers at eth zurich has",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.93,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.92
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "eth zurich"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a74fbc37f6c5e66bd9697",
+       "headline": "3D printed ears made from human cells stay flexible for weeks in animal tests",
+       "url": "https://mhealthspot.com/2026/03/3d-printed-ears-made-from-human-cells-stay-flexible-for-weeks-in-animal-tests/",
+       "publisher": "mhealthspot.com",
+       "published_at": "2026-03-18T07:48:25",
+       "lede": "researchers from eth zurich, the friedrich miescher institute, and the cantonal hospital of lucerne have used 3d printing to create elastic ear cartilage with mechanical properties that closely match natural tissue. the team used human ear cartilage cells to produce constructs that kept their shape and flexibility in animal models",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.89
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "1fce269c7e46175cca573848",
+       "headline": "One-pot synthesis of strongly adhesive 3D printable gelatin/carrageenan conductive hydrogels for flexible sensors and supercapacitors.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41611426/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-15T00:00:00",
+       "lede": "one-pot synthesis of strongly adhesive 3d printable gelatin/carrageenan conductive hydrogels for flexible sensors and supercapacitors.polymer hydrogels have been widely studied for their conductivity, adhesiveness, and 3d printing properties, but preparing hydrogels with both adhesion and printing capabilities remains a challenge. this study reports the one-pot synthesis of a gelatin/agar/κ-carrageenan (gel/agar/κ-ca)",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.79,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 992,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xMyAxMjowMDowMCIsImkiOiI2YTJhOTdkMTVjZWZiODNmZTgxYzU3NDMiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.543,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.547
+    }
+   }
+  }
+ ]
+}

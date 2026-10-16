@@ -1,0 +1,683 @@
+{
+ "slug": "pipeline-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:34Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "pipeline",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "pipeline",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 17933,
+     "tone": {
+      "carrying": 17914,
+      "availability_pct": 99.89,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 6116,
+        "share_pct": 34.14
+       },
+       {
+        "group": "neutral",
+        "count": 369,
+        "share_pct": 2.06
+       },
+       {
+        "group": "positive",
+        "count": 11429,
+        "share_pct": 63.8
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 17932,
+      "count": 12314,
+      "share_pct": 68.67
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.944,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.946
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "pipeline",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "pipeline",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2148,
+       "critical": 1455,
+       "critical_pct": 67.7,
+       "negative": 686,
+       "positive": 1412,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1878,
+       "critical": 1152,
+       "critical_pct": 61.3,
+       "negative": 522,
+       "positive": 1326,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2747,
+       "critical": 1872,
+       "critical_pct": 68.1,
+       "negative": 951,
+       "positive": 1745,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3155,
+       "critical": 2092,
+       "critical_pct": 66.3,
+       "negative": 1202,
+       "positive": 1889,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3185,
+       "critical": 2302,
+       "critical_pct": 72.3,
+       "negative": 911,
+       "positive": 2206,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2412,
+       "critical": 1671,
+       "critical_pct": 69.3,
+       "negative": 620,
+       "positive": 1751,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2742,
+       "critical": 1985,
+       "critical_pct": 72.4,
+       "negative": 841,
+       "positive": 1869,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2708,
+       "critical": 1979,
+       "critical_pct": 73.1,
+       "negative": 861,
+       "positive": 1790,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3051,
+       "critical": 2116,
+       "critical_pct": 69.4,
+       "negative": 810,
+       "positive": 2182,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4414,
+       "critical": 2926,
+       "critical_pct": 66.3,
+       "negative": 1215,
+       "positive": 3091,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 4748,
+       "critical": 3300,
+       "critical_pct": 69.5,
+       "negative": 1791,
+       "positive": 2849,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 5720,
+       "critical": 3972,
+       "critical_pct": 69.4,
+       "negative": 2300,
+       "positive": 3307,
+       "partial_period": false
+      }
+     ],
+     "total": 38908,
+     "critical_total": 26822,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.015,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.016
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "pipeline",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "pipeline",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 17933,
+     "carrying": 8084,
+     "availability_pct": 45.08,
+     "items": [
+      {
+       "country": "united states",
+       "count": 3366,
+       "share_pct": 18.77
+      },
+      {
+       "country": "india",
+       "count": 905,
+       "share_pct": 5.05
+      },
+      {
+       "country": "united kingdom",
+       "count": 458,
+       "share_pct": 2.55
+      },
+      {
+       "country": "canada",
+       "count": 344,
+       "share_pct": 1.92
+      },
+      {
+       "country": "nigeria",
+       "count": 291,
+       "share_pct": 1.62
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 2720
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.417,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.42
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "pipeline",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "pipeline",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "pipeline infrastructure development",
+       "count": 2735,
+       "share": 23.37,
+       "lift": 635.9,
+       "baseline_count": 3,
+       "previous_period_count": 1369,
+       "delta_pct": 99.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "pipeline corrosion prevention methods",
+       "count": 1184,
+       "share": 10.12,
+       "lift": 825.86,
+       "baseline_count": 1,
+       "previous_period_count": 623,
+       "delta_pct": 90.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil and gas supply chain management",
+       "count": 531,
+       "share": 4.54,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 146,
+       "delta_pct": 263.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "gas flaring reduction techniques",
+       "count": 774,
+       "share": 6.61,
+       "lift": 269.94,
+       "baseline_count": 2,
+       "previous_period_count": 387,
+       "delta_pct": 100.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oncology and targeted therapy advancements",
+       "count": 454,
+       "share": 3.88,
+       "lift": 316.67,
+       "baseline_count": 1,
+       "previous_period_count": 255,
+       "delta_pct": 78.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 17933,
+     "carrying": 11703,
+     "carrier_share_pct": 65.26,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.73,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.733
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "pipeline",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "pipeline",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e31ae98fb0fff17dd16857",
+       "headline": "Ucrania lanza ataque contra oleoducto ruso en el Báltico",
+       "url": "https://www.eleconomista.com.mx/internacionales/ucrania-lanza-ataque-oleoducto-ruso-baltico-20260405-807349.html",
+       "publisher": "eleconomista.com.mx",
+       "published_at": "2026-04-06T05:47:42",
+       "lede": "moscow. ukraine attacked a pipeline near the strategic russian port of primorsk in the baltic sea with drones, authorities said, although they claimed there was no major damage. early sunday morning, the governor of the leningrad region, aleksandr drozdenko, said that “the remains [of downed drones] have damaged a section",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e27fcf3aab8d96aa2be360",
+       "headline": "Balochistan Burns Again: Viral Video Shows 18-Inch Gas Pipeline Blown Up In Quetta, Supply Disrupted",
+       "url": "https://www.freepressjournal.in/world/balochistan-burns-again-viral-video-shows-18-inch-gas-pipeline-blown-up-in-quetta-supply-disrupted",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-03-31T06:15:33",
+       "lede": "a massive explosion along a gas pipeline on the outskirts of quetta has gone viral on social media, with dramatic visuals showing a towering fireball lighting up the night sky. the incident was confirmed by local officials, as per reuters. the incident caused suspension gas supply to several parts of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.55
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ab29a5cefb83fe82e30e9",
+       "headline": "Iran media says energy infrastructure attacked after Trump postpones strike",
+       "url": "https://khaleejtimes.com/world/iran-media-says-energy-infrastructure-attacked-after-trump-postpones-strike",
+       "publisher": "khaleejtimes.com",
+       "published_at": "2026-03-24T08:18:03",
+       "lede": "iranian media reported on tuesday that israeli-us strikes targeted two gas facilities and a pipeline, hours after us president donald trump stepped back from his threat to attack power infrastructure. \"as part of the ongoing attacks carried out by the zionist and american enemy, the gas administration building and the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.66
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.66
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.41
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86ded9baafc7356836949",
+       "headline": "Nairobi’s flood survivors recount trauma as mental health crisis deepens",
+       "url": "https://www.nation.africa/kenya/health/nairobi-s-flood-survivors-recount-trauma-as-mental-health-crisis-deepens-5387342",
+       "publisher": "nation.africa",
+       "published_at": "2026-03-11T12:01:12",
+       "lede": "naomi mutinda had barely unpacked her bags in pipeline, embakasi, before disaster struck. just 23 days after her move, a sudden flash flood turned her relocation into a nightmare, leaving her four-year-old child missing. naomi's son, reign taji, who disappeared during flash floods in pipeline on the night of june",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.74
+        }
+       ],
+       "country": "kenya",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a04114a62bbf617b0474fdd",
+       "headline": "EU approves a $106B loan package to help Ukraine after Hungary lifts its veto",
+       "url": "https://www.pbs.org/newshour/world/eu-approves-a-106b-loan-package-to-help-ukraine-after-hungary-lifts-its-veto",
+       "publisher": "pbs.org",
+       "published_at": "2026-04-23T18:49:42",
+       "lede": "hungary and slovakia have been locked in a feud with ukraine since russian oil deliveries to the two eu countries were halted in january after a pipeline was damaged. ukrainian officials blamed the damage on russian drone attacks. both countries confirmed thursday that deliveries have resumed. the eu also approved",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.65
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea24338266d9339994f746",
+       "headline": "EU approves a $106 billion loan package to help Ukraine after Hungary lifts its veto",
+       "url": "https://www.orlandosentinel.com/2026/04/23/eu-approves-ukraine-loan-package/",
+       "publisher": "orlandosentinel.com",
+       "published_at": "2026-04-23T12:00:55",
+       "lede": "by lorne cook, justin spike and karel janicek brussels (ap) — the european union on thursday approved a massive loan package to help ukraine meet its economic and military needs for two years, the bloc’s cypriot presidency said, after oil began flowing through a key pipeline to hungary and slovakia,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.54
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.44
+        }
+       ],
+       "country": "czech republic",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 6,
+     "total_estimate": 996,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMyAxMjowMDo1NSIsImkiOiI2OWVhMjNlNjc1YzQ0ZDljZTg4MjY4NDIiLCJwIjo4fQ",
+     "unresolved": 19,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.397,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "19 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.4
+    }
+   }
+  }
+ ]
+}

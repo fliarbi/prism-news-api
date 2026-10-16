@@ -1,0 +1,1046 @@
+{
+ "slug": "nipah-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:29Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "nipah",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nipah",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1288,
+     "tone": {
+      "carrying": 1287,
+      "availability_pct": 99.92,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 990,
+        "share_pct": 76.92
+       },
+       {
+        "group": "neutral",
+        "count": 24,
+        "share_pct": 1.86
+       },
+       {
+        "group": "positive",
+        "count": 273,
+        "share_pct": 21.21
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1288,
+      "count": 1219,
+      "share_pct": 94.64
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.776,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.778
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "nipah",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nipah",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 68,
+       "critical": 55,
+       "critical_pct": 80.9,
+       "negative": 39,
+       "positive": 28,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 94,
+       "critical": 86,
+       "critical_pct": 91.5,
+       "negative": 39,
+       "positive": 51,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 180,
+       "critical": 153,
+       "critical_pct": 85.0,
+       "negative": 138,
+       "positive": 40,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 64,
+       "critical": 57,
+       "critical_pct": 89.1,
+       "negative": 33,
+       "positive": 24,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 82,
+       "critical": 77,
+       "critical_pct": 93.9,
+       "negative": 40,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 46,
+       "critical": 45,
+       "critical_pct": 97.8,
+       "negative": 21,
+       "positive": 24,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 49,
+       "critical": 45,
+       "critical_pct": 91.8,
+       "negative": 10,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 42,
+       "critical": 36,
+       "critical_pct": 85.7,
+       "negative": 7,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 798,
+       "critical": 765,
+       "critical_pct": 95.9,
+       "negative": 666,
+       "positive": 120,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 357,
+       "critical": 333,
+       "critical_pct": 93.3,
+       "negative": 272,
+       "positive": 74,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 53,
+       "critical": 48,
+       "critical_pct": 90.6,
+       "negative": 17,
+       "positive": 35,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 80,
+       "critical": 73,
+       "critical_pct": 91.2,
+       "negative": 35,
+       "positive": 44,
+       "partial_period": false
+      }
+     ],
+     "total": 1913,
+     "critical_total": 1773,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.525,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.528
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "nipah",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nipah",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1288,
+     "carrying": 697,
+     "availability_pct": 54.11,
+     "items": [
+      {
+       "country": "india",
+       "count": 398,
+       "share_pct": 30.9
+      },
+      {
+       "country": "singapore",
+       "count": 97,
+       "share_pct": 7.53
+      },
+      {
+       "country": "united states",
+       "count": 55,
+       "share_pct": 4.27
+      },
+      {
+       "country": "malaysia",
+       "count": 23,
+       "share_pct": 1.79
+      },
+      {
+       "country": "bangladesh",
+       "count": 18,
+       "share_pct": 1.4
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 106
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.613,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.615
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "nipah",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nipah",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "zoonotic disease prevention measures",
+       "count": 310,
+       "share": 40.74,
+       "lift": 1662.63,
+       "baseline_count": 2,
+       "previous_period_count": 7,
+       "delta_pct": 4328.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "global health challenges",
+       "count": 137,
+       "share": 18.0,
+       "lift": 1469.55,
+       "baseline_count": 1,
+       "previous_period_count": 4,
+       "delta_pct": 3325.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infectious disease control strategies",
+       "count": 122,
+       "share": 16.03,
+       "lift": 1308.65,
+       "baseline_count": 1,
+       "previous_period_count": 3,
+       "delta_pct": 3966.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infectious disease outbreaks",
+       "count": 90,
+       "share": 11.83,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "covid-19 public health policies and lockdown measures",
+       "count": 77,
+       "share": 10.12,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1,
+       "delta_pct": 7600.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1288,
+     "carrying": 761,
+     "carrier_share_pct": 59.08,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.607,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.61
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "nipah",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "nipah",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e2c3e9dc480588dca4f6ce",
+       "headline": "Nurse with Nipah dies of organ failure becoming 1st death of India outbreak",
+       "url": "https://www.thescottishsun.co.uk/health/15917626/nurse-nipah-virus-death-india-outbreak/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-02-12T17:01:33",
+       "lede": "a young nurse has died after catching nipah, a virus that has been dubbed the ‘next pandemic threat’. the 25-year-old was one of two confirmed cases in eastern india and succumbed to the bat-borne infection while being treated in hospital. sign up for scottish sun newsletter thank you! email address",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.75
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.72
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.44
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e35b52a8697b10fac092c3",
+       "headline": "REGION ON ALERT AS INDIA REPORTS NIPAH VIRUS CASES",
+       "url": "https://www.pressreader.com/china/south-china-morning-post-6150/20260129/281818585251185",
+       "publisher": "pressreader.com",
+       "published_at": "2026-01-28T21:07:00",
+       "lede": "south china morning post region on alert as india reports nipah virus cases deadly nature of infection prompts authoritie­s across asia to step up screening of travellers, even as analysts say the outbreak is contained 2026-01-29 - biman.mukherji@scmp.com biman mukherji - biman.mukherji@scmp.com biman mukherji a small cluster of deadly nipah",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.87
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.77
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.46
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aeaa6963d76f4af1d3907",
+       "headline": "China issues Nipah virus guideline, reports no human infections",
+       "url": "http://www.chinadaily.com.cn/a/202604/23/WS69e9e4f9a310d6866eb4528f.html",
+       "publisher": "chinadaily.com.cn",
+       "published_at": "2026-04-23T00:00:00",
+       "lede": "china has reported no human infections of the potentially fatal nipah virus, although sporadic positive antibodies have been detected in fruit bats in several southern provinces, according to a document released by the national health commission. the commission on wednesday issued the 2026 diagnosis and treatment guideline for nipah virus",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.82
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "8c67e0390b740999510b052d",
+       "headline": "Superspreading potential of Nipah virus disease despite self-limited human-to-human transmission in community.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41935612/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-02T00:00:00",
+       "lede": "superspreading potential of nipah virus disease despite self-limited human-to-human transmission in community.as of late january 2026, the world health organization (who) reported a small-scale nipah virus (niv) outbreak in west bengal, india. despite that niv was primarily transmitted through animal sources, we assessed the transmission risks of niv at human",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.54
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.49
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "40a9fcb2e1ec303cf5f20fc5",
+       "headline": "A structure-based mRNA vaccine for Nipah virus in healthy adults: a phase 1 trial.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41820674/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-01T00:00:00",
+       "lede": "a structure-based mrna vaccine for nipah virus in healthy adults: a phase 1 trial.nipah virus (niv) is a highly pathogenic, zoonotic paramyxovirus with pandemic potential. no licensed vaccines or treatments are available. therefore, we conducted a phase 1, first-in-human, open-label, dose-escalation trial of a lipid nanoparticle mrna vaccine, mrna-1215, encoding",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.78
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.75
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf640a34d959601c230015",
+       "headline": "Nipah virus could turn into something “far more severe”, scientists warn",
+       "url": "https://www.thehindu.com/sci-tech/health/nipah-virus-could-turn-into-something-far-more-severe-scientists-warn/article70787067.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-03-26T10:45:44",
+       "lede": "the nipah virus, which was first identified in malaysia in 1999, is still not a priority in south and southeast asia despite its repeated emergence, says a correspondence by scientists published in the lancet. “the danger of nipah virus is in its persistence, that is, it is periodic, lethal, and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.91
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aca04c37f6c5e66f88525",
+       "headline": "When Viruses Attack The Brain: Understanding Nipah Virus And Its Life-Threatening Impact",
+       "url": "https://news.abplive.com/health/abp-live-doc-talk-when-viruses-attack-the-brain-understanding-nipah-virus-and-its-life-threatening-impact-1832818",
+       "publisher": "news.abplive.com",
+       "published_at": "2026-03-25T05:27:19",
+       "lede": "nipah virus infection is a rare yet highly dangerous disease that first came to light during an outbreak in malaysia in 1998. since then, sporadic outbreaks have been reported in india, particularly in kerala, raising public health concerns due to its high fatality rate and potential for rapid spread. also",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.89
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec50e8e67a2fcb3cc518b",
+       "headline": "Creative Diagnostics Launches Comprehensive Portfolio of Nipah Virus Antigens and Antibodies to Support Vaccine and Diagnostic Research Creative Diagnostics launches a new line of Nipah Virus Antigens and Antibodies. Creative Diagnostics launches a new line of Nipah Virus Antigens and Antibodies. (1",
+       "url": "https://www.1888pressrelease.com/creative-diagnostics-launches-comprehensive-portfolio-of-nip-pr-764440.html",
+       "publisher": "1888pressrelease.com",
+       "published_at": "2026-03-24T00:00:00",
+       "lede": "creative diagnostics launches comprehensive portfolio of nipah virus antigens and antibodies to support vaccine and diagnostic research creative diagnostics launches a new line of nipah virus antigens and antibodies. creative diagnostics launches a new line of nipah virus antigens and antibodies. (1888pressrelease) march 24, 2026 - creative diagnostics, a leading",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.61
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.56
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2aa8d7f3a572cf4ac42de",
+       "headline": "Kerala: Alert issued against Nipah virus from April to September",
+       "url": "https://www.thehindu.com/news/national/kerala/alert-issued-against-nipah-in-kerala-from-april-to-september/article70772258.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-03-22T13:41:57",
+       "lede": "health officials in kerala have issued an alert against nipah infections in the state from april to september. with cases being reported frequently here since 2018, the focus is on kozhikode, malappuram, palakkad, and thrissur districts. awareness campaigns for children are also planned as some of the victims in recent",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.79
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.67
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2ba05cefb83fe8840e4f",
+       "headline": "Could vaccine-carrying mosquitoes slow the spread of deadly diseases?",
+       "url": "https://www.yahoo.com/news/articles/could-vaccine-carrying-mosquitoes-slow-200054206.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-12T20:00:54",
+       "lede": "(wtaj) — some scientists have successfully used vaccine-carrying mosquitoes to safeguard from deadly diseases, but others question whether it’s practical or even ethical. the experiments are meant to thwart the spread of two specific diseases that can be transferred to humans from bats — rabies and the lesser-known nipah virus.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e35777392cc5e9e8fd16d2",
+       "headline": "Nipah and mpox show Asia’s need for disease surveillan­ce",
+       "url": "https://www.pressreader.com/china/south-china-morning-post-6150/20260303/281844355121972",
+       "publisher": "pressreader.com",
+       "published_at": "2026-03-02T21:06:00",
+       "lede": "south china morning post nipah and mpox show asia’s need for disease surveillan­ce kamala thiagaraja­n says region must invest in a coordinate­d response to any health crisis 2026-03-03 - kamala thiagaraja­n is a freelance journalist based in madurai, southern india - kamala thiagaraja­n is a freelance journalist based in madurai,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.89
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.63
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bcdb66de89f3fa1c9d43e7",
+       "headline": "Why Colorado joined a global network to learn about infectious disease outbreaks in other countries",
+       "url": "https://coloradosun.com/2026/03/02/who-global-outbreak-alert-response-network/",
+       "publisher": "coloradosun.com",
+       "published_at": "2026-03-02T10:07:00",
+       "lede": "every week, a world health organization network of more than 360 institutions holds a call to talk about emerging disease threats around the globe. topics might include, say, new cases of the deadly nipah virus in india, or a new mpox strain found in great britain.the idea is to give",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.62
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.58
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc7f911f3c78812b1a842d",
+       "headline": "Paul George admits to bringing 'improper medication' to possess mental health matter immediately after NBA suspends your to own twenty five game",
+       "url": "https://startupnews.fyi/2026/02/27/paul-george-admits-to-bringing-improper-medication-to-possess-mental-health-matter-immediately-after-nba-suspends-your-to-own-twenty-five-game/",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-02-27T13:25:03",
+       "lede": "“the country try brief, however the probability one to somebody’s contaminated, otherwise an infected fruits bat with nipah malware might possibly be right here, today, is very unlikely,” finkel in the past told abc news. researchers are also looking at the potential benefit of remdesivir — the brand new intravenous",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.55
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.5
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "10b786582f1d6af3f7326611",
+       "headline": "Research Progress on the Structural Biology of Paramyxovirus Polymerase and Its Inhibitors.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41656952/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-02-26T00:00:00",
+       "lede": "research progress on the structural biology of paramyxovirus polymerase and its inhibitors.the family paramyxoviridae comprises nonsegmented, negative-sense rna viruses (nsnsv), including key pathogens like nipah, measles, and parainfluenza viruses. the lack of approved specific therapeutics against paramyxoviruses, alongside concerns such as vaccine hesitancy and reduced efficacy for certain existing vaccines,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.65
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ade2e5cefb83fe84d22e6",
+       "headline": "Singapore to ease Nipah virus screening measures from February 23 - Connected to India News I Singapore l UAE l UK l USA l NRI",
+       "url": "https://www.connectedtoindia.com/singapore-to-ease-nipah-virus-screening-measures-from-february-23/",
+       "publisher": "connectedtoindia.com",
+       "published_at": "2026-02-21T04:41:03",
+       "lede": "singapore will progressively ease some nipah virus related public health measures starting february 23 as no cases have been reported in the city-state after the outbreak in india and bangladesh, the government said friday. representational image. photo courtesy: kingsley yang/ unsplash the communicable diseases agency (cda) in january last week",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.84
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.76
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eba2b8e67a2fcb3c1e374",
+       "headline": "Singapore Ceases Nipah Screening At Entry Ports",
+       "url": "https://www.businesstoday.com.my/2026/02/21/singapore-ceases-nipah-screening-at-entry-ports/",
+       "publisher": "businesstoday.com.my",
+       "published_at": "2026-02-21T00:00:00",
+       "lede": "singapore will cease nipah virus temperature screenings at the airport and seaports from monday (feb 23), progressively easing some measures as the outbreak in india stabilises. no cases of the nipah virus have been reported in singapore in connection with the outbreak in west bengal or the case in bangladesh,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.71
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.69
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.42
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc62793ca60e76cf2f40b0",
+       "headline": "Singapore to ease measures against Nipah virus outbreak as condition stabilise",
+       "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/02/20/singapore-to-ease-measures-against-nipah-virus-outbreak-as-condition-stabilise",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-02-20T21:43:00",
+       "lede": "singapore (bernama): singapore will progressively ease some public health measures in response to the nipah virus infection outbreak, as the situation has stabilised, said the communicable diseases agency (cda).in a statement, it noted that no cases of nipah virus infection have been reported in singapore in connection with the outbreak",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.73
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.65
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.57
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "cda",
+        "bernama"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 925,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0yMCAyMTo0MzowMCIsImkiOiI2OWJjNjI3OTNjYTYwZTc2Y2YyZjQwYjAiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.03,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.034
+    }
+   }
+  }
+ ]
+}

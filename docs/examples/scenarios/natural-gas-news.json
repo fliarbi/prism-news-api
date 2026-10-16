@@ -1,0 +1,1014 @@
+{
+ "slug": "natural-gas-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:14:17Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "natural gas",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "natural gas",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 23125,
+     "tone": {
+      "carrying": 23110,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 11874,
+        "share_pct": 51.38
+       },
+       {
+        "group": "neutral",
+        "count": 623,
+        "share_pct": 2.7
+       },
+       {
+        "group": "positive",
+        "count": 10613,
+        "share_pct": 45.92
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 23121,
+      "count": 17156,
+      "share_pct": 74.2
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.031,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.034
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "natural gas",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "natural gas",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2643,
+       "critical": 1633,
+       "critical_pct": 61.8,
+       "negative": 899,
+       "positive": 1619,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2216,
+       "critical": 1505,
+       "critical_pct": 67.9,
+       "negative": 783,
+       "positive": 1396,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2499,
+       "critical": 1621,
+       "critical_pct": 64.9,
+       "negative": 845,
+       "positive": 1606,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3300,
+       "critical": 2229,
+       "critical_pct": 67.5,
+       "negative": 1146,
+       "positive": 2087,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3104,
+       "critical": 2326,
+       "critical_pct": 74.9,
+       "negative": 1204,
+       "positive": 1821,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2795,
+       "critical": 2068,
+       "critical_pct": 74.0,
+       "negative": 926,
+       "positive": 1807,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2530,
+       "critical": 1796,
+       "critical_pct": 71.0,
+       "negative": 690,
+       "positive": 1787,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2923,
+       "critical": 1966,
+       "critical_pct": 67.3,
+       "negative": 735,
+       "positive": 2131,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3032,
+       "critical": 2060,
+       "critical_pct": 67.9,
+       "negative": 917,
+       "positive": 2035,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3388,
+       "critical": 2287,
+       "critical_pct": 67.5,
+       "negative": 1041,
+       "positive": 2233,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 9501,
+       "critical": 7679,
+       "critical_pct": 80.8,
+       "negative": 6285,
+       "positive": 2977,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 7204,
+       "critical": 5130,
+       "critical_pct": 71.2,
+       "negative": 3631,
+       "positive": 3368,
+       "partial_period": false
+      }
+     ],
+     "total": 45135,
+     "critical_total": 32300,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.141,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.143
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "natural gas",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "natural gas",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 23125,
+     "carrying": 12248,
+     "availability_pct": 52.96,
+     "items": [
+      {
+       "country": "united states",
+       "count": 5131,
+       "share_pct": 22.19
+      },
+      {
+       "country": "india",
+       "count": 2612,
+       "share_pct": 11.3
+      },
+      {
+       "country": "iran",
+       "count": 551,
+       "share_pct": 2.38
+      },
+      {
+       "country": "canada",
+       "count": 395,
+       "share_pct": 1.71
+      },
+      {
+       "country": "china",
+       "count": 297,
+       "share_pct": 1.28
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 3262
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.452,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.454
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "natural gas",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "natural gas",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "natural gas liquefaction processes",
+       "count": 4772,
+       "share": 28.13,
+       "lift": 382.76,
+       "baseline_count": 6,
+       "previous_period_count": 1983,
+       "delta_pct": 140.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gas flaring reduction techniques",
+       "count": 2077,
+       "share": 12.25,
+       "lift": 499.78,
+       "baseline_count": 2,
+       "previous_period_count": 827,
+       "delta_pct": 151.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "liquefied natural gas (lng) storage",
+       "count": 4609,
+       "share": 27.17,
+       "lift": 316.87,
+       "baseline_count": 7,
+       "previous_period_count": 1874,
+       "delta_pct": 145.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "pipeline infrastructure development",
+       "count": 2551,
+       "share": 15.04,
+       "lift": 409.22,
+       "baseline_count": 3,
+       "previous_period_count": 691,
+       "delta_pct": 269.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "natural gas extraction processes",
+       "count": 3796,
+       "share": 22.38,
+       "lift": 304.47,
+       "baseline_count": 6,
+       "previous_period_count": 1552,
+       "delta_pct": 144.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 23125,
+     "carrying": 16962,
+     "carrier_share_pct": 73.35,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.457,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.46
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "natural gas",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "natural gas",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69efab5ea84b609af2b36ec6",
+       "headline": "European natural gas prices ticked higher on Friday, as investors gauged the ongoing blockage of the Strait of Hormuz and stall peace talks between the U.S. and Iran. By 06:37 ET (10:37 GMT), the Dutch front-month contract at the TTF hub had risen by 0.9% to 44.83 euros per megawatt hour, according ",
+       "url": "https://www.hellenicshippingnews.com/european-natural-gas-prices-rise-as-mideast-tensions-weigh-on-supplies/",
+       "publisher": "hellenicshippingnews.com",
+       "published_at": "2026-04-25T00:00:00",
+       "lede": "european natural gas prices ticked higher on friday, as investors gauged the ongoing blockage of the strait of hormuz and stall peace talks between the u.s. and iran. by 06:37 et (10:37 gmt), the dutch front-month contract at the ttf hub had risen by 0.9% to 44.83 euros per megawatt",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.68
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.67
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.59
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa914a84b609af2b1b30b",
+       "headline": "IEA says Iran war will keep the global natural gas market tight for two years",
+       "url": "https://www.cbsnews.com/news/iran-war-lng-supply-iea-report-gas-markets-impact/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-04-24T17:39:13",
+       "lede": "the implications of the iran war on energy markets will extend well beyond this year, according to a new report from the international energy agency (iea) on friday. the conflict in the middle east, now in its second month, is expected to crimp global natural gas supplies for two years",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.45
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c9ea399b489398dff541",
+       "headline": "The Islamic Republic of Iran’s Underground Missile Cities | Opinion - Conservative | Before It's News",
+       "url": "https://beforeitsnews.com/opinion-conservative/2026/04/the-islamic-republic-of-irans-underground-missile-cities-3738934.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-24T08:09:01",
+       "lede": "the islamic republic of iran has the second largest reserves of natural gas, and the third largest reserves of oil, in the world. in the past thirty years, the country has received more than $1.4 trillion from the sale of oil alone. yet in this resource-rich country, the people of",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.61
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99c3bd47fc0283219cc28",
+       "headline": "Iran war conflict could create systemic gas demand destruction, says top sector official",
+       "url": "https://www.straitstimes.com/asia/iran-war-conflict-could-create-systemic-gas-demand-destruction-says-top-sector-official",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-22T10:55:32",
+       "lede": "paris, april 22 - the natural gas demand destruction currently resulting from the iran war as governments implement measures to mitigate the crisis risks becoming structural if the conflict persists, the head of the gas exporting countries forum said on wednesday. since the middle east crisis began at the end",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.92
+        }
+       ],
+       "country": "france",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99c7e75f157062cb07372",
+       "headline": "Iran war conflict could create systemic gas demand destruction, says top sector official | BOE Report",
+       "url": "https://boereport.com/2026/04/22/iran-war-conflict-could-create-systemic-gas-demand-destruction-says-top-sector-official/",
+       "publisher": "boereport.com",
+       "published_at": "2026-04-22T10:31:25",
+       "lede": "the natural gas demand destruction currently resulting from the iran war as governments implement measures to mitigate the crisis risks becoming structural if the conflict persists, the head of the gas exporting countries forum said on wednesday. since the middle east crisis began at the end of february, more than",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        }
+       ],
+       "country": "france",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec70983fc01faba3fcf5a",
+       "headline": "Dual House Explosions Hospitalize Five People in San Antonio",
+       "url": "https://world.infonasional.com/san-antonio-house-explosions-injuries",
+       "publisher": "world.infonasional.com",
+       "published_at": "2026-04-22T05:00:45",
+       "lede": "five individuals were hospitalized following two consecutive house explosions that damaged three properties on tuesday evening in a north-side san antonio neighborhood. officials believe the blasts, occurring hours apart on preston hollow drive, were caused by natural gas accumulation.city councilman marc whyte, who represents the district where the incidents took",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.69
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e864069baafc73567cdd0a",
+       "headline": "West Reading chocolate factory explosion: PA legislation addresses natural gas safety concerns",
+       "url": "https://www.mcall.com/2026/04/16/west-reading-chocolate-factory-explosion-pa-legislation-addresses-natural-gas-safety-concerns/",
+       "publisher": "mcall.com",
+       "published_at": "2026-04-16T11:00:05",
+       "lede": "the state house has passed a bill aimed at addressing natural gas safety concerns in the wake of the march 2023 fatal explosion at a west reading chocolate factory. the march 24 blast, which took the lives of seven workers when it leveled an r.m. palmer co. plant on south",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.5
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e860949baafc73567ab959",
+       "headline": "West Reading chocolate factory explosion: PA legislation addresses natural gas safety concerns",
+       "url": "https://www.pottsmerc.com/2026/04/16/west-reading-chocolate-factory-explosion-pa-legislation-addresses-natural-gas-safety-concerns/",
+       "publisher": "pottsmerc.com",
+       "published_at": "2026-04-16T11:00:05",
+       "lede": "the state house has passed a bill aimed at addressing natural gas safety concerns in the wake of the march 2023 fatal explosion at a west reading chocolate factory. the march 24 blast, which took the lives of seven workers when it leveled an r.m. palmer co. plant on south",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.5
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e85fae9baafc73567a2c65",
+       "headline": "West Reading chocolate factory explosion: PA legislation addresses natural gas safety concerns",
+       "url": "https://www.timesherald.com/2026/04/16/west-reading-chocolate-factory-explosion-pa-legislation-addresses-natural-gas-safety-concerns/",
+       "publisher": "timesherald.com",
+       "published_at": "2026-04-16T11:00:05",
+       "lede": "the state house has passed a bill aimed at addressing natural gas safety concerns in the wake of the march 2023 fatal explosion at a west reading chocolate factory. the march 24 blast, which took the lives of seven workers when it leveled an r.m. palmer co. plant on south",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.5
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e862b07bb1410d4c73cbce",
+       "headline": "Energy analysts have warned of surging energy prices beyond already elevated levels, as the last vessels carrying oil and natural gas from the Strait of Hormuz before the conflict have reached Europe. Supply forecasts for oil and gas remain optimistic as US deliveries are expected. Europe should pre",
+       "url": "https://www.hellenicshippingnews.com/energy-prices-set-to-rise-as-last-gulf-tankers-reach-europe-analysts-say/",
+       "publisher": "hellenicshippingnews.com",
+       "published_at": "2026-04-16T00:00:00",
+       "lede": "energy analysts have warned of surging energy prices beyond already elevated levels, as the last vessels carrying oil and natural gas from the strait of hormuz before the conflict have reached europe. supply forecasts for oil and gas remain optimistic as us deliveries are expected. europe should prepare for a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e6f7110f1aa5003e1151a1",
+       "headline": "TurkStream: The Strategic Pillar of Europe's Energy Security - Time News",
+       "url": "https://time.news/turkstream-the-strategic-pillar-of-europes-energy-security/",
+       "publisher": "time.news",
+       "published_at": "2026-04-14T06:26:50",
+       "lede": "for years, the turkstream pipeline was viewed primarily as a strategic maneuver by moscow to bypass ukraine. launched in january 2020, the project—a joint venture between gazprom and botaş—carries russian natural gas under the black sea to türkiye, eventually feeding into southeast and central europe. however, as the geopolitical map",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.51
+        }
+       ],
+       "country": "turkey",
+       "organizations": [
+        "gazprom"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2c4e1d754bf662cde7967",
+       "headline": "European gas prices plunge on hopes for restored LNG flows following US-Iran ceasefire",
+       "url": "https://www.bairdmaritime.com/shipping/tankers/gas/european-gas-prices-plunge-on-hopes-for-restored-lng-flows-following-us-iran-ceasefire",
+       "publisher": "bairdmaritime.com",
+       "published_at": "2026-04-08T09:16:09",
+       "lede": "the european benchmark gas contract plunged on wednesday morning after us president donald trump agreed to a two-week ceasefire with iran, raising hopes of a resumption in oil and liquefied natural gas flows through the strait of hormuz.the last-minute deal was subject to iran's agreement to pause its blockade of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e31d2795bd72210c4ecc4d",
+       "headline": "Deadly South Jordan house explosion report stresses importance of natural gas alarms",
+       "url": "https://www.fox13now.com/news/local-news/salt-lake-county/deadly-south-jordan-house-explosion-report-stresses-importance-of-natural-gas-alarms",
+       "publisher": "fox13now.com",
+       "published_at": "2026-04-07T16:43:33",
+       "lede": "nearly 18 months after a teenage boy was killed when a natural gas explosion ripped through his south jordan home, the final report into the incident highlights what changes have been made since, and the importance of gas alarms.the report issued last week by the national transportation safety board focused",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.92,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.68
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "national transportation safety board",
+        "national transportation safety board"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ed00ce540a46fb56ebcee",
+       "headline": "Investing in America: 1937 New London Explosion",
+       "url": "https://www.yahoo.com/news/articles/investing-america-1937-london-explosion-015726970.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-07T01:57:26",
+       "lede": "rusk county, texas (ketk)– as we continue to celebrate 250 years of america, ketk news is learning more about the science that has protected the united states from tragedy. nearly 100 years ago, in 1937, a natural gas leak destroyed the new london school located in rusk county. investigators believe",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.57
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aee605cefb83fe858293d",
+       "headline": "EU ministers weigh oil price cap and windfall tax to rein in prices",
+       "url": "https://euronews.com/2026/03/27/eu-ministers-weigh-oil-price-cap-and-windfall-tax-to-rein-in-soaring-energy-costs",
+       "publisher": "euronews.com",
+       "published_at": "2026-03-27T14:39:12",
+       "lede": "european union finance ministers are considering capping oil prices or taxing windfall profits as they weigh a coordinated response to rising energy costs, amid surging natural gas and oil prices driven by the war in iran.analysts warn that further price spikes could echo the 2022 energy crisis.eu officials insist the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2f746683fc01faba728c1e",
+       "headline": "Investigators find gas utility pipes separated before deadly Mississippi explosions",
+       "url": "https://apnews.com/article/atmos-jackson-mississippi-gas-explosion-pipeline-safety-4e446a4182857240ceec6e4726ab3c68",
+       "publisher": "apnews.com",
+       "published_at": "2026-03-26T21:32:15",
+       "lede": "add ap news as your preferred source to see more of our stories on google. add ap news on google add ap news as your preferred source to see more of our stories on google. share jackson, miss. (ap) — separate natural gas explosions in january 2024 that destroyed two",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.85
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c81275152f93ad885dd76d",
+       "headline": "Trump Signals Joint US-Iran Control of Strait of Hormuz Amid Oil Crisis",
+       "url": "https://news.bitcoin.com/trump-signals-joint-us-iran-control-of-strait-of-hormuz-amid-oil-crisis/",
+       "publisher": "news.bitcoin.com",
+       "published_at": "2026-03-23T17:29:57",
+       "lede": "strait of hormuz update: trump delays strikes, suggests shared controlthe comments arrive as the u.s.-israel military campaign against iran enters its fourth week, with the key shipping lane still heavily restricted and global trade flows strained. the strait of hormuz remains a critical artery for oil and liquefied natural gas,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.79
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.74
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.43
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8ad5b6743c370e22433e7",
+       "headline": "‘Armageddon’ attack on Qatari plant could keep energy prices high around the world: analysts",
+       "url": "https://nypost.com/2026/03/20/business/armageddon-attack-on-qatari-plant-could-keep-energy-prices-high-around-the-world-analysts/",
+       "publisher": "nypost.com",
+       "published_at": "2026-03-20T20:16:26",
+       "lede": "damage to a critical qatari facility is threatening to keep energy prices high around the world even if the war in iran ends soon in what some analysts are calling an “armageddon” situation.qatar’s las raffan plant supplies a fifth of the world’s liquefied natural gas, which is used for electricity,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.91
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 4315,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yMCAwMzoxNjoyNiIsImkiOiI2YTJhYzY4Mzk2M2Q3NmY0YWYwM2ViMTgiLCJwIjo5fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.155,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.158
+    }
+   }
+  }
+ ]
+}

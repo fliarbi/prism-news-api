@@ -1,0 +1,1046 @@
+{
+ "slug": "recession-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:34Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "recession",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "recession",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4699,
+     "tone": {
+      "carrying": 4695,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3151,
+        "share_pct": 67.11
+       },
+       {
+        "group": "neutral",
+        "count": 218,
+        "share_pct": 4.64
+       },
+       {
+        "group": "positive",
+        "count": 1326,
+        "share_pct": 28.24
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4697,
+      "count": 3050,
+      "share_pct": 64.94
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.496,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.499
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "recession",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "recession",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3026,
+       "critical": 1921,
+       "critical_pct": 63.5,
+       "negative": 2070,
+       "positive": 853,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1026,
+       "critical": 637,
+       "critical_pct": 62.1,
+       "negative": 675,
+       "positive": 310,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1476,
+       "critical": 771,
+       "critical_pct": 52.2,
+       "negative": 1035,
+       "positive": 405,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1665,
+       "critical": 1036,
+       "critical_pct": 62.2,
+       "negative": 1159,
+       "positive": 463,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 966,
+       "critical": 656,
+       "critical_pct": 67.9,
+       "negative": 629,
+       "positive": 301,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 900,
+       "critical": 567,
+       "critical_pct": 63.0,
+       "negative": 601,
+       "positive": 247,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 778,
+       "critical": 486,
+       "critical_pct": 62.5,
+       "negative": 490,
+       "positive": 253,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 781,
+       "critical": 429,
+       "critical_pct": 54.9,
+       "negative": 447,
+       "positive": 295,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 623,
+       "critical": 337,
+       "critical_pct": 54.1,
+       "negative": 359,
+       "positive": 217,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 928,
+       "critical": 521,
+       "critical_pct": 56.1,
+       "negative": 523,
+       "positive": 354,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1411,
+       "critical": 991,
+       "critical_pct": 70.2,
+       "negative": 1060,
+       "positive": 298,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1737,
+       "critical": 1201,
+       "critical_pct": 69.1,
+       "negative": 1209,
+       "positive": 457,
+       "partial_period": false
+      }
+     ],
+     "total": 15317,
+     "critical_total": 9553,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.136,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.141
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "recession",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "recession",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4699,
+     "carrying": 2042,
+     "availability_pct": 43.46,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1115,
+       "share_pct": 23.73
+      },
+      {
+       "country": "iran",
+       "count": 185,
+       "share_pct": 3.94
+      },
+      {
+       "country": "united kingdom",
+       "count": 107,
+       "share_pct": 2.28
+      },
+      {
+       "country": "india",
+       "count": 103,
+       "share_pct": 2.19
+      },
+      {
+       "country": "australia",
+       "count": 94,
+       "share_pct": 2.0
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 438
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.686,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.709
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "recession",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "recession",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economy news: consumer confidence index updates",
+       "count": 113,
+       "share": 3.98,
+       "lift": 324.57,
+       "baseline_count": 1,
+       "previous_period_count": 94,
+       "delta_pct": 20.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 120,
+       "share": 4.22,
+       "lift": 172.34,
+       "baseline_count": 2,
+       "previous_period_count": 50,
+       "delta_pct": 140.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: economic forecast revisions",
+       "count": 74,
+       "share": 2.6,
+       "lift": 212.55,
+       "baseline_count": 1,
+       "previous_period_count": 51,
+       "delta_pct": 45.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: monetary policy changes",
+       "count": 213,
+       "share": 7.49,
+       "lift": 122.36,
+       "baseline_count": 5,
+       "previous_period_count": 144,
+       "delta_pct": 47.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: central bank interest rate decisions",
+       "count": 211,
+       "share": 7.42,
+       "lift": 121.21,
+       "baseline_count": 5,
+       "previous_period_count": 146,
+       "delta_pct": 44.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4699,
+     "carrying": 2842,
+     "carrier_share_pct": 60.48,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.116,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.119
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "recession",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "recession",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8d42e9baafc7356d1cb48",
+       "headline": "Iran war escalation could push global economy to brink of recession, IMF warns - Türkiye Today",
+       "url": "https://www.turkiyetoday.com/business/iran-war-escalation-could-push-global-economy-to-brink-of-recession-imf-warns-3218153",
+       "publisher": "turkiyetoday.com",
+       "published_at": "2026-04-15T11:06:42",
+       "lede": "the international monetary fund warned that a further escalation in the war on iran and continued disruption to oil markets could push the global economy to the brink of recession, with growth potentially slowing to 2% under its worst-case scenario. speaking as the imf’s spring meetings began in washington, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.65
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8d4519baafc7356d1e776",
+       "headline": "Iran war wreaks havoc on global economy and could spark recession, says IMF",
+       "url": "https://www.middleeasteye.net/news/iran-war-wreaks-havoc-global-economy-and-could-spark-recession-says-imf",
+       "publisher": "middleeasteye.net",
+       "published_at": "2026-04-14T15:23:42",
+       "lede": "the war on iran has “abruptly darkened” the global economic outlook, and if it continues could trigger a worldwide recession, the international monetary fund (imf) has warned. in its latest world economic outlook, a half-yearly update, the imf downgraded most of its growth forecasts made three months earlier. it said",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.51
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.5
+        }
+       ],
+       "country": "israel",
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e878967bb1410d4c81fb1d",
+       "headline": "Iran war wreaks havoc on global economy and could spark recession, says IMF",
+       "url": "http://www.middleeasteye.net/news/iran-war-wreaks-havoc-global-economy-and-could-spark-recession-says-imf",
+       "publisher": "middleeasteye.net",
+       "published_at": "2026-04-14T15:23:42",
+       "lede": "the war on iran has “abruptly darkened” the global economic outlook, and if it continues could trigger a worldwide recession, the international monetary fund (imf) has warned. in its latest world economic outlook, a half-yearly update, the imf downgraded most of its growth forecasts made three months earlier. it said",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.51
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.5
+        }
+       ],
+       "country": "israel",
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2cbf590d9a716b4c697fc",
+       "headline": "Strait of Hormuz blockade may have knock-on effect that can spiral into downturn: PM Wong",
+       "url": "https://www.asiaone.com/singapore/strait-hormuz-blockade-may-have-knock-effect-can-spiral-downturn-pm-wong",
+       "publisher": "asiaone.com",
+       "published_at": "2026-03-19T13:04:50",
+       "lede": "blockade of the strait of hormuz amid the ongoing iran war may have knock-on effects that can lead to an economic downturn or recession, prime minister lawrence wong told singapore media during this three-day visit to japan on wednesday (march 18). \"we are monitoring the situation closely, because it is",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.66
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.57
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.51
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "wong"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbd0957aa9ae690c974ef7",
+       "headline": "Temporary shock or wider downturn? Middle East energy crisis raises fresh cost pressures for UK retailers - Retail Gazette",
+       "url": "https://www.retailgazette.co.uk/blog/2026/03/middle-east-energy-crisis-cost-pressures/",
+       "publisher": "retailgazette.co.uk",
+       "published_at": "2026-03-13T08:16:03",
+       "lede": "rising oil prices triggered by the conflict in the middle east are raising concerns about a fresh wave of economic pressure for uk retailers, with economists warning that a prolonged disruption to global energy supplies could push the uk economy towards recession.the crisis has intensified after maritime traffic through the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.86
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b0574963d76f4af301b9e",
+       "headline": "Strait of Hormuz Closure is a Guaranteed Global Recession, Inflation Risks Surge on Rising Oil Prices",
+       "url": "http://ibtimes.co.uk/strait-hormuz-closure-global-recession-1782789",
+       "publisher": "ibtimes.co.uk",
+       "published_at": "2026-03-03T11:26:15",
+       "lede": "the effective closure of the strait of hormuz has sent shockwaves through global markets, with energy analysts warning that a prolonged blockade will trigger a 'guaranteed global recession.'following the coordinated us-israeli military strikes on 27 february 2026, which targeted iran's leadership and nuclear infrastructure, tehran responded by declaring the waterway",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.7
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad826c37f6c5e6602aee5",
+       "headline": "Strait of Hormuz Closure is a Guaranteed Global Recession, Inflation Risks Surge on Rising Oil Prices",
+       "url": "http://www.ibtimes.co.uk/strait-hormuz-closure-global-recession-1782789",
+       "publisher": "ibtimes.co.uk",
+       "published_at": "2026-03-03T11:26:15",
+       "lede": "the effective closure of the strait of hormuz has sent shockwaves through global markets, with energy analysts warning that a prolonged blockade will trigger a 'guaranteed global recession.'following the coordinated us-israeli military strikes on 27 february 2026, which targeted iran's leadership and nuclear infrastructure, tehran responded by declaring the waterway",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.7
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d4867b2d589e844ae8b0",
+       "headline": "ONU advierte que bloqueo del estrecho de Ormuz empuja economía mundial hacia la recesión - PortalPortuario",
+       "url": "https://portalportuario.cl/onu-advierte-que-bloqueo-del-estrecho-de-ormuz-empuja-economia-mundial-hacia-la-recesion/",
+       "publisher": "portalportuario.cl",
+       "published_at": "2026-04-30T15:40:25",
+       "lede": "by redacción portalportuario/agencia anadolu @portalportuario the secretary general of the united nations (un), antónio guterres, warned that the crisis in the middle east is pushing the world economy into recession, posing three dire scenarios as the constant interruptions in the strait of ormuz enter its third month. “the middle east",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.62
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03f27f62bbf617b03acc85",
+       "headline": "The global economy has a month—eight weeks at most—to avoid a recession, warns top economist | Fortune",
+       "url": "https://fortune.com/2026/04/30/global-economy-recession-oil-fears-mohamed-el-erian-zandi/",
+       "publisher": "fortune.com",
+       "published_at": "2026-04-30T10:46:33",
+       "lede": "the countdown is on: the global economy has four weeks, eight at most, if it is to avoid plunging into a recession. that’s the warning from mohamed el-erian, the former ceo of pimco, who served as chair of president obama’s global development council. this week, el-erian said the globe will",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a942bc37f6c5e66d2995d",
+       "headline": "$200 Oil Could Trigger Global Recession",
+       "url": "http://ibtimes.sg/200-oil-scenario-could-push-global-economy-into-recession-warns-bnp-paribas-85921",
+       "publisher": "ibtimes.sg",
+       "published_at": "2026-04-30T05:55:51",
+       "lede": "brent crude rose above $119 amid hormuz blockade. bnp paribas warned $200 oil could trigger recession. supply disruption cut up to 10 million barrels daily. u.s. exports rose as global inventories declined. brent crude traded above $119.50 per barrel in late april 2026, its highest since june 2022. bnp paribas,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8ad628937ef12fc0b2bdc",
+       "headline": "The housing sector deserves better than being threatened with rent caps",
+       "url": "https://www.cityam.com/the-housing-sector-deserves-better-than-being-threatened-with-rent-caps/",
+       "publisher": "cityam.com",
+       "published_at": "2026-04-30T04:39:00",
+       "lede": "the housing sector deserves better than being threatened with rent caps reeves could be overseeing a uk economy on the brink of a recession. the rental sector delivers not only homes but creates jobs and sustains communities. the government should recognise that, revalue the rental sector and stop demonising the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 304,
+         "path": "/People & Society/Social Issues & Advocacy/Housing & Development",
+         "score": 0.45
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2158d7d251ccff640e1da",
+       "headline": "'Risk of recession' as inflation jumps and interest rate hike looms",
+       "url": "https://www.abc.net.au/news/programs/the-business/2026-04-29/-risk-of-recession-as-inflation-jumps-and-interest/106622970",
+       "publisher": "abc.net.au",
+       "published_at": "2026-04-29T09:31:42",
+       "lede": "video: 'risk of recession' as inflation jumps and interest rate hike looms david taylor the business 1h ago 1 hours ago wed 29 apr 2026 at 9:01am has video duration: 8 minutes 29 seconds . watch 8 m share options facebook linkedin x (formerly twitter) annual inflation is at the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.76
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c787399b489398decd46",
+       "headline": "UK economy set for £35bn hit from Middle East energy crisis, think tank says",
+       "url": "https://www.yorkpress.co.uk/news/national/26061869.uk-economy-set-gbp35bn-hit-middle-east-energy-crisis-think-tank-says/",
+       "publisher": "yorkpress.co.uk",
+       "published_at": "2026-04-29T00:03:57",
+       "lede": "the national institute of economic and social research (niesr) said that a more protracted crisis in the middle east could see the uk enter a recession in the second half this year. the group’s latest quarterly economic projections pointed to an increasingly gloomy outlook as the war between us-israeli and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.63
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "niesr"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c748399b489398dea3b9",
+       "headline": "UK economy set for £35bn hit from Middle East energy crisis, think tank says",
+       "url": "https://www.hamhigh.co.uk/news/national/26061869.uk-economy-set-gbp35bn-hit-middle-east-energy-crisis-think-tank-says/",
+       "publisher": "hamhigh.co.uk",
+       "published_at": "2026-04-29T00:03:57",
+       "lede": "the national institute of economic and social research (niesr) said that a more protracted crisis in the middle east could see the uk enter a recession in the second half this year. the group’s latest quarterly economic projections pointed to an increasingly gloomy outlook as the war between us-israeli and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.63
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "niesr"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ca73399b489398e045e3",
+       "headline": "UK set to suffer £35bn hit from Iran war as growth downgraded again",
+       "url": "https://www.cityam.com/uk-set-to-suffer-35bn-hit-from-iran-war-as-growth-downgraded-again/",
+       "publisher": "cityam.com",
+       "published_at": "2026-04-28T23:01:00",
+       "lede": "uk set to suffer £35bn hit from iran war as growth downgraded again reeves could be overseeing a uk economy on the brink of a recession. the uk risks finding itself on the brink of recession as a result of the iran war, a leading economics think tank has warned,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.7
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c8ea1e3933a6dd8ec1a3",
+       "headline": "Economists tip today’s CPI will force rates up next week - Switzer",
+       "url": "https://switzer.com.au/economists-tip-todays-cpi-will-force-rates-up-next-week/",
+       "publisher": "switzer.com.au",
+       "published_at": "2026-04-28T21:28:11",
+       "lede": "will the cash rate be raised to 4.35% next week? is anyone considering the effect of this (and a hard hitting budget that promptly follows) would be a recession that we didn’t have to have? economists are tipping today’s consumer price index will be so high that the reserve bank",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.52
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a75d05cefb83fe805d916",
+       "headline": "IMF warns on inflation and recession risks, as Iran war continues - Chemicals and the Economy",
+       "url": "https://www.icis.com/chemicals-and-the-economy/2026/04/imf-warns-on-inflation-and-recession-risks-as-iran-war-continues/",
+       "publisher": "icis.com",
+       "published_at": "2026-04-26T08:00:00",
+       "lede": "the price of a prolonged standoff imf global projections, 2026 we are now 8 weeks into the iran war. and the imf is warning on inflation and recession risks, as the chart shows: its reference case was based on a short, sharp shock – and still saw inflation averaging 4.4%",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8b5948937ef12fc0b5e1e",
+       "headline": "WARNING: Three Bubbles Set to Burst at Once [CRITICAL ALERT] | Michael Pento | Economics and Politics | Before It's News",
+       "url": "https://beforeitsnews.com/economics-and-politics/2026/04/warning-three-bubbles-set-to-burst-at-once-critical-alert-michael-pento-2536566.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-25T11:14:14",
+       "lede": "michael pento is sounding a recession warning that most investors are refusing to hear: three simultaneous bubbles in credit, real estate, and equities are converging at the worst possible moment, and fed policy has no clean exit. with stock market valuations at 220% of gdp — the highest ever recorded",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ace095cefb83fe841d528",
+       "headline": "Is the possibility of a crypto recession approaching? A commodity strategist signals a warning. - TheCryptoUpdates",
+       "url": "https://www.thecryptoupdates.com/is-the-possibility-of-a-crypto-recession-approaching-a-commodity-strategist-signals-a-warning/",
+       "publisher": "thecryptoupdates.com",
+       "published_at": "2026-04-25T09:48:16",
+       "lede": "bitcoin breaks $28,000 mark, but concerns of crypto recession linger transient blip or ominous sign for crypto? bitcoin (btc) surged above the $28,000 mark on monday, marking a significant milestone for the cryptocurrency. however, amidst the elation, concerns loom large in the crypto market. mike mcglone, commodity strategist at bloomberg,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.99
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 19,
+     "total_estimate": 753,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNSAwOTo0ODoxNiIsImkiOiI2YTJhY2UwOTVjZWZiODNmZTg0MWQ1MjgiLCJwIjo4fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.42,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.424
+    }
+   }
+  }
+ ]
+}

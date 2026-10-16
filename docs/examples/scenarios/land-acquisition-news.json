@@ -1,0 +1,916 @@
+{
+ "slug": "land-acquisition-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:08:36Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "land acquisition",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "land acquisition",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3401,
+     "tone": {
+      "carrying": 3396,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1066,
+        "share_pct": 31.39
+       },
+       {
+        "group": "neutral",
+        "count": 153,
+        "share_pct": 4.51
+       },
+       {
+        "group": "positive",
+        "count": 2177,
+        "share_pct": 64.1
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3400,
+      "count": 2373,
+      "share_pct": 69.79
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.666,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.669
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "land acquisition",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "land acquisition",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 501,
+       "critical": 354,
+       "critical_pct": 70.7,
+       "negative": 168,
+       "positive": 311,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 464,
+       "critical": 325,
+       "critical_pct": 70.0,
+       "negative": 154,
+       "positive": 287,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 681,
+       "critical": 406,
+       "critical_pct": 59.6,
+       "negative": 236,
+       "positive": 420,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 714,
+       "critical": 445,
+       "critical_pct": 62.3,
+       "negative": 284,
+       "positive": 405,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 622,
+       "critical": 471,
+       "critical_pct": 75.7,
+       "negative": 227,
+       "positive": 381,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 388,
+       "critical": 263,
+       "critical_pct": 67.8,
+       "negative": 127,
+       "positive": 250,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 489,
+       "critical": 352,
+       "critical_pct": 72.0,
+       "negative": 169,
+       "positive": 294,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 649,
+       "critical": 475,
+       "critical_pct": 73.2,
+       "negative": 224,
+       "positive": 398,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 624,
+       "critical": 424,
+       "critical_pct": 67.9,
+       "negative": 179,
+       "positive": 412,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 891,
+       "critical": 664,
+       "critical_pct": 74.5,
+       "negative": 326,
+       "positive": 531,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 826,
+       "critical": 556,
+       "critical_pct": 67.3,
+       "negative": 246,
+       "positive": 543,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1060,
+       "critical": 729,
+       "critical_pct": 68.8,
+       "negative": 315,
+       "positive": 691,
+       "partial_period": false
+      }
+     ],
+     "total": 7909,
+     "critical_total": 5464,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.018,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.023
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "land acquisition",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "land acquisition",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3401,
+     "carrying": 1672,
+     "availability_pct": 49.16,
+     "items": [
+      {
+       "country": "india",
+       "count": 945,
+       "share_pct": 27.79
+      },
+      {
+       "country": "united states",
+       "count": 355,
+       "share_pct": 10.44
+      },
+      {
+       "country": "united kingdom",
+       "count": 57,
+       "share_pct": 1.68
+      },
+      {
+       "country": "nigeria",
+       "count": 35,
+       "share_pct": 1.03
+      },
+      {
+       "country": "ghana",
+       "count": 19,
+       "share_pct": 0.56
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 261
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.11,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.113
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "land acquisition",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "land acquisition",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "land surveying and geotechnical analysis",
+       "count": 258,
+       "share": 15.69,
+       "lift": 1281.05,
+       "baseline_count": 1,
+       "previous_period_count": 158,
+       "delta_pct": 63.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "construction project management techniques",
+       "count": 146,
+       "share": 8.88,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 48,
+       "delta_pct": 204.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "residential housing development projects",
+       "count": 62,
+       "share": 3.77,
+       "lift": 307.85,
+       "baseline_count": 1,
+       "previous_period_count": 25,
+       "delta_pct": 148.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infrastructure development for new communities",
+       "count": 47,
+       "share": 2.86,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 38,
+       "delta_pct": 23.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "infrastructure maintenance and repair strategies",
+       "count": 170,
+       "share": 10.34,
+       "lift": 105.51,
+       "baseline_count": 8,
+       "previous_period_count": 110,
+       "delta_pct": 54.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3401,
+     "carrying": 1644,
+     "carrier_share_pct": 48.34,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.158,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.162
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "land acquisition",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "land acquisition",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a6547c37f6c5e66b48f1d",
+       "headline": "Pune: ₹1.5 Crore Per Acre Fixed for Purandar Airport Land; Acquisition to Begin from May 4",
+       "url": "https://www.thebridgechronicle.com/pune/purandar-airport-land-acquisition-1-5-crore-per-acre-pune-may-4-agn97",
+       "publisher": "thebridgechronicle.com",
+       "published_at": "2026-04-30T05:29:31",
+       "lede": "pune, 30 april 2026: the pune district administration has finalized the compensation rate of ₹1.5 crore per acre for land to be acquired for the proposed international airport in purandar. the long-pending decision is expected to accelerate the stalled land acquisition process..officials confirmed that the acquisition will begin from may",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 107,
+         "path": "/Real Estate/Property Development",
+         "score": 0.46
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ce7f399b489398e1f538",
+       "headline": "Telangana CM Revanth Reddy says Future City land acquisition cannot be stopped",
+       "url": "https://telanganatoday.com/telangana-cm-revanth-reddy-says-future-city-land-acquisition-cannot-be-stopped",
+       "publisher": "telanganatoday.com",
+       "published_at": "2026-04-28T17:32:35",
+       "lede": "hyderabad: amid protests by farmers over land acquisition for the proposed future city and radial roads, chief minister a revanth reddy made it clear that the process cannot be halted. he said all legal formalities, including notifications, have been completed. “if not today, tomorrow, the land will be transferred to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "revanth reddy"
+       ]
+      },
+      {
+       "id": "69efaa3c727212302c5ea62d",
+       "headline": "Maharashtra govt greenlights HUDCO funding for 3 major eastern Expressways – Know project cost, routes here",
+       "url": "https://www.financialexpress.com/business/roadways/maharashtra-govt-greenlights-hudco-funding-for-3-major-expressways-know-project-cost-routes-herenbsp/4218074/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-25T08:21:28",
+       "lede": "the maharashtra government has taken a big step toward improving road connectivity in the eastern part of the state. chief minister devendra fadnavis has approved a proposal to secure a loan from housing and urban development corporation limited (hudco) for land acquisition for three major expressway projects. the three expressways",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "housing and urban development corporation",
+        "housing and urban development corporation"
+       ],
+       "people": [
+        "devendra fadnavis"
+       ]
+      },
+      {
+       "id": "6a2a7ba9c37f6c5e66c23128",
+       "headline": "Railway Plans Faster Rollout Of Bullet Train Corridors With Single Window Clearance - Metro Rail News",
+       "url": "https://metrorailnews.in/railway-plans-faster-rollout-of-bullet-train-corridors-with-single-window-clearance/",
+       "publisher": "metrorailnews.in",
+       "published_at": "2026-04-25T08:05:03",
+       "lede": "delhi(metro rail news): indian railways is planning to take up new bullet train corridors in a faster and more organised way. it aims to cut delays mostly related to land acquisition and approvals. now it will seek clearance from the central, state and local bodies together, instead of going to",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.68
+        },
+        {
+         "code": 93,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Rail Freight",
+         "score": 0.67
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa9eea84b609af2b253fd",
+       "headline": "Maha Govt grants ₹6,000 Crore guarantee to fast-track Purandar International Airport Project",
+       "url": "http://www.uniindia.com/maha-govt-grants-6-000-crore-guarantee-to-fast-track-purandar-international-airport-project/west/news/3822804.html",
+       "publisher": "uniindia.com",
+       "published_at": "2026-04-25T00:00:00",
+       "lede": "maha govt grants ₹6,000 crore guarantee to fast-track purandar international airport project pune, apr 25 (uni) in a major boost to the long-pending purandar international airport project, the state government has taken a significant step by extending a sovereign guarantee to raise rs 6,000 crore for land acquisition. the guarantee",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 50,
+         "path": "/Travel & Transportation/Transportation/Air Travel",
+         "score": 0.55
+        },
+        {
+         "code": 71,
+         "path": "/Business & Industrial/Aerospace & Defense/Aviation Industry",
+         "score": 0.46
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e98fc1d47fc028320fe758",
+       "headline": "Maharashtra Approves Metro Line 5-A, Expressway Projects",
+       "url": "https://www.newkerala.com/news/a/maha-govt-approves-metro-line-5-a-hudco-loans-705.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-22T20:55:24",
+       "lede": "projects aim to cut travel time by 40-50% in key regions loans for land acquisition on three vidarbha expressways the maharashtra government's infrastructure committee has approved the construction of the 34.21 km mumbai metro line 5-a with a massive investment of ₹18,130.55 crore. it also sanctioned hudco loans for land",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.59
+        },
+        {
+         "code": 132,
+         "path": "/Travel & Transportation/Transportation/Urban Transit",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99dccbdd09a23d093707b",
+       "headline": "Nod for Metro 5 & 5A  linking Thane, Bhiwandi,  Kalyan and Ulhasnagar",
+       "url": "https://indianexpress.com/article/cities/mumbai/nod-for-metro-5-5a-linking-thane-bhiwandi-kalyan-and-ulhasnagar-10650952/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-22T20:13:43",
+       "lede": "the state government on wednesday approved the rs 18,130.55 crore mumbai metro line 5 and 5a project, cleared a proposal to raise loans for land acquisition for three expressways in vidarbha, and sanctioned rs 1,063 crore for works related to the nashik-trimbakeshwar kumbh mela in 2027. the decisions were taken",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.58
+        },
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.51
+        },
+        {
+         "code": 132,
+         "path": "/Travel & Transportation/Transportation/Urban Transit",
+         "score": 0.45
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8784d9baafc73568a3533",
+       "headline": "Maharashtra to fast-track land acquisition for data centre investments: CM Devendra Fadnavis",
+       "url": "https://www.mid-day.com/mumbai/mumbai-news/article/maharashtra-to-fast-track-land-for-data-centre-investments-cm-devendra-fadnavis-23626394",
+       "publisher": "mid-day.com",
+       "published_at": "2026-04-18T19:46:00",
+       "lede": "maharashtra chief minister devendra fadnavis on saturday said that the state would fasttrack the process of land acquisition for data centre investmentsaccording to an official statement fadnavis directed officials to provide land quickly to companies planning to invest in data centres across the statethe move comes as several global firms",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "devendra fadnavis"
+       ]
+      },
+      {
+       "id": "69e8dca05cfa3e5ba54aaacb",
+       "headline": "One of Britain’s largest housebuilders, Barratt Redrow, is scaling back its land acquisition plans, citing increased uncertainty linked to global events, in a move that could add further pressure to the government’s housing targets. The company said it now expects to approve between 7,000 and 9,000 ",
+       "url": "https://bebeez.eu/2026/04/16/major-housebuilder-cuts-land-buying-plans-amid-global-uncertainty/",
+       "publisher": "bebeez.eu",
+       "published_at": "2026-04-16T00:00:00",
+       "lede": "one of britain’s largest housebuilders, barratt redrow, is scaling back its land acquisition plans, citing increased uncertainty linked to global events, in a move that could add further pressure to the government’s housing targets. the company said it now expects to approve between 7,000 and 9,000 plots for purchase in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.52
+        },
+        {
+         "code": 107,
+         "path": "/Real Estate/Property Development",
+         "score": 0.51
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b0f8b5cefb83fe86f6f74",
+       "headline": "Pune: Civic Panel Reviews 12 Missing Link Road Projects, Pushes Land Acquisition and Encroachment Removal - PUNE PULSE",
+       "url": "https://www.mypunepulse.com/pune-civic-panel-reviews-12-missing-link-road-projects-pushes-land-acquisition-and-encroachment-removal/",
+       "publisher": "mypunepulse.com",
+       "published_at": "2026-04-14T04:17:03",
+       "lede": "share this news pune, april 14, 2026: in a major step toward improving urban infrastructure, the pune parivartan committee held its second review meeting on monday, focusing on accelerating land acquisition, removing encroachments, and completing long-pending road link projects across pune.the meeting was chaired by municipal commissioner naval kishore ram",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e63e009e87ccc43e30404d",
+       "headline": "SC suspends jail sentence, grants bail to ex-Jharkhand minister Anosh Ekka",
+       "url": "https://www.hindustantimes.com/cities/ranchi-news/sc-suspends-jail-sentence-grants-bail-to-ex-jharkhand-minister-anosh-ekka-101776089729761.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-04-13T14:15:29",
+       "lede": "new delhi, apr 13 (pti) the supreme court on monday suspended the seven-year imprisonment awarded to former jharkhand minister anosh ekka and granted him bail in an alleged land acquisition case involving violation of chota nagpur tenancy (cnt) act.the top court, however, asked him to provide a formal undertaking to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.78
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.52
+        },
+        {
+         "code": 30,
+         "path": "/Law & Government/Legal/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e502439d0e7fe469a79a74",
+       "headline": "Katraj-Kondhwa road widening project receives fresh push; state allocates  ₹140cr for land acquisition",
+       "url": "https://www.hindustantimes.com/cities/pune-news/katrajkondhwa-road-widening-project-receives-fresh-push-state-allocates-140cr-for-land-acquisition-101776020788212.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-04-13T00:36:15",
+       "lede": "the long-delayed katraj–kondhwa road widening project received a fresh push after the state government allocated ₹140 crore for land acquisition, accelerating work on one of the city’s most congested arterial stretches.the project, which connects two national highways, is being fast-tracked following directions from chief minister devendra fadnavis. in addition to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "devendra fadnavis"
+       ]
+      },
+      {
+       "id": "69e502ce9d0e7fe469a7eddf",
+       "headline": "Punjab Govt recovers Rs 8,710 crore from housing bodies - The Tribune",
+       "url": "https://www.tribuneindia.com/news/punjab/govt-recovers-8710-crore-from-housing-bodies/",
+       "publisher": "tribuneindia.com",
+       "published_at": "2026-04-12T20:30:06",
+       "lede": "the punjab government has recovered rs 8,710 crore from development authorities under its department of housing and urban development, citing obligations under the right to compensation and transparency in land acquisition, rehabilitation and resettlement act, 2013.officials privy to the development said the money already deposited with the state finance department",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8a5d85cfa3e5ba51f4e01",
+       "headline": "SC says fair compensation can’t depend on financial burden",
+       "url": "https://economictimes.indiatimes.com/news/india/supreme-court-protects-landowners-rights-limits-retroactive-compensation-claims-in-nhai-cases/articleshow/129823614.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-03-26T12:23:00",
+       "lede": "on wednesday, the supreme court of india said the government cannot deny fair compensation in land acquisition cases just because the financial burden is high, according to dhananjay mahapatra's times of india report. it also limited a more generous compensation system. this could reduce the national highways authority of india’s",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "national highways authority of india"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a4f24c37f6c5e66a44215",
+       "headline": "Compensation, interest on land acquisition payout can't be contingent on financial burden: Supreme Court",
+       "url": "https://www.dtnext.in/news/national/compensation-interest-on-land-acquisition-payout-cant-be-contingent-on-financial-burden-supreme-court",
+       "publisher": "dtnext.in",
+       "published_at": "2026-03-25T06:52:41",
+       "lede": "new delhi: stating that the constitutional guarantee of just compensation cannot be diluted, the supreme court on wednesday said solatium and interest in a land acquisition matter cannot be contingent on the magnitude of the financial burden..a bench of chief justice surya kant and justice ujjal bhuyan made the observation",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 675,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yMSAxOTozMTowNSIsImkiOiI2OWNiZDFjNDc3OWUyZTJiYWM1NjFjZWMiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.471,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.473
+    }
+   }
+  }
+ ]
+}

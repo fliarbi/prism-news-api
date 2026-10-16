@@ -1,0 +1,955 @@
+{
+ "slug": "s-p-500-news-today",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:56:45Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "S&P 500",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "s&p 500",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 24246,
+     "tone": {
+      "carrying": 24239,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 11460,
+        "share_pct": 47.28
+       },
+       {
+        "group": "neutral",
+        "count": 413,
+        "share_pct": 1.7
+       },
+       {
+        "group": "positive",
+        "count": 12366,
+        "share_pct": 51.02
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 24246,
+      "count": 11938,
+      "share_pct": 49.24
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.348,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.352
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "S&P 500",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "s&p 500",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 4676,
+       "critical": 2711,
+       "critical_pct": 58.0,
+       "negative": 2014,
+       "positive": 2630,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2569,
+       "critical": 1255,
+       "critical_pct": 48.9,
+       "negative": 1008,
+       "positive": 1528,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 4604,
+       "critical": 2240,
+       "critical_pct": 48.7,
+       "negative": 2018,
+       "positive": 2561,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3850,
+       "critical": 1984,
+       "critical_pct": 51.5,
+       "negative": 1397,
+       "positive": 2427,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 5131,
+       "critical": 2407,
+       "critical_pct": 46.9,
+       "negative": 1557,
+       "positive": 3476,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 6826,
+       "critical": 3143,
+       "critical_pct": 46.0,
+       "negative": 2690,
+       "positive": 3498,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 5446,
+       "critical": 2569,
+       "critical_pct": 47.2,
+       "negative": 2376,
+       "positive": 2922,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 5315,
+       "critical": 2119,
+       "critical_pct": 39.9,
+       "negative": 2031,
+       "positive": 3058,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3979,
+       "critical": 1829,
+       "critical_pct": 46.0,
+       "negative": 1371,
+       "positive": 2522,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 6676,
+       "critical": 2883,
+       "critical_pct": 43.2,
+       "negative": 3476,
+       "positive": 3116,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 5532,
+       "critical": 3150,
+       "critical_pct": 56.9,
+       "negative": 3258,
+       "positive": 2201,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 8059,
+       "critical": 4076,
+       "critical_pct": 50.6,
+       "negative": 3355,
+       "positive": 4527,
+       "partial_period": false
+      }
+     ],
+     "total": 62663,
+     "critical_total": 30366,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.415,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.418
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "S&P 500",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "s&p 500",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 24246,
+     "carrying": 12466,
+     "availability_pct": 51.41,
+     "items": [
+      {
+       "country": "united states",
+       "count": 9297,
+       "share_pct": 38.34
+      },
+      {
+       "country": "iran",
+       "count": 955,
+       "share_pct": 3.94
+      },
+      {
+       "country": "china",
+       "count": 425,
+       "share_pct": 1.75
+      },
+      {
+       "country": "japan",
+       "count": 235,
+       "share_pct": 0.97
+      },
+      {
+       "country": "united kingdom",
+       "count": 191,
+       "share_pct": 0.79
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1363
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.206,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.208
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "S&P 500",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "s&p 500",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 2684,
+       "share": 15.53,
+       "lift": 634.03,
+       "baseline_count": 2,
+       "previous_period_count": 965,
+       "delta_pct": 178.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market volatility and risk assessment",
+       "count": 2698,
+       "share": 15.62,
+       "lift": 424.89,
+       "baseline_count": 3,
+       "previous_period_count": 1413,
+       "delta_pct": 90.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market volatility indicators",
+       "count": 2028,
+       "share": 11.74,
+       "lift": 479.06,
+       "baseline_count": 2,
+       "previous_period_count": 2073,
+       "delta_pct": -2.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "bull and bear market transitions",
+       "count": 2852,
+       "share": 16.51,
+       "lift": 336.86,
+       "baseline_count": 4,
+       "previous_period_count": 1845,
+       "delta_pct": 54.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stock market index composition",
+       "count": 1734,
+       "share": 10.04,
+       "lift": 409.61,
+       "baseline_count": 2,
+       "previous_period_count": 1178,
+       "delta_pct": 47.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 24246,
+     "carrying": 17278,
+     "carrier_share_pct": 71.26,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.042,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.046
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "S&P 500",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "s&p 500",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69d10b861840dd4fe07bd68a",
+       "headline": "Trump reportedly willing to end Iran war without reopening the Strait of Hormuz",
+       "url": "https://sherwood.news/markets/trump-reportedly-willing-end-iran-war-without-reopening-strait-of-hormuz/",
+       "publisher": "sherwood.news",
+       "published_at": "2026-03-31T13:05:49",
+       "lede": "futures for the s&p 500 and nasdaq 100 rose after the report. over the past month, the closure of the strait to all but a minuscule amount of tanker traffic has sent oil prices skyrocketing and pushed major indexes down. president trump told aides he’s willing to pull out of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03ef8d62bbf617b039d257",
+       "headline": "US stocks today: US market ends higher, S&P 500, Nasdaq notch biggest monthly gains in years",
+       "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-us-market-ends-higher-sp-500-nasdaq-notch-biggest-monthly-gains-in-years/articleshow/130651806.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T20:02:00",
+       "lede": "u.s. stocks advanced on thursday and the s&p 500 and the nasdaq logged their biggest monthly gains in years as solid corporate earnings offset the war-related oil supply shock that has rattled markets and sent crude prices to four-year highs. but oil prices eased and economic data showed the u.s.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.68
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f88060bbf1d314559639ba",
+       "headline": "How Nvidia beat Apple to become the defining stock of the AI boom",
+       "url": "https://malaysia.news.yahoo.com/how-nvidia-beat-apple-to-become-the-defining-stock-of-the-ai-boom-181731661.html",
+       "publisher": "malaysia.news.yahoo.com",
+       "published_at": "2026-04-30T18:17:31",
+       "lede": "the “magnificent seven” tech stocks rose to fame with apple (aapl) on top. but nvidia (nvda) quickly catapulted from challenger to leader. at the s&p 500’s (^gspc) oct. 12, 2022, bear market low, apple accounted for nearly 30% of the group’s market value. nvidia was less than 4%. today, the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.75
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2acb2c5cefb83fe83fcaf7",
+       "headline": "US stocks today-S&P 500, Nasdaq on course for best month since 2020 despite Middle East risks",
+       "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-sp-500-nasdaq-open-higher-as-earnings-optimism-overshadows-middle-east-woes/articleshow/130635507.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T13:33:00",
+       "lede": "the s&p 500 and the nasdaq were on course to end april with the biggest gains since 2020, highlighting how resilient corporate earnings have helped steady investor nerves despite a historic supply shock in the oil markets.the rally shows that investors are leaning heavily on earnings resilience to look past",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.8
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d4a6713680636eec3873",
+       "headline": "Alphabet jumps, Meta tumbles: US Big Tech stocks trade mixed in premarket after earnings, AI spending bets | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/alphabet-jumps-meta-tumbles-us-big-tech-stocks-mixed-in-premarket-after-earnings-ai-spending-bets-11777553633484.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T13:11:26",
+       "lede": "shares of us technology heavyweights such as alphabet, amazon, meta platforms, and microsoft, which together account for more than a fifth of the s&p 500’s total market capitalisation, were trading mixed in premarket trade on thursday, 30 april, as investors assessed their march quarter earnings and updated artificial intelligence spending",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.73
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.72
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "meta platforms",
+        "microsoft",
+        "microsoft",
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8802fbbf1d31455961b08",
+       "headline": "Nvidia has powered one-third of the Magnificent 7's bull market gains: Chart of the Day",
+       "url": "https://malaysia.news.yahoo.com/nvidia-has-powered-one-third-of-the-magnificent-7s-bull-market-gains-chart-of-the-day-110000790.html",
+       "publisher": "malaysia.news.yahoo.com",
+       "published_at": "2026-04-30T11:00:00",
+       "lede": "nvidia (nvda) didn’t start this bull market — but it has come to define it. the s&p 500 (^gspc) bottomed on oct. 12, 2022, in the wake of the 2022 bear market. but the “magnificent seven” tech stocks — apple (aapl), alphabet (googl, goog), microsoft (msft), amazon (amzn), meta (meta),",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.71
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "nvidia",
+        "microsoft",
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2aa99c963d76f4afef5a2d",
+       "headline": "US Tech Stocks Decline as OpenAI Revenue Concerns Trigger Selloff",
+       "url": "https://www.harianbasis.co/en/tech-stocks-decline-openai-concerns",
+       "publisher": "harianbasis.co",
+       "published_at": "2026-04-30T09:12:15",
+       "lede": "major united states stock indices finished lower as weakness in the technology sector overshadowed gains in energy and defensive stocks. the s&p 500 dropped 0.49% to 7,138.80, while the nasdaq composite fell 0.90% to 24,663.80, and the dow jones industrial average slightly dipped 0.05% to 49,141.93.artificial intelligence shares faced significant",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.77,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.78
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0af826ae08af35807419a3",
+       "headline": "Be Warned: A Historical Triple Whammy Awaits the SpaceX IPO | The Motley Fool",
+       "url": "https://www.fool.com/investing/2026/04/30/be-warned-a-historical-triple-whammy-spacex-ipo/",
+       "publisher": "fool.com",
+       "published_at": "2026-04-30T08:06:00",
+       "lede": "wall street is making history at every turn in 2026. last week, the benchmark s&p 500 (^gspc +0.58%) and innovation-powered nasdaq composite (^ixic +1.20%) climbed to fresh all-time highs. but the most exciting event is yet to come. although artificial intelligence (ai) superstars openai and anthropic are toying with the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.61
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6fdbc37f6c5e66ba73cd",
+       "headline": "PrimeXBT: Bitcoin's twin failure; Missing the AI rally and questioning the liquidity story",
+       "url": "https://ventureburn.com/primexbt-bitcoins-twin-failure-missing-the-ai-rally-and-questioning-the-liquidity-story/",
+       "publisher": "ventureburn.com",
+       "published_at": "2026-04-30T01:08:25",
+       "lede": "by jonatan randin, senior market analyst at primexbt both the s&p 500 and the nasdaq composite are rallying and breaking into fresh all-time highs. global liquidity is approaching $200 trillion, also a fresh nominal high. by any reasonable read, we’re in a risk-on regime. bitcoin sits around $78,000, roughly 38%",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.96
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23268c6105443aa601e03",
+       "headline": "US stock market today: Dow, S&P 500 futures flat ahead of Fed decision, megacap earnings | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/us-stock-market-today-dow-s-p-500-futures-flat-ahead-of-fed-decision-megacap-earnings-11777464317387.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-29T12:57:46",
+       "lede": "us stock futures were trading flat in wednesday’s session, 29 april, as investors awaited the us federal reserve’s policy decision, while four of the s&p 500’s most closely watched companies were due to report quarterly results. in addition, the continued rise in crude oil prices kept overall market sentiment cautious.futures",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.81
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cf12399b489398e24fd8",
+       "headline": "S&P 500 AI Concerns Mount Before Tech Earnings: Deutsche Bank Warns of Market Uncertainty",
+       "url": "https://bitcoinworld.co.in/sp-500-ai-concerns-tech-earnings/",
+       "publisher": "bitcoinworld.co.in",
+       "published_at": "2026-04-29T08:55:11",
+       "lede": "the s&p 500 faces renewed pressure as ai concerns weigh heavily on investor sentiment ahead of a critical week for tech earnings, according to a new report from deutsche bank. the bank’s analysts highlight growing unease about the sustainability of artificial intelligence-driven growth, which has been a primary driver of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.78
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.67
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "deutsche bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ca1fa5706a322e10a996",
+       "headline": "A Stock Market Indicator Just Flashed a Warning Last Seen in 2022. History Says This Will Happen Next. | The Motley Fool",
+       "url": "https://www.fool.com/investing/2026/04/29/stock-market-indicator-warning-this-happens-next/",
+       "publisher": "fool.com",
+       "published_at": "2026-04-29T08:48:00",
+       "lede": "the s&p 500 (^gspc 0.49%) dropped 9% from its peak in march as the iran conflict drove oil prices higher. that sparked a flight to safety. investors rotated away from risky stocks in favor of u.s. treasury bonds, money market funds, and other safe-haven assets. the s&p 500 has already",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.73
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cbd8399b489398e0aabe",
+       "headline": "U.S. Stock Futures Edge Higher Ahead of Big Tech Earnings and Fed Decision - EconoTimes",
+       "url": "https://econotimes.com/US-Stock-Futures-Edge-Higher-Ahead-of-Big-Tech-Earnings-and-Fed-Decision-1740296",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-29T03:44:21",
+       "lede": "u.s. stock index futures moved slightly higher on tuesday evening after a weak wall street session, as investors turned their attention to upcoming big tech earnings and the federal reserve’s policy decision. s&p 500 futures rose 0.2% to 7,185.75, nasdaq 100 futures gained 0.4% to 27,278.0, and dow jones futures",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.88
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ccaa399b489398e1184f",
+       "headline": "Money Matters - Peter Lynch’s ‘One Up on Wall St’",
+       "url": "https://www.dailyecho.co.uk/news/26059647.money-matters---peter-lynchs-one-wall-st/",
+       "publisher": "dailyecho.co.uk",
+       "published_at": "2026-04-29T03:30:00",
+       "lede": "peter lynch's track record at magellan is, by virtually any measure, one of the most remarkable in the history of active fund management. between 1977 and 1990, the fund delivered annualised returns of approximately 29 per cent, consistently outperforming the s&p 500. to contextualise this: a $10,000 investment in magellan",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "peter lynch"
+       ]
+      },
+      {
+       "id": "6a2aaf6a963d76f4aff388a6",
+       "headline": "10 Best Performing S&P 500 Stocks So Far in 2026",
+       "url": "https://www.insidermonkey.com/blog/10-best-performing-sp-500-stocks-so-far-in-2026-1747803/",
+       "publisher": "insidermonkey.com",
+       "published_at": "2026-04-29T03:15:52",
+       "lede": "in this article, we will discuss the 10 best performing s&p 500 stocks so far in 2026. on april 22, andrew slimmon, morgan stanley investment management senior portfolio manager, joined cnbc’s ‘squawk box’ to discuss the latest market trends. slimmon described the current stock market as pivoting between strong micro",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.82
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.64
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 5438,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAwMzoxNTo1MiIsImkiOiI2YTJhYWY2YTk2M2Q3NmY0YWZmMzg4YTYiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.49,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.492
+    }
+   }
+  }
+ ]
+}

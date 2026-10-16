@@ -1,0 +1,844 @@
+{
+ "slug": "venture-capital-news-today",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:19Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "venture capital",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "venture capital",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 19600,
+     "tone": {
+      "carrying": 19592,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2393,
+        "share_pct": 12.21
+       },
+       {
+        "group": "neutral",
+        "count": 363,
+        "share_pct": 1.85
+       },
+       {
+        "group": "positive",
+        "count": 16836,
+        "share_pct": 85.93
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 19599,
+      "count": 11006,
+      "share_pct": 56.16
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.446,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.448
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "venture capital",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "venture capital",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3563,
+       "critical": 1878,
+       "critical_pct": 52.7,
+       "negative": 406,
+       "positive": 3071,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 3113,
+       "critical": 1656,
+       "critical_pct": 53.2,
+       "negative": 325,
+       "positive": 2715,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 3629,
+       "critical": 1903,
+       "critical_pct": 52.4,
+       "negative": 528,
+       "positive": 3012,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3470,
+       "critical": 1967,
+       "critical_pct": 56.7,
+       "negative": 437,
+       "positive": 2977,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 4146,
+       "critical": 2524,
+       "critical_pct": 60.9,
+       "negative": 453,
+       "positive": 3605,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 3682,
+       "critical": 2170,
+       "critical_pct": 58.9,
+       "negative": 420,
+       "positive": 3207,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 3571,
+       "critical": 2131,
+       "critical_pct": 59.7,
+       "negative": 340,
+       "positive": 3128,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 3395,
+       "critical": 1941,
+       "critical_pct": 57.2,
+       "negative": 344,
+       "positive": 2954,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3744,
+       "critical": 2140,
+       "critical_pct": 57.2,
+       "negative": 406,
+       "positive": 3257,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 5586,
+       "critical": 3352,
+       "critical_pct": 60.0,
+       "negative": 749,
+       "positive": 4718,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 5115,
+       "critical": 2596,
+       "critical_pct": 50.8,
+       "negative": 587,
+       "positive": 4447,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 5155,
+       "critical": 2918,
+       "critical_pct": 56.6,
+       "negative": 651,
+       "positive": 4414,
+       "partial_period": false
+      }
+     ],
+     "total": 48169,
+     "critical_total": 27176,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.027,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.03
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "venture capital",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "venture capital",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 19600,
+     "carrying": 9134,
+     "availability_pct": 46.6,
+     "items": [
+      {
+       "country": "united states",
+       "count": 4524,
+       "share_pct": 23.08
+      },
+      {
+       "country": "india",
+       "count": 934,
+       "share_pct": 4.77
+      },
+      {
+       "country": "united kingdom",
+       "count": 578,
+       "share_pct": 2.95
+      },
+      {
+       "country": "china",
+       "count": 553,
+       "share_pct": 2.82
+      },
+      {
+       "country": "singapore",
+       "count": 480,
+       "share_pct": 2.45
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 2065
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.899,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.903
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "venture capital",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "venture capital",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "venture capital in artificial intelligence (ai)",
+       "count": 426,
+       "share": 4.52,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 353,
+       "delta_pct": 20.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "government & public venture capital initiatives",
+       "count": 328,
+       "share": 3.48,
+       "lift": 284.08,
+       "baseline_count": 1,
+       "previous_period_count": 235,
+       "delta_pct": 39.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "venture capital for technology startups",
+       "count": 277,
+       "share": 2.94,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 137,
+       "delta_pct": 102.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "venture capital accelerators & incubators",
+       "count": 255,
+       "share": 2.71,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 178,
+       "delta_pct": 43.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "venture capital geographic focus (silicon valley, global hubs)",
+       "count": 240,
+       "share": 2.55,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 110,
+       "delta_pct": 118.2,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 19600,
+     "carrying": 9425,
+     "carrier_share_pct": 48.09,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.98,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.986
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "venture capital",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "venture capital",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a040e8e62bbf617b0463fa6",
+       "headline": "CryptoRank Reveals: Just Six ICOs Closed in 2026 as Market Activity Dries Up - Crypto Economy",
+       "url": "https://crypto-economy.com/cryptorank-reveals-just-six-icos-closed-in-2026-as-market-activity-dries-up/",
+       "publisher": "crypto-economy.com",
+       "published_at": "2026-04-30T19:21:04",
+       "lede": "cryptorank revealed that the crypto financing ecosystem is facing a significant slowdown with only six token sales completed so far in 2026. the report highlights that half of these projects are currently trading below their offering price, while rounds funded by venture capital (vc) firms also show a notable loss",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0b01bf47abc155c28ffc87",
+       "headline": "How AI’s impact on software is pushing VCs from Bits to Atoms | VC Cafe",
+       "url": "https://www.vccafe.com/how-ais-impact-on-software-is-pushing-vcs-from-bits-to-atoms/",
+       "publisher": "vccafe.com",
+       "published_at": "2026-04-29T16:13:30",
+       "lede": "views: 559 for more than a decade, the venture capital world revolved almost entirely around software, chasing saas efficiency, product-led growth, and asset-light digital scale. but today, the energy in the market is shifting. we are quietly navigating the “saas-pocalypse” (see my previous post), a fundamental repricing of software economics",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.6
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c9ed1e3933a6dd8f46b1",
+       "headline": "Avataar Ventures Joins India Deep-Tech Investment Alliance as Platinum General Member - Business Upturn",
+       "url": "https://www.businessupturn.com/brand-post/avataar-ventures-joins-india-deep-tech-investment-alliance-as-platinum-general-member/",
+       "publisher": "businessupturn.com",
+       "published_at": "2026-04-29T04:51:30",
+       "lede": "business wire indiaavataar venture partners, a growth-stage venture capital firm investing in b2b technology companies, today announced that it has joined the india deep-tech investment alliance (idta) as a platinum general member. the alliance is an industry-led coalition of leading indian and global investors mobilising private capital and expertise to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.58
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "avataar"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a63aa5cefb83fe8fb594d",
+       "headline": "US Climate Startups Face a Brutal Funding Test Few Can Survive",
+       "url": "https://ustechtimes.com/us-climate-startups-face-a-brutal-funding-test-few-can-survive/",
+       "publisher": "ustechtimes.com",
+       "published_at": "2026-04-28T14:51:41",
+       "lede": "<a href=\"https://ustechtimes.com/fiber-global-secures-20m-to-scale-climate-tech-for-sustainable-building-materials/\">climate tech</a> investment in the united states is at a sharp turning point, and<a href=\"https://ustechtimes.com/sbir-freeze-forces-us-startups-to-eye-china-cash/\"> us startups</a> chasing venture capital must now master the valley of death, pivot their pitch toward energy security, and prove that clean energy innovation is not just good for the planet, it is essential",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.44
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aca1c5cefb83fe83f1025",
+       "headline": "Venture capital hires its first chief AI officer and the entire industry must catch up - Startup Fortune",
+       "url": "https://startupfortune.com/venture-capital-hires-its-first-chief-ai-officer-and-the-entire-industry-must-catch-up/",
+       "publisher": "startupfortune.com",
+       "published_at": "2026-04-28T11:37:31",
+       "lede": "vc firms are formalizing ai leadership as deal sourcing, diligence, and portfolio support shift from ad hoc experimentation to structured ai operations with measurable productivity goals. the venture capital industry has spent years debating whether ai would transform investing. now, at least one firm has stopped debating and created the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.61
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.55
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b27345cefb83fe8807de7",
+       "headline": "UK AI Startup Ineffable Raises $1.1B in Largest European Seed Round",
+       "url": "https://globalbankingandfinance.com/uk-based-ai-startup-ineffable-raises-1-1-billion-europes/",
+       "publisher": "globalbankingandfinance.com",
+       "published_at": "2026-04-27T17:35:35",
+       "lede": "ineffable intelligence raises $1.1b in europe's largest ai seed funding by muvija m record-breaking seed round and strategic investments london, april 27 (reuters) - uk-based ineffable intelligence, founded by former deepmind researcher david silver, has raised $1.1 billion in a seed funding round led by u.s. venture capital firms sequoia",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.62
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e323d3256108942078ca",
+       "headline": "India AI VC Growth: Global Funding Hits $330.9B Record",
+       "url": "https://www.newkerala.com/news/a/india-set-ai-led-venture-capital-growth-as-global-728.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-27T15:35:29",
+       "lede": "global venture capital funding more than doubled to a record $330.9 billion in q1 2026, driven by ai-led megadeals. india is poised for ai-led vc growth, though still at a nascent stage of ai adoption. the americas dominated with over 80% of total investment, led by the us at $267.2",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.8,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.88
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99c36d47fc0283219c80f",
+       "headline": "Premium Refurbished Electronics Platform Grest Secures Strategic FDI from Japan’s ICMG",
+       "url": "https://cxotoday.com/media-coverage/premium-refurbished-electronics-platform-grest-secures-strategic-fdi-from-japans-icmg/",
+       "publisher": "cxotoday.com",
+       "published_at": "2026-04-22T13:29:01",
+       "lede": "grest has announced that it has secured a foreign direct investment (fdi) from icmg, a japanese venture capital, as part of its ongoing undisclosed pre-series a funding round. this early-stage cross-border investment underscores the sector’s increasing strategic relevance and signals rising global interest in india’s refurbished electronics ecosystem. this is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.41
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "grest"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e884257bb1410d4c894887",
+       "headline": "India Tech IPOs Hit Decade High, VC Pivots to AI in FY26",
+       "url": "https://www.newkerala.com/news/a/india-tech-posts-huge-surge-ipos-venture-capital-857.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-21T18:15:48",
+       "lede": "india's tech startup ecosystem witnessed a record 47 ipos in fy26, the highest in a decade, alongside a strategic pivot of venture capital towards artificial intelligence and deep tech sectors. while total funding rounds decreased by 34%, the total capital raised dipped only 18%, indicating a concentration of larger investments.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.71
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2abf715cefb83fe83727ee",
+       "headline": "(HedgeCo.Net) In what is already being called the most consequential private equity exit of 2026, SpaceX has acquired xAI in a staggering $250 billion transaction—instantly reshaping the landscape of venture capital, private equity, and artificial intelligence investing. The deal, which provided mas",
+       "url": "https://hedgeco.net/news/04/2026/the-250-billion-x-ai-exit-a-defining-moment-for-private-markets-venture-capital-and-the-future-of-ai-capital-formation.html",
+       "publisher": "hedgeco.net",
+       "published_at": "2026-04-20T00:00:00",
+       "lede": "(hedgeco.net) in what is already being called the most consequential private equity exit of 2026, spacex has acquired xai in a staggering $250 billion transaction—instantly reshaping the landscape of venture capital, private equity, and artificial intelligence investing. the deal, which provided massive liquidity to a syndicate of elite investors including",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.51
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e98f6f75f157062ca642e4",
+       "headline": "Next Crypto to Explode: Pepeto Raises $9.2M While Maxi Doge and Bitcoin Hyper Fall Short",
+       "url": "https://techbullion.com/next-crypto-to-explode-pepeto-raises-9-2m-while-maxi-doge-and-bitcoin-hyper-fall-short/",
+       "publisher": "techbullion.com",
+       "published_at": "2026-04-19T21:00:05",
+       "lede": "ai companies raised $242 billion in early 2026, capturing 80% of global venture capital funding, and gartner projects total ai spending will reach $2.52 trillion this year. that level of institutional commitment to ai infrastructure is reshaping where capital flows across every market, including crypto. for anyone searching for the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.9
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "gartner"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e872de7bb1410d4c7e6741",
+       "headline": "Best Crypto to Buy Now: Pepeto Sets Itself Apart as AI Eats 80% of Global VC",
+       "url": "https://www.openpr.com/news/4478362/best-crypto-to-buy-now-pepeto-sets-itself-apart-as-ai-eats-80",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-19T11:23:53",
+       "lede": "best crypto to buy now: pepeto sets itself apart as ai eats 80% of global vc https://pepeto.io/ https://pepeto.io/ https://www.youtube.com/watch?v=gpx8yxelk00 https://pepeto.io/ https://www.tokenwire.io ai companies consumed $242 billion in early 2026, capturing 80% of all global venture capital, and the shift is forcing every sector to prove its utility or lose capital",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 3016,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xOSAxMToyMzo1MyIsImkiOiI2OWU4NzJkZTdiYjE0MTBkNGM3ZTY3NDEiLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.62,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.625
+    }
+   }
+  }
+ ]
+}

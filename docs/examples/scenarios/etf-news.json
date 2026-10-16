@@ -1,0 +1,1031 @@
+{
+ "slug": "etf-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:45Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "ETF",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "etf",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 121283,
+     "tone": {
+      "carrying": 121149,
+      "availability_pct": 99.89,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 24510,
+        "share_pct": 20.23
+       },
+       {
+        "group": "neutral",
+        "count": 1627,
+        "share_pct": 1.34
+       },
+       {
+        "group": "positive",
+        "count": 95012,
+        "share_pct": 78.43
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 121232,
+      "count": 29797,
+      "share_pct": 24.58
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.028,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.031
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "ETF",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "etf",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 19657,
+       "critical": 5661,
+       "critical_pct": 28.8,
+       "negative": 3761,
+       "positive": 15564,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 16985,
+       "critical": 4503,
+       "critical_pct": 26.5,
+       "negative": 2773,
+       "positive": 13996,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 20894,
+       "critical": 4941,
+       "critical_pct": 23.6,
+       "negative": 3972,
+       "positive": 16741,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 26084,
+       "critical": 6304,
+       "critical_pct": 24.2,
+       "negative": 5476,
+       "positive": 20371,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 26281,
+       "critical": 6376,
+       "critical_pct": 24.3,
+       "negative": 4068,
+       "positive": 21772,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 22131,
+       "critical": 6860,
+       "critical_pct": 31.0,
+       "negative": 4844,
+       "positive": 17046,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 23139,
+       "critical": 7291,
+       "critical_pct": 31.5,
+       "negative": 5032,
+       "positive": 17902,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 25601,
+       "critical": 8650,
+       "critical_pct": 33.8,
+       "negative": 5998,
+       "positive": 19374,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 24075,
+       "critical": 5307,
+       "critical_pct": 22.0,
+       "negative": 4208,
+       "positive": 19486,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 27512,
+       "critical": 9525,
+       "critical_pct": 34.6,
+       "negative": 6911,
+       "positive": 20292,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 29472,
+       "critical": 6512,
+       "critical_pct": 22.1,
+       "negative": 6114,
+       "positive": 22962,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 40224,
+       "critical": 8453,
+       "critical_pct": 21.0,
+       "negative": 7277,
+       "positive": 32272,
+       "partial_period": false
+      }
+     ],
+     "total": 302055,
+     "critical_total": 80383,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.09,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.096
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "ETF",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "etf",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 121283,
+     "carrying": 80337,
+     "availability_pct": 66.24,
+     "items": [
+      {
+       "country": "united states",
+       "count": 53817,
+       "share_pct": 44.37
+      },
+      {
+       "country": "united kingdom",
+       "count": 5779,
+       "share_pct": 4.76
+      },
+      {
+       "country": "india",
+       "count": 3968,
+       "share_pct": 3.27
+      },
+      {
+       "country": "ireland",
+       "count": 1972,
+       "share_pct": 1.63
+      },
+      {
+       "country": "south korea",
+       "count": 1390,
+       "share_pct": 1.15
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 13411
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.344,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.347
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "ETF",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "etf",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "exchange-traded funds (etfs) for currency exposure",
+       "count": 3702,
+       "share": 4.71,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 5154,
+       "delta_pct": -28.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "market liquidity and capital flow analysis",
+       "count": 4709,
+       "share": 5.99,
+       "lift": 97.75,
+       "baseline_count": 5,
+       "previous_period_count": 1412,
+       "delta_pct": 233.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "exchange-traded funds (etfs)",
+       "count": 15134,
+       "share": 19.24,
+       "lift": 52.36,
+       "baseline_count": 30,
+       "previous_period_count": 5705,
+       "delta_pct": 165.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "exchange-traded funds (etfs) and mutual fund trends",
+       "count": 9294,
+       "share": 11.82,
+       "lift": 48.23,
+       "baseline_count": 20,
+       "previous_period_count": 3413,
+       "delta_pct": 172.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "environmental, social, governance (esg) investing",
+       "count": 1197,
+       "share": 1.52,
+       "lift": 124.23,
+       "baseline_count": 1,
+       "previous_period_count": 1518,
+       "delta_pct": -21.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 121283,
+     "carrying": 78652,
+     "carrier_share_pct": 64.85,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.714,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.717
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "ETF",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "etf",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2b1138963d76f4af3837ce",
+       "headline": "Bitcoin Plunges 3% And ETFs Bleed $171M After Ukraine Destroys Russian Oil Ports",
+       "url": "https://www.benzinga.com/crypto/cryptocurrency/26/03/51510607/bitcoin-plunges-3-and-etfs-bleed-171m-after-ukraine-destroys-russian-oil-ports",
+       "publisher": "benzinga.com",
+       "published_at": "2026-03-27T14:39:16",
+       "lede": "bitcoin (crypto: btc) dropped 3% as ukraine drone strikes resulted in a 40% reduction of russia's oil export capacity, coinciding with $171 million in etf outflows—the largest single-day withdrawal in three weeks. ukraine blows up trump's oil plan president donald trump lifted sanctions on russian crude to compensate for oil",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.5
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.44
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a655fc37f6c5e66b49ff0",
+       "headline": "Eric Trump Reiterates $1 Million Bitcoin Forecast At",
+       "url": "https://www.tronweekly.com/eric-trump-reiterates-1-million-bitcoin/",
+       "publisher": "tronweekly.com",
+       "published_at": "2026-04-30T16:00:00",
+       "lede": "at bitcoin 2026 in las vegas, eric trump joined calamos ceo john koudounis and bloomberg etf analyst eric balchunas for a panel discussing btc’s evolution from speculative asset to potential global reserve. the session reflected increasing institutional participation alongside long-term advocates and new financial entrants evaluating market maturity context. also",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.99
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed28483fc01faba4b9d71",
+       "headline": "Alphabet Soars, Meta Sinks As Big Tech Splits — ETFs Let You Pick The Right Side - Alphabet (NASDAQ:GOOGL",
+       "url": "https://www.benzinga.com/etfs/sector-etfs/26/04/52178697/alphabet-soars-meta-sinks-as-big-tech-splits-etfs-let-you-pick-the-right-side",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-30T15:27:41",
+       "lede": "the latest earnings from microsoft corp (nasdaq:msft), meta platforms inc (nasdaq:meta), amazon.com inc (nasdaq:amzn), and alphabet, inc (nasdaq:googl) (nasdaq:goog) didn't just move stocks, they challenged the once-unified \"magnificent seven\" trade. for etf investors, that split is becoming an opportunity. • direxion daily msft bear 1x etf stock is among today's",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.79
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ea8b59341f3dc2ae285d6",
+       "headline": "ARK Invest Buys $39M Robinhood, Trims Spot Bitcoin ETF",
+       "url": "https://beincrypto.com/ark-invest-robinhood-arkb-bitcoin-etf/",
+       "publisher": "beincrypto.com",
+       "published_at": "2026-04-30T14:24:26",
+       "lede": "ark invest spent about $39.4 million on robinhood markets (hood) shares on april 29 while selling roughly $6.1 million of its own ark 21shares bitcoin etf (arkb), using the brokerage’s post-earnings slide to add to a long-running position. the trades, disclosed in ark’s daily filings, split across the firm’s three",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.91
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f883ef43843dd771d06566",
+       "headline": "Chainlink Price Prediction Gains Weight as LINK ETF Inflows Top $111M and Pepeto Targets 100x",
+       "url": "https://coinpedia.org/press-release/chainlink-price-prediction-gains-weight-pepeto-targets-100x/",
+       "publisher": "coinpedia.org",
+       "published_at": "2026-04-30T13:14:58",
+       "lede": "the chainlink price prediction picked up real force after cumulative spot etf inflows passed $111 million on april 28 while 970,430 link left exchanges in the largest single-day outflow of 2026 according to crypto.news. chainlink (link) sits at $9.11 with bridgetower capital deploying the full oracle stack to tokenize the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "chainlink"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2aa15f5cefb83fe8224787",
+       "headline": "Crypto ETFs Bleed $222M As Bitcoin And Ethereum Funds Flash Red",
+       "url": "https://cryptoadventure.com/crypto-etfs-bleed-222m-as-bitcoin-and-ethereum-funds-flash-red/",
+       "publisher": "cryptoadventure.com",
+       "published_at": "2026-04-30T11:27:49",
+       "lede": "u.s. spot crypto etfs had a heavy outflow session on apr. 29, with bitcoin and ethereum products dragging the market into the red while xrp stood out with a small positive flow. farside investors tracked u.s. spot bitcoin etf net outflows near $137.6 million for the day. its ethereum etf",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7629c37f6c5e66be6698",
+       "headline": "Bitwise CIO Ties Bitcoin's 20% Rebound To Strategy's $7.2B STRC Buying | Yellow.com",
+       "url": "https://yellow.com/news/bitwise-strc-bitcoin-20-percent-rally",
+       "publisher": "yellow.com",
+       "published_at": "2026-04-30T10:50:20",
+       "lede": "bitwise chief investment officer matt hougan says strategy's $7.2 billion buying streak, financed through strc preferred shares, drove most of bitcoin (btc)'s 20% rebound from february lows. strategy powers bitcoin rally in a memo published tuesday, hougan acknowledged that etf inflows and renewed long-term holder accumulation contributed to the move.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.94
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a94b05cefb83fe81a313a",
+       "headline": "XRP price holds near $1.40 as ETF inflows hit $82.4 million",
+       "url": "https://en.cryptonomist.ch/2026/04/30/xrp-price-outlook-etf-rakuten/",
+       "publisher": "en.cryptonomist.ch",
+       "published_at": "2026-04-30T07:52:44",
+       "lede": "the xrp price is holding near $1,40 as etf inflows improve and rakuten expands payment use in japan. etf demand strengthens market sentiment in the short term, xrp is up about 1,2% on the day. spot etf flow data show positive performance in 11 of the last 13 trading sessions,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.61
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5dc9c37f6c5e66af06bf",
+       "headline": "Bitcoin’s Institutional Absorption Cycle Deepens as Fed Hold Tests Market Momentum",
+       "url": "https://www.unlock-bc.com/en/bitcoin-slips-after-fed-hold-as-institutional-demand-builds",
+       "publisher": "unlock-bc.com",
+       "published_at": "2026-04-30T05:11:05",
+       "lede": "bitcoin’s market narrative is increasingly being shaped by a convergence of institutional adoption, macroeconomic uncertainty, and etf-driven capital flows. while recent headlines point to renewed inflows and resilient prices, the deeper structural shift appears to be unfolding more gradually than markets often assume. together, institutional positioning, macro-sensitive price action, and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.99
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8824643843dd771cf8793",
+       "headline": "Eric Trump, John Koudounis Call Bitcoin A Global Reserve Asset, Float $1M Price Target",
+       "url": "https://bitcoinmagazine.com/news/eric-trump-john-koudounis-bitcoin-asset",
+       "publisher": "bitcoinmagazine.com",
+       "published_at": "2026-04-29T20:28:14",
+       "lede": "at bitcoin 2026 in las vegas, eric trump and calamos investments ceo john koudounis sat down with bloomberg senior etf analyst eric balchunas for a panel that covered bitcoin’s maturation from speculative instrument to global reserve contender. the conversation ranged across institutional adoption, government debanking, currency debasement, and the challenge",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.23,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "bitcoin",
+        "calamos investments",
+        "calamos investments"
+       ],
+       "people": [
+        "eric trump"
+       ]
+      },
+      {
+       "id": "6a03637bc2856acf8e87b53a",
+       "headline": "BlackRock’s IBIT Leads Bitcoin ETF Outflows in Latest $89.7M Pullback - Crypto Economy",
+       "url": "https://crypto-economy.com/blackrock-ibit-leads-bitcoin-etf-outflows-89m/",
+       "publisher": "crypto-economy.com",
+       "published_at": "2026-04-29T13:26:11",
+       "lede": "tl;dr ibit outflows: blackrock’s ibit led the latest bitcoin etf withdrawals with $112.25 million in redemptions after a long inflow streak. market signals: a negative coinbase premium and low spot volume showed softer institutional demand as bitcoin etf flows turned negative. rotation trend: mixed flows across issuers suggest tactical rebalancing",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ccb4a5706a322e11ab7c",
+       "headline": "Bitcoin Spot ETFs Saw $89.7M in Net Outflows on April 28",
+       "url": "https://coincu.com/bitcoin-spot-etfs-89-7m-net-outflows-april-28-blackrock-ibit-112m/",
+       "publisher": "coincu.com",
+       "published_at": "2026-04-29T04:27:21",
+       "lede": "news bitcoin spot etfs saw $89.7m in net outflows on april 28 prefer us on google bitcoin spot etfs posted a combined $89.7 million in net outflows on april 28, with blackrock’s ishares bitcoin trust (ibit) accounting for $112 million in withdrawals, the largest single-fund outflow of the session. bitcoin",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.93
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "blackrock",
+        "bitcoin",
+        "spot etf"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c808a5706a322e0f9108",
+       "headline": "Bitcoin ETF outflows surge for second day as BlackRock leads $89.7M capital exit",
+       "url": "https://bitcoinworld.co.in/bitcoin-etf-outflows-second-day-4/",
+       "publisher": "bitcoinworld.co.in",
+       "published_at": "2026-04-29T04:10:11",
+       "lede": "us spot bitcoin etfs recorded net outflows of approximately $89.7 million on april 28, marking the second consecutive day of net capital exits. data from farside investors reveals that blackrock’s ibit fund led the decline with $112.2 million in outflows. spot bitcoin etf outflows deepen as market sentiment shifts the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.79
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.74
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": "canada",
+       "organizations": [
+        "blackrock",
+        "bitcoin"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cf2a399b489398e25f0e",
+       "headline": "Hyperliquid Price Prediction Eyes $90 as ETF Race Heats Up While Pepeto Presale Offers 1000x Before Expected Listing",
+       "url": "https://www.openpr.com/news/4493865/hyperliquid-price-prediction-eyes-90-as-etf-race-heats-up-while",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-28T22:01:23",
+       "lede": "hyperliquid price prediction eyes $90 as etf race heats up while pepeto presale offers 1000x before expected listing https://pepeto.io/ https://pepeto.io/ https://youtu.be/yjrt5wzwrru?si=kprcg_itqcmsiesb https://pepeto.io/ https://www.tokenwire.io three asset managers filed or updated hype fund applications in the same month, and the hyperliquid price prediction is suddenly at the center of the biggest etf",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c9741e3933a6dd8f0131",
+       "headline": "Bittensor Price Prediction Stalls Near $256 While Pepeto Crosses $9 Million and TAO Waits for Grayscale ETF",
+       "url": "https://www.openpr.com/news/4493819/bittensor-price-prediction-stalls-near-256-while-pepeto",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-28T20:55:35",
+       "lede": "bittensor price prediction stalls near $256 while pepeto crosses $9 million and tao waits for grayscale etf https://pepeto.io/ https://pepeto.io/ https://www.youtube.com/watch?v=gpx8yxelk00 https://pepeto.io/ https://www.tokenwire.io grayscale raised its tao allocation to 43% inside the ai fund and filed an amended s-1 to convert the bittensor trust into a spot etf on nyse arca,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.89
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "bittensor",
+        "grayscale"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cef9a5706a322e12cbf4",
+       "headline": "BNB Price Prediction Gains After First Leveraged ETF Launch but Pepeto Offers What BNB at $623 Cannot",
+       "url": "https://www.openpr.com/news/4493777/bnb-price-prediction-gains-after-first-leveraged-etf-launch-but",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-28T20:08:55",
+       "lede": "bnb price prediction gains after first leveraged etf launch but pepeto offers what bnb at $623 cannot https://pepeto.io/ https://pepeto.io/ https://youtu.be/yjrt5wzwrru?si=kprcg_itqcmsiesb https://pepeto.io/ https://www.tokenwire.io wall street just gave bnb its first regulated leveraged product and every bnb price prediction model shifted higher, yet the token still trades 54% below its october peak",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.86
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.48
+        }
+       ],
+       "country": "brazil",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e6f0d32561089420baa6",
+       "headline": "Bitcoin Price Prediction Turns Bullish Above $76K as ETF Inflows Surge and Pepeto Nears Listing",
+       "url": "https://www.openpr.com/news/4493399/bitcoin-price-prediction-turns-bullish-above-76k-as-etf-inflows",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-28T14:34:05",
+       "lede": "bitcoin price prediction turns bullish above $76k as etf inflows surge and pepeto nears listing https://pepeto.io/ https://pepeto.io/ https://youtu.be/syr4vqeyebi https://pepeto.io/ https://www.tokenwire.io bitcoin touched its highest level since january this week as spot etf inflows stacked $2.12 billion across nine straight trading days. the money entering is not retail panic, it is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.95
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e750836d28f995cba735",
+       "headline": "Top 3 Cryptos to Buy Now: Pepeto, Solana, and XRP as Bitcoin ETFs Post First Monthly Gain of 2026",
+       "url": "https://www.openpr.com/news/4493236/top-3-cryptos-to-buy-now-pepeto-solana-and-xrp-as-bitcoin-etfs",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-28T12:59:18",
+       "lede": "top 3 cryptos to buy now: pepeto, solana, and xrp as bitcoin etfs post first monthly gain of 2026 https://pepeto.io/ https://pepeto.io/ https://www.youtube.com/watch?v=gpx8yxelk00 https://pepeto.io/ https://www.tokenwire.io the crypto market sentiment just flipped from fear to greed for the first time since january, driven by nearly $1 billion in bitcoin etf inflows during",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": "ireland",
+       "organizations": [
+        "bitcoin",
+        "xrp",
+        "solana"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 5413,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAxMjo1OToxOCIsImkiOiI2OWYwZTc1MDgzNmQyOGY5OTVjYmE3MzUiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.762,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.764
+    }
+   }
+  }
+ ]
+}

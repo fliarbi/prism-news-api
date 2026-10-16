@@ -1,0 +1,814 @@
+{
+ "slug": "bank-of-japan-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:38Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "bank of japan",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "bank of japan",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1686,
+     "tone": {
+      "carrying": 1686,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1205,
+        "share_pct": 71.47
+       },
+       {
+        "group": "neutral",
+        "count": 75,
+        "share_pct": 4.45
+       },
+       {
+        "group": "positive",
+        "count": 406,
+        "share_pct": 24.08
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1686,
+      "count": 1303,
+      "share_pct": 77.28
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.4,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.418
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "bank of japan",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "bank of japan",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 213,
+       "critical": 151,
+       "critical_pct": 70.9,
+       "negative": 160,
+       "positive": 50,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 215,
+       "critical": 155,
+       "critical_pct": 72.1,
+       "negative": 152,
+       "positive": 55,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 210,
+       "critical": 134,
+       "critical_pct": 63.8,
+       "negative": 160,
+       "positive": 46,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 164,
+       "critical": 120,
+       "critical_pct": 73.2,
+       "negative": 110,
+       "positive": 51,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 272,
+       "critical": 203,
+       "critical_pct": 74.6,
+       "negative": 173,
+       "positive": 80,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 317,
+       "critical": 261,
+       "critical_pct": 82.3,
+       "negative": 186,
+       "positive": 121,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 258,
+       "critical": 208,
+       "critical_pct": 80.6,
+       "negative": 195,
+       "positive": 62,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1025,
+       "critical": 761,
+       "critical_pct": 74.2,
+       "negative": 711,
+       "positive": 301,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 270,
+       "critical": 206,
+       "critical_pct": 76.3,
+       "negative": 195,
+       "positive": 70,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 345,
+       "critical": 269,
+       "critical_pct": 78.0,
+       "negative": 231,
+       "positive": 107,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 477,
+       "critical": 377,
+       "critical_pct": 79.0,
+       "negative": 355,
+       "positive": 96,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 594,
+       "critical": 451,
+       "critical_pct": 75.9,
+       "negative": 424,
+       "positive": 133,
+       "partial_period": false
+      }
+     ],
+     "total": 4360,
+     "critical_total": 3296,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.386,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.39
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "bank of japan",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "bank of japan",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1686,
+     "carrying": 1009,
+     "availability_pct": 59.85,
+     "items": [
+      {
+       "country": "japan",
+       "count": 497,
+       "share_pct": 29.48
+      },
+      {
+       "country": "united states",
+       "count": 309,
+       "share_pct": 18.33
+      },
+      {
+       "country": "iran",
+       "count": 56,
+       "share_pct": 3.32
+      },
+      {
+       "country": "singapore",
+       "count": 34,
+       "share_pct": 2.02
+      },
+      {
+       "country": "china",
+       "count": 31,
+       "share_pct": 1.84
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 82
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.87,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.88
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "bank of japan",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "bank of japan",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "emerging markets economic updates",
+       "count": 308,
+       "share": 22.34,
+       "lift": 1823.21,
+       "baseline_count": 1,
+       "previous_period_count": 311,
+       "delta_pct": -1.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 463,
+       "share": 33.58,
+       "lift": 1370.37,
+       "baseline_count": 2,
+       "previous_period_count": 491,
+       "delta_pct": -5.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "asian financial market developments",
+       "count": 196,
+       "share": 14.21,
+       "lift": 1160.22,
+       "baseline_count": 1,
+       "previous_period_count": 178,
+       "delta_pct": 10.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "central bank monetary policy announcements",
+       "count": 413,
+       "share": 29.95,
+       "lift": 407.46,
+       "baseline_count": 6,
+       "previous_period_count": 541,
+       "delta_pct": -23.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: monetary policy changes",
+       "count": 351,
+       "share": 25.45,
+       "lift": 415.55,
+       "baseline_count": 5,
+       "previous_period_count": 335,
+       "delta_pct": 4.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1686,
+     "carrying": 1379,
+     "carrier_share_pct": 81.79,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.397,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.4
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "bank of japan",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "bank of japan",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f23214c6105443aa5fd5e6",
+       "headline": "The BoJ will continue raising rates in Japan, but the pace is highly uncertain",
+       "url": "https://www.oxfordeconomics.com/resource/the-boj-will-continue-raising-rates-in-japan-but-the-pace-is-highly-uncertain/",
+       "publisher": "oxfordeconomics.com",
+       "published_at": "2026-04-28T16:49:51",
+       "lede": "the bank of japan (boj) kept its policy rate at 0.75% at tuesday’s meeting amid still-high uncertainty regarding the us/israel war with iran. we continue to project the central bank will resume rate normalization in july, but developments in the middle east and the value of the yen could alter",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.67
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e96c45272de32e8c61ea",
+       "headline": "USD/JPY steadies after hawkish BoJ as Middle East tensions lift Dollar",
+       "url": "https://bitcoinethereumnews.com/finance/usd-jpy-steadies-after-hawkish-boj-as-middle-east-tensions-lift-dollar/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-28T16:44:50",
+       "lede": "usd/jpy trades around 159.50 on tuesday, up modestly by 0.07% on the day, after briefly falling below the 159.00 level following the bank of japan’s (boj) policy decision. the pair quickly recovered most of its losses, supported by renewed demand for the us dollar (usd) in a context of persistent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.56
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0ea1e45272de32e8c6bea",
+       "headline": "BOJ: Gradual tightening with higher inflation risks – UOB",
+       "url": "https://bitcoinethereumnews.com/finance/boj-gradual-tightening-with-higher-inflation-risks-uob/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-28T15:47:11",
+       "lede": "united overseas bank’s alvin liew reports the bank of japan (boj) left its policy rate at 0.75% but signalled that the next move will be a hike as underlying inflation nears target and real rates stay very low. the boj sharply revised consumer price index (cpi) forecasts higher and now",
+       "sentiment": {
+        "label": "none",
+        "score": 0.38,
+        "group": "neutral"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0eb9fd32561089420fe09",
+       "headline": "USD/JPY: BoJ split vote lifts normalization risks – BNY",
+       "url": "https://bitcoinethereumnews.com/finance/usd-jpy-boj-split-vote-lifts-normalization-risks-bny/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-28T14:59:14",
+       "lede": "bny’s bob savage highlights that the bank of japan (boj) kept its policy rate at 0.75% in a 6–3 split, raising core inflation forecasts to 2.8% and cutting growth to 0.5%. the hawkish hold boosts expectations of a june hike and underscores stagflation risks from higher energy prices, with japanese",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.43
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e29cd3256108942071c6",
+       "headline": "BOJ Governor Kazuo Ueda Hints at Rate Hike as Inflation Pressures Build - EconoTimes",
+       "url": "https://econotimes.com/BOJ-Governor-Kazuo-Ueda-Hints-at-Rate-Hike-as-Inflation-Pressures-Build-1740205",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-28T07:43:47",
+       "lede": "the bank of japan (boj) held its interest rates steady on tuesday, but growing internal support for tightening monetary policy highlights increasing concern over inflation pressures, particularly those linked to the ongoing middle east conflict. notably, three out of the nine board members proposed raising borrowing costs, signaling a shift",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.69
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e2a145272de32e8bf2e4",
+       "headline": "Gold Prices Drop Amid Iran War Concerns, Rising Oil Costs, and Hawkish Central Bank Signals - EconoTimes",
+       "url": "https://econotimes.com/Gold-Prices-Drop-Amid-Iran-War-Concerns-Rising-Oil-Costs-and-Hawkish-Central-Bank-Signals-1740198",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-28T07:04:09",
+       "lede": "gold prices declined sharply during asian trading on tuesday as rising oil prices and hawkish signals from the bank of japan (boj) heightened concerns about global inflation and interest rate policies. spot gold fell by 1% to $4,633.29 per ounce, while gold futures dropped to $4,646.90/oz. other precious metals followed",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.86
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e18d836d28f995cb4883",
+       "headline": "BTC remains under pressure after three Bank of Japan (BoJ) members call for a rate hike",
+       "url": "https://www.coindesk.com/markets/2026/04/28/three-bank-of-japan-members-call-for-a-rate-hike-yen-rises-while-bitcoin-falls",
+       "publisher": "coindesk.com",
+       "published_at": "2026-04-28T06:40:07",
+       "lede": "the bank of japan’s (boj) monetary policy decision on tuesday boosted expectations of a hike in borrowing costs by the end of the second quarter. the yen is loving it, while bitcoin remains under pressure. the central bank kept its benchmark interest rate unchanged at 0.75% as widely expected. the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e391836d28f995cb6f52",
+       "headline": "Yen Strengthens as BOJ Signals Rate Hikes; Asian Currencies Slip Ahead of Fed Meeting - EconoTimes",
+       "url": "https://econotimes.com/Yen-Strengthens-as-BOJ-Signals-Rate-Hikes-Asian-Currencies-Slip-Ahead-of-Fed-Meeting-1740180",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-28T05:09:18",
+       "lede": "the japanese yen strengthened on tuesday after the bank of japan (boj) maintained its interest rates but hinted at potential rate hikes amid rising inflation risks. the usd/jpy pair declined by 0.2%, hovering near the 159 level, as markets reacted to the central bank’s increasingly hawkish outlook. although the boj",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e391836d28f995cb6f1a",
+       "headline": "Asian Stocks Mixed as BOJ Holds Rates, Oil Prices and Fed Outlook Weigh on Markets - EconoTimes",
+       "url": "https://econotimes.com/Asian-Stocks-Mixed-as-BOJ-Holds-Rates-Oil-Prices-and-Fed-Outlook-Weigh-on-Markets-1740179",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-28T05:04:52",
+       "lede": "asian stock markets delivered a mixed performance on tuesday as investors reacted to elevated oil prices, ongoing geopolitical tensions, and the bank of japan’s decision to keep interest rates unchanged. market sentiment remained cautious despite record highs on wall street, where technology stocks continued to drive gains. the bank of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.78
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f881b543843dd771cf41ea",
+       "headline": "USD/JPY softens on hawkish BoJ hold | FXCM Markets",
+       "url": "https://www.fxcm.com/markets/insights/usd-jpy-softens-on-hawkish-boj-hold/",
+       "publisher": "fxcm.com",
+       "published_at": "2026-04-28T04:57:24",
+       "lede": "<h3>bank of japan holds rates</h3> <p>the bank of japan maintained interest rates at around 0.75% for a third straight meeting as it assesses the economic impact of the middle east conflict. <strong>three members opted for a hike</strong>, leading to a 6-3 vote split that underscores the challenging situation and growing",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.65
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a4f3f963d76f4afb3a540",
+       "headline": "Japan's central bank holds its key rate steady amid worries about the Iran war and energy prices",
+       "url": "https://apnews.com/article/japan-boj-rates-iran-30c80da1e1f2e96b70fa368d7f58cc19",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-28T04:46:17",
+       "lede": "add ap news as your preferred source to see more of our stories on google. add ap news on google add ap news as your preferred source to see more of our stories on google. share tokyo (ap) — the bank of japan decided tuesday to keep its benchmark rate",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0401829c4aac09353d6677",
+       "headline": "BOJ keeps rates steady but hawkish split points to June hike",
+       "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/boj-keeps-rates-steady-3-board-members-dissent-call-hike",
+       "publisher": "businesstimes.com.sg",
+       "published_at": "2026-04-28T03:47:23",
+       "lede": "the central bank also sharply revises up its price forecasts and stresses vigilance to the risk of an inflation overshoot bank of japan governor kazuo ueda says the central bank is mindful that its policy rate remains below levels judged to be neutral to the economy. photo: reuters [tokyo] the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 503,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAwMzo0NzoyMyIsImkiOiI2YTA0MDE4MjljNGFhYzA5MzUzZDY2NzciLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 2,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.249,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.272
+    }
+   }
+  }
+ ]
+}

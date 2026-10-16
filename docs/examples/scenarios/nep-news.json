@@ -1,0 +1,1084 @@
+{
+ "slug": "nep-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:53Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "NEP",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nep",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 9477,
+     "tone": {
+      "carrying": 9472,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1954,
+        "share_pct": 20.63
+       },
+       {
+        "group": "neutral",
+        "count": 312,
+        "share_pct": 3.29
+       },
+       {
+        "group": "positive",
+        "count": 7206,
+        "share_pct": 76.08
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 9476,
+      "count": 4321,
+      "share_pct": 45.6
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.675,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.701
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "NEP",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nep",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1657,
+       "critical": 707,
+       "critical_pct": 42.7,
+       "negative": 338,
+       "positive": 1272,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 3560,
+       "critical": 813,
+       "critical_pct": 22.8,
+       "negative": 2056,
+       "positive": 1472,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2445,
+       "critical": 969,
+       "critical_pct": 39.6,
+       "negative": 396,
+       "positive": 1990,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2272,
+       "critical": 963,
+       "critical_pct": 42.4,
+       "negative": 508,
+       "positive": 1676,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2895,
+       "critical": 1618,
+       "critical_pct": 55.9,
+       "negative": 981,
+       "positive": 1863,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2023,
+       "critical": 805,
+       "critical_pct": 39.8,
+       "negative": 382,
+       "positive": 1605,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1866,
+       "critical": 722,
+       "critical_pct": 38.7,
+       "negative": 304,
+       "positive": 1535,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2061,
+       "critical": 934,
+       "critical_pct": 45.3,
+       "negative": 314,
+       "positive": 1555,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1892,
+       "critical": 885,
+       "critical_pct": 46.8,
+       "negative": 350,
+       "positive": 1480,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1908,
+       "critical": 965,
+       "critical_pct": 50.6,
+       "negative": 430,
+       "positive": 1439,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2655,
+       "critical": 1371,
+       "critical_pct": 51.6,
+       "negative": 614,
+       "positive": 1928,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3022,
+       "critical": 1100,
+       "critical_pct": 36.4,
+       "negative": 560,
+       "positive": 2359,
+       "partial_period": false
+      }
+     ],
+     "total": 28256,
+     "critical_total": 11852,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-06-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.069,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.072
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "NEP",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nep",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 9477,
+     "carrying": 7166,
+     "availability_pct": 75.61,
+     "items": [
+      {
+       "country": "india",
+       "count": 2182,
+       "share_pct": 23.02
+      },
+      {
+       "country": "united states",
+       "count": 1484,
+       "share_pct": 15.66
+      },
+      {
+       "country": "nepal",
+       "count": 1060,
+       "share_pct": 11.18
+      },
+      {
+       "country": "china",
+       "count": 480,
+       "share_pct": 5.06
+      },
+      {
+       "country": "united kingdom",
+       "count": 480,
+       "share_pct": 5.06
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1480
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.021,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.025
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "NEP",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nep",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mobile phone hardware components",
+       "count": 383,
+       "share": 6.51,
+       "lift": 531.43,
+       "baseline_count": 1,
+       "previous_period_count": 347,
+       "delta_pct": 10.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone battery performance",
+       "count": 383,
+       "share": 6.51,
+       "lift": 531.43,
+       "baseline_count": 1,
+       "previous_period_count": 371,
+       "delta_pct": 3.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone display technologies",
+       "count": 284,
+       "share": 4.83,
+       "lift": 197.03,
+       "baseline_count": 2,
+       "previous_period_count": 253,
+       "delta_pct": 12.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone water and dust resistance",
+       "count": 140,
+       "share": 2.38,
+       "lift": 194.26,
+       "baseline_count": 1,
+       "previous_period_count": 90,
+       "delta_pct": 55.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "2-in-1 convertible laptops & hybrid notebooks",
+       "count": 129,
+       "share": 2.19,
+       "lift": 178.99,
+       "baseline_count": 1,
+       "previous_period_count": 18,
+       "delta_pct": 616.7,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 9477,
+     "carrying": 5883,
+     "carrier_share_pct": 62.08,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.068,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.071
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "NEP",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "nep",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9d6be7b2d589e844c6078",
+       "headline": "Editor, Parenting a daughter is undoubtedly a lifelong labour of love. Parents pour their heart and soul into their children, believing that every milestone is a hard‑won victory born of years of sacrifice. Once their studies are completed, parents send their daughters into the professional world wi",
+       "url": "https://theshillongtimes.com/2026/04/30/are-women-employees-safe-in-the-corporate-world/",
+       "publisher": "theshillongtimes.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "editor, parenting a daughter is undoubtedly a lifelong labour of love. parents pour their heart and soul into their children, believing that every milestone is a hard‑won victory born of years of sacrifice. once their studies are completed, parents send their daughters into the professional world with pride. they trust",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 135,
+         "path": "/People & Society/Social Issues & Advocacy/Work & Labor Issues",
+         "score": 0.55
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.45
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c68b1e3933a6dd8d5ec9",
+       "headline": "How Manipur University Stands Out in NEP 2020: 80 Percent ABC and 70 Percent FYUP Adoption",
+       "url": "https://www.indiatodayne.in/opinion/story/how-manipur-university-stands-out-in-nep-2020-80-percent-abc-and-70-percent-fyup-adoption-1382545-2026-04-28",
+       "publisher": "indiatodayne.in",
+       "published_at": "2026-04-28T05:41:39",
+       "lede": "while most central universities in the region embraced core elements of the national education policy (nep) 2020 only from 2022-23 or 2023-24, manipur university under vice-chancellor naorem lokendra singh took a bold and decisive lead right from the 2021-22 academic session. &nbsp;&nbsp;it has emerged as a clear leader in implementing",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.23,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.9
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "nep",
+        "manipur university"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e3db836d28f995cb7600",
+       "headline": "Are AI and Robotics Essential Subjects in Schools? | Analytics India Magazine",
+       "url": "https://analyticsindiamag.com/ai-features/ai-and-robotics-are-no-longer-optional-subjects-in-schools",
+       "publisher": "analyticsindiamag.com",
+       "published_at": "2026-04-27T13:30:00",
+       "lede": "what was once considered a niche, extracurricular activity in schools is now steadily becoming central to how students learn in india. robotics and artificial intelligence (ai) are no longer confined to hobby clubs. they have evolved into structured, skill-driven subjects, reshaping the country’s education landscape. the transition gained significant momentum",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.7
+        },
+        {
+         "code": 435,
+         "path": "/Jobs & Education/Education/Computer Education",
+         "score": 0.59
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaaf8727212302c5f2d73",
+       "headline": "UNSW Sydney and Deloitte Collaborate to Build Industry Ready Talent in India",
+       "url": "https://www.forpressrelease.com/forpressrelease/670145/7/unsw-sydney-and-deloitte-collaborate-to-build-industry-ready-talent-in-india",
+       "publisher": "forpressrelease.com",
+       "published_at": "2026-04-26T00:00:00",
+       "lede": "317 bengaluru, 25 april 2026: unsw sydney has announced a memorandum of understanding (mou) for strategic collaboration with deloitte india to establish a centre of excellence (coe) in ai & innovation at the new unsw bengaluru campus in india. bringing together a global top 20 university with ai and innovation",
+       "sentiment": {
+        "label": "extreme_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.72
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "unsw sydney",
+        "deloitte"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efaa8fa84b609af2b2cffb",
+       "headline": "Centre acknowledges IIT demand in Nagaland, no clear timeline yet",
+       "url": "https://www.indiatodayne.in/nagaland/story/centre-acknowledges-iit-demand-in-nagaland-no-clear-timeline-yet-1381485-2026-04-25",
+       "publisher": "indiatodayne.in",
+       "published_at": "2026-04-25T16:37:10",
+       "lede": "s supongmeren jamir, member of parliament (lok sabha), has shared the centre’s official response regarding the long-standing demand for the establishment of an indian institute of technology (iit) in the state.&nbsp;&nbsp; &nbsp;&nbsp;the response, received from dr sukanta majumdar, minister of state for education and development of north eastern region, noted",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.68
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "lok sabha"
+       ],
+       "people": [
+        "sukanta majumdar"
+       ]
+      },
+      {
+       "id": "69efabb8727212302c5fbc48",
+       "headline": "UNSW and Deloitte Collaborate to Build Industry Ready Talent in India",
+       "url": "https://businessnewsthisweek.com/education/unsw-and-deloitte-collaborate-to-build-industry-ready-talent-in-india/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-04-25T05:49:21",
+       "lede": "bengaluru, april 25: unsw sydney has announced a memorandum of understanding (mou) for strategic collaboration with deloitte india to establish a centre of excellence (coe) in ai & innovation at the new unsw bengaluru campus in india. bringing together a global top 20 university with ai and innovation leading practice",
+       "sentiment": {
+        "label": "extreme_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.71
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "unsw sydney",
+        "deloitte"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e35dd325610894207c4c",
+       "headline": "6.68 Lakh Students Register for CBSE Class X Second Board Exam",
+       "url": "https://www.newkerala.com/news/a/over-668-lakh-students-register-cbse-class-second-395.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-24T18:55:36",
+       "lede": "exam from may 15-21, 2026; results by end of june over 6.68 lakh students have registered for the cbse class x second board exam, with the majority opting for improvement. the exam, part of a new two-exam system aligned with nep 2020, aims to reduce academic pressure. science and mathematics",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 73,
+         "path": "/Jobs & Education/Education/Standardized & Admissions Tests",
+         "score": 0.96
+        },
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "nep",
+        "cbse"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efab84a84b609af2b38d2a",
+       "headline": "Transmission Sector FY27 Turnover: Rs 7.6 Trillion Opportunity",
+       "url": "https://www.newkerala.com/news/a/transmission-sector-set-fy27-turnaround-after-five-sluggish-796.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-24T08:35:32",
+       "lede": "india's power transmission sector is expected to recover in fy27 after five sluggish fiscals, driven by regulatory shifts and new investment models. the sector has faced bottlenecks like right-of-way delays and equipment shortages, but fy26 showed early improvement with 37% higher transmission line additions. sbi caps estimates a rs 7.6",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.56
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ec1e261e448cd078921d06",
+       "headline": "Education must be inclusive, value-based: LS Speaker Om Birla",
+       "url": "https://www.dailyexcelsior.com/education-must-be-inclusive-value-based-ls-speaker-om-birla/",
+       "publisher": "dailyexcelsior.com",
+       "published_at": "2026-04-23T23:40:41",
+       "lede": "new delhi, apr 23: lok sabha speaker om birla on thursday said education must not be confined merely to securing employment, but should serve as a powerful instrument for social responsibility, inclusivity and character building. addressing the annual day function of a government college here, birla called upon the youth",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 249,
+         "path": "/Jobs & Education/Education/Other",
+         "score": 0.72
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "om birla"
+       ]
+      },
+      {
+       "id": "69ea281373206aa299ecc039",
+       "headline": "LG Sinha Calls For Students, Teachers' Role In Nation-Building",
+       "url": "https://www.dailyexcelsior.com/lg-sinha-calls-for-students-teachers-role-in-nation-building/",
+       "publisher": "dailyexcelsior.com",
+       "published_at": "2026-04-23T13:52:49",
+       "lede": "jammu, apr 23: j&k lieutenant governor manoj sinha on thursday called upon students and teachers to contribute to nation-building and adapt classrooms to today’s changing global landscape, positioning india as the world’s leading knowledge economy. he said that every student talented in art, craft, music, or entrepreneurship deserves equal respect",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.6
+        },
+        {
+         "code": 249,
+         "path": "/Jobs & Education/Education/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "manoj sinha"
+       ]
+      },
+      {
+       "id": "69ea218675c44d9ce8823c00",
+       "headline": "RoW, policy hurdles slow grid expansion; Rs 7.6 trillion push needed",
+       "url": "https://www.financialexpress.com/policy/economy/row-policy-hurdles-slow-grid-expansion-rs-7-6-trillion-push-needed/4216399/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-23T13:27:10",
+       "lede": "right-of-way constraints, regulatory changes and supply chain disruptions have slowed india’s power transmission expansion, leaving a widening gap between targets and execution even as the sector opens up a ₹7.6 trillion investment opportunity over the next six years, according to a report by sbi capital markets (sbicaps). persistent execution bottlenecks",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "sbi capital markets"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea1e8e8266d93399949f99",
+       "headline": "NHRC issues notice over costly private textbooks, asks Centre and states to enforce NCERT norms",
+       "url": "https://www.ibtimes.co.in/nhrc-issues-notice-over-costly-private-textbooks-asks-centre-states-enforce-ncert-norms-901441",
+       "publisher": "ibtimes.co.in",
+       "published_at": "2026-04-23T10:58:13",
+       "lede": "the national human rights commission (nhrc) on wednesday issued notices to the union ministry of education, central board of secondary education (cbse), and chief secretaries of all states and union territories (uts) over allegations that private schools are prescribing costly textbooks from private publishers in violation of statutory norms. a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [
+        "cbse",
+        "central board of secondary education"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e9a1e0bdd09a23d09532ad",
+       "headline": "India’s Transmission Sector May Turn Around By FY27, Driven By Storage, Policy Shifts: SBICAPS",
+       "url": "https://www.saurenergy.com/solar-energy-news/indias-transmission-sector-may-turn-around-by-fy27-driven-by-storage-policy-shifts-sbicaps-11756248",
+       "publisher": "saurenergy.com",
+       "published_at": "2026-04-23T03:49:40",
+       "lede": "&quot;india&amp;quot;s power transmission sector could see a recovery by fy27 after several years of underperformance, supported by improving execution, evolving regulatory frameworks and the growing role of energy storage, according to a report by sbi capital markets (sbi caps) limited.advertisment execution recovery, but targets still at risk transmission line and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "sbi capital markets"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99d49d47fc028321a9072",
+       "headline": "PM Internship Scheme Expands to Final-Year Students",
+       "url": "https://www.newkerala.com/news/a/govt-expands-pmis-eligibility-include-final-year-graduates-postgraduates-962.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-22T16:55:46",
+       "lede": "the government has expanded the prime minister internship scheme's eligibility to include final-year undergraduate and postgraduate students. students can apply via the portal but must submit a no objection certificate from their institution confirming the internship won't disrupt academics. the scheme provides a minimum stipend of ₹9,000 per month and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.92,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 706,
+         "path": "/Jobs & Education/Internships",
+         "score": 0.82
+        },
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.53
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a67875f157062cb3872c",
+       "headline": "Arunachal Guv Parnaik urges students to become innovators and nation-builders - Social News XYZ",
+       "url": "https://www.socialnews.xyz/2026/04/22/arunachal-guv-parnaik-urges-students-to-become-innovators-and-nation-builders/",
+       "publisher": "socialnews.xyz",
+       "published_at": "2026-04-22T14:50:25",
+       "lede": "itanagar, april 22 (socialnews.xyz) arunachal pradesh governor lt gen k.t. parnaik (retd) on wednesday urged students to strive for excellence as job creators, innovators, and problem solvers, while contributing actively to society and the nation through their knowledge and skills. addressing the 6th convocation of arunodaya university at its new",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "xyz",
+        "arunodaya university"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8bc6d7bb1410d4cb541b6",
+       "headline": "PM Internship Scheme: Final-Year Students Can Now Apply For Paid Roles In Top Companies; Govt Expands Eligibility",
+       "url": "https://www.freepressjournal.in/education/pm-internship-scheme-final-year-students-can-now-apply-for-paid-roles-in-top-companies-govt-expands-eligibility",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-04-22T11:54:31",
+       "lede": "pm internship scheme: the ministry of corporate affairs (mca) has expanded the eligibility criteria of the prime minister internship scheme (pmis). final-year undergraduate and postgraduate students can now apply for paid internships under the scheme, opening doors to early industry exposure. mca expands eligibility criteria of the prime minister internship",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.79,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 706,
+         "path": "/Jobs & Education/Internships",
+         "score": 0.7
+        },
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "ministry of corporate affairs",
+        "mca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99befd47fc0283219904c",
+       "headline": "NHRC issues notice over costly private textbooks, asks Centre and states to enforce NCERT norms - Yes Punjab News",
+       "url": "https://yespunjab.com/nhrc-issues-notice-over-costly-private-textbooks-asks-centre-and-states-to-enforce-ncert-norms/",
+       "publisher": "yespunjab.com",
+       "published_at": "2026-04-22T11:15:54",
+       "lede": "new delhi, april 22, 2026 the national human rights commission (nhrc) on wednesday issued notices to the union ministry of education, central board of secondary education (cbse), and chief secretaries of all states and union territories (uts) over allegations that private schools are prescribing costly textbooks from private publishers in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "central board of secondary education",
+        "cbse"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99c21bdd09a23d0924704",
+       "headline": "NHRC seeks action on costly textbooks, asks NCERT norms",
+       "url": "https://assamtribune.com/national/nhrc-seeks-action-on-costly-textbooks-asks-ncert-norms-1610870",
+       "publisher": "assamtribune.com",
+       "published_at": "2026-04-22T10:42:54",
+       "lede": "new delhi, april 22: the national human rights commission (nhrc) on wednesday issued notices to the union ministry of education, central board of secondary education (cbse), and chief secretaries of all states and union territories (uts) over allegations that private schools are prescribing costly textbooks from private publishers in violation",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "central board of secondary education",
+        "cbse"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99bbebdd09a23d091f466",
+       "headline": "NHRC issues notice over costly private textbooks, asks Centre and states to enforce NCERT norms - Social News XYZ",
+       "url": "https://www.socialnews.xyz/2026/04/22/nhrc-issues-notice-over-costly-private-textbooks-asks-centre-and-states-to-enforce-ncert-norms/",
+       "publisher": "socialnews.xyz",
+       "published_at": "2026-04-22T09:07:22",
+       "lede": "new delhi, april 22 (socialnews.xyz) the national human rights commission (nhrc) on wednesday issued notices to the union ministry of education, central board of secondary education (cbse), and chief secretaries of all states and union territories (uts) over allegations that private schools are prescribing costly textbooks from private publishers in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [
+        "xyz",
+        "cbse",
+        "central board of secondary education"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e87f8c5cfa3e5ba502fbb4",
+       "headline": "Drought, despair and discontent: Tamil Nadu’s perilous summer pivot",
+       "url": "https://www.newindianexpress.com/states/tamil-nadu/2026/Apr/21/drought-despair-and-discontent-tamil-nadus-perilous-summer-pivot",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-21T04:21:13",
+       "lede": "not far from madurai, thiruparankundram lake reveals its egalitarian side with magnanimity. like any other, it renders all equal. only a little water is left at the bottom, and it’s only a matter of time before it transforms into a natural football turf for local lads. the mighty vaigai river",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.45
+        },
+        {
+         "code": 84,
+         "path": "/Business & Industrial/Energy & Utilities/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e878757bb1410d4c81e6c4",
+       "headline": "Motilal Oswal advises to Buy CG Power, Atlanta Electricals and GE Vernova shares for significant upside as multi-year capex cycle remains intact - Business Upturn",
+       "url": "https://www.businessupturn.com/finance/stock-market/motilal-oswal-advises-to-buy-cg-power-atlanta-electricals-and-ge-vernova-shares-for-significant-upside-as-multi-year-capex-cycle-remains-intact/",
+       "publisher": "businessupturn.com",
+       "published_at": "2026-04-20T03:43:01",
+       "lede": "shares of transmission and distribution (t&amp;d) companies are likely to remain in focus after brokerage firm motilal oswal financial services initiated coverage on key players, highlighting a multi-year structural capex cycle driven by india’s energy transition and global supply-demand dynamics. the brokerage has initiated coverage on cg power, atlanta electricals,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.64
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.58
+        },
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.5
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "motilal oswal financial services",
+        "motilal oswal financial services"
+       ],
+       "people": [
+        "motilal oswal financial services"
+       ]
+      }
+     ],
+     "returned": 21,
+     "total_estimate": 1158,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMCAwMzo0MzowMSIsImkiOiI2OWU4Nzg3NTdiYjE0MTBkNGM4MWU2YzQiLCJwIjo4fQ",
+     "unresolved": 4,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.682,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "4 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.685
+    }
+   }
+  }
+ ]
+}

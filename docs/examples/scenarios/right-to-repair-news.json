@@ -1,0 +1,815 @@
+{
+ "slug": "right-to-repair-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:41Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "right to repair",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "right to repair",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 243,
+     "tone": {
+      "carrying": 243,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 90,
+        "share_pct": 37.04
+       },
+       {
+        "group": "neutral",
+        "count": 4,
+        "share_pct": 1.65
+       },
+       {
+        "group": "positive",
+        "count": 149,
+        "share_pct": 61.32
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 243,
+      "count": 156,
+      "share_pct": 64.2
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.617,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.623
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "right to repair",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "right to repair",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 12,
+       "critical": 7,
+       "critical_pct": 58.3,
+       "negative": 1,
+       "positive": 11,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 14,
+       "critical": 8,
+       "critical_pct": 57.1,
+       "negative": 5,
+       "positive": 9,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 13,
+       "critical": 5,
+       "critical_pct": 38.5,
+       "negative": 3,
+       "positive": 9,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 22,
+       "critical": 15,
+       "critical_pct": 68.2,
+       "negative": 8,
+       "positive": 14,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 8,
+       "critical": 1,
+       "critical_pct": 12.5,
+       "negative": 0,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 13,
+       "critical": 7,
+       "critical_pct": 53.8,
+       "negative": 5,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 11,
+       "critical": 7,
+       "critical_pct": 63.6,
+       "negative": 3,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 14,
+       "critical": 12,
+       "critical_pct": 85.7,
+       "negative": 8,
+       "positive": 6,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 19,
+       "critical": 12,
+       "critical_pct": 63.2,
+       "negative": 9,
+       "positive": 9,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 123,
+       "critical": 79,
+       "critical_pct": 64.2,
+       "negative": 55,
+       "positive": 68,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 42,
+       "critical": 26,
+       "critical_pct": 61.9,
+       "negative": 13,
+       "positive": 27,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 59,
+       "critical": 39,
+       "critical_pct": 66.1,
+       "negative": 13,
+       "positive": 45,
+       "partial_period": false
+      }
+     ],
+     "total": 350,
+     "critical_total": 218,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.217,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.22
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "right to repair",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "right to repair",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 243,
+     "carrying": 165,
+     "availability_pct": 67.9,
+     "items": [
+      {
+       "country": "united states",
+       "count": 147,
+       "share_pct": 60.49
+      },
+      {
+       "country": "france",
+       "count": 4,
+       "share_pct": 1.65
+      },
+      {
+       "country": "canada",
+       "count": 3,
+       "share_pct": 1.23
+      },
+      {
+       "country": "germany",
+       "count": 3,
+       "share_pct": 1.23
+      },
+      {
+       "country": "south korea",
+       "count": 3,
+       "share_pct": 1.23
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 5
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.922,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.926
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "right to repair",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "right to repair",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mobile phone customer support services",
+       "count": 23,
+       "share": 19.17,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 2,
+       "delta_pct": 1050.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mobile phone repair and maintenance",
+       "count": 22,
+       "share": 18.33,
+       "lift": 1496.55,
+       "baseline_count": 1,
+       "previous_period_count": 2,
+       "delta_pct": 1000.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone health and safety standards",
+       "count": 19,
+       "share": 15.83,
+       "lift": 1292.47,
+       "baseline_count": 1,
+       "previous_period_count": 2,
+       "delta_pct": 850.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "tractors and tractor attachments",
+       "count": 12,
+       "share": 10.0,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mobile phone recycling and sustainability",
+       "count": 11,
+       "share": 9.17,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 2,
+       "delta_pct": 450.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 243,
+     "carrying": 120,
+     "carrier_share_pct": 49.38,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.084,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.086
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "right to repair",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "right to repair",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69bc2748b34e503b1ddfb161",
+       "headline": "Apple Emails Reveal Internal Debate on Right to Repair",
+       "url": "https://www.ifixit.com/News/43008/apple-emails-reveal-internal-debate-on-right-to-repair",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-19T17:28:50",
+       "lede": "tim cook didn’t reveal anything new during his testimony before the house judiciary committee wednesday. but emails his company shared with the committee spoke volumes. these internal discussions reveal that what looks like apple’s united front against right to repair is really an internal debate, rife with uncertainty.a key portion",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.73
+        },
+        {
+         "code": 38,
+         "path": "/Computers & Electronics/Software/Operating Systems",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "tim cook"
+       ]
+      },
+      {
+       "id": "69c93f622ef7157f4456bc20",
+       "headline": "The Five Worst Repair Stories People Told the FTC",
+       "url": "https://www.ifixit.com/News/30680/the-five-worst-repair-stories-people-told-the-ftc",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-19T14:28:36",
+       "lede": "a few weeks back, the federal trade commission asked for input on right to repair issues before its mid-july workshop, nixing the fix. we offered up 35 pages of research. so did 22 other organizations, including some with strange or frightening arguments.i read through all 23 filings submitted to the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 301,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Vehicle Repair & Maintenance",
+         "score": 0.78
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "federal trade commission"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e6d9836d28f995cb9f40",
+       "headline": "EU Right to Repair rules are coming to save your phone battery in 2027 - CyberShack",
+       "url": "https://cybershack.com.au/other/eu-right-to-repair-rule-2027/",
+       "publisher": "cybershack.com.au",
+       "published_at": "2026-04-28T03:18:45",
+       "lede": "the european union will introduce right to repair laws that require phones to have user-replaceable batteries from february 2027. this is the next step in the eu’s multi-year campaign aimed at combating planned obsolescence and other user-unfriendly practices by tech manufacturers. what the new rule means the new removable battery",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.68
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a63b3c37f6c5e66b366fd",
+       "headline": "Nachhaltigkeit: Reparatur-Recht gefährdet Garantien",
+       "url": "https://www.lebensmittelzeitung.net/politik/nachrichten/nachhaltigkeit-reparatur-recht-gefaehrdet-garantien-190507",
+       "publisher": "lebensmittelzeitung.net",
+       "published_at": "2026-04-17T07:30:00",
+       "lede": "do you have questions or comments about this article? send an e-mail to the editors. contact [email protected] if you want to purchase the rights of use of this article. the implementation of the \"right to repair\" is in full swing. the directive, which will be in force from the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9cfddc14329b30ec6eed8",
+       "headline": "Right to Repair Is Gaining Ground in 2020",
+       "url": "https://www.ifixit.com/News/35606/right-to-repair-is-gaining-ground-in-2020",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-27T23:38:56",
+       "lede": "less than two months into 2020, the right to repair movement is expanding, gaining new ground, and proving more popular than even advocates would have guessed. here’s what’s happening.legislationproposed laws that require companies to offer parts, manuals, and specialty diagnostic tools to the public will be introduced in 21 states",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9cfdfcae5463acf021471",
+       "headline": "New Poll Finds Americans Overwhelmingly Support Right to Repair",
+       "url": "https://www.ifixit.com/News/35567/new-poll-finds-americans-overwhelmingly-support-right-to-repair",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-27T23:38:50",
+       "lede": "more than 60 percent of americans support a new president removing roadblocks to repairing the things they own, according to a new poll.in a poll of hundreds of people on potential executive orders for the next president, a right to repair order was only one percent behind a prescription drug",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc813d58389c352a08d1eb",
+       "headline": "Right to Repair Laws Have Now Been Introduced in All 50 US States",
+       "url": "https://www.ifixit.com/News/108371/right-to-repair-laws-have-now-been-introduced-in-all-50-us-states",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-27T23:38:20",
+       "lede": "with the introduction of a bill in wisconsin, right to repair legislation has now been introduced in every single us state.we’ve been fighting for the simple right to fix everything we own for the last eleven years—and we’ve been joined in that fight by more and more advocates, tinkerers, farmers,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc8141fd89557e8dc4b0b3",
+       "headline": "Iowa Farmers Are Leading the Fight for Repair",
+       "url": "https://www.ifixit.com/News/115722/iowa-farmers-are-leading-the-fight-for-repair",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-27T23:24:58",
+       "lede": "if you eat food, you’re already in this story.john deere is still trying to kill the right to repair, but iowa farmers are pushing hard to retake their rights. on february 18, the iowa house agriculture committee advanced a fix, hsb 751, by an 18-5 vote. that’s a big margin,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "john deere"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bc2aec7b829b0952530460",
+       "headline": "Australia&#8217;s Right to Repair Proposal for Motor Vehicles Is a Good Start",
+       "url": "http://www.ifixit.com/News/13993/australias-right-to-repair-proposal-is-a-good-start-but-its-not-enough",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-19T18:41:14",
+       "lede": "last month, the australian government began the process necessary to pass a right to repair law that would allow australians to get their vehicles fixed by the mechanic of their choice. it’s a refreshing proposal, following in the footsteps of massachusetts and the eu—but their initial plan doesn’t go quite",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 301,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Vehicle Repair & Maintenance",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c94d5e63ac913d8d3cdea6",
+       "headline": "FTC Unanimously Approves Policy of Fighting Repair Restrictions",
+       "url": "http://www.ifixit.com/News/51520/ftc-unanimously-approves-policy-of-fighting-repair-restrictions",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-19T18:36:05",
+       "lede": "earlier this year, ifixit, u.s. pirg, and the repair association delivered over 15,000 signatures to the federal trade commission, calling on the agency to take action to protect our right to fix our devices. today the ftc took an important step towards protecting your right to repair, issuing a policy",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 236,
+         "path": "/Shopping/Consumer Resources/Consumer Advocacy & Protection",
+         "score": 0.49
+        },
+        {
+         "code": 455,
+         "path": "/Law & Government/Legal/Product Liability",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ifixit",
+        "federal trade commission"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bc2a991d0b3f0860ecea4b",
+       "headline": "Action, please! Europe’s vision for a circular economy",
+       "url": "http://www.ifixit.com/News/36283/eu-circular-economy-action-plan",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-19T18:27:21",
+       "lede": "the european commission just published its circular economy action plan (ceap), aiming to pave europe’s way towards a sustainable products policy and a circular economy. one of its goals is to encourage businesses to offer, and to allow consumers to choose, reusable, durable and repairable products—and the right to repair",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c94cc2c14329b30ec39290",
+       "headline": "Victory! New York Senate Passes Landmark Right to Repair Bill",
+       "url": "http://www.ifixit.com/News/50722/victory-new-york-senate-passes-landmark-right-to-repair-bill",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-19T18:26:40",
+       "lede": "today we moved the needle. a right to repair bill that would give everyone the information, parts, and tools they need to fix their electronic devices passed in the new york state senate, the first such bill to pass in the country.at a virtual session, the senate approved s4104 by",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "new york state senate"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c94b1cb68ade25f5c57119",
+       "headline": "Action, please! Europe’s vision for a circular economy",
+       "url": "https://www.ifixit.com/News/36283/eu-circular-economy-action-plan",
+       "publisher": "ifixit.com",
+       "published_at": "2026-02-19T17:41:20",
+       "lede": "the european commission just published its circular economy action plan (ceap), aiming to pave europe’s way towards a sustainable products policy and a circular economy. one of its goals is to encourage businesses to offer, and to allow consumers to choose, reusable, durable and repairable products—and the right to repair",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 37,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xOSAxNzo0MDozNiIsImkiOiI2OWM5NGIxNjJlZjcxNTdmNDQ1NzFmNzAiLCJwIjo3fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.436,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.453
+    }
+   }
+  }
+ ]
+}

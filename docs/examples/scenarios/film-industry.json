@@ -1,0 +1,862 @@
+{
+ "slug": "film-industry",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:51:48Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "film industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "film industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 28431,
+     "tone": {
+      "carrying": 28387,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 6456,
+        "share_pct": 22.74
+       },
+       {
+        "group": "neutral",
+        "count": 184,
+        "share_pct": 0.65
+       },
+       {
+        "group": "positive",
+        "count": 21747,
+        "share_pct": 76.61
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 28397,
+      "count": 6220,
+      "share_pct": 21.9
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.692,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.698
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "film industry",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "film industry",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 5400,
+       "critical": 1449,
+       "critical_pct": 26.8,
+       "negative": 1922,
+       "positive": 3386,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 3193,
+       "critical": 526,
+       "critical_pct": 16.5,
+       "negative": 805,
+       "positive": 2356,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 4569,
+       "critical": 766,
+       "critical_pct": 16.8,
+       "negative": 1041,
+       "positive": 3486,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 4098,
+       "critical": 780,
+       "critical_pct": 19.0,
+       "negative": 941,
+       "positive": 3126,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 4650,
+       "critical": 1092,
+       "critical_pct": 23.5,
+       "negative": 1179,
+       "positive": 3424,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 4090,
+       "critical": 766,
+       "critical_pct": 18.7,
+       "negative": 854,
+       "positive": 3196,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4106,
+       "critical": 795,
+       "critical_pct": 19.4,
+       "negative": 892,
+       "positive": 3167,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 5393,
+       "critical": 1372,
+       "critical_pct": 25.4,
+       "negative": 1166,
+       "positive": 4179,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 5630,
+       "critical": 1103,
+       "critical_pct": 19.6,
+       "negative": 1199,
+       "positive": 4378,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 7192,
+       "critical": 1855,
+       "critical_pct": 25.8,
+       "negative": 1915,
+       "positive": 5220,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 7137,
+       "critical": 1318,
+       "critical_pct": 18.5,
+       "negative": 1358,
+       "positive": 5723,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 8472,
+       "critical": 1944,
+       "critical_pct": 22.9,
+       "negative": 1984,
+       "positive": 6426,
+       "partial_period": false
+      }
+     ],
+     "total": 63930,
+     "critical_total": 13766,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.324,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.333
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "film industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "film industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 28431,
+     "carrying": 13528,
+     "availability_pct": 47.58,
+     "items": [
+      {
+       "country": "united states",
+       "count": 5927,
+       "share_pct": 20.85
+      },
+      {
+       "country": "india",
+       "count": 3275,
+       "share_pct": 11.52
+      },
+      {
+       "country": "united kingdom",
+       "count": 845,
+       "share_pct": 2.97
+      },
+      {
+       "country": "china",
+       "count": 284,
+       "share_pct": 1.0
+      },
+      {
+       "country": "france",
+       "count": 254,
+       "share_pct": 0.89
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 2943
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.809,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.834
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "film industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "film industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "film production insurance",
+       "count": 363,
+       "share": 2.97,
+       "lift": 242.09,
+       "baseline_count": 1,
+       "previous_period_count": 211,
+       "delta_pct": 72.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "film festivals & award ceremonies",
+       "count": 721,
+       "share": 5.89,
+       "lift": 160.28,
+       "baseline_count": 3,
+       "previous_period_count": 291,
+       "delta_pct": 147.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "film licensing & copyright management",
+       "count": 628,
+       "share": 5.13,
+       "lift": 139.61,
+       "baseline_count": 3,
+       "previous_period_count": 406,
+       "delta_pct": 54.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "film tax incentive programs",
+       "count": 448,
+       "share": 3.66,
+       "lift": 149.39,
+       "baseline_count": 2,
+       "previous_period_count": 331,
+       "delta_pct": 35.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "entertainment industry awards shows",
+       "count": 1193,
+       "share": 9.75,
+       "lift": 88.4,
+       "baseline_count": 9,
+       "previous_period_count": 428,
+       "delta_pct": 178.7,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 28431,
+     "carrying": 12240,
+     "carrier_share_pct": 43.05,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.194,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.199
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "film industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "film industry",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69efaac9a84b609af2b2fcca",
+       "headline": "Warner Bros. Shareholders Approve Merger With Paramount Despite Woke Hollywood Meltdown | The Gateway Pundit | by Paul Serran",
+       "url": "https://www.thegatewaypundit.com/2026/04/warner-bros-shareholders-approve-merger-paramount-despite-woke/",
+       "publisher": "thegatewaypundit.com",
+       "published_at": "2026-04-25T17:40:24",
+       "lede": "investors voted with their pockets, and the merger with paramount clears another hurdle. a few months ago, conservatives were very worried that warner bros.-discovery would be bought by the ultra-woke people at netflix, taking the already decadent film industry into an even deeper leftist purgatory of bad movies with nefarious",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 98,
+         "path": "/Arts & Entertainment/Entertainment Industry/Film & TV Industry",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "warner bros.",
+        "netflix",
+        "warner bros."
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a97ea963d76f4afe3e9f5",
+       "headline": "Film industry’s connection surfaces in Mumbai’s NESCO drug case; actress’ role under scanner",
+       "url": "https://www.news9live.com/city/mumbai/film-industrys-connection-surfaces-in-mumbais-nesco-drugs-case-actress-role-under-scanner-2963104",
+       "publisher": "news9live.com",
+       "published_at": "2026-04-24T05:45:46",
+       "lede": "new delhi: the investigation into the death of two mba students at a music concert in mumbai, allegedly due to a drug overdose, has taken an unexpected turn, with the police probing a possible film industry connection. the students who had attended a music event at the nesco centre in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.7
+        },
+        {
+         "code": 23,
+         "path": "/Law & Government/Public Safety/Law Enforcement",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e994b175f157062caa60d8",
+       "headline": "Mamitha Baiju, co-star of Thalapathy Vijay, responds to the 'unfortunate' Jana Nayagan leak, emphasizing that 'effort should not be in vain.'",
+       "url": "https://www.zoomtventertainment.com/south/mamitha-baiju-sympathizes-with-makers-leak-disappointing-painful-article-154139582",
+       "publisher": "zoomtventertainment.com",
+       "published_at": "2026-04-22T17:06:39",
+       "lede": "thalapathy vijay’s latest film, jana nayagan, has faced significant challenges, including delays and an online leak that has sparked widespread concern within the film industry. initially, the film's release was postponed due to disputes between the filmmakers and the certification board. following this setback, the film was leaked on social",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 27,
+         "path": "/Arts & Entertainment/Movies/Bollywood & South Asian Film",
+         "score": 0.93
+        },
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8c2c95cfa3e5ba5361593",
+       "headline": "Dacoit Worldwide Box Office Update on Day 4: Adivi Sesh Is Just 4 Crore Short of Exceeding the Global Lifetime Total",
+       "url": "https://www.zoomtventertainment.com/bollywood/adivi-sesh-dacoit-worldwide-box-office-collection-article-154137207",
+       "publisher": "zoomtventertainment.com",
+       "published_at": "2026-04-22T11:55:41",
+       "lede": "adivi sesh has established himself as a reliable figure in the film industry, often associated with consistent box office successes. however, his latest film, dacoit, is facing challenges at the box office during its initial four days of release. the revenge drama comes with a significantly higher production budget compared",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 27,
+         "path": "/Arts & Entertainment/Movies/Bollywood & South Asian Film",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "sesh"
+       ],
+       "people": [
+        "adivi sesh"
+       ]
+      },
+      {
+       "id": "69e885397bb1410d4c89fcb8",
+       "headline": "Watch: Tollywood Footfalls Fall, Revenue Still Holds Strong",
+       "url": "https://www.gulte.com/movienews/407215/watch-tollywood-footfalls-fall-revenue-still-holds-strong",
+       "publisher": "gulte.com",
+       "published_at": "2026-04-21T03:25:21",
+       "lede": "https://youtu.be/7vimzwjh7ui?si=r5o2dkfrkz_usa_0 industry trade analyst and auditor pavan goparaju shared key insights in a detailed interview, offering a clear picture of the telugu film industry’s current position and future direction. according to him, hindi cinema continues to remain number one in india wide contribution, while telugu cinema holds the number two",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 27,
+         "path": "/Arts & Entertainment/Movies/Bollywood & South Asian Film",
+         "score": 0.92
+        },
+        {
+         "code": 66,
+         "path": "/Arts & Entertainment/Movies/Movie Reference",
+         "score": 0.58
+        },
+        {
+         "code": 98,
+         "path": "/Arts & Entertainment/Entertainment Industry/Film & TV Industry",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e880cd7bb1410d4c871f2e",
+       "headline": "Chiranjeevi Donates Rs 20 Lakh For Medical Emergencies, Personally Visits Ailing Makeup Artist",
+       "url": "https://www.newsx.com/entertainment/chiranjeevi-donates-rs-20-lakh-for-medical-emergencies-personally-visits-ailing-makeup-artist-202182/",
+       "publisher": "newsx.com",
+       "published_at": "2026-04-20T13:33:08",
+       "lede": "megastar chiranjeevi has once again proved that his generosity extends far beyond the silver screen. in a heartfelt move, the south veteran contributed substantial financial assistance to two people from the film industry. according to reports, chiranjeevi donated rs 10.5 lakh to support the urgent heart surgery of makeup artist",
+       "sentiment": null,
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.67
+        },
+        {
+         "code": 27,
+         "path": "/Arts & Entertainment/Movies/Bollywood & South Asian Film",
+         "score": 0.45
+        }
+       ],
+       "country": "iceland",
+       "organizations": [],
+       "people": [
+        "chiranjeevi",
+        "chiranjeevi"
+       ]
+      },
+      {
+       "id": "69e8437f7bb1410d4c60e423",
+       "headline": "Alec Baldwin Says He Wants to Retire After Rust Tragedy - Time News",
+       "url": "https://time.news/alec-baldwin-says-he-wants-to-retire-after-rust-tragedy/",
+       "publisher": "time.news",
+       "published_at": "2026-04-14T11:45:31",
+       "lede": "alec baldwin has expressed a desire to step away from the spotlight, stating that he doesn’t aim for to work anymore and intends to retire to spend more time with his children. the actor, 68, shared these reflections on his future in the film industry during an appearance on the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.67
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "alec baldwin"
+       ]
+      },
+      {
+       "id": "69e6fa44043b81af20d68469",
+       "headline": "Jana Nayagan Leak Controversy: Editors' Union Supports Pradeep E Raghav, Condemns Groundless Allegations - Find Details Here",
+       "url": "https://www.zoomtventertainment.com/south/tamil-nadu-police-investigate-jana-nayagan-leak-suspects-detained-piracy-links-blocked-article-154073893",
+       "publisher": "zoomtventertainment.com",
+       "published_at": "2026-04-14T07:58:35",
+       "lede": "the recent leak of the film jana nayagan has sparked significant controversy within the tamil film industry, leading to a police investigation and the arrest of six individuals accused of distributing pirated copies online. tamil nadu cyber crime officers have taken swift action, blocking over 300 links that were allegedly",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 27,
+         "path": "/Arts & Entertainment/Movies/Bollywood & South Asian Film",
+         "score": 0.8
+        },
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e6f8d0043b81af20d588bf",
+       "headline": "Paramount REPLIES To Hollywood's Open Letter Against Warner Bros Agreement - Their Statement",
+       "url": "https://www.zoomtventertainment.com/hollywood/paramount-skydance-warner-bros-deal-opposition-article-154072710",
+       "publisher": "zoomtventertainment.com",
+       "published_at": "2026-04-14T04:53:56",
+       "lede": "warner bros may be acquired by paramount if their merger is approved, but there is significant discontent in hollywood regarding this. many have previously expressed concerns about the potential negative impact of the proposed deal on the film industry overall. recently, an open letter has garnered support from numerous prominent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 98,
+         "path": "/Arts & Entertainment/Entertainment Industry/Film & TV Industry",
+         "score": 0.76
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8c6849baafc7356c6e891",
+       "headline": "Paramount RESPONDS To Hollywood's Open Letter Opposing Warner Bros Deal - What They Said",
+       "url": "https://www.timesnownews.com/entertainment-news/hollywood/paramount-responds-to-hollywoods-open-letter-opposing-warner-bros-deal-what-they-said-article-154072152",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-14T03:52:57",
+       "lede": "warner bros could be taken over by paramount if their merger goes through, but hollywood is not happy about it. many have, in the past, spoken about why the proposed deal isn’t good for the film industry as a whole. now, an open letter has been signed by several leading",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 98,
+         "path": "/Arts & Entertainment/Entertainment Industry/Film & TV Industry",
+         "score": 0.73
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e64c3a9e87ccc43e384a46",
+       "headline": "Alec Baldwin admits he 'doesn’t want to work anymore' after 'Rust' shooting death: 'I want to retire'",
+       "url": "https://www.foxnews.com/entertainment/alec-baldwin-admits-doesnt-want-work-anymore-rust-shooting-death-want-retire",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-14T00:03:19",
+       "lede": "alec baldwin reflected on his future in the film industry nearly five years after the tragic, on-set death of \"rust\" cinematographer halyna hutchins. in july 2024, a santa fe judge dismissed the involuntary manslaughter case against baldwin, 68, for the fatal shooting after ruling that the prosecution concealed evidence from",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.71
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "alec baldwin",
+        "halyna hutchins"
+       ]
+      },
+      {
+       "id": "69e8b9c67bb1410d4cb31334",
+       "headline": "Asha Bhosle Funeral: Ranveer Singh and Tabu Console Singer’s Granddaughter Zanai Bhosle As She Cries Inconsolably (Watch Videos) | 🎥 LatestLY",
+       "url": "https://www.latestly.com/entertainment/bollywood/asha-bhosle-funeral-ranveer-singh-and-tabu-console-singers-daughter-zanai-bhosle-as-she-cries-inconsolably-watch-videos-7391661.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-04-13T11:08:45",
+       "lede": "the indian film industry and thousands of admirers gathered in mumbai on monday to bid a final farewell to legendary playback singer asha bhosle, who passed away on april 12, 2026, at the age of 92. the iconic vocalist, whose career spanned over eight decades, died at breach candy hospital",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.69
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.68
+        },
+        {
+         "code": 27,
+         "path": "/Arts & Entertainment/Movies/Bollywood & South Asian Film",
+         "score": 0.61
+        },
+        {
+         "code": 108,
+         "path": "/Arts & Entertainment/Music & Audio/World Music",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "asha bhosle"
+       ]
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 1413,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMyAxMTowODo0NSIsImkiOiI2OWU4YjljNjdiYjE0MTBkNGNiMzEzMzQiLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.202,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.206
+    }
+   }
+  }
+ ]
+}

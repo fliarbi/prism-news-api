@@ -1,0 +1,760 @@
+{
+ "slug": "thalassemia-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:04:22Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "thalassemia",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "thalassemia",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 367,
+     "tone": {
+      "carrying": 365,
+      "availability_pct": 99.46,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 53,
+        "share_pct": 14.52
+       },
+       {
+        "group": "neutral",
+        "count": 6,
+        "share_pct": 1.64
+       },
+       {
+        "group": "positive",
+        "count": 306,
+        "share_pct": 83.84
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 367,
+      "count": 296,
+      "share_pct": 80.65
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.787,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.792
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "thalassemia",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "thalassemia",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 128,
+       "critical": 83,
+       "critical_pct": 64.8,
+       "negative": 20,
+       "positive": 102,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 73,
+       "critical": 55,
+       "critical_pct": 75.3,
+       "negative": 3,
+       "positive": 69,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 61,
+       "critical": 45,
+       "critical_pct": 73.8,
+       "negative": 6,
+       "positive": 53,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 74,
+       "critical": 48,
+       "critical_pct": 64.9,
+       "negative": 11,
+       "positive": 60,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 71,
+       "critical": 57,
+       "critical_pct": 80.3,
+       "negative": 8,
+       "positive": 60,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 103,
+       "critical": 84,
+       "critical_pct": 81.6,
+       "negative": 25,
+       "positive": 71,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 94,
+       "critical": 77,
+       "critical_pct": 81.9,
+       "negative": 14,
+       "positive": 76,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 116,
+       "critical": 101,
+       "critical_pct": 87.1,
+       "negative": 16,
+       "positive": 99,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 117,
+       "critical": 95,
+       "critical_pct": 81.2,
+       "negative": 13,
+       "positive": 102,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 88,
+       "critical": 72,
+       "critical_pct": 81.8,
+       "negative": 15,
+       "positive": 71,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 77,
+       "critical": 60,
+       "critical_pct": 77.9,
+       "negative": 12,
+       "positive": 63,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 85,
+       "critical": 69,
+       "critical_pct": 81.2,
+       "negative": 13,
+       "positive": 70,
+       "partial_period": false
+      }
+     ],
+     "total": 1087,
+     "critical_total": 846,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.057,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.069
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "thalassemia",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "thalassemia",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 367,
+     "carrying": 106,
+     "availability_pct": 28.88,
+     "items": [
+      {
+       "country": "india",
+       "count": 60,
+       "share_pct": 16.35
+      },
+      {
+       "country": "united states",
+       "count": 28,
+       "share_pct": 7.63
+      },
+      {
+       "country": "china",
+       "count": 3,
+       "share_pct": 0.82
+      },
+      {
+       "country": "united arab emirates",
+       "count": 3,
+       "share_pct": 0.82
+      },
+      {
+       "country": "united kingdom",
+       "count": 3,
+       "share_pct": 0.82
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 9
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.022,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.025
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "thalassemia",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "thalassemia",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "genetic and genomic research studies",
+       "count": 29,
+       "share": 13.62,
+       "lift": 1111.39,
+       "baseline_count": 1,
+       "previous_period_count": 18,
+       "delta_pct": 61.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease therapies and orphan drugs",
+       "count": 26,
+       "share": 12.21,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 36,
+       "delta_pct": -27.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "gene therapy and crispr technologies",
+       "count": 22,
+       "share": 10.33,
+       "lift": 843.13,
+       "baseline_count": 1,
+       "previous_period_count": 18,
+       "delta_pct": 22.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease research organizations",
+       "count": 22,
+       "share": 10.33,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 19,
+       "delta_pct": 15.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "biotechnology innovations in medicine",
+       "count": 19,
+       "share": 8.92,
+       "lift": 728.15,
+       "baseline_count": 1,
+       "previous_period_count": 16,
+       "delta_pct": 18.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 367,
+     "carrying": 213,
+     "carrier_share_pct": 58.04,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.05,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.054
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "thalassemia",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "thalassemia",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2ac46b5cefb83fe83aa496",
+       "headline": "ABP Live Doc Talk | The Growing Threat Of Sickle Cell And Thalassemia: What You Need To Know",
+       "url": "https://news.abplive.com/health/abp-live-doc-talk-the-growing-threat-of-sickle-cell-and-thalassemia-what-you-need-to-know-1832627",
+       "publisher": "news.abplive.com",
+       "published_at": "2026-03-24T04:04:28",
+       "lede": "inherited blood disorders remain one of the most persistent yet under-recognised public health challenges in india. among them, sickle cell disease and thalassemia together account for a substantial share of avoidable illness and early mortality across the country. sickle cell disease often traps patients in a cycle of chronic anaemia,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ca8156691dbf44999ae5a6",
+       "headline": "Months after 5 children get HIV ‘from Jharkhand hospital’, High Court tells police to register case immediately",
+       "url": "https://indianexpress.com/article/legal-news/5-children-get-hiv-jharkhand-hospital-court-tells-police-register-case-10513635/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-02-04T12:27:33",
+       "lede": "during the hearing, the petitioner’s counsel submitted that despite the gravity of the incident, no fir had been registered so far, compelling the families to approach the high court. (credits: unsplash)the jharkhand high court on wednesday directed the immediate registration of an fir in connection with five minor thalassemia patients",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "698e57e98d29a990b6e7a955",
+       "headline": "Asian Thalassemia Conclave 2026 concludes in Hyderabad",
+       "url": "https://indiamedtoday.com/asian-thalassemia-conclave-2026-concludes-in-hyderabad/",
+       "publisher": "indiamedtoday.com",
+       "published_at": "2026-01-13T06:30:00",
+       "lede": "global experts emphasise prevention to reduce disease burdenthe asian thalassemia conclave (atc) 2026, organised by the thalassemia and sickle cell society (tscs), hyderabad, in collaboration with kamala hospital research center, concluded successfully with over 400 delegates from across india and around the world participating in the two-day deliberations. the conclave",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc56c9384faa79b6902d44",
+       "headline": "Telangana sets sights on becoming India’s first thalassemia-free State by 2035",
+       "url": "https://www.thehindu.com/news/national/telangana/telangana-sets-sights-on-becoming-indias-first-thalassemia-free-state-by-2035/article70497487.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-01-11T13:46:33",
+       "lede": "telangana health minister c. damodar raja narasimha on sunday (january 11) called for collective action to make telangana the country’s first thalassemia-free state, outlining a long-term vision to eliminate preventable genetic blood disorders by 2035. he was speaking at the asian thalassemia conclave held at kamala hospital in hyderabad, organised",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e994f175f157062caa94cd",
+       "headline": "झारखंड में बच्चों को चढ़ाया था HIV संक्रमित खून, HC के हस्तक्षेप के बाद हुई आरोपी की गिरफ्तारी",
+       "url": "https://www.aajtak.in/india/jharkhand/story/chaibasa-hiv-infected-blood-case-lab-technician-arrested-after-6-months-in-jharkhand-ntc-dpmx-rpti-2528789-2026-04-20",
+       "publisher": "aajtak.in",
+       "published_at": "2026-04-20T12:34:06",
+       "lede": "an extremely serious and sensitive case linked to the sandar hospital of west singhbhum district of jharkhand is once again in discussion. in the event of hiv infection to children suffering from thalassemia, the police has finally arrested the accused lab technician manoj kumar after 6 months later. the late",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "manoj kumar"
+       ]
+      },
+      {
+       "id": "3970804040f3432c8497cc59",
+       "headline": "Iron Overload-Associated Oxidative Stress and Immune Cell Dysfunction in Thalassemia: Integrative Analysis of Hematological, Biochemical, and Flow Cytometric Biomarkers.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42072124/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "iron overload-associated oxidative stress and immune cell dysfunction in thalassemia: integrative analysis of hematological, biochemical, and flow cytometric biomarkers.thalassemia is a hereditary hemoglobinopathy characterized by ineffective erythropoiesis, chronic hemolysis, and transfusion-related iron overload, which collectively contribute to oxidative stress and organ dysfunction. the present study aimed to investigate the relationships",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e280d49b322e6b3e973b2c",
+       "headline": "बिहार के 6 मेडिकल कॉलेजों में बनेगा हिमोफीलिया-थैलेसीमिया डे-केयर सेंटर, मरीजों को मिलेगी मुफ्त सुविधा",
+       "url": "https://hindi.oneindia.com/news/india/bihar-day-care-centers-haemophilia-thalassemia-six-colleges-012-1533133.html",
+       "publisher": "hindi.oneindia.com",
+       "published_at": "2026-04-02T17:31:12",
+       "lede": "the state government has taken another important step towards strengthening health services in bihar. the state-of-the-art day-care centres are now being set up for hismophilia and thalassemia patients in six major medical colleges. through these centres, patients will be provided the overall treatment facility under the same roof. in these",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.57
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "a4b571b809b2da404fd2191d",
+       "headline": "Outcomes of hematopoietic stem cell transplantation for pediatric patients with transfusion-dependent thalassemia in Thailand.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41821157/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-01T00:00:00",
+       "lede": "outcomes of hematopoietic stem cell transplantation for pediatric patients with transfusion-dependent thalassemia in thailand.background: hematopoietic stem cell transplantation (hsct) is a curative treatment for patients with transfusion-dependent thalassemia (tdt), and the outcomes are influenced by multiple factors.\npurpose: we retrospectively evaluated the clinical characteristics, risk factors, complications, and treatment outcomes in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.63
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.58
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9e5983fc01faba1b4e1d",
+       "headline": "खून की कमी बढ़ा रही है डॉक्टरों की हार्टबीट: आइएमए",
+       "url": "https://www.livehindustan.com/jharkhand/gridih/story-severe-blood-shortage-in-giridih-ima-urges-civil-surgeon-for-immediate-action-201774988889131.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-03-31T20:28:11",
+       "lede": "the heartbeat of doctors is increasing: the ima -- civil surgeons who have recovered from this crisis -- the thalassemia victims are crying out for the crisis. girdieh is currently struggling with a severe shortage of blood. the blood bank is also raising its hand on the issue by saying",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1ce019f8928f2970efef0",
+       "headline": "Thalassemia centres in Vijayawada, Anantapur soon: Nara Bhuvaneswari",
+       "url": "https://www.thehindu.com/news/national/andhra-pradesh/thalassemia-centres-in-vijayawada-anantapur-soon-nara-bhuvaneswari/article70793183.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-03-27T18:30:13",
+       "lede": "nara bhuvaneswari, managing trustee of the ntr memorial trust, on friday (march 27) announced plans to expand welfare initiatives, including setting up thalassemia centres in vijayawada and anantapur. concluding her four-day tour of kuppam constituency, ms. bhuvaneswari said the trust, inspired by n. t. rama rao and supported by chief",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "n. t. rama rao"
+       ]
+      },
+      {
+       "id": "6a2e987783fc01faba16e52b",
+       "headline": "थैलेसीमिया मरीजों के लिए सुरक्षित रक्त की मांग",
+       "url": "https://www.livehindustan.com/ncr/faridabad/story-thalassemia-patients-rights-advocated-urgent-need-for-safe-blood-and-treatment-201773744355768.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-03-17T10:45:58",
+       "lede": "faridabad, senior correspondent. the delegation of the foundation against thalassemia on tuesday met with chief medical officer dr. he met with jaint ahuja and presented the serious problems of children and patients suffering from thalassemia. the institute demanded that strict monitoring of all blood banks in the district be ensured",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b26bb963d76f4af47e19f",
+       "headline": "120 थैलेसीमिया रोगियों की हुई मुफ्त एचएलए जांच",
+       "url": "https://www.livehindustan.com/jharkhand/dhanbad/story-thalassemia-awareness-camp-held-in-dhanbad-by-red-cross-society-201773519282813.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-03-14T20:14:45",
+       "lede": "human leukocyte antigen (hla) testing and awareness camp for thalassemia patients was held at red cross society dhanbad on saturday. the camp was organized in collaboration with narayana health bangalore, mother services committee, thalassemia society, red cross society dhanbad and dkms. it examined 120 thalassemia patients for free hla and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 74,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xNCAyMDoxNDo0NSIsImkiOiI2YTJiMjZiYjk2M2Q3NmY0YWY0N2UxOWYiLCJwIjo3fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.559,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.562
+    }
+   }
+  }
+ ]
+}

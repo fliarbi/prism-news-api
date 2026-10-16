@@ -1,0 +1,759 @@
+{
+ "slug": "drought-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:18:06Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "drought",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "drought",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10359,
+     "tone": {
+      "carrying": 10321,
+      "availability_pct": 99.63,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5730,
+        "share_pct": 55.52
+       },
+       {
+        "group": "neutral",
+        "count": 294,
+        "share_pct": 2.85
+       },
+       {
+        "group": "positive",
+        "count": 4297,
+        "share_pct": 41.63
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10356,
+      "count": 7379,
+      "share_pct": 71.25
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.865,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.868
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "drought",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "drought",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2384,
+       "critical": 1646,
+       "critical_pct": 69.0,
+       "negative": 1378,
+       "positive": 913,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1658,
+       "critical": 1134,
+       "critical_pct": 68.4,
+       "negative": 880,
+       "positive": 731,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2301,
+       "critical": 1682,
+       "critical_pct": 73.1,
+       "negative": 1442,
+       "positive": 785,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2921,
+       "critical": 1949,
+       "critical_pct": 66.7,
+       "negative": 1775,
+       "positive": 1080,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2252,
+       "critical": 1424,
+       "critical_pct": 63.2,
+       "negative": 1296,
+       "positive": 863,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1522,
+       "critical": 1018,
+       "critical_pct": 66.9,
+       "negative": 735,
+       "positive": 717,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1267,
+       "critical": 928,
+       "critical_pct": 73.2,
+       "negative": 620,
+       "positive": 606,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1326,
+       "critical": 997,
+       "critical_pct": 75.2,
+       "negative": 665,
+       "positive": 622,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1486,
+       "critical": 1118,
+       "critical_pct": 75.2,
+       "negative": 707,
+       "positive": 719,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2081,
+       "critical": 1517,
+       "critical_pct": 72.9,
+       "negative": 1122,
+       "positive": 894,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2312,
+       "critical": 1617,
+       "critical_pct": 69.9,
+       "negative": 1246,
+       "positive": 990,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 4480,
+       "critical": 3127,
+       "critical_pct": 69.8,
+       "negative": 2655,
+       "positive": 1694,
+       "partial_period": false
+      }
+     ],
+     "total": 25990,
+     "critical_total": 18157,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.583,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.586
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "drought",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "drought",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10359,
+     "carrying": 4360,
+     "availability_pct": 42.09,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2670,
+       "share_pct": 25.77
+      },
+      {
+       "country": "india",
+       "count": 377,
+       "share_pct": 3.64
+      },
+      {
+       "country": "united kingdom",
+       "count": 119,
+       "share_pct": 1.15
+      },
+      {
+       "country": "australia",
+       "count": 115,
+       "share_pct": 1.11
+      },
+      {
+       "country": "canada",
+       "count": 102,
+       "share_pct": 0.98
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 977
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.557,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.559
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "drought",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "drought",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "agricultural weather impacts",
+       "count": 741,
+       "share": 10.07,
+       "lift": 205.57,
+       "baseline_count": 4,
+       "previous_period_count": 238,
+       "delta_pct": 211.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "drought conditions monitoring",
+       "count": 806,
+       "share": 10.96,
+       "lift": 149.07,
+       "baseline_count": 6,
+       "previous_period_count": 271,
+       "delta_pct": 197.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "climate-resilient crop development",
+       "count": 239,
+       "share": 3.25,
+       "lift": 132.61,
+       "baseline_count": 2,
+       "previous_period_count": 122,
+       "delta_pct": 95.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "seasonal weather trends",
+       "count": 222,
+       "share": 3.02,
+       "lift": 123.18,
+       "baseline_count": 2,
+       "previous_period_count": 35,
+       "delta_pct": 534.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "historical weather comparisons",
+       "count": 401,
+       "share": 5.45,
+       "lift": 89.0,
+       "baseline_count": 5,
+       "previous_period_count": 75,
+       "delta_pct": 434.7,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 10359,
+     "carrying": 7356,
+     "carrier_share_pct": 71.01,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.812,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.815
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "drought",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "drought",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2e9878e540a46fb53c2e03",
+       "headline": "Wildfires, start of multiple agriculture plantings hindered by drought",
+       "url": "https://www.yahoo.com/news/articles/wildfires-start-multiple-agriculture-plantings-183600436.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T18:36:00",
+       "lede": "(the center square) – isolated rain showers tuesday and scattered showers with a chance of storms on wednesday are offering relief to north carolina’s burning wildfires and agriculture crippling severe drought. with a need of 10 inches or rain or more over most of the state, says the agriculture department,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.82
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c793a5706a322e0f4fa6",
+       "headline": "Large, Drought-Driven Wildfires Forecast For Southern California's Summer",
+       "url": "https://patch.com/california/longbeach-ca/large-drought-driven-wildfires-forecast-southern-californias-summer",
+       "publisher": "patch.com",
+       "published_at": "2026-04-28T17:42:07",
+       "lede": "weather large, drought-driven wildfires forecast for southern california's summer southern california is expected to see wildfire danger increase as the summer progresses, especially in interior and lower-elevation areas. record heat so far this year and anemic snowpack have forecasters warning of an increased risk of catastrophic wildfires this summer and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.7
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee65e8e67a2fcb3ee22d8",
+       "headline": "Late April weather forecast calls for a big shift",
+       "url": "https://usatoday.com/story/news/weather/2026/04/28/wildfire-rain-cold-us-forecast/89833014007/",
+       "publisher": "usatoday.com",
+       "published_at": "2026-04-28T14:39:32",
+       "lede": "updated april 28, 2026, 9:56 p.m. et after record drought has gripped the southeast, fueling fast-moving wildfires in georgia and florida, forecasters say some relief may be in sight from rain set to fall later in the week, while more changes to the weather are coming nationwide to close out",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.71
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8b42443843dd771d2b62a",
+       "headline": "Why the Southeast is burning. Extreme drought is only part of the reason.",
+       "url": "https://www.ajc.com/opinion/2026/04/why-the-southeast-is-burning-extreme-drought-is-only-part-of-the-reason/",
+       "publisher": "ajc.com",
+       "published_at": "2026-04-27T21:17:50",
+       "lede": "opinion why the southeast is burning. extreme drought is only part of the reason. as global temperatures rise, the frequency of drought conditions in the region will increase. gov. brian kemp speaks about the fires in southeast georgia on friday, april 24, 2026, in waycross. a fire near the florida-georgia",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.75
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "brian kemp"
+       ]
+      },
+      {
+       "id": "69f1cbfea5706a322e114a65",
+       "headline": "Much-needed rain targets the South, yet worst drought zones will miss out",
+       "url": "https://www.aol.com/news/much-needed-rain-targets-south-104144695.html",
+       "publisher": "aol.com",
+       "published_at": "2026-04-27T10:41:44",
+       "lede": "rain relief is on the way for millions across the south as a pair of storm systems prepares to take aim at the region. much of the southern u.s. is experiencing drought conditions ranging from abnormally dry to extreme and exceptional, according to the u.s. drought monitor. these everyday commodities",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.72
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efac24a84b609af2b41a64",
+       "headline": "Somalia Drought Displaces 62,000 in 2025",
+       "url": "https://www.newkerala.com/news/a/62000-displaced-somalia-due-drought-iom-644.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-24T21:05:10",
+       "lede": "a severe drought in somalia has displaced 62,000 people across five districts since the start of 2025. the international organisation for migration reports that 75% of new displacements are due to drought, marking a 22% increase from the previous year. iom warns that nearly 125,000 more people could be displaced",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.44
+        }
+       ],
+       "country": "somalia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b24acc37f6c5e66392786",
+       "headline": "Hot, dry and hurricane-scarred: How climate change fueled wildfires in Georgia and Florida",
+       "url": "https://www.yahoo.com/news/articles/hot-dry-hurricane-scarred-climate-180041725.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-24T18:00:41",
+       "lede": "wildfires raging this week in southern georgia and northern florida were fueled by a combination of hot and windy conditions, severe drought and dried-out vegetation from past hurricanes all feeding the blazes. it’s a combination climate scientists have been warning about for decades as the planet gets hotter. “this is",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.88
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa328a54b8f07c95e9fa",
+       "headline": "Wildfires rage in Georgia, Florida; homes burn, evacuations ordered",
+       "url": "https://www.usatoday.com/story/news/nation/2026/04/24/wildfires-georgia-florida-south-evacuations-updates/89771147007/",
+       "publisher": "usatoday.com",
+       "published_at": "2026-04-24T17:19:31",
+       "lede": "updated april 24, 2026, 4:13 p.m. et wildfires burning in georgia and florida have destroyed homes, threatened more residences, forced evacuations and closed roads as thousands of acres continue to burn on april 24. two large wildfires burning in drought-stricken southeast georgia have destroyed more than 120 homes and are",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.78
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ac9625cefb83fe83e8ce8",
+       "headline": "Wildfires Destroy 50 Georgia Homes Amid Severe Drought",
+       "url": "https://world.infonasional.com/georgia-wildfires-destroy-homes-drought",
+       "publisher": "world.infonasional.com",
+       "published_at": "2026-04-24T13:12:03",
+       "lede": "massive wildfires fueled by extreme drought and hurricane debris destroyed more than 50 homes in rural georgia this week, forcing hundreds of residents to evacuate as smoke triggered air quality warnings across the southeast on thursday.the blazes spread rapidly through southern georgia and northern florida due to low humidity and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eec6b83fc01faba65e261",
+       "headline": "Wildfires rage across Georgia and northern Florida amid severe drought",
+       "url": "https://www.yahoo.com/news/articles/wildfires-rage-across-georgia-northern-183756353.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T18:37:56",
+       "lede": "at least eight wildfires continued to tear through parts of southern georgia and northern florida on thursday amid severe drought conditions in the region. as a result, parts of the southeast are contending with hazardous air quality resulting from the smoke, with the worst conditions reported near savannah, georgia; and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 2388,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMyAxODozNzo1NiIsImkiOiI2YTJlZWM2YjgzZmMwMWZhYmE2NWUyNjEiLCJwIjo5fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.987,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.989
+    }
+   }
+  }
+ ]
+}

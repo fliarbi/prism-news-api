@@ -1,0 +1,876 @@
+{
+ "slug": "mpox-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:46Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "mpox",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "mpox",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 661,
+     "tone": {
+      "carrying": 659,
+      "availability_pct": 99.7,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 327,
+        "share_pct": 49.62
+       },
+       {
+        "group": "neutral",
+        "count": 19,
+        "share_pct": 2.88
+       },
+       {
+        "group": "positive",
+        "count": 313,
+        "share_pct": 47.5
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 661,
+      "count": 606,
+      "share_pct": 91.68
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.385,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.388
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "mpox",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "mpox",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 194,
+       "critical": 159,
+       "critical_pct": 82.0,
+       "negative": 77,
+       "positive": 109,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 154,
+       "critical": 134,
+       "critical_pct": 87.0,
+       "negative": 78,
+       "positive": 70,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 215,
+       "critical": 173,
+       "critical_pct": 80.5,
+       "negative": 116,
+       "positive": 99,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 177,
+       "critical": 166,
+       "critical_pct": 93.8,
+       "negative": 90,
+       "positive": 79,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 222,
+       "critical": 207,
+       "critical_pct": 93.2,
+       "negative": 113,
+       "positive": 108,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 187,
+       "critical": 180,
+       "critical_pct": 96.3,
+       "negative": 100,
+       "positive": 81,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 128,
+       "critical": 112,
+       "critical_pct": 87.5,
+       "negative": 37,
+       "positive": 89,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 215,
+       "critical": 197,
+       "critical_pct": 91.6,
+       "negative": 66,
+       "positive": 140,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 179,
+       "critical": 166,
+       "critical_pct": 92.7,
+       "negative": 82,
+       "positive": 94,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 150,
+       "critical": 132,
+       "critical_pct": 88.0,
+       "negative": 63,
+       "positive": 79,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 153,
+       "critical": 138,
+       "critical_pct": 90.2,
+       "negative": 79,
+       "positive": 68,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 179,
+       "critical": 170,
+       "critical_pct": 95.0,
+       "negative": 103,
+       "positive": 72,
+       "partial_period": false
+      }
+     ],
+     "total": 2153,
+     "critical_total": 1934,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.216,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.218
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "mpox",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "mpox",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 661,
+     "carrying": 216,
+     "availability_pct": 32.68,
+     "items": [
+      {
+       "country": "united states",
+       "count": 93,
+       "share_pct": 14.07
+      },
+      {
+       "country": "united kingdom",
+       "count": 16,
+       "share_pct": 2.42
+      },
+      {
+       "country": "democratic republic of the congo",
+       "count": 11,
+       "share_pct": 1.66
+      },
+      {
+       "country": "ghana",
+       "count": 11,
+       "share_pct": 1.66
+      },
+      {
+       "country": "nigeria",
+       "count": 11,
+       "share_pct": 1.66
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 74
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.352,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.358
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "mpox",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "mpox",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "viral hemorrhagic fevers",
+       "count": 43,
+       "share": 10.24,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 37,
+       "delta_pct": 16.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "global health challenges",
+       "count": 40,
+       "share": 9.52,
+       "lift": 777.43,
+       "baseline_count": 1,
+       "previous_period_count": 28,
+       "delta_pct": 42.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "emerging viral diseases",
+       "count": 94,
+       "share": 22.38,
+       "lift": 365.39,
+       "baseline_count": 5,
+       "previous_period_count": 98,
+       "delta_pct": -4.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "global health emerging threats",
+       "count": 32,
+       "share": 7.62,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 29,
+       "delta_pct": 10.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "travel-related infectious disease risks",
+       "count": 42,
+       "share": 10.0,
+       "lift": 408.15,
+       "baseline_count": 2,
+       "previous_period_count": 42,
+       "delta_pct": 0.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 661,
+     "carrying": 420,
+     "carrier_share_pct": 63.54,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.649,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.651
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "mpox",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "mpox",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a79bfc37f6c5e66c0e73b",
+       "headline": "DR Congo lifts national mpox emergency after two years",
+       "url": "https://tunisianstar.com/dr-congo-lifts-national-mpox-emergency-two-years/",
+       "publisher": "tunisianstar.com",
+       "published_at": "2026-04-03T13:50:34",
+       "lede": "kinshasa: the democratic republic of the congo has declared an end to the mpox outbreak that had remained under national emergency management for about two years, with health minister roger kamba saying the epidemic no longer met the threshold for that status. the announcement marks a major public health milestone",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.77
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e27f2b277be6ed2d948a57",
+       "headline": "Congo declares end of two-year mpox outbreak that killed over 2,000 | Africanews",
+       "url": "https://www.africanews.com/2026/04/03/congo-declares-end-of-two-year-mpox-outbreak-that-killed-over-2000/",
+       "publisher": "africanews.com",
+       "published_at": "2026-04-03T10:37:53",
+       "lede": "the democratic republic of congo has announced the end of a two-year mpox outbreak that infected thousands and claimed more than 2,200 lives, according to health officials. health minister roger kamba said on thursday that the outbreak, the largest in africa in recent years, is no longer a national emergency",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.79
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "democratic republic of the congo",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2b4cfa85be7e5065fe2f6",
+       "headline": "Congo says its mpox outbreak is over after 2 years and more than 2,200 suspected deaths",
+       "url": "https://us.headtopics.com/news/congo-says-its-mpox-outbreak-is-over-after-2-years-and-more-81772269",
+       "publisher": "us.headtopics.com",
+       "published_at": "2026-04-02T17:15:00",
+       "lede": "congo says its mpox outbreak is over after 2 years and more than 2,200 suspected deaths congo has declared the end of a two-year mpox outbreak, which is believed to have caused over 2,200 deaths. 4 kindergarten students hurt when semi smashes back of school bus crossing train tracks on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.63
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8be0081c77a16f17538dc",
+       "headline": "La OMS alerta del riesgo de transmisión sostenida de mpox si no se frenan los brotes",
+       "url": "https://www.consalud.es/pacientes/la-oms-alerta-del-riesgo-de-transmision-sostenida-de-mpox-si-no-se-frenan-los-brotes.html",
+       "publisher": "consalud.es",
+       "published_at": "2026-03-27T12:45:00",
+       "lede": "the world health organization (who) has released its latest report on the current outbreaks of mpox in different countries. in this document, it warns that if the spread cannot be stopped quickly and transmission between people is cut off, there is a risk that the disease will be established continuously",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a6f5599be98ae08b8be0",
+       "headline": "Ghana records eight deaths, over 1,000 mpox cases since May 2025 – Health Minister - MyJoyOnline",
+       "url": "https://www.myjoyonline.com/ghana-records-eight-deaths-over-1000-mpox-cases-since-may-2025-health-minister/",
+       "publisher": "myjoyonline.com",
+       "published_at": "2026-03-09T12:08:21",
+       "lede": "the minister for health, kwabena mintah akandoh, has revealed that ghana recorded eight deaths and over 1,000 confirmed cases of mpox since a fresh outbreak began in may 2025.the minister disclosed in parliament while responding to questions from minority leader alexander afenyo-markin about the rising number of cases of the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.21,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.63
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.53
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.49
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.42
+        }
+       ],
+       "country": "ghana",
+       "organizations": [],
+       "people": [
+        "kwabena mintah akandoh"
+       ]
+      },
+      {
+       "id": "86b993e75e987b775b06000d",
+       "headline": "Mpox Outbreak in the East Africa Region: Current Status, Containment Measures, Challenges, and Future Direction.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41675254/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-01T00:00:00",
+       "lede": "mpox outbreak in the east africa region: current status, containment measures, challenges, and future direction.in 2024, the world health organization declared mpox outbreak a public health emergency of international concern. the epicenter of this outbreak was the democratic republic of congo (drc), which is a member of the east african",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc2d00b34e503b1ddfbf7b",
+       "headline": "Madagascar Mpox Cases Rise: Awareness & Growing Concerns - News Directory 3",
+       "url": "https://www.newsdirectory3.com/madagascar-mpox-cases-rise-awareness-growing-concerns/",
+       "publisher": "newsdirectory3.com",
+       "published_at": "2026-02-18T14:00:18",
+       "lede": "madagascar is currently facing a growing outbreak of mpox, with cases steadily increasing since its first documented occurrence on december 30, 2025 . health officials are working to contain the spread of the virus, which is impacting both adults and children.rising case numbers and vulnerable populationsas of january 19, 2026",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.64
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "madagascar",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f880acbbf1d3145596692a",
+       "headline": "In Madagascar, stigma is undermining the fight against mpox",
+       "url": "https://www.gavi.org/vaccineswork/madagascar-stigma-undermining-fight-against-mpox",
+       "publisher": "gavi.org",
+       "published_at": "2026-04-30T12:42:04",
+       "lede": "at a glance well over 1,100 cases of mpox have been recorded across madagascar since december. health workers at the andohatapenaka treatment and isolation centre say widespread social stigma is delaying care, with patients presenting for treatment only when the painful symptoms become too unbearable to hide. a first raft",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "madagascar",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "2cb6174f3b6c9792e6758c6a",
+       "headline": "High-throughput multiplex immunoassay for the detection of mpox and MVA-BN vaccination up to 2 years after exposure in Belgium: a retrospective diagnostic accuracy study.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42068991/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "high-throughput multiplex immunoassay for the detection of mpox and mva-bn vaccination up to 2 years after exposure in belgium: a retrospective diagnostic accuracy study.background: mpox, caused by monkeypox virus (mpxv), has gained global attention following several international outbreaks. accurate and high-throughput detection of mpxv-specific antibodies is essential for surveillance programmes,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.93
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a642e5cefb83fe8fbb889",
+       "headline": "Africa CDC Aware Of Reported COVID-19 Cases In Nigeria",
+       "url": "https://sciencenigeria.com/africa-cdc-aware-of-reported-covid-19-cases-in-nigeria/",
+       "publisher": "sciencenigeria.com",
+       "published_at": "2026-04-24T20:34:29",
+       "lede": "- advertisement - - advertisement - - advertisement - - advertisement - the africa centres for disease control and prevention (africa cdc) has confirmed a reported covid-19 case in nigeria, following confirmation by the nigeria centre for disease control and prevention (ncdc). deputy incident manager for mpox at the africa",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.85
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.6
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8885e5cfa3e5ba508b5f9",
+       "headline": "Mpox Cases Soar In CA As Rare Strain Detected For First Time In San Francisco",
+       "url": "https://patch.com/california/san-francisco/mpox-cases-soar-ca-rare-strain-detected-first-time-san-francisco",
+       "publisher": "patch.com",
+       "published_at": "2026-04-21T23:53:59",
+       "lede": "health & fitness mpox cases soar in ca as rare strain detected for first time in san francisco health officials are urging californians to get vaccinated for mpox. san francisco, ca — health officials are sounding the alarm on mpox cases quickly spreading in the san francisco bay area, and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e994ec75f157062caa8f48",
+       "headline": "Vaccinations urged as dangerous strain of mpox virus emerges in Northern California",
+       "url": "https://www.pottsmerc.com/2026/04/20/dangerous-mpox-clade-california-vaccinations-urged/",
+       "publisher": "pottsmerc.com",
+       "published_at": "2026-04-20T23:21:22",
+       "lede": "by don sweeney, the sacramento bee a potentially more dangerous strain of the mpox virus has been confirmed in northern california, prompting officials to urge vaccinations to residents of the golden state. the disease was formerly known as monkeypox, but the world health organization phased out that name in 2022",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "don sweeney"
+       ]
+      },
+      {
+       "id": "69e994cb75f157062caa750a",
+       "headline": "Vaccinations urged as dangerous strain of mpox virus emerges in Northern California",
+       "url": "https://www.presstelegram.com/2026/04/20/dangerous-mpox-clade-california-vaccinations-urged/",
+       "publisher": "presstelegram.com",
+       "published_at": "2026-04-20T23:21:22",
+       "lede": "by don sweeney, the sacramento bee a potentially more dangerous strain of the mpox virus has been confirmed in northern california, prompting officials to urge vaccinations to residents of the golden state. the disease was formerly known as monkeypox, but the world health organization phased out that name in 2022",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "don sweeney"
+       ]
+      },
+      {
+       "id": "69e9941bbdd09a23d08bf89f",
+       "headline": "Vaccinations urged as dangerous strain of mpox virus emerges in Northern California",
+       "url": "https://www.sgvtribune.com/2026/04/20/dangerous-mpox-clade-california-vaccinations-urged/",
+       "publisher": "sgvtribune.com",
+       "published_at": "2026-04-20T23:21:22",
+       "lede": "by don sweeney, the sacramento bee a potentially more dangerous strain of the mpox virus has been confirmed in northern california, prompting officials to urge vaccinations to residents of the golden state. the disease was formerly known as monkeypox, but the world health organization phased out that name in 2022",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "don sweeney"
+       ]
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 299,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMCAyMzoyMToyMiIsImkiOiI2OWU5OTMzNGJkZDA5YTIzZDA4YjM1NTkiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.966,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.969
+    }
+   }
+  }
+ ]
+}

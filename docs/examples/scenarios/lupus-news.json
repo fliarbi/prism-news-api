@@ -1,0 +1,930 @@
+{
+ "slug": "lupus-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:29Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "lupus",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "lupus",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1525,
+     "tone": {
+      "carrying": 1525,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 279,
+        "share_pct": 18.3
+       },
+       {
+        "group": "neutral",
+        "count": 112,
+        "share_pct": 7.34
+       },
+       {
+        "group": "positive",
+        "count": 1134,
+        "share_pct": 74.36
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1525,
+      "count": 1106,
+      "share_pct": 72.52
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.728,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.731
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "lupus",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "lupus",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 343,
+       "critical": 213,
+       "critical_pct": 62.1,
+       "negative": 75,
+       "positive": 223,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 301,
+       "critical": 201,
+       "critical_pct": 66.8,
+       "negative": 40,
+       "positive": 222,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 340,
+       "critical": 214,
+       "critical_pct": 62.9,
+       "negative": 72,
+       "positive": 205,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 332,
+       "critical": 211,
+       "critical_pct": 63.6,
+       "negative": 76,
+       "positive": 223,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 344,
+       "critical": 207,
+       "critical_pct": 60.2,
+       "negative": 75,
+       "positive": 249,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 439,
+       "critical": 327,
+       "critical_pct": 74.5,
+       "negative": 46,
+       "positive": 371,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 468,
+       "critical": 362,
+       "critical_pct": 77.4,
+       "negative": 134,
+       "positive": 306,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 382,
+       "critical": 276,
+       "critical_pct": 72.3,
+       "negative": 64,
+       "positive": 278,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 493,
+       "critical": 369,
+       "critical_pct": 74.8,
+       "negative": 87,
+       "positive": 382,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 271,
+       "critical": 196,
+       "critical_pct": 72.3,
+       "negative": 37,
+       "positive": 199,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 339,
+       "critical": 227,
+       "critical_pct": 67.0,
+       "negative": 59,
+       "positive": 257,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 422,
+       "critical": 314,
+       "critical_pct": 74.4,
+       "negative": 96,
+       "positive": 296,
+       "partial_period": false
+      }
+     ],
+     "total": 4474,
+     "critical_total": 3117,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.868,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.871
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "lupus",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "lupus",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1525,
+     "carrying": 276,
+     "availability_pct": 18.1,
+     "items": [
+      {
+       "country": "united states",
+       "count": 157,
+       "share_pct": 10.3
+      },
+      {
+       "country": "united kingdom",
+       "count": 24,
+       "share_pct": 1.57
+      },
+      {
+       "country": "china",
+       "count": 13,
+       "share_pct": 0.85
+      },
+      {
+       "country": "central african republic",
+       "count": 11,
+       "share_pct": 0.72
+      },
+      {
+       "country": "india",
+       "count": 10,
+       "share_pct": 0.66
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 61
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.269,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.272
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "lupus",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "lupus",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "rare disease research publications",
+       "count": 211,
+       "share": 23.11,
+       "lift": 1886.52,
+       "baseline_count": 1,
+       "previous_period_count": 198,
+       "delta_pct": 6.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "autoimmune disorders not otherwise specified",
+       "count": 111,
+       "share": 12.16,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 176,
+       "delta_pct": -36.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "clinical trial phases for new drugs",
+       "count": 95,
+       "share": 10.41,
+       "lift": 849.38,
+       "baseline_count": 1,
+       "previous_period_count": 78,
+       "delta_pct": 21.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease therapies and orphan drugs",
+       "count": 77,
+       "share": 8.43,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 52,
+       "delta_pct": 48.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "immune system dysregulation disorders",
+       "count": 65,
+       "share": 7.12,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 129,
+       "delta_pct": -49.6,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1525,
+     "carrying": 913,
+     "carrier_share_pct": 59.87,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.283,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.285
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "lupus",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "lupus",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f1c76c399b489398debddb",
+       "headline": "New Research Funded by Lupus Foundation of America Uncovers Microbiome-Linked Pathway Associated with Lupus Kidney Disease",
+       "url": "https://www.lupus.org/news/new-research-funded-by-lupus-foundation-of-america-uncovers-microbiomelinked-pathway",
+       "publisher": "lupus.org",
+       "published_at": "2026-04-25T12:00:00",
+       "lede": "a new study is advancing the understanding of lupus nephritis, (ln, lupus-related kidney disease), identifying a microbiome-associated disease pathway. the pathway was found to be associated with lupus flares and kidneydamage in both patient samples and preclinical models. notably, the study also identified a potential biomarker, antibodies targeting a bacterial",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee5d583fc01faba5f34e6",
+       "headline": "She Was Told She’d Never Have Children Because of Her Lupus. Then She Had a Healthy Pregnancy at Age 40",
+       "url": "https://www.yahoo.com/lifestyle/articles/she-told-she-d-never-140000823.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-15T14:00:00",
+       "lede": "need to know key takeaways rachel mcglynn's lupus diagnosis and subsequent treatment made it difficult for her to carry a pregnancy when she realized a decade into her diagnosis that she wanted to have kids, her doctors worked with her to safely make it happen mcglynn and her family, including",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a51a2c37f6c5e66a61ecc",
+       "headline": "Hinge Bio Announces First Subject Dosed in Phase 1 Trial of HB2198, a Novel B cell Depleting Agent, for Treating Autoimmune Disease",
+       "url": "https://www.biospace.com/press-releases/hinge-bio-announces-first-subject-dosed-in-phase-1-trial-of-hb2198-a-novel-b-cell-depleting-agent-for-treating-autoimmune-disease",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-14T13:42:04",
+       "lede": "first-in-human clinical trial underway to evaluate safety, tolerability and pharmacodynamic activity of hb2198 in normal healthy volunteers. a separate phase 1 trial evaluating hb2198 in patients with systemic lupus erythematosus (sle) is open to screening. redwood city, calif., april 14, 2026 (globe newswire) -- hinge bio, inc., a privately-held clinical-stage",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.84
+        },
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a95a95cefb83fe81adce9",
+       "headline": "J&J's nipocalimab gets FDA Fast Track designation for lupus - PMLiVE",
+       "url": "https://pmlive.com/pharma_news/jjs-nipocalimab-gets-fda-fast-track-designation-for-lupus",
+       "publisher": "pmlive.com",
+       "published_at": "2026-03-04T12:36:40",
+       "lede": "johnson & johnson’s (j&j) nipocalimab, a potential immunoselective investigational treatment for adults with systemic lupus erythematosus (lupus), has been granted us fda fast track designation. the us fda fast track designation programme aims to deliver therapeutics to patients more quickly where unmet needs remain by expediting the development and reviewing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.69
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.51
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bceca15d6eab2ab8fdcdb4",
+       "headline": "J&J's nipocalimab gets FDA Fast Track designation for lupus - PMLiVE",
+       "url": "https://pmlive.com/pharma_news/jjs-nipocalimab-gets-fda-fast-track-designation-for-lupus/",
+       "publisher": "pmlive.com",
+       "published_at": "2026-03-04T12:36:40",
+       "lede": "johnson & johnson’s (j&j) nipocalimab, a potential immunoselective investigational treatment for adults with systemic lupus erythematosus (lupus), has been granted us fda fast track designation.the us fda fast track designation programme aims to deliver therapeutics to patients more quickly where unmet needs remain by expediting the development and reviewing timelines",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.69
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.51
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "1511f44fda37778bac5ab4c5",
+       "headline": "Clinical Response to Baricitinib in Monogenic Lupus: Real-World Evidence from a Case Series of Seven Patients.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42100058/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-01T00:00:00",
+       "lede": "clinical response to baricitinib in monogenic lupus: real-world evidence from a case series of seven patients.background: monogenic lupus is a rare, early-onset form of lupus caused by high-penetrance genetic variants, with diverse clinical features and a central role for type i interferon (ifn-i) in its pathogenesis. standard treatments are lacking,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.63
+        },
+        {
+         "code": 629,
+         "path": "/Health/Health Conditions/Genetic Disorders",
+         "score": 0.45
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.4
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a2b975f157062cb34974",
+       "headline": "Wicklow woman with lupus and cancer confined to one room as family appeals for help to adapt home",
+       "url": "https://www.independent.ie/irish-news/health/wicklow-woman-with-lupus-and-cancer-confined-to-one-room-as-family-appeals-for-help-to-adapt-home/a1843796496.html",
+       "publisher": "independent.ie",
+       "published_at": "2026-04-23T04:30:00",
+       "lede": "wicklow woman with lupus and cancer confined to one room as family appeals for help to adapt home pauline mitchell spent her 62nd birthday in hospital last weekend and says the hardest part of her illness has been adjusting to how small her world has become. but her gratitude for",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "a67fe7c7626b2963b49841ec",
+       "headline": "Baseline characteristics of patients with SLE with and without lupus nephritis from the Latin American multiethnic GLADEL 2.0 cohort.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42009373/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-20T00:00:00",
+       "lede": "baseline characteristics of patients with sle with and without lupus nephritis from the latin american multiethnic gladel 2.0 cohort.objective: to describe baseline characteristics of a multinational, multiethnic latin american cohort of sle patients with and without lupus nephritis (ln) from latin american group for the study of lupus (gladel) 2.0.\nmethods:",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.67
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.51
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.44
+        },
+        {
+         "code": 675,
+         "path": "/Health/Health Conditions/Arthritis",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "307f2db3fae727583f2be453",
+       "headline": "Primary headaches in juvenile-onset systemic lupus erythematosus: A preliminary case control study using ICHD-3 criteria.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42008622/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-20T00:00:00",
+       "lede": "primary headaches in juvenile-onset systemic lupus erythematosus: a preliminary case control study using ichd-3 criteria.introductionheadache is one of the most frequent neurological symptoms in sle; however, its definition and relationship with the disease remain unclear. distinguishing whether a headache is attributable to lupus or represents a primary headache disorder can",
+       "sentiment": {
+        "label": "none",
+        "score": 0.4,
+        "group": "neutral"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 405,
+         "path": "/Health/Health Conditions/Pain Management",
+         "score": 0.73
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.53
+        },
+        {
+         "code": 296,
+         "path": "/Health/Pediatrics",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ea0f0e540a46fb542b649",
+       "headline": "Men with Lupus Are 'Few and Far Between.' This Man Shares How He Deals with His Rare Diagnosis",
+       "url": "https://www.yahoo.com/lifestyle/articles/men-lupus-few-far-between-130000064.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-15T13:00:00",
+       "lede": "need to know key takeaways rob reinhart was diagnosed with lupus in 2010, a condition that primarily affects women and is rare in men he became an ambassador for the lupus foundation of america to connect with other men and share his experiences reinhart emphasizes the importance of self-advocacy and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0eb92c9341f3dc2aefa8cf",
+       "headline": "Autoimmune drug candidate cleared B and T cells in lupus models",
+       "url": "https://www.stocktitan.net/news/ALLO/allogene-therapeutics-announces-nature-communications-publication-vf0gm9wilrd7.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-15T12:30:00",
+       "lede": "study highlights dagger ® technology showing that an optimized cd70 car has the potential to protect against immune rejection, enabling robust expansion and persistence of allogeneic car t cells in pre-clinical models dual cd19/cd70 car t cells rapidly eliminated b and t cells in systemic lupus erythematosus (sle) models, halting",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.8
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eb4f78e67a2fcb3bd050d",
+       "headline": "Beeline Medicines emerges as Bristol Myers' partner for shelved immunology drugs",
+       "url": "https://endpoints.news/beeline-medicines-emerges-as-bristol-myers-partner-for-shelved-immunology-drugs/",
+       "publisher": "endpoints.news",
+       "published_at": "2026-04-15T11:00:51",
+       "lede": "bain capital is implementing a blueprint that’s worked before, officially launching a company wednesday with five assets from bristol myers squibb. the biotech will be called beeline medicines and will officially get things going with programs in lupus, eczema, plaque psoriasis and other inflammatory diseases. the company will be led",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.9
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4abfe6594f7ebafc040d",
+       "headline": "Judge says manager’s lawsuit against Wells Fargo can move forward",
+       "url": "https://www.yahoo.com/news/articles/judge-says-manager-lawsuit-against-161046937.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-13T16:10:46",
+       "lede": "a federal judge says a wells fargo manager’s lawsuit against the bank can move forward. the charlotte observer reports that beth arbuckle requested to keep working from home in charlotte, after wells fargo ordered employees to return to work in the office in 2022. arbuckle says she has lupus and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e643662461615d5f44fc55",
+       "headline": "New Breakthroughs in Treating Lupus, Arthritis, and Autoimmune Inflammation - Time News",
+       "url": "https://time.news/new-breakthroughs-in-treating-lupus-arthritis-and-autoimmune-inflammation/",
+       "publisher": "time.news",
+       "published_at": "2026-04-13T11:52:38",
+       "lede": "for millions of people living with systemic lupus erythematosus (sle) and rheumatoid arthritis, the daily reality of treatment is often a precarious balancing act. the medications used to quiet an overactive immune system—ranging from corticosteroids to broad-spectrum biologics—frequently act like a sledgehammer, suppressing the body’s ability to fight off infections",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.79,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.64
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e34b1448ac0efad16bd003",
+       "headline": "Progentec Diagnostics advances lupus risk test with new grant",
+       "url": "https://journalrecord.com/2026/04/10/progentec-lupus-blood-test-oklahoma-grant-research/",
+       "publisher": "journalrecord.com",
+       "published_at": "2026-04-10T15:41:52",
+       "lede": "listen to this article listen to this article oklahoma city — progentec diagnostics inc. has announced the publication of new research in lupus science & medicine and the award of an oklahoma center for the advancement of science and technology industry innovation grant to further develop its lupus classification risk",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.72
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "progentec diagnostics"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 116,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMCAwNjoyNzozMyIsImkiOiI2YTJhNTIwMzVjZWZiODNmZThlZTg5YmIiLCJwIjo3fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.342,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.347
+    }
+   }
+  }
+ ]
+}

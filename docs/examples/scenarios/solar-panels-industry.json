@@ -1,0 +1,969 @@
+{
+ "slug": "solar-panels-industry",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:02Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "solar panels",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "solar panels",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4674,
+     "tone": {
+      "carrying": 4673,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1018,
+        "share_pct": 21.78
+       },
+       {
+        "group": "neutral",
+        "count": 43,
+        "share_pct": 0.92
+       },
+       {
+        "group": "positive",
+        "count": 3612,
+        "share_pct": 77.3
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4672,
+      "count": 2807,
+      "share_pct": 60.08
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.787,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.791
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "solar panels",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "solar panels",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 836,
+       "critical": 471,
+       "critical_pct": 56.3,
+       "negative": 158,
+       "positive": 675,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 844,
+       "critical": 455,
+       "critical_pct": 53.9,
+       "negative": 99,
+       "positive": 736,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1019,
+       "critical": 549,
+       "critical_pct": 53.9,
+       "negative": 173,
+       "positive": 836,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1189,
+       "critical": 630,
+       "critical_pct": 53.0,
+       "negative": 245,
+       "positive": 937,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 956,
+       "critical": 563,
+       "critical_pct": 58.9,
+       "negative": 171,
+       "positive": 778,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 969,
+       "critical": 578,
+       "critical_pct": 59.6,
+       "negative": 125,
+       "positive": 837,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 840,
+       "critical": 492,
+       "critical_pct": 58.6,
+       "negative": 132,
+       "positive": 704,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 820,
+       "critical": 460,
+       "critical_pct": 56.1,
+       "negative": 129,
+       "positive": 685,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 916,
+       "critical": 577,
+       "critical_pct": 63.0,
+       "negative": 147,
+       "positive": 762,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1061,
+       "critical": 645,
+       "critical_pct": 60.8,
+       "negative": 225,
+       "positive": 828,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1263,
+       "critical": 781,
+       "critical_pct": 61.8,
+       "negative": 351,
+       "positive": 902,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1434,
+       "critical": 804,
+       "critical_pct": 56.1,
+       "negative": 295,
+       "positive": 1120,
+       "partial_period": false
+      }
+     ],
+     "total": 12147,
+     "critical_total": 7005,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.988,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.991
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "solar panels",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "solar panels",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4674,
+     "carrying": 2169,
+     "availability_pct": 46.41,
+     "items": [
+      {
+       "country": "united states",
+       "count": 851,
+       "share_pct": 18.21
+      },
+      {
+       "country": "united kingdom",
+       "count": 316,
+       "share_pct": 6.76
+      },
+      {
+       "country": "india",
+       "count": 201,
+       "share_pct": 4.3
+      },
+      {
+       "country": "china",
+       "count": 158,
+       "share_pct": 3.38
+      },
+      {
+       "country": "australia",
+       "count": 95,
+       "share_pct": 2.03
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 548
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.016,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.019
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "solar panels",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "solar panels",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "solar photovoltaic (pv) energy systems",
+       "count": 1616,
+       "share": 49.49,
+       "lift": 808.05,
+       "baseline_count": 5,
+       "previous_period_count": 1179,
+       "delta_pct": 37.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "solar panel recycling & waste management",
+       "count": 342,
+       "share": 10.47,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 267,
+       "delta_pct": 28.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "community solar & shared renewable projects",
+       "count": 515,
+       "share": 15.77,
+       "lift": 429.19,
+       "baseline_count": 3,
+       "previous_period_count": 321,
+       "delta_pct": 60.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "perovskite solar cell innovations",
+       "count": 174,
+       "share": 5.33,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 121,
+       "delta_pct": 43.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 156,
+       "share": 4.78,
+       "lift": 390.02,
+       "baseline_count": 1,
+       "previous_period_count": 68,
+       "delta_pct": 129.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4674,
+     "carrying": 3265,
+     "carrier_share_pct": 69.85,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.804,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.806
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "solar panels",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "solar panels",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e2a4407f3a572cf4ab07a4",
+       "headline": "Polizeihund deckt Millionenverbrechen mit Solarpaneelen auf: Mutter in Haft",
+       "url": "https://www.t-online.de/nachrichten/panorama/kriminalitaet/id_101116148/hoexter-polizeihund-deckt-millionenverbrechen-auf.html",
+       "publisher": "t-online.de",
+       "published_at": "2026-02-05T13:07:18",
+       "lede": "million crimes poisoned with solar panels child – police arrest mother by t-online , mtt updated on 05.02.2026 reading duration: 2 min. one of the solar panels: the officials found illegal substances of enormous value. (source: police) read out current time: 0:00 total duration: 0:00 1 x now new at",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.81,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.56
+        },
+        {
+         "code": 117,
+         "path": "/Sensitive Subjects/Recreational Drugs",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a95dbbf1d314559a4a05",
+       "headline": "India’s Dependence on Mineral Imports Threatens Clean Energy Security: IEEFA Report - India Seatrade News",
+       "url": "https://indiaseatradenews.com/indias-dependence-on-mineral-imports-threatens-clean-energy-security-ieefa-report/",
+       "publisher": "indiaseatradenews.com",
+       "published_at": "2026-04-30T18:41:54",
+       "lede": "india’s growing dependence on imported critical minerals is emerging as a major challenge to its clean energy ambitions, according to a report by the institute for energy economics and financial analysis (ieefa). the study warns that reliance on overseas supplies of minerals essential for batteries, solar panels, wind turbines and",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.82
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1d1b963d76f4af40a997",
+       "headline": "Israeli soldiers smash solar panels with diggers in Christian village",
+       "url": "https://www.yahoo.com/news/articles/israeli-soldiers-smash-solar-panels-130243064.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T13:02:43",
+       "lede": "israeli troops are under investigation for destroying solar panels with military diggers in the same christian village where they deliberately smashed a statue of jesus. video footage has emerged showing the diggers smashing the solar panels and destroying an industrial vehicle outside the village of debel, in southern lebanon. israel",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.91
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0ea02d32561089420e538",
+       "headline": "Israeli military destroys solar panels in south Lebanon village | The National",
+       "url": "https://www.thenational.ae/news/mena/2026/04/27/footage-shows-israeli-military-destroying-solar-panels-in-south-lebanon-village/",
+       "publisher": "thenational.ae",
+       "published_at": "2026-04-27T13:42:12",
+       "lede": "the israeli military has been caught destroying solar panels in an isolated south lebanese border village – days after soldiers <a href=\"https://www.thenationalnews.com/news/mena/2026/04/22/a-wound-in-our-hearts-lebanese-christians-say-israeli-apology-for-desecration-of-jesus-statue-not-enough/\" target=\"_blank\" rel=\"\" title=\"https://www.thenationalnews.com/news/mena/2026/04/22/a-wound-in-our-hearts-lebanese-christians-say-israeli-apology-for-desecration-of-jesus-statue-not-enough/\">desecrated a statue</a> of jesus christ in the same place. footage has emerged of an israeli digger smashing the panels on the edge of the village",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.65
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.41
+        }
+       ],
+       "country": "lebanon",
+       "organizations": [],
+       "people": [
+        "jesus",
+        "jesus"
+       ]
+      },
+      {
+       "id": "6a2a777e963d76f4afce3f74",
+       "headline": "Renewable energy will boost national security and protect UK from sabotage, minister says",
+       "url": "https://www.inkl.com/news/renewable-energy-will-boost-national-security-and-protect-uk-from-sabotage-minister-says",
+       "publisher": "inkl.com",
+       "published_at": "2026-04-26T23:01:26",
+       "lede": "military experts have also called for investments in wind farms and solar panels to bolster the uk’s national security. photograph: alan majchrowicz/getty images renewable energy will boost the uk’s national security and make the country more resilient against potential aggression or sabotage, the government’s energy minister has said. michael shanks",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.89
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cc3aa5706a322e1168ca",
+       "headline": "IDF probes soldiers seen damaging solar panels in south Lebanon Christian village",
+       "url": "https://www.timesofisrael.com/idf-probes-soldiers-seen-damaging-solar-panels-in-south-lebanon-christian-village/",
+       "publisher": "timesofisrael.com",
+       "published_at": "2026-04-26T07:21:20",
+       "lede": "the israel defense forces said saturday that it was investigating after footage published by lebanese media over the weekend showed military excavators damaging solar panels in the christian village of debel in southern lebanon. debel is the same village where an idf soldier was filmed smashing a statue of jesus",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.93
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "israel defense forces",
+        "israel defense forces"
+       ],
+       "people": [
+        "jesus"
+       ]
+      },
+      {
+       "id": "6a2b20925cefb83fe87b5554",
+       "headline": "IDF probes video showing soldiers destroying solar panels in Christian-Lebanese village",
+       "url": "https://www.yahoo.com/news/articles/idf-probes-video-showing-soldiers-004006667.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-26T00:40:06",
+       "lede": "the destruction took place in the village of debel, the same village in which an idf soldier was photographed last week smashing a statue of jesus, causing widespread outcry. the idf has launched an investigation into a video in which israeli soldiers are seen destroying solar panels in a village",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.9
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03eebc220687a966a0d347",
+       "headline": "Miliband branded 'king of hypocrisy' for not having solar panels at £1.6m home",
+       "url": "https://www.thesun.co.uk/news/38929437/hypocrisy-ed-miliband-no-solar-panels-house/",
+       "publisher": "thesun.co.uk",
+       "published_at": "2026-04-25T20:59:26",
+       "lede": "net zero fanatic ed miliband has been branded “the king of hypocrisy” for having no solar panels on his home. the energy secretary says “the era of clean energy security must come of age”. sign up for the politics newsletter thank you! email address please provide a valid email. your",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.6
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efabbea84b609af2b3bd97",
+       "headline": "Indonesia accelerates 100 GW solar program amid US tariffs",
+       "url": "https://en.antaranews.com/news/413519/indonesia-accelerates-100-gw-solar-program-amid-us-tariffs",
+       "publisher": "en.antaranews.com",
+       "published_at": "2026-04-24T11:43:14",
+       "lede": "indonesia accelerates 100 gw solar program amid us tariffs related news: president prabowo calls for accelerated 100 gw solar power push jakarta (antara) - indonesia’s energy and mineral resources ministry (esdm) is boosting the uptake of domestically produced solar panels to meet domestic demand, by accelerating the development of 100",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.91
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [
+        "solar power"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea1e518266d93399949a29",
+       "headline": "Did Lagos Order All Solar Users to Obtain Permit? Here’s What Government Clarified - Tech | Business | Economy",
+       "url": "https://techeconomy.ng/did-lagos-order-all-solar-users-to-obtain-permit-heres-what-government-clarified/",
+       "publisher": "techeconomy.ng",
+       "published_at": "2026-04-23T07:08:53",
+       "lede": "lagos state government has clarified who needs to obtain permit to install solar panels for energy generation. the state restated that only allottees of its housing estates must seek and obtain approval from the ministry of housing before embarking on any external alterations or installation of solar panels on allocated",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6b59c37f6c5e66b81df2",
+       "headline": "Attention: UK Bans Fuel Gas in New Building from 2028 - SPRSUN",
+       "url": "https://sprsunheatpump.com/attention-uk-bans-fuel-gas-in-new-building-from-2028.html",
+       "publisher": "sprsunheatpump.com",
+       "published_at": "2026-04-15T02:52:58",
+       "lede": "if you’re planning to buy, build, or renovate a home in the uk, there’s a date you should know: 2028. from the end of 2027, new house in england will no longer be connected to the gas grid. all new buildings must be equipped with heat pumps and solar panels.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a76265cefb83fe80613fd",
+       "headline": "PM Surya Ghar Yojna: Objectives, Eligibility, Apply Online, Benefits and  Latest Update",
+       "url": "https://www.jagranjosh.com/general-knowledge/pm-surya-ghar-muft-bijli-yojna-objectives-eligibility-apply-online-benefits-1820007753-1",
+       "publisher": "jagranjosh.com",
+       "published_at": "2026-04-11T04:47:38",
+       "lede": "the pm surya ghar muft bijli yojna launched in 2024. it is aimed at india’s largest residential rooftop solar initiative to install solar panels in 1 crore households by 2027 across the country and enabling citizens to generate their own electricity and reduce dependency on conventional energy sources. the scheme",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.91,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.92
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e88a285cfa3e5ba50a0063",
+       "headline": "Thailand has limited ammunition to address economic problems, says finance minister",
+       "url": "https://www.thestar.com.my/business/business-news/2026/04/10/thailand-has-limited-ammunition-to-address-economic-problems-says-finance-minister",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-10T16:04:00",
+       "lede": "bangkok: thailand has limited ammunition to address its economic problems, finance minister ekniti nitithanprapas said on friday. * the government will approve soft loans for the use of solar panels, he told reporters. * it is considering a car trade-in scheme, ekniti said, adding the budget for the next fiscal",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.66
+        }
+       ],
+       "country": "thailand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e889c37bb1410d4c8d20d7",
+       "headline": "Thailand has limited ammunition to address economic problems, says finance minister",
+       "url": "https://www.asiaone.com/asia/thailand-has-limited-ammunition-address-economic-problems-says-finance-minister",
+       "publisher": "asiaone.com",
+       "published_at": "2026-04-10T08:23:00",
+       "lede": "bangkok — thailand has limited ammunition to address its economic problems, finance minister ekniti nitithanprapas said on friday (april 10). the government will approve soft loans for the use of solar panels, he told reporters. it is considering a car trade-in scheme, ekniti said, adding the budget for the next",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.65
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "thailand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e31faf660da7a6a2013378",
+       "headline": "Delhi Confidential: Solar Power",
+       "url": "https://indianexpress.com/article/delhi-confidential/delhi-confidential-solar-power-10628634/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-09T21:23:26",
+       "lede": "with the west asia conflict disrupting global energy supply chains and shipping routes, union new and renewable energy minister pralhad joshi has intensified efforts to accelerate india’s renewable energy transition. joshi has set an ambitious goal of installing 15,000 rooftop solar panels every day to reduce dependence on conventional energy",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.78
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": [
+        "pralhad joshi"
+       ]
+      },
+      {
+       "id": "6a2b24fcc37f6c5e663967c5",
+       "headline": "Environmental Disaster Is Looming Thanks To ‘Renewable’ Energy Sources",
+       "url": "https://www.yahoo.com/news/articles/environmental-disaster-looming-thanks-renewable-100000169.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-07T10:00:00",
+       "lede": "an environmental disaster is looming, thanks to so-called renewable energy sources. the massive push in this century for alternatives to fossil fuels—mainly windmills and solar panels—has been one of the greatest follies in human history. the cost of these alleged renewables in the last 25 years exceeds $10 trillion, and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2a206dc480588dc9da170",
+       "headline": "How Pakistan’s solar boom is shielding it from worst of Iran war crisis",
+       "url": "https://www.aljazeera.com/features/2026/4/7/how-pakistans-solar-boom-is-shielding-it-from-worst-of-iran-war-crisis",
+       "publisher": "aljazeera.com",
+       "published_at": "2026-04-07T07:52:47",
+       "lede": "a quarter of pakistani households are now using solar panels. this insulates millions of families from the energy supply crunch prompted by the us-israel war on iran. dasht, balochistan, pakistan – karim baksh bends down to a narrow channel of water, guiding it with his hands through shallow mud channels",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa149c37f6c5e66db34c2",
+       "headline": "Alarming discovery after millions of Aussies spends thousands on rooftop change",
+       "url": "https://au.news.yahoo.com/alarming-discovery-after-millions-of-aussies-spends-thousands-on-rooftop-change-042348788.html",
+       "publisher": "au.news.yahoo.com",
+       "published_at": "2026-04-07T04:23:49",
+       "lede": "as energy prices continue to soar, more than 4.3 million aussies have added solar panels to their homes to bring down their power bills. but at $5,000 to $10,000 for a basic system, the investment isn't small, and so households rightfully expect quality solar panels to last at least 20",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 765,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wNyAwNDoyMzo0OSIsImkiOiI2YTJhYTE0OWMzN2Y2YzVlNjZkYjM0YzIiLCJwIjo4fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.866,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.868
+    }
+   }
+  }
+ ]
+}

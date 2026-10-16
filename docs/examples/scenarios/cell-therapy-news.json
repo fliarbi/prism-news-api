@@ -1,0 +1,1004 @@
+{
+ "slug": "cell-therapy-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:47Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "cell therapy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cell therapy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2861,
+     "tone": {
+      "carrying": 2859,
+      "availability_pct": 99.93,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 82,
+        "share_pct": 2.87
+       },
+       {
+        "group": "neutral",
+        "count": 22,
+        "share_pct": 0.77
+       },
+       {
+        "group": "positive",
+        "count": 2755,
+        "share_pct": 96.36
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2860,
+      "count": 2476,
+      "share_pct": 86.57
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.646,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.65
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "cell therapy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cell therapy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 602,
+       "critical": 542,
+       "critical_pct": 90.0,
+       "negative": 22,
+       "positive": 575,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 500,
+       "critical": 433,
+       "critical_pct": 86.6,
+       "negative": 21,
+       "positive": 474,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 452,
+       "critical": 395,
+       "critical_pct": 87.4,
+       "negative": 30,
+       "positive": 417,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 495,
+       "critical": 427,
+       "critical_pct": 86.3,
+       "negative": 18,
+       "positive": 465,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 536,
+       "critical": 451,
+       "critical_pct": 84.1,
+       "negative": 19,
+       "positive": 509,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 688,
+       "critical": 617,
+       "critical_pct": 89.7,
+       "negative": 28,
+       "positive": 657,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 608,
+       "critical": 541,
+       "critical_pct": 89.0,
+       "negative": 15,
+       "positive": 587,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 706,
+       "critical": 642,
+       "critical_pct": 90.9,
+       "negative": 20,
+       "positive": 674,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 809,
+       "critical": 738,
+       "critical_pct": 91.2,
+       "negative": 20,
+       "positive": 785,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 748,
+       "critical": 624,
+       "critical_pct": 83.4,
+       "negative": 18,
+       "positive": 724,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 604,
+       "critical": 532,
+       "critical_pct": 88.1,
+       "negative": 24,
+       "positive": 575,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 700,
+       "critical": 582,
+       "critical_pct": 83.1,
+       "negative": 20,
+       "positive": 671,
+       "partial_period": false
+      }
+     ],
+     "total": 7448,
+     "critical_total": 6524,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.73,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.733
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "cell therapy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cell therapy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2861,
+     "carrying": 920,
+     "availability_pct": 32.16,
+     "items": [
+      {
+       "country": "united states",
+       "count": 488,
+       "share_pct": 17.06
+      },
+      {
+       "country": "central african republic",
+       "count": 149,
+       "share_pct": 5.21
+      },
+      {
+       "country": "china",
+       "count": 62,
+       "share_pct": 2.17
+      },
+      {
+       "country": "united kingdom",
+       "count": 45,
+       "share_pct": 1.57
+      },
+      {
+       "country": "germany",
+       "count": 34,
+       "share_pct": 1.19
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 142
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.411,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.414
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "cell therapy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cell therapy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "gene therapy and crispr technologies",
+       "count": 747,
+       "share": 39.17,
+       "lift": 3197.57,
+       "baseline_count": 1,
+       "previous_period_count": 591,
+       "delta_pct": 26.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "biotechnology innovations in medicine",
+       "count": 501,
+       "share": 26.27,
+       "lift": 2144.55,
+       "baseline_count": 1,
+       "previous_period_count": 368,
+       "delta_pct": 36.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stem cell research and applications",
+       "count": 486,
+       "share": 25.49,
+       "lift": 2080.35,
+       "baseline_count": 1,
+       "previous_period_count": 384,
+       "delta_pct": 26.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oncology and targeted therapy advancements",
+       "count": 292,
+       "share": 15.31,
+       "lift": 1249.92,
+       "baseline_count": 1,
+       "previous_period_count": 270,
+       "delta_pct": 8.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease therapies and orphan drugs",
+       "count": 292,
+       "share": 15.31,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 231,
+       "delta_pct": 26.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2861,
+     "carrying": 1907,
+     "carrier_share_pct": 66.66,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.168,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.171
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "cell therapy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "cell therapy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f88630bbf1d3145599d75c",
+       "headline": "The Evolution of CAR T Cell Therapies: From Killers to Multifunctional Strategists",
+       "url": "https://www.theedadvocate.org/the-evolution-of-car-t-cell-therapies-from-killers-to-multifunctional-strategists/",
+       "publisher": "theedadvocate.org",
+       "published_at": "2026-04-30T13:07:15",
+       "lede": "spread the love the landscape of cancer treatment is undergoing a revolutionary transformation as researchers delve into the next generation of car t (chimeric antigen receptor t-cell) therapies. a recent comprehensive review published in molecular therapy highlights the remarkable evolution of these therapies, revealing a shift from traditional single-target approaches",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.98,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.93
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.46
+        }
+       ],
+       "country": "central african republic",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a7d58937ef12fc0aebeb",
+       "headline": "From killers to strategists: CAR T cells enter their multifunctional era",
+       "url": "https://www.news-medical.net/news/20260430/From-killers-to-strategists-CAR-T-cells-enter-their-multifunctional-era.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-30T05:10:00",
+       "lede": "a sweeping trial landscape review shows how car t therapy is moving beyond one-target designs toward multifunctional “living drugs” designed to improve safety, overcome tumor escape, and tackle harder-to-treat cancers. review: mapping the clinical landscape of multifunctional car t cells: targets, trends, and synergies in a recent comprehensive review published",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.87
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.43
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.43
+        }
+       ],
+       "country": "germany",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a81743843dd771d25570",
+       "headline": "Single-cell sequencing reveals why some CAR-T therapies succeed while others fail",
+       "url": "https://www.news-medical.net/news/20260430/Single-cell-sequencing-reveals-why-some-CAR-T-therapies-succeed-while-others-fail.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-30T04:28:00",
+       "lede": "by mapping car-t cells one by one, researchers are uncovering the cellular traits that may separate durable cancer responses from relapse. review: mapping clinical car-t cells: insights from scrna-seq. image credit: nemes laszlo / shutterstock in a recent review published in the journal trends in molecular medicine , researchers in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.94
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.48
+        },
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.4
+        }
+       ],
+       "country": "central african republic",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5ec5c37f6c5e66afc8fb",
+       "headline": "Lupus Breakthrough: Off-the-Shelf Cell Therapy Shows 'Immune Reset' Hope",
+       "url": "https://briefglance.com/articles/lupus-breakthrough-off-the-shelf-cell-therapy-shows-immune-reset-hope",
+       "publisher": "briefglance.com",
+       "published_at": "2026-04-29T14:01:00",
+       "lede": "experts view this off-the-shelf car-t cell therapy as a promising breakthrough for lupus, offering potential durable remission through immune system reset, though further large-scale studies are needed to confirm long-term efficacy and safety. lupus breakthrough? off-the-shelf cell therapy shows 'immune reset' hope boston, ma – april 29, 2026 – a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.79,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.64
+        },
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.43
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7c225cefb83fe80a136e",
+       "headline": "India Strengthens Position as Global Centre for Affordable CAR-T Cancer Therapy | SportsZ News",
+       "url": "https://sportsz.news/health/india-strengthens-position-as-global-centre-for-affordable-car-t-cancer-therapy/",
+       "publisher": "sportsz.news",
+       "published_at": "2026-04-29T12:05:05",
+       "lede": "apr 29 (bnp): india is rapidly positioning itself as one of the world’s most accessible destinations for car-t cell therapy, driven by advances in biotechnology and more affordable treatment options, according to immunoact. the company highlighted that india’s growing capabilities in cell and gene therapy are helping make advanced cancer",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.85
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22e5327117df83f95451e",
+       "headline": "India Strengthens Position as Global Centre for Affordable CAR-T Cancer Therapy - Online Media Cafe",
+       "url": "https://onlinemediacafe.com/health/india-strengthens-position-as-global-centre-for-affordable-car-t-cancer-therapy/",
+       "publisher": "onlinemediacafe.com",
+       "published_at": "2026-04-29T12:04:44",
+       "lede": "share post share apr 29 (bnp): india is rapidly positioning itself as one of the world’s most accessible destinations for car-t cell therapy, driven by advances in biotechnology and more affordable treatment options, according to immunoact. the company highlighted that india’s growing capabilities in cell and gene therapy are helping",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.86
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.41
+        }
+       ],
+       "country": "central african republic",
+       "organizations": [
+        "cell therapy",
+        "immunoact"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f2304b27117df83f9620d9",
+       "headline": "India Strengthens Position as Global Centre for Affordable CAR-T Cancer Therapy",
+       "url": "https://mediabulletins.com/health/india-strengthens-position-as-global-centre-for-affordable-car-t-cancer-therapy/",
+       "publisher": "mediabulletins.com",
+       "published_at": "2026-04-29T12:04:39",
+       "lede": "apr 29 (bnp): india is rapidly positioning itself as one of the world’s most accessible destinations for car-t cell therapy, driven by advances in biotechnology and more affordable treatment options, according to immunoact. the company highlighted that india’s growing capabilities in cell and gene therapy are helping make advanced cancer",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.85
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.45
+        }
+       ],
+       "country": "central african republic",
+       "organizations": [
+        "cell therapy",
+        "immunoact"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cf1ca5706a322e12e0c6",
+       "headline": "Scientists redesign CAR-T cells to fight more than cancer",
+       "url": "https://www.news-medical.net/news/20260429/Scientists-redesign-CAR-T-cells-to-fight-more-than-cancer.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-29T05:24:00",
+       "lede": "once best known for treating blood cancers, car-t therapy is now being redesigned for solid tumors, autoimmune disease, and chronic viral infections, but the review shows that safety, persistence, and access remain major hurdles before wider clinical use. review: advancements and expanding applications of car-t cell therapy. image credit: nemes",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.91
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.42
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.4
+        }
+       ],
+       "country": "central african republic",
+       "organizations": [
+        "cell therapy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ca0c399b489398e00997",
+       "headline": "Cell-free knee arthritis therapy posts 93% response in pilot study",
+       "url": "https://www.stocktitan.net/news/CELZ/creative-medical-technology-holdings-inc-reports-breakthrough-93-qexiv65bsjte.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-28T13:01:00",
+       "lede": "ultrasome™ demonstrates strong clinical signal while leveraging gmp-produced celz-201 (olastrocel) to target large, underserved osteoarthritis market phoenix, april 28, 2026 (globe newswire) -- creative medical technology holdings, inc. (nasdaq: celz ) , a clinical-stage biotechnology company advancing regenerative medicine solutions, today announced breakthrough positive results from its pilot study of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.89,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.78
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bd1e7bb1410d4cb5cf25",
+       "headline": "After 6 of 6 complete responses, Tempest moves toward pivotal CAR-T study",
+       "url": "https://www.stocktitan.net/news/TPST/tempest-announces-key-manufacturing-milestone-for-tpst-2003-dual-sk1gnhgakk6b.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-22T12:00:00",
+       "lede": "delivery of tpst-2003 lentiviral vector to cincinnati children’s applied gene and cell therapy center enables manufacturing activities required for pivotal development tech transfer on track to support initiation of potentially registrational study in q4 2026 key manufacturing milestone follows tempest’s recent announcement of positive interim data from the ongoing redeem-1",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.79
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.73
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "cell therapy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e882379baafc73569072b7",
+       "headline": "After one dose, 7 myasthenia gravis patients stayed off immunotherapies",
+       "url": "https://www.stocktitan.net/news/KYTX/kyverna-presents-longer-term-phase-2-data-for-miv-cel-in-generalized-ufzyog3gmus9.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-20T12:00:00",
+       "lede": "100% of patients achieved rapid, sustained improvements across mg-adl and qmg at 24 weeks, further increasing confidence in phase 3 trial totality of efficacy and safety data reinforces miv-cel’s differentiated and potential best-in-class profile for delivering durable, drug-free, disease-free remission with a single dose company to host conference call on",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.8
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87ea79baafc73568e2744",
+       "headline": "UCB elevates epilepsy expertise with up to $1.15B Neurona takeover",
+       "url": "https://www.biospace.com/deals/ucb-elevates-epilepsy-expertise-with-up-to-1-15b-neurona-takeover",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-20T11:38:58",
+       "lede": "the acquisition of neurona will put ucb in both the epilepsy and cell therapy space, even as many of its fellow pharmas move away from the latter modality. ucb is fronting $650 million to absorb california-based neurona therapeutics to deepen its epilepsy portfolio and expand into regenerative medicine. as part",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.45
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.44
+        },
+        {
+         "code": 383,
+         "path": "/Science/Biological Sciences/Neuroscience",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "neurona therapeutics",
+        "ucb",
+        "cell therapy"
+       ],
+       "people": []
+      },
+      {
+       "id": "f7fbc5fc4b994c97fa12cd50",
+       "headline": "Intra-Arterial Transplantation of Human Glial Progenitor Cells Promotes Neurogenesis and Functional Recovery After Experimental Traumatic Brain Injury.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42059231/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-20T00:00:00",
+       "lede": "intra-arterial transplantation of human glial progenitor cells promotes neurogenesis and functional recovery after experimental traumatic brain injury.introduction: traumatic brain injury presents a significant challenge, characterized by complex pathologies including neuroinflammation and axonal degeneration with limited treatment options. one of the promising areas of traumatic brain injury treatment is cell therapy.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.6
+        },
+        {
+         "code": 512,
+         "path": "/Health/Health Conditions/Injury",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aaa6c963d76f4afefe7f4",
+       "headline": "CREATE Unveils Non-Viral Tech to Engineer Immune Cells In Vivo",
+       "url": "https://briefglance.com/articles/create-unveils-non-viral-tech-to-engineer-immune-cells-in-vivo",
+       "publisher": "briefglance.com",
+       "published_at": "2026-04-17T11:31:00",
+       "lede": "experts would likely conclude that create's non-viral retrot platform represents a significant advancement in cell therapy, offering a safer and more scalable approach to treating cancer and autoimmune diseases by enabling stable gene integration in vivo without viral vectors or dna breaks. create unveils non-viral tech to engineer immune cells",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.8,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.73
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.6
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e0d37bb1410d4cd300e3",
+       "headline": "The innovators working to make in vivo cell therapy a reality - Pharmaceutical Technology",
+       "url": "https://www.pharmaceutical-technology.com/features/the-innovators-working-to-make-in-vivo-cell-therapy-a-reality/",
+       "publisher": "pharmaceutical-technology.com",
+       "published_at": "2026-04-17T09:44:22",
+       "lede": "first-in-human studies are now trialing in vivo car-t therapies, manufacturing therapeutic cells within the patient. photo by design cells/istock via getty images. as investors signal early interest in in vivo cell therapies and raise the modality’s potential for commercial success, a growing industry of suppliers is innovating to safeguard their",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.8
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "getty images"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8e2f99baafc7356dde7d7",
+       "headline": "Advances in Stem Cell‑Derived Insulin‑Producing Cells for Type 1 Diabetes",
+       "url": "https://www.genengnews.com/topics/translational-medicine/advances-in-stem-cell%e2%80%91derived-insulin%e2%80%91producing-cells-for-type-1-diabetes/",
+       "publisher": "genengnews.com",
+       "published_at": "2026-04-16T18:08:58",
+       "lede": "researchers at karolinska institutet and kth royal institute of technology have developed an improved method for creating insulin-producing cells from human stem cells. in a newly published study, the team demonstrated that these cells effectively regulate blood sugar levels in laboratory tests and can reverse diabetes in mice. “we have",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.84
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.8
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "stem cells",
+        "kth royal institute of technology",
+        "karolinska institute"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 789,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNiAxNTowNjoxMyIsImkiOiI2OWY5ZmI5NjcxMzY4MDYzNmVmNDk1Y2IiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.613,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.621
+    }
+   }
+  }
+ ]
+}

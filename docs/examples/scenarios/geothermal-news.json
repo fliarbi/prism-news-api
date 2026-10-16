@@ -1,0 +1,943 @@
+{
+ "slug": "geothermal-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:18:17Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "geothermal",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "geothermal",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1288,
+     "tone": {
+      "carrying": 1288,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 128,
+        "share_pct": 9.94
+       },
+       {
+        "group": "neutral",
+        "count": 46,
+        "share_pct": 3.57
+       },
+       {
+        "group": "positive",
+        "count": 1114,
+        "share_pct": 86.49
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1287,
+      "count": 732,
+      "share_pct": 56.88
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.049,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 4.055
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "geothermal",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "geothermal",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 161,
+       "critical": 98,
+       "critical_pct": 60.9,
+       "negative": 8,
+       "positive": 150,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 270,
+       "critical": 172,
+       "critical_pct": 63.7,
+       "negative": 25,
+       "positive": 237,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 211,
+       "critical": 115,
+       "critical_pct": 54.5,
+       "negative": 35,
+       "positive": 168,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 206,
+       "critical": 130,
+       "critical_pct": 63.1,
+       "negative": 25,
+       "positive": 178,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 356,
+       "critical": 227,
+       "critical_pct": 63.8,
+       "negative": 32,
+       "positive": 316,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 167,
+       "critical": 115,
+       "critical_pct": 68.9,
+       "negative": 16,
+       "positive": 145,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 193,
+       "critical": 114,
+       "critical_pct": 59.1,
+       "negative": 27,
+       "positive": 159,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 244,
+       "critical": 140,
+       "critical_pct": 57.4,
+       "negative": 19,
+       "positive": 215,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 222,
+       "critical": 115,
+       "critical_pct": 51.8,
+       "negative": 16,
+       "positive": 204,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 305,
+       "critical": 182,
+       "critical_pct": 59.7,
+       "negative": 29,
+       "positive": 267,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 348,
+       "critical": 189,
+       "critical_pct": 54.3,
+       "negative": 39,
+       "positive": 301,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 413,
+       "critical": 246,
+       "critical_pct": 59.6,
+       "negative": 44,
+       "positive": 342,
+       "partial_period": false
+      }
+     ],
+     "total": 3096,
+     "critical_total": 1843,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.488,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.49
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "geothermal",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "geothermal",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1288,
+     "carrying": 763,
+     "availability_pct": 59.24,
+     "items": [
+      {
+       "country": "united states",
+       "count": 373,
+       "share_pct": 28.96
+      },
+      {
+       "country": "philippines",
+       "count": 36,
+       "share_pct": 2.8
+      },
+      {
+       "country": "germany",
+       "count": 31,
+       "share_pct": 2.41
+      },
+      {
+       "country": "kenya",
+       "count": 28,
+       "share_pct": 2.17
+      },
+      {
+       "country": "united kingdom",
+       "count": 27,
+       "share_pct": 2.1
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 268
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.43,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.433
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "geothermal",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "geothermal",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "geothermal energy extraction & utilization",
+       "count": 497,
+       "share": 58.96,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 345,
+       "delta_pct": 44.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "geothermal heat pump applications",
+       "count": 484,
+       "share": 57.41,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 337,
+       "delta_pct": 43.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "offshore drilling operations",
+       "count": 54,
+       "share": 6.41,
+       "lift": 174.3,
+       "baseline_count": 3,
+       "previous_period_count": 16,
+       "delta_pct": 237.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 25,
+       "share": 2.97,
+       "lift": 242.08,
+       "baseline_count": 1,
+       "previous_period_count": 11,
+       "delta_pct": 127.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil field automation systems",
+       "count": 24,
+       "share": 2.85,
+       "lift": 232.4,
+       "baseline_count": 1,
+       "previous_period_count": 7,
+       "delta_pct": 242.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1288,
+     "carrying": 843,
+     "carrier_share_pct": 65.45,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.136,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.138
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "geothermal",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "geothermal",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "698cbd028f4c6833a62c4a03",
+       "headline": "Equinix Commits $7 Million to Advance Singapore’s Low Carbon Energy Options",
+       "url": "https://esgnews.com/equinix-commits-7-million-to-advance-singapores-low-carbon-energy-options/",
+       "publisher": "esgnews.com",
+       "published_at": "2026-01-26T13:31:34",
+       "lede": "funding supports nuclear, hydrogen, geothermal and cross-border renewable research tied to singapore green plan 2030.grants link private sector, academia and regional coalitions to accelerate clean electricity imports and market frameworks.program aligns with singapore’s long-term strategy to diversify energy beyond natural gas toward net-zero by 2050.equinix will allocate more than s$9",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.64
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.5
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "equinix"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a8b4cc37f6c5e66ccba15",
+       "headline": "Constellation Energy Corporation Declares Dividend",
+       "url": "https://www.constellationenergy.com/news/2026/04/constellation-energy-corporation-declares-dividend-q3-2025.html",
+       "publisher": "constellationenergy.com",
+       "published_at": "2026-04-28T05:30:00",
+       "lede": "about constellation constellation energy corporation (nasdaq: ceg), a fortune 200 company headquartered in baltimore, is the largest private-sector power producer in the world and the nation's largest producer of clean and reliable energy. with 55 gigawatts of capacity from nuclear, natural gas, oil, geothermal, hydro, wind and solar facilities, our",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.86,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e42c45272de32e8c0c82",
+       "headline": "Central and eastern europe’s next energy alliance is taking shape, and it runs on geothermal",
+       "url": "https://ceenergynews.com/voices/central-eastern-europe-geothermal/",
+       "publisher": "ceenergynews.com",
+       "published_at": "2026-04-27T07:38:49",
+       "lede": "the three seas region sits at the heart of europe’s geothermal opportunity advances in drilling and reservoir engineering are making large-scale geothermal deployment increasingly viable. the question is no longer whether geothermal resources exist in europe, but whether policy frameworks can keep pace with technological progress and enable deployment at",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.66
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.41
+        }
+       ],
+       "country": "slovakia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a699bdd09a23d0957b86",
+       "headline": "Geothermal the key to Türkiye’s energy independence",
+       "url": "https://www.thinkgeoenergy.com/geothermal-the-key-to-turkiyes-energy-independence/",
+       "publisher": "thinkgeoenergy.com",
+       "published_at": "2026-04-22T14:58:13",
+       "lede": "geothermal the key to türkiye’s energy independence balikesir gönen agriculture based specialized greenhouse organized industrial zone (source: gönen tdiosb) carlo cariaga 22 apr 2026 jed chairman ali kindap emphasized that türkiye's dependence on imported energy must be rapidly reduced, with geothermal presented as a solution. <a href='//ads.thinkgeoenergy.com/delivery/ck.php?n=a886266d&cb=1' target='_blank'><img src='//ads.thinkgeoenergy.com/delivery/avw.php?zoneid=144&cb=1&n=a886266d' border='0'",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.28,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.66
+        }
+       ],
+       "country": "turkey",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2afd515cefb83fe86295d1",
+       "headline": "Geothermal Could Cover 64% of AI Data Center Energy Demand by 2030 - ChinaTechNews.com",
+       "url": "https://www.chinatechnews.com/2026/04/22/120289-geothermal-could-cover-64-of-ai-data-center-energy-demand-by-2030",
+       "publisher": "chinatechnews.com",
+       "published_at": "2026-04-21T20:00:00",
+       "lede": "geothermal could cover 64% of ai data center energy demand by 2030 | oilprice.com haley zaremba haley zaremba is a writer and journalist based in mexico city. she has extensive experience writing and editing environmental features, travel pieces, local news in the… more info premium content by haley zaremba -",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ee6b5cfa3e5ba55853b8",
+       "headline": "Vulcan Energy Aktie: Siemens-Pakt besiegelt!",
+       "url": "https://www.boerse-express.com/news/articles/vulcan-energy-aktie-siemens-pakt-besiegelt-894649",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-04-20T02:48:25",
+       "lede": "vulcan energy has concluded the last major delivery contract for its lionheart project. on sunday, the company announced a framework agreement with siemens ag — some 40 million euros heavy and technically decisive for the construction of german lithium and geothermal plants. siemens takes over automation siemens will be responsible",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e22d5cfa3e5ba54f1261",
+       "headline": "Zanskar lands novel USD-40m development facility to finance geothermal",
+       "url": "https://renewablesnow.com/news/zanskar-lands-novel-usd-40m-development-facility-to-finance-geothermal-1293197/",
+       "publisher": "renewablesnow.com",
+       "published_at": "2026-04-16T13:49:04",
+       "lede": "the facility, co-led by just climate and spring lane capital with additional backing from tierra adentro growth capital, is structured as a revolving, non-recourse credit line designed to fund pre-construction activities across zanskar’s geothermal portfolio. proceeds will be used to cover early-stage development work required to advance projects to a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "zanskar"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e851db7bb1410d4c69c7a0",
+       "headline": "EIG holds initial closing of fund focused on geothermal power projects",
+       "url": "https://www.energyglobal.com/other-renewables/15042026/eig-holds-initial-closing-of-fund-focused-on-geothermal-power-projects/",
+       "publisher": "energyglobal.com",
+       "published_at": "2026-04-15T11:00:00",
+       "lede": "eig, a leading institutional investor in the global energy and infrastructure sectors, has held the initial closing of eig geothermal catalyst partners (the fund), a dedicated investment vehicle focused on making investments to support the development of next-generation geothermal projects in the us. the fund is designed primarily to provide",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8e12963d76f4afdd5a5d",
+       "headline": "Sustainable: Age of geothermal has arrived in Minnesota",
+       "url": "https://finance-commerce.com/2026/04/minnesota-geothermal-aquifer-heating-cooling/",
+       "publisher": "finance-commerce.com",
+       "published_at": "2026-04-06T20:25:55",
+       "lede": "darcy solutions installed a three-well, 100-ton groundwater geothermal system to maintain precise environmental conditions for the university of minnesota’s offsite collections facility in minneapolis at 29th and como avenues. the system provides climate control necessary for preserving academic archives. (submitted photo: darcy solutions) listen to this article listen to this",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.79,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a771c963d76f4afce03f2",
+       "headline": "Enhanced geothermal deployment could be compressed to under 3 years: report",
+       "url": "https://www.utilitydive.com/news/enhanced-geothermal-deployment-could-be-compressed-under-three-years-repor/815227/",
+       "publisher": "utilitydive.com",
+       "published_at": "2026-03-19T12:48:00",
+       "lede": "listen to the article 4 min this audio is auto-generated. please let us know if you have feedback dive brief: an enhanced geothermal project between 100 mw and 500 mw can be brought online within three to six years of project initiation, and with sufficient drill rigs and crews that",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.87
+        },
+        {
+         "code": 254,
+         "path": "/Science/Earth Sciences/Geology",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea34338266d93399964c39",
+       "headline": "Gradient Geothermal signs partnership to power AI factories with geothermal",
+       "url": "https://www.thinkgeoenergy.com/gradient-geothermal-signs-partnership-to-power-ai-factories-with-geothermal/",
+       "publisher": "thinkgeoenergy.com",
+       "published_at": "2026-02-27T18:54:25",
+       "lede": "gradient geothermal signs partnership to power ai factories with geothermal the hxc geothermal system designed by gradient geothermal (source: gradient geothermal) carlo cariaga 27 feb 2026 gradient geothermal and muir global holdings will evaluate the use of geothermal electricity from legacy oil and gas infrastructure to power ai data clusters.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69baef28a2269239ea24ccc7",
+       "headline": "The Architect and the Inheritance: How Dr. James Bose’s Vision Made the Geothermal Boom Possible",
+       "url": "https://www.phcppros.com/articles/22621-the-architect-and-the-inheritance-how-dr-james-boses-vision-made-the-geothermal-boom-possible",
+       "publisher": "phcppros.com",
+       "published_at": "2026-02-09T08:13:45",
+       "lede": "if you were one of more than 1,500 professionals who packed the halls of the peppermill resort in reno, nevada for the 2025 geothermal rising conference (grc), you felt it. the energy was palpable, a kinetic buzz that went beyond the 85-plus exhibits and 250 technical presentations. it was the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "grc"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d1d47687c2546189b02017",
+       "headline": "Le site briochin d’Hutchinson équipé d’une solution de géothermie du bretillien Aquassys Dol Forage",
+       "url": "https://www.lejournaldesentreprises.com/breve/le-site-briochin-dhutchinson-equipe-dune-solution-de-geothermie-du-bretillien-aquassys-dol-forage-2136023",
+       "publisher": "lejournaldesentreprises.com",
+       "published_at": "2026-02-03T09:37:35",
+       "lede": "the hutchin group's briochin site (40,000 employees, €5 billion from ca), which manufactures static sealing solutions for industry, has been equipped with an innovative solution for surface geothermal. the project was led by the brethillian aquassys dol drilling (30 employees, 6 m€ from ca), a player in water drilling and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec830e540a46fb566b4f7",
+       "headline": "Daldrup & SÃ¶hne AG |",
+       "url": "https://www.webdisclosure.com/article/un-nouveau-cadre-dynamise-le-marche-geothermique-allemand-fUw7TZtPHyY",
+       "publisher": "webdisclosure.com",
+       "published_at": "2026-01-20T08:35:03",
+       "lede": "the german geothermal sector has a promising growth outlook in 2026 following recent legislative and financial developments. a decisive turning point took place in december 2025 with the adoption by the bundestag of the law to accelerate geothermal development, which simplified the procedures for approving projects and improved their predictability.",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0361d1c2856acf8e86c623",
+       "headline": "The new energy giant behind America's AI data centers and factories",
+       "url": "https://stocktitan.net/news/CEG/constellation-completes-calpine-transaction-powering-america-s-clean-cz2q2fqe7so4.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-01-07T21:15:00",
+       "lede": "combination brings together premier nuclear, natural gas and geothermal fleets with a leading commercial platform to deliver innovative customer solutions and strengthen u.s. energy leadership, national security and economic prosperity baltimore & houston --(business wire)-- constellation (nasdaq: ceg ) today announced it has completed its acquisition of calpine corporation from",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac96bc37f6c5e66f816a5",
+       "headline": "7 Best Geothermal Stocks to Buy Now",
+       "url": "https://www.insidermonkey.com/blog/7-best-geothermal-stocks-to-buy-now-1747591/",
+       "publisher": "insidermonkey.com",
+       "published_at": "2026-04-28T08:30:51",
+       "lede": "in this article, we will look at the 7 best geothermal stocks to buy now. geothermal stocks are getting a closer look as investors search for cleaner power sources that can do something wind and solar alone cannot always guarantee: provide steadier electricity around the clock. rising electricity needs from",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.91
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e862b19baafc73567c08b9",
+       "headline": "Is supervolcano Yellowstone going to erupt anytime soon? New study analyses what's next - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/etimes/trending/is-supervolcano-yellowstone-going-to-erupt-anytime-soon-new-study-analyses-whats-next/articleshow/130341367.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-17T20:00:00",
+       "lede": "yellowstone has long been a magnet for both surprises and anxiety. it is a geothermal wonderland of geysers and hot springs standing on top of one of the planetâs most powerful volcanic systems.recent headlines, however, have added a new twist. a new scientific paper suggesting that magma feeding the yellowstone",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 254,
+         "path": "/Science/Earth Sciences/Geology",
+         "score": 0.93
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e347e468103817f4893dd2",
+       "headline": "Turkish market authority to consider high capacity factor of geothermal in production figures",
+       "url": "https://www.thinkgeoenergy.com/turkish-market-authority-to-consider-high-capacity-factor-of-geothermal-in-production-figures/",
+       "publisher": "thinkgeoenergy.com",
+       "published_at": "2026-04-10T10:46:17",
+       "lede": "turkish market authority to consider high capacity factor of geothermal in production figures epdk logo (source: epdk) carlo cariaga 10 apr 2026 türkiye's epdk has updated the method for calculating production from renewable energy sources, with the high capacity factor of geothermal given recognition. <a href='//ads.thinkgeoenergy.com/delivery/ck.php?n=a886266d&cb=1' target='_blank'><img src='//ads.thinkgeoenergy.com/delivery/avw.php?zoneid=144&cb=1&n=a886266d' border='0' alt=''",
+       "sentiment": {
+        "label": "none",
+        "score": 0.37,
+        "group": "neutral"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.53
+        }
+       ],
+       "country": "turkey",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 31,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMCAxMDo0NjoxNyIsImkiOiI2OWUzNDdlNDY4MTAzODE3ZjQ4OTNkZDIiLCJwIjo2fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.527,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.531
+    }
+   }
+  }
+ ]
+}

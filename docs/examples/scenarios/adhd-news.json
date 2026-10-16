@@ -1,0 +1,920 @@
+{
+ "slug": "adhd-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:12Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "ADHD",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "adhd",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3254,
+     "tone": {
+      "carrying": 3246,
+      "availability_pct": 99.75,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1007,
+        "share_pct": 31.02
+       },
+       {
+        "group": "neutral",
+        "count": 56,
+        "share_pct": 1.73
+       },
+       {
+        "group": "positive",
+        "count": 2183,
+        "share_pct": 67.25
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3254,
+      "count": 1599,
+      "share_pct": 49.14
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.811,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.816
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "ADHD",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "adhd",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 418,
+       "critical": 210,
+       "critical_pct": 50.2,
+       "negative": 145,
+       "positive": 264,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 397,
+       "critical": 256,
+       "critical_pct": 64.5,
+       "negative": 152,
+       "positive": 232,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 425,
+       "critical": 265,
+       "critical_pct": 62.4,
+       "negative": 166,
+       "positive": 251,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 524,
+       "critical": 328,
+       "critical_pct": 62.6,
+       "negative": 188,
+       "positive": 328,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 547,
+       "critical": 350,
+       "critical_pct": 64.0,
+       "negative": 268,
+       "positive": 270,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 500,
+       "critical": 298,
+       "critical_pct": 59.6,
+       "negative": 196,
+       "positive": 288,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 503,
+       "critical": 308,
+       "critical_pct": 61.2,
+       "negative": 192,
+       "positive": 303,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 577,
+       "critical": 366,
+       "critical_pct": 63.4,
+       "negative": 206,
+       "positive": 353,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 846,
+       "critical": 447,
+       "critical_pct": 52.8,
+       "negative": 257,
+       "positive": 577,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 861,
+       "critical": 350,
+       "critical_pct": 40.7,
+       "negative": 246,
+       "positive": 605,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 675,
+       "critical": 338,
+       "critical_pct": 50.1,
+       "negative": 216,
+       "positive": 445,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 872,
+       "critical": 464,
+       "critical_pct": 53.2,
+       "negative": 288,
+       "positive": 556,
+       "partial_period": false
+      }
+     ],
+     "total": 7145,
+     "critical_total": 3980,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.729,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.732
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "ADHD",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "adhd",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3254,
+     "carrying": 1030,
+     "availability_pct": 31.65,
+     "items": [
+      {
+       "country": "united states",
+       "count": 525,
+       "share_pct": 16.13
+      },
+      {
+       "country": "united kingdom",
+       "count": 194,
+       "share_pct": 5.96
+      },
+      {
+       "country": "australia",
+       "count": 44,
+       "share_pct": 1.35
+      },
+      {
+       "country": "new zealand",
+       "count": 42,
+       "share_pct": 1.29
+      },
+      {
+       "country": "canada",
+       "count": 29,
+       "share_pct": 0.89
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 196
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.473,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.478
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "ADHD",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "adhd",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "neurodevelopmental disorders (e.g., adhd, dyslexia)",
+       "count": 418,
+       "share": 23.52,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 320,
+       "delta_pct": 30.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "autism spectrum disorder behavioral therapies",
+       "count": 138,
+       "share": 7.77,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 101,
+       "delta_pct": 36.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "pediatric dosage calculations",
+       "count": 73,
+       "share": 4.11,
+       "lift": 335.34,
+       "baseline_count": 1,
+       "previous_period_count": 56,
+       "delta_pct": 30.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "family therapy and counseling methods",
+       "count": 64,
+       "share": 3.6,
+       "lift": 294.0,
+       "baseline_count": 1,
+       "previous_period_count": 27,
+       "delta_pct": 137.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mental health drug side effects",
+       "count": 230,
+       "share": 12.94,
+       "lift": 117.39,
+       "baseline_count": 9,
+       "previous_period_count": 108,
+       "delta_pct": 113.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3254,
+     "carrying": 1777,
+     "carrier_share_pct": 54.61,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.025,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.028
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "ADHD",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "adhd",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e1f3f4f7b7ddc2fcdfe160",
+       "headline": "ADHD medication shortage strains patients and families",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/adhd-drug-shortage-1698700721",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-12T00:00:00",
+       "lede": "since the pandemic eased, millions of americans have had to deal with several drug shortages. for those with adhd, it's been an especially difficult year as they and their families have struggled to get through ordinary daily routines. stephanie sy has the story for our ongoing series, early warnings: america’s",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": [
+        "stephanie sy"
+       ]
+      },
+      {
+       "id": "6a03f7eb220687a966a41ea1",
+       "headline": "ADHD Expert Reveals One Sign Commonly Missed With Girls",
+       "url": "https://www.huffingtonpost.co.uk/entry/adhd-signs-girls-adults-mental-health_uk_69f34b2fe4b058c24a534be5",
+       "publisher": "huffingtonpost.co.uk",
+       "published_at": "2026-04-30T12:32:56",
+       "lede": "unsplash adhd (or attention deficit hyperactivity disorder) is thought to impact around 700,000 kids in the uk. adhd (or attention deficit hyperactivity disorder) is thought to impact around 700,000 kids in the uk. while there’s been a “significant rise” in adhd diagnoses over the past two decades, which experts believe",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.94
+        },
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a728bbf1d314559a2e06",
+       "headline": "AI Tool May Help Identify ADHD in Kids Long Before Typical Diagnosis",
+       "url": "https://www.visionmonday.com/eyecare/health-watch/article/ai-tool-may-help-identify-adhd-in-kids-long-before-typical-diagnosis/",
+       "publisher": "visionmonday.com",
+       "published_at": "2026-04-29T08:03:00",
+       "lede": "eyecare: health watch ai tool may help identify adhd in kids long before typical diagnosis staff by attention-deficit/hyperactivity disorder, or adhd, affects millions of children, but many go years without a diagnosis, missing the chance for early support. now, a new study from duke health, published april 27 in the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.92
+        },
+        {
+         "code": 296,
+         "path": "/Health/Pediatrics",
+         "score": 0.47
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "duke health"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ce64a5706a322e127867",
+       "headline": "This Common Mental Disorder Has a Strange Link to Severe Chronic Pain",
+       "url": "https://dnyuz.com/2026/04/29/this-common-mental-disorder-has-a-strange-link-to-severe-chronic-pain/",
+       "publisher": "dnyuz.com",
+       "published_at": "2026-04-29T05:41:26",
+       "lede": "<p>people with severe chronic pain that has proven to be resistant to treatment may have a new bad guy to blame for their worsening condition: <a href=\"https://www.vice.com/en/article/brain-scans-found-3-distinct-types-of-adhd-which-one-do-you-fit/\" target=\"_blank\" rel=\"noreferrer noopener\">undiagnosed adhd</a>.</p> <p>a large study published in <em><a href=\"https://www.nature.com/articles/s41598-026-45300-y\" target=\"_blank\" rel=\"noreferrer noopener\">scientific reports</a></em> looked at 958 patients across 13 specialized pain",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 405,
+         "path": "/Health/Health Conditions/Pain Management",
+         "score": 0.96
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f88a4343843dd771d210a4",
+       "headline": "AI Tool May Help Identify ADHD in Kids Long Before Typical Diagnosis - Drugs.com MedNews",
+       "url": "https://www.drugs.com/news/ai-tool-may-help-identify-adhd-kids-long-before-typical-diagnosis-129838.html",
+       "publisher": "drugs.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "ai tool may help identify adhd in kids long before typical diagnosis by healthday staff healthday reporter medically reviewed by carmen pope, senior medical editor, b. pharm. last updated on april 29, 2026. via healthday key takeaways many children go years without a diagnosis of adhd, missing opportunities for early",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.84
+        },
+        {
+         "code": 296,
+         "path": "/Health/Pediatrics",
+         "score": 0.51
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ea13b285a58da6f25ad49",
+       "headline": "The Truth About ADHD and Dopamine",
+       "url": "http://www.psychologytoday.com/us/blog/changing-minds/202604/the-truth-about-adhd-and-dopamine",
+       "publisher": "psychologytoday.com",
+       "published_at": "2026-04-28T23:02:08",
+       "lede": "if you've spent any time on adhd corners of social media lately, you've likely been barraged by posts about \"low dopamine,\" \"dopamine-seeking,\" and \"dopamine detoxes\" in adhd. while these seem to be everywhere and come across as scientific and helpful, there is one big problem: they simply aren’t based in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.88
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2324ac6105443aa60030c",
+       "headline": "The Truth About ADHD and Dopamine",
+       "url": "https://www.psychologytoday.com/us/blog/changing-minds/202604/the-truth-about-adhd-and-dopamine",
+       "publisher": "psychologytoday.com",
+       "published_at": "2026-04-28T23:02:08",
+       "lede": "if you've spent any time on adhd corners of social media lately, you've likely been barraged by posts about \"low dopamine,\" \"dopamine-seeking,\" and \"dopamine detoxes\" in adhd. while these seem to be everywhere and come across as scientific and helpful, there is one big problem: they simply aren’t based in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.88
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6d205cefb83fe800b5f8",
+       "headline": "AI Tool may Spot ADHD Years Before Children are Diagnosed Attention-deficit/hyperactivity disorder (ADHD) affects millions of children, yet many go years without a diagnosis, missing the chance for early support that can change long-term outcomes even when early signs are present. In a new study, Du",
+       "url": "https://www.ehealthnews.eu/research/7667-ai-tool-may-spot-adhd-years-before-children-are-diagnosed",
+       "publisher": "ehealthnews.eu",
+       "published_at": "2026-04-28T08:00:00",
+       "lede": "ai tool may spot adhd years before children are diagnosed attention-deficit/hyperactivity disorder (adhd) affects millions of children, yet many go years without a diagnosis, missing the chance for early support that can change long-term outcomes even when early signs are present. in a new study, duke health researchers found that",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.75
+        },
+        {
+         "code": 296,
+         "path": "/Health/Pediatrics",
+         "score": 0.53
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c687a5706a322e0e8eb5",
+       "headline": "AI tool could detect ADHD risk in children years before diagnosis, study finds",
+       "url": "https://www.openaccessgovernment.org/ai-tool-could-detect-adhd-risk-in-children-years-before-diagnosis-study-finds/208746/",
+       "publisher": "openaccessgovernment.org",
+       "published_at": "2026-04-28T07:59:53",
+       "lede": "researchers at duke university medical center say an artificial intelligence tool using routine electronic health records can predict adhd risk in children years before diagnosis, helping enable earlier support and intervention according to the study, the ai system identifies children at risk of attention-deficit/hyperactivity disorder by scanning and analysing routine",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.82
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0ea2545272de32e8c6d3b",
+       "headline": "Could AI help spot ADHD in children before symptoms fully emerge?",
+       "url": "http://www.euronews.com/health/2026/04/28/ai-tool-could-help-predict-adhd-in-children-years-before-a-formal-diagnosis",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-28T05:04:38",
+       "lede": "artificial intelligence could help identify children at risk of attention-deficit/hyperactivity disorder (adhd) years before they are formally diagnosed, according to new research.adhd is one of the most common mental disorders, affecting an estimated 8 percent of children and teenagers, with symptoms including trouble focusing, restlessness, and impulsivity. but many go",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.85
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0407f29c4aac09354008c1",
+       "headline": "AI tools can predict ADHD risk years before a formal diagnosis",
+       "url": "https://news-medical.net/news/20260427/AI-tools-can-predict-ADHD-risk-years-before-a-formal-diagnosis.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-27T14:39:00",
+       "lede": "attention-deficit/hyperactivity disorder (adhd) affects millions of children, yet many go years without a diagnosis, missing the chance for early support that can change long-term outcomes even when early signs are present. in a new study, duke health researchers found that artificial intelligence tools can analyze routine electronic health records to",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.75
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a86543843dd771d25a31",
+       "headline": "Shared brain connectivity patterns found across major neurodevelopmental disorders",
+       "url": "https://www.news-medical.net/news/20260425/Shared-brain-connectivity-patterns-found-across-major-neurodevelopmental-disorders.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-25T19:02:00",
+       "lede": "differences in brain connectivity are linked to several neurodevelopmental disorders, yet scientists still struggle to determine what changes are shared or unique to each condition. a new study analyzing brain scans from more than 2,100 individuals reveals a common pattern of disrupted neural connectivity across autism, adhd, and schizophrenia. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.93
+        },
+        {
+         "code": 383,
+         "path": "/Science/Biological Sciences/Neuroscience",
+         "score": 0.67
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.4
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea6b9bf4d3fc85b350aac5",
+       "headline": "Risk of Substance Abuse Not Increased by ADHD Drugs | Psychiatric Times",
+       "url": "http://www.psychiatrictimes.com/view/risk-substance-abuse-not-increased-adhd-drugs",
+       "publisher": "psychiatrictimes.com",
+       "published_at": "2026-04-23T18:57:13",
+       "lede": "two recent studies present clinical evidence that the use of stimulants to treat boys with attention deficit hyperactivity disorder (adhd) does not increase their risk of later substance use disorders. this evidence provides clinicians and families with much needed reassurance. “it is very important for families to know that treatment",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.85
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9c58cbdd09a23d0977e56",
+       "headline": "The Week in Review: March 24-28 | Psychiatric Times",
+       "url": "http://www.psychiatrictimes.com/view/the-week-in-review-march-24-28",
+       "publisher": "psychiatrictimes.com",
+       "published_at": "2026-04-23T07:08:50",
+       "lede": "in case you missed any important updates, here is a recap of this week in psychiatric times, including clinical trial news on solriamfetol for attention-deficit/hyperactivity disorder (adhd), exclusive content on the joint statement for psychiatric organizations defending the safety of psychotropic medications, and more information on acquired brain injury in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 264,
+         "path": "/Health/Health Conditions/Neurological Conditions",
+         "score": 0.77
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 1057,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMyAwNzowODo1MCIsImkiOiI2OWU5YzU4Y2JkZDA5YTIzZDA5NzdlNTYiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.316,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.32
+    }
+   }
+  }
+ ]
+}

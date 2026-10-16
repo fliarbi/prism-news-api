@@ -1,0 +1,871 @@
+{
+ "slug": "nbfc-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:50Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "NBFC",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nbfc",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2724,
+     "tone": {
+      "carrying": 2723,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 354,
+        "share_pct": 13.0
+       },
+       {
+        "group": "neutral",
+        "count": 41,
+        "share_pct": 1.51
+       },
+       {
+        "group": "positive",
+        "count": 2328,
+        "share_pct": 85.49
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2724,
+      "count": 1949,
+      "share_pct": 71.55
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.515,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.517
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "NBFC",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nbfc",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 523,
+       "critical": 400,
+       "critical_pct": 76.5,
+       "negative": 61,
+       "positive": 458,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 800,
+       "critical": 541,
+       "critical_pct": 67.6,
+       "negative": 63,
+       "positive": 728,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 854,
+       "critical": 550,
+       "critical_pct": 64.4,
+       "negative": 118,
+       "positive": 731,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1413,
+       "critical": 841,
+       "critical_pct": 59.5,
+       "negative": 291,
+       "positive": 1111,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 684,
+       "critical": 474,
+       "critical_pct": 69.3,
+       "negative": 75,
+       "positive": 599,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 739,
+       "critical": 513,
+       "critical_pct": 69.4,
+       "negative": 90,
+       "positive": 644,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 558,
+       "critical": 406,
+       "critical_pct": 72.8,
+       "negative": 63,
+       "positive": 494,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 605,
+       "critical": 476,
+       "critical_pct": 78.7,
+       "negative": 58,
+       "positive": 455,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 518,
+       "critical": 399,
+       "critical_pct": 77.0,
+       "negative": 48,
+       "positive": 461,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 770,
+       "critical": 563,
+       "critical_pct": 73.1,
+       "negative": 70,
+       "positive": 692,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 514,
+       "critical": 389,
+       "critical_pct": 75.7,
+       "negative": 71,
+       "positive": 437,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 922,
+       "critical": 598,
+       "critical_pct": 64.9,
+       "negative": 165,
+       "positive": 738,
+       "partial_period": false
+      }
+     ],
+     "total": 8900,
+     "critical_total": 6150,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.892,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.894
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "NBFC",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nbfc",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2724,
+     "carrying": 1150,
+     "availability_pct": 42.22,
+     "items": [
+      {
+       "country": "india",
+       "count": 957,
+       "share_pct": 35.13
+      },
+      {
+       "country": "united states",
+       "count": 81,
+       "share_pct": 2.97
+      },
+      {
+       "country": "iran",
+       "count": 20,
+       "share_pct": 0.73
+      },
+      {
+       "country": "singapore",
+       "count": 20,
+       "share_pct": 0.73
+      },
+      {
+       "country": "japan",
+       "count": 10,
+       "share_pct": 0.37
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 62
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.484,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.486
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "NBFC",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nbfc",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "initial public offerings (ipos)",
+       "count": 149,
+       "share": 8.81,
+       "lift": 239.62,
+       "baseline_count": 3,
+       "previous_period_count": 268,
+       "delta_pct": -44.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 65,
+       "share": 3.84,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 33,
+       "delta_pct": 97.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "microfinance and small-scale lending models",
+       "count": 47,
+       "share": 2.78,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 35,
+       "delta_pct": 34.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "personal loan application process",
+       "count": 68,
+       "share": 4.02,
+       "lift": 164.03,
+       "baseline_count": 2,
+       "previous_period_count": 50,
+       "delta_pct": 36.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "challenges in rural banking access",
+       "count": 41,
+       "share": 2.42,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 28,
+       "delta_pct": 46.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2724,
+     "carrying": 1692,
+     "carrier_share_pct": 62.11,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.799,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.801
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "NBFC",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "nbfc",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2ac760963d76f4af04940c",
+       "headline": "Manappuram Finance Limited Discloses SEBI Warning Against CMD in Personal Capacity",
+       "url": "https://studycafe.in/manappuram-finance-limited-discloses-sebi-warning-against-cmd-in-personal-capacity-418379.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-28T05:07:32",
+       "lede": "manappuram finance limited discloses sebi warning against cmd in personal capacity manappuram finance limited, a leading indian non-banking financial company (nbfc) specialising in gold loans, recently issued a disclosure to bse ltd, nse ltd and ifsc ltd regarding receipt of a warning letter. background the company said that the securities",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.7
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99db9d47fc028321add9b",
+       "headline": "Should You Invest in Indian Programming Tutorial Meme the Next Big Thing?",
+       "url": "https://www.thedetroitbureau.com/www-news/should-you-invest-in-indian-programming-tutorial-meme-the-next-big-thing-dhzh8lcjkta1",
+       "publisher": "thedetroitbureau.com",
+       "published_at": "2026-04-22T06:41:14",
+       "lede": "atlanta (apr 22) — nbfcs play a vital role in india’s financial ecosystem by providing credit to individuals and businesses. the overall health of the nbfc sector is often linked to the performance of the broader economy. factors like interest rates, government regulations, and overall economic growth can all impact",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.74
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a62985cefb83fe8fa9f43",
+       "headline": "Moneyboxx Finance Limited Raises ₹35 Crore from IndusInd Bank and STCI Finance Limited to Boost Rural Lending - Entrepreneur News Network",
+       "url": "https://entrepreneurnewsnetwork.com/2026/04/20/moneyboxx-finance-limited-raises-%e2%82%b935-crore-from-indusind-bank-and-stci-finance-limited-to-boost-rural-lending/",
+       "publisher": "entrepreneurnewsnetwork.com",
+       "published_at": "2026-04-20T17:22:34",
+       "lede": "april 20, 2026 | india fintech & nbfc news – moneyboxx finance limited, a non-banking financial company focused on impact financing for micro and small enterprises, has secured ₹35 crore in term funding from multiple lenders, including indusind bank and stci finance limited. the funding includes: ₹15 crore from stci",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.83,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 315,
+         "path": "/Finance/Other",
+         "score": 0.57
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.56
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8770b5cfa3e5ba5fdd428",
+       "headline": "The Essential Breakdown of Small Business 6 Million Asset Test and Why It Matters Now",
+       "url": "https://www.thedetroitbureau.com/www-news/the-essential-breakdown-of-small-business-6-million-asset-test-and-why-it-matters-now-dhx2hn0j37r4",
+       "publisher": "thedetroitbureau.com",
+       "published_at": "2026-04-19T10:42:26",
+       "lede": "hong kong (apr 19) — let’s zoom out for a moment and consider iifl finance within the broader financial sector. iifl finance is a significant player in the indian non-banking financial company (nbfc) space. the company offers a wide array of financial products, including loans, mortgages, and insurance. the performance",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "iifl finance"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a5f30c37f6c5e66b01631",
+       "headline": "RBI’s revised NBFC-UL norm could narrow valuation discount for these PSU stocks over medium term- Moneycontrol.com",
+       "url": "https://www.moneycontrol.com/news/business/markets/rbi-s-revised-nbfc-ul-norm-could-narrow-valuation-discount-for-these-psu-stocks-over-medium-term-13892108.html",
+       "publisher": "moneycontrol.com",
+       "published_at": "2026-04-17T12:06:51",
+       "lede": "70% of nbfc assets to come under bank-like oversight as four-five psu lenders enter upper layer; analysts see governance upgrade and long-term re-rating potential rbi’s revised nbfc-ul norm could narrow valuation discount for these psu stocks over medium term rbi draft brings psu nbfcs under stricter bank-like norms upper layer",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ebc5bc0b414d24a1bb5ec",
+       "headline": "PFC shares jump 5% to hit fresh 52-week high, surge 29% in April so far. What's heating up the stock?",
+       "url": "https://economictimes.indiatimes.com/markets/stocks/news/pfc-shares-jump-5-to-hit-fresh-52-week-high-surge-29-in-april-so-far-whats-heating-up-the-stock/articleshow/130300662.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-16T07:27:00",
+       "lede": "the shares of power finance corporation (pfc) jumped more than 5% to hit a fresh 52-week high of rs 467 apiece on thursday, as rising temperatures across the country raised expectations of peak power demand in the coming days, boosting investor sentiment for the nbfc focusing on india's power sector.the",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.57
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e842829baafc7356686c75",
+       "headline": "Tata Sons’ CIC deregistration may be its only way out",
+       "url": "https://www.financialexpress.com/business/industry-tata-sons-cic-deregistration-may-be-its-only-way-out-4207141/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-14T14:26:38",
+       "lede": "the reserve bank of india’s latest draft guidelines tightening the regulatory framework for upper-layer nbfcs (nbfc-ul) have left the status of tata sons exactly where it was in september 2025 when the deadline for its listing lapsed. the regulator had subsequently said that tata sons can keep operating until its",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "tata sons"
+       ],
+       "people": []
+      },
+      {
+       "id": "69dbdb7aa9753e1ddc07ba31",
+       "headline": "MUFG Bank Announces ₹39,618 Crore Investment in Shriram Finance | Autocar Professional",
+       "url": "https://www.autocarpro.in/news/mufg-bank-announces-â¹39618-crore-investment-in-shriram-finance-130238",
+       "publisher": "autocarpro.in",
+       "published_at": "2026-04-12T00:00:00",
+       "lede": "japan's premier bank to acquire 20% stake in india's second-largest retail nbfc through preferential equity issuance, marking the largest foreign direct investment in indian financial services. shriram finance limited has entered into definitive agreements with mufg bank ltd. for an investment of inr 39,618 crore (approximately usd 4.4 billion) through",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.62
+        },
+        {
+         "code": 316,
+         "path": "/Business & Industrial/Business Finance/Investment Banking",
+         "score": 0.52
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.46
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "mufg bank",
+        "mufg"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ae1dec37f6c5e66099cff",
+       "headline": "RBI proposals for large NBFCs leaves Tata Sons as only unlisted one | Company Business News",
+       "url": "https://livemint.com/companies/rbi-proposes-changes-to-nbfc-norms-upper-layer-list-not-revealed-yet-11775816636625.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-11T00:15:49",
+       "lede": "a list of all nbfcs for fiscal 2026 released by the reserve bank of india on friday included the name of tata sons among others in the upper layer. yet, it leaves it unclear whether the holding company of the tata group of companies is an nbfc or not. an",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e35904392cc5e9e8fd763c",
+       "headline": "Will Tata Sons get listing waiver? RBI tweak will make it 'upper NBFC' - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/business/india-business/will-tata-sons-get-listing-waiver-rbi-tweak-will-make-it-upper-nbfc/articleshow/130182197.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-10T22:52:00",
+       "lede": "reserve bank of india on friday proposed a simpler way to identify large non-banking financial companies (nbfc) for stricter regulation, pegging it to assets of over rs 1 lakh crore, replacing a complex scoring system. the proposed shift has immediate implications for large financial holding companies. tata sons, with a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "tata sons"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8b5c15cfa3e5ba52b38aa",
+       "headline": "Upper Layer NBFCs to be Defined by Absolute Asset Size of ₹1 Lcr+",
+       "url": "https://economictimes.indiatimes.com/satet-front/upper-layer-nbfcs-to-be-defined-by-absolute-asset-size-of-1-lcr/articleshow/130180235.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-10T21:32:00",
+       "lede": "the central bank on friday proposed to replace its methodology for identifying upper-layer non-banking financial companies (nbfc-ul) with a defined metric. this will eliminate discretionary latitude, potentially end differential treatment for state-owned firms, and leave little room for interpretations.any nbfc with an asset size of ₹1 lakh crore would form",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.58
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8419b7bb1410d4c5fd007",
+       "headline": "Upper Layer NBFCs to be Defined by Absolute Asset Size of ₹1 Lcr+",
+       "url": "https://economictimes.indiatimes.com/epaper/delhicapital/2026/apr/11/satet-front/upper-layer-nbfcs-to-be-defined-by-absolute-asset-size-of-1-lcr/articleshow/130180235.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-10T21:32:00",
+       "lede": "the central bank on friday proposed to replace its methodology for identifying upper-layer non-banking financial companies (nbfc-ul) with a defined metric. this will eliminate discretionary latitude, potentially end differential treatment for state-owned firms, and leave little room for interpretations.any nbfc with an asset size of ₹1 lakh crore would form",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.58
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a21a418470d408559b53931",
+       "headline": "RBI must direct Tata Sons to list; changed regulatory landscape doesn't allow exemption: InGovern",
+       "url": "https://www.newsdrum.in/business/rbi-must-direct-tata-sons-to-list-changed-regulatory-landscape-doesnt-allow-exemption-ingovern-11786957",
+       "publisher": "newsdrum.in",
+       "published_at": "2026-04-10T00:00:00",
+       "lede": "new delhi, may 1 (pti) corporate governance advisory firm ingovern research services has urged the rbi to issue a clear directive to tata sons to initiate the listing process as an upper-layer nbfc by the march 2027 deadline, in accordance with its latest master directions. in a report, ingovern said",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 583,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMCAwMDowMDowMCIsImkiOiI2YTIxYTQxODQ3MGQ0MDg1NTliNTM5MzEiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.909,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.912
+    }
+   }
+  }
+ ]
+}

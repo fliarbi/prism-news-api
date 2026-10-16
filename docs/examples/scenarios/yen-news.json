@@ -1,0 +1,998 @@
+{
+ "slug": "yen-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:28Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "yen",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "yen",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 11249,
+     "tone": {
+      "carrying": 11245,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4340,
+        "share_pct": 38.59
+       },
+       {
+        "group": "neutral",
+        "count": 231,
+        "share_pct": 2.05
+       },
+       {
+        "group": "positive",
+        "count": 6674,
+        "share_pct": 59.35
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 11241,
+      "count": 5607,
+      "share_pct": 49.88
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.305,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.31
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "yen",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "yen",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2482,
+       "critical": 1321,
+       "critical_pct": 53.2,
+       "negative": 1098,
+       "positive": 1307,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1685,
+       "critical": 719,
+       "critical_pct": 42.7,
+       "negative": 622,
+       "positive": 1012,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 3287,
+       "critical": 1814,
+       "critical_pct": 55.2,
+       "negative": 1725,
+       "positive": 1427,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 4545,
+       "critical": 1575,
+       "critical_pct": 34.7,
+       "negative": 1449,
+       "positive": 3010,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2232,
+       "critical": 1363,
+       "critical_pct": 61.1,
+       "negative": 1067,
+       "positive": 1101,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1989,
+       "critical": 1066,
+       "critical_pct": 53.6,
+       "negative": 730,
+       "positive": 1223,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2057,
+       "critical": 971,
+       "critical_pct": 47.2,
+       "negative": 795,
+       "positive": 1247,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2157,
+       "critical": 1133,
+       "critical_pct": 52.5,
+       "negative": 920,
+       "positive": 1177,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2575,
+       "critical": 1403,
+       "critical_pct": 54.5,
+       "negative": 1116,
+       "positive": 1415,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2873,
+       "critical": 1549,
+       "critical_pct": 53.9,
+       "negative": 1101,
+       "positive": 1708,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2646,
+       "critical": 1221,
+       "critical_pct": 46.1,
+       "negative": 977,
+       "positive": 1613,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3155,
+       "critical": 1434,
+       "critical_pct": 45.5,
+       "negative": 1146,
+       "positive": 1938,
+       "partial_period": false
+      }
+     ],
+     "total": 31683,
+     "critical_total": 15569,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.957,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.958
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "yen",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "yen",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 11249,
+     "carrying": 8052,
+     "availability_pct": 71.58,
+     "items": [
+      {
+       "country": "united states",
+       "count": 3165,
+       "share_pct": 28.14
+      },
+      {
+       "country": "japan",
+       "count": 901,
+       "share_pct": 8.01
+      },
+      {
+       "country": "india",
+       "count": 863,
+       "share_pct": 7.67
+      },
+      {
+       "country": "united kingdom",
+       "count": 484,
+       "share_pct": 4.3
+      },
+      {
+       "country": "china",
+       "count": 240,
+       "share_pct": 2.13
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 2399
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.705,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.708
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "yen",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "yen",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "emerging markets economic updates",
+       "count": 545,
+       "share": 7.57,
+       "lift": 617.98,
+       "baseline_count": 1,
+       "previous_period_count": 360,
+       "delta_pct": 51.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 748,
+       "share": 10.39,
+       "lift": 424.08,
+       "baseline_count": 2,
+       "previous_period_count": 546,
+       "delta_pct": 37.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "asian financial market developments",
+       "count": 383,
+       "share": 5.32,
+       "lift": 434.29,
+       "baseline_count": 1,
+       "previous_period_count": 197,
+       "delta_pct": 94.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forex market volatility analysis",
+       "count": 202,
+       "share": 2.81,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 62,
+       "delta_pct": 225.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "forex spot market trading",
+       "count": 189,
+       "share": 2.63,
+       "lift": 214.31,
+       "baseline_count": 1,
+       "previous_period_count": 84,
+       "delta_pct": 125.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 11249,
+     "carrying": 7199,
+     "carrier_share_pct": 64.0,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.314,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.317
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "yen",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "yen",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a69cfc37f6c5e66b774ec",
+       "headline": "USD/JPY Caves in On Aggressive BoJ Posture. But Will It Last?",
+       "url": "https://www.investingcube.com/forex/usd-jpy-caves-in-on-aggressive-boj-posture-but-will-it-last/",
+       "publisher": "investingcube.com",
+       "published_at": "2026-04-30T18:45:00",
+       "lede": "after trading within a rather constrained range for much of april 2026, the usd/jpy pair registered a significant decline on april 30, dropping about 2.5% and slipping below the 158 threshold. this sudden shift has prompted questions about whether the long-dominant uptrend in the dollar-yen pair is beginning to reverse.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d5307b2d589e844b57cb",
+       "headline": "Dollar drops versus yen as Japanese officials signal possible intervention",
+       "url": "https://www.zawya.com/en/economy/global/dollar-drops-versus-yen-as-japanese-officials-signal-possible-intervention-vfyga57j",
+       "publisher": "zawya.com",
+       "published_at": "2026-04-30T11:24:26",
+       "lede": "the dollar ⁠eased against the yen on thursday after japanese officials sent firm signals about possible intervention, with markets still jittery over escalating tensions in the middle east. japanese finance minister satsuki katayama said on thursday that the timing to take \"decisive\" action in the market was nearing. the yen",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.83,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.55
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "satsuki katayama"
+       ]
+      },
+      {
+       "id": "69f9d7fd713680636eee9c45",
+       "headline": "Yen crosses key threshold, but don’t count on intervention just yet | Mint",
+       "url": "https://www.livemint.com/global/yen-crosses-key-threshold-but-don-t-count-on-intervention-just-yet-11777540086587.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T09:23:25",
+       "lede": "tokyo—the yen has breached the psychologically important 160 level against the dollar, but the lack of rapid, one-sided moves makes it difficult to justify government intervention.the japanese currency weakened to as low as 160.45 against the dollar thursday morning, in the wake of the federal reserve’s decision to keep rates",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.74
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8809843843dd771ce9f81",
+       "headline": "Privacy in the AI era is possible, says Proton's CEO, but one thing keeps him up at night",
+       "url": "https://www.zdnet.com/article/proton-ceo-andy-yen-interview-ai-privacy-security-semafor/",
+       "publisher": "zdnet.com",
+       "published_at": "2026-04-30T02:00:00",
+       "lede": "follow zdnet:&nbsp;add us as a preferred source&nbsp;on google.zdnet's key takeawaysai and big tech are eroding personal privacy.proton's encrypted tools are increasingly appealing.proton ceo andy yen worries about a future inundated by rogue agents.&nbsp;as ai's popularity continues to soar, privacy and safety concerns surrounding the technology have kept pace, especially during",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.53
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "zdnet",
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f23214c6105443aa5fd5e6",
+       "headline": "The BoJ will continue raising rates in Japan, but the pace is highly uncertain",
+       "url": "https://www.oxfordeconomics.com/resource/the-boj-will-continue-raising-rates-in-japan-but-the-pace-is-highly-uncertain/",
+       "publisher": "oxfordeconomics.com",
+       "published_at": "2026-04-28T16:49:51",
+       "lede": "the bank of japan (boj) kept its policy rate at 0.75% at tuesday’s meeting amid still-high uncertainty regarding the us/israel war with iran. we continue to project the central bank will resume rate normalization in july, but developments in the middle east and the value of the yen could alter",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.67
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0ea37836d28f995cbd30e",
+       "headline": "USD/JPY: Yen rebound seen short-lived – MUFG",
+       "url": "https://bitcoinethereumnews.com/finance/usd-jpy-yen-rebound-seen-short-lived-mufg/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-28T16:23:24",
+       "lede": "mufg’s lee hardman argues that the recent japanese yen (jpy) rebound against the us dollar (usd) is unlikely to last, as usd/jpy remains in a broader bearish yen trend since the middle east conflict began. persistent strong global risk sentiment, deteriorating japan terms of trade, and rebuilding of leveraged short",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.54
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "mufg"
+       ],
+       "people": [
+        "lee hardman"
+       ]
+      },
+      {
+       "id": "69f0e2fcd32561089420787c",
+       "headline": "Dollar picks up, yen steady as central banks in focus after BOJ holds",
+       "url": "https://www.zawya.com/en/business/currencies/dollar-picks-up-yen-steady-as-central-banks-in-focus-after-boj-holds-fyksfn71",
+       "publisher": "zawya.com",
+       "published_at": "2026-04-28T12:19:49",
+       "lede": "the dollar strengthened slightly while the japanese yen was broadly ⁠steady on tuesday as markets focused on central bank policy decisions and guidance while the iran war loomed large. the yen had initially firmed after the bank of japan held interest rates steady in a split vote, but was last",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e203836d28f995cb4fb2",
+       "headline": "Yen steady, dollar edges higher as central banks in focus after BOJ holds",
+       "url": "https://www.zawya.com/en/economy/global/yen-steady-dollar-edges-higher-as-central-banks-in-focus-after-boj-holds-uknknsl7",
+       "publisher": "zawya.com",
+       "published_at": "2026-04-28T11:36:57",
+       "lede": "london/singapore - the japanese yen steadied on tuesday, having firmed initially after ⁠the bank of japan held interest rates steady in a split vote, while the dollar nudged higher as markets focused on central bank policy decisions and guidance while the iran war loomed large. the yen was last a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a040587220687a966a9f8bd",
+       "headline": "Global Markets | Nikkei closes off record high, JGBs wobble on BOJ's hawkish hold",
+       "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/updated-global-markets-nikkei-closes-off-record-high-jgbs-wobble-on-bojs-hawkish-hold/articleshow/130574835.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-28T09:04:00",
+       "lede": "japan's nikkei share average slipped from a record high, government bonds swung and the yen rallied on tuesday, after the central bank struck a hawkish tone as it kept interest rates unchanged.the benchmark nikkei 225 index fell 1% to close at 59,917.46. declines were concentrated in major companies, as the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e18d836d28f995cb4883",
+       "headline": "BTC remains under pressure after three Bank of Japan (BoJ) members call for a rate hike",
+       "url": "https://www.coindesk.com/markets/2026/04/28/three-bank-of-japan-members-call-for-a-rate-hike-yen-rises-while-bitcoin-falls",
+       "publisher": "coindesk.com",
+       "published_at": "2026-04-28T06:40:07",
+       "lede": "the bank of japan’s (boj) monetary policy decision on tuesday boosted expectations of a hike in borrowing costs by the end of the second quarter. the yen is loving it, while bitcoin remains under pressure. the central bank kept its benchmark interest rate unchanged at 0.75% as widely expected. the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e42945272de32e8c0bd1",
+       "headline": "Yen steady as BOJ kicks off big week for central banks",
+       "url": "https://www.zawya.com/en/business/currencies/yen-steady-as-boj-kicks-off-big-week-for-central-banks-y7t0v8qh",
+       "publisher": "zawya.com",
+       "published_at": "2026-04-28T03:56:59",
+       "lede": "singapore: the japanese yen steadied in the asian ⁠morning on tuesday ahead of the bank of japan's latest policy decision, the first in a busy week for major central banks including the federal reserve as the iran war loomed large over policymakers and markets. the yen was flat against the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.47
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.47
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea38ab8266d9339996c331",
+       "headline": "GBP/JPY Price Forecast: Yen gains on intervention fears, but uptrend remains intact",
+       "url": "https://bitcoinethereumnews.com/finance/gbp-jpy-price-forecast-yen-gains-on-intervention-fears-but-uptrend-remains-intact/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-23T14:49:26",
+       "lede": "the british pound (gbp) weakens against the japanese yen (jpy) on thursday as the yen outperforms most of its major peers amid intervention warnings from japanese authorities, with usd/jpy trading close to the 160.00 level. at the time of writing, gbp/jpy is trading around 215.27, easing from an intraday high",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.5
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e0fb7bb1410d4cd31fd2",
+       "headline": "USD/JPY steadies above 159.00 with the US-Iran ceasefire into pressure",
+       "url": "https://bitcoinethereumnews.com/finance/usd-jpy-steadies-above-159-00-with-the-us-iran-ceasefire-into-pressure/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-22T13:59:22",
+       "lede": "the us dollar (usd) is trading practically flat, right above 159.00 against the japanese yen (jpy) on wednesday, consolidating tuesday’s gains amid cautious markets. most us dollar crosses remain moving within previous ranges as the situation in the middle east deteriorates. us president donald trump announced on tuesday an unilateral",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a0ea237c0b414d24a08972e",
+       "headline": "Dollar subdued as markets eye ceasefire talks; yen pressured by BOJ delay",
+       "url": "https://www.thehindubusinessline.com/markets/forex/dollar-subdued-as-markets-eye-ceasefire-talks-yen-pressured-by-boj-delay/article70887068.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-21T04:29:20",
+       "lede": "the dollar and yen were under pressure on tuesday, with ‌investors poised to buy riskier currencies and hoping for a ​u.s.-iran deal to reopen gulf shipping, while a sticky inflation ⁠reading lifted the new zealand dollar. with the ceasefire set to expire this week, the fate of iran peace talks",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.75
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a036a187b84f58d6f73d4e0",
+       "headline": "Dollar subdued as markets eye ceasefire talks; yen pressured by BOJ delay",
+       "url": "https://economictimes.indiatimes.com/markets/forex/dollar-subdued-as-markets-eye-ceasefire-talks-yen-pressured-by-boj-delay/articleshow/130405369.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-21T01:49:00",
+       "lede": "the dollar and yen were under pressure on tuesday, with investors poised to buy riskier currencies and hoping for a u.s.-iran deal to reopen gulf shipping, while a sticky inflation reading lifted the new zealand dollar. with the ceasefire set to expire this week, the fate of iran peace talks",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.68
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2adf325cefb83fe84dded9",
+       "headline": "The dollar and yen were under pressure on Tuesday, with investors poised to buy riskier currencies and hoping for a U.S.-Iran deal to reopen Gulf shipping, while a sticky inflation reading lifted the New Zealand dollar. With the ceasefire set to expire this week, the fate of Iran peace talks remaine",
+       "url": "https://investmentguruindia.com/newsdetail/dollar-subdued-as-markets-eye-ceasefire-talks-yen-pressured-by-boj-delay927509",
+       "publisher": "investmentguruindia.com",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "the dollar and yen were under pressure on tuesday, with investors poised to buy riskier currencies and hoping for a u.s.-iran deal to reopen gulf shipping, while a sticky inflation reading lifted the new zealand dollar. with the ceasefire set to expire this week, the fate of iran peace talks",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.75
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5f8c5cefb83fe8f8657b",
+       "headline": "Yen Intervention and What It Means for Currency Investors in 2026",
+       "url": "https://financeandmarkets.com/yen-intervention-and-what-it-means-for-currency-investors-in-2026",
+       "publisher": "financeandmarkets.com",
+       "published_at": "2026-04-19T19:05:17",
+       "lede": "currency markets usually move quietly in the background. stocks get the headlines. crypto gets the excitement. but currencies often shape the foundation underneath everything else. when exchange rates shift, they affect trade, capital flows, investment returns, and global confidence. that is why yen intervention has become one of the most",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.95
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0eb00dc0b414d24a12c82e",
+       "headline": "USD/JPY Forecast: Japanese Yen Consolidation Masks Rising Intervention Risks",
+       "url": "https://www.investing.com/analysis/usdjpy-forecast-japanese-yen-consolidation-masks-rising-intervention-risks-200678647",
+       "publisher": "investing.com",
+       "published_at": "2026-04-17T06:35:07",
+       "lede": "ongoing yen weakness has prompted aggressive verbal intervention from japan’s finance ministry. back in january, coordinated “price checks” between the us and japan led to a 2100-pip drop in over 10 trading days. japanese yen, usd/jpy key points ongoing yen weakness has prompted aggressive verbal intervention from japan’s finance ministry.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 589,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNSAxOTowNzo0MSIsImkiOiI2OWU4NTA4YzliYWFmYzczNTY3MTJjYWEiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.517,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.519
+    }
+   }
+  }
+ ]
+}

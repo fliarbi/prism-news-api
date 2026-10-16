@@ -1,0 +1,857 @@
+{
+ "slug": "asthma-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:56Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "asthma",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "asthma",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3691,
+     "tone": {
+      "carrying": 3683,
+      "availability_pct": 99.78,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1190,
+        "share_pct": 32.31
+       },
+       {
+        "group": "neutral",
+        "count": 243,
+        "share_pct": 6.6
+       },
+       {
+        "group": "positive",
+        "count": 2250,
+        "share_pct": 61.09
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3689,
+      "count": 2668,
+      "share_pct": 72.32
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.669,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.673
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "asthma",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "asthma",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1075,
+       "critical": 618,
+       "critical_pct": 57.5,
+       "negative": 464,
+       "positive": 552,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 604,
+       "critical": 434,
+       "critical_pct": 71.9,
+       "negative": 217,
+       "positive": 346,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 754,
+       "critical": 519,
+       "critical_pct": 68.8,
+       "negative": 282,
+       "positive": 428,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 962,
+       "critical": 664,
+       "critical_pct": 69.0,
+       "negative": 425,
+       "positive": 494,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 794,
+       "critical": 570,
+       "critical_pct": 71.8,
+       "negative": 234,
+       "positive": 515,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 697,
+       "critical": 515,
+       "critical_pct": 73.9,
+       "negative": 218,
+       "positive": 438,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 880,
+       "critical": 679,
+       "critical_pct": 77.2,
+       "negative": 285,
+       "positive": 542,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 857,
+       "critical": 651,
+       "critical_pct": 76.0,
+       "negative": 293,
+       "positive": 504,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1047,
+       "critical": 863,
+       "critical_pct": 82.4,
+       "negative": 251,
+       "positive": 704,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 749,
+       "critical": 571,
+       "critical_pct": 76.2,
+       "negative": 227,
+       "positive": 474,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 903,
+       "critical": 584,
+       "critical_pct": 64.7,
+       "negative": 297,
+       "positive": 553,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 992,
+       "critical": 650,
+       "critical_pct": 65.5,
+       "negative": 415,
+       "positive": 519,
+       "partial_period": false
+      }
+     ],
+     "total": 10314,
+     "critical_total": 7318,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.186,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.19
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "asthma",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "asthma",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3691,
+     "carrying": 1249,
+     "availability_pct": 33.84,
+     "items": [
+      {
+       "country": "united states",
+       "count": 701,
+       "share_pct": 18.99
+      },
+      {
+       "country": "india",
+       "count": 182,
+       "share_pct": 4.93
+      },
+      {
+       "country": "united kingdom",
+       "count": 76,
+       "share_pct": 2.06
+      },
+      {
+       "country": "australia",
+       "count": 29,
+       "share_pct": 0.79
+      },
+      {
+       "country": "china",
+       "count": 21,
+       "share_pct": 0.57
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 240
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.946,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.952
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "asthma",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "asthma",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "clinical trial phases for new drugs",
+       "count": 116,
+       "share": 6.61,
+       "lift": 539.55,
+       "baseline_count": 1,
+       "previous_period_count": 93,
+       "delta_pct": 24.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "asthma symptoms and management",
+       "count": 71,
+       "share": 4.05,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 158,
+       "delta_pct": -55.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "clinical trials and regulatory approvals",
+       "count": 62,
+       "share": 3.53,
+       "lift": 288.38,
+       "baseline_count": 1,
+       "previous_period_count": 43,
+       "delta_pct": 44.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "air quality and pollution levels",
+       "count": 52,
+       "share": 2.96,
+       "lift": 241.87,
+       "baseline_count": 1,
+       "previous_period_count": 37,
+       "delta_pct": 40.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "public health initiatives and programs",
+       "count": 45,
+       "share": 2.56,
+       "lift": 209.31,
+       "baseline_count": 1,
+       "previous_period_count": 36,
+       "delta_pct": 25.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3691,
+     "carrying": 1755,
+     "carrier_share_pct": 47.55,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.032,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.035
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "asthma",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "asthma",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9d4c5a088760d34bf33ff",
+       "headline": "Mississippi Middle School Students Stop Bus From Crashing After Driver Blacks Out",
+       "url": "https://www.insurancejournal.com/news/southeast/2026/04/30/867860.htm",
+       "publisher": "insurancejournal.com",
+       "published_at": "2026-04-30T13:53:33",
+       "lede": "quick-thinking middle school students in mississippi kept their school bus from crashing after their driver passed out while on a four-lane highway. the bus had just left hancock middle school in hancock county last week with about 40 children on board when leah taylor, 46, had an asthma attack. she",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.68
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0408179c4aac0935401a55",
+       "headline": "Montelukast use during first trimester not linked to congenital malformation odds",
+       "url": "https://www.healio.com/news/allergy-asthma/20260429/montelukast-use-during-first-trimester-not-linked-to-congenital-malformation-odds",
+       "publisher": "healio.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "montelukast use during first trimester not linked to congenital malformation odds key takeaways: asthma controller medication regimens with montelukast alone and in combination with ics and/or laba were assessed. no link was found between the montelukast groups and the odds for congenital malformations. offspring of women with asthma who filled",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.9
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9dab7a088760d34c36b32",
+       "headline": "Montelukast use during first trimester not linked to congenital malformation odds",
+       "url": "https://healio.com/news/allergy-asthma/20260429/montelukast-use-during-first-trimester-not-linked-to-congenital-malformation-odds",
+       "publisher": "healio.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "montelukast use during first trimester not linked to congenital malformation odds key takeaways: asthma controller medication regimens with montelukast alone and in combination with ics and/or laba were assessed. no link was found between the montelukast groups and the odds for congenital malformations. offspring of women with asthma who filled",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.9
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.49
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f883d443843dd771d05704",
+       "headline": "Mississippi Students Stop Runaway School Bus After Driver Passes Out",
+       "url": "https://www.wideopencountry.com/mississippi-students-stop-runaway-school-bus-after-driver-passes-out/",
+       "publisher": "wideopencountry.com",
+       "published_at": "2026-04-29T20:39:46",
+       "lede": "a group of mississippi middle schoolers banded together to stop a runaway school bus and prevent a disastrous crash. videos by wide open country during the after-school route, leah thomas, 46, suffered an asthma attack and lost control of the bus while driving down a four-lane highway. thomas attempted to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.61
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0368167b84f58d6f732acc",
+       "headline": "Watch: Mississippi middle schoolers heroically stop school bus after driver passes out",
+       "url": "https://fox2detroit.com/news/mississippi-school-bus-driver-passes-out",
+       "publisher": "fox2detroit.com",
+       "published_at": "2026-04-29T15:59:47",
+       "lede": "quick-thinking mississippi middle schoolers prevented a school bus crash after their driver lost consciousness on a four-lane highway.the bus had just left hancock middle school in hancock county on wednesday with about 40 children on board when leah taylor, 46, had an asthma attack. she reached for her medication but",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.25,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.68
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f215b37d251ccff640f03d",
+       "headline": "Dramatic moment schoolkids stop bus from crashing after driver passed out",
+       "url": "https://www.the-sun.com/news/16288671/kids-stop-bus-crashing-driver-passes-out-mississippi/",
+       "publisher": "the-sun.com",
+       "published_at": "2026-04-29T09:45:41",
+       "lede": "this is the dramatic moment five heroic students stopped a bus from crashing after the driver suffered a medical episode while behind the wheel. the brave mississippi middle schoolers jumped into action on the school bus carrying 40 students when driver leah taylor, 46, had an asthma attack. sign up",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.52
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c663a5706a322e0e75bf",
+       "headline": "Watch: US school kids stop bus from crashing after driver blacks out",
+       "url": "https://www.1news.co.nz/2026/04/29/watch-us-school-kids-stop-bus-from-crashing-after-driver-blacks-out/",
+       "publisher": "1news.co.nz",
+       "published_at": "2026-04-28T21:05:01",
+       "lede": "<p>quick-thinking middle school students in mississippi kept their school bus from crashing after their driver passed out while on a four-lane highway.</p> <p>the bus had just left hancock middle school in hancock county with about 40 children on board when leah taylor, 46, had an asthma attack. she reached for",
+       "sentiment": null,
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.65
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03f59e9c4aac093538c4bd",
+       "headline": "Mississippi middle school students stop bus from crashing after driver blacks out",
+       "url": "https://www.latimes.com/world-nation/story/2026-04-25/mississippi-students-stop-bus-from-crashing-after-driver-blacks-out",
+       "publisher": "latimes.com",
+       "published_at": "2026-04-25T17:28:33",
+       "lede": "quick-thinking middle school students in mississippi kept their school bus from crashing after their driver passed out while on a four-lane highway. the bus had just left hancock middle school in hancock county on wednesday with about 40 children on board when leah taylor, 46, had an asthma attack. she",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.69
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99eb6bdd09a23d0940611",
+       "headline": "A 32-year-old newlywed had a persistent cough. It was stage 4 cancer.",
+       "url": "https://www.aol.com/articles/she-never-smoked-cigarette-stage-100325576.html",
+       "publisher": "aol.com",
+       "published_at": "2026-04-21T10:03:25",
+       "lede": "it started as a bedtime cough. but, as time went on, jaymie knox's pesky cough just wouldn't go away. she thought, perhaps she had bronchitis. one doctor told her it was probably asthma. or maybe allergies. he gave her an inhaler, but it didn't help much. that's because knox didn't",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.78
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99b19d47fc0283218e0c2",
+       "headline": "Very high prenatal PFAS exposure linked to elevated childhood asthma incidence",
+       "url": "https://www.healio.com/news/allergy-asthma/20260421/very-high-prenatal-pfas-exposure-linked-to-elevated-childhood-asthma-incidence",
+       "publisher": "healio.com",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "very high prenatal pfas exposure linked to elevated childhood asthma incidence key takeaways: prenatal pfas exposure was classified as very high, high, intermediate or background. a link between very high prenatal pfas exposure and elevated asthma incidence emerged vs. background exposure. children of mothers exposed to very high vs. background",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.88
+        }
+       ],
+       "country": "sweden",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e868847bb1410d4c778d34",
+       "headline": "Subterranean salvation under siege",
+       "url": "https://www.thestar.com.my/news/focus/2026/04/18/subterranean-salvation-under-siege",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-18T00:00:00",
+       "lede": "a mining cage drops deep beneath the armenian capital, carrying asthma patients in helmets down into a salt cave clinic – an alternative treatment centre whose future is now at risk. state funding for the speleotherapy centre in the avan salt mine was recently cut as the small caucasus nation",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "russia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9da907b2d589e844f2823",
+       "headline": "Lung function improvement greater with albuterol-budesonide regardless of asthma control",
+       "url": "https://healio.com/news/pulmonology/20260417/lung-function-improvement-greater-with-albuterolbudesonide-regardless-of-asthma-control",
+       "publisher": "healio.com",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "lung function improvement greater with albuterol-budesonide regardless of asthma control key takeaways: patients received either albuterol plus budesonide or albuterol alone four times after mannitol-induced acute airway obstruction. the change in fev 1 was significantly larger in the albuterol-budesonide group. philadelphia — regardless of disease control, patients with mild asthma",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.91
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.67
+        }
+       ],
+       "country": "sweden",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8860e43843dd771d1d1f4",
+       "headline": "Lung function improvement greater with albuterol-budesonide regardless of asthma control",
+       "url": "http://healio.com/news/pulmonology/20260417/lung-function-improvement-greater-with-albuterolbudesonide-regardless-of-asthma-control",
+       "publisher": "healio.com",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "lung function improvement greater with albuterol-budesonide regardless of asthma control key takeaways: patients received either albuterol plus budesonide or albuterol alone four times after mannitol-induced acute airway obstruction. the change in fev 1 was significantly larger in the albuterol-budesonide group. philadelphia — regardless of disease control, patients with mild asthma",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.91
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.67
+        }
+       ],
+       "country": "sweden",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 812,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOSAxODo1Njo0MSIsImkiOiI2OWU4NmQzMTVjZmEzZTViYTVmN2ExZmUiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.523,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.528
+    }
+   }
+  }
+ ]
+}

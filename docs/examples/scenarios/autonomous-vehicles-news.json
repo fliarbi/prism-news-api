@@ -1,0 +1,882 @@
+{
+ "slug": "autonomous-vehicles-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:12:18Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "autonomous vehicles",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "autonomous vehicles",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4719,
+     "tone": {
+      "carrying": 4718,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 741,
+        "share_pct": 15.71
+       },
+       {
+        "group": "neutral",
+        "count": 37,
+        "share_pct": 0.78
+       },
+       {
+        "group": "positive",
+        "count": 3940,
+        "share_pct": 83.51
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4719,
+      "count": 3198,
+      "share_pct": 67.77
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.757,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.76
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "autonomous vehicles",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "autonomous vehicles",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 945,
+       "critical": 575,
+       "critical_pct": 60.8,
+       "negative": 155,
+       "positive": 779,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1027,
+       "critical": 574,
+       "critical_pct": 55.9,
+       "negative": 204,
+       "positive": 818,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1038,
+       "critical": 613,
+       "critical_pct": 59.1,
+       "negative": 206,
+       "positive": 829,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1008,
+       "critical": 635,
+       "critical_pct": 63.0,
+       "negative": 163,
+       "positive": 839,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 940,
+       "critical": 568,
+       "critical_pct": 60.4,
+       "negative": 95,
+       "positive": 838,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 923,
+       "critical": 645,
+       "critical_pct": 69.9,
+       "negative": 146,
+       "positive": 773,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 929,
+       "critical": 582,
+       "critical_pct": 62.6,
+       "negative": 90,
+       "positive": 822,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 997,
+       "critical": 670,
+       "critical_pct": 67.2,
+       "negative": 257,
+       "positive": 735,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1227,
+       "critical": 860,
+       "critical_pct": 70.1,
+       "negative": 227,
+       "positive": 994,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1200,
+       "critical": 784,
+       "critical_pct": 65.3,
+       "negative": 193,
+       "positive": 996,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1119,
+       "critical": 792,
+       "critical_pct": 70.8,
+       "negative": 158,
+       "positive": 946,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1173,
+       "critical": 762,
+       "critical_pct": 65.0,
+       "negative": 163,
+       "positive": 1004,
+       "partial_period": false
+      }
+     ],
+     "total": 12526,
+     "critical_total": 8060,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.505,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.508
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "autonomous vehicles",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "autonomous vehicles",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4719,
+     "carrying": 2452,
+     "availability_pct": 51.96,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1550,
+       "share_pct": 32.85
+      },
+      {
+       "country": "china",
+       "count": 192,
+       "share_pct": 4.07
+      },
+      {
+       "country": "united kingdom",
+       "count": 130,
+       "share_pct": 2.75
+      },
+      {
+       "country": "india",
+       "count": 77,
+       "share_pct": 1.63
+      },
+      {
+       "country": "japan",
+       "count": 72,
+       "share_pct": 1.53
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 431
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.502,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.517
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "autonomous vehicles",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "autonomous vehicles",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "tesla motors autopilot & full self-driving technology",
+       "count": 254,
+       "share": 8.79,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 242,
+       "delta_pct": 5.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "tesla motors autonomous driving data & regulatory compliance",
+       "count": 248,
+       "share": 8.58,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 237,
+       "delta_pct": 4.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "connected car technologies",
+       "count": 217,
+       "share": 7.51,
+       "lift": 612.93,
+       "baseline_count": 1,
+       "previous_period_count": 141,
+       "delta_pct": 53.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vehicle telematics and iot integration",
+       "count": 152,
+       "share": 5.26,
+       "lift": 429.33,
+       "baseline_count": 1,
+       "previous_period_count": 92,
+       "delta_pct": 65.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "autonomous ride-sharing fleets",
+       "count": 145,
+       "share": 5.02,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 218,
+       "delta_pct": -33.5,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4719,
+     "carrying": 2890,
+     "carrier_share_pct": 61.24,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.857,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.862
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "autonomous vehicles",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "autonomous vehicles",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69bcec6559b1861412d951e9",
+       "headline": "Driverless taxi keeps emergency responders from Austin shooting",
+       "url": "https://landline.media/driverless-taxi-keeps-emergency-responders-from-austin-shooting/",
+       "publisher": "landline.media",
+       "published_at": "2026-03-04T19:22:37",
+       "lede": "proponents of autonomous vehicles contend that the driverless technology is safer when it travels down the road.even if that is true, what about when that driverless vehicle isn’t traveling?multiple media outlets, including axios and fox news, reported that a waymo robotaxi blocked emergency personnel who were responding to a mass",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "fox news",
+        "waymo",
+        "axios"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b198d963d76f4af3e22e3",
+       "headline": "Waymo car blocked ambulance trying to get to scene of Austin mass shooting",
+       "url": "https://www.inkl.com/news/waymo-car-blocked-ambulance-trying-to-get-to-scene-of-austin-mass-shooting",
+       "publisher": "inkl.com",
+       "published_at": "2026-03-03T12:53:15",
+       "lede": "a driverless waymo car temporarily blocked an ambulance trying to get to the scene of a mass shooting in austin, bystander video shows. the incident was confirmed by the company and local officials, raising questions about how autonomous vehicles operate around fast-moving emergency scenes. three people were killed during the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.76
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4c78bf10c43d296d719d",
+       "headline": "Waymo declines to attend public meeting on self-driving cars, Austin city leaders say",
+       "url": "https://www.yahoo.com/news/articles/waymo-declines-attend-public-meeting-210839798.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-27T21:08:39",
+       "lede": "austin city leaders are taking a closer look at how autonomous vehicles operate during emergencies after a recent incident involving a driverless car and first responders downtown. the issue will be the focus of a special joint meeting on wednesday between the city council’s public safety committee and mobility committee.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 129,
+         "path": "/Law & Government/Public Safety/Emergency Services",
+         "score": 0.88
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99fcfd47fc028321c703b",
+       "headline": "Tesla Stock Sinks On CapEx — Intel Pops On Elon Musk's Mention - Tesla (NASDAQ:TSLA)",
+       "url": "https://benzinga.com/markets/earnings/26/04/51988221/tesla-capex-spike-hits-stock-as-intel-pops-on-elon-musk-comments",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-22T23:19:51",
+       "lede": "tesla inc. (nasdaq:tsla) is sharply ramping up capital expenditures in 2026 as the company deepens its push into ai, autonomous vehicles and robotics. tsla stock is moving after earnings. see the price action here. $25 billion capex on the company's earnings call with analysts, cfo vaibhav taneja said tesla now",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a02575f157062cb32c49",
+       "headline": "Unleash AI Innovation: The Power of NVIDIA RTX PRO 6000Blackwell Workstation Edition Fueled by PNY-Supplied GPUs",
+       "url": "https://www.videomaker.com/sponsored/unleash-ai-innovation-the-power-of-nvidia-rtx-pro-6000blackwell-workstation-edition-fueled-by-pny-supplied-gpus/",
+       "publisher": "videomaker.com",
+       "published_at": "2026-04-22T21:01:36",
+       "lede": "experiment, prototype, and innovate with ai artificial intelligence is transforming industries at an unprecedented pace. from agentic ai that autonomously solves complex, multi-step problems to physical ai that brings intelligence into robotics and autonomous vehicles, the future is here. but harnessing these advanced technologies requires serious computing power, something legacy",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.65
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.6
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8abd963d76f4afdb455d",
+       "headline": "Unleash AI Innovation: The Power of NVIDIA RTX PRO 6000 Blackwell Workstation Edition Fueled by PNY-Supplied GPUs - Digital Engineering 24/7",
+       "url": "https://www.digitalengineering247.com/article/unleash-ai-innovation-the-power-of-nvidia-rtx-pro-6000-blackwell-workstation-edition-fueled-by-pny-supplied-gpus/pny-technologies",
+       "publisher": "digitalengineering247.com",
+       "published_at": "2026-04-17T10:00:00",
+       "lede": "artificial intelligence is transforming industries at an unprecedented pace. from agentic ai that autonomously solves complex, multi-step problems to physical ai that brings intelligence into robotics and autonomous vehicles, the future is here. but harnessing these advanced technologies requires serious computing power, something legacy systems can&amp;rsquo;t deliver. as a leading",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.62
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e864059baafc73567cdca9",
+       "headline": "Unleash AI Innovation: The Power of NVIDIA RTX PRO 6000 Blackwell Workstation Edition Fueled by PNY-Supplied GPUs - Digital Engineering 24/7",
+       "url": "https://www.digitalengineering247.com/article/unleash-ai-innovation-the-power-of-nvidia-rtx-pro-6000-blackwell-workstation-edition-fueled-by-pny-supplied-gpus",
+       "publisher": "digitalengineering247.com",
+       "published_at": "2026-04-17T10:00:00",
+       "lede": "artificial intelligence is transforming industries at an unprecedented pace. from agentic ai that autonomously solves complex, multi-step problems to physical ai that brings intelligence into robotics and autonomous vehicles, the future is here. but harnessing these advanced technologies requires serious computing power, something legacy systems can&amp;rsquo;t deliver. as a leading",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.62
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e84e5a5cfa3e5ba5e53705",
+       "headline": "Uber’s $10 Bn Robotaxi Push Takes on Tesla, Waymo – Outlook Business",
+       "url": "https://www.outlookbusiness.com/corporate/ubers-10-bn-robotaxi-push-takes-on-tesla-waymo",
+       "publisher": "outlookbusiness.com",
+       "published_at": "2026-04-15T10:13:10",
+       "lede": "uber committed over $10 billion to acquire autonomous vehicles and developer equitythe investment includes $7.5 billion for robotaxi fleets and $2.5 billion in tech stakeslucid motors will supply 35,000 evs after uber increased its stake to $500 millionuber plans to launch robotaxi services in 28 cities by 2028 via nvidia",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 319,
+         "path": "/Travel & Transportation/Transportation/Taxi & Ride Hail Services",
+         "score": 0.83
+        },
+        {
+         "code": 269,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Autonomous Vehicles",
+         "score": 0.77
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "uber",
+        "lucid motors",
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "69dfb914f2a6294de7f79211",
+       "headline": "Baidu autonomous car to use NVIDIA’s artificial intelligence computer | Autocar Professional",
+       "url": "http://www.autocarpro.in/news-international/baidu-autonomous-car-nvidia-artificial-intelligence-21725",
+       "publisher": "autocarpro.in",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "automakers can use nvidia's palm-sized, energy-efficient artificial intelligence computer to power automated and autonomous vehicles for driving and mapping. the new single-processor configuration of the nvidia drive px 2 ai computing platform for autocruise functions — which include highway automated driving and hd mapping — consumes just 10 watts of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 1.0,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 269,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Autonomous Vehicles",
+         "score": 0.84
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e9939875f157062ca96dfe",
+       "headline": "Elon Musk e Intel planean una megafábrica de chips - Roastbrief",
+       "url": "https://roastbrief.com.mx/2026/04/elon-musk-e-intel-planean-una-megafabrica-de-chips/",
+       "publisher": "roastbrief.com.mx",
+       "published_at": "2026-04-13T19:39:43",
+       "lede": "<!-- wp:paragraph --> <p>april, 2026.- <strong>spacex and tesla, under the leadership of elon musk, have designed a massive chip manufacturing operation in alliance with intel.</strongnbsp;the project, called terafab, aims to produce 1 annual computer power teravatium</strongnbsp;to boost artificial intelligence, robotics and autonomous vehicles. the magnitude of the operation could redefine",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad84ec37f6c5e6602cbcf",
+       "headline": "Elon Musk Announces Massive 'Terafab' Chip Factory in Austin to Power Tesla AI, SpaceX Satellites and Robotics",
+       "url": "http://ibtimes.com/elon-musk-announces-massive-terafab-chip-factory-austin-power-tesla-ai-spacex-satellites-3799892",
+       "publisher": "ibtimes.com",
+       "published_at": "2026-03-23T10:15:42",
+       "lede": "elon musk unveiled an ambitious plan march 21, 2026, for a joint tesla and spacex semiconductor fabrication facility dubbed \"terafab,\" aiming to produce custom chips on an unprecedented scale to fuel artificial intelligence, humanoid robotics, autonomous vehicles and space-based computing. the $20-25 billion project, described by musk as \"the most",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 176,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Tesla Motors",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd4a04edcd0af9c88986f",
+       "headline": "San Francisco: Waymo passenger attacked for paying a self-driving car",
+       "url": "https://www.newsbytesapp.com/news/auto/san-francisco-man-trapped-inside-waymo-as-attacker-smashes-windows/story",
+       "publisher": "newsbytesapp.com",
+       "published_at": "2026-03-23T04:54:52",
+       "lede": "a recent incident in san francisco has raised concerns over the safety of autonomous vehicles . doug fulop, a tech industry worker, was returning from a night out when his self-driving waymo was attacked by an angry man. the attacker punched the car's windows and threatened to kill fulop and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbe5bff6564cd6fce48070",
+       "headline": "Watch the road: these 5 states have the most irresponsible drivers",
+       "url": "https://finance.yahoo.com/sectors/technology/articles/watch-road-5-states-most-134700436.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-03-21T13:47:00",
+       "lede": "while the jury is still out on whether autonomous vehicles are truly safer than human drivers, the data on which state has the worst drivers is a bit more cut-and-dry.“i don’t think they have the data yet to make that kind of assessment,” david kidd, vice president for vehicle research",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 269,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Autonomous Vehicles",
+         "score": 0.94
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.45
+        },
+        {
+         "code": 122,
+         "path": "/Autos & Vehicles/Vehicle Codes & Driving Laws/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd1c32e41fb6223042ab3",
+       "headline": "Uber: $1.25 Billion Partnership With Rivian To Deploy Autonomous Robotaxis",
+       "url": "https://pulse2.com/uber-1-25-billion-partnership-with-rivian-to-deploy-autonomous-robotaxis/",
+       "publisher": "pulse2.com",
+       "published_at": "2026-03-20T06:24:08",
+       "lede": "uber technologies announced a partnership with rivian automotive, inc. to accelerate the deployment of fully autonomous robotaxis, backed by a commitment to invest up to $1.25 billion through 2031. the collaboration is designed to scale a fleet of rivian r2 autonomous vehicles operating exclusively on the uber platform, marking a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.89,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 269,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Autonomous Vehicles",
+         "score": 0.96
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "rivian",
+        "uber"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 521,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yMCAwNjoyNDowOCIsImkiOiI2OWNiZDFjMzJlNDFmYjYyMjMwNDJhYjMiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.892,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.894
+    }
+   }
+  }
+ ]
+}

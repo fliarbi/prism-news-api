@@ -1,0 +1,721 @@
+{
+ "slug": "diesel-price-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:15:38Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "diesel price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "diesel price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1030,
+     "tone": {
+      "carrying": 1030,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 971,
+        "share_pct": 94.27
+       },
+       {
+        "group": "neutral",
+        "count": 12,
+        "share_pct": 1.17
+       },
+       {
+        "group": "positive",
+        "count": 47,
+        "share_pct": 4.56
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1030,
+      "count": 140,
+      "share_pct": 13.59
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.699,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.702
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "diesel price",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "diesel price",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 29,
+       "critical": 7,
+       "critical_pct": 24.1,
+       "negative": 25,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 14,
+       "critical": 3,
+       "critical_pct": 21.4,
+       "negative": 10,
+       "positive": 4,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 30,
+       "critical": 6,
+       "critical_pct": 20.0,
+       "negative": 21,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 41,
+       "critical": 5,
+       "critical_pct": 12.2,
+       "negative": 36,
+       "positive": 3,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 17,
+       "critical": 1,
+       "critical_pct": 5.9,
+       "negative": 14,
+       "positive": 3,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 17,
+       "critical": 5,
+       "critical_pct": 29.4,
+       "negative": 15,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 25,
+       "critical": 7,
+       "critical_pct": 28.0,
+       "negative": 19,
+       "positive": 4,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 12,
+       "critical": 1,
+       "critical_pct": 8.3,
+       "negative": 11,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 8,
+       "critical": 1,
+       "critical_pct": 12.5,
+       "negative": 4,
+       "positive": 4,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 37,
+       "critical": 9,
+       "critical_pct": 24.3,
+       "negative": 34,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 449,
+       "critical": 57,
+       "critical_pct": 12.7,
+       "negative": 429,
+       "positive": 17,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 536,
+       "critical": 73,
+       "critical_pct": 13.6,
+       "negative": 504,
+       "positive": 24,
+       "partial_period": false
+      }
+     ],
+     "total": 1215,
+     "critical_total": 175,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.069,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.072
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "diesel price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "diesel price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1030,
+     "carrying": 776,
+     "availability_pct": 75.34,
+     "items": [
+      {
+       "country": "india",
+       "count": 637,
+       "share_pct": 61.84
+      },
+      {
+       "country": "united states",
+       "count": 46,
+       "share_pct": 4.47
+      },
+      {
+       "country": "iran",
+       "count": 15,
+       "share_pct": 1.46
+      },
+      {
+       "country": "south africa",
+       "count": 11,
+       "share_pct": 1.07
+      },
+      {
+       "country": "australia",
+       "count": 9,
+       "share_pct": 0.87
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 58
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.021,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.026
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "diesel price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "diesel price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "regional gas price variations and trends",
+       "count": 431,
+       "share": 56.64,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 19,
+       "delta_pct": 2168.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "diesel fuel pricing and availability",
+       "count": 151,
+       "share": 19.84,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 2,
+       "delta_pct": 7450.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "gasoline production technologies",
+       "count": 178,
+       "share": 23.39,
+       "lift": 272.76,
+       "baseline_count": 7,
+       "previous_period_count": 30,
+       "delta_pct": 493.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil and gas market trends",
+       "count": 253,
+       "share": 33.25,
+       "lift": 100.51,
+       "baseline_count": 27,
+       "previous_period_count": 24,
+       "delta_pct": 954.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "non-toxic skincare products",
+       "count": 27,
+       "share": 3.55,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1030,
+     "carrying": 761,
+     "carrier_share_pct": 73.88,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.433,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.437
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "diesel price",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "diesel price",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a7916963d76f4afcf6231",
+       "headline": "Dieselpreis explodiert: Busverkehr auf dem Land ist bedroht",
+       "url": "https://www.stuttgarter-nachrichten.de/inhalt.dieselpreis-explodiert-busverkehr-auf-dem-land-ist-bedroht.bedc15c9-7b85-4096-9198-09fd3ec11333.html",
+       "publisher": "stuttgarter-nachrichten.de",
+       "published_at": "2026-03-31T10:31:00",
+       "lede": "baden-württemberg bus companies warn of deletions if there is no compensation for the high diesel price. what's behind it – and what the solution might look like. the list of calls for help in view of the high energy prices is getting longer and longer. taxi drivers, freight forwarders or",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2af1f0c37f6c5e6614cb14",
+       "headline": "Gestiegener Preis für Diesel: Kommt der Bus auf dem Land bald nicht mehr wie gewohnt?",
+       "url": "https://www.swr.de/swraktuell/baden-wuerttemberg/wegen-dieselpreisen-busunternehmen-fuerchten-um-linien-auf-dem-land-100.html",
+       "publisher": "swr.de",
+       "published_at": "2026-03-30T07:56:09",
+       "lede": "in view of the strongly increased diesel price, the baden-württemberg bus association (wbo) warns against cuts in bus traffic, especially in the countryside. managing director yvonne hüneburg said: \"we are facing a serious threat to mobility in the country.\" diesel price increased: association warns against hiring bus lines companies could",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a04032c62bbf617b0413ae0",
+       "headline": "UAE Fuel Price Committee announces prices for May",
+       "url": "https://www.zawya.com/en/business/retail-and-consumer/uae-fuel-price-committee-announces-prices-for-may-lqkaovj4",
+       "publisher": "zawya.com",
+       "published_at": "2026-04-30T07:51:06",
+       "lede": "abu dhabi - the uae fuel price committee has announced fuel prices for may 2026, maintaining the diesel price in a step aimed at supporting the continuity of vital sectors, particularly logistics and supply chains, contributing to market balance and price stability. prices of petrol products saw a limited adjustment",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a797bc37f6c5e66c0b8a2",
+       "headline": "Fiskalrat will streichen: Pendlerpauschale vor dem Aus, so sicherst du dir dein Geld",
+       "url": "https://www.meinbezirk.at/st-poelten/c-lokales/pendlerpauschale-vor-dem-aus-so-sicherst-du-dir-dein-geld_a8549839",
+       "publisher": "meinbezirk.at",
+       "published_at": "2026-04-02T11:58:13",
+       "lede": "fuel prices over two euros. also demand for abolition of the commuter flat rate causes excitement. st. power. last weekend, the cheapest diesel price was in the st. pölten at 2,099 euros. this is particularly hard on commuters. around 100,000 people in the district and city of st. pölten must",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd1d5d5ebd7d5be534948",
+       "headline": "Centre rolls back diesel price hike for Gujarat fishermen",
+       "url": "https://telanganatoday.com/centre-rolls-back-diesel-price-hike-for-gujarat-fishermen",
+       "publisher": "telanganatoday.com",
+       "published_at": "2026-03-21T17:33:27",
+       "lede": "centre rolls back diesel price hike for gujarat fishermenthe central government has ordered the rollback of a rs 22.43 per litre diesel price hike for fishing boats in gujarat after concerns raised by the state. the decision brings relief to fishermen dependent on subsidised fuel for their livelihoodsby ians published",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.79
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd23f7aa9ae690c976ea6",
+       "headline": "Gujarat fishermen get relief as Centre rolls back diesel price hike",
+       "url": "https://businessnewsthisweek.com/business/gujarat-fishermen-get-relief-as-centre-rolls-back-diesel-price-hike/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-03-21T16:10:47",
+       "lede": "gandhinagar/new delhi, march 21: the central government, on saturday, directed the rollback of a rs 22.43 per litre increase in diesel price for fishing boats in gujarat, following representations by the state government over the impact on fishermen.the price hike had been introduced by the bharat petroleum corporation limited (bpcl)",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.83,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.64
+        },
+        {
+         "code": 387,
+         "path": "/Business & Industrial/Agriculture & Forestry/Aquaculture",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "bharat petroleum"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a2a7b3bc4c40880e4bed",
+       "headline": "Diesel sobe em média para R$ 7,17 por litro apesar de medidas do governo, revela pesquisa",
+       "url": "https://www.diariodepernambuco.com.br/economia/2026/03/11710278-diesel-sobe-em-media-para-rs-717-por-litro-apesar-de-medidas-do-governo-revela-pesquisa.html",
+       "publisher": "diariodepernambuco.com.br",
+       "published_at": "2026-03-19T00:00:00",
+       "lede": "national average diesel price reached r$ 7.17 per litre in the second week of march, driven by the effects of the escalation of the conflict between the united states and iran on the international oil market the national average diesel price reached r$ 7.17 per litre in the second week",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.79,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 694,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Diesel Vehicles",
+         "score": 0.85
+        },
+        {
+         "code": 300,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Gas Prices & Vehicle Fueling",
+         "score": 0.56
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cceaefe6d593b34c96b047",
+       "headline": "Preço do diesel gera inquérito da PF e ameaça de greve de caminhoneiros | CNN Brasil",
+       "url": "https://www.cnnbrasil.com.br/politica/preco-do-diesel-gera-inquerito-da-pf-e-ameaca-de-greve-de-caminhoneiros/",
+       "publisher": "cnnbrasil.com.br",
+       "published_at": "2026-03-18T07:45:11",
+       "lede": "anp recorded a 11.8% increase in the average diesel price in brazil last week, compared to the previous week.on tuesday (17), the national petroleum, natural gas and biofuels agency, together with procons, carried out a monitoring operation in 42 stations in ten units of the federation.the pressure on the brazilian",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d09681ac6a8f04801bf94a",
+       "headline": "Diesel-Preis spingt über die Zwei Euro-Marke - Benzin nähert sich",
+       "url": "https://www.n-tv.de/wirtschaft/So-viel-kostet-der-Sprit-Preise-fuer-Diesel-und-Benzin-erreicht-Marke-von-zwei-Euro-je-Liter-id30429310.html",
+       "publisher": "n-tv.de",
+       "published_at": "2026-03-04T09:38:00",
+       "lede": "war reaches fuel pumps diesel price spings over the two euro mark - petrol approaches 04.03.2026, 10:38 h listen to article ( 04:19 min) 00:00 / 04:19 0.5x 0.8x 1.0x 1.2x 1.5x 2.0x the price table at a gas station in berlin. (photo: picture alliance / dts-agentur) facebook x whatsapp",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 9,
+     "total_estimate": 18,
+     "next_cursor": null,
+     "unresolved": 8,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.206,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.208
+    }
+   }
+  }
+ ]
+}

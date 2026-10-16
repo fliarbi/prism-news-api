@@ -1,0 +1,875 @@
+{
+ "slug": "gdpr-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:06:29Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "GDPR",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gdpr",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8600,
+     "tone": {
+      "carrying": 8592,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1901,
+        "share_pct": 22.13
+       },
+       {
+        "group": "neutral",
+        "count": 482,
+        "share_pct": 5.61
+       },
+       {
+        "group": "positive",
+        "count": 6209,
+        "share_pct": 72.26
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 8599,
+      "count": 4764,
+      "share_pct": 55.4
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.713,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.716
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "GDPR",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gdpr",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2348,
+       "critical": 1362,
+       "critical_pct": 58.0,
+       "negative": 579,
+       "positive": 1543,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2068,
+       "critical": 1228,
+       "critical_pct": 59.4,
+       "negative": 492,
+       "positive": 1363,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2757,
+       "critical": 1450,
+       "critical_pct": 52.6,
+       "negative": 636,
+       "positive": 1853,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2344,
+       "critical": 1482,
+       "critical_pct": 63.2,
+       "negative": 666,
+       "positive": 1524,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3465,
+       "critical": 2465,
+       "critical_pct": 71.1,
+       "negative": 1193,
+       "positive": 2118,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 3806,
+       "critical": 2879,
+       "critical_pct": 75.6,
+       "negative": 1377,
+       "positive": 2341,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 3661,
+       "critical": 2821,
+       "critical_pct": 77.1,
+       "negative": 1381,
+       "positive": 2202,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2913,
+       "critical": 1962,
+       "critical_pct": 67.4,
+       "negative": 915,
+       "positive": 1849,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1487,
+       "critical": 954,
+       "critical_pct": 64.2,
+       "negative": 351,
+       "positive": 1096,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2661,
+       "critical": 1562,
+       "critical_pct": 58.7,
+       "negative": 668,
+       "positive": 1858,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2764,
+       "critical": 1282,
+       "critical_pct": 46.4,
+       "negative": 528,
+       "positive": 1987,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1688,
+       "critical": 966,
+       "critical_pct": 57.2,
+       "negative": 354,
+       "positive": 1268,
+       "partial_period": false
+      }
+     ],
+     "total": 31962,
+     "critical_total": 20413,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-10-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.586,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.589
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "GDPR",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gdpr",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8600,
+     "carrying": 3662,
+     "availability_pct": 42.58,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1555,
+       "share_pct": 18.08
+      },
+      {
+       "country": "united kingdom",
+       "count": 410,
+       "share_pct": 4.77
+      },
+      {
+       "country": "nigeria",
+       "count": 391,
+       "share_pct": 4.55
+      },
+      {
+       "country": "india",
+       "count": 176,
+       "share_pct": 2.05
+      },
+      {
+       "country": "germany",
+       "count": 149,
+       "share_pct": 1.73
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 981
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.558,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.56
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "GDPR",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gdpr",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "/people & society/social issues & advocacy/digital divide & technology access",
+       "count": 384,
+       "share": 9.19,
+       "lift": 250.15,
+       "baseline_count": 3,
+       "previous_period_count": 395,
+       "delta_pct": -2.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "/people & society/social issues & advocacy/ethical technology & data privacy advocacy",
+       "count": 490,
+       "share": 11.73,
+       "lift": 159.6,
+       "baseline_count": 6,
+       "previous_period_count": 507,
+       "delta_pct": -3.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "data privacy compliance standards",
+       "count": 122,
+       "share": 2.92,
+       "lift": 238.42,
+       "baseline_count": 1,
+       "previous_period_count": 102,
+       "delta_pct": 19.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "data loss prevention (dlp) in networks",
+       "count": 153,
+       "share": 3.66,
+       "lift": 149.5,
+       "baseline_count": 2,
+       "previous_period_count": 138,
+       "delta_pct": 10.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "cloud storage security and encryption standards",
+       "count": 89,
+       "share": 2.13,
+       "lift": 173.93,
+       "baseline_count": 1,
+       "previous_period_count": 74,
+       "delta_pct": 20.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 8600,
+     "carrying": 4177,
+     "carrier_share_pct": 48.57,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.07,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.073
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "GDPR",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "gdpr",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a03f232220687a966a209b9",
+       "headline": "Data Protection Insider, Issue 152 - Lexxion",
+       "url": "https://www.lexxion.eu/en/dpi/data-protection-insider-issue-152/",
+       "publisher": "lexxion.eu",
+       "published_at": "2026-04-23T07:50:34",
+       "lede": "table of contents: on 16th april, ag norkus advised the cjeu to rule that when dpas process complaints, they act as data controllers under article 4(7) gdpr and should comply with obligations under the right of access under article 15 gdpr, in joachim lindenberg v. bayerisches landesamt für datenschutzaufsicht. as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e3065cfa3e5ba54fc49d",
+       "headline": "Zara Parent Inditex Reports Third-Party Data Breach Involving Transaction Records – Outlook Business",
+       "url": "https://www.outlookbusiness.com/deeptech/tech/zara-parent-inditex-reports-third-party-data-breach-involving-transaction-records",
+       "publisher": "outlookbusiness.com",
+       "published_at": "2026-04-16T13:41:55",
+       "lede": "inditex reported unauthorized access to customer transaction databases via a third-party providerpersonal data like names, passwords, and bank details were not exposed, mitigating gdpr risksthe breach originated at a former technology vendor, impacting several international companieszara owner inditex disclosed that it found unauthorised access to databases hosted by a third",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "zara",
+        "inditex"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a70d9963d76f4afca17fb",
+       "headline": "Digital Omnibus reality check: 83.5% of access requests not properly answered",
+       "url": "https://noyb.eu/en/digital-omnibus-reality-check-835-access-requests-not-properly-answered",
+       "publisher": "noyb.eu",
+       "published_at": "2026-04-16T09:52:01",
+       "lede": "no “abuse” by data subjects, but by companies. following intense lobby pressure (especially by the german industry), the european commission’s digital omnibus proposal argues that there’s a need to restrict data subject rights under the gdpr. most notably, the proposed changes include a limitation of the right of access (in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e840d67bb1410d4c5f615f",
+       "headline": "GDPR Assessment Tool Market size to reach $5.96 Billion by 2035 | Key players include OneTrust, TrustArc, BigID, Securiti.ai, IBM Security",
+       "url": "https://www.openpr.com/news/4470489/gdpr-assessment-tool-market-size-to-reach-5-96-billion-by-2035",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-14T12:32:17",
+       "lede": "gdpr assessment tool market size to reach $5.96 billion by 2035 | key players include onetrust, trustarc, bigid, securiti.ai, ibm security gdpr assessment tool market https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/reports/gdpr-assessment-tool-market/5928 https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/sample-request-5928 https://www.linkedin.com/pulse/5g-infrastructure-market-outlook-emerging-trends-rida-patel-cqkpf https://www.linkedin.com/pulse/what-powering-rise-ai-iot-market-adinath-ahuja-drwpf/ market outlook and forecastthe gdpr assessment tool market has evolved into a critical segment within the broader data",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 125,
+         "path": "/Computers & Electronics/Enterprise Technology/Data Management",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "bigid",
+        "trustarc",
+        "onetrust",
+        "sme"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e843505cfa3e5ba5de800b",
+       "headline": "GDPR Assessment Tool Market size to reach $5.96 Billion by 2035 | Key players include OneTrust, TrustArc, BigID, Securiti.ai, IBM Security",
+       "url": "https://www.openpr.com/news/4470481/gdpr-assessment-tool-market-size-to-reach-5-96-billion-by-2035",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-14T12:30:00",
+       "lede": "gdpr assessment tool market size to reach $5.96 billion by 2035 | key players include onetrust, trustarc, bigid, securiti.ai, ibm security gdpr assessment tool market https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/reports/gdpr-assessment-tool-market/5928 https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/sample-request-5928 https://www.linkedin.com/pulse/5g-infrastructure-market-outlook-emerging-trends-rida-patel-cqkpf https://www.linkedin.com/pulse/what-powering-rise-ai-iot-market-adinath-ahuja-drwpf/ market outlook and forecastthe gdpr assessment tool market has evolved into a critical segment within the broader data",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 125,
+         "path": "/Computers & Electronics/Enterprise Technology/Data Management",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "bigid",
+        "trustarc",
+        "onetrust",
+        "sme"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e841af7bb1410d4c5fda1e",
+       "headline": "GDPR Assessment Tool Market size to reach $5.96 Billion by 2035 | Key players include OneTrust, TrustArc, BigID, Securiti.ai, IBM Security",
+       "url": "https://www.openpr.com/news/4470470/gdpr-assessment-tool-market-size-to-reach-5-96-billion-by-2035",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-14T12:25:27",
+       "lede": "gdpr assessment tool market size to reach $5.96 billion by 2035 | key players include onetrust, trustarc, bigid, securiti.ai, ibm security gdpr assessment tool market https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/reports/gdpr-assessment-tool-market/5928 https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/sample-request-5928 https://www.linkedin.com/pulse/5g-infrastructure-market-outlook-emerging-trends-rida-patel-cqkpf https://www.linkedin.com/pulse/what-powering-rise-ai-iot-market-adinath-ahuja-drwpf/ market outlook and forecastthe gdpr assessment tool market has evolved into a critical segment within the broader data",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 125,
+         "path": "/Computers & Electronics/Enterprise Technology/Data Management",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "bigid",
+        "trustarc",
+        "onetrust",
+        "sme"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8cdcb9baafc7356ccd5a2",
+       "headline": "GDPR Assessment Tool Market size to reach $5.96 Billion by 2035 | Key players include OneTrust, TrustArc, BigID, Securiti.ai, IBM Security",
+       "url": "https://www.openpr.com/news/4470460/gdpr-assessment-tool-market-size-to-reach-5-96-billion-by-2035",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-14T12:22:33",
+       "lede": "gdpr assessment tool market size to reach $5.96 billion by 2035 | key players include onetrust, trustarc, bigid, securiti.ai, ibm security gdpr assessment tool market https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/reports/gdpr-assessment-tool-market/5928 https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/sample-request-5928 https://www.researchnester.com/sample-request-5928 https://www.linkedin.com/pulse/5g-infrastructure-market-outlook-emerging-trends-rida-patel-cqkpf https://www.linkedin.com/pulse/what-powering-rise-ai-iot-market-adinath-ahuja-drwpf/ market outlook and forecastthe gdpr assessment tool market has evolved into a critical segment within the broader data",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 125,
+         "path": "/Computers & Electronics/Enterprise Technology/Data Management",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "bigid",
+        "trustarc",
+        "onetrust",
+        "sme"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e83f6a7bb1410d4c5e68eb",
+       "headline": "Four-Person Dutch Startup Launches Europe's First Sovereign AI Platform - Beyond the Reach of US Cloud Law",
+       "url": "https://techrseries.com/artificial-intelligence/four-person-dutch-startup-launches-europes-first-sovereign-ai-platform-beyond-the-reach-of-us-cloud-law/",
+       "publisher": "techrseries.com",
+       "published_at": "2026-04-14T11:52:49",
+       "lede": "while europe debated ai sovereignty, glbnxt built it: a certified, production-ready platform running on european infrastructure, ready for the eu ai act, gdpr, nis2, and the eu data act on day one. a new european challenger is entering the ai market with a fundamentally different approach. glbnxt (global next) announces",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.53
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b8799baafc7356babf92",
+       "headline": "General Data Protection Regulation (GDPR), Court of Justice of the European Union (CJEU), Data Controller | JD Supra",
+       "url": "https://www.jdsupra.com/topics/general-data-protection-regulation-gdpr/court-of-justice-of-the-european-union-cjeu/data-controller/",
+       "publisher": "jdsupra.com",
+       "published_at": "2026-04-13T00:00:00",
+       "lede": "on 4 september 2025, the court of justice of the european union (cjeu) delivered a ruling in edps v. srb (case c-413/23 p) that clarified how the eu general data protection regulation (gdpr) applies to pseudonymised data. ... more on september 4, 2025, the court of justice of the european",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.44
+        },
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.44
+        }
+       ],
+       "country": "luxembourg",
+       "organizations": [
+        "court of justice of the european union",
+        "court of justice of the european union"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbf715d652ae4c399075cf",
+       "headline": "Data requests to support compensation claims can be refused",
+       "url": "https://www.pinsentmasons.com/en-gb/out-law/news/data-requests-support-compensation-claims-refused",
+       "publisher": "pinsentmasons.com",
+       "published_at": "2026-03-24T16:35:24",
+       "lede": "the court of justice of the eu (cjeu) confirmed the position in a case referred to it from a local court in germany where a dispute has arisen between an opticians and an austrian man over rights provided for under the eu general data protection regulation (gdpr).according to the cjeu,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "france",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c42d0174d1627def77b30f",
+       "headline": "Data requests to support compensation claims can be refused",
+       "url": "https://www.pinsentmasons.com/out-law/news/data-requests-support-compensation-claims-refused",
+       "publisher": "pinsentmasons.com",
+       "published_at": "2026-03-24T16:35:24",
+       "lede": "the court of justice of the eu (cjeu) confirmed the position in a case referred to it from a local court in germany where a dispute has arisen between an opticians and an austrian man over rights provided for under the eu general data protection regulation (gdpr).according to the cjeu,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "france",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc48b1fc7cf950538a8144",
+       "headline": "Compliance startup Delve accused of misleading customers about privacy regulations",
+       "url": "https://americanbazaaronline.com/2026/03/23/compliance-startup-delve-accused-of-misleading-customers-477357/",
+       "publisher": "americanbazaaronline.com",
+       "published_at": "2026-03-23T15:55:47",
+       "lede": "compliance startup delve was accused by an anonymous substack post of “falsely” convincing “hundreds of customers they were compliant” with privacy and security regulations, potentially exposing those customers to “criminal liability under hipaa and hefty fines under gdpr.”delve refuted the accusations on its blog on friday, calling the substack post",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "substack"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbd2b7d5ebd7d5be535931",
+       "headline": "Delve accused of misleading customers with ‘fake compliance’ | TechCrunch",
+       "url": "https://techcrunch.com/2026/03/22/delve-accused-of-misleading-customers-with-fake-compliance/",
+       "publisher": "techcrunch.com",
+       "published_at": "2026-03-22T14:43:51",
+       "lede": "an anonymous substack post published this week accuses compliance startup delve of “falsely” convincing “hundreds of customers they were compliant” with privacy and security regulations, potentially exposing those customers to “criminal liability under hipaa and hefty fines under gdpr.”delve is a y combinator-backed startup that last year announced raising a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "substack"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2add69963d76f4af141d8b",
+       "headline": "Rechtsmissbrauch: Der EuGH erschwert das DSGVO-Hopping",
+       "url": "https://www.lto.de/recht/nachrichten/n/eugh-urteil-c52624-brillen-rottler-rechtgsmissbrauch-exzessiv-erster-anspruch",
+       "publisher": "lto.de",
+       "published_at": "2026-03-19T00:00:00",
+       "lede": "59555 subscribe to newsletter, request data, collect damages: so-called hoppers (symbol image) earn their money with the gdpr. whether this was the case in the ecj case, the arnsberg ag still has to decide. photo: peopleimages.com - stockadobe.com subscribe to newsletter, request data, collect compensation: so-called hoppers earn money with",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a5a5a528a35e1f41f084",
+       "headline": "Court shoots down €746m 'flawed' Amazon GDPR fine - DecisionMarketing",
+       "url": "https://www.decisionmarketing.co.uk/news/court-shoots-down-e746m-flawed-amazon-gdpr-fine",
+       "publisher": "decisionmarketing.co.uk",
+       "published_at": "2026-03-16T09:06:05",
+       "lede": "a luxembourg court has thrown out amazon’s €746m (£644m) gdpr fine – the second highest penalty ever issued – after ruling that the data protection regulator’s decision was flawed and ordering it to reassess the case from scratch.originally issued in july 2021 by luxembourg’s national commission for data protection, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 186,
+         "path": "/Shopping/Shopping Portals",
+         "score": 0.5
+        },
+        {
+         "code": 236,
+         "path": "/Shopping/Consumer Resources/Consumer Advocacy & Protection",
+         "score": 0.43
+        }
+       ],
+       "country": "luxembourg",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 415,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xMCAxMDowMDowMCIsImkiOiI2YTJhODA4Y2MzN2Y2YzVlNjZjNThkZGEiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.517,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.52
+    }
+   }
+  }
+ ]
+}

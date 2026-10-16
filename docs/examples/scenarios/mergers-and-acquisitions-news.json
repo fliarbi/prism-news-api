@@ -1,0 +1,873 @@
+{
+ "slug": "mergers-and-acquisitions-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:01Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "mergers and acquisitions",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "mergers and acquisitions",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 44613,
+     "tone": {
+      "carrying": 44569,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 10583,
+        "share_pct": 23.75
+       },
+       {
+        "group": "neutral",
+        "count": 2130,
+        "share_pct": 4.78
+       },
+       {
+        "group": "positive",
+        "count": 31856,
+        "share_pct": 71.48
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 44598,
+      "count": 21457,
+      "share_pct": 48.11
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.814,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.818
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "mergers and acquisitions",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "mergers and acquisitions",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 7480,
+       "critical": 3423,
+       "critical_pct": 45.8,
+       "negative": 1811,
+       "positive": 5177,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 7204,
+       "critical": 3128,
+       "critical_pct": 43.4,
+       "negative": 1621,
+       "positive": 5154,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 9285,
+       "critical": 4226,
+       "critical_pct": 45.5,
+       "negative": 2554,
+       "positive": 6269,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 7953,
+       "critical": 3341,
+       "critical_pct": 42.0,
+       "negative": 1922,
+       "positive": 5652,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 8927,
+       "critical": 3860,
+       "critical_pct": 43.2,
+       "negative": 1901,
+       "positive": 6585,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 7447,
+       "critical": 3903,
+       "critical_pct": 52.4,
+       "negative": 1399,
+       "positive": 5712,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 7101,
+       "critical": 3746,
+       "critical_pct": 52.8,
+       "negative": 1544,
+       "positive": 5202,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 8831,
+       "critical": 4824,
+       "critical_pct": 54.6,
+       "negative": 1808,
+       "positive": 6623,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 9209,
+       "critical": 4531,
+       "critical_pct": 49.2,
+       "negative": 1959,
+       "positive": 6829,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 12218,
+       "critical": 6020,
+       "critical_pct": 49.3,
+       "negative": 2862,
+       "positive": 8817,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 10215,
+       "critical": 4662,
+       "critical_pct": 45.6,
+       "negative": 2360,
+       "positive": 7261,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 12971,
+       "critical": 6244,
+       "critical_pct": 48.1,
+       "negative": 3402,
+       "positive": 8949,
+       "partial_period": false
+      }
+     ],
+     "total": 108841,
+     "critical_total": 51908,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.781,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.784
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "mergers and acquisitions",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "mergers and acquisitions",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 44613,
+     "carrying": 20409,
+     "availability_pct": 45.75,
+     "items": [
+      {
+       "country": "united states",
+       "count": 11414,
+       "share_pct": 25.58
+      },
+      {
+       "country": "india",
+       "count": 1807,
+       "share_pct": 4.05
+      },
+      {
+       "country": "united kingdom",
+       "count": 1563,
+       "share_pct": 3.5
+      },
+      {
+       "country": "canada",
+       "count": 581,
+       "share_pct": 1.3
+      },
+      {
+       "country": "france",
+       "count": 432,
+       "share_pct": 0.97
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 4612
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.486,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.491
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "mergers and acquisitions",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "mergers and acquisitions",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 1860,
+       "share": 6.96,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1034,
+       "delta_pct": 79.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mergers and acquisitions activity updates",
+       "count": 5304,
+       "share": 19.86,
+       "lift": 124.68,
+       "baseline_count": 13,
+       "previous_period_count": 3552,
+       "delta_pct": 49.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "corporate restructuring and divestitures",
+       "count": 3387,
+       "share": 12.68,
+       "lift": 147.86,
+       "baseline_count": 7,
+       "previous_period_count": 2168,
+       "delta_pct": 56.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "initial public offerings (ipos)",
+       "count": 1558,
+       "share": 5.83,
+       "lift": 158.7,
+       "baseline_count": 3,
+       "previous_period_count": 1213,
+       "delta_pct": 28.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "company expansions and new market entries",
+       "count": 1891,
+       "share": 7.08,
+       "lift": 115.58,
+       "baseline_count": 5,
+       "previous_period_count": 958,
+       "delta_pct": 97.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 44613,
+     "carrying": 26712,
+     "carrier_share_pct": 59.87,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.516,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.518
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "mergers and acquisitions",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "mergers and acquisitions",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8a8e35cfa3e5ba521aabe",
+       "headline": "FCCPC Warns Firms Against Breaching Merger Notification Rules",
+       "url": "https://thewillnews.com/fccpc-warns-firms-against-breaching-merger-notification-rules/",
+       "publisher": "thewillnews.com",
+       "published_at": "2026-04-22T08:15:01",
+       "lede": "april 22, (thewill) — the federal competition and consumer protection commission (fccpc) has cautioned companies, legal advisers and transaction parties, to strictly comply with statutory requirements governing mergers and acquisitions in nigeria. the warning was conveyed in a statement by the commission’s director of corporate affairs, ondaje ijagwu, who stressed",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.59
+        },
+        {
+         "code": 166,
+         "path": "/Law & Government/Legal/Business & Corporate Law",
+         "score": 0.46
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "federal competition and consumer protection commission"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e885d09baafc735692cca1",
+       "headline": "FCCPC toughens merger rules, signs Lagos consumer pact",
+       "url": "https://punchng.com/fccpc-toughens-merger-rules-signs-lagos-consumer-pact/",
+       "publisher": "punchng.com",
+       "published_at": "2026-04-21T23:14:48",
+       "lede": "the federal competition and consumer protection commission has warned companies, legal advisers, and transaction stakeholders against completing mergers and acquisitions without prior approval, even as it signed a memorandum of understanding with the lagos state consumer protection agency to strengthen consumer protection nationwide. in a statement issued on tuesday, the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 166,
+         "path": "/Law & Government/Legal/Business & Corporate Law",
+         "score": 0.7
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "federal competition and consumer protection commission"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e888317bb1410d4c8bf8d2",
+       "headline": "FCCPC warns companies against mergers without prior approval",
+       "url": "https://punchng.com/fccpc-warns-companies-against-mergers-without-prior-approval/",
+       "publisher": "punchng.com",
+       "published_at": "2026-04-21T17:16:46",
+       "lede": "the federal competition and consumer protection commission has warned companies, legal advisers, and other transaction stakeholders against completing mergers and acquisitions without prior approval, stressing that failure to comply with statutory notification requirements would attract sanctions. in a statement issued on tuesday by nigeria’s competition watchdog, it said transactions that",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 166,
+         "path": "/Law & Government/Legal/Business & Corporate Law",
+         "score": 0.69
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "federal competition and consumer protection commission"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0efabacf55d9dcdbac599e",
+       "headline": "Bank of America first-quarter profit rises on strong trading, investment banking",
+       "url": "http://www.theglobeandmail.com/business/international-business/us-business/article-bank-of-america-first-quarter-earnings-results-trading-investment/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-15T11:07:34",
+       "lede": "bank of america’s bac-n profit rose in the first quarter, as volatility in the global markets lifted trading activity and a rebound in mergers and acquisitions boosted the lender’s investment banking fees. shares of the company rose 1.5 per cent in trading before the bell. global equity markets entered 2026",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.65
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e850c37bb1410d4c692859",
+       "headline": "Bank of America first-quarter profit rises on strong trading, investment banking",
+       "url": "https://www.theglobeandmail.com/business/international-business/us-business/article-bank-of-america-first-quarter-earnings-results-trading-investment/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-15T11:07:34",
+       "lede": "bank of america’s bac-n profit rose in the first quarter, as volatility in the global markets lifted trading activity and a rebound in mergers and acquisitions boosted the lender’s investment banking fees. shares of the company rose 1.5 per cent in trading before the bell. global equity markets entered 2026",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.65
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "bank of america",
+        "bank of america"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8cd8b5cfa3e5ba53ecf6d",
+       "headline": "India auto & EV deal activity at $745 mn in Q1; PE investments jump 86%: Grant Thornton Bharat",
+       "url": "https://www.fortuneindia.com/auto/india-auto-ev-deal-activity-at-35-deals-745-million-in-q1-2026-pe-investments-jump-86-grant-thornton-bharat/132405",
+       "publisher": "fortuneindia.com",
+       "published_at": "2026-04-14T12:10:41",
+       "lede": "india’s automotive and electric vehicle (ev) deal activity remained steady but selective in the first quarter of 2026, with private equity (pe) investors driving a sharp recovery in deal values even as strategic mergers and acquisitions (m&a) slowed, according to grant thornton bharat’s latest dealtracker report. the sector recorded 35",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.57
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.49
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ba5d5cfa3e5ba52ee33d",
+       "headline": "Goldman Sachs posts best quarterly profit in five years with 18% jump",
+       "url": "http://www.euronews.com/business/2026/04/13/goldman-sachs-posts-best-quarterly-profit-in-five-years-with-18-jump",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-13T13:08:37",
+       "lede": "goldman sachs released its figures for the first quarter of 2026 on monday with revenues rising 14% to $17.2 billion (€14.6bn) and quarterly profit up 18% to $5.4 billion (€4.6bn), marking the best quarter in five years.the new york-based investment bank pointed to an increase in completed mergers and acquisitions",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.82
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "goldman sachs"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e63e3e9e87ccc43e3063c3",
+       "headline": "Goldman Sachs posts best quarterly profit in five years with 18% jump",
+       "url": "https://www.euronews.com/business/2026/04/13/goldman-sachs-posts-best-quarterly-profit-in-five-years-with-18-jump",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-13T13:08:37",
+       "lede": "goldman sachs released its figures for the first quarter of 2026 on monday with revenues rising 14% to $17.2 billion (€14.6bn) and quarterly profit up 18% to $5.4 billion (€4.6bn), marking the best quarter in five years.the new york-based investment bank pointed to an increase in completed mergers and acquisitions",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.82
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "goldman sachs"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2a75bdc480588dc9eb014",
+       "headline": "2026: A Year of Transformation in Cryptocurrency M&A Trends",
+       "url": "https://www.theedadvocate.org/2026-a-year-of-transformation-in-cryptocurrency-ma-trends/",
+       "publisher": "theedadvocate.org",
+       "published_at": "2026-04-03T13:45:44",
+       "lede": "spread the love the cryptocurrency landscape is set for significant evolution in 2026, following an extraordinary uptick in mergers and acquisitions (m&a) in 2025. with overall crypto deal values soaring to an impressive $8.6 billion to $12.9 billion last year, the stage is being set for intensified consolidation and innovative",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5d855cefb83fe8f6dd3d",
+       "headline": "Tolling takes off in Europe - pv magazine Global",
+       "url": "https://www.pv-magazine.com/2026/04/02/tolling-takes-off-in-europe/",
+       "publisher": "pv-magazine.com",
+       "published_at": "2026-04-02T04:00:39",
+       "lede": "increased tolling activity coincided with a major uplift in disclosed debt for bess projects, reaching €5 billion ($5.7 billion) in 2025 from €1.4 billion the previous year. modo energy tracked 77 deals across 13 countries with a total disclosed value of €7.5 billion. these included project finance, mergers and acquisitions,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2f5dc37f6c5e6641b061",
+       "headline": "U.S. Firms Continue To Slash Jobs Amid Record AI Spending And Mega-Deals",
+       "url": "http://ibtimes.com/us-firms-slash-jobs-amid-record-ai-spending-mega-deals-3800723",
+       "publisher": "ibtimes.com",
+       "published_at": "2026-04-01T14:29:26",
+       "lede": "major u.s. companies are cutting thousands of jobs even as they pour billions into artificial intelligence and record-breaking mergers and acquisitions, highlighting a shift in corporate strategy.layoffs at oracle and meta are not simply cost-cutting moves; they reflect a deliberate reallocation of resources toward ai infrastructure, advanced tools, and strategic",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8a47c7bb1410d4ca20c2c",
+       "headline": "M&A activity to accelerate this year despite war disruption, Goldman Sachs says | M&A Critique",
+       "url": "https://mnacritique.mergersindia.com/news/ma-activity-to-accelerate-this-year-despite-war-disruption-goldman-sachs-says/",
+       "publisher": "mnacritique.mergersindia.com",
+       "published_at": "2026-03-23T07:48:07",
+       "lede": "3 weeks ago goldman sachs expects mergers and acquisitions activity to be on the upswing this year despite the disruption caused by the u.s.-israeli war on iran, ceo david solomon said on friday. “while it is difficult to predict the broader economic effects of the military action by the u.s.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "goldman sachs"
+       ],
+       "people": [
+        "solomon"
+       ]
+      },
+      {
+       "id": "69cc484df8e7de13bc1d06c3",
+       "headline": "M&A activity to accelerate this year despite war disruption, Goldman Sachs says",
+       "url": "https://economictimes.indiatimes.com/news/international/business/ma-activity-to-accelerate-this-year-despite-war-disruption-goldman-sachs-says/articleshow/129699736.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-03-20T11:36:00",
+       "lede": "goldman sachs expects mergers and acquisitions activity to be on the upswing this year despite the disruption caused by the u.s.-israeli war on iran, ceo david solomon said on friday. while it is difficult to predict the broader economic effects of the military action by the u.s. and israel against",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "goldman sachs"
+       ],
+       "people": [
+        "solomon"
+       ]
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 485,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yMCAxMTozNjowMCIsImkiOiI2OWNjNDg0ZGY4ZTdkZTEzYmMxZDA2YzMiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.759,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.762
+    }
+   }
+  }
+ ]
+}

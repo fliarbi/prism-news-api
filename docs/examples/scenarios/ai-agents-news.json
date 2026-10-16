@@ -1,0 +1,878 @@
+{
+ "slug": "ai-agents-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:05Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "AI agents",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai agents",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13982,
+     "tone": {
+      "carrying": 13979,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1221,
+        "share_pct": 8.73
+       },
+       {
+        "group": "neutral",
+        "count": 27,
+        "share_pct": 0.19
+       },
+       {
+        "group": "positive",
+        "count": 12731,
+        "share_pct": 91.07
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 13981,
+      "count": 10131,
+      "share_pct": 72.46
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.845,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.848
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "AI agents",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai agents",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1737,
+       "critical": 1204,
+       "critical_pct": 69.3,
+       "negative": 60,
+       "positive": 1677,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1571,
+       "critical": 1097,
+       "critical_pct": 69.8,
+       "negative": 87,
+       "positive": 1481,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1614,
+       "critical": 1095,
+       "critical_pct": 67.8,
+       "negative": 62,
+       "positive": 1547,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1524,
+       "critical": 1040,
+       "critical_pct": 68.2,
+       "negative": 76,
+       "positive": 1445,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2101,
+       "critical": 1471,
+       "critical_pct": 70.0,
+       "negative": 103,
+       "positive": 1991,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2035,
+       "critical": 1478,
+       "critical_pct": 72.6,
+       "negative": 94,
+       "positive": 1937,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2009,
+       "critical": 1321,
+       "critical_pct": 65.8,
+       "negative": 125,
+       "positive": 1880,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1862,
+       "critical": 1369,
+       "critical_pct": 73.5,
+       "negative": 136,
+       "positive": 1720,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1790,
+       "critical": 1280,
+       "critical_pct": 71.5,
+       "negative": 172,
+       "positive": 1615,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3354,
+       "critical": 2407,
+       "critical_pct": 71.8,
+       "negative": 288,
+       "positive": 3057,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 4299,
+       "critical": 3185,
+       "critical_pct": 74.1,
+       "negative": 337,
+       "positive": 3951,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 4539,
+       "critical": 3259,
+       "critical_pct": 71.8,
+       "negative": 424,
+       "positive": 4108,
+       "partial_period": false
+      }
+     ],
+     "total": 28435,
+     "critical_total": 20206,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.126,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.129
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "AI agents",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai agents",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13982,
+     "carrying": 3966,
+     "availability_pct": 28.37,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1935,
+       "share_pct": 13.84
+      },
+      {
+       "country": "india",
+       "count": 412,
+       "share_pct": 2.95
+      },
+      {
+       "country": "united kingdom",
+       "count": 208,
+       "share_pct": 1.49
+      },
+      {
+       "country": "china",
+       "count": 192,
+       "share_pct": 1.37
+      },
+      {
+       "country": "netherlands",
+       "count": 127,
+       "share_pct": 0.91
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1092
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.581,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.584
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "AI agents",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai agents",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "customer relationship management (crm) systems",
+       "count": 437,
+       "share": 5.49,
+       "lift": 448.2,
+       "baseline_count": 1,
+       "previous_period_count": 332,
+       "delta_pct": 31.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "workflow and process automation tools",
+       "count": 416,
+       "share": 5.23,
+       "lift": 426.66,
+       "baseline_count": 1,
+       "previous_period_count": 181,
+       "delta_pct": 129.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "customer support and helpdesk systems",
+       "count": 393,
+       "share": 4.94,
+       "lift": 403.07,
+       "baseline_count": 1,
+       "previous_period_count": 235,
+       "delta_pct": 67.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "reinforcement learning frameworks",
+       "count": 373,
+       "share": 4.69,
+       "lift": 382.56,
+       "baseline_count": 1,
+       "previous_period_count": 289,
+       "delta_pct": 29.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "reinforcement learning in autonomous systems",
+       "count": 336,
+       "share": 4.22,
+       "lift": 344.61,
+       "baseline_count": 1,
+       "previous_period_count": 267,
+       "delta_pct": 25.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 13982,
+     "carrying": 7959,
+     "carrier_share_pct": 56.92,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.463,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.465
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "AI agents",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ai agents",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f885368937ef12fc09be06",
+       "headline": "KnowBe4 Research Finds 86% of Phishing Attacks are AI Driven",
+       "url": "https://cioinfluence.com/security/knowbe4-research-finds-86-of-phishing-attacks-are-ai-driven/",
+       "publisher": "cioinfluence.com",
+       "published_at": "2026-04-30T14:02:44",
+       "lede": "knowbe4, the global leader in digital workforce security, securing both ai agents and humans, announced new research, phishing threat trends report volume seven. the report finds a seismic shift in the attack vectors utilized to conduct phishing attacks, including touchpoints outside of traditional email communication such as calendar invitations and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.8
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.57
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "cto",
+        "knowbe4"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f882b043843dd771cfbe1d",
+       "headline": "Amazon Web Service Does an Agentic Shift into the Application Layer",
+       "url": "https://cxotoday.com/research/amazon-web-service-does-an-agentic-shift-into-the-application-layer/",
+       "publisher": "cxotoday.com",
+       "published_at": "2026-04-30T07:38:26",
+       "lede": "earlier this week, amazon connect was rebranded into a four-product family, and launched as the amazon quick app on the desktop – the culmination of an exercise of accepting that infrastructure alone cannot solve the enterprise activation void. also aws had introduced managed ai agents for openai within amazon bedrock",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        },
+        {
+         "code": 101,
+         "path": "/Internet & Telecom/Web Services/Cloud Storage",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "openai"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ea44f83fc01faba1fc674",
+       "headline": "Exclusive: Lloyds in tie-up with Google to build AI agents",
+       "url": "https://www.cityam.com/exclusive-lloyds-in-tie-up-with-google-to-build-ai-agents",
+       "publisher": "cityam.com",
+       "published_at": "2026-04-30T00:03:00",
+       "lede": "exclusive: lloyds in tie-up with google to build ai agents lloyds suffered a tech outage. lloyds banking group has formed a tie-up with google as the financial services giant sets its sight on building its own ai agents, city am can reveal. the blue-chip lender is leveraging google cloud –",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.63
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69fa070e7b2d589e84538ebf",
+       "headline": "Are we ready to give AI agents the keys to the cloud? Cloudflare thinks so",
+       "url": "https://www.infoworld.com/article/4165857/are-we-ready-to-give-ai-agents-the-keys-to-the-cloud-cloudflare-thinks-so.html",
+       "publisher": "infoworld.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "cloudflare is giving ai agents full autonomy to spin up new apps. starting today, agents working on behalf of humans can create a cloudflare account, begin a paid subscription, register a domain, and then receive an api token to let them immediately deploy code. to kick things off, human users",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.65
+        },
+        {
+         "code": 101,
+         "path": "/Internet & Telecom/Web Services/Cloud Storage",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "cloudflare",
+        "api"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d4ac7b2d589e844b012e",
+       "headline": "Are we ready to give AI agents the keys to the cloud? Cloudflare thinks so",
+       "url": "https://www.computerworld.com/article/4165880/are-we-ready-to-give-ai-agents-the-keys-to-the-cloud-cloudflare-thinks-so-2.html",
+       "publisher": "computerworld.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "cloudflare is giving ai agents full autonomy to spin up new apps. starting today, agents working on behalf of humans can create a cloudflare account, begin a paid subscription, register a domain, and then receive an api token to let them immediately deploy code. to kick things off, human users",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.65
+        },
+        {
+         "code": 101,
+         "path": "/Internet & Telecom/Web Services/Cloud Storage",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a65cdc37f6c5e66b4eed8",
+       "headline": "Hightouch Raises $150M to Expand Data Activation Tools",
+       "url": "https://ventureburn.com/hightouch-raises-150m-to-expand-data-activation-tools/",
+       "publisher": "ventureburn.com",
+       "published_at": "2026-04-29T16:43:44",
+       "lede": "the round was co-led by goldman sachs and bain capital ventures, with strategic participation from the trade desk. the company is pivoting toward ai agents that can autonomously research audiences, generate creativity, and manage multi-channel campaigns. hightouch is now valued at $2.75 billion following its $150m series d, more than",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.58
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa1b4963d76f4afea0d58",
+       "headline": "General Analysis raises $10M in seed funding to secure agentic AI against real-world attacks",
+       "url": "https://techstartups.com/2026/04/29/general-analysis-raises-10m-in-seed-funding-to-secure-agentic-ai-against-real-world-attacks",
+       "publisher": "techstartups.com",
+       "published_at": "2026-04-29T16:01:32",
+       "lede": "ai agents are moving fast inside real companies. in some cases, faster than the teams responsible for keeping them in check. in march, a single adversarial agent persuaded 50 live customer service bots to hand out more than $10 million in fake perks. million-dollar gift cards. years of free services.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f230bcc6105443aa5f27df",
+       "headline": "General Analysis raises $10M in seed funding to secure agentic AI against real-world attacks",
+       "url": "https://techstartups.com/2026/04/29/general-analysis-raises-10m-in-seed-funding-to-secure-agentic-ai-against-real-world-attacks/",
+       "publisher": "techstartups.com",
+       "published_at": "2026-04-29T16:01:32",
+       "lede": "ai agents are moving fast inside real companies. in some cases, faster than the teams responsible for keeping them in check. in march, a single adversarial agent persuaded 50 live customer service bots to hand out more than $10 million in fake perks. million-dollar gift cards. years of free services.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0efea9cf55d9dcdbb02bce",
+       "headline": "Your AI Agent Crashed at 2 AM. Here’s How Google Fixes It.",
+       "url": "https://www.dev.to/hemapriya_kanagala/when-your-ai-agent-crashes-at-2-am-google-just-gave-you-a-way-to-fix-it-3da5",
+       "publisher": "dev.to",
+       "published_at": "2026-04-29T07:15:28",
+       "lede": "this is a submission for the google cloud next writing challenge tl;dr ai agents don’t just fail like traditional software. they fail because of how they reason. at google cloud next '26, google introduced agent observability (to see what your agent was thinking) and gemini cloud assist (to diagnose and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.22,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a603d5cefb83fe8f8ea7b",
+       "headline": "Okta for AI Agents is now generally available",
+       "url": "https://www.okta.com/blog/ai/okta-for-ai-agents-general-availability/",
+       "publisher": "okta.com",
+       "published_at": "2026-04-29T07:00:00",
+       "lede": "ai agents are reshaping the enterprise like the cloud and saas did, only faster, far less predictably, and without the identity foundation to secure them. as agents spread across your environment, they act on behalf of your users, connect to your most sensitive systems, and make autonomous decisions. when one",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.85
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c8db1e3933a6dd8ebaa0",
+       "headline": "$6.9B trade dataset powers RedCloud's planned FMCG AI agents",
+       "url": "https://www.stocktitan.net/news/RCT/red-cloud-unveils-specialist-ai-agents-trained-on-6-9-billion-fmcg-8ahcx5e2ijqq.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-28T13:20:00",
+       "lede": "london, uk, april 28, 2026 (globe newswire) -- redcloud holdings plc (nasdaq: rct ) (“redcloud” or the “company”), a leader in intelligent infrastructure for global trade, today announced planned introduction of three specialist ai agents within its redai platform. each agent is intended to partially automate high-frequency, high-value decisions across",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.43
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cf78a5706a322e132296",
+       "headline": "Claude-Powered AI Agent Deletes Company Database Within Seconds",
+       "url": "https://www.mandatory.com/news/1764775-claude-ai-agent-deletes-pocketos-database",
+       "publisher": "mandatory.com",
+       "published_at": "2026-04-28T10:44:49",
+       "lede": "the founder of pocketos, jer crane, revealed in an elaborate social media post that an ai coding agent deleted his firm’s entire production database. warning others about the “systematic failures” of ai agents, the founder detailed how the ai coding agent cursor, running anthropic’s flagship claude opus 4.6, caused a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.25,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23220c6105443aa5fdff8",
+       "headline": "An AI agent allegedly deleted a startup's production database",
+       "url": "https://www.mashable.com/article/ai-agent-deletes-data-30-hour-service-outage-pocketos",
+       "publisher": "mashable.com",
+       "published_at": "2026-04-27T18:58:04",
+       "lede": "people are trusting their ai agents with much more important work, but doing so still carries significant risks.just ask jeremy crane, founder of pocketos, a startup that builds software for car rental businesses. crane wrote a long post on x, detailing how a popular ai agent caused a 30-plus-hour outage",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.75
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c83b1e3933a6dd8e7032",
+       "headline": "An AI agent allegedly deleted a startup's production database",
+       "url": "https://mashable.com/article/ai-agent-deletes-data-30-hour-service-outage-pocketos",
+       "publisher": "mashable.com",
+       "published_at": "2026-04-27T18:58:04",
+       "lede": "people are trusting their ai agents with much more important work, but doing so still carries significant risks.just ask jeremy crane, founder of pocketos, a startup that builds software for car rental businesses. crane wrote a long post on x, detailing how a popular ai agent caused a 30-plus-hour outage",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.75
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 1949,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAxODo1ODowNCIsImkiOiI2OWYxYzgzYjFlMzkzM2E2ZGQ4ZTcwMzIiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.747,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.752
+    }
+   }
+  }
+ ]
+}

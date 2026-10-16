@@ -1,0 +1,911 @@
+{
+ "slug": "healthcare-industry",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:52:51Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "healthcare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "healthcare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 270004,
+     "tone": {
+      "carrying": 269407,
+      "availability_pct": 99.78,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 76410,
+        "share_pct": 28.36
+       },
+       {
+        "group": "neutral",
+        "count": 7080,
+        "share_pct": 2.63
+       },
+       {
+        "group": "positive",
+        "count": 185917,
+        "share_pct": 69.01
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 269939,
+      "count": 189849,
+      "share_pct": 70.33
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.753,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.756
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "healthcare",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "healthcare",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 59156,
+       "critical": 40784,
+       "critical_pct": 68.9,
+       "negative": 18702,
+       "positive": 38094,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 43479,
+       "critical": 31096,
+       "critical_pct": 71.5,
+       "negative": 12958,
+       "positive": 29091,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 55376,
+       "critical": 37243,
+       "critical_pct": 67.3,
+       "negative": 19979,
+       "positive": 33744,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 57320,
+       "critical": 39237,
+       "critical_pct": 68.5,
+       "negative": 20036,
+       "positive": 35681,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 57232,
+       "critical": 41633,
+       "critical_pct": 72.7,
+       "negative": 17225,
+       "positive": 38341,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 56686,
+       "critical": 41800,
+       "critical_pct": 73.7,
+       "negative": 16551,
+       "positive": 38515,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 52267,
+       "critical": 38681,
+       "critical_pct": 74.0,
+       "negative": 14689,
+       "positive": 35824,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 58718,
+       "critical": 43318,
+       "critical_pct": 73.8,
+       "negative": 15445,
+       "positive": 41280,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 62166,
+       "critical": 45530,
+       "critical_pct": 73.2,
+       "negative": 15521,
+       "positive": 44600,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 70660,
+       "critical": 50238,
+       "critical_pct": 71.1,
+       "negative": 21247,
+       "positive": 47674,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 61906,
+       "critical": 43408,
+       "critical_pct": 70.1,
+       "negative": 17997,
+       "positive": 42237,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 75272,
+       "critical": 50673,
+       "critical_pct": 67.3,
+       "negative": 21645,
+       "positive": 51406,
+       "partial_period": false
+      }
+     ],
+     "total": 710238,
+     "critical_total": 503641,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.068,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.07
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "healthcare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "healthcare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 270004,
+     "carrying": 106425,
+     "availability_pct": 39.42,
+     "items": [
+      {
+       "country": "united states",
+       "count": 56698,
+       "share_pct": 21.0
+      },
+      {
+       "country": "india",
+       "count": 14979,
+       "share_pct": 5.55
+      },
+      {
+       "country": "united kingdom",
+       "count": 7781,
+       "share_pct": 2.88
+      },
+      {
+       "country": "china",
+       "count": 2403,
+       "share_pct": 0.89
+      },
+      {
+       "country": "canada",
+       "count": 2112,
+       "share_pct": 0.78
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 22452
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.019,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.022
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "healthcare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "healthcare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "patient safety and quality improvement studies",
+       "count": 5506,
+       "share": 3.68,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 4983,
+       "delta_pct": 10.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "public health initiatives and programs",
+       "count": 4696,
+       "share": 3.14,
+       "lift": 256.32,
+       "baseline_count": 1,
+       "previous_period_count": 4048,
+       "delta_pct": 16.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "health economics and resource allocation",
+       "count": 3438,
+       "share": 2.3,
+       "lift": 187.65,
+       "baseline_count": 1,
+       "previous_period_count": 3061,
+       "delta_pct": 12.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "health system strengthening initiatives",
+       "count": 3085,
+       "share": 2.06,
+       "lift": 168.39,
+       "baseline_count": 1,
+       "previous_period_count": 2650,
+       "delta_pct": 16.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "health disparities and equity research",
+       "count": 6037,
+       "share": 4.04,
+       "lift": 109.84,
+       "baseline_count": 3,
+       "previous_period_count": 5168,
+       "delta_pct": 16.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 270004,
+     "carrying": 149554,
+     "carrier_share_pct": 55.39,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.074,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.083
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "healthcare",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "healthcare",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2aa9375cefb83fe8278a88",
+       "headline": "Measles surge accompanied by rising dengue prevalence",
+       "url": "http://www.dhakatribune.com/bangladesh/health/408829/measles-surge-accompanied-by-rising-dengue",
+       "publisher": "dhakatribune.com",
+       "published_at": "2026-04-27T16:16:04",
+       "lede": "a nationwide measles outbreak continues to spread across bangladesh, alongside a gradual rise in dengue cases, placing mounting pressure on the country’s healthcare system. hospitals are reporting increasing admissions, overcrowding, and growing concern among parents and health professionals as both infections circulate simultaneously. so far, 269 children have died due",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.83
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efac29727212302c60250f",
+       "headline": "Personal and Medical Records of 160,312 Americans Potentially Exposed After Major Data Breach Hits Healthcare Firm - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/25/personal-and-medical-records-of-160312-americans-potentially-exposed-after-major-data-breach-hits-healthcare-firm/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-25T17:40:27",
+       "lede": "the sensitive data of hundreds of thousands of americans is at risk after a healthcare firm was hit by a cybersecurity attack. according to the u.s. department of health and human services office for civil rights, southern illinois dermatology has <a href=\"https://ocrportal.hhs.gov/ocr/breach/breach_report_hip.jsf\" rel=\"noopener\" target=\"_blank\">reported</a> a hacking and it incident affecting",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a97fbdd09a23d095a860",
+       "headline": "Duale tells Senate SHA system under strain from fraud",
+       "url": "https://www.capitalfm.co.ke/business/2026/04/duale-tells-senate-sha-system-under-strain-from-fraud/",
+       "publisher": "capitalfm.co.ke",
+       "published_at": "2026-04-22T19:55:09",
+       "lede": "nairobi, kenya, apr 22 – health cabinet secretary aden duale has raised alarm over what he described as widespread fraud within the country’s health system, revealing that digital audits have flagged suspicious patient activity, inflated dependents, and collusion between some patients, healthcare workers, and health facilities. appearing before the senate",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "kenya",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99ba975f157062cafd1ab",
+       "headline": "Sensitive Information Belonging to 337,917 People Potentially Exposed As Tennessee Healthcare Firm Hit by Data Breach - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/20/sensitive-information-belonging-to-337917-people-potentially-exposed-as-tennessee-healthcare-firm-hit-by-data-breach/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-20T12:30:04",
+       "lede": "hundreds thousands of people are impacted by a cybersecurity incident at a us healthcare facility. according to a new <a href=\"https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/fb04ea66-92bb-4a15-b02c-8d1a9f783461.html\" rel=\"noopener\" target=\"_blank\">filing</a> with the maine attorney general, the hackers who targeted the tennessee-based cookeville regional medical center (crmc) have affected 337,917 people, including 22 maine residents. the healthcare firm",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.48
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e864745cfa3e5ba5f2091a",
+       "headline": "50,640 People Affected After Hackers Hit Healthcare Firm, Stealing Personal, Financial and Medical Data - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/18/50640-people-affected-after-hackers-hit-healthcare-firm-stealing-personal-financial-and-medical-data/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-18T14:30:43",
+       "lede": "new data shows that tens of thousands of people have been affected after hackers attacked a healthcare firm and accessed sensitive patient information. according to the u.s. department of health and human services office for civil rights, utah-based rocky mountain associated physicians recently<a href=\"https://ocrportal.hhs.gov/ocr/breach/breach_report_hip.jsf\" rel=\"noopener\" target=\"_blank\"> reported</a> a hacking incident",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 88,
+         "path": "/Health/Medical Facilities & Services/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8661b5cfa3e5ba5f3183c",
+       "headline": "Bay Area doctor highlights health inequities for Black pregnant women",
+       "url": "https://www.fox13news.com/news/bay-area-doctors-health-black-pregnant-women",
+       "publisher": "fox13news.com",
+       "published_at": "2026-04-18T03:19:46",
+       "lede": "friday marks the end of <a href=\"https://www.fox13news.com/news/facing-50-minute-drive-how-tampa-bay-doctors-fighting-floridas-maternity-care-deserts\" target=\"_self\" rel=\"noopener\">black maternal health</a> week, and bay area doctors are sharing where progress is still needed to help fix disparities in healthcare for black pregnant women.the <a href=\"https://www.fox13news.com/news/erica-schwartz-cdc-trump-administration\" target=\"_self\" rel=\"noopener\">centers for disease control</a> and prevention released its <a href=\"https://www.cdc.gov/nchs/data/hestat/hestat113.htm\" target=\"_blank\" rel=\"noopener\">latest data</a> in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86b687bb1410d4c7975a2",
+       "headline": "First responders credit years of training for lives saved during the Florida State University shooting",
+       "url": "https://www.wtxl.com/northeast-tallahassee/first-responders-credit-years-of-training-for-lives-saved-during-the-florida-state-university-shooting",
+       "publisher": "wtxl.com",
+       "published_at": "2026-04-17T13:33:47",
+       "lede": "april 17, 2025, started as a typical thursday for leon county ems.\"that thursday was just like a normal day here for us in tallahassee, responding to calls in the community and providing service just like any other day would have been,\" ems chief chad abrams said.that’s before gunfire erupted on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 129,
+         "path": "/Law & Government/Public Safety/Emergency Services",
+         "score": 0.69
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e4219baafc7356def53c",
+       "headline": "Wasted Dollars, Wrong Priorities: What Trump and Miller's Mass Deportation Spending Spree Costs Working Families - America's Voice",
+       "url": "https://americasvoice.org/press_releases/wasted-dollars-wrong-priorities-what-trump-and-millers-mass-deportation-spending-spree-costs-working-families/",
+       "publisher": "americasvoice.org",
+       "published_at": "2026-04-17T12:33:53",
+       "lede": "trump and miller are demanding billions more for mass deportation through a second reconciliation bill with a june 1 deadline. the initial $191 billion allocated in 2025 through reconciliation was pulled directly from healthcare, food assistance, disaster relief, and law enforcement budgets. that effort reveals the gop’s priorities: they’ve poured",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.73
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9916d75f157062ca7ba40",
+       "headline": "Average of 47 women and girls killed daily during Gaza war, UN says",
+       "url": "https://www.straitstimes.com/world/middle-east/average-of-47-women-and-girls-killed-daily-during-gaza-war-un-says",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-17T11:44:14",
+       "lede": "sign up now: get st's newsletters delivered to your inbox the authorities said extensive damage to infrastructure has made it difficult for women in gaza to access healthcare. deeperdive is a beta ai feature. refer to full articles for the facts. geneva – an average of at least 47 women",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.9
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69df3fadd5c0410ab0e95107",
+       "headline": "This week, Republicans in the House of Representatives planned a vote to repeal President Barack Obama's healthcare legislation - the law that first caused the Tea Party movement to erupt on to the national scene in a series of furious encounters with politicians who supported the changes. Now, the ",
+       "url": "https://www.bbc.co.uk/blogs/thereporters/markmardell/2011/01/sarah_palin_and_the_arizona_sh_1.html",
+       "publisher": "bbc.co.uk",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "this week, republicans in the house of representatives planned a vote to repeal president barack obama's healthcare legislation - the law that first caused the tea party movement to erupt on to the national scene in a series of furious encounters with politicians who supported the changes. now, the vote",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.81
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "barack obama",
+        "barack obama",
+        "barack obama"
+       ]
+      },
+      {
+       "id": "69e8b3365cfa3e5ba5295929",
+       "headline": "Trump’s new budget ignores dying Americans and gives away record sums to the US military",
+       "url": "https://www.theguardian.com/us-news/2026/apr/12/trump-budget-healthcare-military",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-12T11:00:16",
+       "lede": "americans are dying in droves. deaths due to avoidable causes in the united states –which could be dealt with via prevention or proper healthcare – far outpace those in most of country’s peers in the industrialized world. most notably, americans die of treatable conditions at nearly twice the rate as",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.74
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        },
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e50026d5e7fc42ee0f001c",
+       "headline": "46,666 People Affected After Hackers Hit Healthcare Firm – Company Warns Data Now on Dark Web in 'Limited Amount' - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/11/46666-people-affected-after-hackers-hit-healthcare-firm-company-warns-data-now-on-dark-web-in-limited-amount/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-11T13:55:31",
+       "lede": "tens of thousands of people are affected by a medical cybersecurity incident involving patient information. according to a new <a href=\"https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/ec29e611-132e-4e18-83ac-219721dd96de.html\" rel=\"noopener\" target=\"_blank\">filing</a> with the maine attorney general, the incident at alabama-based heart south cardiovascular group affected 46,666 people, including three maine residents. the healthcare firm says it learned on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f0149d0e7fe4699d008b",
+       "headline": "98 km in 85 minutes: Live heart transported through green corridor from Rohtak to Delhi",
+       "url": "https://businessnewsthisweek.com/health/98-km-in-85-minutes-live-heart-transported-through-green-corridor-from-rohtak-to-delhi/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-04-11T05:51:23",
+       "lede": "new delhi, apr 11th: in a remarkable display of medical coordination and rapid response, a donor heart was transported via a green corridor from pgims rohtak to fortis escorts, okhla, new delhi, covering a distance of 98 km in just 85 minutes between 2:50 pm and 4:15 pm. the timely",
+       "sentiment": null,
+       "priority": 9,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.69
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.6
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d0dc90d9a716b4c7bc8a",
+       "headline": "$39.5M verdict awarded to family of victims from 2019 West Philadelphia massacre",
+       "url": "https://6abc.com/post/395m-verdict-awarded-family-victims-2019-west-philadelphia-massacre/18856979/",
+       "publisher": "6abc.com",
+       "published_at": "2026-04-08T18:07:20",
+       "lede": "$39.5m verdict awarded to family of victims from 2019 west philadelphia massacre philadelphia (wpvi) -- a philadelphia jury awarded a nearly $40 million verdict in the civil trial over a massacre six years ago where four family members were murdered. the lawsuit claimed a texas-based healthcare management company failed to",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.82
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.63
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e35b0ee868bb52b25c4154",
+       "headline": "Exclusive Interview: Only 6 Weeks Of Medical Supplies Left, Says Lebanon’s Former Health Minister  | Outlook India",
+       "url": "https://www.outlookindia.com/international/exclusive-interview-only-6-weeks-of-medical-supplies-left-says-lebanons-former-health-minister",
+       "publisher": "outlookindia.com",
+       "published_at": "2026-04-08T07:51:59",
+       "lede": "healthcare collapse: lebanon’s hospitals are under attack, over 1.2 million people are displaced, and the country has only six weeks of medical supplies left.political crisis: israeli strikes and threats in the south are complicating the lebanese government’s efforts to curb hezbollah’s armed role.aid shortfall: international support remains far below needs,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.84
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "hezbollah"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e29fa7dc480588dc9d2ac2",
+       "headline": "Lebanese Doctors Warn Israel Is Inflicting Gaza-Style Devastation on Their Healthcare System | Common Dreams",
+       "url": "https://www.commondreams.org/news/israel-bombs-lebanon-hospitals",
+       "publisher": "commondreams.org",
+       "published_at": "2026-04-06T16:47:01",
+       "lede": "doctors in lebanon are warning that the israeli military appears to be waging a campaign of deliberate destruction on their country's healthcare system.in an interview with the associated press published monday, sidon-based surgeon dr. mohammed ziara, who previously worked in gaza city, said that he believes israel is trying to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.95
+        }
+       ],
+       "country": "lebanon",
+       "organizations": [
+        "associated press",
+        "ap"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 24471,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wNiAxNjo0NzowMSIsImkiOiI2OWUyOWZhN2RjNDgwNTg4ZGM5ZDJhYzIiLCJwIjo5fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.454,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.459
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1062 @@
+{
+ "slug": "x-twitter-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:13:08Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "Twitter",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "twitter",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 125100,
+     "tone": {
+      "carrying": 124845,
+      "availability_pct": 99.8,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 52615,
+        "share_pct": 42.14
+       },
+       {
+        "group": "neutral",
+        "count": 2455,
+        "share_pct": 1.97
+       },
+       {
+        "group": "positive",
+        "count": 69775,
+        "share_pct": 55.89
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 125052,
+      "count": 50532,
+      "share_pct": 40.41
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.673,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.676
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "Twitter",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "twitter",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 28573,
+       "critical": 11893,
+       "critical_pct": 41.6,
+       "negative": 12893,
+       "positive": 14708,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 21194,
+       "critical": 8213,
+       "critical_pct": 38.8,
+       "negative": 8586,
+       "positive": 12044,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 47631,
+       "critical": 15938,
+       "critical_pct": 33.5,
+       "negative": 22862,
+       "positive": 23932,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 137916,
+       "critical": 59989,
+       "critical_pct": 43.5,
+       "negative": 73769,
+       "positive": 61869,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 29691,
+       "critical": 11662,
+       "critical_pct": 39.3,
+       "negative": 11357,
+       "positive": 17111,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 24359,
+       "critical": 9580,
+       "critical_pct": 39.3,
+       "negative": 9387,
+       "positive": 14409,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 22039,
+       "critical": 8897,
+       "critical_pct": 40.4,
+       "negative": 8490,
+       "positive": 13020,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 21430,
+       "critical": 8124,
+       "critical_pct": 37.9,
+       "negative": 7878,
+       "positive": 12967,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 22140,
+       "critical": 9302,
+       "critical_pct": 42.0,
+       "negative": 9286,
+       "positive": 12411,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 30691,
+       "critical": 13092,
+       "critical_pct": 42.7,
+       "negative": 12610,
+       "positive": 17478,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 31828,
+       "critical": 13831,
+       "critical_pct": 43.5,
+       "negative": 14561,
+       "positive": 16529,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 40441,
+       "critical": 14307,
+       "critical_pct": 35.4,
+       "negative": 16158,
+       "positive": 23357,
+       "partial_period": false
+      }
+     ],
+     "total": 457933,
+     "critical_total": 184828,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.143,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.146
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "Twitter",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "twitter",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 125100,
+     "carrying": 52042,
+     "availability_pct": 41.6,
+     "items": [
+      {
+       "country": "united states",
+       "count": 26493,
+       "share_pct": 21.18
+      },
+      {
+       "country": "south africa",
+       "count": 5957,
+       "share_pct": 4.76
+      },
+      {
+       "country": "india",
+       "count": 2905,
+       "share_pct": 2.32
+      },
+      {
+       "country": "united kingdom",
+       "count": 2672,
+       "share_pct": 2.14
+      },
+      {
+       "country": "malaysia",
+       "count": 1191,
+       "share_pct": 0.95
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 12824
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.996,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.999
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "Twitter",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "twitter",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "cryptocurrency impact on forex markets",
+       "count": 5585,
+       "share": 7.63,
+       "lift": 20.75,
+       "baseline_count": 30,
+       "previous_period_count": 1831,
+       "delta_pct": 205.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "entertainment industry awards shows",
+       "count": 1174,
+       "share": 1.6,
+       "lift": 14.54,
+       "baseline_count": 9,
+       "previous_period_count": 494,
+       "delta_pct": 137.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 238,
+       "share": 0.32,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 178,
+       "delta_pct": 33.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "winter weather preparedness",
+       "count": 349,
+       "share": 0.48,
+       "lift": 19.45,
+       "baseline_count": 2,
+       "previous_period_count": 87,
+       "delta_pct": 301.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "political satire and news comedy",
+       "count": 309,
+       "share": 0.42,
+       "lift": 17.22,
+       "baseline_count": 2,
+       "previous_period_count": 399,
+       "delta_pct": -22.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 125100,
+     "carrying": 73242,
+     "carrier_share_pct": 58.55,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.556,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.558
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "Twitter",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "twitter",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2b2c93963d76f4af4c8e5a",
+       "headline": "Michael Jackson’s Nephew Slams Media Ahead of ‘Michael’ Biopic Release: ‘Can’t Wait ‘Till Some Critics Have to Eat Crow’",
+       "url": "https://www.yahoo.com/entertainment/movies/articles/michael-jackson-nephew-slams-media-203846645.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-22T20:38:46",
+       "lede": "just ahead of the friday release of the michael jackson biopic “michael,” a family member has taken gleeful aim at the media in a series of posts. taj jackson, michael’s nephew and the son of jackson 5 member tito, took to twitter/x to jeer at the media writ large on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e651502be6445e46121f76",
+       "headline": "Dick Vitale health update: College hoops analyst confirms cancer back",
+       "url": "https://www.freep.com/story/sports/nba/pistons/2026/04/13/dick-vitale-health-update-college-hoops-analyst-confirms-cancer-back/89599466007/",
+       "publisher": "freep.com",
+       "published_at": "2026-04-14T00:38:29",
+       "lede": "april 13, 2026, 8:38 p.m. et dick vitale's latest biopsy has brought some bad news. in a statement shared by espn's pr account on x (formerly twitter), the legendary college basketball analyst announced on monday, april 13 that results from his biopsy last week confirmed a diagnosis of melanoma in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.23,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.66
+        },
+        {
+         "code": 3,
+         "path": "/News/Sports News",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "espn",
+        "vitale"
+       ],
+       "people": [
+        "dick vitale"
+       ]
+      },
+      {
+       "id": "69e646ff2be6445e460bfd1b",
+       "headline": "Dick Vitale health update: College basketball analyst confirms melanoma diagnosis",
+       "url": "https://www.cincinnati.com/story/sports/2026/04/13/dick-vitale-health-update-melanoma-diagnosis-cancer/89597325007/",
+       "publisher": "cincinnati.com",
+       "published_at": "2026-04-13T21:17:10",
+       "lede": "april 13, 2026, 5:17 p.m. et dick vitale's latest biopsy has brought some bad news. in a statement shared by espn's pr account on x (formerly twitter), the legendary college basketball analyst announced on monday, april 13 that results from his biopsy last week confirmed a diagnosis of melanoma in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.24,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.66
+        },
+        {
+         "code": 3,
+         "path": "/News/Sports News",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "espn",
+        "vitale"
+       ],
+       "people": [
+        "dick vitale"
+       ]
+      },
+      {
+       "id": "69de0692663c1a92686cf066",
+       "headline": "It's not really the kind of message you expect to get from a friend or a colleague - or indeed from anyone you might know on a social network. The direct message from a Twitter friend read: \"hey, i've been having better sex and longer with this here...\" followed by a link to a website, which I chose",
+       "url": "https://www.bbc.co.uk/blogs/thereporters/rorycellanjones/2010/02/embarrassment_on_twitter.html",
+       "publisher": "bbc.co.uk",
+       "published_at": "2026-04-13T00:00:00",
+       "lede": "it's not really the kind of message you expect to get from a friend or a colleague - or indeed from anyone you might know on a social network. the direct message from a twitter friend read: \"hey, i've been having better sex and longer with this here...\" followed by",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e875407bb1410d4c7fe90c",
+       "headline": "President shares video alleging Israeli soldiers abused Palestinian child, compares situation to massacre of Jewish people - The Korea Times",
+       "url": "https://koreatimes.co.kr/foreignaffairs/20260410/president-shares-video-alleging-israeli-soldiers-abused-palestinian-child-compares-situation-to-massacre-of-jewish-people",
+       "publisher": "koreatimes.co.kr",
+       "published_at": "2026-04-10T01:45:05",
+       "lede": "a video reposted by president lee jae myung claiming that israeli soldiers abused a palestinian child and then threw him off a rooftop / captured from president lee jae myung's x (formerly twitter) account president lee jae myung shared a video on social media friday alleging that israeli soldiers abused",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.77,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "social media"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e324ca660da7a6a2026868",
+       "headline": "President shares video alleging Israeli soldiers abused Palestinian child, compares situation to massacre of Jewish people - The Korea Times",
+       "url": "https://www.koreatimes.co.kr/foreignaffairs/20260410/president-shares-video-alleging-israeli-soldiers-abused-palestinian-child-compares-situation-to-massacre-of-jewish-people",
+       "publisher": "koreatimes.co.kr",
+       "published_at": "2026-04-10T01:45:05",
+       "lede": "a video reposted by president lee jae myung claiming that israeli soldiers abused a palestinian child and then threw him off a rooftop / captured from president lee jae myung's x (formerly twitter) account president lee jae myung shared a video on social media friday alleging that israeli soldiers abused",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.77,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "social media"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2cd037f3a572cf4b3f25a",
+       "headline": "'Trump Bows To Iranian Civilisation': Iran Mission Dig At US President Hours After Ceasefire",
+       "url": "https://www.timesnownews.com/world/us/us-news/donald-trump-bows-to-iranian-civilisation-iran-mission-dig-at-us-president-hours-after-ceasefire-article-154028862",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-08T14:55:03",
+       "lede": "iran took a dig at donald trump on wednesday, hours after the two nations agreed on a two-week long ceasefire to halt the fighting saying that the us president has bowed down before the iranian civilisation. in a post on x, formerly twitter, iran mission in india, posted an ai",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.85
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.65
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.44
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.4
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e2c94a3aab8d96aa3ac72a",
+       "headline": "Iran claims victory in war with US after ceasefire but has a warning",
+       "url": "https://www.ibtimes.co.in/iran-claims-victory-war-us-after-ceasefire-has-warning-900730",
+       "publisher": "ibtimes.co.in",
+       "published_at": "2026-04-08T05:24:10",
+       "lede": "minutes after us president donald trump announced a two-week ceasefire with iran, tehran accepted the deal. posting on the social media platform x (formerly twitter), iran's foreign minister seyed abbas araghchi stated: \"if attacks against iran are halted, our powerful armed forces will cease their defensive operations.\" araghchi expressed gratitude",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.8
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.68
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.54
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": [
+        "abbas araghchi",
+        "abbas araghchi",
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e2a381601121844c3666a9",
+       "headline": "ATAQUE al CORAZÓN ENERGÉTICO de IRÁN: 5 MUERTOS y 170 HERIDOS",
+       "url": "https://flipr.com.ar/nacionales/streaming/c5n/ataque-al-corazon-energetico-de-iran-5-muertos-y-170-heridos/",
+       "publisher": "flipr.com.ar",
+       "published_at": "2026-04-05T07:33:19",
+       "lede": "i continued the live stream 24 hours a day: https://www.youtube.com/@c5n/live visit https://www.c5n.com/ subscribe to our channel: https://bit.ly/c5nyyoutube follow us also on: · instagram: https://www.instagram.com/c5n · facebook: https://www.facebook.com/c5n.news · twitter: https://www.twitter.com/c5n · tiktok: https://www.tiktok.com/@c5n · whatsapp: https://whatsapp.com/cannel/0029va9g3fgcsu9hmurz3w c5n, argentina's news leader. #c5nenvivo #c5n #news arrow_back_ios abstract × attaque to iran's energy",
+       "sentiment": null,
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dd25fc77bfddb9f1ad305b",
+       "headline": "News Wrap: North Korea warns against U.S. aggression with th",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/news-wrap-north-korea-warns-against-u-s-aggression-with-threat-to-strike-1492027089",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-16T00:00:00",
+       "lede": "in our news wrap tuesday, north korea issued a fiery new warning to the united states, threatening nuclear strikes on american military bases in south korea and elsewhere if the u.s. makes any aggressive move. president trump took to twitter, saying help from china would be “great.” also, democrats were",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.76
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bcc8b48d57adc3f4daaf2a",
+       "headline": "Agencia internacional desmiente a Grok tras afirmar que video de ataque a IrÃ¡n corresponde a 2021",
+       "url": "https://www.biobiochile.cl/noticias/internacional/mediooriente/2026/03/01/agencia-internacional-desmiente-a-grok-tras-afirmar-que-video-de-ataque-a-iran-corresponde-a-2021.shtml",
+       "publisher": "biobiochile.cl",
+       "published_at": "2026-03-01T22:42:02",
+       "lede": "in a fact that has called attention, the international news agency, efe, has gone out to deny grok, the ai of x (ex twitter) after stating that a video shared by the agency of the attack yesterday in iran, corresponds to the city of kabul (afghanistan) in 2021. we speak",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.86,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.9
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8b1828cc3ffdb59706636",
+       "headline": "Trump Exposed as Hypocrite by His Own Iran War Doomsday Warnings",
+       "url": "https://www.thedailybeast.com/donald-trump-warned-us-how-desperate-it-would-be-to-attack-iran/",
+       "publisher": "thedailybeast.com",
+       "published_at": "2026-02-28T11:29:38",
+       "lede": "for years, donald trump publicly claimed that a military attack on iran would reflect an inability to negotiate, scrambled electioneering, or a limp attempt from a president to “show how tough” he is.then, early saturday morning, he did it anyway.in a video posted to twitter, trump—not even wearing a tie—announced",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.85
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69d117ed44cbe2214453b3eb",
+       "headline": "X permite publicaÃ§Ãµes de vÃ­deos que simulam estupros apesar de polÃ­ticas internas de seguranÃ§a",
+       "url": "https://www1.folha.uol.com.br/tec/2026/01/x-permite-publicacoes-de-videos-que-simulam-estupros-apesar-de-politicas-internas-de-seguranca.shtml",
+       "publisher": "folha.uol.com.br",
+       "published_at": "2026-01-28T04:00:00",
+       "lede": "sã ́o paulo the x platform, former twitter, has allowed video publications that simulate rape and sexual abuse despite its own policy of security. in a one-week space, the leaf identified more than 20 videos that alluded to sexual rape. another 375 posts mentioned a type of paraphilia characterized by",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.78,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc08f7dded76ae100ddc85",
+       "headline": "Iran horror as body bags line street after regime massacre – ‘Blood everywhere’ | World | News - Amed Post",
+       "url": "https://amedpost.com/iran-horror-as-body-bags-line-street-after-regime-massacre-blood-everywhere-world-news/",
+       "publisher": "amedpost.com",
+       "published_at": "2026-01-13T17:56:53",
+       "lede": "a resident in iran has shared a horrific account of the “ruthless reality” in the streets of iran following ongoing protests. the woman, who managed to post on x, formerly twitter, despite internet blackouts, claimed that her colleague “saw a line of bodies in two rows on the sidewalk” in",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.82,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.8
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8820f43843dd771cf6d20",
+       "headline": "Gov. Hochul vows to change N.Y. redistricting process after court ruling; Malliotakis hits back",
+       "url": "https://www.silive.com/politics/2026/04/gov-hochul-vows-to-change-ny-redistricting-process-after-court-ruling-malliotakis-hits-back.html",
+       "publisher": "silive.com",
+       "published_at": "2026-04-30T15:32:29",
+       "lede": "staten island, n.y. — gov. kathy hochul vowed to work with the legislature to make changes to the state’s redistricting process in response to a recent supreme court decision. on wednesday, the governor responded to an ap news post on x, formerly known as twitter, which broke the news of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "kathy hochul",
+        "kathy hochul"
+       ]
+      },
+      {
+       "id": "6a03feb6220687a966a6b80c",
+       "headline": "Gas prices hit highest point since Iran war began",
+       "url": "https://www.ideastream.org/2026-04-30/gas-prices-hit-highest-point-since-iran-war-began",
+       "publisher": "ideastream.org",
+       "published_at": "2026-04-30T10:46:58",
+       "lede": "gas prices hit highest point since iran war began npr | by stephan bisaha published april 30, 2026 at 6:46 am edt facebook twitter linkedin email listen • 1:58 gas prices are at their highest since the war with iran began. copyright 2026 npr facebook twitter linkedin email stephan bisaha",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.72
+        },
+        {
+         "code": 300,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Gas Prices & Vehicle Fueling",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a877a963d76f4afd90d84",
+       "headline": "Scott Peters criticizes Republican policies on health care, Afghan allies, and voting rights - San Diego City Wire",
+       "url": "https://sandiegocitywire.com/scott-peters-criticizes-republican-policies-on-health-care-afghan-allies-and-voting-rights/",
+       "publisher": "sandiegocitywire.com",
+       "published_at": "2026-04-29T20:01:42",
+       "lede": "rep. scott peters, who represents california’s 50th district in the u.s. congress, has recently posted a series of statements on his twitter account addressing issues ranging from healthcare access to the treatment of afghan allies and voting rights. on april 28, 2026, peters criticized congressional republicans for not extending affordable",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.84
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec3568e67a2fcb3cab5ee",
+       "headline": "Parallel Web Systems hits $2B valuation five months after its last big raise | TechCrunch",
+       "url": "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/",
+       "publisher": "techcrunch.com",
+       "published_at": "2026-04-29T18:33:05",
+       "lede": "in brief parallel web systems, the ai agent-tool startup founded by former twitter ceo parag agrawal, has raised a $100 million series b at a $2 billion valuation led by sequoia. existing investors kleiner perkins, index ventures, khosla ventures, first round capital, spark capital, and terrain capital also participated, the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.58
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1e54c37f6c5e6634656a",
+       "headline": "Parallel Web Systems hits $2B valuation five months after its last big raise | TechCrunch",
+       "url": "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise",
+       "publisher": "techcrunch.com",
+       "published_at": "2026-04-29T18:33:05",
+       "lede": "in brief parallel web systems, the ai agent-tool startup founded by former twitter ceo parag agrawal, has raised a $100 million series b at a $2 billion valuation led by sequoia. existing investors kleiner perkins, index ventures, khosla ventures, first round capital, spark capital, and terrain capital also participated, the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.58
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a08b3d3cdd78e41b0eefdca",
+       "headline": "Kevin Durant burner account rumors, explained: Why fans think Rockets star is bashing teammates on Twitter | Sporting News",
+       "url": "https://www.sportingnews.com/ca/nba/houston-rockets/news/kevin-durant-burner-account-rumors-rockets-twitter/07eaaaf19d4f8fc84ba3b877",
+       "publisher": "sportingnews.com",
+       "published_at": "2026-04-29T15:00:00",
+       "lede": "houston rockets star kevin durant said all the way back in 2019 that he operated a burner account on twitter to anonymously post and quietly interact with friends. has the internet found it? some sleuths believe they have uncovered a burner account used by durant, and the account's activity raises",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 20,
+     "total_estimate": 3184,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAxNTowMDowMCIsImkiOiI2YTA4YjNkM2NkZDc4ZTQxYjBlZWZkY2EiLCJwIjo4fQ",
+     "unresolved": 5,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.877,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "5 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.879
+    }
+   }
+  }
+ ]
+}

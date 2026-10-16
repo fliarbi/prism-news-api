@@ -1,0 +1,1011 @@
+{
+ "slug": "ozempic-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:29Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "ozempic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ozempic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4193,
+     "tone": {
+      "carrying": 4189,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1575,
+        "share_pct": 37.6
+       },
+       {
+        "group": "neutral",
+        "count": 17,
+        "share_pct": 0.41
+       },
+       {
+        "group": "positive",
+        "count": 2597,
+        "share_pct": 62.0
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4192,
+      "count": 2823,
+      "share_pct": 67.34
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.67,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.673
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "ozempic",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ozempic",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 748,
+       "critical": 497,
+       "critical_pct": 66.4,
+       "negative": 318,
+       "positive": 429,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 744,
+       "critical": 515,
+       "critical_pct": 69.2,
+       "negative": 228,
+       "positive": 510,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 788,
+       "critical": 437,
+       "critical_pct": 55.5,
+       "negative": 266,
+       "positive": 518,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 970,
+       "critical": 659,
+       "critical_pct": 67.9,
+       "negative": 361,
+       "positive": 604,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 872,
+       "critical": 644,
+       "critical_pct": 73.9,
+       "negative": 338,
+       "positive": 529,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 709,
+       "critical": 480,
+       "critical_pct": 67.7,
+       "negative": 255,
+       "positive": 452,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 922,
+       "critical": 653,
+       "critical_pct": 70.8,
+       "negative": 361,
+       "positive": 552,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 899,
+       "critical": 566,
+       "critical_pct": 63.0,
+       "negative": 272,
+       "positive": 620,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 759,
+       "critical": 452,
+       "critical_pct": 59.6,
+       "negative": 268,
+       "positive": 488,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1081,
+       "critical": 740,
+       "critical_pct": 68.5,
+       "negative": 377,
+       "positive": 699,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1355,
+       "critical": 982,
+       "critical_pct": 72.5,
+       "negative": 600,
+       "positive": 747,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 998,
+       "critical": 649,
+       "critical_pct": 65.0,
+       "negative": 330,
+       "positive": 663,
+       "partial_period": false
+      }
+     ],
+     "total": 10845,
+     "critical_total": 7274,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.291,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.295
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "ozempic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ozempic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4193,
+     "carrying": 1938,
+     "availability_pct": 46.22,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1214,
+       "share_pct": 28.95
+      },
+      {
+       "country": "india",
+       "count": 220,
+       "share_pct": 5.25
+      },
+      {
+       "country": "united kingdom",
+       "count": 151,
+       "share_pct": 3.6
+      },
+      {
+       "country": "canada",
+       "count": 83,
+       "share_pct": 1.98
+      },
+      {
+       "country": "china",
+       "count": 29,
+       "share_pct": 0.69
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 241
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.92,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.922
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "ozempic",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ozempic",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "diabetes medication management",
+       "count": 563,
+       "share": 20.74,
+       "lift": 1693.36,
+       "baseline_count": 1,
+       "previous_period_count": 514,
+       "delta_pct": 9.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "generic drug development and market trends",
+       "count": 577,
+       "share": 21.26,
+       "lift": 433.87,
+       "baseline_count": 4,
+       "previous_period_count": 308,
+       "delta_pct": 87.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "drug pricing and reimbursement strategies",
+       "count": 626,
+       "share": 23.07,
+       "lift": 376.57,
+       "baseline_count": 5,
+       "previous_period_count": 476,
+       "delta_pct": 31.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "prescription weight loss drugs",
+       "count": 166,
+       "share": 6.12,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 290,
+       "delta_pct": -42.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "intellectual property in pharma patents",
+       "count": 139,
+       "share": 5.12,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 33,
+       "delta_pct": 321.2,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4193,
+     "carrying": 2714,
+     "carrier_share_pct": 64.73,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.563,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.565
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "ozempic",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ozempic",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f1cc26a5706a322e115df7",
+       "headline": "Health regulator authorizes Indian company to sell first generic Ozempic in Canada",
+       "url": "https://www.theglobeandmail.com/business/economy/article-generic-ozempic-glp1-approved-health-canada/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-28T21:06:20",
+       "lede": "open this photo in gallery: a doctor in mumbai displays the ozempic glp-1 self-injectable at a clinic.indranil mukherjee/afp/getty images indian pharmaceutical company dr. reddy’s laboratories ltd. has become the first drug maker approved by health canada to sell a generic version of the blockbuster drug ozempic. the authorization comes nearly",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.73
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.71
+        }
+       ],
+       "country": "canada",
+       "organizations": [
+        "health canada"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d925713680636eef7bfb",
+       "headline": "Man claiming he's proof 'Ozempic penis' exists makes x-rated confession about how it's impacted his life",
+       "url": "https://uniladtech.com/news/ozempic-penis-x-rated-confession-943643-20260428",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-04-28T15:17:43",
+       "lede": "weight loss injections have transformed the lives of millions of people around the world, and the stories keep coming. originally designed to treat diabetes, glp-1 drugs like ozempic, wegovy and mounjaro have become one of the most talked-about medical revolutions of recent years. numerous online influencers have been showing off",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 377,
+         "path": "/Beauty & Fitness/Weight Loss",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c92da5706a322e102509",
+       "headline": "Synthetic Semaglutide vs Ozempic: Comparable Efficacy in Type 2 Diabetes",
+       "url": "https://www.clinicaladvisor.com/news/synthetic-semaglutide-vs-ozempic-type-2-diabetes/",
+       "publisher": "clinicaladvisor.com",
+       "published_at": "2026-04-27T15:15:08",
+       "lede": "a new synthetic semaglutide injection made by sun pharma, compared with the branded ozempic® (semaglutide) formulation, provides similar results irrespective of baseline postprandial and fasting glucose levels among patients with type 2 diabetes, according to study results presented at the american association of clinical endocrinology (aace) annual meeting held in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.94
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "sun pharma"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ee0bee540a46fb5802885",
+       "headline": "GLP-1 Drugs Linked to Cognitive Impairment, Though the Reason Why Probably Isn’t What You Expect",
+       "url": "https://www.yahoo.com/news/articles/glp-1-drugs-linked-cognitive-113000269.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-25T11:30:00",
+       "lede": "extensive research has shown that glucagon-like peptide-1 (glp-1) agonist drugs like semaglutide, the active ingredient in ozempic, appear to have a constellation of different health benefits beyond the treatment of diabetes and weight loss. in addition to cutting the progression kidney disease, lowering the risk of opiate addiction and prolonging",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.6,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.7
+        },
+        {
+         "code": 491,
+         "path": "/Health/Aging & Geriatrics/Alzheimer's Disease",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa9fa8a54b8f07c95c05b",
+       "headline": "GLP-1 Drugs Linked to Cognitive Impairment, Though the Reason Why Probably Isn't What You Expect",
+       "url": "https://futurism.com/health-medicine/glp-1-drugs-linked-cognitive-impairment",
+       "publisher": "futurism.com",
+       "published_at": "2026-04-25T11:30:00",
+       "lede": "sign up to see the future, today can’t-miss innovations from the bleeding edge of science and tech email address sign up thank you! extensive research has shown that glucagon-like peptide-1 (glp-1) agonist drugs like semaglutide, the active ingredient in ozempic, appear to have a constellation of different health benefits beyond",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.64
+        },
+        {
+         "code": 491,
+         "path": "/Health/Aging & Geriatrics/Alzheimer's Disease",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea50d77e2e51112025e226",
+       "headline": "Novo Nordisk plant Ozempic-Tabletten für 10- bis 17-Jährige – darum ist das ein Novum",
+       "url": "https://de.finance.yahoo.com/nachrichten/novo-nordisk-plant-ozempic-tabletten-152043262.html",
+       "publisher": "de.finance.yahoo.com",
+       "published_at": "2026-04-23T15:20:43",
+       "lede": "the danish pharmaceutical company novo nordisk wants to launch ozempic tablets for children. - copyright: getty images/ sean murphy novo nordisk submits applications for ozempic and rybelsus in the us and the eu in the second half of 2026. the diabetes medications should then be approved for 10 to 17-year-olds.",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.79
+        },
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.73
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea38938266d9339996bf3a",
+       "headline": "Ozempic pill reduces HbA1c at 26 weeks for children with type 2 diabetes",
+       "url": "https://www.healio.com/news/endocrinology/20260423/ozempic-pill-reduces-hba1c-at-26-weeks-for-children-with-type-2-diabetes",
+       "publisher": "healio.com",
+       "published_at": "2026-04-23T00:00:00",
+       "lede": "ozempic pill reduces hba1c at 26 weeks for children with type 2 diabetes fact checked by erik swain add topic to email alerts receive an email when new articles are posted on . please provide your email address to receive an email when new articles are posted on subscribe added",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.89
+        },
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aeaa7c37f6c5e660fbaf4",
+       "headline": "Healthier Hawaii: What to know about GLP-1 weight loss medications",
+       "url": "http://www.hawaiinewsnow.com/2026/04/22/healthier-hawaii-what-know-about-glp-1-weight-loss-medications/",
+       "publisher": "hawaiinewsnow.com",
+       "published_at": "2026-04-22T15:36:05",
+       "lede": "add us on google add as a preferred source on google honolulu (hawaiinewsnow) - glp-1 medications like ozempic and wegovy are growing in popularity for weight loss. nearly 42% of adults in the u.s. are obese, according to the centers for disease control and prevention — more than 100 million",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 377,
+         "path": "/Beauty & Fitness/Weight Loss",
+         "score": 0.81
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.64
+        },
+        {
+         "code": 578,
+         "path": "/Health/Health Conditions/Obesity",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a75755cefb83fe80598a1",
+       "headline": "Healthier Hawaii: What to know about GLP-1 weight loss medications",
+       "url": "https://www.hawaiinewsnow.com/2026/04/22/healthier-hawaii-what-know-about-glp-1-weight-loss-medications/",
+       "publisher": "hawaiinewsnow.com",
+       "published_at": "2026-04-22T15:36:05",
+       "lede": "add us on google add as a preferred source on google honolulu (hawaiinewsnow) - glp-1 medications like ozempic and wegovy are growing in popularity for weight loss. nearly 42% of adults in the u.s. are obese, according to the centers for disease control and prevention — more than 100 million",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 377,
+         "path": "/Beauty & Fitness/Weight Loss",
+         "score": 0.81
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.64
+        },
+        {
+         "code": 578,
+         "path": "/Health/Health Conditions/Obesity",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86c5c9baafc7356826196",
+       "headline": "Latest research into Terzepatide (Mounjaro) for T1 in USA",
+       "url": "https://www.diabetes.co.uk/forum/threads/latest-research-into-terzepatide-mounjaro-for-t1-in-usa.211510/",
+       "publisher": "diabetes.co.uk",
+       "published_at": "2026-04-17T13:25:51",
+       "lede": "life-changing medications like ozempic and mounjaro are only approved right now for type 2 diabetes, but a growing body of evidence highlights the benefits of glp-1s for people with type 1 diabetes. now, researchers are analyzing the data to see how glp-1 drugs affect the risk of heart, kidney, and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.92
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e863615cfa3e5ba5f16068",
+       "headline": "Quit a GLP-1? Plan to Start Again? It's Not Recommended, But Plenty of People Do It",
+       "url": "https://www.visionmonday.com/eyecare/health-watch/article/quit-a-glp1-plan-to-start-again-its-not-recommended-but-plenty-of-people-do-it/",
+       "publisher": "visionmonday.com",
+       "published_at": "2026-04-17T08:03:00",
+       "lede": "eyecare: health watch quit a glp-1? plan to start again? it's not recommended, but plenty of people do it staff by it's quite common for people to start on glp-1 drugs like ozempic and zepbound, especially as the diabetes and obesity treatments become more ubiquitous. they're designed to treat chronic",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86a209baafc735680d833",
+       "headline": "The Rising Demand for GLP-1 Drugs: Balancing Access and Affordability",
+       "url": "https://www.theedadvocate.org/the-rising-demand-for-glp-1-drugs-balancing-access-and-affordability/",
+       "publisher": "theedadvocate.org",
+       "published_at": "2026-04-16T13:56:43",
+       "lede": "spread the love in recent years, the landscape of weight management and diabetes treatment has dramatically shifted, primarily due to the introduction of glp-1 (glucagon-like peptide-1) receptor agonists like ozempic. these medications, initially developed to aid those with type 2 diabetes, have gained significant traction for their off-label use in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e84d155cfa3e5ba5e47b58",
+       "headline": "Semaglutide and GLP-1 Drugs Show Efficacy Against Metabolic Liver Disease - Time News",
+       "url": "https://time.news/semaglutide-and-glp-1-drugs-show-efficacy-against-metabolic-liver-disease/",
+       "publisher": "time.news",
+       "published_at": "2026-04-15T17:14:18",
+       "lede": "for years, the medical community has viewed semaglutide—the active ingredient in blockbuster drugs like ozempic and wegovy—primarily through the lens of glycemic control and dramatic weight loss. still, emerging research suggests that the impact of these glp-1 receptor agonists extends far deeper than the scale, potentially offering a critical lifeline",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.64
+        },
+        {
+         "code": 377,
+         "path": "/Beauty & Fitness/Weight Loss",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8c96d9baafc7356c958e0",
+       "headline": "Apotex Secures First US Tentative Approvals for Generic Semaglutide - Time News",
+       "url": "https://time.news/apotex-secures-first-us-tentative-approvals-for-generic-semaglutide/",
+       "publisher": "time.news",
+       "published_at": "2026-04-14T06:49:30",
+       "lede": "the landscape of the multi-billion-dollar glp-1 receptor agonist market is shifting as the first significant regulatory hurdle for a generic version of semaglutide has been cleared. apotex has secured the first u.s. tentative approvals for generic ozempic, covering all currently marketed strengths of the drug. even as this move does",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.83
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "apotex"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e650399e87ccc43e3a9a5f",
+       "headline": "El \"Ozempic natural\" que ayuda a perder peso sin efectos secundarios",
+       "url": "https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/ciencia/2026/04/13/el-ozempic-natural-que-ayuda-a-perder-peso-sin-efectos-secundarios.shtml",
+       "publisher": "biobiochile.cl",
+       "published_at": "2026-04-13T23:33:30",
+       "lede": "<p> in 2025, researchers from stanford medicine <strong> discovered a molecule that can reduce appetite and cause weight loss, similar effects to those of semaglutide</strong>, the famous glp-1 receptor agonist drug, better known as ozempic. </p> <p> it is <strong>a natural molecule called brp</strong>, which activates different brain neurons that",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e505579d0e7fe469a9858a",
+       "headline": "The genes that make GLP-1 drugs work (or not) - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/health/the-genes-that-make-glp-1-drugs-work-or-not/articleshow/130224832.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-13T04:23:00",
+       "lede": "you've probably seen them around. someone you know lost a remarkable amount of weight on ozempic or mounjaro. another person tried the same drug and barely saw results. and another got so nauseous they quit altogether. these wildly different experiences aren't random and according to a massive new study from",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac389c37f6c5e66f365bb",
+       "headline": "Orbicular Pharmaceutical Technologies Receives U.S. FDA Tentative Approval for Generic Ozempic® (Semaglutide Injection), in partnership with Apotex - PNI",
+       "url": "https://www.pninews.com/orbicular-pharmaceutical-technologies-receives-u-s-fda-tentative-approval-for-generic-ozempic-semaglutide-injection-in-partnership-with-apotex/",
+       "publisher": "pninews.com",
+       "published_at": "2026-04-11T23:36:58",
+       "lede": "orbicular pharmaceutical technologies receives u.s. fda tentative approval for generic ozempic® (semaglutide injection), in partnership with apotex hyderabad: orbicular pharmaceutical technologies pvt. ltd., a hyderabad-based leading developer of complex peptide-based generics, announced today that a generic version of ozempic® (semaglutide injection), developed in partnership with apotex, has received tentative approval",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.91
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f29b9d0e7fe4699e8c47",
+       "headline": "USFDA Grants Tentative Approval for Generic Ozempic by Apotex and Orbicular - Time News",
+       "url": "https://time.news/usfda-grants-tentative-approval-for-generic-ozempic-by-apotex-and-orbicular/",
+       "publisher": "time.news",
+       "published_at": "2026-04-11T10:09:12",
+       "lede": "the landscape for weight loss and diabetes management is poised for a significant shift as orbicular pharmaceutical technologies and apotex announce they have won tentative usfda nod for generic ozempic. the u.s. food and drug administration (fda) granted tentative approval for a generic version of the semaglutide injection, a move",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.75,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.88
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "apotex",
+        "orbicular pharmaceutical technologies"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 1215,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMSAxMDowOToxMiIsImkiOiI2OWU0ZjI5YjlkMGU3ZmU0Njk5ZThjNDciLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.077,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.079
+    }
+   }
+  }
+ ]
+}

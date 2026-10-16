@@ -1,0 +1,910 @@
+{
+ "slug": "starlink-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:10:43Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "starlink",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "starlink",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10519,
+     "tone": {
+      "carrying": 10518,
+      "availability_pct": 99.99,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3889,
+        "share_pct": 36.97
+       },
+       {
+        "group": "neutral",
+        "count": 200,
+        "share_pct": 1.9
+       },
+       {
+        "group": "positive",
+        "count": 6429,
+        "share_pct": 61.12
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10518,
+      "count": 7978,
+      "share_pct": 75.85
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.513,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.515
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "starlink",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "starlink",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2151,
+       "critical": 1642,
+       "critical_pct": 76.3,
+       "negative": 903,
+       "positive": 1224,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2060,
+       "critical": 1611,
+       "critical_pct": 78.2,
+       "negative": 898,
+       "positive": 1126,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1987,
+       "critical": 1323,
+       "critical_pct": 66.6,
+       "negative": 754,
+       "positive": 1213,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2370,
+       "critical": 1774,
+       "critical_pct": 74.9,
+       "negative": 755,
+       "positive": 1574,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1571,
+       "critical": 1119,
+       "critical_pct": 71.2,
+       "negative": 344,
+       "positive": 1203,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1769,
+       "critical": 1268,
+       "critical_pct": 71.7,
+       "negative": 400,
+       "positive": 1353,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1450,
+       "critical": 973,
+       "critical_pct": 67.1,
+       "negative": 284,
+       "positive": 1155,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1990,
+       "critical": 1518,
+       "critical_pct": 76.3,
+       "negative": 498,
+       "positive": 1474,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2933,
+       "critical": 2260,
+       "critical_pct": 77.1,
+       "negative": 1439,
+       "positive": 1440,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2638,
+       "critical": 2114,
+       "critical_pct": 80.1,
+       "negative": 983,
+       "positive": 1604,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2054,
+       "critical": 1455,
+       "critical_pct": 70.8,
+       "negative": 652,
+       "positive": 1367,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2894,
+       "critical": 2149,
+       "critical_pct": 74.3,
+       "negative": 815,
+       "positive": 2018,
+       "partial_period": false
+      }
+     ],
+     "total": 25867,
+     "critical_total": 19206,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.952,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.955
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "starlink",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "starlink",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10519,
+     "carrying": 5709,
+     "availability_pct": 54.27,
+     "items": [
+      {
+       "country": "united states",
+       "count": 3269,
+       "share_pct": 31.08
+      },
+      {
+       "country": "iran",
+       "count": 318,
+       "share_pct": 3.02
+      },
+      {
+       "country": "china",
+       "count": 162,
+       "share_pct": 1.54
+      },
+      {
+       "country": "india",
+       "count": 158,
+       "share_pct": 1.5
+      },
+      {
+       "country": "ukraine",
+       "count": 158,
+       "share_pct": 1.5
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1644
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.211,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.213
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "starlink",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "starlink",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "satellite communication technologies",
+       "count": 1125,
+       "share": 17.11,
+       "lift": 465.64,
+       "baseline_count": 3,
+       "previous_period_count": 709,
+       "delta_pct": 58.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "in-flight wi-fi connectivity",
+       "count": 414,
+       "share": 6.3,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 243,
+       "delta_pct": 70.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "satellite communication systems",
+       "count": 498,
+       "share": 7.58,
+       "lift": 309.19,
+       "baseline_count": 2,
+       "previous_period_count": 346,
+       "delta_pct": 43.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "space launch infrastructure development",
+       "count": 483,
+       "share": 7.35,
+       "lift": 299.87,
+       "baseline_count": 2,
+       "previous_period_count": 519,
+       "delta_pct": -6.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "in-flight entertainment options",
+       "count": 391,
+       "share": 5.95,
+       "lift": 242.75,
+       "baseline_count": 2,
+       "previous_period_count": 251,
+       "delta_pct": 55.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 10519,
+     "carrying": 6574,
+     "carrier_share_pct": 62.5,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.925,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.928
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "starlink",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "starlink",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f2303fc6105443aa5ee4cf",
+       "headline": "Street battles and withdrawal of Russian mercenaries: Inside the 48-hour fall of Mali’s Kidal",
+       "url": "https://www.france24.com/en/africa/20260427-street-battles-withdrawal-russian-mercenaries-inside-48-hour-fall-mali-kidal",
+       "publisher": "france24.com",
+       "published_at": "2026-04-27T14:09:04",
+       "lede": "fla rebels seen parading through kidal after capturing the city. two and a half years later, the flag of azawad – the tuareg name for the northern region of mali claimed by separatists of the fla (azawad liberation front) – is once again flying over the city of kidal. in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.84
+        }
+       ],
+       "country": "mali",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa98a8a54b8f07c956b5c",
+       "headline": "Dramatic moment Ukraine blows up a DOZEN Russian officers in suicide drone blitz",
+       "url": "https://www.thescottishsun.co.uk/news/16187334/ukraine-drone-blitz-kills-russian-officers/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-04-23T18:35:43",
+       "lede": "this is the stunning moment ukraine blows up a dozen russian officers in a devastating suicide drone blitz on a high-rise command post. extraordinary footage shows several cutting-edge drones striking a building packed with russian personnel – leaving at least 15 others injured. sign up for scottish sun newsletter thank",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.88
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69eaf627cb232e514c416310",
+       "headline": "Dramatic moment Ukraine blows up a DOZEN Russian officers in suicide drone blitz",
+       "url": "https://www.the-sun.com/news/16265890/ukraine-drone-blitz-kills-russian-officers/",
+       "publisher": "the-sun.com",
+       "published_at": "2026-04-23T18:35:43",
+       "lede": "this is the stunning moment ukraine blows up a dozen russian officers in a devastating suicide drone blitz on a high-rise command post. extraordinary footage shows several cutting-edge drones striking a building packed with russian personnel – leaving at least 15 others injured. sign up for the us sun newsletter",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.88
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87a7f5cfa3e5ba5ffe8c9",
+       "headline": "‘Dread of what regime could do next quickly erased joy of ceasefire’ – Iranians tell of fears and hopes for future",
+       "url": "https://www.independent.ie/world-news/middle-east/dread-of-what-regime-could-do-next-quickly-erased-joy-of-ceasefire-iranians-tell-of-fears-and-hopes-for-future/a196027094.html",
+       "publisher": "independent.ie",
+       "published_at": "2026-04-20T04:30:00",
+       "lede": "iranian citizens tell of life cut off from wider world amid blackout for iran, the strait’s closure is perhaps its most powerful weapon, threatening the world economy and inflicting political pain on donald trump (julia demaree nikhinson/ap) a female member of the basij paramilitary, affiliated with iran's revolutionary guard, holds",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.87
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "ap"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e8e3845cfa3e5ba55032c5",
+       "headline": "Voices in Iran: Residents break internet blackout to describe life during ceasefire",
+       "url": "https://www.independent.co.uk/news/world/middle-east/iran-trump-ceasefire-internet-blackout-b2958065.html",
+       "publisher": "independent.co.uk",
+       "published_at": "2026-04-18T14:37:14",
+       "lede": "on the ground newsletter: get a weekly dispatch from our international correspondents get a weekly dispatch from our international correspondents get a weekly international news dispatch email * sign up i would like to be emailed about offers, events and updates from the independent. read our privacy notice zahra* woke",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.74
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "the independent"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e85f427bb1410d4c71ac38",
+       "headline": "Russia Marks 'Missile Zones' Near NATO",
+       "url": "https://www.ibtimes.sg/russia-declares-missile-impact-zones-near-nato-waters-rocket-launch-85398",
+       "publisher": "ibtimes.sg",
+       "published_at": "2026-04-16T07:27:21",
+       "lede": "russia restricts barents sea zones citing missile impact areas closure linked to soyuz-2-1b launch from plesetsk cosmodrome restrictions disrupt shipping, fishing near nato-adjacent waters operation tied to rassvet satellites, raising regional sensitivity russia has restricted large sections of the barents sea near nato territory, warning ships and aircraft to avoid",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 128,
+         "path": "/Business & Industrial/Aerospace & Defense/Space Technology",
+         "score": 0.79
+        }
+       ],
+       "country": "russia",
+       "organizations": [
+        "nato"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea28618266d93399955a81",
+       "headline": "Vladimir Putin 'plans to put nukes into space' as he plots global mayhem",
+       "url": "https://www.thesun.co.uk/news/38829906/putin-plans-space-nukes-chilling-uk-threat/",
+       "publisher": "thesun.co.uk",
+       "published_at": "2026-04-15T22:37:15",
+       "lede": "outta this world vladimir putin ‘plans to put nukes into space’ as he plots global mayhem in chilling threat to uk mad vlad wants to put nukes in space so he can target satellites to unleash global mayhem, according to a us military chief. vladimir putin’s plot could amount to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.67
+        },
+        {
+         "code": 128,
+         "path": "/Business & Industrial/Aerospace & Defense/Space Technology",
+         "score": 0.45
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": [
+        "vladimir putin",
+        "vladimir putin"
+       ]
+      },
+      {
+       "id": "69e8b8595cfa3e5ba52d2a4b",
+       "headline": "Easter truce between Russia and Ukraine begins",
+       "url": "https://gulfnews.com/world/europe/easter-truce-between-russia-and-ukraine-begins-2-1.500503864",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-04-11T17:38:46",
+       "lede": "kyiv: a truce between russia and ukraine to mark the orthodox easter entered into force on saturday, with kyiv warning it would respond \"immediately\" if russia violated it.russian president vladimir putin ordered the ceasefire on thursday, more than a week after ukrainian president volodymyr zelensky first made the proposal.both sides",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.86,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.82
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": [
+        "vladimir putin",
+        "vladimir putin"
+       ]
+      },
+      {
+       "id": "69e3cc03549ba8a866319ebd",
+       "headline": "Russia and Ukraine trade drone strikes ahead of Easter truce",
+       "url": "https://www.manilatimes.net/2026/04/11/news/russia-and-ukraine-trade-drone-strikes-ahead-of-easter-truce/2318393",
+       "publisher": "manilatimes.net",
+       "published_at": "2026-04-11T09:09:00",
+       "lede": "kyiv,&nbsp;ukraine&nbsp;&mdash; russia and ukraine fired waves of drones at each other between late friday and early saturday, just hours before a temporary ceasefire between the two was set to take effect for orthodox easter, according to officials.russia launched at least 160 drones at ukraine, killing four people in the country's",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.94
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.42
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3c7f3549ba8a8662eccee",
+       "headline": "Russia and Ukraine set to begin Easter truce",
+       "url": "https://myrepublica.nagariknetwork.com/news/russia-and-ukraine-set-to-begin-easter-truce-24-89.html",
+       "publisher": "myrepublica.nagariknetwork.com",
+       "published_at": "2026-04-11T06:28:05",
+       "lede": "kyiv, april 11: a temporary ceasefire between russia and ukraine for orthodox easter is set to begin on saturday afternoon, as us-led diplomatic efforts to end the war falter. the kremlin said it had ordered a temporary truce from saturday at 4:00 pm (1300 gmt) until the end of sunday,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.86
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.4
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8a4907bb1410d4ca21d6f",
+       "headline": "Russia and Ukraine set to begin Easter truce | Today News",
+       "url": "https://www.livemint.com/news/world/russia-and-ukraine-set-to-begin-easter-truce-11775885911120.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-11T05:45:36",
+       "lede": "a temporary ceasefire between russia and ukraine for orthodox easter is set to begin on saturday afternoon, as us-led diplomatic efforts to end the war falter.the kremlin said it had ordered a temporary truce from saturday at 4:00 pm (1300 gmt) until the end of sunday, a 32-hour period.russia's defence",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.43
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3c760549ba8a8662e6ab7",
+       "headline": "Russia and Ukraine set to begin Easter truce",
+       "url": "https://www.24newshd.tv/11-Apr-2026/russia-ukraine-set-begin-easter-truce",
+       "publisher": "24newshd.tv",
+       "published_at": "2026-04-11T05:39:47",
+       "lede": "a temporary ceasefire between russia and ukraine for orthodox easter is set to begin on saturday afternoon, as us-led diplomatic efforts to end the war falter. the kremlin said it had ordered a temporary truce from saturday at 4:00 pm (1300 gmt) until the end of sunday, a 32-hour period.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.54
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e5035f9d0e7fe469a84733",
+       "headline": "Russia and Ukraine set to begin Easter truce - World News",
+       "url": "http://www.hurriyetdailynews.com/russia-and-ukraine-set-to-begin-easter-truce-220893",
+       "publisher": "hurriyetdailynews.com",
+       "published_at": "2026-04-11T00:00:00",
+       "lede": "russia and ukraine set to begin easter truce kiev a car drives along a road covered with a net protecting from drone attacks at an undisclosed location in the zaporizhzhia region on april 10, 2026, amid the russian invasion of ukraine. (photo by darya nazarova / afp) a temporary ceasefire",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.83
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.46
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e32443adcc4eacc58a3bcd",
+       "headline": "Ukraine and Russia will cease fire for Orthodox Easter",
+       "url": "https://www.bangkokpost.com/world/3234510/ukraine-and-russia-will-cease-fire-for-orthodox-easter",
+       "publisher": "bangkokpost.com",
+       "published_at": "2026-04-10T00:45:00",
+       "lede": "the four-year war previously saw limited and short truces, but moscow and kyiv were quick to trade accusations of violations.with talks on ending the four-year-old conflict derailed by the middle east war, ukrainian president volodymyr zelensky said this week that he had made a holiday truce proposal through the united",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.93,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.67
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.6
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 6295,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMCAwMDowMDowMCIsImkiOiI2OWU4ODIyODliYWFmYzczNTY5MDY5ZWUiLCJwIjo5fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.189,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.192
+    }
+   }
+  }
+ ]
+}

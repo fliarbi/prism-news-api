@@ -1,0 +1,887 @@
+{
+ "slug": "carbon-capture-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:54Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "carbon capture",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "carbon capture",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1569,
+     "tone": {
+      "carrying": 1568,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 181,
+        "share_pct": 11.54
+       },
+       {
+        "group": "neutral",
+        "count": 13,
+        "share_pct": 0.83
+       },
+       {
+        "group": "positive",
+        "count": 1374,
+        "share_pct": 87.63
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1569,
+      "count": 1355,
+      "share_pct": 86.36
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.961,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.969
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "carbon capture",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "carbon capture",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 373,
+       "critical": 318,
+       "critical_pct": 85.3,
+       "negative": 67,
+       "positive": 304,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 380,
+       "critical": 319,
+       "critical_pct": 83.9,
+       "negative": 74,
+       "positive": 300,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 331,
+       "critical": 272,
+       "critical_pct": 82.2,
+       "negative": 57,
+       "positive": 273,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 345,
+       "critical": 285,
+       "critical_pct": 82.6,
+       "negative": 56,
+       "positive": 287,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 376,
+       "critical": 312,
+       "critical_pct": 83.0,
+       "negative": 33,
+       "positive": 337,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 451,
+       "critical": 379,
+       "critical_pct": 84.0,
+       "negative": 38,
+       "positive": 405,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 392,
+       "critical": 328,
+       "critical_pct": 83.7,
+       "negative": 55,
+       "positive": 332,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 343,
+       "critical": 289,
+       "critical_pct": 84.3,
+       "negative": 36,
+       "positive": 303,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 310,
+       "critical": 257,
+       "critical_pct": 82.9,
+       "negative": 47,
+       "positive": 259,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 524,
+       "critical": 467,
+       "critical_pct": 89.1,
+       "negative": 52,
+       "positive": 468,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 358,
+       "critical": 304,
+       "critical_pct": 84.9,
+       "negative": 33,
+       "positive": 323,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 377,
+       "critical": 327,
+       "critical_pct": 86.7,
+       "negative": 49,
+       "positive": 324,
+       "partial_period": false
+      }
+     ],
+     "total": 4560,
+     "critical_total": 3857,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.634,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.646
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "carbon capture",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "carbon capture",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1569,
+     "carrying": 891,
+     "availability_pct": 56.79,
+     "items": [
+      {
+       "country": "united states",
+       "count": 264,
+       "share_pct": 16.83
+      },
+      {
+       "country": "india",
+       "count": 161,
+       "share_pct": 10.26
+      },
+      {
+       "country": "united kingdom",
+       "count": 98,
+       "share_pct": 6.25
+      },
+      {
+       "country": "canada",
+       "count": 62,
+       "share_pct": 3.95
+      },
+      {
+       "country": "japan",
+       "count": 32,
+       "share_pct": 2.04
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 274
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.503,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.508
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "carbon capture",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "carbon capture",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "carbon footprint reduction techniques",
+       "count": 300,
+       "share": 27.55,
+       "lift": 562.19,
+       "baseline_count": 4,
+       "previous_period_count": 318,
+       "delta_pct": -5.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "carbon credit systems & renewable incentives",
+       "count": 76,
+       "share": 6.98,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 86,
+       "delta_pct": -11.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "climate change mitigation strategies",
+       "count": 333,
+       "share": 30.58,
+       "lift": 208.01,
+       "baseline_count": 12,
+       "previous_period_count": 336,
+       "delta_pct": -0.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "green hydrogen production methods",
+       "count": 60,
+       "share": 5.51,
+       "lift": 449.75,
+       "baseline_count": 1,
+       "previous_period_count": 54,
+       "delta_pct": 11.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "waste-to-energy conversion technologies",
+       "count": 57,
+       "share": 5.23,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 73,
+       "delta_pct": -21.9,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1569,
+     "carrying": 1089,
+     "carrier_share_pct": 69.41,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.054,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.056
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "carbon capture",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "carbon capture",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e993c2d47fc028321300fc",
+       "headline": "Carbon capture platform launched in Nigeria",
+       "url": "https://www.gasworld.com/story/carbon-capture-platform-launched-in-nigeria/2247159.article/",
+       "publisher": "gasworld.com",
+       "published_at": "2026-04-20T12:42:42",
+       "lede": "a new carbon capture, utilisation and storage (ccus) platform has been launched in nigeria to accelerate the country’s transition to a low-carbon economy. the platform was announced by the national environmental standards and regulations enforcement agency (nesrea) in port harcourt, rivers state. the project is designed to bring together government",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.74
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.44
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e2d85cfa3e5ba54f9d21",
+       "headline": "Pacific declaration urges end to age of fossil fuels",
+       "url": "https://thewest.com.au/news/environment/pacific-declaration-urges-end-to-age-of-fossil-fuels-c-22155591",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-04-17T04:48:07",
+       "lede": "carbon capture and storage, geoengineering and other technologies that justify ongoing fossil fuel production have been denounced by pacific nations in a landmark declaration. following talks in port vila, ministers and senior officials have reiterated support for an urgent fossil fuel phase-out and pacific economies run off 100 per cent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.54
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.46
+        }
+       ],
+       "country": "vanuatu",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8676b5cfa3e5ba5f3ebdc",
+       "headline": "Pacific declaration urges end to age of fossil fuels",
+       "url": "https://www.thewest.com.au/news/environment/pacific-declaration-urges-end-to-age-of-fossil-fuels-c-22155591",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-04-17T04:48:07",
+       "lede": "carbon capture and storage, geoengineering and other technologies that justify ongoing fossil fuel production have been denounced by pacific nations in a landmark declaration. following talks in port vila, ministers and senior officials have reiterated support for an urgent fossil fuel phase-out and pacific economies run off 100 per cent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.54
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "902d4e5680df304af45bbcaf",
+       "headline": "Integrated Electrochemical CO2 Capture with Energy Storage for Renewable Energy Compatibility.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41860024/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-01T00:00:00",
+       "lede": "integrated electrochemical co2 capture with energy storage for renewable energy compatibility.carbon capture via electrochemical processes can benefit from direct integration with renewable power plants, but the intermittency of renewable energy sources makes efficient operation challenging. here, we demonstrate an integrated electrochemical carbon capture and energy storage system that enhances adaptability",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.96,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1264a5cbad671887f41f7",
+       "headline": "Woodside promises Browse CCS still live amid climate worries",
+       "url": "https://thewest.com.au/business/energy/browse-lng-woodside-pledges-carbon-capture-and-storage-still-on-agenda-after-withdrawing-environmental-plans-c-22068815",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-03-30T04:14:18",
+       "lede": "woodside energy says carbon capture and storage remains on the table for the giant browse project despite withdrawing an application for federal environmental approval. the $30 billion browse gas development has been mooted for decades but the remote field faces tough economics and has been controversial due to high carbon",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.6
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "woodside energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e325f1adcc4eacc58aa1fb",
+       "headline": "This Government of urbanites is putting Britain’s food security at risk",
+       "url": "https://www.pressreader.com/uk/the-daily-telegraph-saturday/20260321/282016153851579",
+       "publisher": "pressreader.com",
+       "published_at": "2026-03-21T02:14:00",
+       "lede": "the daily telegraph - saturday this government of urbanites is putting britain’s food security at risk sir – you report (march 19) that the government plans to give over some 1.9million acres of farmland to rewilding and “carbon capture”. a further aim is to designate 500,000 acres of countrysid­e for",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a57ac06c5ece7140dd30",
+       "headline": "New Era Cleantech to Build Coal Gasification Complex",
+       "url": "https://chemindigest.com/new-era-cleantech-to-develop-coal-gasification-complex-in-bhadrawati-maharashtra/",
+       "publisher": "chemindigest.com",
+       "published_at": "2026-03-17T06:55:06",
+       "lede": "new era cleantech solutions pvt. ltd has initiated the development of india’s first integrated coal gasification and carbon capture complex in bhadrawati, located in chandrapur. spread across 1,650 acres, the project involves a substantial investment of ₹20,000 crore. once operational, the facility will process more than 5 million metric tonnes",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.61
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eba1683fc01faba334307",
+       "headline": "Carbon capture risks leading Indian steel down a technological dead end",
+       "url": "https://energy.economictimes.indiatimes.com/news/renewable/carbon-capture-risks-leading-indian-steel-down-a-technological-dead-end/128869052",
+       "publisher": "energy.economictimes.indiatimes.com",
+       "published_at": "2026-02-28T04:53:57",
+       "lede": "sinking billions into supporting ccus projects looks unlikely to be an efficient use of government funding.the &#8377;20,000 crore ($2.2 billion) of support for carbon capture, utilisation and storage (ccus) for industry announced in the recent 2026 union budget risks leading india&rsquo;s steel sector down a path towards high emissions and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.54
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa68a84b609af2b2b177",
+       "headline": "Government hits back after Labour says we know better",
+       "url": "https://www.liverpoolecho.co.uk/news/liverpool-news/government-hits-back-after-labour-33491230",
+       "publisher": "liverpoolecho.co.uk",
+       "published_at": "2026-02-25T18:57:46",
+       "lede": "the uk government has hit back at labour calls for a 120-mile pipe plan to be cancelled. merseyside has been told the scheme is “vital” for the country’s future. the pipe could run from the peak district through wirral to the irish sea as part of a carbon capture storage",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.61
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2acce6963d76f4af08993f",
+       "headline": "INEOS awarded €300 million grant by French Government to rejuvenate and decarbonise Lavera site and cut CO2 emissions by 331,000 tonnes per annum - Renewable Carbon News",
+       "url": "https://renewable-carbon.eu/news/ineos-awarded-e300-million-grant-by-french-government-to-rejuvenate-and-decarbonise-lavera-site-and-cut-co2-emissions-by-331000-tonnes-per-annum/",
+       "publisher": "renewable-carbon.eu",
+       "published_at": "2026-02-19T00:00:00",
+       "lede": "© ineos installation of proven energy-efficient technology will cut carbon dioxide emissions by 331,000 tonnes a year, supporting france’s climate goals and positioning lavera for future decarbonisation through electrification and carbon capture the investment also strengthens france’s industrial sovereignty by ensuring reliable, competitive domestic production of critical raw materials essential",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.64
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bcce31a75fc0dcb022ced6",
+       "headline": "PM Modi highlights how carbon capture can power India's next steel revolution",
+       "url": "https://businessnewsthisweek.com/business/pm-modi-highlights-how-carbon-capture-can-power-indias-next-steel-revolution/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-02-11T10:01:58",
+       "lede": "new delhi, feb 11: prime minister narendra modi on wednesday highlighted how carbon capture can power india’s next steel revolution as the country’s guided efforts towards net zero 2070 commitment, strategic investments, and hydrogen initiatives drive growth, global competitiveness, and lead the road to a viksit bharat.pm modi referred to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.89
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "net zero"
+       ],
+       "people": [
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "6985fad1069c05cbe27920c9",
+       "headline": "Rs 20,000-crore CCUS push aims to future-proof India’s heavy industry in low-carbon era",
+       "url": "https://www.financialexpress.com/business/news/rs-20000-crore-ccus-push-aims-to-future-proof-indias-heavy-industry-in-low-carbon-era/4132683/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-02-06T00:00:00",
+       "lede": "india has placed one of its biggest industrial climate bets yet — committing ₹20,000 crore over the next five years to scale up carbon capture, utilisation and storage (ccus) — signalling a decisive shift from climate pledges to capital-backed execution in sectors that drive both growth and emissions.the funding, aligned",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.73
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfbc2c44a6646a5b2b8721",
+       "headline": "Carbon Capture Technology Faces a Difficult Few Years, Finds IDTechEx Research · EMSNow",
+       "url": "https://www.emsnow.com/carbon-capture-technology-faces-a-difficult-few-years-finds-idtechex-research/",
+       "publisher": "emsnow.com",
+       "published_at": "2026-02-05T00:00:00",
+       "lede": "carbon capture, utilization, and storage (ccus), or carbon capture and storage (ccs), is a set of technologies used to strip carbon dioxide from industrial waste gases or directly from the atmosphere. once the carbon dioxide is captured, it is either stored permanently underground (carbon storage) or it is used for",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.28,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.75
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfba6b44a6646a5b2b7b7c",
+       "headline": "Why Heavy Industry Must Set the Course for Net Zero, And How Emerging Markets Can Lead · EMSNow",
+       "url": "https://www.emsnow.com/why-heavy-industry-must-set-the-course-for-net-zero-and-how-emerging-markets-can-lead/",
+       "publisher": "emsnow.com",
+       "published_at": "2026-02-05T00:00:00",
+       "lede": "$1 trillion in heavy-industry projects is needed to reach net-zero; carbon pricing and green procurement can unlock investment and accelerate adoption. 85% emission cuts are possible with carbon capture, green hydrogen, and other technologies if scaled 50 carbon capture facilities and 230 green hydrogen projects are already operational, highlighting progress,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.7
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.53
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 311,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wNSAwMDowMDowMCIsImkiOiI2OWRmYmE2YjQ0YTY2NDZhNWIyYjdiN2MiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.404,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.406
+    }
+   }
+  }
+ ]
+}

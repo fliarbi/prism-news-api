@@ -1,0 +1,896 @@
+{
+ "slug": "education-policy-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:06:46Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "education policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "education policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1885,
+     "tone": {
+      "carrying": 1884,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 745,
+        "share_pct": 39.54
+       },
+       {
+        "group": "neutral",
+        "count": 39,
+        "share_pct": 2.07
+       },
+       {
+        "group": "positive",
+        "count": 1100,
+        "share_pct": 58.39
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1884,
+      "count": 1331,
+      "share_pct": 70.65
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.68,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.683
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "education policy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "education policy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 410,
+       "critical": 272,
+       "critical_pct": 66.3,
+       "negative": 163,
+       "positive": 229,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 404,
+       "critical": 278,
+       "critical_pct": 68.8,
+       "negative": 149,
+       "positive": 247,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 605,
+       "critical": 356,
+       "critical_pct": 58.8,
+       "negative": 221,
+       "positive": 369,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 605,
+       "critical": 408,
+       "critical_pct": 67.4,
+       "negative": 256,
+       "positive": 336,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 434,
+       "critical": 309,
+       "critical_pct": 71.2,
+       "negative": 165,
+       "positive": 262,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 386,
+       "critical": 309,
+       "critical_pct": 80.1,
+       "negative": 191,
+       "positive": 182,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 311,
+       "critical": 228,
+       "critical_pct": 73.3,
+       "negative": 103,
+       "positive": 206,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 360,
+       "critical": 253,
+       "critical_pct": 70.3,
+       "negative": 132,
+       "positive": 221,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 353,
+       "critical": 243,
+       "critical_pct": 68.8,
+       "negative": 120,
+       "positive": 223,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 430,
+       "critical": 300,
+       "critical_pct": 69.8,
+       "negative": 167,
+       "positive": 254,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 446,
+       "critical": 298,
+       "critical_pct": 66.8,
+       "negative": 168,
+       "positive": 269,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 656,
+       "critical": 490,
+       "critical_pct": 74.7,
+       "negative": 290,
+       "positive": 354,
+       "partial_period": false
+      }
+     ],
+     "total": 5400,
+     "critical_total": 3744,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.066,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.069
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "education policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "education policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1885,
+     "carrying": 950,
+     "availability_pct": 50.4,
+     "items": [
+      {
+       "country": "india",
+       "count": 377,
+       "share_pct": 20.0
+      },
+      {
+       "country": "united states",
+       "count": 330,
+       "share_pct": 17.51
+      },
+      {
+       "country": "united kingdom",
+       "count": 44,
+       "share_pct": 2.33
+      },
+      {
+       "country": "nigeria",
+       "count": 24,
+       "share_pct": 1.27
+      },
+      {
+       "country": "ghana",
+       "count": 18,
+       "share_pct": 0.95
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 157
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.07,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.073
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "education policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "education policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "elementary school curriculum development",
+       "count": 59,
+       "share": 4.83,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 20,
+       "delta_pct": 195.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "bilingual and esl education strategies",
+       "count": 75,
+       "share": 6.14,
+       "lift": 250.71,
+       "baseline_count": 2,
+       "previous_period_count": 38,
+       "delta_pct": 97.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "education law and policy compliance",
+       "count": 85,
+       "share": 6.96,
+       "lift": 189.42,
+       "baseline_count": 3,
+       "previous_period_count": 22,
+       "delta_pct": 286.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "university rankings and reputation metrics",
+       "count": 36,
+       "share": 2.95,
+       "lift": 240.68,
+       "baseline_count": 1,
+       "previous_period_count": 24,
+       "delta_pct": 50.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "history and social studies curriculum development",
+       "count": 84,
+       "share": 6.88,
+       "lift": 140.4,
+       "baseline_count": 4,
+       "previous_period_count": 34,
+       "delta_pct": 147.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1885,
+     "carrying": 1221,
+     "carrier_share_pct": 64.77,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.049,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.053
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "education policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "education policy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f1c68b1e3933a6dd8d5ec9",
+       "headline": "How Manipur University Stands Out in NEP 2020: 80 Percent ABC and 70 Percent FYUP Adoption",
+       "url": "https://www.indiatodayne.in/opinion/story/how-manipur-university-stands-out-in-nep-2020-80-percent-abc-and-70-percent-fyup-adoption-1382545-2026-04-28",
+       "publisher": "indiatodayne.in",
+       "published_at": "2026-04-28T05:41:39",
+       "lede": "while most central universities in the region embraced core elements of the national education policy (nep) 2020 only from 2022-23 or 2023-24, manipur university under vice-chancellor naorem lokendra singh took a bold and decisive lead right from the 2021-22 academic session. &nbsp;&nbsp;it has emerged as a clear leader in implementing",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.23,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.9
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "nep",
+        "manipur university"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efaabba84b609af2b2f1d8",
+       "headline": "NEWS: Shortage of Educational Psychologists Risks Undermining SEND Reforms | Edexec",
+       "url": "https://edexec.co.uk/news-shortage-of-educational-psychologists-risks-undermining-send-reforms/",
+       "publisher": "edexec.co.uk",
+       "published_at": "2026-04-24T05:00:28",
+       "lede": "as reported by the independent, significant shortages of educational psychologists across england have been highlighted in new research, with stark regional inequalities in provision analysis by the education policy institute found that in some parts of the country there is just one educational psychologist for every 480 pupils. in the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d48e713680636eec280e",
+       "headline": "Class I admission age 6 years, says CBSE",
+       "url": "https://www.newindianexpress.com/states/kerala/2026/Apr/18/class-i-admission-age-6-years-says-cbse-3",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-18T01:54:48",
+       "lede": "kochi: putting to rest doubts over students’ eligibility for class i admissions, the cbse has said the minimum age to enrol is six years as per the national education policy 2020 and right to education (rte). the clarification came at a recent meeting held under the aegis of the national",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 73,
+         "path": "/Jobs & Education/Education/Standardized & Admissions Tests",
+         "score": 0.83
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.53
+        },
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "cbse"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e9703e540a46fb53b1316",
+       "headline": "Socioeconomic status a key factor in understanding Alaska test data, lawmakers hear",
+       "url": "https://www.yahoo.com/news/articles/socioeconomic-status-key-factor-understanding-235623622.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-16T23:56:23",
+       "lede": "a professor at furman university told the alaska legislature task force on education funding wednesday afternoon that standardized test results might not be the most appropriate set of data on which to base education policy decisions. during a routine presentation on the national assessment of educational progress, known as the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ecd758e67a2fcb3d49f4f",
+       "headline": "Schools across UK short of 1,400 of educational psychologists, experts warn",
+       "url": "https://www.yahoo.com/news/articles/schools-across-uk-short-1-173635615.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-16T17:36:35",
+       "lede": "the government must fund more than a thousand extra educational psychologists in mainstream schools as part of its reforms for children with special educational needs and disabilities (send), a new report has warned. research by the education policy institute (epi) recommended that schools should boost the current number of specialists",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 740,
+         "path": "/Jobs & Education/Education/Special Education",
+         "score": 0.78
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8db5c5cfa3e5ba549a47a",
+       "headline": "RTE hurt school learning outcomes, affecting both reading & math proficiency—NITI Aayog working paper",
+       "url": "https://theprint.in/india/education/rte-hurt-school-learning-outcomes-affecting-both-reading-math-proficiency-niti-aayog-working-paper/2905898/",
+       "publisher": "theprint.in",
+       "published_at": "2026-04-16T04:22:21",
+       "lede": "published in march, the paper—titled ‘education and skilling for employment: from credentials to learning outcomes’—is a data-intensive assessment of india’s education system, whose findings conflict the narrative of progress that has accompanied both the rte and the national education policy (nep) 2020. furthermore, several of india’s wealthiest states are moving",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 249,
+         "path": "/Jobs & Education/Education/Other",
+         "score": 0.67
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "nep"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a6685963d76f4afc488af",
+       "headline": "“NEP 2020 is a Manifesto for Linguistic Liberation, Not Imposition”: Union Education Minister - PNI",
+       "url": "https://www.pninews.com/nep-2020-is-a-manifesto-for-linguistic-liberation-not-imposition-union-education-minister/",
+       "publisher": "pninews.com",
+       "published_at": "2026-04-06T20:00:44",
+       "lede": "new delhi: union minister for education, shri dharmendra pradhan, issued a strongly worded rebuttal today to the chief minister of tamil nadu, thiru m.k. stalin, over his recent remarks regarding the national education policy (nep) 2020. the minister categorized the “hindi imposition” narrative as a “tired attempt to mask political",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.5
+        },
+        {
+         "code": 249,
+         "path": "/Jobs & Education/Education/Other",
+         "score": 0.44
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2ab429b322e6b3e9f4243",
+       "headline": "1k contract basis teachers deployed in schools for NEP implementation | Goa News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/city/goa/1k-contract-basis-teachers-deployed-in-schools-for-nep-implementation/articleshow/130045718.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-05T19:04:00",
+       "lede": "panaji: with new skill-based subjects now added to the curriculum in classes where the national education policy (nep) 2020 has been implemented in goa, state govt î has trained and deployed additional teachers on a contract basis to cover these new topics. as per official data, 475 such teachers have",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.74
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "nep"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a4d475cefb83fe8eb1771",
+       "headline": "2026 TN elections | Stalin slams CBSE’s ‘covert’ push to impose Hindi in south states",
+       "url": "https://www.dtnext.in/news/politics/2026-tn-elections-stalin-slams-cbses-covert-push-to-impose-hindi-in-south-states",
+       "publisher": "dtnext.in",
+       "published_at": "2026-04-04T16:50:29",
+       "lede": "chennai: chief minister mk stalin on saturday launched a sharp offensive against the cbse’s new curriculum framework, describing it as a \"well-planned attempt\" to impose hindi under the guise of the national education policy (nep) 2020..in a strongly worded statement, stalin argued that the move reflects the bjp-led union government's",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e981be540a46fb53be4f3",
+       "headline": "Early Memphis schools audit findings ‘consistent with waste or abuse’",
+       "url": "https://www.yahoo.com/news/articles/early-memphis-schools-audit-findings-183815139.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-01T18:38:15",
+       "lede": "this story was originally published by chalkbeat. sign up for their newsletters at ckbe.at/newsletters sign up for chalkbeat tennessee’s free newsletter to keep up with statewide education policy and memphis-shelby county schools. an ongoing financial audit of memphis-shelby county schools revealed “clear evidence of management failures,” tennessee comptroller jason mumpower",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd2797fd59372e7d17fcd",
+       "headline": "Increase education spending to 6% of GDP: Parliamentary panel to Cent",
+       "url": "https://www.hindustantimes.com/india-news/increase-education-spending-to-6-of-gdp-parliamentary-panel-to-cent-101773862077046.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-03-19T01:28:03",
+       "lede": "new delhi: a parliamentary panel on wednesday recommended the central government to take “concrete, time-bound steps” to ensure that by 2030, public expenditure on education increases to 6% of the gross domestic products (gdp), a target set by the national education policy (nep) 2020, while noting that the current spending,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 249,
+         "path": "/Jobs & Education/Education/Other",
+         "score": 0.68
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.67
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.44
+        }
+       ],
+       "country": "brazil",
+       "organizations": [
+        "nep"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbd81b71a014f1df2d879d",
+       "headline": "The Evolution of the U.S. Department of Education Under Trump: A Closer Look",
+       "url": "https://www.theedadvocate.org/the-evolution-of-the-u-s-department-of-education-under-trump-a-closer-look/",
+       "publisher": "theedadvocate.org",
+       "published_at": "2026-03-16T13:02:36",
+       "lede": "spread the lovethe landscape of education policy in the united states has seen significant shifts over the past few years, particularly under the trump administration. with sweeping changes to the u.s. department of education (ed), including staff reductions and altered priorities, many educators and policymakers have raised concerns about the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6996c40de0523bedf7b12029",
+       "headline": "MP CM Mohan Yadav on NEP's Two Annual Board Exams",
+       "url": "https://www.newkerala.com/news/a/two-board-exams-year-under-nep-will-benefit-924.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-02-09T23:26:32",
+       "lede": "madhya pradesh chief minister mohan yadav visited a school in bhopal to interact with students ahead of the upcoming board examinations. he highlighted that the new education policy's provision for two board exams per year will be beneficial for students. the cm advised students to prepare diligently, avoid stress, and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.63
+        },
+        {
+         "code": 73,
+         "path": "/Jobs & Education/Education/Standardized & Admissions Tests",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "mohan yadav"
+       ]
+      },
+      {
+       "id": "69cc5df67d31e30c7851a307",
+       "headline": "How two Class 10 Board exam sessions will be structured? CBSE exam controller answers",
+       "url": "https://indianexpress.com/article/education/cbse-controller-of-examinations-sanyam-bharadwaj-first-exam-mandatory-attempt-second-only-if-improvement-required-10521494/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-02-08T22:42:15",
+       "lede": "as the central board of secondary education (cbse) prepares to introduce the two-exam system for class 10 students in 2026, the move, aligned with the national education policy (nep) 2020 has raised questions among students, parents, and schools about structure, eligibility, flexibility, and evaluation. cbse controller of examinations sanyam bharadwaj",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 73,
+         "path": "/Jobs & Education/Education/Standardized & Admissions Tests",
+         "score": 0.98
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "nep",
+        "cbse"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 191,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wOCAyMjo0MjoxNSIsImkiOiI2OWNjNWRmNjdkMzFlMzBjNzg1MWEzMDciLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.572,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.585
+    }
+   }
+  }
+ ]
+}

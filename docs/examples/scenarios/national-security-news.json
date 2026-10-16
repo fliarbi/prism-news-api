@@ -1,0 +1,775 @@
+{
+ "slug": "national-security-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:06Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "national security",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "national security",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 32463,
+     "tone": {
+      "carrying": 32444,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 23139,
+        "share_pct": 71.32
+       },
+       {
+        "group": "neutral",
+        "count": 1268,
+        "share_pct": 3.91
+       },
+       {
+        "group": "positive",
+        "count": 8037,
+        "share_pct": 24.77
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 32455,
+      "count": 27895,
+      "share_pct": 85.95
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.632,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.636
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "national security",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "national security",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 8943,
+       "critical": 6316,
+       "critical_pct": 70.6,
+       "negative": 5381,
+       "positive": 2077,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 5067,
+       "critical": 4167,
+       "critical_pct": 82.2,
+       "negative": 3536,
+       "positive": 1294,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 6885,
+       "critical": 4675,
+       "critical_pct": 67.9,
+       "negative": 4912,
+       "positive": 1548,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 10611,
+       "critical": 6215,
+       "critical_pct": 58.6,
+       "negative": 5344,
+       "positive": 2402,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 5681,
+       "critical": 4619,
+       "critical_pct": 81.3,
+       "negative": 3672,
+       "positive": 1578,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 5622,
+       "critical": 4673,
+       "critical_pct": 83.1,
+       "negative": 3664,
+       "positive": 1648,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4783,
+       "critical": 4027,
+       "critical_pct": 84.2,
+       "negative": 3085,
+       "positive": 1400,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 8201,
+       "critical": 5639,
+       "critical_pct": 68.8,
+       "negative": 4465,
+       "positive": 1947,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 6924,
+       "critical": 5402,
+       "critical_pct": 78.0,
+       "negative": 4653,
+       "positive": 1814,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 7314,
+       "critical": 6267,
+       "critical_pct": 85.7,
+       "negative": 4844,
+       "positive": 2177,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 8355,
+       "critical": 7441,
+       "critical_pct": 89.1,
+       "negative": 6169,
+       "positive": 1925,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 9870,
+       "critical": 8785,
+       "critical_pct": 89.0,
+       "negative": 7473,
+       "positive": 2121,
+       "partial_period": false
+      }
+     ],
+     "total": 88256,
+     "critical_total": 68226,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.021,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.023
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "national security",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "national security",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 32463,
+     "carrying": 18084,
+     "availability_pct": 55.71,
+     "items": [
+      {
+       "country": "united states",
+       "count": 10512,
+       "share_pct": 32.38
+      },
+      {
+       "country": "india",
+       "count": 1700,
+       "share_pct": 5.24
+      },
+      {
+       "country": "china",
+       "count": 749,
+       "share_pct": 2.31
+      },
+      {
+       "country": "iran",
+       "count": 685,
+       "share_pct": 2.11
+      },
+      {
+       "country": "nigeria",
+       "count": 608,
+       "share_pct": 1.87
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 3830
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.42,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.422
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "national security",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "national security",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mobile phone storage solutions",
+       "count": 406,
+       "share": 1.93,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1526,
+       "delta_pct": -73.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "cybersecurity protocols for defense infrastructure",
+       "count": 378,
+       "share": 1.8,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 126,
+       "delta_pct": 200.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mobile phone camera technology",
+       "count": 511,
+       "share": 2.43,
+       "lift": 99.12,
+       "baseline_count": 2,
+       "previous_period_count": 1919,
+       "delta_pct": -73.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone hardware components",
+       "count": 247,
+       "share": 1.17,
+       "lift": 95.82,
+       "baseline_count": 1,
+       "previous_period_count": 1078,
+       "delta_pct": -77.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone battery performance",
+       "count": 238,
+       "share": 1.13,
+       "lift": 92.33,
+       "baseline_count": 1,
+       "previous_period_count": 1011,
+       "delta_pct": -76.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 32463,
+     "carrying": 21042,
+     "carrier_share_pct": 64.82,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.521,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.528
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "national security",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "national security",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f88360bbf1d3145597e989",
+       "headline": "Evening Brief: A Green Beret’s $400K Bet on the Maduro Raid Blows Up",
+       "url": "https://sofrep.com/news/evening-brief-a-green-berets-400k-bet-on-maduro-raid-blows-up/",
+       "publisher": "sofrep.com",
+       "published_at": "2026-04-24T21:00:33",
+       "lede": "the raid, the bet, and the new casino a special forces master sergeant supporting special mission units at fort bragg sits at the center of one of the strangest national security cases to hit the force in years: an alleged classified-information betting scheme tied to the u.s. operation that captured",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 231,
+         "path": "/Games/Gambling/Other",
+         "score": 0.69
+        },
+        {
+         "code": 342,
+         "path": "/Games/Card Games/Poker & Casino Games",
+         "score": 0.46
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b128c963d76f4af39214e",
+       "headline": "FBI urged to hunt for 'sinister' truth behind 11 vanished nuclear boffins",
+       "url": "https://www.dailystar.co.uk/news/us-news/fbi-urged-hunt-sinister-truth-37044395",
+       "publisher": "dailystar.co.uk",
+       "published_at": "2026-04-20T17:28:44",
+       "lede": "us lawmakers are demanding an investigation into the chilling disappearance of nearly a dozen top-tier nuclear scientists after raising fears of a \"grave threat\" to national security. a total of 11 experts with high-level security clearances, including links to nasa, nuclear weapons labs and secret aerospace projects, have either vanished",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee022e540a46fb57f9561",
+       "headline": "Donald Trump’s Threat to Iran Is Not ‘War Crime’, Says Mike Waltz",
+       "url": "https://www.yahoo.com/news/articles/donald-trump-threat-iran-not-081101811.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-20T08:11:01",
+       "lede": "the trump administration pushed back against accusations that president donald trump‘s threat to destroy iran‘s infrastructure would amount to a war crime, with national security advisor mike waltz characterizing such claims as legally baseless. the remarks come as a two-week ceasefire brokered by pakistan nears its wednesday expiration date. mike",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.87
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.51
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bab59baafc7356bc985a",
+       "headline": "'We will need to brace ourselves for a bumpy ride': Shanmugam explains consequences of the Middle East conflict",
+       "url": "https://www.asiaone.com/singapore/we-will-need-brace-ourselves-bumpy-ride-shanmugam-explains-consequences-middle-east",
+       "publisher": "asiaone.com",
+       "published_at": "2026-04-13T14:18:17",
+       "lede": "singaporeans must brace ourselves as we face multiple knock-on effects following the middle east conflict, coordinating minister for national security and minister for home affairs k shanmugam said in a speech at the home team promotion ceremony 2026 on monday (april 13). he said the middle east conflict has shown",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.68
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.66
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.56
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e35555ac5738806593991e",
+       "headline": "China supercomputer breach exposes massive defence data, sparks security concerns",
+       "url": "https://economictimes.indiatimes.com/magazines/panache/china-supercomputer-breach-exposes-massive-defence-data-sparks-security-concerns/articleshow/130164411.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-10T08:46:00",
+       "lede": "a major cybersecurity breach has reportedly exposed highly sensitive data from a chinese government supercomputer, raising serious concerns around national security and data protection. the story reported by cnn broke out recently. according to reports, a hacker managed to infiltrate a system linked to the national supercomputing centre in tianjin,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.75
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.52
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.42
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "cnn"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8649d5cfa3e5ba5f22116",
+       "headline": "Florida AG to probe OpenAI, alleging possible connection to FSU shooting | TechCrunch",
+       "url": "https://techcrunch.com/2026/04/09/florida-ag-to-probe-openai-alleging-possible-connection-to-fsu-shooting/",
+       "publisher": "techcrunch.com",
+       "published_at": "2026-04-09T22:13:26",
+       "lede": "florida attorney general james uthmeier announced on thursday his office will investigate openai for its alleged harm to minors, potential to threaten national security, and its possible link to a shooting that took place at florida state university last year. “chatgpt may likely have been used to assist the murderer",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "openai",
+        "florida state university"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2ce0da85be7e50665914d",
+       "headline": "Iran Parliament calls to halt Strait of Hormuz shipping amid Lebanon conflict - Business Upturn",
+       "url": "https://www.businessupturn.com/world/iran-parliament-calls-to-halt-strait-of-hormuz-shipping-amid-lebanon-conflict/",
+       "publisher": "businessupturn.com",
+       "published_at": "2026-04-08T13:24:39",
+       "lede": "the iranian parliament approved measures to close the strait of hormuz following recent israeli operations in lebanon. the national security and foreign policy commission spokesperson demanded immediate halt of all ship passage through the strategic waterway. parliament stated lebanon sacrificed lives supporting iran and must not be left alone. lawmakers",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.71
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.6
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ae071963d76f4af163653",
+       "headline": "Trump F-15 Leak Row: US President Threatens Media Crackdown, Says ‘Give It Up Or Go To Jail’",
+       "url": "https://news.abplive.com/news/world/trump-to-find-f-15-leak-iran-israel-war-us-president-threatens-media-crackdown-says-give-it-up-or-go-to-jail-1834994",
+       "publisher": "news.abplive.com",
+       "published_at": "2026-04-07T02:08:36",
+       "lede": "trump to find f-15 'leak': amid a high-risk military rescue operation, donald trump has launched a sharp attack on the media, vowing legal action over a leak he claims jeopardised national security and endangered the life of a missing u.s. airman. the controversy erupted after reports revealed that one crew",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.74
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2b534dc480588dca1b099",
+       "headline": "Trump and top officials share new details of rescue of U.S. airmen from Iran",
+       "url": "https://www.cbsnews.com/texas/news/trump-news-conference-iran/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-04-06T15:10:00",
+       "lede": "washington — president trump and top national security officials shed new light on the daring rescues of two american airmen who were shot down over iran last week, detailing the intense effort that extracted both men from enemy soil.speaking at a news conference at the white house, mr. trump also",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.62
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 9,
+     "total_estimate": 4528,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0zMSAxMDo1MToxNCIsImkiOiI2OWNiZGY4NTFjMmMxOTMwMjhkNGZlODAiLCJwIjo5fQ",
+     "unresolved": 16,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.093,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "16 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.097
+    }
+   }
+  }
+ ]
+}

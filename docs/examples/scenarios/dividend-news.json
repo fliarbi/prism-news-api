@@ -1,0 +1,1031 @@
+{
+ "slug": "dividend-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:04Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "dividend",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "dividend",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 19137,
+     "tone": {
+      "carrying": 19132,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2102,
+        "share_pct": 10.99
+       },
+       {
+        "group": "neutral",
+        "count": 1024,
+        "share_pct": 5.35
+       },
+       {
+        "group": "positive",
+        "count": 16006,
+        "share_pct": 83.66
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 19128,
+      "count": 4535,
+      "share_pct": 23.71
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.565,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.567
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "dividend",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "dividend",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3158,
+       "critical": 958,
+       "critical_pct": 30.3,
+       "negative": 293,
+       "positive": 2723,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2578,
+       "critical": 463,
+       "critical_pct": 18.0,
+       "negative": 249,
+       "positive": 2230,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1825,
+       "critical": 616,
+       "critical_pct": 33.8,
+       "negative": 221,
+       "positive": 1514,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2447,
+       "critical": 786,
+       "critical_pct": 32.1,
+       "negative": 290,
+       "positive": 2058,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2512,
+       "critical": 643,
+       "critical_pct": 25.6,
+       "negative": 191,
+       "positive": 2212,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1774,
+       "critical": 592,
+       "critical_pct": 33.4,
+       "negative": 162,
+       "positive": 1551,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2690,
+       "critical": 1174,
+       "critical_pct": 43.6,
+       "negative": 492,
+       "positive": 2107,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2543,
+       "critical": 756,
+       "critical_pct": 29.7,
+       "negative": 335,
+       "positive": 2112,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2438,
+       "critical": 538,
+       "critical_pct": 22.1,
+       "negative": 259,
+       "positive": 2081,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4636,
+       "critical": 1496,
+       "critical_pct": 32.3,
+       "negative": 553,
+       "positive": 3871,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 4223,
+       "critical": 1192,
+       "critical_pct": 28.2,
+       "negative": 513,
+       "positive": 3473,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 7840,
+       "critical": 1309,
+       "critical_pct": 16.7,
+       "negative": 777,
+       "positive": 6581,
+       "partial_period": false
+      }
+     ],
+     "total": 38664,
+     "critical_total": 10523,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.383,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.386
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "dividend",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "dividend",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 19137,
+     "carrying": 6951,
+     "availability_pct": 36.32,
+     "items": [
+      {
+       "country": "united states",
+       "count": 4760,
+       "share_pct": 24.87
+      },
+      {
+       "country": "canada",
+       "count": 318,
+       "share_pct": 1.66
+      },
+      {
+       "country": "india",
+       "count": 312,
+       "share_pct": 1.63
+      },
+      {
+       "country": "united kingdom",
+       "count": 220,
+       "share_pct": 1.15
+      },
+      {
+       "country": "china",
+       "count": 161,
+       "share_pct": 0.84
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1180
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.761,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.763
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "dividend",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "dividend",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "dividend announcements and shareholder payouts",
+       "count": 7090,
+       "share": 45.41,
+       "lift": 231.67,
+       "baseline_count": 16,
+       "previous_period_count": 3742,
+       "delta_pct": 89.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 961,
+       "share": 6.15,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 261,
+       "delta_pct": 268.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "dividend discount model (ddm)",
+       "count": 3084,
+       "share": 19.75,
+       "lift": 230.33,
+       "baseline_count": 7,
+       "previous_period_count": 2063,
+       "delta_pct": 49.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "dividend policy types",
+       "count": 3621,
+       "share": 23.19,
+       "lift": 210.34,
+       "baseline_count": 9,
+       "previous_period_count": 2445,
+       "delta_pct": 48.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "dividend investing strategies",
+       "count": 3788,
+       "share": 24.26,
+       "lift": 198.04,
+       "baseline_count": 10,
+       "previous_period_count": 2516,
+       "delta_pct": 50.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 19137,
+     "carrying": 15614,
+     "carrier_share_pct": 81.59,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.047,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.05
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "dividend",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "dividend",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f885ce8937ef12fc0a3d46",
+       "headline": "Highest dividend payouts in FY26: UltraTech Cement, Maruti Suzuki HCL Tech lead",
+       "url": "https://www.financialexpress.com/business/industry/highest-dividend-payouts-in-fy26-ultratech-cement-maruti-suzuki-hcl-tech-leadnbsp/4222472/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-30T01:51:21",
+       "lede": "the q4 earnings season is in full-power mode and many companies have declared dividends. some payouts aligned with the broader trend, while others exceeded investor expectations. many firms like ultratech cement and maruti suzuki india announced their highest-ever dividend payouts. oracle financial services declared its highest-ever dividend payout in over",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.71
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "ultratech cement",
+        "q4",
+        "ultratech cement",
+        "maruti suzuki"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0e9509c0b414d24aff7c1a",
+       "headline": "Maruti Suzuki announces Rs 140/share dividend, fixes record date. Check details",
+       "url": "https://economictimes.indiatimes.com/markets/stocks/earnings/maruti-suzuki-announces-rs-140/share-dividend-fixes-record-date-check-details/articleshow/130575397.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-28T09:30:00",
+       "lede": "maruti suzuki on tuesday announced a dividend of rs 140 per share for the financial year 2026, with the record date to determine the eligibility of shareholders set to receive the payment being fixed on august 7.india’s largest automaker announced its largest-ever dividend in terms of value on tuesday, along",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 460,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Suzuki",
+         "score": 0.91
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.63
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.59
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab7ca84b609af2b386fc",
+       "headline": "CSCS promises stronger dividends after N8.9 billion payout approval",
+       "url": "https://nairametrics.com/2026/04/26/cscs-promises-stronger-dividends-after-n8-9-billion-payout-approval/",
+       "publisher": "nairametrics.com",
+       "published_at": "2026-04-26T05:30:36",
+       "lede": "nigeria’s central securities clearing system plc (cscs) has assured its shareholders of higher returns, following the approval of an n8.9 billion dividend at its 32nd annual general meeting in lagos. giving his assurance, the chairman of the cscs board of directors, mr. temitope popoola, said the company remains committed to",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.6,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.74
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.68
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.47
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d6e8a088760d34c0a5c0",
+       "headline": "Infosys dividend history: How IT major has rewarded shareholders in last 5 years",
+       "url": "https://economictimes.indiatimes.com/markets/stocks/news/infosys-dividend-history-how-it-major-has-rewarded-shareholders-in-last-5-years/articleshow/130486273.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-24T06:48:00",
+       "lede": "infosys, india’s second-largest it services firm, has recommended a final dividend of rs 25 per equity share for fy26. the announcement was made along with the company's q4 results on thursday. the record date for the dividend is june 10 with payout to be completed on june 25.the it giant",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.78
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.78
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.73
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "infosys",
+        "it services",
+        "q4"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e511d3256108942098ee",
+       "headline": "Dividend alert! Rs 36 per share by this IT stock Record date, payment date    - BusinessToday",
+       "url": "https://www.businesstoday.in/markets/stocks/story/dividend-alert-rs-36-per-share-by-this-it-stock-record-date-payment-date-527130-2026-04-23",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-23T10:54:16",
+       "lede": "it major tech mahindra has announced a final dividend of rs 36 per share during its q4 earnings. the company fixed july 3 as the record date to determine shareholders&amp;#039; eligibility to receive the dividend. tech mahindra&amp;#039;s highest-ever total dividend of rs 51 per share for fy26 includes an interim",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.82
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.8
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.79
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "tech mahindra",
+        "q4"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ce2d399b489398e1c4ef",
+       "headline": "Infosys dividend today: History, results timing, preview, stock returns, target prices - BusinessToday",
+       "url": "https://www.businesstoday.in/markets/stocks/story/infosys-dividend-today-history-results-timing-preview-stock-returns-target-prices-527023-2026-04-23",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-23T04:42:22",
+       "lede": "infosys ltd is all set to declare its final dividend for fy26 on thursday. the it major had announced an interim dividend of rs 23 per share earlier this year, whose record date was october 27, 2025. from rs 1,419.60 crore worth dividend payout in fy18, infosys has been increasing",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.6
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "infosys"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8af429baafc7356b349d0",
+       "headline": "Tech Mahindra declares highest-ever Rs 51 dividend; shares plunge 2%",
+       "url": "https://www.financialexpress.com/business/industry/tech-mahindra-declares-highest-ever-rs-51-dividend-shares-plunge-2/4215072/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-22T10:34:13",
+       "lede": "tech mahindra has announced the highest ever total dividend along with its q4 results. the company posted double-digit growth in its revenue and net profit, marked by high deal wins and scaling ai operations across the enterprise. however, the share price of tech mahindra plunged more than 2% intra-day, in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.91
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.88
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "tech mahindra",
+        "q4"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8a2425cfa3e5ba51c3230",
+       "headline": "HCLTech Shares Drop Nearly 3% Before Q4 Results, Profit Up 4%",
+       "url": "https://www.startuptalky.com/news/hcltech-shares-drop-ahead-q4-results/",
+       "publisher": "startuptalky.com",
+       "published_at": "2026-04-22T09:29:27",
+       "lede": "hcltech shares fell sharply before its fourth-quarter results. this happened even though the company reported higher profits and announced a dividend. the numbers and the market reaction show a mixed picture. earnings are growing steadily, but investors are worried about margins and demand. hcltech q4 results: profit up, dividend announced",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.77
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.77
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "hcltech"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e898245cfa3e5ba51435f2",
+       "headline": "HCLTech Shares Drop Nearly 3% Before Q4 Results, Profit Up 4%",
+       "url": "https://startuptalky.com/news/hcltech-shares-drop-ahead-q4-results/",
+       "publisher": "startuptalky.com",
+       "published_at": "2026-04-22T09:29:27",
+       "lede": "hcltech shares fell sharply before its fourth-quarter results. this happened even though the company reported higher profits and announced a dividend. the numbers and the market reaction show a mixed picture. earnings are growing steadily, but investors are worried about margins and demand. hcltech q4 results: profit up, dividend announced",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.77
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.77
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "hcltech"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8815f5cfa3e5ba50422f1",
+       "headline": "Nestle India Hits 52-week High as Q4 Profit Jumps 27% – Outlook Business",
+       "url": "https://www.outlookbusiness.com/markets/nestle-india-hits-52-week-high-as-q4-profit-jumps-27",
+       "publisher": "outlookbusiness.com",
+       "published_at": "2026-04-21T10:22:02",
+       "lede": "nestle india shares jump 8%, hit 52-week highq4 profit rises 27%, revenue grows 23% on strong volume growthebitda margin at 26.3%, dividend of ₹5 declared for fy26shares of nestle india surged 8.44% to hit a 52-week high of ₹1,396 on the national stock exchange on tuesday after the company reported",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.81
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99581d47fc028321473ee",
+       "headline": "NBP 350% Dividend: When Will Shareholders Actually Get Paid?",
+       "url": "https://www.techjuice.pk/nbp-350-dividend-when-will-shareholders-actually-get-paid/",
+       "publisher": "techjuice.pk",
+       "published_at": "2026-04-21T06:18:53",
+       "lede": "shareholders of the national bank of pakistan (nbp) are still waiting for their record dividend payout. nearly two months ago, the bank announced a historic rs. 35 per share (350%) final cash dividend. however, the money remains pending. this delay is not due to financial weakness. instead, it stems entirely",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.27,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "national bank of pakistan",
+        "nbp"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e863609baafc73567c6f68",
+       "headline": "Dividend stock: Jio Financial Services declares ₹0.60 dividend alongside Q4 results - CNBC TV18",
+       "url": "https://www.cnbctv18.com/market/jio-financial-services-share-price-declares-rs-0-60-dividend-alongside-q4-results-ws-l-19888849.htm",
+       "publisher": "cnbctv18.com",
+       "published_at": "2026-04-17T14:07:21",
+       "lede": "jio financial services limited on friday, april 17, recommended a dividend of ₹0.60 per equity share for the financial year ended march 31, 2026.the company said the record date and date of the annual general meeting, where the dividend will be placed for shareholder approval, will be intimated in due",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.78
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0eaa16285a58da6f2c657d",
+       "headline": "Weibo Corporation: Weibo Announces Fourth Quarter and Fiscal Year 2025 Unaudited Financial Results and Annual Dividend",
+       "url": "https://www.finanznachrichten.de/nachrichten-2026-03/67977296-weibo-corporation-weibo-announces-fourth-quarter-and-fiscal-year-2025-unaudited-financial-results-and-annual-dividend-008.htm",
+       "publisher": "finanznachrichten.de",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "beijing, march 18, 2026 /prnewswire/ -- weibo corporation (\"weibo\" or the \"company\") (nasdaq: wb and hkex: 9898), a leading social media in china, today announced its unaudited financial results for the fourth quarter and fiscal year ended december 31, 2025 and annual dividend. \"we ended the year 2025 with solid",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.55
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfcbbdda2167bba6009110",
+       "headline": "Ashok Leyland declares interim dividend of Rs 4.95 per share, record date fixed for 3 April  | Autocar Professional",
+       "url": "https://www.autocarpro.in/news/ashok-leyland-declares-interim-dividend-of-rs-495-per-share-record-date-fixed-for-3-april--119784",
+       "publisher": "autocarpro.in",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "the interim dividend will be paid on or before 23 april, 2024. ashok leyland, the flagship company of the hinduja group, and the second largest commercial vehicle manufacturer in india has declared an interim dividend of rs 4.95 per equity share for the financial year ending 2023-24, the company said",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.79
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.75
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ashok leyland"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0b00fcae08af35807a518b",
+       "headline": "Guinness Nigeria Plc Announces ₦2.00 Interim Dividend Following Strong Q1 2026 Performance",
+       "url": "https://nairametrics.com/2026/04/14/guinness-nigeria-plc-announces-%E2%82%A62-00-interim-dividend-following-strong-q1-2026-performance/",
+       "publisher": "nairametrics.com",
+       "published_at": "2026-04-14T14:23:28",
+       "lede": "guinness nigeria plc has announced an interim dividend of ₦2.00 per ordinary share for the quarter ended 31 march 2026, signalling a strong earnings recovery and renewed focus on shareholder returns. the company delivered profit after tax of ₦10.39 billion in q1 fy2026, representing a 48% year-on-year increase from ₦7.03",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.93
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.63
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1084,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNCAxNDoyMzoyOCIsImkiOiI2OWU4Y2Y3NTVjZmEzZTViYTU0MDc0ZDQiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.577,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.579
+    }
+   }
+  }
+ ]
+}

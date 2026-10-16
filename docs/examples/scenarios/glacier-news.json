@@ -1,0 +1,1061 @@
+{
+ "slug": "glacier-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:18:06Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "glacier",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "glacier",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1558,
+     "tone": {
+      "carrying": 1556,
+      "availability_pct": 99.87,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 579,
+        "share_pct": 37.21
+       },
+       {
+        "group": "neutral",
+        "count": 50,
+        "share_pct": 3.21
+       },
+       {
+        "group": "positive",
+        "count": 927,
+        "share_pct": 59.58
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1558,
+      "count": 684,
+      "share_pct": 43.9
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.678,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.68
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "glacier",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "glacier",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 601,
+       "critical": 409,
+       "critical_pct": 68.1,
+       "negative": 393,
+       "positive": 185,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 361,
+       "critical": 181,
+       "critical_pct": 50.1,
+       "negative": 120,
+       "positive": 227,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 337,
+       "critical": 143,
+       "critical_pct": 42.4,
+       "negative": 110,
+       "positive": 213,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 694,
+       "critical": 459,
+       "critical_pct": 66.1,
+       "negative": 426,
+       "positive": 243,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 384,
+       "critical": 208,
+       "critical_pct": 54.2,
+       "negative": 137,
+       "positive": 226,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 279,
+       "critical": 111,
+       "critical_pct": 39.8,
+       "negative": 84,
+       "positive": 190,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 330,
+       "critical": 151,
+       "critical_pct": 45.8,
+       "negative": 143,
+       "positive": 175,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 269,
+       "critical": 137,
+       "critical_pct": 50.9,
+       "negative": 106,
+       "positive": 156,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 276,
+       "critical": 118,
+       "critical_pct": 42.8,
+       "negative": 83,
+       "positive": 181,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 404,
+       "critical": 209,
+       "critical_pct": 51.7,
+       "negative": 189,
+       "positive": 198,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 350,
+       "critical": 140,
+       "critical_pct": 40.0,
+       "negative": 115,
+       "positive": 227,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 528,
+       "critical": 217,
+       "critical_pct": 41.1,
+       "negative": 192,
+       "positive": 321,
+       "partial_period": false
+      }
+     ],
+     "total": 4813,
+     "critical_total": 2483,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.06,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.062
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "glacier",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "glacier",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1558,
+     "carrying": 700,
+     "availability_pct": 44.93,
+     "items": [
+      {
+       "country": "united states",
+       "count": 351,
+       "share_pct": 22.53
+      },
+      {
+       "country": "india",
+       "count": 65,
+       "share_pct": 4.17
+      },
+      {
+       "country": "canada",
+       "count": 44,
+       "share_pct": 2.82
+      },
+      {
+       "country": "antarctica",
+       "count": 25,
+       "share_pct": 1.6
+      },
+      {
+       "country": "argentina",
+       "count": 25,
+       "share_pct": 1.6
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 190
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.083,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.086
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "glacier",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "glacier",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "melting polar ice caps and sea level rise",
+       "count": 106,
+       "share": 11.5,
+       "lift": 938.48,
+       "baseline_count": 1,
+       "previous_period_count": 159,
+       "delta_pct": -33.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "glacial retreat and freshwater resource impacts",
+       "count": 99,
+       "share": 10.74,
+       "lift": 876.5,
+       "baseline_count": 1,
+       "previous_period_count": 151,
+       "delta_pct": -34.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "polar region ecosystem vulnerability",
+       "count": 90,
+       "share": 9.76,
+       "lift": 796.82,
+       "baseline_count": 1,
+       "previous_period_count": 142,
+       "delta_pct": -36.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "national parks & protected reserves",
+       "count": 24,
+       "share": 2.6,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 20,
+       "delta_pct": 20.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "kia engine specifications and technologies",
+       "count": 24,
+       "share": 2.6,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1558,
+     "carrying": 922,
+     "carrier_share_pct": 59.18,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.999,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.002
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "glacier",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "glacier",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f1c933399b489398df9767",
+       "headline": "Central Asia’s climate future hinges on water and resilience - WMO Secretary-General",
+       "url": "https://qazinform.com/news/central-asias-climate-future-hinges-on-water-and-resilience-wmo-secretary-general-674a52",
+       "publisher": "qazinform.com",
+       "published_at": "2026-04-28T08:00:00",
+       "lede": "what are the most pressing climate risks currently affecting central asia, and how do you see these challenges evolving over the next decade? central asia is one of the clearest examples of why climate risks must be understood through water. glacier retreat, changing snow cover, drought, floods and shifting seasonal",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b6f89baafc7356b97bd5",
+       "headline": "The melting of glaciers has accelerated - Sea level has risen",
+       "url": "https://medianews.az/en/buzlaqlarin-erimesi-suretlenib-deniz-seviyyesi-artib",
+       "publisher": "medianews.az",
+       "published_at": "2026-04-13T07:07:27",
+       "lede": "glacier melting worldwide reached one of the record levels in 2025. according to the information, glaciers melted altogether by 408 gigatons last year. as a result of this process, the global sea level rose by approximately 1.1 millimeters. medianews.az reports that the study was conducted with the participation of monash",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.66
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d14de84a6cba658b236699",
+       "headline": "Fears Antarctica's 'doomsday' glacier is edging closer to a point of no return",
+       "url": "https://metro.co.uk/2026/03/05/antarcticas-doomsday-glacier-edging-closer-a-point-no-return-scientists-fear-27242865/",
+       "publisher": "metro.co.uk",
+       "published_at": "2026-03-05T14:48:36",
+       "lede": "the tongue of the thwaites glacier. if it collapsed entirely, the structure would raise global sea levels by a potentially catastrophic amount (picture: nasa/cover media) scientists have come up with a bold plan to halt the collapse of the so-called doomsday glacier and prevent sea levels rising disastrously &#8211; a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.67
+        },
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.57
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.5
+        }
+       ],
+       "country": "antarctica",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b3187963d76f4af5076de",
+       "headline": "$80 billion mission could stop Doomsday Glacier that would destroy entire countries",
+       "url": "https://www.ladbible.com/news/world-news/doomsday-glacier-mission-stop-billion-585003-20260216",
+       "publisher": "ladbible.com",
+       "published_at": "2026-02-16T16:00:46",
+       "lede": "a collapsing glacier that could boost rising sea levels and spell disaster for several countries might be stopped by the construction of a 50 mile wall. the thwaites glacier floats at the northern edge of the west antarctic ice sheet and is about 80 miles wide, meaning it's an absolutely",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.72
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8ced86743c370e2250acb",
+       "headline": "The plan to wall off the ‘Doomsday’ glacier",
+       "url": "https://theweek.com/environment/plan-wall-curtain-doomsday-glacier",
+       "publisher": "theweek.com",
+       "published_at": "2026-02-11T23:14:46",
+       "lede": "a group of engineers and scientists are planning to build a 50-mile underwater barrier around the melting “doomsday glacier” in a bid to stop it collapsing into the ocean, triggering a disastrous rise in sea levels.they can’t stop the glacier melting but they hope to “slow the rate of ice",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.79,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.73
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.44
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e9c02c0b414d24a04740e",
+       "headline": "« Glaciers, enquête sur une disparition » : comment sauver notre monde de glace ?",
+       "url": "https://www.la-croix.com/culture/glaciers-enquete-sur-une-disparition-comment-sauver-notre-monde-de-glace-20260427",
+       "publisher": "la-croix.com",
+       "published_at": "2026-04-28T05:00:02",
+       "lede": "in may 2025, the birch glacier collapsed in switzerland. fortunately, this disaster had been anticipated by scientists. the 300 inhabitants of the village of blatten, located below, had been evacuated a week before. the documentary glacier, an investigation into a disappearance, highlights the hard work of ice scientists around the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.58
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bc4f5cfa3e5ba53088f3",
+       "headline": "Siachen Day 2024: Army Pays Tribute on Operation Meghdoot Anniversary",
+       "url": "https://www.newkerala.com/news/a/army-pays-tribute-bravehearts-42nd-siachen-day-926.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-13T18:31:59",
+       "lede": "the indian army marked the 42nd siachen day with a solemn tribute to the soldiers guarding the siachen glacier. the day commemorates operation meghdoot, launched on april 13, 1984, which secured indian control over the strategically vital glacier. the operation was a pre-emptive move against pakistani military plans and is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.63
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [
+        "indian army"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8b7ae9baafc7356ba1043",
+       "headline": "Op Meghdoot: 42 Years of India's Siachen Defence",
+       "url": "https://www.newkerala.com/news/a/42-years-op-meghdoot-iaf-indian-army-pay-821.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-13T10:12:19",
+       "lede": "the indian air force and army have paid tribute on the 42nd anniversary of operation meghdoot, which was launched to secure the siachen glacier. the operation began in 1984 to preempt pakistani military action and legitimize india's claim over the strategically vital area. it involved a massive airlift by the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.42
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "indian air force"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e506c49d0e7fe469aa7822",
+       "headline": "At -50°C on Siachen Glacier: Life on the World’s Highest Battlefield, 42 Years After Operation Meghdoot",
+       "url": "https://www.timesnownews.com/lifestyle/people/at-50c-on-siachen-life-on-the-worlds-highest-battlefield-42-years-after-operation-meghdoot-article-154065034",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-13T06:42:15",
+       "lede": "perched at altitudes above 20,000 feet, the siachen glacier - also known as the world’s highest battlefield is a place where survival is harder than combat itself. since the launch of operation meghdoot on this day in 1984, the army has maintained a strategic presence in this icy expanse, battling",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e861c47bb1410d4c733935",
+       "headline": "Argentina approves Milei's bill that eases protections for glaciers despite environmental backlash",
+       "url": "https://www.castanetkamloops.net/edition/news-story-607953-5-.htm",
+       "publisher": "castanetkamloops.net",
+       "published_at": "2026-04-09T20:34:00",
+       "lede": "world news argentina approves milei's bill that eases protections for glaciers despite environmental backlash glacier protections eased argentina's congress on thursday approved a bill promoted by libertarian president javier milei that eases protections on glaciers to facilitate investments in mining for metals — a move that environmental groups vow to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.64
+        }
+       ],
+       "country": "argentina",
+       "organizations": [],
+       "people": [
+        "javier milei",
+        "javier milei"
+       ]
+      },
+      {
+       "id": "69e860f29baafc73567af4bd",
+       "headline": "Argentina approves Milei's bill that eases protections for glaciers despite environmental backlash",
+       "url": "https://www.castanetkamloops.net/news/World/607953/Argentina-approves-Milei-s-bill-that-eases-protections-for-glaciers-despite-environmental-backlash",
+       "publisher": "castanetkamloops.net",
+       "published_at": "2026-04-09T20:34:00",
+       "lede": "world news argentina approves milei's bill that eases protections for glaciers despite environmental backlash glacier protections eased argentina's congress on thursday approved a bill promoted by libertarian president javier milei that eases protections on glaciers to facilitate investments in mining for metals — a move that environmental groups vow to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.64
+        }
+       ],
+       "country": "argentina",
+       "organizations": [],
+       "people": [
+        "javier milei",
+        "javier milei"
+       ]
+      },
+      {
+       "id": "69e8db655cfa3e5ba549aa00",
+       "headline": "Greenland's largest glacier could soon reach a tipping point, scientists say",
+       "url": "https://phys.org/news/2026-02-greenland-largest-glacier-scientists.html",
+       "publisher": "phys.org",
+       "published_at": "2026-02-27T15:20:01",
+       "lede": "this article has been reviewed according to science x's editorial process and policies . editors have highlighted the following attributes while ensuring the content's credibility: summer warming trends in surface waters surrounding the west greenland ice sheet for 1982–2020. credit: climate of the past (2026). doi: 10.5194/egusphere-2025-6074 greenland's largest glacier,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.8
+        },
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.61
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.47
+        }
+       ],
+       "country": "greenland",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc7ec1de89f3fa1c9bf25d",
+       "headline": "Antarctica Glacier Collapsed Rapidly Due to Flat Bedrock, Study Finds - TIme News",
+       "url": "https://time.news/antarctica-glacier-collapsed-rapidly-due-to-flat-bedrock-study-finds/",
+       "publisher": "time.news",
+       "published_at": "2026-02-26T17:03:34",
+       "lede": "antarctica’s hektoria glacier underwent a remarkably rapid collapse in 2023, losing nearly half its ice in just two months – a retreat scientists are calling the fastest ever recorded in modern times. the dramatic disintegration, which saw the glacier recede approximately eight kilometers in 60 days, is raising concerns about",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.7
+        },
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.68
+        }
+       ],
+       "country": "antarctica",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c42f7c8ac21b0272afef3d",
+       "headline": "Antarctica Ice Melt: Thwaites Glacier & Climate Change Updates - News Directory 3",
+       "url": "https://www.newsdirectory3.com/antarctica-ice-melt-thwaites-glacier-climate-change-updates/",
+       "publisher": "newsdirectory3.com",
+       "published_at": "2026-02-18T03:44:28",
+       "lede": "antarctica’s thwaites glacier, often dubbed the “doomsday glacier” due to its potential for catastrophic sea level rise, is undergoing accelerated melting, prompting a flurry of international research and even consideration of ambitious engineering interventions. recent expeditions and data analysis confirm the glacier’s vulnerability and highlight the urgency of understanding its",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.83
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.52
+        }
+       ],
+       "country": "antarctica",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbc7150315337a0f48437b",
+       "headline": "Thwaites Glacier: Where is 'Doomsday Glacier', and what's the story behind this ominous nickname? | - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/travel/life-style/where-is-doomsday-glacier-and-whats-the-story-behind-this-ominous-nickname/articleshow/128458063.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-02-17T09:27:00",
+       "lede": "glacier - representative imagewhere is the thwaites glacier?glacier breaking offwhy is thwaites so fragile?a towering glacieris the name âdoomsdayâ accurate?in one of the most distant and harsh environments on the planet, there is a glacier that has become a symbol of the worldâs climate worries. known commonly as the âdoomsday",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.44
+        },
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e850535cfa3e5ba5e661fa",
+       "headline": "The Radical Plan To Build An 80-Kilometer Wall Around The \"Doomsday Glacier\" Of Antarctica",
+       "url": "https://www.iflscience.com/the-radical-plan-to-build-an-80-kilometer-wall-around-the-doomsday-glacier-of-antarctica-82525",
+       "publisher": "iflscience.com",
+       "published_at": "2026-02-11T16:53:13",
+       "lede": "the “doomsday glacier” earned its nickname for a reason. officially known as the thwaites glacier, this massive body of antarctic ice is nearing a tipping point. if it entirely collapses, this single glacier alone could release enough water to raise global sea levels by 65 centimeters (over 2 feet), contributing",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.57
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.56
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d0a7a8c058cacceeb483e0",
+       "headline": "Weakening ice shelf has caused crucial Antarctic glacier to accelerate",
+       "url": "http://www.newscientist.com/article/2514697-weakening-ice-shelf-has-caused-crucial-antarctic-glacier-to-accelerate/",
+       "publisher": "newscientist.com",
+       "published_at": "2026-02-06T18:00:18",
+       "lede": "the flow of ice at pine island glacier in west antarctica has sped up dramatically due to the disintegration of the ice shelf in front of it, and this could lead to faster sea level rise giant icebergs have been breaking off the edge of pine island ice shelf nasa/brooke",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.76
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.51
+        },
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8f089f0ef2e3a9810f69b",
+       "headline": "Weakening ice shelf has caused crucial Antarctic glacier to accelerate",
+       "url": "https://www.newscientist.com/article/2514697-weakening-ice-shelf-has-caused-crucial-antarctic-glacier-to-accelerate/",
+       "publisher": "newscientist.com",
+       "published_at": "2026-02-06T18:00:18",
+       "lede": "the flow of ice at pine island glacier in west antarctica has sped up dramatically due to the disintegration of the ice shelf in front of it, and this could lead to faster sea level risegiant icebergs have been breaking off the edge of pine island ice shelf nasa/brooke medleya",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.76
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.51
+        },
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bae37c88dbabbbb7c77891",
+       "headline": "Scientists failed to drill the deepest hole into Antarcticaâs âdoomsday glacierâ: What went wrong at the final step | - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/science/scientists-failed-to-drill-the-deepest-hole-into-antarcticas-doomsday-glacier-what-went-wrong-at-the-final-step/articleshow/127887876.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-02-03T14:04:00",
+       "lede": "antarcticaâs doomsday glacier in a race against timewhere the final step went wrongwhy scientists say the mission still mattersa high-risk scientific mission to probe the ocean beneath antarcticaâs most unstable glacier collapsed just short of success after instruments became trapped deep inside the ice. the international effort, led by researchers",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 257,
+         "path": "/Science/Earth Sciences/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "antarctica",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 19,
+     "total_estimate": 84,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wMyAxNDowNDowMCIsImkiOiI2OWJhZTM3Yzg4ZGJhYmJiYjdjNzc4OTEiLCJwIjo4fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.689,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.702
+    }
+   }
+  }
+ ]
+}

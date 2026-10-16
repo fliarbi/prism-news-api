@@ -1,0 +1,782 @@
+{
+ "slug": "climate-policy-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:07Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "climate policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "climate policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2403,
+     "tone": {
+      "carrying": 2401,
+      "availability_pct": 99.92,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1414,
+        "share_pct": 58.89
+       },
+       {
+        "group": "neutral",
+        "count": 42,
+        "share_pct": 1.75
+       },
+       {
+        "group": "positive",
+        "count": 945,
+        "share_pct": 39.36
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2403,
+      "count": 1898,
+      "share_pct": 78.98
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.567,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.57
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "climate policy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "climate policy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 428,
+       "critical": 301,
+       "critical_pct": 70.3,
+       "negative": 218,
+       "positive": 179,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 330,
+       "critical": 247,
+       "critical_pct": 74.8,
+       "negative": 169,
+       "positive": 152,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 669,
+       "critical": 478,
+       "critical_pct": 71.4,
+       "negative": 365,
+       "positive": 278,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 334,
+       "critical": 247,
+       "critical_pct": 74.0,
+       "negative": 180,
+       "positive": 144,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 539,
+       "critical": 431,
+       "critical_pct": 80.0,
+       "negative": 340,
+       "positive": 185,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 503,
+       "critical": 397,
+       "critical_pct": 78.9,
+       "negative": 253,
+       "positive": 236,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 937,
+       "critical": 734,
+       "critical_pct": 78.3,
+       "negative": 493,
+       "positive": 419,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 437,
+       "critical": 374,
+       "critical_pct": 85.6,
+       "negative": 224,
+       "positive": 202,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 448,
+       "critical": 370,
+       "critical_pct": 82.6,
+       "negative": 258,
+       "positive": 181,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 794,
+       "critical": 654,
+       "critical_pct": 82.4,
+       "negative": 501,
+       "positive": 277,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 551,
+       "critical": 417,
+       "critical_pct": 75.7,
+       "negative": 304,
+       "positive": 237,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 610,
+       "critical": 457,
+       "critical_pct": 74.9,
+       "negative": 351,
+       "positive": 250,
+       "partial_period": false
+      }
+     ],
+     "total": 6580,
+     "critical_total": 5107,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-11-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.894,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.906
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "climate policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "climate policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2403,
+     "carrying": 1007,
+     "availability_pct": 41.91,
+     "items": [
+      {
+       "country": "united states",
+       "count": 466,
+       "share_pct": 19.39
+      },
+      {
+       "country": "canada",
+       "count": 54,
+       "share_pct": 2.25
+      },
+      {
+       "country": "china",
+       "count": 47,
+       "share_pct": 1.96
+      },
+      {
+       "country": "united kingdom",
+       "count": 40,
+       "share_pct": 1.66
+      },
+      {
+       "country": "germany",
+       "count": 38,
+       "share_pct": 1.58
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 362
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.555,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.559
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "climate policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "climate policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "carbon footprint reduction techniques",
+       "count": 329,
+       "share": 17.55,
+       "lift": 358.08,
+       "baseline_count": 4,
+       "previous_period_count": 245,
+       "delta_pct": 34.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "climate change mitigation strategies",
+       "count": 638,
+       "share": 34.03,
+       "lift": 231.47,
+       "baseline_count": 12,
+       "previous_period_count": 608,
+       "delta_pct": 4.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 80,
+       "share": 4.27,
+       "lift": 348.29,
+       "baseline_count": 1,
+       "previous_period_count": 38,
+       "delta_pct": 110.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy sources and technologies",
+       "count": 261,
+       "share": 13.92,
+       "lift": 189.38,
+       "baseline_count": 6,
+       "previous_period_count": 243,
+       "delta_pct": 7.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "energy-efficient home solutions",
+       "count": 76,
+       "share": 4.05,
+       "lift": 330.87,
+       "baseline_count": 1,
+       "previous_period_count": 26,
+       "delta_pct": 192.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2403,
+     "carrying": 1875,
+     "carrier_share_pct": 78.03,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.797,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.802
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "climate policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "climate policy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e34a0b48ac0efad16b9695",
+       "headline": "Studie: Menschgemachte Treibhausgase verstärken gleichzeitige Hitzewellen und Dürren",
+       "url": "http://www.n-tv.de/ticker/Studie-Menschgemachte-Treibhausgase-verstaerken-gleichzeitige-Hitzewellen-und-Duerren-id30689037.html",
+       "publisher": "n-tv.de",
+       "published_at": "2026-04-07T14:05:35",
+       "lede": "climate risks are becoming more serious: human-made greenhouse gases are increasing heat waves and droughts at the same time 04/07/2026, 16:05 facebook x whatsapp e-mail copy link print article share consequences on: human-induced greenhouse gas emissions are driving the common occurrence of heat waves and droughts. \"if current climate policy",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.71
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ca4ea5706a322e10c57b",
+       "headline": "US pressure puts World Bank’s climate plan at risk - Climate and Capital Media",
+       "url": "https://www.climateandcapitalmedia.com/us-pressure-puts-world-banks-climate-plan-at-risk/",
+       "publisher": "climateandcapitalmedia.com",
+       "published_at": "2026-04-29T01:32:56",
+       "lede": "the world bank’s work to tackle climate change is under threat as the trump administration pushes the lender to ditch its green targets and step up support for fossil fuel infrastructure in the developing world. with the world bank’s key climate policy framework set to expire in june, closed-door negotiations",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.7
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.54
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.47
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "world bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ab2aa5cefb83fe82e3cce",
+       "headline": "Protesters halt NatWest shareholder meeting as boss defends climate policy",
+       "url": "https://www.irishnews.com/news/uk/protesters-halt-natwest-shareholder-meeting-as-boss-defends-climate-policy-XEH6XQYZ6RIJDC26G652YWAA2A/",
+       "publisher": "irishnews.com",
+       "published_at": "2026-04-28T14:44:22",
+       "lede": "protesters have forced natwest to halt its shareholder meeting, as the bank’s chairman defended its climate policy in response to investors claiming it has “backtracked” on commitments. the annual general meeting (agm) was being held on tuesday morning but had to be stopped for about half an hour amid disruption",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 187,
+         "path": "/Finance/Investing/Socially Responsible Investing",
+         "score": 0.48
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e880e87bb1410d4c8730f2",
+       "headline": "Geopolitics and climate cooperation for a world in flux",
+       "url": "https://www.e3g.org/news/geopolitics-and-climate-cooperation-for-a-world-in-flux/",
+       "publisher": "e3g.org",
+       "published_at": "2026-04-20T18:26:07",
+       "lede": "at the world bank and imf spring meetings last week, public and private conversations orbited around the middle east conflict and the rapidly shifting global order – and their implications for climate and development. for much of the past decade, climate policy operated under a relatively stable assumption that geopolitics",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.74
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "world bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e869f79baafc735680ba63",
+       "headline": "US pressure puts World Bank's climate plan at risk",
+       "url": "https://www.climatechangenews.com/2026/04/16/us-pressure-puts-world-banks-climate-plan-at-risk/",
+       "publisher": "climatechangenews.com",
+       "published_at": "2026-04-16T14:23:51",
+       "lede": "the world bank’s work to tackle climate change is under threat as the trump administration pushes the lender to ditch its green targets and step up support for fossil fuel infrastructure in the developing world. with the world bank’s key climate policy framework set to expire in june, closed-door negotiations",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.67
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.47
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "world bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "69df50f710c865bb2ed52c9a",
+       "headline": "CCC releases detailed plan to reach UK net zero target",
+       "url": "https://www.thechemicalengineer.com/news/ccc-releases-detailed-plan-to-reach-uk-net-zero-target/",
+       "publisher": "thechemicalengineer.com",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "the climate change committee (ccc), an independent body that advises the uk government on climate policy, has released its advice on how the uk can reach its short- and long-term targets and reach net zero emissions by 2050. the climate change act of 2008 requires the uk to set a",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.76
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.6
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dc7ff6472a0104153e643a",
+       "headline": "With a very ambitious climate policy, the transport sector can be transformed in the long term from the \"problem child\" of German climate action efforts into one that potentially offsets lagging emission reductions in other sectors, said a report commissioned by the Federal Environment Agency (UBA).",
+       "url": "https://www.cleanenergywire.org/news/car-toll-higher-co2-price-better-public-transport-help-reach-sectors-climate-targets-report",
+       "publisher": "cleanenergywire.org",
+       "published_at": "2026-04-13T00:00:00",
+       "lede": "with a very ambitious climate policy, the transport sector can be transformed in the long term from the \"problem child\" of german climate action efforts into one that potentially offsets lagging emission reductions in other sectors, said a report commissioned by the federal environment agency (uba). a comprehensive package of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.59
+        }
+       ],
+       "country": "germany",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dc7ea057637035f7483146",
+       "headline": "The pressure on Germany's grand coalition government to come up with effective energy and climate policy is set to reach a climax in the coming weeks, as calls by the public for more ambition continue unabated, and critical deadlines loom. One month before a 20 September due date for which the clima",
+       "url": "http://www.cleanenergywire.org/news/german-government-enters-crunch-time-climate-challenge",
+       "publisher": "cleanenergywire.org",
+       "published_at": "2026-04-13T00:00:00",
+       "lede": "the pressure on germany's grand coalition government to come up with effective energy and climate policy is set to reach a climax in the coming weeks, as calls by the public for more ambition continue unabated, and critical deadlines loom. one month before a 20 september due date for which",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.55
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.54
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a672dc37f6c5e66b5f60b",
+       "headline": "India Moves to End New HFC Production Clearances - Current Affairs Usthadian Academy",
+       "url": "https://www.usthadian.com/india-moves-to-end-new-hfc-production-clearances/",
+       "publisher": "usthadian.com",
+       "published_at": "2026-04-11T10:41:42",
+       "lede": "policy decision and timeline india moves to end new hfc production clearances: india has announced a major climate policy step by deciding to stop granting new environmental clearances for hydrofluorocarbons (hfcs) production after december 31, 2027. this directive has been issued by the ministry of environment, forest and climate change",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.22,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.64
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 9,
+     "total_estimate": 212,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yNSAxMDoxNDo0MSIsImkiOiI2OWM0NDE5NjgxZmU0M2Y2YzhlZTRhN2QiLCJwIjo4fQ",
+     "unresolved": 16,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.396,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "16 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.415
+    }
+   }
+  }
+ ]
+}

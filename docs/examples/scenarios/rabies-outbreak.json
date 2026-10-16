@@ -1,0 +1,922 @@
+{
+ "slug": "rabies-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:37Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "rabies",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rabies",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1232,
+     "tone": {
+      "carrying": 1228,
+      "availability_pct": 99.68,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 766,
+        "share_pct": 62.38
+       },
+       {
+        "group": "neutral",
+        "count": 30,
+        "share_pct": 2.44
+       },
+       {
+        "group": "positive",
+        "count": 432,
+        "share_pct": 35.18
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1231,
+      "count": 898,
+      "share_pct": 72.95
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.713,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.716
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "rabies",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rabies",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 281,
+       "critical": 174,
+       "critical_pct": 61.9,
+       "negative": 151,
+       "positive": 119,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 189,
+       "critical": 130,
+       "critical_pct": 68.8,
+       "negative": 136,
+       "positive": 45,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 318,
+       "critical": 232,
+       "critical_pct": 73.0,
+       "negative": 211,
+       "positive": 95,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 610,
+       "critical": 492,
+       "critical_pct": 80.7,
+       "negative": 416,
+       "positive": 176,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 308,
+       "critical": 229,
+       "critical_pct": 74.4,
+       "negative": 149,
+       "positive": 151,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 190,
+       "critical": 131,
+       "critical_pct": 68.9,
+       "negative": 84,
+       "positive": 100,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 194,
+       "critical": 149,
+       "critical_pct": 76.8,
+       "negative": 90,
+       "positive": 101,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 263,
+       "critical": 207,
+       "critical_pct": 78.7,
+       "negative": 152,
+       "positive": 105,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 243,
+       "critical": 195,
+       "critical_pct": 80.2,
+       "negative": 142,
+       "positive": 92,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 259,
+       "critical": 176,
+       "critical_pct": 68.0,
+       "negative": 142,
+       "positive": 111,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 331,
+       "critical": 234,
+       "critical_pct": 70.7,
+       "negative": 213,
+       "positive": 112,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 399,
+       "critical": 293,
+       "critical_pct": 73.4,
+       "negative": 269,
+       "positive": 117,
+       "partial_period": false
+      }
+     ],
+     "total": 3585,
+     "critical_total": 2642,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.48,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.501
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "rabies",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rabies",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1232,
+     "carrying": 404,
+     "availability_pct": 32.79,
+     "items": [
+      {
+       "country": "india",
+       "count": 152,
+       "share_pct": 12.34
+      },
+      {
+       "country": "united states",
+       "count": 145,
+       "share_pct": 11.77
+      },
+      {
+       "country": "united kingdom",
+       "count": 18,
+       "share_pct": 1.46
+      },
+      {
+       "country": "malaysia",
+       "count": 10,
+       "share_pct": 0.81
+      },
+      {
+       "country": "china",
+       "count": 8,
+       "share_pct": 0.65
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 71
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.002,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.004
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "rabies",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rabies",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "dog vaccination schedules and preventive care",
+       "count": 106,
+       "share": 12.86,
+       "lift": 1050.09,
+       "baseline_count": 1,
+       "previous_period_count": 159,
+       "delta_pct": -33.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stray population management strategies",
+       "count": 95,
+       "share": 11.53,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 80,
+       "delta_pct": 18.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "dog health issues and veterinary care",
+       "count": 79,
+       "share": 9.59,
+       "lift": 782.62,
+       "baseline_count": 1,
+       "previous_period_count": 58,
+       "delta_pct": 36.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "veterinary vaccines and zoonotic disease prevention",
+       "count": 75,
+       "share": 9.1,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 39,
+       "delta_pct": 92.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "veterinary care for stray animals",
+       "count": 66,
+       "share": 8.01,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 37,
+       "delta_pct": 78.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1232,
+     "carrying": 824,
+     "carrier_share_pct": 66.88,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.024,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.026
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "rabies",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "rabies",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f1c6c0a5706a322e0eba80",
+       "headline": "Bat with rabies found in Camden County residence",
+       "url": "https://www.courierpostonline.com/story/news/health/2026/04/27/camden-county-health-department-haddonfield-rabies-vaccine-rabies-exposure-cdc-bat-in-attic/89816613007/",
+       "publisher": "courierpostonline.com",
+       "published_at": "2026-04-27T13:01:35",
+       "lede": "april 27, 2026, 9:01 a.m. et a bat in haddonfield has tested positive for rabies, camden county department of health and human services staff has shared. rabies is a viral disease that can be deadly in humans if people don't receive proper medical care. the disease spreads mainly through bites",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.24,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 112,
+         "path": "/Pets & Animals/Wildlife",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87fbc7bb1410d4c86759d",
+       "headline": "'Stop Rabies' initiative seeks to achieve rabies-free Philippines",
+       "url": "https://www.philstar.com/lifestyle/health-and-family/2026/04/20/2522018/stop-rabies-initiative-seeks-achieve-rabies-free-philippines",
+       "publisher": "philstar.com",
+       "published_at": "2026-04-20T05:46:00",
+       "lede": "'stop rabies' initiative seeks to achieve rabies-free philippines manila, philippines — rabies poses a serious public health threat in the philippines. it causes 300 to 400 deaths and some 4 million animal bite cases every year. in the first two months of 2026 alone, 17 human rabies cases have already",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 217,
+         "path": "/Pets & Animals/Animal Products & Services/Animal Welfare",
+         "score": 0.6
+        }
+       ],
+       "country": "philippines",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1d277ef7caa4b80da3328",
+       "headline": "March 2026 Excellence in Action: Dharamsala Animal Rescue, India",
+       "url": "https://www.rabiesalliance.org/news/march-2026-excellence-action-dharamsala-animal-rescue-india",
+       "publisher": "rabiesalliance.org",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "garc’s rabies centers of excellence (rce) form part of our communities against rabies program. through our excellence in action series, we want to showcase the incredible work that these rces do to eliminate rabies in their communities. for this month’s excellence in action, we are proud to share the work",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 245,
+         "path": "/Pets & Animals/Pets/Dogs",
+         "score": 0.68
+        },
+        {
+         "code": 217,
+         "path": "/Pets & Animals/Animal Products & Services/Animal Welfare",
+         "score": 0.58
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee7898e67a2fcb3ef5062",
+       "headline": "Testimony begins in trial of former animal control tech accused of cruelty",
+       "url": "https://www.yahoo.com/news/articles/testimony-begins-trial-former-animal-035900720.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-15T03:59:00",
+       "lede": "at a glance — the trial of former calhoun county animal control euthanasia technician christopher westmoreland began this week. — prosecutors say westmoreland used improper euthanasia methods and administered rabies vaccinations without being a licensed veterinarian. — investigators testified about disorganized records, missing controlled substances and interviews they said were",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 217,
+         "path": "/Pets & Animals/Animal Products & Services/Animal Welfare",
+         "score": 0.74
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e281fc9b322e6b3e977e4f",
+       "headline": "CDC pauses lab testing of rabies, monkeypox and other infectious diseases",
+       "url": "https://www.nbcphiladelphia.com/news/national-international/cdc-pauses-testing-rabies-monkeypox/4379036/",
+       "publisher": "nbcphiladelphia.com",
+       "published_at": "2026-04-02T16:38:04",
+       "lede": "the federal government's disease-tracking agency has paused its diagnostic testing for rabies, monkeypox and a number of other infectious diseases. the centers for disease control and prevention this week posted a list of more than two dozen types of testing that have become unavailable. stream philadelphia news for free, 24/7,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.6
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.51
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "centers for disease control and prevention"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e27f359b322e6b3e96db95",
+       "headline": "CDC pauses testing for rabies and other serious infectious diseases",
+       "url": "https://www.nbcnews.com/health/health-news/cdc-pauses-testing-rabies-monkeypox-epstein-barr-viruses-rcna266377",
+       "publisher": "nbcnews.com",
+       "published_at": "2026-04-02T13:49:58",
+       "lede": "the federal government’s disease-tracking agency has paused its diagnostic testing for rabies, mpox and a number of other infectious diseases. the centers for disease control and prevention this week posted a list of more than two dozen types of testing that have become unavailable. this is not the first time",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.68
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.61
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.5
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "centers for disease control and prevention"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e27e7d601121844c2f5701",
+       "headline": "CDC pauses lab testing of rabies, monkeypox and other infectious diseases",
+       "url": "https://www.nbclosangeles.com/news/national-international/cdc-pauses-testing-rabies-monkeypox/3870351/",
+       "publisher": "nbclosangeles.com",
+       "published_at": "2026-04-02T13:38:04",
+       "lede": "the federal government's disease-tracking agency has paused its diagnostic testing for rabies, monkeypox and a number of other infectious diseases. the centers for disease control and prevention this week posted a list of more than two dozen types of testing that have become unavailable. stream los angeles news for free,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.55
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.52
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "centers for disease control and prevention"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e281da3aab8d96aa2c593b",
+       "headline": "CDC pauses lab testing for dozens of diseases",
+       "url": "http://www.healio.com/news/infectious-disease/20260402/cdc-pauses-lab-testing-for-dozens-of-diseases",
+       "publisher": "healio.com",
+       "published_at": "2026-04-02T00:00:00",
+       "lede": "cdc pauses lab testing for dozens of diseases key takeaways: the pause impacts testing for more than two dozen diseases. an expert called the pause “a real disaster from a public health standpoint.” the cdc has paused diagnostic testing for more than two dozen infectious diseases —including rabies and pox",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.72
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.56
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e27f36277be6ed2d948cbb",
+       "headline": "CDC pauses lab testing for dozens of diseases",
+       "url": "https://www.healio.com/news/infectious-disease/20260402/cdc-pauses-lab-testing-for-dozens-of-diseases",
+       "publisher": "healio.com",
+       "published_at": "2026-04-02T00:00:00",
+       "lede": "cdc pauses lab testing for dozens of diseases key takeaways: the pause impacts testing for more than two dozen diseases. an expert called the pause “a real disaster from a public health standpoint.” the cdc has paused diagnostic testing for more than two dozen infectious diseases —including rabies and pox",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.72
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.56
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e290557f3a572cf4a72c1e",
+       "headline": "Rabies confirmed after mass dog bite incident in Assam town",
+       "url": "https://www.thehindu.com/news/national/assam/rabies-confirmed-after-mass-dog-bite-incident-in-assam-town/article70810470.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-04-01T10:06:19",
+       "lede": "guwahati canine experts have detected rabies following a mass dog bite incident in lanka town in central assam. about 40 people in the town were bitten by dogs in quick succession on march 26. an animal care centre at sonapur, about 30 km east of guwahati, sent a team after",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 245,
+         "path": "/Pets & Animals/Pets/Dogs",
+         "score": 0.65
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d10c53c47f8fc6a1662c74",
+       "headline": "Rabies outbreak in Enugu triggers public health alert",
+       "url": "https://thesun.ng/rabies-outbreak-in-enugu-triggers-public-health-alert/",
+       "publisher": "thesun.ng",
+       "published_at": "2026-03-31T18:28:37",
+       "lede": "from jude chinedu, enugu the enugu state government has raised a public health alarm following an outbreak of rabies in igbo etiti local government area, warning residents to take urgent preventive measures. the commissioner for agriculture and agro-industrialisation, patrick nwabueze ubru, disclosed this in a public notice issued on tuesday,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.76
+        },
+        {
+         "code": 245,
+         "path": "/Pets & Animals/Pets/Dogs",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a656a5cefb83fe8fc9422",
+       "headline": "166 Dog Bite Cases Daily in Vasai-Virar Spark Health Risk",
+       "url": "https://dogexpress.in/166-daily-dog-bite-cases-in-vasai-virar-spark-concern-after-child-rabies-death/",
+       "publisher": "dogexpress.in",
+       "published_at": "2026-03-26T10:37:24",
+       "lede": "vasai-virar is dealing with a public health situation that has been building for months and has finally reached a breaking point. dog bite incidents in the region have climbed to alarming numbers, and the recent death of a nine-year-old girl from rabies has forced the issue into sharp focus. the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 245,
+         "path": "/Pets & Animals/Pets/Dogs",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e27d61c1991f786ce0d26a",
+       "headline": "9 Year-Old Dies 6 Months After Skipping Rabies Vaccine: Why Not Getting Jabbed After A Dog Bite Can Be Fatal",
+       "url": "https://www.ndtv.com/health/9-year-old-dies-6-months-after-skipping-rabies-vaccine-why-not-getting-jabbed-after-a-dog-bite-can-be-fatal-11263162",
+       "publisher": "ndtv.com",
+       "published_at": "2026-03-25T05:14:13",
+       "lede": "a case from mumbai has once again highlighted the deadly consequences of ignoring even minor animal bites or scratches. a nine-year-old girl reportedly died of rabies nearly six months after being scratched by a dog, having skipped the recommended anti-rabies vaccination due to fear of injections. the incident underscores a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 245,
+         "path": "/Pets & Animals/Pets/Dogs",
+         "score": 0.7
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d0ace4ab77624179098761",
+       "headline": "Social activist calls for urgent, coordinated action against rabies in Sarawak | Borneo Post Online",
+       "url": "https://www.theborneopost.com/2026/03/23/social-activist-calls-for-urgent-coordinated-action-against-rabies-in-sarawak/",
+       "publisher": "theborneopost.com",
+       "published_at": "2026-03-23T01:38:10",
+       "lede": "facebook twitter linkedin threads whatsapp telegram kuching (march 23): social activist voon shiak ni has called for urgent, coordinated action to stop the spread of rabies in sarawak. she pointed out that rabies has claimed three lives in sarawak so far this year, a figure she said warrants urgent attention.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 245,
+         "path": "/Pets & Animals/Pets/Dogs",
+         "score": 0.53
+        },
+        {
+         "code": 217,
+         "path": "/Pets & Animals/Animal Products & Services/Animal Welfare",
+         "score": 0.48
+        }
+       ],
+       "country": "malaysia",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 207,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0wNyAwMDoxNTowMiIsImkiOiI2YTJlNGY3MjNhNGQwOThiNDBiZjY5ZGEiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.684,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.687
+    }
+   }
+  }
+ ]
+}

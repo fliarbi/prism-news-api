@@ -1,0 +1,901 @@
+{
+ "slug": "windfall-tax-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:25Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "windfall tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "windfall tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 249,
+     "tone": {
+      "carrying": 249,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 240,
+        "share_pct": 96.39
+       },
+       {
+        "group": "neutral",
+        "count": 2,
+        "share_pct": 0.8
+       },
+       {
+        "group": "positive",
+        "count": 7,
+        "share_pct": 2.81
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 249,
+      "count": 216,
+      "share_pct": 86.75
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.179,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.216
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "windfall tax",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "windfall tax",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 21,
+       "critical": 21,
+       "critical_pct": 100.0,
+       "negative": 20,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 5,
+       "critical": 5,
+       "critical_pct": 100.0,
+       "negative": 5,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 6,
+       "critical": 6,
+       "critical_pct": 100.0,
+       "negative": 6,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 16,
+       "critical": 12,
+       "critical_pct": 75.0,
+       "negative": 15,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 19,
+       "critical": 19,
+       "critical_pct": 100.0,
+       "negative": 17,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 20,
+       "critical": 20,
+       "critical_pct": 100.0,
+       "negative": 17,
+       "positive": 3,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 20,
+       "critical": 20,
+       "critical_pct": 100.0,
+       "negative": 19,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 17,
+       "critical": 17,
+       "critical_pct": 100.0,
+       "negative": 13,
+       "positive": 4,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 6,
+       "critical": 6,
+       "critical_pct": 100.0,
+       "negative": 6,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 10,
+       "critical": 10,
+       "critical_pct": 100.0,
+       "negative": 10,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 87,
+       "critical": 79,
+       "critical_pct": 90.8,
+       "negative": 85,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 146,
+       "critical": 121,
+       "critical_pct": 82.9,
+       "negative": 139,
+       "positive": 5,
+       "partial_period": false
+      }
+     ],
+     "total": 373,
+     "critical_total": 336,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.559,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.573
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "windfall tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "windfall tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 249,
+     "carrying": 180,
+     "availability_pct": 72.29,
+     "items": [
+      {
+       "country": "iran",
+       "count": 45,
+       "share_pct": 18.07
+      },
+      {
+       "country": "united kingdom",
+       "count": 30,
+       "share_pct": 12.05
+      },
+      {
+       "country": "united states",
+       "count": 24,
+       "share_pct": 9.64
+      },
+      {
+       "country": "australia",
+       "count": 14,
+       "share_pct": 5.62
+      },
+      {
+       "country": "india",
+       "count": 13,
+       "share_pct": 5.22
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 54
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.133,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.139
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "windfall tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "windfall tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economic impact of oil exports",
+       "count": 52,
+       "share": 26.13,
+       "lift": 533.26,
+       "baseline_count": 4,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "geopolitical factors in oil supply",
+       "count": 82,
+       "share": 41.21,
+       "lift": 305.79,
+       "baseline_count": 11,
+       "previous_period_count": 3,
+       "delta_pct": 2633.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil and gas market trends",
+       "count": 119,
+       "share": 59.8,
+       "lift": 180.79,
+       "baseline_count": 27,
+       "previous_period_count": 11,
+       "delta_pct": 981.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 10,
+       "share": 5.03,
+       "lift": 410.2,
+       "baseline_count": 1,
+       "previous_period_count": 3,
+       "delta_pct": 233.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil and gas investment trends",
+       "count": 8,
+       "share": 4.02,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1,
+       "delta_pct": 700.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 249,
+     "carrying": 199,
+     "carrier_share_pct": 79.92,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.018,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.02
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "windfall tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "windfall tax",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e4f81ed5e7fc42ee0a9876",
+       "headline": "India Raises Windfall Tax On Fuel Exports Amid West Asia Tensions, Diesel Duty At ₹55.5/Litre & ATF At ₹42/Litre",
+       "url": "https://www.freepressjournal.in/business/india-raises-windfall-tax-on-fuel-exports-amid-west-asia-tensions-diesel-duty-at-555litre-atf-at-42litre",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-04-12T04:18:50",
+       "lede": "govt tightens export duties to secure domestic supply. | image: file (representative) new delhi: the centre has significantly increased the windfall tax on fuel exports, raising the duty on diesel to rs 55.5 per litre and on aviation turbine fuel (atf) to rs 42 per litre. the revised rates came",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.78
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8da069baafc7356d69dc4",
+       "headline": "Windfall tax delay exposes Indonesia’s challenge in capturing commodity gains",
+       "url": "https://intellinews.com/windfall-tax-delay-exposes-indonesia-s-challenge-in-capturing-commodity-gains-436184/",
+       "publisher": "intellinews.com",
+       "published_at": "2026-04-09T00:02:57",
+       "lede": "indonesia recently announced that it had delayed the rollout of its windfall tax proposal on coal and nickel exports. the country noted that the complexity of balancing fiscal needs with industrial policy is behind the delay, indonesia business post reports. originally slated for implementation on april 1, the measure is",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2e04fd754bf662ce4a358",
+       "headline": "European ministers call for profit caps on energy companies as Iran war drives price surge",
+       "url": "https://www.ajc.com/news/2026/04/european-ministers-call-for-profit-caps-on-energy-companies-as-iran-war-drives-price-surge/",
+       "publisher": "ajc.com",
+       "published_at": "2026-04-04T12:02:10",
+       "lede": "nation & world news european ministers call for profit caps on energy companies as iran war drives price surge finance ministers from five european union member states are urging the bloc to introduce a windfall tax on energy companies as surging oil and gas prices raise inflation fears gas prices",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.68
+        }
+       ],
+       "country": "germany",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1ee3fef7caa4b80daa11a",
+       "headline": "【SMM Analysis】Windfall or Export Levy? Inside Indonesia's Upcoming Commodities’ Tax - Shanghai Metals Market (SMM)",
+       "url": "https://news.metal.com/en/newscontent/103829040-SMM-AnalysisWindfall-or-Export-Levy-Inside-Indonesias-Upcoming-Commodities%E2%80%99-Tax",
+       "publisher": "news.metal.com",
+       "published_at": "2026-03-27T00:00:00",
+       "lede": "recent volatility in the indonesian commodities sector has been driven by mixed signals regarding new fiscal policies. market participants are currently evaluating the implications of two distinct regulatory mechanisms: a broader windfall tax on bulk commodities like coal, nickel, and a targeted export duty. the conflation of these two policies",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.46
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ebe3a83fc01faba374719",
+       "headline": "VERBUND AG (ETR:OEWA) |",
+       "url": "https://www.webdisclosure.com/press-release/verbund-ag-full-year-2025-results-solid-results-despite-below-average-water-supply-and-windfall-tax-a6JSnNo80jh",
+       "publisher": "webdisclosure.com",
+       "published_at": "2026-03-18T07:58:23",
+       "lede": "eqs-news: verbund ag / key word(s): annual results verbund ag: full-year 2025 results: solid results despite below-average water supply and windfall tax 18.03.2026 / 07:58 cet/cest the issuer is solely responsible for the content of this announcement. --------------------------------------------------------------- 2025 was a crucial year for the implementation of our strategy 2030.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc7dc76c5e9c4eedf298e5",
+       "headline": "UK ministers 'in talks' over early end to windfall tax – Daily Business",
+       "url": "https://dailybusinessgroup.co.uk/2026/02/uk-ministers-in-talks-over-early-end-to-windfall-tax/",
+       "publisher": "dailybusinessgroup.co.uk",
+       "published_at": "2026-02-25T11:52:10",
+       "lede": "epl speculationthe windfall tax is blamed for a fall in investmentthe uk government is said to be weighing an early end to the controversial energy profits levy (epl) or windfall tax, amid sustained pressure from the oil and gas industry.treasury officials and north sea operators have engaged in an “intense",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.75
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e94abe540a46fb5395591",
+       "headline": "Shutting North Sea ‘will drive up carbon emissions’",
+       "url": "https://www.yahoo.com/news/articles/shutting-north-sea-drive-carbon-070000064.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-18T07:00:00",
+       "lede": "ending oil and gas production in the north sea will drive up global carbon emissions, experts have warned. the institute for economic affairs (iea), a think tank, said the government’s net zero goals and its windfall tax on north sea producers would result in the uk importing more oil and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.59
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.58
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6aea5706a322e0ead55",
+       "headline": "Lithuania takes note as Poland weighs windfall tax on energy firms",
+       "url": "https://www.lrt.lt/en/news-in-english/19/2911147/lithuania-takes-note-as-poland-weighs-windfall-tax-on-energy-firms",
+       "publisher": "lrt.lt",
+       "published_at": "2026-04-27T08:22:00",
+       "lede": "poland is considering introducing a windfall tax on energy companies to offset revenue losses from fuel tax cuts aimed at cushioning the impact of rising oil prices driven by the conflict in the middle east, finance and economy minister andrzej domaåski said. âwe are considering various options for a windfall",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.83,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.64
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "poland",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e48a7bf10c43d296b0115",
+       "headline": "No plans for EU-wide windfall tax, commission says",
+       "url": "https://www.yahoo.com/news/articles/no-plans-eu-wide-windfall-163824407.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T16:38:24",
+       "lede": "the european commission has rejected calls by german vice chancellor lars klingbeil and other ministers across the bloc for a windfall tax on excessive profits generated by energy companies during the current period of high prices. the commission has no plans for a windfall tax, and would not speculate on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e883485cfa3e5ba50564f8",
+       "headline": "UK Moves to Shield Households From Rising Bills",
+       "url": "https://www.easterneye.biz/uk-windfall-tax-power-firms-household-bills/",
+       "publisher": "easterneye.biz",
+       "published_at": "2026-04-21T14:33:19",
+       "lede": "windfall tax on generators to rise to 55 per cent during gas price spikes energy bills could climb to £1,836.84 from july as global prices rise legacy renewable projects face higher tax unless they shift to fixed-price deals the uk government is tightening its grip on electricity pricing as rising",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.77
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a63b05cefb83fe8fb5de1",
+       "headline": "Electricity bills targeted in planned shakeup to energy pricing",
+       "url": "https://www.bbc.co.uk/news/articles/c79jg43vd8no",
+       "publisher": "bbc.co.uk",
+       "published_at": "2026-04-21T00:51:30",
+       "lede": "analysts say any saving is likely to be small but should make prices more stable. the conservatives said that it was essential to make electricity cheaper and blamed high prices on government taxes and levies. the government also announced an increase to the so-called windfall tax on some electricity generators,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86a139baafc735680cef1",
+       "headline": "Rachel Reeves Plans Increase in Windfall Tax on Low-Carbon Power Firms - The Beaver",
+       "url": "https://www.beaveronline.co.uk/news/rachel-reeves-plans-increase-in/2361/",
+       "publisher": "beaveronline.co.uk",
+       "published_at": "2026-04-18T09:23:04",
+       "lede": "rachel reeves is expected to raise the windfall tax on low-carbon electricity generators, a move that has sparked debate across the united kingdom. the proposal is part of broader efforts to address public finances and ensure that companies benefiting from high energy prices contribute more, but it has also raised",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.73
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "rachel reeves"
+       ]
+      },
+      {
+       "id": "69e8af319baafc7356b33a62",
+       "headline": "Windfall tax on diesel, ATF hiked: How it affects you?",
+       "url": "https://www.newsbytesapp.com/news/business/modi-government-hikes-windfall-tax-on-diesel-and-atf/story",
+       "publisher": "newsbytesapp.com",
+       "published_at": "2026-04-12T05:17:57",
+       "lede": "the indian government has hiked the export duty, or windfall tax, on diesel and aviation fuel (atf). the new rates are ₹55.5 per liter for diesel and ₹42 per liter for atf. the hike comes into immediate effect, according to a notification from the finance ministry. earlier this year, an",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "cameroon",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f6a59d0e7fe469a10065",
+       "headline": "Govt hikes windfall tax on diesel to ₹55.5/litre, ATF to ₹42/litre",
+       "url": "https://www.fortuneindia.com/economy/govt-hikes-windfall-tax-on-diesel-to-rs-55-5-litre-atf-to-rs-42-litre/132286",
+       "publisher": "fortuneindia.com",
+       "published_at": "2026-04-11T14:04:41",
+       "lede": "the central government today enhanced windfall tax on export of diesel and aviation turbine fuel (atf) to manage domestic supply and suppress windfall gains by refiners. through a notification issued earlier today, the union finance ministry more than doubled the excise duty on diesel to rs 55.5 per litre from",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.58
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2af86277be6ed2d9dead9",
+       "headline": "EU Ministers Call for Windfall Tax on Energy Companies - Time News",
+       "url": "https://time.news/eu-ministers-call-for-windfall-tax-on-energy-companies/",
+       "publisher": "time.news",
+       "published_at": "2026-04-07T17:00:52",
+       "lede": "a coalition of european union ministers is intensifying pressure on brussels to implement a coordinated windfall tax on energy companies, arguing that the sector’s record profits are untethered from operational investments and are instead the result of volatile market spikes. the push comes as governments struggle to shield households from",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "belgium",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d10b5cff077cc15f7aef4c",
+       "headline": "Lithuania weighs windfall tax on Orlen Lietuva amid spiking fuel prices",
+       "url": "https://www.lrt.lt/en/news-in-english/19/2884129/lithuania-weighs-windfall-tax-on-orlen-lietuva-amid-spiking-fuel-prices",
+       "publisher": "lrt.lt",
+       "published_at": "2026-03-31T07:58:00",
+       "lede": "lithuania is considering imposing a windfall tax on orlen lietuva, the baltic statesâ only oil refiner, following an investigation into its pricing practices, finance minister kristupas vaitiekå«nas said tuesday. the proposed levy would be modelled on the temporary âsolidarity contributionâ previously applied to the banking sector. vaitiekå«nas said similar measures",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        }
+       ],
+       "country": "lithuania",
+       "organizations": [
+        "orlen lietuva"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 44,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yNyAyMToyNzowMCIsImkiOiI2OWM4YzAyZjc5YTU5NmI0ZjdjMTBjMGQiLCJwIjo3fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.694,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.697
+    }
+   }
+  }
+ ]
+}

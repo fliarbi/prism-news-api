@@ -1,0 +1,977 @@
+{
+ "slug": "augmented-reality-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:12:01Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "augmented reality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "augmented reality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3796,
+     "tone": {
+      "carrying": 3795,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 552,
+        "share_pct": 14.55
+       },
+       {
+        "group": "neutral",
+        "count": 35,
+        "share_pct": 0.92
+       },
+       {
+        "group": "positive",
+        "count": 3208,
+        "share_pct": 84.53
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3794,
+      "count": 1286,
+      "share_pct": 33.9
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.688,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.691
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "augmented reality",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "augmented reality",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 843,
+       "critical": 221,
+       "critical_pct": 26.2,
+       "negative": 77,
+       "positive": 754,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 683,
+       "critical": 194,
+       "critical_pct": 28.4,
+       "negative": 30,
+       "positive": 649,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 772,
+       "critical": 213,
+       "critical_pct": 27.6,
+       "negative": 72,
+       "positive": 696,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 800,
+       "critical": 246,
+       "critical_pct": 30.8,
+       "negative": 56,
+       "positive": 731,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 833,
+       "critical": 236,
+       "critical_pct": 28.3,
+       "negative": 42,
+       "positive": 780,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 774,
+       "critical": 263,
+       "critical_pct": 34.0,
+       "negative": 39,
+       "positive": 728,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 710,
+       "critical": 205,
+       "critical_pct": 28.9,
+       "negative": 44,
+       "positive": 660,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 641,
+       "critical": 190,
+       "critical_pct": 29.6,
+       "negative": 65,
+       "positive": 573,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 752,
+       "critical": 228,
+       "critical_pct": 30.3,
+       "negative": 82,
+       "positive": 660,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1094,
+       "critical": 458,
+       "critical_pct": 41.9,
+       "negative": 260,
+       "positive": 828,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 769,
+       "critical": 231,
+       "critical_pct": 30.0,
+       "negative": 98,
+       "positive": 662,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1181,
+       "critical": 369,
+       "critical_pct": 31.2,
+       "negative": 112,
+       "positive": 1058,
+       "partial_period": false
+      }
+     ],
+     "total": 9852,
+     "critical_total": 3054,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.688,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.691
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "augmented reality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "augmented reality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3796,
+     "carrying": 1894,
+     "availability_pct": 49.89,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1084,
+       "share_pct": 28.56
+      },
+      {
+       "country": "india",
+       "count": 112,
+       "share_pct": 2.95
+      },
+      {
+       "country": "china",
+       "count": 96,
+       "share_pct": 2.53
+      },
+      {
+       "country": "united kingdom",
+       "count": 94,
+       "share_pct": 2.48
+      },
+      {
+       "country": "colombia",
+       "count": 87,
+       "share_pct": 2.29
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 421
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.426,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.447
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "augmented reality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "augmented reality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "augmented reality (ar) and virtual reality (vr)",
+       "count": 112,
+       "share": 5.38,
+       "lift": 439.33,
+       "baseline_count": 1,
+       "previous_period_count": 102,
+       "delta_pct": 9.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "wearable technology innovations",
+       "count": 106,
+       "share": 5.09,
+       "lift": 415.8,
+       "baseline_count": 1,
+       "previous_period_count": 96,
+       "delta_pct": 10.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "smart glasses and wearable displays",
+       "count": 87,
+       "share": 4.18,
+       "lift": 341.27,
+       "baseline_count": 1,
+       "previous_period_count": 140,
+       "delta_pct": -37.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "augmented reality (ar) devices",
+       "count": 87,
+       "share": 4.18,
+       "lift": 341.27,
+       "baseline_count": 1,
+       "previous_period_count": 141,
+       "delta_pct": -38.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "virtual reality (vr) headsets",
+       "count": 81,
+       "share": 3.89,
+       "lift": 317.73,
+       "baseline_count": 1,
+       "previous_period_count": 135,
+       "delta_pct": -40.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3796,
+     "carrying": 2081,
+     "carrier_share_pct": 54.82,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.026,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.029
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "augmented reality",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "augmented reality",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8809e9baafc73568f6fb0",
+       "headline": "Campaign's Augmented Reality Tool Allows Students to Explore True Cost of Nuclear Weapons | Common Dreams",
+       "url": "https://www.commondreams.org/news/class-dismissed-nuclear-weapons",
+       "publisher": "commondreams.org",
+       "published_at": "2026-04-21T21:19:02",
+       "lede": "a new educational campaign is using augmented reality technology to help american students understand the true costs of possessing and maintaining a massive stockpile of nuclear weapons.up in arms, a campaign started by ben & jerry's co-founder ben cohen to increase support for slashing the bloated us defense spending budget,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "ben & jerry's"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a570bc37f6c5e66aa2779",
+       "headline": "‘White House, Black Hands’: New Orleans artist uses augmented reality to reveal history",
+       "url": "https://www.yahoo.com/news/articles/white-house-black-hands-orleans-025308377.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-17T02:53:08",
+       "lede": "new orleans (wgno) — marcus brown calls his augmented reality history projects “decentralized digital memorials.” and all you need to be able to see that history is your iphone. brown tells the story of real people and events, all carefully researched, by creating augmented reality depictions that are revealed in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.25,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 51,
+         "path": "/Reference/Humanities/History",
+         "score": 0.67
+        },
+        {
+         "code": 49,
+         "path": "/People & Society/Other",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3564a392cc5e9e8fccd01",
+       "headline": "Inside our Artemis II reporting",
+       "url": "https://www.nbcnews.com/news/us-news/artemis-ii-reporting-rcna273732",
+       "publisher": "nbcnews.com",
+       "published_at": "2026-04-10T21:59:42",
+       "lede": "hi, it’s emily filling in for yasmin. today we’re taking you inside nbc news’ extensive coverage of the historic artemis ii mission: augmented reality studio, training capsule shoots, space-to-ground communications and all. we asked al roker, denise chow and others their favorite moments. also, i texted with senior white house",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "iran",
+       "organizations": [],
+       "people": [
+        "al roker"
+       ]
+      },
+      {
+       "id": "69e319df8c1f2eecc2d47388",
+       "headline": "How GenAIPI was built in a weekend and made $1M in 6 months with AI tools",
+       "url": "https://www.utahbusiness.com/entrepreneurship/2026/04/09/genaipi-built-in-weekend-ai-jon-cheney-seek-infinity-pools-entrepreneurship/",
+       "publisher": "utahbusiness.com",
+       "published_at": "2026-04-09T15:00:00",
+       "lede": "building a successful company used to be a years-long endeavor. in the ai era, a business can be built over a weekend for under $500. when jon cheney founded seek in 2016, he raised $13 million in venture capital over a few years for the augmented reality social platform. it",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.73
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "social platform"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2d768dc480588dca96026",
+       "headline": "For Gen Z, AI is becoming a daily tool, not a trend",
+       "url": "https://economictimes.indiatimes.com/industry/services/advertising/et-snapchat-gen-z-index-for-gen-z-ai-is-becoming-a-daily-tool-not-a-trend/articleshow/129625596.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-03-17T07:24:00",
+       "lede": "artificial intelligence (ai) and augmented reality (ar) are becoming part of everyday life for gen z, helping them complete tasks, study, and make decisions, according to the et snapchat gen z report. the study, based on responses from over 1,500 gen z participants across multiple survey waves, shows that young",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.6,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.58
+        },
+        {
+         "code": 483,
+         "path": "/Science/Engineering & Technology/Augmented & Virtual Reality",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2adc115cefb83fe84ba7bb",
+       "headline": "Caitlin Kalinowski Resigns After Pentagon Deal in 2026: Why AR Teams Are Worried",
+       "url": "https://glassalmanac.com/caitlin-kalinowski-resigns-after-pentagon-deal-in-2026-why-ar-teams-are-worried/",
+       "publisher": "glassalmanac.com",
+       "published_at": "2026-03-10T14:03:06",
+       "lede": "post on facebook post on flipboard share on linkedin post on reddit share on threads share on x send through whatsapp alarm grows after 2026 pentagon-tied resignation. the sudden departure of a senior hardware executive this march has immediate consequences for augmented reality teams and the startups that partner with",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.56
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9fb9963d76f4afe8aaab",
+       "headline": "OpenAI Robotics head resigns after deal with Pentagon",
+       "url": "https://hr.economictimes.indiatimes.com/news/industry/openai-robotics-head-resigns-over-pentagon-ai-deal-controversy/129304856",
+       "publisher": "hr.economictimes.indiatimes.com",
+       "published_at": "2026-03-09T08:16:33",
+       "lede": "kalinowski joined openai in 2024 after leading augmented reality hardware development at meta platforms.by karen brettellcaitlin kalinowski, head of robotics and consumer hardware at openai, announced her resignation on saturday, citing concerns about the company's agreement with the department of defense. in a social media post on x, kalinowski wrote",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.49
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "772083371d6081ec32e11a49",
+       "headline": "Artificial intelligence assisted 3D in the robotic urooncology? A systematic review and narrative synthesis of current applications, challenges and future directions.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41800506/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-02-28T00:00:00",
+       "lede": "artificial intelligence assisted 3d in the robotic urooncology? a systematic review and narrative synthesis of current applications, challenges and future directions.background: artificial intelligence (ai)-assisted three-dimensional (3d) surgical platforms, integrated with augmented reality, have the potential to improve intraoperative anatomical recognition and provide surgeons with an immersive, dynamic operating environment during",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.74
+        },
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c95173682ef7f3f763f8a9",
+       "headline": "AI, Robotics & Tech: The Future of Orthopedic Surgery - News Directory 3",
+       "url": "https://www.newsdirectory3.com/ai-robotics-tech-the-future-of-orthopedic-surgery/",
+       "publisher": "newsdirectory3.com",
+       "published_at": "2026-02-18T21:39:02",
+       "lede": "the evolving landscape of orthopedic surgery: ai, robotics, and the future of careorthopedic surgery, a field dedicated to the restoration of musculoskeletal function, is undergoing a rapid transformation. driven by advances in artificial intelligence (ai), robotics, virtual reality (vr), augmented reality (ar), and digital health tools, the way surgeons evaluate",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "digital health"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bb99b2fa79fa6ed8b772f8",
+       "headline": "WiMi Releases Hybrid Quantum-Classical Neural Network (H-QNN) Technology for Efficient MNIST Binary Image Classification",
+       "url": "https://www.globenewswire.com/news-release/2026/02/06/3233807/0/en/WiMi-Releases-Hybrid-Quantum-Classical-Neural-Network-H-QNN-Technology-for-Efficient-MNIST-Binary-Image-Classification.html",
+       "publisher": "globenewswire.com",
+       "published_at": "2026-02-06T13:30:00",
+       "lede": "beijing, feb. 06, 2026 (globe newswire) -- wimi releases hybrid quantum-classical neural network (h-qnn) technology for efficient mnist binary image classificationbeijing, feb.06, 2026––wimi hologram cloud inc. (nasdaq: wimi) (\"wimi\" or the \"company\"), a leading global hologram augmented reality (\"ar\") technology provider, today announced the release of a hybrid quantum-classical neural",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.89,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.56
+        },
+        {
+         "code": 262,
+         "path": "/Science/Physics",
+         "score": 0.51
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "wimi"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2aff8d963d76f4af2bfa7b",
+       "headline": "This Will Replace The Smartphone Sparks AR Hiring Surge in 2025 - Here's Why",
+       "url": "https://glassalmanac.com/this-will-replace-the-smartphone-sparks-ar-hiring-surge-in-2025-heres-why/",
+       "publisher": "glassalmanac.com",
+       "published_at": "2026-01-26T02:03:04",
+       "lede": "post on facebook post on flipboard share on linkedin post on reddit share on threads share on x send through whatsapp “this will replace the smartphone” opens a heated argument that surprised engineers and investors on jan 22, 2026. the line landed as companies race to ship augmented reality tools",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a63155cefb83fe8faf19c",
+       "headline": "Maia: Pioneering AI-Driven Surgical Assistance in Medicine",
+       "url": "https://orthofeed.com/2026/01/24/maia-pioneering-ai-driven-surgical-assistance-in-medicine/",
+       "publisher": "orthofeed.com",
+       "published_at": "2026-01-24T21:57:28",
+       "lede": "in the rapidly evolving landscape of healthcare technology, medivis is at the forefront with its upcoming ai agent, maia. designed as an intelligent assistant for clinical ai and translational research, maia represents a significant leap in integrating artificial intelligence with augmented reality (ar) to enhance surgical precision and patient outcomes.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.65
+        },
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac45bc37f6c5e66f40ec3",
+       "headline": "\"Tomorrow, We Take AR To The Next Level\" Sparks Google‑Xreal Push In 2026 - What Changes",
+       "url": "https://glassalmanac.com/tomorrow-we-take-ar-to-the-next-level-sparks-google%e2%80%91xreal-push-in-2026-what-changes/",
+       "publisher": "glassalmanac.com",
+       "published_at": "2026-01-11T11:07:45",
+       "lede": "post on facebook post on flipboard share on linkedin post on reddit share on threads share on x send through whatsapp “tomorrow, we take ar to the next level.” the line landed like a dare this week, and 2026 suddenly feels like a turning point for consumer augmented reality. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.45
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aab6a963d76f4aff0a3ce",
+       "headline": "\"Tomorrow, We Take AR To The Next Level\" Sparks Google‑Xreal Push In 2026 - What Changes",
+       "url": "https://glassalmanac.com/tomorrow-we-take-ar-to-the-next-level-sparks-google%E2%80%91xreal-push-in-2026-what-changes/",
+       "publisher": "glassalmanac.com",
+       "published_at": "2026-01-11T11:07:45",
+       "lede": "post on facebook post on flipboard share on linkedin post on reddit share on threads share on x send through whatsapp “tomorrow, we take ar to the next level.” the line landed like a dare this week, and 2026 suddenly feels like a turning point for consumer augmented reality. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.45
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "07ad6c0f2c4d5bef0afd1bc9",
+       "headline": "Advanced imaging integration in robotic neurosurgery.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41497129/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-01-01T00:00:00",
+       "lede": "advanced imaging integration in robotic neurosurgery.advanced robotic platforms are reshaping neurosurgical practice through the integration of real-time, high-definition imaging. the synergy between intraoperative mri, 3d tractography, and robotic guidance allows unparalleled precision in procedures such as tumor resection and deep brain stimulation. augmented reality and artificial intelligence (ai)-assisted visualization now",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2adc06963d76f4af13208c",
+       "headline": "\"A Million Little Needles\" Sparks Calls For AR Consultations By 2025 - What Changes",
+       "url": "https://glassalmanac.com/a-million-little-needles-sparks-calls-for-ar-consultations-by-2025-what-changes/",
+       "publisher": "glassalmanac.com",
+       "published_at": "2026-04-30T13:03:25",
+       "lede": "post on facebook post on flipboard share on linkedin post on reddit share on threads share on x send through whatsapp “a million little needles.” the blunt description landed on 4 april 2026 and crystallized why patients and clinicians are pushing for augmented reality during surgical consultations now. the bbc",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 88,
+         "path": "/Health/Medical Facilities & Services/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c9dfa5706a322e108573",
+       "headline": "AI beauty app maker Perfect posts profit as virtual points revenue climbs",
+       "url": "https://www.stocktitan.net/news/PERF/perfect-corp-reports-unaudited-financial-results-for-the-three-iyhiola31cx2.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-28T11:00:00",
+       "lede": "new york --(business wire)-- perfect corp. (nyse: perf ) (“perfect” or the “company”), a leading artificial intelligence (“ai”) company offering ai and augmented reality (“ar”) powered solutions to beauty, fashion, photo and video creative industries, today announced its unaudited financial results for the three months ended march 31, 2026. highlights",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.73
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e5c0836d28f995cb92c9",
+       "headline": "BESANÇON, France, April 27, 2026 -(BUSINESS WIRE)- Pixee Medical, a pioneer in Augmented Reality (AR) navigation for orthopedic surgery, today announced that it has received FDA 510(k) clearance for Knee+ NexSight, developed on a new AR platform for total knee arthroplasty (TKA). This new clearance ",
+       "url": "https://orthospinenews.com/2026/04/27/pixee-medical-announces-fda-510k-clearance-for-its-next-generation-solution-knee-nexsight-on-a-new-augmented-reality-platform/",
+       "publisher": "orthospinenews.com",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "besançon, france, april 27, 2026 -(business wire)- pixee medical, a pioneer in augmented reality (ar) navigation for orthopedic surgery, today announced that it has received fda 510(k) clearance for knee+ nexsight, developed on a new ar platform for total knee arthroplasty (tka). this new clearance enables pixee medical to address",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.65
+        }
+       ],
+       "country": "france",
+       "organizations": [
+        "tka",
+        "pixee medical"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 360,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAwMDowMDowMCIsImkiOiI2OWYwZTVjMDgzNmQyOGY5OTVjYjkyYzkiLCJwIjo3fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.352,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.355
+    }
+   }
+  }
+ ]
+}

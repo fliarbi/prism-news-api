@@ -1,0 +1,827 @@
+{
+ "slug": "crispr-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:48Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "CRISPR",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "crispr",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3530,
+     "tone": {
+      "carrying": 3526,
+      "availability_pct": 99.89,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 186,
+        "share_pct": 5.28
+       },
+       {
+        "group": "neutral",
+        "count": 67,
+        "share_pct": 1.9
+       },
+       {
+        "group": "positive",
+        "count": 3273,
+        "share_pct": 92.82
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3530,
+      "count": 3167,
+      "share_pct": 89.72
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.953,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.956
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "CRISPR",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "crispr",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 831,
+       "critical": 746,
+       "critical_pct": 89.8,
+       "negative": 70,
+       "positive": 749,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 643,
+       "critical": 600,
+       "critical_pct": 93.3,
+       "negative": 45,
+       "positive": 591,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 720,
+       "critical": 636,
+       "critical_pct": 88.3,
+       "negative": 35,
+       "positive": 672,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 726,
+       "critical": 660,
+       "critical_pct": 90.9,
+       "negative": 42,
+       "positive": 675,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 822,
+       "critical": 710,
+       "critical_pct": 86.4,
+       "negative": 47,
+       "positive": 748,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 739,
+       "critical": 692,
+       "critical_pct": 93.6,
+       "negative": 59,
+       "positive": 670,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 898,
+       "critical": 839,
+       "critical_pct": 93.4,
+       "negative": 60,
+       "positive": 821,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 868,
+       "critical": 792,
+       "critical_pct": 91.2,
+       "negative": 36,
+       "positive": 811,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1078,
+       "critical": 995,
+       "critical_pct": 92.3,
+       "negative": 45,
+       "positive": 1020,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 832,
+       "critical": 751,
+       "critical_pct": 90.3,
+       "negative": 56,
+       "positive": 769,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 722,
+       "critical": 646,
+       "critical_pct": 89.5,
+       "negative": 49,
+       "positive": 656,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 898,
+       "critical": 775,
+       "critical_pct": 86.3,
+       "negative": 36,
+       "positive": 828,
+       "partial_period": false
+      }
+     ],
+     "total": 9777,
+     "critical_total": 8842,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.705,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.709
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "CRISPR",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "crispr",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3530,
+     "carrying": 1053,
+     "availability_pct": 29.83,
+     "items": [
+      {
+       "country": "united states",
+       "count": 620,
+       "share_pct": 17.56
+      },
+      {
+       "country": "united kingdom",
+       "count": 76,
+       "share_pct": 2.15
+      },
+      {
+       "country": "india",
+       "count": 48,
+       "share_pct": 1.36
+      },
+      {
+       "country": "china",
+       "count": 47,
+       "share_pct": 1.33
+      },
+      {
+       "country": "germany",
+       "count": 32,
+       "share_pct": 0.91
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 230
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.871,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.875
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "CRISPR",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "crispr",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "gene therapy and crispr technologies",
+       "count": 740,
+       "share": 28.77,
+       "lift": 2348.61,
+       "baseline_count": 1,
+       "previous_period_count": 642,
+       "delta_pct": 15.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "biotechnology innovations in medicine",
+       "count": 572,
+       "share": 22.24,
+       "lift": 1815.41,
+       "baseline_count": 1,
+       "previous_period_count": 477,
+       "delta_pct": 19.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "genetic and genomic research studies",
+       "count": 553,
+       "share": 21.5,
+       "lift": 1755.11,
+       "baseline_count": 1,
+       "previous_period_count": 472,
+       "delta_pct": 17.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stem cell research and applications",
+       "count": 489,
+       "share": 19.01,
+       "lift": 1551.99,
+       "baseline_count": 1,
+       "previous_period_count": 448,
+       "delta_pct": 9.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease therapies and orphan drugs",
+       "count": 321,
+       "share": 12.48,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 288,
+       "delta_pct": 11.5,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3530,
+     "carrying": 2572,
+     "carrier_share_pct": 72.86,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.69,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.695
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "CRISPR",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "crispr",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f880dabbf1d3145596874f",
+       "headline": "CRISPR speed patterns can identify multiple viruses and variants simultaneously",
+       "url": "https://phys.org/news/2026-04-crispr-patterns-multiple-viruses-variants.html",
+       "publisher": "phys.org",
+       "published_at": "2026-04-30T21:00:01",
+       "lede": "this article has been reviewed according to science x's editorial process and policies . editors have highlighted the following attributes while ensuring the content's credibility: conceptual diagram of kinetic barcoding using the reaction rate of the crispr cas13 enzyme. the dashed area on the right represents the guide rna region",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.64
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.58
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.42
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23275c6105443aa6027ef",
+       "headline": "Florida citrus growers rejoice: EPA approved first CRISPR-edited HLB-resistant rootstock - FreshFruitPortal.com",
+       "url": "https://www.freshfruitportal.com/news/2026/04/29/hlb-florida-citrus/",
+       "publisher": "freshfruitportal.com",
+       "published_at": "2026-04-29T12:00:42",
+       "lede": "florida’s citrus growers are celebrating a major milestone: the united states environmental protection agency’s (epa) approval of soilcea’s carricea t1 registration. the cultivar is a first-of-its-kind citrus rootstock designed to tolerate citrus greening disease (huanglongbing, hlb), one of the industry’s biggest threats worldwide. the developers of the variety used crispr",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.23,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 224,
+         "path": "/Food & Drink/Food/Fruits & Vegetables",
+         "score": 0.59
+        },
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "soilcea",
+        "united states environmental protection agency"
+       ],
+       "people": []
+      },
+      {
+       "id": "d657f98c07cfc00283329bde",
+       "headline": "A Versatile tRNA-gRNA Array-Based CRISPR/Cas9 Platform Enabling Multiplex Genome Editing and Large-Fragment Engineering in Acremonium chrysogenum.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42052944/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "a versatile trna-grna array-based crispr/cas9 platform enabling multiplex genome editing and large-fragment engineering in acremonium chrysogenum.cephalosporin c (cpc)-derived antibiotics have played a vital role in improving human health and extending life expectancy. acremonium chrysogenum remains the only microorganism capable of industrial-scale cpc production to date. however, the lack of efficient",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.59
+        },
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.53
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "c4bdc3a02a4ecfbc2fac470a",
+       "headline": "Innovative CRISPR/Cas9-Based Strategy for Allele-Specific HLA Peptidome Analysis Using a Pan-HLA Antibody.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42069060/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "innovative crispr/cas9-based strategy for allele-specific hla peptidome analysis using a pan-hla antibody.human leukocyte antigen (hla) immunopeptidomics is restricted by the limited availability of allele-specific antibodies and by potential artifacts introduced by hla overexpression systems. to address these challenges, we developed a crispr/cas9-based strategy that selectively deletes undesired classical class i",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.47
+        },
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ca4b399b489398e02de8",
+       "headline": "LISBON, Portugal – Nerai Bioscience, a biotechnology company spun out from the University of Zurich and ETH Zurich, is working to make gene editing therapies more efficient, more precise, and scalable for rare disease patients. By combining artificial intelligence, high-throughput protein engineerin",
+       "url": "https://checkorphan.org/news/rare-disease-drug-development-with-ai-engineered-crispr-editors/",
+       "publisher": "checkorphan.org",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "lisbon, portugal – nerai bioscience, a biotechnology company spun out from the university of zurich and eth zurich, is working to make gene editing therapies more efficient, more precise, and scalable for rare disease patients. by combining artificial intelligence, high-throughput protein engineering, and crispr-based editing, they can address multiple rare",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.91,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.64
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.64
+        }
+       ],
+       "country": "switzerland",
+       "organizations": [
+        "university of zurich",
+        "eth zurich",
+        "nerai"
+       ],
+       "people": []
+      },
+      {
+       "id": "4088792854d82126341f42dd",
+       "headline": "Catalytic hairpin assembly-assisted split-T7 promoter-regulated CRISPR/Cas12a system for the sensitive analysis of microRNAs associated with coronary heart disease.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41960606/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "catalytic hairpin assembly-assisted split-t7 promoter-regulated crispr/cas12a system for the sensitive analysis of micrornas associated with coronary heart disease.micrornas (mirnas) have emerged as promising non-invasive biomarkers for coronary heart disease (chd); however, their accurate quantification remains challenging due to their short length, low abundance, and high sequence homology. herein, we report",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "3491d7117c317cec32434401",
+       "headline": "Paired CRISPR screens identify mitochondrial metabolism and UBE2H as aneuploid-specific dependencies in human cancer cell lines.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42094535/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "paired crispr screens identify mitochondrial metabolism and ube2h as aneuploid-specific dependencies in human cancer cell lines.aneuploidy is a hallmark of cancer and imposes widespread cellular stress, including proteotoxicity, transcriptional dysregulation, and increased metabolic demand. although these stresses are predicted to create therapeutic vulnerabilities, the genetic dependencies of aneuploid cells remain",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.6,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.73
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.61
+        },
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "286a9964d4488bf06138b714",
+       "headline": "A heterologous marker-free selection approach for CRISPR/Cas9-based gene editing in the malaria parasite Plasmodium falciparum.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41885428/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "a heterologous marker-free selection approach for crispr/cas9-based gene editing in the malaria parasite plasmodium falciparum.crispr/cas9-based gene editing of the malaria parasite plasmodium falciparum has emerged as a transformative tool for advancing functional studies on parasite biology and identifying new therapeutic targets. currently applied crispr/cas9 methodologies depend on a limited set",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.6,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.53
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.51
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.51
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "07d9fab3f6c207cdc841e062",
+       "headline": "Acquisition of novel arrays via horizontal gene transfer rewire CRISPR-mediated defense in Pseudomonas aeruginosa.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42094579/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "acquisition of novel arrays via horizontal gene transfer rewire crispr-mediated defense in pseudomonas aeruginosa.crispr-cas systems form the adaptive immunity of prokaryotes, conferring sequence-specific protection against genetic parasites. here, we functionally characterized the crispr-cas system of pseudomonas aeruginosa atcc 10145 (pa10145), which led us to discover the existence of an isolated",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.62
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.5
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0415bd220687a966b13804",
+       "headline": "Gene Editing Candidate Lonvo-z Meets Endpoints in Phase 3 HAE Study",
+       "url": "https://www.empr.com/news/gene-editing-candidate-lonvo-z-meets-endpoints-in-phase-3-hae-study/",
+       "publisher": "empr.com",
+       "published_at": "2026-04-27T16:15:00",
+       "lede": "topline results were announced from a phase 3 trial evaluating lonvoguran ziclumeran (lonvo-z) for the treatment of hereditary angioedema (hae). lonvo-z is an in vivo crispr gene editing candidate designed to permanently lower kallikrein and bradykinin levels by inactivating the kallikrein b1 (klkb1) gene. the one-time treatment is expected to",
+       "sentiment": {
+        "label": "extreme_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.67
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 792,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAwMTowNTozMSIsImkiOiI2YTJiMDBiMjVjZWZiODNmZTg2NTBkMGEiLCJwIjo4fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.414,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.431
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,885 @@
+{
+ "slug": "whooping-cough-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:51Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "whooping cough",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "whooping cough",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 144,
+     "tone": {
+      "carrying": 142,
+      "availability_pct": 98.61,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 102,
+        "share_pct": 71.83
+       },
+       {
+        "group": "neutral",
+        "count": 3,
+        "share_pct": 2.11
+       },
+       {
+        "group": "positive",
+        "count": 37,
+        "share_pct": 26.06
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 144,
+      "count": 117,
+      "share_pct": 81.25
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.953,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.955
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "whooping cough",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "whooping cough",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 73,
+       "critical": 58,
+       "critical_pct": 79.5,
+       "negative": 58,
+       "positive": 15,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 38,
+       "critical": 33,
+       "critical_pct": 86.8,
+       "negative": 29,
+       "positive": 7,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 58,
+       "critical": 48,
+       "critical_pct": 82.8,
+       "negative": 44,
+       "positive": 14,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 87,
+       "critical": 74,
+       "critical_pct": 85.1,
+       "negative": 67,
+       "positive": 18,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 87,
+       "critical": 82,
+       "critical_pct": 94.3,
+       "negative": 70,
+       "positive": 16,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 53,
+       "critical": 53,
+       "critical_pct": 100.0,
+       "negative": 50,
+       "positive": 3,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 236,
+       "critical": 209,
+       "critical_pct": 88.6,
+       "negative": 180,
+       "positive": 53,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 78,
+       "critical": 74,
+       "critical_pct": 94.9,
+       "negative": 49,
+       "positive": 27,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 29,
+       "critical": 28,
+       "critical_pct": 96.6,
+       "negative": 15,
+       "positive": 14,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 42,
+       "critical": 34,
+       "critical_pct": 81.0,
+       "negative": 30,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 34,
+       "critical": 22,
+       "critical_pct": 64.7,
+       "negative": 27,
+       "positive": 7,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 39,
+       "critical": 33,
+       "critical_pct": 84.6,
+       "negative": 30,
+       "positive": 8,
+       "partial_period": false
+      }
+     ],
+     "total": 854,
+     "critical_total": 748,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-11-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.067,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.071
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "whooping cough",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "whooping cough",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 144,
+     "carrying": 61,
+     "availability_pct": 42.36,
+     "items": [
+      {
+       "country": "united states",
+       "count": 22,
+       "share_pct": 15.28
+      },
+      {
+       "country": "australia",
+       "count": 11,
+       "share_pct": 7.64
+      },
+      {
+       "country": "italy",
+       "count": 7,
+       "share_pct": 4.86
+      },
+      {
+       "country": "united kingdom",
+       "count": 5,
+       "share_pct": 3.47
+      },
+      {
+       "country": "germany",
+       "count": 4,
+       "share_pct": 2.78
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 12
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.064,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.072
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "whooping cough",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "whooping cough",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "pediatric infectious disease case studies",
+       "count": 27,
+       "share": 25.0,
+       "lift": 1020.37,
+       "baseline_count": 2,
+       "previous_period_count": 65,
+       "delta_pct": -58.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "community-acquired infections",
+       "count": 13,
+       "share": 12.04,
+       "lift": 982.58,
+       "baseline_count": 1,
+       "previous_period_count": 49,
+       "delta_pct": -73.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vaccine myths and misinformation countermeasures",
+       "count": 12,
+       "share": 11.11,
+       "lift": 907.0,
+       "baseline_count": 1,
+       "previous_period_count": 24,
+       "delta_pct": -50.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "maternal and neonatal immunization strategies",
+       "count": 11,
+       "share": 10.19,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 7,
+       "delta_pct": 57.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "pediatric vaccination requirements",
+       "count": 31,
+       "share": 28.7,
+       "lift": 468.62,
+       "baseline_count": 5,
+       "previous_period_count": 44,
+       "delta_pct": -29.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 144,
+     "carrying": 108,
+     "carrier_share_pct": 75.0,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.047,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.057
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "whooping cough",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "whooping cough",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69c98a1177f2c3a5a194d17e",
+       "headline": "Whooping cough cases are at their highest level in 35 years – so why the surge?",
+       "url": "https://www.nationaltribune.com.au/whooping-cough-cases-are-at-their-highest-level-in-35-years-so-why-the-surge/",
+       "publisher": "nationaltribune.com.au",
+       "published_at": "2026-02-06T05:15:13",
+       "lede": "australia is battling its biggest rise in whooping cough cases in 35 years.during 2024 and 2025 australia recorded 82,513 whooping cough cases – the highest number since monitoring began in 1991.also known as pertussis or the “100-day cough”, whooping cough is a potentially fatal respiratory illness which causes severe coughing",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.85
+        }
+       ],
+       "country": "denmark",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8802943843dd771ce5df4",
+       "headline": "Whooping cough outbreak: Pasadena health officials confirm 4 cases at school",
+       "url": "https://abc7.com/post/whooping-cough-outbreak-pasadena-health-officials-confirm-4-cases-don-benito-fundamental-school/19005637/",
+       "publisher": "abc7.com",
+       "published_at": "2026-04-30T13:05:00",
+       "lede": "whooping cough outbreak: pasadena health officials confirm 4 cases at school pasadena, calif. (kabc) -- pasadena health officials are investigating a whooping cough outbreak after four cases were confirmed at a school. the cases were found at don benito fundamental school. the pasadena public health department says it is working",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.58
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99a3775f157062caec69d",
+       "headline": "2026 में लौट रही हैं ‘भूली-बिसरी’ जानलेवा बीमारियां! क्या बचपन में लगे टीके आज भी असरदार है? | Global Resurgence Measles Whooping Cough 2026 Alert Hindi",
+       "url": "https://www.patrika.com/health-news/global-resurgence-measles-whooping-cough-2026-alert-hindi-20520898",
+       "publisher": "patrika.com",
+       "published_at": "2026-04-22T10:57:29",
+       "lede": "health crisis 2026: doctors and scientists around the world are disturbed by an extremely scary trend at this time. the illnesses that were observed ‘khtm’ over decades ago are now returning back with sudden and much strength. from the wave of ‘black cough’ (whooping cough) in 2025 in japan to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.48
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e3eb4e6594f7ebaf49d5d",
+       "headline": "Whatcom County monitoring cluster of whooping cough cases at Western Washington University",
+       "url": "https://www.yahoo.com/news/articles/whatcom-county-monitoring-cluster-whooping-010432291.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-07T01:04:32",
+       "lede": "whatcom county health officials are keeping tabs on a recent cluster of whooping cough cases at western washington university (wwu). a university spokesperson confirmed to kiro 7 they had three cases three weeks ago before spring break, and that everyone was immediately treated and there were no hospitalizations. the university",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d159611fc9561313476fec",
+       "headline": "Whooping Cough Rising in Netherlands After COVID-19 Measures Lifted - RIVM - Time News",
+       "url": "https://time.news/whooping-cough-rising-in-netherlands-after-covid-19-measures-lifted-rivm/",
+       "publisher": "time.news",
+       "published_at": "2026-04-01T00:18:51",
+       "lede": "a significant rise in whooping cough, or pertussis, is being observed across the netherlands, particularly among children and adolescents, following the easing of covid-19 restrictions. recent data from the national institute for public health and the environment (rivm) indicates that approximately one in three children between the ages of 6",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.81
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.63
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.61
+        },
+        {
+         "code": 296,
+         "path": "/Health/Pediatrics",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc32cfcb088e024d25aa19",
+       "headline": "Whooping Cough: How an Outbreak Impacted Blake's Life - Time News",
+       "url": "https://time.news/whooping-cough-how-an-outbreak-impacted-blakes-life/",
+       "publisher": "time.news",
+       "published_at": "2026-03-31T20:04:57",
+       "lede": "a preventable disease robbed a young australian man of his future. blake, who would be 29 years old this year, died as a baby during a whooping cough outbreak in 2005. his parents, kate and tony, are now speaking out about the resurgence of the highly contagious respiratory illness, urging",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.71
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "kate"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc4ca11e1adbe011da119d",
+       "headline": "'I'm a doctor - when your two-week cough needs checking out'",
+       "url": "https://www.express.co.uk/life-style/health/2185972/doctor-warning-whooping-cough",
+       "publisher": "express.co.uk",
+       "published_at": "2026-03-24T12:59:00",
+       "lede": "a doctor issued advice about potential symptoms of whooping coughan nhs doctor has issued a warning if your cough lasts two to three weeks. at this point, it could be a “nasty illness” known as whooping cough.also referred to as pertussis or the 100-day cough, whooping cough is a highly",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.81,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.83
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9aea8e67a2fcb3a74d14",
+       "headline": "Whooping cough case confirmed at Preston County middle school",
+       "url": "https://www.yahoo.com/news/articles/whooping-cough-case-confirmed-preston-174034215.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-18T17:40:34",
+       "lede": "kingwood, w.va. (wboy) — a student at a preston county middle school has been diagnosed with whooping cough, and some other students may have been exposed. according to a facebook post from preston county schools, an “individual attending central preston middle school” has received a diagnosis for pertussis, also known",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.81,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ca896cd669aaef389edf25",
+       "headline": "Vanuatu's Health Ministry says whooping cough under control",
+       "url": "https://www.radionz.co.nz/international/pacific-news/587609/vanuatu-s-health-ministry-says-whooping-cough-under-control",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-02-22T18:02:28",
+       "lede": "photo: 123rfvanuatu's ministry of health says the outbreak of whooping cough in the country is now under control.the ministry confirmed 795 cases have been recorded since june 2025, but the numbers have now decreased.public health director dr jenny stephens said there are no new cases, and they are doing everything",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.65
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.55
+        }
+       ],
+       "country": "vanuatu",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e95a683fc01faba14d1cf",
+       "headline": "Texas logged more than 4,000 cases of whooping cough last year, a 60-year high",
+       "url": "https://www.yahoo.com/news/articles/texas-logged-more-4-000-215153210.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-21T21:51:53",
+       "lede": "whooping cough cases surged in texas last year. in 2025, texas reported more whooping cough cases than in any year in the past six decades, according to state health department data obtained by the fort worth star-telegram. there were more than 4,000 cases of whooping cough in the state last",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.59
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bd7bcf834bfa2337feeb7c",
+       "headline": "Deadly disease spikes as vaccine rates fall",
+       "url": "https://www.thewest.com.au/news/whooping-cough-numbers-at-record-highs-as-vaccine-rates-fall-across-australia-c-21657460",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-02-16T07:57:07",
+       "lede": "australia has recorded its highest rates of whooping cough in three decades, as the number of fully immunised children reached a 10-year low, a new productivity commission report has revealed.almost 800 cases per 100,000 children were recorded nationwide in 2024-25, and was a significant increase from the previous year, which",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.58
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "productivity commission"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c992db0fe98f3340beeac1",
+       "headline": "Vanuatu whooping cough death toll rises to seven",
+       "url": "https://www.rnz.co.nz/international/pacific-news/586995/vanuatu-whooping-cough-death-toll-rises-to-seven",
+       "publisher": "rnz.co.nz",
+       "published_at": "2026-02-16T01:54:39",
+       "lede": "photo: 123rffour more people have died from whooping cough in vanuatu, bringing the total in the country to seven, according to thevanuatu daily post.six of the deaths occurred in tanna and one in shefa province. three of the deaths were infants.whooping cough is a highly contagious and potentially dangerous respiratory",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.82
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "vanuatu",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbf8366d4d48dd99c2cd07",
+       "headline": "Vanuatu whooping cough death toll rises to seven",
+       "url": "https://www.radionz.co.nz/international/pacific-news/586995/vanuatu-whooping-cough-death-toll-rises-to-seven",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-02-16T01:54:39",
+       "lede": "photo: 123rffour more people have died from whooping cough in vanuatu, bringing the total in the country to seven, according to thevanuatu daily post.six of the deaths occurred in tanna and one in shefa province. three of the deaths were infants.whooping cough is a highly contagious and potentially dangerous respiratory",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.82
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "vanuatu",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bd692e981d28529ed542a6",
+       "headline": "Record spike in whooping cough cases due to 'potentially catastrophic' trend",
+       "url": "https://www.abc.net.au/news/2026-02-16/whooping-cough-cases-at-record-high-level-in-australia/106332954",
+       "publisher": "abc.net.au",
+       "published_at": "2026-02-15T18:53:34",
+       "lede": "a \"potentially catastrophic\" decline in australia's childhood vaccination rates has contributed to the sharpest increase in cases of whooping cough in 35 years, infectious disease experts say.rates of whooping cough, a highly contagious respiratory disease also known as pertussis, rose to almost 800 cases per 100,000 australian children in 2024–25,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.7
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 43,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xMSAxMzowMzowMCIsImkiOiI2OWJjMTRmNDhiZjg1NmIyNDYxNmY4MjUiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 11.476,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 11.479
+    }
+   }
+  }
+ ]
+}

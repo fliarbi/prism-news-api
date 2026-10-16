@@ -1,0 +1,902 @@
+{
+ "slug": "silver-price-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:56:24Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "silver price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "silver price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1428,
+     "tone": {
+      "carrying": 1428,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 689,
+        "share_pct": 48.25
+       },
+       {
+        "group": "neutral",
+        "count": 12,
+        "share_pct": 0.84
+       },
+       {
+        "group": "positive",
+        "count": 727,
+        "share_pct": 50.91
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1423,
+      "count": 145,
+      "share_pct": 10.19
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.896,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.899
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "silver price",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "silver price",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 117,
+       "critical": 21,
+       "critical_pct": 17.9,
+       "negative": 82,
+       "positive": 35,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 111,
+       "critical": 13,
+       "critical_pct": 11.7,
+       "negative": 47,
+       "positive": 62,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 116,
+       "critical": 6,
+       "critical_pct": 5.2,
+       "negative": 46,
+       "positive": 64,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 116,
+       "critical": 11,
+       "critical_pct": 9.5,
+       "negative": 36,
+       "positive": 73,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 173,
+       "critical": 10,
+       "critical_pct": 5.8,
+       "negative": 35,
+       "positive": 137,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 238,
+       "critical": 24,
+       "critical_pct": 10.1,
+       "negative": 75,
+       "positive": 158,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 126,
+       "critical": 18,
+       "critical_pct": 14.3,
+       "negative": 44,
+       "positive": 77,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 240,
+       "critical": 12,
+       "critical_pct": 5.0,
+       "negative": 68,
+       "positive": 169,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 267,
+       "critical": 24,
+       "critical_pct": 9.0,
+       "negative": 86,
+       "positive": 181,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 355,
+       "critical": 36,
+       "critical_pct": 10.1,
+       "negative": 197,
+       "positive": 155,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 343,
+       "critical": 31,
+       "critical_pct": 9.0,
+       "negative": 173,
+       "positive": 168,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 463,
+       "critical": 54,
+       "critical_pct": 11.7,
+       "negative": 233,
+       "positive": 223,
+       "partial_period": false
+      }
+     ],
+     "total": 2665,
+     "critical_total": 260,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 6.168,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 6.173
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "silver price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "silver price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1428,
+     "carrying": 625,
+     "availability_pct": 43.77,
+     "items": [
+      {
+       "country": "united states",
+       "count": 247,
+       "share_pct": 17.3
+      },
+      {
+       "country": "india",
+       "count": 226,
+       "share_pct": 15.83
+      },
+      {
+       "country": "iran",
+       "count": 57,
+       "share_pct": 3.99
+      },
+      {
+       "country": "china",
+       "count": 24,
+       "share_pct": 1.68
+      },
+      {
+       "country": "nepal",
+       "count": 12,
+       "share_pct": 0.84
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 59
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.439,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.442
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "silver price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "silver price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "derivatives trading (futures, options)",
+       "count": 498,
+       "share": 41.06,
+       "lift": 1675.67,
+       "baseline_count": 2,
+       "previous_period_count": 283,
+       "delta_pct": 76.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "precious metal spot prices",
+       "count": 235,
+       "share": 19.37,
+       "lift": 1581.46,
+       "baseline_count": 1,
+       "previous_period_count": 224,
+       "delta_pct": 4.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "commodity trading and price changes",
+       "count": 741,
+       "share": 61.09,
+       "lift": 498.66,
+       "baseline_count": 10,
+       "previous_period_count": 426,
+       "delta_pct": 73.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "precious metals trading trends (gold, silver, platinum)",
+       "count": 399,
+       "share": 32.89,
+       "lift": 447.52,
+       "baseline_count": 6,
+       "previous_period_count": 413,
+       "delta_pct": -3.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 190,
+       "share": 15.66,
+       "lift": 639.31,
+       "baseline_count": 2,
+       "previous_period_count": 30,
+       "delta_pct": 533.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1428,
+     "carrying": 1213,
+     "carrier_share_pct": 84.94,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.785,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.787
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "silver price",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "silver price",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e85b4d7bb1410d4c6f6ce6",
+       "headline": "Silber: Frist läuft ab!",
+       "url": "https://www.boerse-express.com/news/articles/silber-frist-laeuft-ab-893069",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-04-16T06:25:18",
+       "lede": "the strait of hormuz remains sealed off, while diplomats in washington and tehran struggle for every day. the hope of extending the fragile ceasefire is currently driving the silver price through the $80 mark. the failure of the talks brings enormous explosive power for the global supply chains. diplomacy meets",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.65
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.62
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9caa9b68ade25f5c8a27b",
+       "headline": "Huge Jump in Gold Rate Today in India by Around Rs 23,000 per 100g of 24K After Recent Dip; Silver Price Rises",
+       "url": "https://www.goodreturns.in/news/huge-jump-in-gold-rate-today-in-india-by-around-rs23000-per-24k-after-recent-dip-silver-price-rises-1490555.html",
+       "publisher": "goodreturns.in",
+       "published_at": "2026-02-19T06:01:33",
+       "lede": "huge jump in gold rate today in india by around rs 23,000 per 100g of 24k after recent dip; silver price risesgold prices in india gained on thursday, 19 february 2026, after a brief pause following a recent decline. 24k gold is trading at rs 15,649 per 10 grams, up",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.88
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.78
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.75
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9941dd47fc02832134e4d",
+       "headline": "Gold Price Today: सोने का रेट 12586 रुपये बढ़ा, 1 महीने में चांदी की कीमतों 30803 रुपये की उछाल, चेक करें आज का रेट",
+       "url": "https://www.livehindustan.com/business/gold-price-today-in-last-one-month-gold-12586-rupee-jumped-and-silver-price-surged-30803-rupee-201776757020753.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-04-21T07:48:05",
+       "lede": "gold silver price today: gold prices have found a slight rapid look today than monday. the rate of 24 carat gold is reached at a level of 10 grams per rs 152155. according to the report of the indian bullion jewellers association yesterday i.e. monday morning 24 carat gold was",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.89
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.86
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8eb9c9baafc7356e4d466",
+       "headline": "Akshaya Tritiya Gold Demand: ₹20000Cr की होगी बिक्री! सोना-चांदी महंगा, फिर भी अक्षय तृतीया पर तगड़ी डिमांड",
+       "url": "https://www.aajtak.in/business/news/story/gold-silver-demand-more-than-20000-crore-rupee-trading-on-akshaya-tritiya-tutc-dskc-2527819-2026-04-19",
+       "publisher": "aajtak.in",
+       "published_at": "2026-04-19T13:55:38",
+       "lede": "gold-silver rate has been significantly lower than high, but even after that gold is running across rs 1.50 lakh per 10 grams, the silver price is also around rs 2.50 lakh per kilogram. however, the gold-silver demand remains sharp on the spot of akshaya tertiary. the modes of purchase between",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.75
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.7
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b55a7bb1410d4caf7aba",
+       "headline": "Silver holds majority losses near $74 as fears of hawkish Fed outlook revives",
+       "url": "https://bitcoinethereumnews.com/finance/silver-holds-majority-losses-near-74-as-fears-of-hawkish-fed-outlook-revives/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-13T06:30:43",
+       "lede": "silver price (xag/usd) claws back half of its early losses and rebounds to near $74.35 during the early european trading session on monday, but is still almost 2% down. the white metal is broadly under pressure as a sharp recovery in the oil price due to failed talks between the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.48
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e88b9c7bb1410d4c8e58bd",
+       "headline": "Silver Price Forecast: XAG/USD wobbles around $75 in countdown to US-Iran talks",
+       "url": "https://bitcoinethereumnews.com/finance/silver-price-forecast-xag-usd-wobbles-around-75-in-countdown-to-us-iran-talks/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-10T09:33:18",
+       "lede": "silver price (xag/usd) trades in a tight range around $75.00 during the european trading session on friday. the white metal consolidates as investors await the united states (us) consumer price index (cpi) data for march and the outcome of negotiations between the united states (us) and iran on a permanent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e848937bb1410d4c642524",
+       "headline": "Silver Price Forecast: XAG/USD trades flat around $74 ahead of US-Iran talks",
+       "url": "https://bitcoinethereumnews.com/finance/silver-price-forecast-xag-usd-trades-flat-around-74-ahead-of-us-iran-talks/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-09T07:05:25",
+       "lede": "silver price (xag/usd) trades calmly near $74.00 during the late asian trading session on thursday. the white metal struggles for direction amid uncertainty surrounding the first round of talks on a permanent ceasefire between the united states (us) and iran in pakistan on saturday. on late wednesday, white house press",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.5
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d14eaf1078dcf3634d4d68",
+       "headline": "Silver jumps above $73 as Trump shows readiness for peace with Iran",
+       "url": "https://bitcoinethereumnews.com/finance/silver-jumps-above-73-as-trump-shows-readiness-for-peace-with-iran/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-03-31T04:17:47",
+       "lede": "silver price (xag/usd) jumps 3% to near $73.00 in the asian trading session on tuesday. the white metal strengthens after a report from the wall street journal (wsj) showed that united states (us) president donald trump is ready for peace with iran even without the reopening of the strait of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.77,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "the wall street journal",
+        "xag"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e291c59b322e6b3e9a3bbd",
+       "headline": "सोना इस हफ्ते ₹4,276 सस्ता, ₹1.43 लाख पर आया:  चांदी ₹10,717 गिरकर ₹2.21 लाख पर पहुंची, डॉलर की डिमांड बढ़ने से गिरे दाम",
+       "url": "http://www.bhaskar.com/business/news/gold-silver-prices-fall-dollar-demand-boosts-rates-2026-137552088.html",
+       "publisher": "bhaskar.com",
+       "published_at": "2026-03-28T00:36:12",
+       "lede": "sona chandi ka bhav aaj ka (28 march 2026) - jaipur gold rate gold this week rs.4,276 cheaper, rs.1.43 lakh: silver falls rs.10,717 and reached rs.2.21 lakh, the dollar demand rises from new delhi 9 days ago copy link declined to the gold-silver price this week. gold falls at rs",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.88
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.68
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d0a67f7254e54b8de5ba24",
+       "headline": "सोना इस हफ्ते ₹4,276 सस्ता, ₹1.43 लाख पर आया:  चांदी ₹10,717 गिरकर ₹2.21 लाख पर पहुंची, डॉलर की डिमांड बढ़ने से गिरे दाम",
+       "url": "https://www.bhaskar.com/g/business/news/gold-silver-prices-fall-dollar-demand-boosts-rates-2026-137552088.html",
+       "publisher": "bhaskar.com",
+       "published_at": "2026-03-28T00:36:12",
+       "lede": "sona chandi ka bhav aaj ka (28 march 2026) - jaipur gold rate gold this week rs.4,276 cheaper, rs.1.43 lakh: silver falls rs.10,717 and reached ₹2.21 lakh, the dollar demand rises from new delhi 2 days ago copy link declined to the gold-silver price this week. gold falls at rs",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.87
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bd8f2193b550fcb8279127",
+       "headline": "XAG/USD tumbles to near $74 as dovish Fed bets remain confined",
+       "url": "https://bitcoinethereumnews.com/finance/xag-usd-tumbles-to-near-74-as-dovish-fed-bets-remain-confined/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-02-17T12:06:16",
+       "lede": "silver price (xag/usd) is down almost 3% near $74.00 during the european trading session on tuesday. the white metal is under pressure ahead of the opening of the united states (us) markets after an extended weekend.the commodity has been on the backfoot due to market expectations that the federal reserve",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.73
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.68
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bd81a20ad23ae11152f83e",
+       "headline": "XAG/USD drops to near $76.00 while investors await FOMC Minutes",
+       "url": "https://bitcoinethereumnews.com/finance/xag-usd-drops-to-near-76-00-while-investors-await-fomc-minutes/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-02-17T03:30:53",
+       "lede": "silver price (xag/usd) trades lower to near $76.00 during the asian trading session on tuesday. the white metal has been slightly under pressure as dovish federal reserve (fed) expectations remain capped despite cooling united states (us) inflation in january.theoretically, immaterial dovish fed prospects in the near-term weigh on non-yielding assets,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.63
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.47
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ema",
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bbb39cfa8c4837c973fc27",
+       "headline": "XAG/USD declines to near $75 at the start of the week",
+       "url": "https://bitcoinethereumnews.com/finance/xag-usd-declines-to-near-75-at-the-start-of-the-week/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-02-16T03:30:41",
+       "lede": "silver price (xag/usd) trades 2% lower at around $75.00 during the asian trading session on monday. the white metal is under pressure as lower-than-expected united states (us) consumer price index (cpi) data for january fails to prompt hopes of interest rate cuts by the federal reserve (fed) in the near",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.54
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 179,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xNiAwMzozMDo0MSIsImkiOiI2OWJiYjM5Y2ZhOGM0ODM3Yzk3M2ZjMjciLCJwIjo3fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.343,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.346
+    }
+   }
+  }
+ ]
+}

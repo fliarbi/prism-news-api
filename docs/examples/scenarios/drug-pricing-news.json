@@ -1,0 +1,978 @@
+{
+ "slug": "drug-pricing-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:42Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "drug pricing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "drug pricing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 503,
+     "tone": {
+      "carrying": 503,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 237,
+        "share_pct": 47.12
+       },
+       {
+        "group": "neutral",
+        "count": 7,
+        "share_pct": 1.39
+       },
+       {
+        "group": "positive",
+        "count": 259,
+        "share_pct": 51.49
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 503,
+      "count": 429,
+      "share_pct": 85.29
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.551,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.573
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "drug pricing",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "drug pricing",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 86,
+       "critical": 76,
+       "critical_pct": 88.4,
+       "negative": 65,
+       "positive": 21,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 44,
+       "critical": 39,
+       "critical_pct": 88.6,
+       "negative": 18,
+       "positive": 26,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 48,
+       "critical": 30,
+       "critical_pct": 62.5,
+       "negative": 26,
+       "positive": 22,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 59,
+       "critical": 57,
+       "critical_pct": 96.6,
+       "negative": 41,
+       "positive": 17,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 100,
+       "critical": 90,
+       "critical_pct": 90.0,
+       "negative": 60,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 119,
+       "critical": 103,
+       "critical_pct": 86.6,
+       "negative": 56,
+       "positive": 59,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 87,
+       "critical": 61,
+       "critical_pct": 70.1,
+       "negative": 30,
+       "positive": 57,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 109,
+       "critical": 94,
+       "critical_pct": 86.2,
+       "negative": 48,
+       "positive": 60,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 131,
+       "critical": 103,
+       "critical_pct": 78.6,
+       "negative": 60,
+       "positive": 71,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 163,
+       "critical": 150,
+       "critical_pct": 92.0,
+       "negative": 63,
+       "positive": 97,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 71,
+       "critical": 59,
+       "critical_pct": 83.1,
+       "negative": 33,
+       "positive": 37,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 138,
+       "critical": 117,
+       "critical_pct": 84.8,
+       "negative": 81,
+       "positive": 54,
+       "partial_period": false
+      }
+     ],
+     "total": 1155,
+     "critical_total": 979,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.005,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.05
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "drug pricing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "drug pricing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 503,
+     "carrying": 253,
+     "availability_pct": 50.3,
+     "items": [
+      {
+       "country": "united states",
+       "count": 224,
+       "share_pct": 44.53
+      },
+      {
+       "country": "united kingdom",
+       "count": 8,
+       "share_pct": 1.59
+      },
+      {
+       "country": "china",
+       "count": 6,
+       "share_pct": 1.19
+      },
+      {
+       "country": "venezuela",
+       "count": 3,
+       "share_pct": 0.6
+      },
+      {
+       "country": "central african republic",
+       "count": 2,
+       "share_pct": 0.4
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 10
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.015,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.018
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "drug pricing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "drug pricing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "drug pricing and reimbursement strategies",
+       "count": 118,
+       "share": 38.82,
+       "lift": 633.71,
+       "baseline_count": 5,
+       "previous_period_count": 169,
+       "delta_pct": -30.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "pharmaceutical marketing and sales strategies",
+       "count": 107,
+       "share": 35.2,
+       "lift": 574.63,
+       "baseline_count": 5,
+       "previous_period_count": 162,
+       "delta_pct": -34.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "healthcare economics and market access",
+       "count": 76,
+       "share": 25.0,
+       "lift": 680.25,
+       "baseline_count": 3,
+       "previous_period_count": 109,
+       "delta_pct": -30.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "pharmaceutical regulation and drug policies",
+       "count": 62,
+       "share": 20.39,
+       "lift": 554.94,
+       "baseline_count": 3,
+       "previous_period_count": 67,
+       "delta_pct": -7.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "generic drug development and market trends",
+       "count": 56,
+       "share": 18.42,
+       "lift": 375.93,
+       "baseline_count": 4,
+       "previous_period_count": 68,
+       "delta_pct": -17.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 503,
+     "carrying": 304,
+     "carrier_share_pct": 60.44,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.055,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.059
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "drug pricing",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "drug pricing",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9d7e9a088760d34c15bf0",
+       "headline": "Astrazeneca ploughs £300m into UK in surprise U-turn",
+       "url": "https://www.cityam.com/astrazeneca-to-plough-300m-into-uk-operations/",
+       "publisher": "cityam.com",
+       "published_at": "2026-04-29T15:28:07",
+       "lede": "astrazeneca ploughs £300m into uk in surprise u-turn astrazeneca had previously axed a £200m expansion over the uk's drug pricing british drugs giant astrazeneca has promised to plough £300m into its uk operations, just months after cancelling a nine-figure investment in a new lab after getting in a spat with",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.24,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.81
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "astrazeneca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa91c8a54b8f07c951bad",
+       "headline": "Regeneron and Trump Strike a Deal: What It Means for Drug Prices In US",
+       "url": "https://www.timesnownews.com/world/us/us-news/regeneron-trump-strike-a-deal-what-it-means-for-drug-prices-in-us-and-regeneron-drugs-article-154152159",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-23T20:55:05",
+       "lede": "regeneron has become the latest drugmaker to cut a deal with the trump administration over drug pricing, agreeing to lower costs for some american patients on the same day its groundbreaking hearing-loss gene therapy won federal approval.,what the deal coversunder the agreement announced thursday, regeneron will reduce us drug prices",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "gene therapy"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a041e8c220687a966b537e0",
+       "headline": "Trump touts drug pricing pact with Regeneron aimed at lowering costs",
+       "url": "https://www.courierpostonline.com/story/news/politics/2026/04/23/trump-administration-drug-pricing-deal-regeneron/89751901007/",
+       "publisher": "courierpostonline.com",
+       "published_at": "2026-04-23T16:48:15",
+       "lede": "updated april 23, 2026, 4:15 p.m. et the white house announced a drug pricing deal on april 23 with regeneron, the final holdout among large pharmaceutical companies to sign most favored nation pricing deals with the trump administration. regeneron became the 17th large pharmaceutical company to sign a drug pricing",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.73
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee95f8e67a2fcb3f13041",
+       "headline": "US FDA's accelerated approval for drugs needs more transparency, says research firm",
+       "url": "https://www.yahoo.com/news/articles/us-fdas-accelerated-approval-drugs-120437787.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-16T12:04:37",
+       "lede": "by sneha s k april 16 (reuters) - the u.s. food and drug administration should be more transparent when granting accelerated approval for certain drugs, influential drug pricing body, institute for ‌clinical and economic review (icer), said in a report on thursday. the fda's accelerated approval pathway speeds ‌up authorization",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.71
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3436268103817f4883d41",
+       "headline": "Medicaid Drug Rebate Program, Healthcare Reform, Department of Health and Human Services (HHS) | JD Supra",
+       "url": "https://www.jdsupra.com/topics/medicaid-drug-rebate-program/healthcare-reform/department-of-health-and-human-services-hhs/",
+       "publisher": "jdsupra.com",
+       "published_at": "2026-04-10T00:00:00",
+       "lede": "on november 20, 2020, the u.s. department of health and human services (hhs) office of inspector general (oig) finalized its previously abandoned 2019 proposal to exclude certain rebates paid by drug manufacturers from the... more the u.s. house of representatives is considering dueling proposals related to drug pricing under medicaid",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.77
+        },
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1423f5af879256118c75a",
+       "headline": "Trump puts Australia’s drugs scheme, digital rules in firing line",
+       "url": "https://www.afr.com/world/north-america/trump-puts-australia-s-drugs-scheme-digital-rules-in-firing-line-20260401-p5zkj8",
+       "publisher": "afr.com",
+       "published_at": "2026-04-01T00:40:03",
+       "lede": "washington | donald trump’s top trade tsar claims australia’s unfair drug pricing practices are undermining us innovation, warns labor’s tax transparency push will harm big companies and has raised the alarm about the unjust treatment of us tech giants through content quotas and the social media ban. the red flags",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e1f4051c9ae6b9f4b667b2",
+       "headline": "Sebelius: GOP health bill reduces coverage, increases costs",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/sebelius-gop-health-bill-reduces-coverage-increases-costs-1498174470",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-13T00:00:00",
+       "lede": "up next rev. william barber’s strategy for bridging american divides video 8:40 shields and brooks on the senate health care bill unveiled video 11:31 news wrap: another senate republican defects on health bill video 4:28 how will the pharmaceutical industry evolve on drug pricing? video 8:52 inside obama’s secret deliberations",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.55
+        },
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc2c7df8e7de13bc1be5f7",
+       "headline": "Hospital use of drug discount program needs accountability - HeraldNet.com",
+       "url": "https://www.heraldnet.com/2026/02/27/hospital-use-of-drug-discount-program-needs-accountability/",
+       "publisher": "heraldnet.com",
+       "published_at": "2026-02-27T09:30:00",
+       "lede": "claims by big hospital systems that the 340b drug pricing program is “doing exactly what congress intended” (“comment: hospitals staying true to congress’ drug discounts,” the herald, feb. 14) ignore the facts here in washington state. congress designed 340b to help vulnerable patients, including those living with hiv, viral hepatitis,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.72
+        },
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc7f11650bbd41e03e9a8e",
+       "headline": "Trump Calls on Congress To Codify Most Favored Nation Drug Pricing in SOTU",
+       "url": "https://www.biospace.com/policy/trump-calls-on-congress-to-codify-most-favored-nation-drug-pricing-in-sotu",
+       "publisher": "biospace.com",
+       "published_at": "2026-02-25T14:18:25",
+       "lede": "president donald trump called on congress to codify his most favored nation drug pricing initiative into law, as he delivered the state of the union address at the capitol in washington, d.c. on tuesday evening. he also touted his efforts to lower drug prices and the success of deals with",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.74
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.65
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.53
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.51
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69dfebe25512a45fb7b99606",
+       "headline": "Centers for Medicare & Medicaid Services (CMS), Department of Health and Human Services (HHS), Pharmaceutical Industry | JD Supra",
+       "url": "https://www.jdsupra.com/topics/centers-for-medicare-medicaid-services-cms/department-of-health-and-human-services-hhs/pharmaceutical-industry/",
+       "publisher": "jdsupra.com",
+       "published_at": "2026-02-12T00:00:00",
+       "lede": "the longest-ever government shutdown ended after 43 days on nov. 12, 2025, with federal employees returning to work and many furloughed and excepted employees receiving backpay over the weekend. the government is now funded... more most favored nation or \"mfn\" drug pricing is a policy through which prescription drug prices",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.66
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c9d79b322e6b3ea61de3",
+       "headline": "AstraZenec­a CEO hails NHS drug price deal but keeps pause on £200m UK investment",
+       "url": "https://www.pressreader.com/australia/the-guardian-australia/20260211/282222312203343",
+       "publisher": "pressreader.com",
+       "published_at": "2026-02-10T13:56:00",
+       "lede": "the guardian australia astrazenec­a ceo hails nhs drug price deal but keeps pause on £200m uk investment 2026-02-11 - julia kollewe - julia kollewe the boss of britain’s biggest pharmaceut­ical company has said the government’s recent drug pricing deal is a “very positive step” but is unlikely to unfreeze a",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.81
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "698a36101953fdcb20e0972d",
+       "headline": "Finding the Right Mix for 2018 Bio/Pharma Success | Pharmaceutical Technology",
+       "url": "https://www.pharmtech.com/view/finding-right-mix-2018-biopharma-success",
+       "publisher": "pharmtech.com",
+       "published_at": "2026-02-08T04:27:05",
+       "lede": "uncertainty was the theme for the bio/pharma companies at the start of 2017 as the industry waited to see how the political agenda of the incoming trump administration would affect healthcare reform, drug pricing, r&d investment, and regulations.in the ensuing 12 months, the industry witnessed a record number of drug",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.62
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a04204e62bbf617b04dca5f",
+       "headline": "White House to launch TrumpRx platform, revealing results of Trump’s MFN policy",
+       "url": "https://thehill.com/policy/healthcare/5724285-white-house-trumprx-launch-most-favored-nation/",
+       "publisher": "thehill.com",
+       "published_at": "2026-02-05T16:32:25",
+       "lede": "the white house is planning to officially launch its direct-to-consumer, lower-cost drug platform trumprx thursday evening, unveiling the results of president trump's \"most favored nation\" (mfn) drug pricing policy. the trump administration announced plans to launch its trumprx website in september, with administration officials saying at the time that the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.72
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.57
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a68c25cefb83fe8feb7f5",
+       "headline": "Medicare drug list for 2028 includes new choices",
+       "url": "https://xconomy.com/pricing-and-contracting/medicare-names-2028-drug-list-with-two-surprises",
+       "publisher": "xconomy.com",
+       "published_at": "2026-02-04T17:38:58",
+       "lede": "prior to the naming of the 15 medicare part d drugs selected for the 2028 drug pricing program, authors in an article from journal of managed care and specialty pharmacy, rolled the dice on their predictions of what drugs would make the list. actually, it was a thorough data analysis",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.72
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.65
+        },
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.59
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0eb1d2285a58da6f31d68d",
+       "headline": "President Trump Proposes Codifying MFN Drug Pricing Deals But Key Details Are Missing",
+       "url": "https://www.kff.org/quick-insights/president-trump-proposes-codifying-mfn-drug-pricing-deals-but-key-details-are-missing/",
+       "publisher": "kff.org",
+       "published_at": "2026-01-15T23:51:47",
+       "lede": "president trump proposes codifying mfn drug pricing deals but key details are missing print email copy link add kff on google in his new “great healthcare plan,” president trump has proposed to “codify” the administration’s most-favored-nation (mfn) drug pricing deals that have been agreed to by drug companies in recent",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.66
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.57
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.52
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.49
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 86,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMS0xNSAyMzo1MTo0NyIsImkiOiI2YTBlYjFkMjI4NWE1OGRhNmYzMWQ2OGQiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.52,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.522
+    }
+   }
+  }
+ ]
+}

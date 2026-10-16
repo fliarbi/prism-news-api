@@ -1,0 +1,860 @@
+{
+ "slug": "cloud-security-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:12:50Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "cloud security",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cloud security",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3457,
+     "tone": {
+      "carrying": 3457,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 673,
+        "share_pct": 19.47
+       },
+       {
+        "group": "neutral",
+        "count": 25,
+        "share_pct": 0.72
+       },
+       {
+        "group": "positive",
+        "count": 2759,
+        "share_pct": 79.81
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3457,
+      "count": 2452,
+      "share_pct": 70.93
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.29,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.294
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "cloud security",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cloud security",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 616,
+       "critical": 369,
+       "critical_pct": 59.9,
+       "negative": 68,
+       "positive": 546,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 686,
+       "critical": 386,
+       "critical_pct": 56.3,
+       "negative": 104,
+       "positive": 580,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 617,
+       "critical": 389,
+       "critical_pct": 63.0,
+       "negative": 127,
+       "positive": 490,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 585,
+       "critical": 359,
+       "critical_pct": 61.4,
+       "negative": 92,
+       "positive": 491,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 569,
+       "critical": 344,
+       "critical_pct": 60.5,
+       "negative": 92,
+       "positive": 476,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 658,
+       "critical": 396,
+       "critical_pct": 60.2,
+       "negative": 76,
+       "positive": 579,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 747,
+       "critical": 470,
+       "critical_pct": 62.9,
+       "negative": 88,
+       "positive": 658,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 659,
+       "critical": 436,
+       "critical_pct": 66.2,
+       "negative": 103,
+       "positive": 552,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 603,
+       "critical": 412,
+       "critical_pct": 68.3,
+       "negative": 105,
+       "positive": 495,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1017,
+       "critical": 704,
+       "critical_pct": 69.2,
+       "negative": 228,
+       "positive": 780,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1003,
+       "critical": 703,
+       "critical_pct": 70.1,
+       "negative": 167,
+       "positive": 828,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 834,
+       "critical": 633,
+       "critical_pct": 75.9,
+       "negative": 173,
+       "positive": 656,
+       "partial_period": false
+      }
+     ],
+     "total": 8594,
+     "critical_total": 5601,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.974,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.977
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "cloud security",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cloud security",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3457,
+     "carrying": 993,
+     "availability_pct": 28.72,
+     "items": [
+      {
+       "country": "united states",
+       "count": 541,
+       "share_pct": 15.65
+      },
+      {
+       "country": "india",
+       "count": 61,
+       "share_pct": 1.76
+      },
+      {
+       "country": "venezuela",
+       "count": 45,
+       "share_pct": 1.3
+      },
+      {
+       "country": "united kingdom",
+       "count": 40,
+       "share_pct": 1.16
+      },
+      {
+       "country": "australia",
+       "count": 33,
+       "share_pct": 0.95
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 273
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.76,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.763
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "cloud security",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cloud security",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "cloud-based network security solutions",
+       "count": 411,
+       "share": 19.75,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 311,
+       "delta_pct": 32.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "zero trust network architecture",
+       "count": 249,
+       "share": 11.97,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 212,
+       "delta_pct": 17.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "cloud storage security and encryption standards",
+       "count": 207,
+       "share": 9.95,
+       "lift": 811.99,
+       "baseline_count": 1,
+       "previous_period_count": 181,
+       "delta_pct": 14.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "secure remote access solutions (e.g., rdp, ssh)",
+       "count": 181,
+       "share": 8.7,
+       "lift": 710.0,
+       "baseline_count": 1,
+       "previous_period_count": 151,
+       "delta_pct": 19.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "network access control (nac) solutions",
+       "count": 172,
+       "share": 8.27,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 149,
+       "delta_pct": 15.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3457,
+     "carrying": 2081,
+     "carrier_share_pct": 60.2,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.147,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.149
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "cloud security",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "cloud security",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f23207c6105443aa5fcb4f",
+       "headline": "Real-Time Defence Becomes Cyber Frontline",
+       "url": "https://www.deccanchronicle.com/southern-states/karnataka/real-time-defence-becomes-cyber-frontline-1953584",
+       "publisher": "deccanchronicle.com",
+       "published_at": "2026-04-29T14:31:54",
+       "lede": "bengaluru: as cyberattacks grow faster and more complex—fuelled by artificial intelligence—security leaders are shifting from prevention to real-time detection and response, especially in always-on cloud environments. “most organisations still lack visibility into their own environments,” said rinki sethi, chief information security officer at upwind, a cloud security solutions company that",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.75
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "cloud security"
+       ],
+       "people": [
+        "rinki sethi"
+       ]
+      },
+      {
+       "id": "6a2a720f963d76f4afcac046",
+       "headline": "Guardz 2026 State of MSP Threat Report: AI and cybersecurity landscape",
+       "url": "https://digitalisationworld.com/news/72225/guardz-2026-state-of-msp-threat-report-ai-and-cybersecurity-landscape",
+       "publisher": "digitalisationworld.com",
+       "published_at": "2026-04-29T09:51:32",
+       "lede": "guardz has released its 2026 state of msp threat report, outlining how artificial intelligence (ai) is changing the cybersecurity landscape. the report highlights vulnerabilities in identity, authentication, and cloud security that attackers are actively exploiting. based on smb environments, the report notes that while ai has increased the speed and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.78
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f215b8da8ae7be8d21ca78",
+       "headline": "Encrypted Notes App Market Hits New High | Major Giants Microsoft, Google, Apple, Evernote, Zoho",
+       "url": "https://www.openpr.com/news/4494589/encrypted-notes-app-market-hits-new-high-major-giants",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-29T09:29:10",
+       "lede": "encrypted notes app market hits new high | major giants microsoft, google, apple, evernote, zoho encrypted notes app market https://www.htfmarketintelligence.com/sample-report/global-encrypted-notes-app-market https://www.htfmarketintelligence.com/buy-now?format=1&report=29053-global-encrypted-notes-app-market 📊 encrypted notes app market outlook 2033the global encrypted notes app market is entering a strong growth phase as individuals, professionals, and enterprises prioritize data privacy, secure communication, and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 213,
+         "path": "/Science/Mathematics/Other",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a03eef49c4aac0935368495",
+       "headline": "Agentic AI Demands a New Layer of Enterprise Security",
+       "url": "https://www.bankinfosecurity.com/agentic-ai-demands-new-layer-enterprise-security-a-31545",
+       "publisher": "bankinfosecurity.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "agentic ai , application security , cloud security agentic ai demands a new layer of enterprise security cisco's vikram varakantam on securing agentic ai at the infrastructure layer vikram varakantam, senior director, product management, ai defense, cisco traditional security tools weren't built for the non-deterministic nature of artificial intelligence applications,",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.85
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87f8a8937ef12fc0682d2",
+       "headline": "Autonomous Security in the AI Era: Efficiency Meets Efficacy",
+       "url": "https://www.bankinfosecurity.com/autonomous-security-in-ai-era-efficiency-meets-efficacy-a-31515",
+       "publisher": "bankinfosecurity.com",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "agentic ai , cloud security , events autonomous security in the ai era: efficiency meets efficacy sentinelone's corde on agentic ai, sovereign cloud and the future of security ops chris corde, chief product officer, sentinelone security leaders must rethink their soc strategy across two critical dimensions - efficiency and efficacy",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.58
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "cloud security",
+        "sentinelone"
+       ],
+       "people": [
+        "chris cord"
+       ]
+      },
+      {
+       "id": "69efaab8a84b609af2b2f00b",
+       "headline": "Exclusive: Google Cloud on the road to autonomous SecOps",
+       "url": "https://securitybrief.asia/story/exclusive-google-cloud-on-the-road-to-autonomous-secops",
+       "publisher": "securitybrief.asia",
+       "published_at": "2026-04-24T20:03:00",
+       "lede": "google cloud has released three agentic ai capabilities for its security operations platform at its next 2026 conference. automating core analyst tasks including threat detection engineering, threat hunting, and third-party context gathering. eventually this path is heading google toward an autonomous security operations centre (soc). detection reimagined the detection engineering",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.74
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa9b0a84b609af2b2258b",
+       "headline": "Exclusive: Google Cloud on the road to autonomous SecOps",
+       "url": "https://itbrief.com.au/story/exclusive-google-cloud-on-the-road-to-autonomous-secops",
+       "publisher": "itbrief.com.au",
+       "published_at": "2026-04-24T20:03:00",
+       "lede": "google cloud has released three agentic ai capabilities for its security operations platform at its next 2026 conference. automating core analyst tasks including threat detection engineering, threat hunting, and third-party context gathering. eventually this path is heading google toward an autonomous security operations centre (soc). detection reimagined the detection engineering",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.74
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c8a5a5706a322e0fe9cb",
+       "headline": "The Rise of 'Shadow AI Agents' Inside Enterprises",
+       "url": "https://www.bankinfosecurity.com/rise-shadow-ai-agents-inside-enterprises-a-31501",
+       "publisher": "bankinfosecurity.com",
+       "published_at": "2026-04-24T00:00:00",
+       "lede": "agentic ai , artificial intelligence & machine learning , governance & risk management the rise of 'shadow ai agents' inside enterprises okta's shiven ramji on visibility, identity and hidden risk shiven ramji, president, customer identity cloud, okta as enterprises rush to deploy artificial intelligence across their organizations, a new largely",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.79
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.66
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "okta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea1fc473206aa299ebfd45",
+       "headline": "Lovable Walks Back Initial Statement That It Wasn’t Breached, Offers What Happened on April 20",
+       "url": "https://www.techloy.com/lovable-walks-back-initial-statement-that-it-wasnt-breached-offers-what-happened-on-april-2/",
+       "publisher": "techloy.com",
+       "published_at": "2026-04-23T11:37:24",
+       "lede": "the company said this incident occurred due to a backend regression being accidentally restored in february 2026. on april 20, a security researcher who goes by the handle @weezerosint on x claimed the vibe-coding platform lovable ai suffered a data breach that allowed the source code, credentials, chat history, and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9945ed47fc0283213837d",
+       "headline": "Google Cloud, Wiz Unveil Agentic Defense at Next ’26 | iPhone in Canada",
+       "url": "https://www.iphoneincanada.ca/2026/04/22/google-cloud-wiz-unveil-agentic-defense-at-next-26/",
+       "publisher": "iphoneincanada.ca",
+       "published_at": "2026-04-22T19:08:14",
+       "lede": "at the google cloud next ’26 conference, google announced the integration of its multi-billion dollar acquisition, wiz, into its security stack to build what it calls “agentic defense.” as ai transitions from simple chatbots to autonomous agents that can browse the web and access company data, traditional security isn’t enough.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.74
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.58
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "google",
+        "google cloud"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ebd7e83fc01faba3691a1",
+       "headline": "Zscaler Wins 2026 Google Cloud Partner of the Year Award for Security in the Application Category",
+       "url": "https://article.wn.com/view/2026/04/21/Zscaler_Wins_2026_Google_Cloud_Partner_of_the_Year_Award_for_f/",
+       "publisher": "article.wn.com",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "san jose, calif., april 21, 2026 (globe newswire) -- zscaler, inc. (nasdaq: zs), the leader in cloud security, announced today that it has received the 2026 google cloud partner of the ... read full story san jose, calif., april 21, 2026 (globe newswire) -- zscaler, inc. (nasdaq: zs), the leader",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.4
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e995f9d47fc0283214d5db",
+       "headline": "Kubernetes attack surface explodes: number of threats quadruples",
+       "url": "https://www.techzine.eu/news/security/140598/kubernetes-attack-surface-explodes-number-of-threats-quadruples/",
+       "publisher": "techzine.eu",
+       "published_at": "2026-04-20T08:30:00",
+       "lede": "kubernetes is the industry standard for cloud-native workloads. its ubiquity invites cyberattackers to exploit its vulnerabilities. the orchestration layer behind the modern cloud is facing not only a massive increase in the number of attacks but also increasingly sophisticated cyber threats. the number of kubernetes-based attack attempts has increased by",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.89
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "kubernetes"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 1775,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMCAwODozMDowMCIsImkiOiI2OWU5OTVmOWQ0N2ZjMDI4MzIxNGQ1ZGIiLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.952,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.954
+    }
+   }
+  }
+ ]
+}

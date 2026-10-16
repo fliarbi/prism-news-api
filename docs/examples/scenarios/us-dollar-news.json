@@ -1,0 +1,987 @@
+{
+ "slug": "us-dollar-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:40Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "us dollar",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "us dollar",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 14024,
+     "tone": {
+      "carrying": 14015,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 8880,
+        "share_pct": 63.36
+       },
+       {
+        "group": "neutral",
+        "count": 481,
+        "share_pct": 3.43
+       },
+       {
+        "group": "positive",
+        "count": 4654,
+        "share_pct": 33.21
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 14018,
+      "count": 6120,
+      "share_pct": 43.66
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.798,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.837
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "us dollar",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "us dollar",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2577,
+       "critical": 1491,
+       "critical_pct": 57.9,
+       "negative": 1618,
+       "positive": 907,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2056,
+       "critical": 1135,
+       "critical_pct": 55.2,
+       "negative": 1203,
+       "positive": 795,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1995,
+       "critical": 1038,
+       "critical_pct": 52.0,
+       "negative": 1155,
+       "positive": 772,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1731,
+       "critical": 809,
+       "critical_pct": 46.7,
+       "negative": 889,
+       "positive": 765,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1931,
+       "critical": 928,
+       "critical_pct": 48.1,
+       "negative": 913,
+       "positive": 947,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2648,
+       "critical": 1018,
+       "critical_pct": 38.4,
+       "negative": 1042,
+       "positive": 1566,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2006,
+       "critical": 982,
+       "critical_pct": 49.0,
+       "negative": 1097,
+       "positive": 857,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2084,
+       "critical": 1206,
+       "critical_pct": 57.9,
+       "negative": 1250,
+       "positive": 773,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2147,
+       "critical": 1236,
+       "critical_pct": 57.6,
+       "negative": 1295,
+       "positive": 788,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2843,
+       "critical": 1497,
+       "critical_pct": 52.7,
+       "negative": 1702,
+       "positive": 1041,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3267,
+       "critical": 1529,
+       "critical_pct": 46.8,
+       "negative": 2201,
+       "positive": 950,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 5767,
+       "critical": 1858,
+       "critical_pct": 32.2,
+       "negative": 3682,
+       "positive": 1875,
+       "partial_period": false
+      }
+     ],
+     "total": 31052,
+     "critical_total": 14727,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.699,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.736
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "us dollar",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "us dollar",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 14024,
+     "carrying": 8996,
+     "availability_pct": 64.15,
+     "items": [
+      {
+       "country": "united states",
+       "count": 5283,
+       "share_pct": 37.67
+      },
+      {
+       "country": "india",
+       "count": 1655,
+       "share_pct": 11.8
+      },
+      {
+       "country": "iran",
+       "count": 574,
+       "share_pct": 4.09
+      },
+      {
+       "country": "china",
+       "count": 240,
+       "share_pct": 1.71
+      },
+      {
+       "country": "singapore",
+       "count": 197,
+       "share_pct": 1.4
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1047
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.26,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.263
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "us dollar",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "us dollar",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 2653,
+       "share": 24.04,
+       "lift": 981.08,
+       "baseline_count": 2,
+       "previous_period_count": 2301,
+       "delta_pct": 15.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "emerging markets economic updates",
+       "count": 1612,
+       "share": 14.61,
+       "lift": 1192.24,
+       "baseline_count": 1,
+       "previous_period_count": 1365,
+       "delta_pct": 18.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forex spot market trading",
+       "count": 1172,
+       "share": 10.62,
+       "lift": 866.81,
+       "baseline_count": 1,
+       "previous_period_count": 723,
+       "delta_pct": 62.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "asian financial market developments",
+       "count": 1149,
+       "share": 10.41,
+       "lift": 849.8,
+       "baseline_count": 1,
+       "previous_period_count": 917,
+       "delta_pct": 25.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forex market volatility analysis",
+       "count": 1022,
+       "share": 9.26,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 453,
+       "delta_pct": 125.6,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 14024,
+     "carrying": 11037,
+     "carrier_share_pct": 78.7,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.058,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.063
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "us dollar",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "us dollar",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f87fd8bbf1d3145595e41e",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.yarrawongachronicle.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "yarrawongachronicle.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87fc243843dd771ce1f7e",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.kyfreepress.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "kyfreepress.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87f7f43843dd771cdf803",
+       "headline": "The sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. The US dollar ‌initially fell to 155.5 yen after the move, its lowest since March 2, in what would have been its largest single-day drop since late December 202",
+       "url": "https://www.cobramcourier.com.au/aap-finance/japan-intervenes-to-counter-currency-weakness-sources/",
+       "publisher": "cobramcourier.com.au",
+       "published_at": "2026-04-30T17:06:52",
+       "lede": "the sources, one government and another a market source, spoke on condition of anonymity as they were not authorised to speak to the media. the us dollar ‌initially fell to 155.5 yen after the move, its lowest since march 2, in what would have been its largest single-day drop since",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ada865cefb83fe84aa2e6",
+       "headline": "Dollar mostly down after the Fed holds rates  - FinanceFeeds",
+       "url": "https://financefeeds.com/dollar-mostly-down-after-the-fed-holds-rates/",
+       "publisher": "financefeeds.com",
+       "published_at": "2026-04-30T14:58:51",
+       "lede": "dollar mostly down after the fed holds rates the fed held on 29 april as widely expected with jerome powell to remain on the board until 2028. this article was submitted by michael stark, an analyst at exness. the us dollar posted a modest decline in most of its pairs",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a6698937ef12fc0ada48",
+       "headline": "Trump tightens naval blockade as Iranian rial collapses to record low",
+       "url": "https://www.euronews.com/2026/04/30/trump-tightens-us-naval-blockade-as-iranian-rial-collapses-to-record-low",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-30T13:26:15",
+       "lede": "the iran war has turned towards an economic crossfire, as the trump administration has discussed maintaining its naval blockade of iran's ports \"for months if needed\" and the iranian rial hit a new historic low on wednesday, trading at 1.8 million rials to the us dollar — a rate unthinkable",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.48
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1145963d76f4af384110",
+       "headline": "Indian Rupee Plunges to a Historic Low Against US Dollar At ₹95.20 Sparks Economic Concerns - PUNE PULSE",
+       "url": "https://www.mypunepulse.com/indian-rupee-plunges-to-a-historic-low-against-us-dollar-at-%e2%82%b995-20-sparks-economic-concerns/",
+       "publisher": "mypunepulse.com",
+       "published_at": "2026-04-30T13:17:27",
+       "lede": "share this news oil prices, strong dollar and global tensions push indian currency to historic fall the indian rupee slipped to a record low of ₹95.20 against the us dollar on thursday, marking an unprecedented moment in the country’s financial landscape. the sharp fall reflects growing pressure from global economic",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.72
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.64
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9ff58713680636ef4c06b",
+       "headline": "BT Explainer: Rupee hits new low: Could it touch 100?   - BusinessToday",
+       "url": "https://www.businesstoday.in/latest/economy/story/bt-explainer-rupee-hits-new-low-could-it-touch-100-528311-2026-04-30",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-30T12:36:52",
+       "lede": "a sharp rise in crude oil prices have once again weighed on the rupee, which hit a fresh new intra-day low against the us dollar on april 30. &nbsp;&nbsp;the currency hit an intra-day low of 95.34 against the greenback, surpassing the previous low of 95.20 it hit on march 30.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.54
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a60a9c37f6c5e66b134ce",
+       "headline": "Rupee Sinks to Record Low 95.23: Oil Price Spike and Fed Stance Crush INR - Business League",
+       "url": "https://www.businessleague.in/rupee-sinks-to-record-low-95-23-oil-price-spike-and-fed-stance-crush-inr/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-30T12:30:53",
+       "lede": "now the indian rupee crashed to a record low thursday. the currency breached the 95.23 mark against the us dollar. therefore, importers face a massive surge in costs. meanwhile, brent crude prices climbed above $125 per barrel. a hawkish us federal reserve also added significant pressure. thus, the indian economy",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.67
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03efce62bbf617b039eae0",
+       "headline": "Trump tightens naval blockade as Iranian rial collapses to record low",
+       "url": "http://www.euronews.com/2026/04/30/trump-tightens-us-naval-blockade-as-iranian-rial-collapses-to-record-low",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-30T11:26:15",
+       "lede": "the iran war has turned towards an economic crossfire, as the trump administration has discussed maintaining its naval blockade of iran's ports \"for months if needed\" and the iranian rial hit a new historic low on wednesday, trading at 1.8 million rials to the us dollar — a rate unthinkable",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.48
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a540cc37f6c5e66a7e6c6",
+       "headline": "Rupee falls 14 paise to close near all-time low level at 94.82 against US dollar",
+       "url": "https://www.dtnext.in/news/business/biz-rupee-close-27",
+       "publisher": "dtnext.in",
+       "published_at": "2026-04-30T11:09:10",
+       "lede": "mumbai: the rupee depreciated 14 paise to close near its all-time low at 94.82 (provisional) against the us dollar on wednesday, pressured by rising brent crude oil prices, hovering around usd 115 per barrel, and continued foreign capital outflows..forex traders said the elevated crude oil price is likely to sharply",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.58
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8b41bbbf1d314559a8e64",
+       "headline": "Rupee falls to record low of 95.3 against US dollars as oil prices surge",
+       "url": "https://scroll.in/latest/1092497/rupee-falls-to-record-low-of-95-3-against-us-dollars-as-oil-prices-surge",
+       "publisher": "scroll.in",
+       "published_at": "2026-04-30T10:16:00",
+       "lede": "the rupee on thursday fell to a record low of 95.3 against the us dollar on account of rising global oil prices and selling in the domestic equity markets, pti reported. the indian currency opened at 95 against the dollar at the interbank foreign exchange market and lost 46 paise",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ebea9e540a46fb55d66cf",
+       "headline": "Oil Surges to Wartime Highs as Supply Shock Deepens - Comments from Century Financial - Middle East News 247",
+       "url": "https://menews247.com/oil-surges-to-wartime-highs-as-supply-shock-deepens-comments-from-century-financial/",
+       "publisher": "menews247.com",
+       "published_at": "2026-04-30T09:00:36",
+       "lede": "us dollar index the us dollar index (dxy) continued its upward move, closing the last session up 0.35% at $98.68. the strength is carrying in today’s asian morning session as well, with the index trading around $98.77, up another 0.10%, supported by a firm tone following the fed decision. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d6e5a088760d34c0a325",
+       "headline": "Rupee Hits Record Low Of 95.20 Against US Dollar",
+       "url": "https://www.newsmobile.in/trending-now/rupee-hits-record-low-of-95-20-against-us-dollar/",
+       "publisher": "newsmobile.in",
+       "published_at": "2026-04-30T07:23:56",
+       "lede": "new delhi: the indian rupee fell 32 paise to an all-time low of 95.20 against the us dollar in early trade on thursday, pressured by soaring crude oil prices and a strong greenback. at the interbank foreign exchange market, the rupee opened at 95.01 but slipped further to the record",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.55
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a5efbbf1d314559a1bf2",
+       "headline": "Rupee Falls 32 Paise To All-Time Low Of 95.20 Against US Dollar – Outlook Business",
+       "url": "https://www.outlookbusiness.com/markets/rupee-falls-32-paise-to-all-time-low-of-9520-against-us-dollar",
+       "publisher": "outlookbusiness.com",
+       "published_at": "2026-04-30T06:36:12",
+       "lede": "the rupee depreciated 32 paise to an all-time low of 95.20 against the us dollar in early trade on thursday, weighed down by elevated brent crude oil prices, hovering around $122 per barrel, and strong american currency.forex traders said the usd/inr pair may see further downside, as rising crude oil",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a91bbbf1d314559a487d",
+       "headline": "Rupee hits record low: Currency slips to 95.34 against US dollar as crude oil prices tops $120 per barrel - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/business/india-business/rupee-hits-record-low-of-95-20-against-us-dollar-slides-32-paise-in-early-trade/articleshow/130623920.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-30T05:17:00",
+       "lede": "new delhi: rupee slid to a fresh lifetime intraday low of 95.34 against the us dollar on thursday, weighed down by soaring global crude oil prices and selling pressure in domestic equities amid the west asia crisis.at the interbank foreign exchange market, the rupee opened weaker at 95.01 against the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a4d425cefb83fe8eb146f",
+       "headline": "INR vs USD: Rupee Hits Lifetime Low Of Rs 95.20 Against US Dollar",
+       "url": "https://www.republicworld.com/business/inr-vs-usd-rupee-hits-record-low-of-rs-9520-against-usd",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-30T04:49:27",
+       "lede": "the rupee hit an all-time low of rs 95.20 against the us dollar on thursday, april 30, amid stalemate in the us-ira peace talks.&amp;nbsp; as per experts, the inr&#47;usd rate may weaken further as a result of inflation linked concerns triggered by the surging crude oil prices, and trump&#39;s rejection",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.89
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a679c963d76f4afc54057",
+       "headline": "INR vs USD: Indian rupee hits fresh record low of 95.32 against US dollar as oil prices jump to $124/bbl",
+       "url": "https://upstox.com/news/market-news/latest-updates/inr-vs-usd-indian-rupee-weakens-to-95-19-against-us-dollar-as-crude-oil-prices-jump-to-124-bbl/article-192962/",
+       "publisher": "upstox.com",
+       "published_at": "2026-04-30T04:21:37",
+       "lede": "the indian rupee weakened past the 95 against the us dollar to hit a fresh record low on a higher demand for the greenback, and elevated crude oil prices above $124 per bbl on thursday, april 30. inr vs usd: the indian rupee weakened past the 95 level against the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.65
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 3944,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwNDoyMDozNSIsImkiOiI2YTJhYmNjYTk2M2Q3NmY0YWZmY2VmNDIiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.379,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.383
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,926 @@
+{
+ "slug": "fusion-energy-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:06Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "fusion energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "fusion energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 235,
+     "tone": {
+      "carrying": 235,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 14,
+        "share_pct": 5.96
+       },
+       {
+        "group": "neutral",
+        "count": 0,
+        "share_pct": 0.0
+       },
+       {
+        "group": "positive",
+        "count": 221,
+        "share_pct": 94.04
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 235,
+      "count": 211,
+      "share_pct": 89.79
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.728,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.73
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "fusion energy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "fusion energy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 29,
+       "critical": 27,
+       "critical_pct": 93.1,
+       "negative": 2,
+       "positive": 27,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 50,
+       "critical": 47,
+       "critical_pct": 94.0,
+       "negative": 1,
+       "positive": 49,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 55,
+       "critical": 45,
+       "critical_pct": 81.8,
+       "negative": 2,
+       "positive": 53,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 36,
+       "critical": 35,
+       "critical_pct": 97.2,
+       "negative": 2,
+       "positive": 34,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 48,
+       "critical": 44,
+       "critical_pct": 91.7,
+       "negative": 4,
+       "positive": 43,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 55,
+       "critical": 51,
+       "critical_pct": 92.7,
+       "negative": 2,
+       "positive": 53,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 22,
+       "critical": 19,
+       "critical_pct": 86.4,
+       "negative": 6,
+       "positive": 16,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 92,
+       "critical": 85,
+       "critical_pct": 92.4,
+       "negative": 18,
+       "positive": 73,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 39,
+       "critical": 38,
+       "critical_pct": 97.4,
+       "negative": 0,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 76,
+       "critical": 63,
+       "critical_pct": 82.9,
+       "negative": 3,
+       "positive": 73,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 54,
+       "critical": 50,
+       "critical_pct": 92.6,
+       "negative": 3,
+       "positive": 51,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 66,
+       "critical": 60,
+       "critical_pct": 90.9,
+       "negative": 8,
+       "positive": 58,
+       "partial_period": false
+      }
+     ],
+     "total": 622,
+     "critical_total": 564,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.983,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.985
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "fusion energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "fusion energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 235,
+     "carrying": 141,
+     "availability_pct": 60.0,
+     "items": [
+      {
+       "country": "united states",
+       "count": 95,
+       "share_pct": 40.43
+      },
+      {
+       "country": "united kingdom",
+       "count": 15,
+       "share_pct": 6.38
+      },
+      {
+       "country": "china",
+       "count": 5,
+       "share_pct": 2.13
+      },
+      {
+       "country": "germany",
+       "count": 5,
+       "share_pct": 2.13
+      },
+      {
+       "country": "tanzania",
+       "count": 5,
+       "share_pct": 2.13
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 16
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.071,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.073
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "fusion energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "fusion energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "nuclear energy fusion research",
+       "count": 26,
+       "share": 19.12,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 36,
+       "delta_pct": -27.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "plasma physics and fusion energy research",
+       "count": 11,
+       "share": 8.09,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 11,
+       "delta_pct": 0.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "venture capital in clean energy & sustainability",
+       "count": 6,
+       "share": 4.41,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 2,
+       "delta_pct": 200.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "nuclear energy investment strategies",
+       "count": 5,
+       "share": 3.68,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 7,
+       "delta_pct": -28.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "renewable energy tech advancements",
+       "count": 6,
+       "share": 4.41,
+       "lift": 120.04,
+       "baseline_count": 3,
+       "previous_period_count": 5,
+       "delta_pct": 20.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 235,
+     "carrying": 136,
+     "carrier_share_pct": 57.87,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.538,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.54
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "fusion energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "fusion energy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e1de823a42e43e5614e106",
+       "headline": "Slovenia launches new ion accelerator",
+       "url": "https://sloveniatimes.com/47029/slovenia-launches-new-ion-accelerator",
+       "publisher": "sloveniatimes.com",
+       "published_at": "2026-03-25T00:00:00",
+       "lede": "scientists at slovenia's leading research institute have switched on a new state-of-the-art ion accelerator that will allow researchers to study materials with greater precision and explore applications ranging from fusion energy to biomedical science. the instrument, called tandetron, has been installed at the jožef stefan institute's reactor centre on the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.95,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 262,
+         "path": "/Science/Physics",
+         "score": 0.58
+        }
+       ],
+       "country": "slovenia",
+       "organizations": [
+        "jožef stefan institute"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2abca95cefb83fe83540d9",
+       "headline": "Fusion Energy Startups Go Public as AI Boom Accelerates Investment in Clean Power Stocks",
+       "url": "https://www.bez-kabli.pl/fusion-energy-startups-go-public-as-ai-boom-accelerates-investment-in-clean-power-stocks/",
+       "publisher": "bez-kabli.pl",
+       "published_at": "2026-03-23T19:47:45",
+       "lede": "new york, march 23, 2026, 14:59 edt fusion energy startups are heading to public markets, lured by surging ai-driven power needs and new funding flows for always-on clean energy. general fusion struck a blank-check merger deal to go public, while tae technologies is eyeing a tie-up valued at over $6",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.81
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed01c8e67a2fcb3d7696a",
+       "headline": "OpenAI In Talks With Helion Energy To Secure Fusion Power Supply",
+       "url": "https://www.benzinga.com/markets/private-markets/26/03/51416625/openai-in-talks-with-helion-energy-to-secure-fusion-power-supply",
+       "publisher": "benzinga.com",
+       "published_at": "2026-03-23T18:33:08",
+       "lede": "openai ceo sam altman is understood to be holding conversations with helion energy as the artificial intelligence company seeks to buy fusion energy. fusion energy, which mimics the sun's process of energy creation, offers ai companies like openai a potential source of abundant clean energy. altman is reportedly in discussions",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9b6f8e67a2fcb3a7abdf",
+       "headline": "Peak Nano Announces Partnership with E&P Technologies",
+       "url": "http://smt.iconnect007.com/article/149159/peak-nano-announces-partnership-with-ep-technologies/149156/pcb",
+       "publisher": "smt.iconnect007.com",
+       "published_at": "2026-03-11T12:13:00",
+       "lede": "peak nano announced a strategic partnership with e&p technologies to co-develop next-generation high-energy-density capacitors powered by peak nano's nanoplex™ hdc dielectric platform. the collaboration will accelerate capacitor performance beyond the limits of conventional polymer film dielectrics while advancing a resilient, u.s.-based supply chain for fusion energy and critical power infrastructure.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.98,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ab6ad5cefb83fe8311307",
+       "headline": "Peak Nano Announces Partnership with E&P Technologies",
+       "url": "http://smt.iconnect007.com/article/149159/peak-nano-announces-partnership-with-ep-technologies/149156/smt",
+       "publisher": "smt.iconnect007.com",
+       "published_at": "2026-03-11T12:13:00",
+       "lede": "peak nano announced a strategic partnership with e&p technologies to co-develop next-generation high-energy-density capacitors powered by peak nano's nanoplex™ hdc dielectric platform. the collaboration will accelerate capacitor performance beyond the limits of conventional polymer film dielectrics while advancing a resilient, u.s.-based supply chain for fusion energy and critical power infrastructure.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.98,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e96c45272de32e8c6222",
+       "headline": "Proxima Fusion secures €400M from Bavaria to build €2B fusion test facility in Munich — TFN",
+       "url": "https://techfundingnews.com/proxima-fusion-bavaria-400m-fusion-plant/",
+       "publisher": "techfundingnews.com",
+       "published_at": "2026-02-26T10:08:46",
+       "lede": "europe is working hard to achieve energy independence and net-zero goals, but still lacks a scalable, home-grown solution for clean baseload power. fusion energy, often called the “holy grail” of energy, has yet to show it can produce more energy than it uses. while companies in the us and asia",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.48
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.43
+        },
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.41
+        }
+       ],
+       "country": "germany",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bb89e4812974fb0b588157",
+       "headline": "Helion Advances Fusion Reactor Toward 2028 Power Target",
+       "url": "https://startupnews.fyi/2026/02/14/helion-fusion-reactor-2028-temperature/",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-02-14T12:35:02",
+       "lede": "u.s.-based fusion startup helion says it has reached new high-temperature plasma milestones, a technical step toward its goal of delivering commercial fusion power by 2028.fusion energy remains one of the most technically ambitious bets in climate technology. this week, helion energy said it has achieved new temperature benchmarks in its",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.82
+        },
+        {
+         "code": 262,
+         "path": "/Science/Physics",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "helion",
+        "helion energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bafa100897f254a7e59a5b",
+       "headline": "China Startup’s ‘Artificial Sun’ Achieves Fusion Milestone, Beating all Energy Sources",
+       "url": "https://startuppakistan.com.pk/china-startups-artificial-sun-achieves-fusion-milestone-beating-all-energy-sources/",
+       "publisher": "startuppakistan.com.pk",
+       "published_at": "2026-02-07T14:38:00",
+       "lede": "shanghai-based fusion energy startup energy singularity has achieved a major milestone in the global pursuit of clean and sustainable power by setting a new world record for plasma confinement. using its hh70 high-temperature superconducting tokamak, the company successfully sustained a plasma current for 1,337 seconds, marking the longest duration ever",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 262,
+         "path": "/Science/Physics",
+         "score": 0.62
+        },
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.51
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "energy singularity"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbd1a1f331a1b39ff75912",
+       "headline": "Wellington company secures funding for clean fusion power facility",
+       "url": "https://www.rnz.co.nz/news/national/585922/wellington-company-secures-funding-for-clean-fusion-power-facility",
+       "publisher": "rnz.co.nz",
+       "published_at": "2026-02-03T23:19:16",
+       "lede": "photo: openstar technologiesa wellington-based fusion energy company says funding is in place to build a new research facility with the potential to put aotearoa at the forefront of clean energy development.openstar technologies has secured a $35 million commitment from the regional infrastructure fund to further their research towards creating a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.73
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.43
+        }
+       ],
+       "country": "new zealand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9fe2e540a46fb541e061",
+       "headline": "Fusion startup Xcimer hopes to pick site by year's end",
+       "url": "https://c3newsmag.com/fusion-startup-xcimer-hopes-to-pick-site-by-years-end/",
+       "publisher": "c3newsmag.com",
+       "published_at": "2026-01-20T15:14:58",
+       "lede": "xcimer energy plans to select a site by the end of the year for what it says would be the world’s largest laser, a key step in its effort to make fusion energy commercially viable. the company is weighing locations across several states as it joins other fusion firms pressing",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6988a76d8fb0ea95e9771dff",
+       "headline": "UK researchers to explore multi-metal additive manufacturing for fusion energy",
+       "url": "https://tctmagazine.com/uk-researchers-to-explore-multi-metal-additive-manufacturing-for-fusion-energy/",
+       "publisher": "tctmagazine.com",
+       "published_at": "2026-01-20T10:19:58",
+       "lede": "a new uk research initiative led by the university of nottingham’s centre for additive manufacturing (cfam) and uk atomic energy authority (ukaea) is aiming to tackle one of fusion energy's toughest challenges.the project, titled diadem (design of interfaces for additively engineered metamaterials), will explore new ways to manufacture materials for",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 201,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Peripherals",
+         "score": 0.82
+        },
+        {
+         "code": 102,
+         "path": "/Business & Industrial/Manufacturing/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "cfam"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c42a4d43a12d3a2fc9602f",
+       "headline": "The 1.4MW system is expected to be operational from June 2026 and will be housed at the UK Atomic Energy Authority’s (UKAEA) Culham Campus in Oxfordshire, where the government plans to establish the UK’s first AI Growth Zone.",
+       "url": "https://bebeez.eu/2026/03/17/uk-govt-to-invest-4-5m-in-sunrise-supercomputer-to-accelerate-advancements-in-fusion-energy/",
+       "publisher": "bebeez.eu",
+       "published_at": "2026-01-08T00:00:00",
+       "lede": "the 1.4mw system is expected to be operational from june 2026 and will be housed at the uk atomic energy authority’s (ukaea) culham campus in oxfordshire, where the government plans to establish the uk’s first ai growth zone.sunrise will tackle key fusion energy challenges in areas such as plasma turbulence,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.6
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ae4135cefb83fe85130ce",
+       "headline": "test social",
+       "url": "https://about.bnef.com/insights/clean-energy/nuclear-fusion-powers-up-for-commercial-breakthrough/",
+       "publisher": "about.bnef.com",
+       "published_at": "2026-04-30T20:18:44",
+       "lede": "fusion energy is entering a new phase. after decades as a scientific pursuit, the sector is attracting billions in private and public capital, with big tech, oil companies and governments all racing to bring the first commercial plants online. advances in areas like superconductors, materials and computing are opening new",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a85e95cefb83fe8108ef8",
+       "headline": "nT-Tao and Mekorot join forces to test fusion energy for water infrastructure",
+       "url": "https://smartwatermagazine.com/news/smart-water-magazine/nt-tao-and-mekorot-join-forces-test-fusion-energy-water-infrastructure",
+       "publisher": "smartwatermagazine.com",
+       "published_at": "2026-04-30T12:32:15",
+       "lede": "israeli compact fusion energy company nt-tao has signed a memorandum of understanding with mekorot, israel's national water company, to explore the potential of fusion energy as a power source for water and wastewater facilities. the agreement establishes a framework for technical collaboration and includes plans to create a dedicated research",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.8,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e45e53a4d098b40b99624",
+       "headline": "[NT-Tao in PR Newswire] nT-Tao and Israel's national water company Mekorot partner to explore fusion energy for critical water infrastructure - OurCrowd Blog",
+       "url": "https://blog.ourcrowd.com/nt-tao-and-israels-national-water-company-mekorot-partner-to-explore-fusion-energy-for-critical-water-infrastructure/",
+       "publisher": "blog.ourcrowd.com",
+       "published_at": "2026-04-29T07:51:10",
+       "lede": "tel aviv, israel, april 29, 2026 /prnewswire/ — nt-tao, an israeli compact fusion energy company, and mekorot, israel’s national water company, today announced a strategic collaboration to explore fusion energy as a power source for critical water and wastewater infrastructure. the two parties signed a memorandum of understanding (mou) which",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.64
+        },
+        {
+         "code": 84,
+         "path": "/Business & Industrial/Energy & Utilities/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c93a1e3933a6dd8ee6da",
+       "headline": "American Fusion Expands Government Procurement Services with Initial Canadian Defense Order",
+       "url": "https://advos.io/en/american-fusion-expands-government-procurement-services-with-initial-canadian-defense-order",
+       "publisher": "advos.io",
+       "published_at": "2026-04-28T14:56:35",
+       "lede": "american fusion inc. announces its expansion into government procurement services, securing a $58,000 purchase order for phase noise analyzers from a canadian defense contractor, marking a strategic move to build institutional supply chain capabilities alongside its fusion energy initiatives. american fusion inc. (otc: amfn) is broadening its business scope beyond",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.67
+        },
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 65,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAxMDowMTowOSIsImkiOiI2OWYxYzhlN2E1NzA2YTMyMmUxMDAzZDAiLCJwIjo3fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.959,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.961
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,911 @@
+{
+ "slug": "energy-efficiency-industry",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:18:26Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "energy efficiency",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "energy efficiency",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 57760,
+     "tone": {
+      "carrying": 57731,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 7655,
+        "share_pct": 13.26
+       },
+       {
+        "group": "neutral",
+        "count": 649,
+        "share_pct": 1.12
+       },
+       {
+        "group": "positive",
+        "count": 49427,
+        "share_pct": 85.62
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 57755,
+      "count": 34073,
+      "share_pct": 59.0
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.626,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.628
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "energy efficiency",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "energy efficiency",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 10572,
+       "critical": 5995,
+       "critical_pct": 56.7,
+       "negative": 1334,
+       "positive": 9084,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 9489,
+       "critical": 5734,
+       "critical_pct": 60.4,
+       "negative": 1066,
+       "positive": 8321,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 10036,
+       "critical": 5719,
+       "critical_pct": 57.0,
+       "negative": 1151,
+       "positive": 8726,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 9586,
+       "critical": 5277,
+       "critical_pct": 55.0,
+       "negative": 1135,
+       "positive": 8353,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 11973,
+       "critical": 6551,
+       "critical_pct": 54.7,
+       "negative": 948,
+       "positive": 10937,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 11494,
+       "critical": 6959,
+       "critical_pct": 60.5,
+       "negative": 1015,
+       "positive": 10395,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 11306,
+       "critical": 6896,
+       "critical_pct": 61.0,
+       "negative": 1031,
+       "positive": 10157,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 10782,
+       "critical": 6657,
+       "critical_pct": 61.7,
+       "negative": 1254,
+       "positive": 9422,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 11133,
+       "critical": 6858,
+       "critical_pct": 61.6,
+       "negative": 1290,
+       "positive": 9709,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 14304,
+       "critical": 8477,
+       "critical_pct": 59.3,
+       "negative": 1607,
+       "positive": 12517,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 14559,
+       "critical": 8425,
+       "critical_pct": 57.9,
+       "negative": 2224,
+       "positive": 12172,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 17764,
+       "critical": 10313,
+       "critical_pct": 58.1,
+       "negative": 2534,
+       "positive": 15029,
+       "partial_period": false
+      }
+     ],
+     "total": 142998,
+     "critical_total": 83861,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.081,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.085
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "energy efficiency",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "energy efficiency",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 57760,
+     "carrying": 25414,
+     "availability_pct": 44.0,
+     "items": [
+      {
+       "country": "united states",
+       "count": 9165,
+       "share_pct": 15.87
+      },
+      {
+       "country": "india",
+       "count": 3586,
+       "share_pct": 6.21
+      },
+      {
+       "country": "united kingdom",
+       "count": 2367,
+       "share_pct": 4.1
+      },
+      {
+       "country": "china",
+       "count": 1304,
+       "share_pct": 2.26
+      },
+      {
+       "country": "australia",
+       "count": 654,
+       "share_pct": 1.13
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 8338
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.999,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.002
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "energy efficiency",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "energy efficiency",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "energy-efficient home solutions",
+       "count": 1613,
+       "share": 4.52,
+       "lift": 369.02,
+       "baseline_count": 1,
+       "previous_period_count": 1259,
+       "delta_pct": 28.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "solar photovoltaic (pv) energy systems",
+       "count": 3125,
+       "share": 8.76,
+       "lift": 142.99,
+       "baseline_count": 5,
+       "previous_period_count": 2207,
+       "delta_pct": 41.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "green technology innovations",
+       "count": 942,
+       "share": 2.64,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 576,
+       "delta_pct": 63.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "smart grid integration for renewables",
+       "count": 922,
+       "share": 2.58,
+       "lift": 210.93,
+       "baseline_count": 1,
+       "previous_period_count": 578,
+       "delta_pct": 59.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 851,
+       "share": 2.39,
+       "lift": 194.69,
+       "baseline_count": 1,
+       "previous_period_count": 503,
+       "delta_pct": 69.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 57760,
+     "carrying": 35681,
+     "carrier_share_pct": 61.77,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.139,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.14
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "energy efficiency",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "energy efficiency",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f0e23645272de32e8be958",
+       "headline": "$100B AI Platform for India Growth: Jeet Adani",
+       "url": "https://www.newkerala.com/news/a/we-committed-100-billion-build-platform-that-supports-386.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-28T11:55:19",
+       "lede": "adani group commits $100 billion to build a platform supporting india's ai growth, as announced by director jeet adani. google is investing $15 billion in a massive ai data centre campus in visakhapatnam, the largest outside the us. jeet adani emphasized that energy efficiency and affordability are key to democratizing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.73,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.55
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.46
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "google",
+        "adani group"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0eb09836d28f995cbddb0",
+       "headline": "Editorial: Grim outlook as Middle East conflict rages on",
+       "url": "https://thebftonline.com/2026/04/27/editorial-grim-outlook-as-middle-east-conflict-rages-on/",
+       "publisher": "thebftonline.com",
+       "published_at": "2026-04-27T16:30:10",
+       "lede": "energy efficiency has to be considered as a core macroeconomic adjustment tool, cautioned imf managing director kristalina georgieva as she observed that rising global energy costs linked to geopolitical conflict are disproportionately hitting countries with limited fiscal space. energy-importing economies, ghana inclusive, face a renewed policy squeeze with significant spillovers",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "ghana",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0eb53a285a58da6f34ca23",
+       "headline": "Multilateral Development Banks’ Clean Electricity Finance",
+       "url": "http://www.nrdc.org/resources/multilateral-development-banks-clean-electricity-finance",
+       "publisher": "nrdc.org",
+       "published_at": "2026-04-27T12:00:00",
+       "lede": "coauthored by diego escalante, gflac, and cliff polycarp, nrdc senior advisor to achieve global climate goals, the world needs to rapidly increase renewable energy deployment, modernize electricity grids, deploy energy storage, and improve energy efficiency. multilateral development banks (mdbs) are already investing in these four clean electricity areas and could",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.86
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e93e0285a58da6f1c9f88",
+       "headline": "Multilateral Development Banks’ Clean Electricity Finance",
+       "url": "https://www.nrdc.org/resources/multilateral-development-banks-clean-electricity-finance",
+       "publisher": "nrdc.org",
+       "published_at": "2026-04-27T12:00:00",
+       "lede": "coauthored by diego escalante, gflac, and cliff polycarp, nrdc senior advisor to achieve global climate goals, the world needs to rapidly increase renewable energy deployment, modernize electricity grids, deploy energy storage, and improve energy efficiency. multilateral development banks (mdbs) are already investing in these four clean electricity areas and could",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.86
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa1ea84b609af2b27875",
+       "headline": "India’s power demand hits record 252.07 GW amid heatwave",
+       "url": "https://telanganatoday.com/indias-power-demand-hits-record-252-07-gw-amid-heatwave",
+       "publisher": "telanganatoday.com",
+       "published_at": "2026-04-25T11:35:47",
+       "lede": "new delhi: india’s electricity demand surged to an all‑time high of 252.07 gw this weekend as a severe heat wave drove widespread use of cooling appliances, according to the latest power ministry data. the previous record was 250 gw set in may 2024. the ministry said peak demand rose from",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.62
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8dfd89baafc7356db61d8",
+       "headline": "Fraud probe launched into £44m eco scheme as arrests made | TheBusinessDesk.com",
+       "url": "https://www.thebusinessdesk.com/westmidlands/news/2110975-fraud-probe-launched-into-44m-eco-scheme-as-arrests-made/",
+       "publisher": "thebusinessdesk.com",
+       "published_at": "2026-04-22T11:46:45",
+       "lede": "fraud probe launched into £44m eco scheme as arrests made x register for free to receive latest news stories direct to your inbox register the serious fraud office has launched an investigation into alleged fraud involving three uk companies linked to a government energy efficiency scheme. the probe centres on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.59
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8df9a5cfa3e5ba54d0b9a",
+       "headline": "Fraud probe launched into £44m eco scheme as arrests made | TheBusinessDesk.com",
+       "url": "https://www.thebusinessdesk.com/westmidlands/news/2110975-fraud-probe-launched-into-44m-eco-scheme-as-arrests-made",
+       "publisher": "thebusinessdesk.com",
+       "published_at": "2026-04-22T11:46:45",
+       "lede": "fraud probe launched into £44m eco scheme as arrests made x register for free to receive latest news stories direct to your inbox register the serious fraud office has launched an investigation into alleged fraud involving three uk companies linked to a government energy efficiency scheme. the probe centres on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.59
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99c41d47fc0283219d069",
+       "headline": "Fraud probe launched into £44m eco scheme as arrests made | TheBusinessDesk.com",
+       "url": "https://www.thebusinessdesk.com/eastmidlands/news/2109648-fraud-probe-launched-into-44m-eco-scheme-as-arrests-made/",
+       "publisher": "thebusinessdesk.com",
+       "published_at": "2026-04-22T11:06:45",
+       "lede": "fraud probe launched into £44m eco scheme as arrests made x register for free to receive latest news stories direct to your inbox register the serious fraud office has launched an investigation into alleged fraud involving three uk companies linked to a government energy efficiency scheme. the probe centres on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.57
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99c1575f157062cb0262b",
+       "headline": "Fraud probe launched into £44m eco scheme as arrests made | TheBusinessDesk.com",
+       "url": "https://www.thebusinessdesk.com/eastmidlands/news/2109648-fraud-probe-launched-into-44m-eco-scheme-as-arrests-made",
+       "publisher": "thebusinessdesk.com",
+       "published_at": "2026-04-22T11:06:45",
+       "lede": "fraud probe launched into £44m eco scheme as arrests made x register for free to receive latest news stories direct to your inbox register the serious fraud office has launched an investigation into alleged fraud involving three uk companies linked to a government energy efficiency scheme. the probe centres on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.57
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e885dc7bb1410d4c8a6455",
+       "headline": "The EU Searches For a Solution to a Jet Fuel Crisis - Impakter",
+       "url": "https://impakter.com/the-eu-searches-for-a-solution-to-a-jet-fuel-crisis/",
+       "publisher": "impakter.com",
+       "published_at": "2026-04-21T06:00:49",
+       "lede": "today’s esg updates eu drafts an urgent plan to find jet fuel : european aviation is exceptionally vulnerable to the current halt in traffic through the strait and the executives are starting to search for new suppliers. apple shares environmental progress : the company is increasing energy efficiency, swapping for",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "esg"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2eb134e540a46fb5515953",
+       "headline": "Centres drafts energy-efficiency roadmap for MSME sector in  Andhra Pradesh",
+       "url": "https://energy.economictimes.indiatimes.com/news/coal/centres-drafts-energy-efficiency-roadmap-for-msme-sector-in-ap/130383969",
+       "publisher": "energy.economictimes.indiatimes.com",
+       "published_at": "2026-04-20T11:40:57",
+       "lede": "the union government's eesl has developed a roadmap for andhra pradesh to boost energy efficiency in msmes, aligning with the state's tech-driven growth vision. visakhapatnam: the union govt's energy efficiency services limited (eesl) has prepared a roadmap for andhra pradesh to accelerate adoption of advanced, energy-smart technologies among micro, small",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 84,
+         "path": "/Business & Industrial/Energy & Utilities/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87bde9baafc73568c62f2",
+       "headline": "EU denies bowing to tech lobby on data centre green impact",
+       "url": "https://www.thestar.com.my/tech/tech-news/2026/04/20/eu-denies-bowing-to-tech-lobby-on-data-centre-green-impact",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-20T11:00:00",
+       "lede": "brussels: the european commission denied friday it had copy-pasted from proposals by tech industry lobbyists in adopting rules allowing data centres to keep their environmental impact secret. a press investigation alleged brussels had added a confidentiality clause to a review of energy efficiency rules after pressure from microsoft and digitaleurope,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 101,
+         "path": "/Internet & Telecom/Web Services/Cloud Storage",
+         "score": 0.4
+        }
+       ],
+       "country": "belgium",
+       "organizations": [
+        "microsoft",
+        "digitaleurope"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b06ff5cefb83fe8697f81",
+       "headline": "India’s artificial intelligence (AI) roadmap should be built on the principles of affordability and accessibility, Ravi Shankar Prajapati, Joint Director at the Bureau of Energy Efficiency, said on Thursday. He was delivering the keynote address at a policy roundtable titled “Roadmap for AI and Sust",
+       "url": "https://investmentguruindia.com/newsdetail/don-t-just-build-ai-make-it-affordable-energy-efficiency-bureau-official869029",
+       "publisher": "investmentguruindia.com",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "india’s artificial intelligence (ai) roadmap should be built on the principles of affordability and accessibility, ravi shankar prajapati, joint director at the bureau of energy efficiency, said on thursday. he was delivering the keynote address at a policy roundtable titled “roadmap for ai and sustainability in india,” organised by chintan",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.8
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8de2e7bb1410d4cd0e146",
+       "headline": "Nokia, Orange advance AI‑RAN innovation with NVIDIA - TelecomDrive",
+       "url": "https://telecomdrive.com/nokia-orange-advance-ai-ran-innovation-with-nvidia/",
+       "publisher": "telecomdrive.com",
+       "published_at": "2026-04-16T05:30:05",
+       "lede": "nokia and orange has announced a new collaboration focused on developing and evaluating artificial intelligence radio access network (ai-ran) technologies powered by nokia’s anyran 5g software and nvidia ai infrastructure. the initiative aims to explore how emerging ai-ran capabilities can enhance network performance, energy efficiency and enable new services for",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.97,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.52
+        },
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.4
+        },
+        {
+         "code": 171,
+         "path": "/Internet & Telecom/Mobile & Wireless/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "nokia",
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2eaac18e67a2fcb3b437be",
+       "headline": "Nokia, Orange Advance AI-RAN Technologies with NVIDIA AI Infrastructure for Spectral Efficiency",
+       "url": "http://thefastmode.com/technology-solutions/48104-nokia-orange-advance-ai-ran-technologies-with-nvidia-ai-infrastructure-for-spectral-efficiency",
+       "publisher": "thefastmode.com",
+       "published_at": "2026-04-16T00:24:42",
+       "lede": "nokia and orange announced a new collaboration focused on developing and evaluating artificial intelligence radio access network (ai-ran) technologies powered by nokia’s anyran 5g software and nvidia ai infrastructure. the initiative aims to explore how emerging ai-ran capabilities can enhance network performance, energy efficiency and enable new services for orange",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.95,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1547,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNiAwMDoyNDo0MiIsImkiOiI2YTJlYWFjMThlNjdhMmZjYjNiNDM3YmUiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.495,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.497
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,587 @@
+{
+ "slug": "wealth-tax-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:08:53Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "wealth tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wealth tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 387,
+     "tone": {
+      "carrying": 383,
+      "availability_pct": 98.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 292,
+        "share_pct": 76.24
+       },
+       {
+        "group": "neutral",
+        "count": 22,
+        "share_pct": 5.74
+       },
+       {
+        "group": "positive",
+        "count": 69,
+        "share_pct": 18.02
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 387,
+      "count": 295,
+      "share_pct": 76.23
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.705,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.711
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "wealth tax",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wealth tax",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 18,
+       "critical": 8,
+       "critical_pct": 44.4,
+       "negative": 14,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 21,
+       "critical": 7,
+       "critical_pct": 33.3,
+       "negative": 11,
+       "positive": 5,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 51,
+       "critical": 26,
+       "critical_pct": 51.0,
+       "negative": 39,
+       "positive": 10,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 37,
+       "critical": 14,
+       "critical_pct": 37.8,
+       "negative": 22,
+       "positive": 14,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 40,
+       "critical": 22,
+       "critical_pct": 55.0,
+       "negative": 31,
+       "positive": 7,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 33,
+       "critical": 24,
+       "critical_pct": 72.7,
+       "negative": 28,
+       "positive": 3,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 60,
+       "critical": 35,
+       "critical_pct": 58.3,
+       "negative": 41,
+       "positive": 16,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 45,
+       "critical": 30,
+       "critical_pct": 66.7,
+       "negative": 34,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 111,
+       "critical": 94,
+       "critical_pct": 84.7,
+       "negative": 86,
+       "positive": 17,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 112,
+       "critical": 70,
+       "critical_pct": 62.5,
+       "negative": 80,
+       "positive": 22,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 98,
+       "critical": 76,
+       "critical_pct": 77.6,
+       "negative": 77,
+       "positive": 17,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 66,
+       "critical": 55,
+       "critical_pct": 83.3,
+       "negative": 49,
+       "positive": 13,
+       "partial_period": false
+      }
+     ],
+     "total": 692,
+     "critical_total": 461,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.028,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.03
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "wealth tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wealth tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 387,
+     "carrying": 215,
+     "availability_pct": 55.56,
+     "items": [
+      {
+       "country": "united states",
+       "count": 172,
+       "share_pct": 44.44
+      },
+      {
+       "country": "india",
+       "count": 8,
+       "share_pct": 2.07
+      },
+      {
+       "country": "australia",
+       "count": 4,
+       "share_pct": 1.03
+      },
+      {
+       "country": "brazil",
+       "count": 3,
+       "share_pct": 0.78
+      },
+      {
+       "country": "china",
+       "count": 3,
+       "share_pct": 0.78
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 25
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.102,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.106
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "wealth tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wealth tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "estate and gift tax planning techniques",
+       "count": 48,
+       "share": 22.02,
+       "lift": 898.68,
+       "baseline_count": 2,
+       "previous_period_count": 22,
+       "delta_pct": 118.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "political fundraising mechanisms",
+       "count": 44,
+       "share": 20.18,
+       "lift": 91.53,
+       "baseline_count": 18,
+       "previous_period_count": 7,
+       "delta_pct": 528.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: tax reform implications",
+       "count": 6,
+       "share": 2.75,
+       "lift": 224.67,
+       "baseline_count": 1,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "real estate investment tax strategies",
+       "count": 14,
+       "share": 6.42,
+       "lift": 131.06,
+       "baseline_count": 4,
+       "previous_period_count": 1,
+       "delta_pct": 1300.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "capital gains tax minimization strategies",
+       "count": 8,
+       "share": 3.67,
+       "lift": 149.78,
+       "baseline_count": 2,
+       "previous_period_count": 5,
+       "delta_pct": 60.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 387,
+     "carrying": 218,
+     "carrier_share_pct": 56.33,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.074,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.078
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "wealth tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "wealth tax",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8e3e45cfa3e5ba5508b52",
+       "headline": "Mamdani Braggs “Highest Taxes Ever”, Then NYC Implodes (Video) | Politics | Before It's News",
+       "url": "https://beforeitsnews.com/politics/2026/04/mamdani-braggs-highest-taxes-ever-then-nyc-implodes-video-3359371.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-17T13:09:03",
+       "lede": "in this 16 april 2026 video, host cash jordan talks about nyc’s mayor has figured out how to launch a wealth tax, but since it will not raise enough to cover things like free grocery stores and unlimited daycare centers, many think the middle class will be the next target.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "jordan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc3707f8e7de13bc1c511e",
+       "headline": "Valuation of Unquoted Shares and the Primacy of Profit-Earning Capacity: Foundations of Share Valuation under Indian Tax Law: A Study of Mahadeo Jalan",
+       "url": "https://www.linkedin.com/pulse/valuation-unquoted-shares-primacy-profit-earning-capacity-ojha-qf5rc",
+       "publisher": "linkedin.com",
+       "published_at": "2026-01-01T12:00:03",
+       "lede": "commissioner of wealth tax v. mahadeo jalan & mahabir prasad jalansupreme court of india, 19721. context and legislative backgroundthis case arose under section 7 of the wealth tax act, 1957, which provides that the value of an asset shall be the price it would fetch if sold in the open",
+       "sentiment": {
+        "label": "none",
+        "score": 0.48,
+        "group": "neutral"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.69
+        },
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.46
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec35c83fc01faba3c4722",
+       "headline": "List of Countries That Implement Wealth Tax  | Pusat Data Ekonomi dan Bisnis Indonesia | Databoks",
+       "url": "https://databoks.katadata.co.id/en/economics-macro/statistics/69e9f73c6b521/list-of-countries-that-implement-wealth-tax",
+       "publisher": "databoks.katadata.co.id",
+       "published_at": "2026-04-23T18:32:26",
+       "lede": "according to the organisation for economic co-operation and development (oecd), a \"wealth tax\" is a recurrent taxes on individual net assets. this tax is generally levied on the super-rich, with the aim of reducing economic inequality. \"in addition to net wealth taxes, taxes on wealth transfers, labour and capital income",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.73
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.49
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 3,
+     "total_estimate": 9,
+     "next_cursor": null,
+     "unresolved": 6,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.42,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.427
+    }
+   }
+  }
+ ]
+}

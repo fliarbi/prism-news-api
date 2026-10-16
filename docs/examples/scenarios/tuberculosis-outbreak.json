@@ -1,0 +1,899 @@
+{
+ "slug": "tuberculosis-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:08Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "tuberculosis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "tuberculosis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4497,
+     "tone": {
+      "carrying": 4482,
+      "availability_pct": 99.67,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1588,
+        "share_pct": 35.43
+       },
+       {
+        "group": "neutral",
+        "count": 290,
+        "share_pct": 6.47
+       },
+       {
+        "group": "positive",
+        "count": 2604,
+        "share_pct": 58.1
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4496,
+      "count": 3900,
+      "share_pct": 86.74
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.719,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.722
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "tuberculosis",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "tuberculosis",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 858,
+       "critical": 710,
+       "critical_pct": 82.8,
+       "negative": 301,
+       "positive": 492,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 653,
+       "critical": 557,
+       "critical_pct": 85.3,
+       "negative": 181,
+       "positive": 407,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 757,
+       "critical": 646,
+       "critical_pct": 85.3,
+       "negative": 236,
+       "positive": 468,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 758,
+       "critical": 634,
+       "critical_pct": 83.6,
+       "negative": 230,
+       "positive": 469,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 818,
+       "critical": 732,
+       "critical_pct": 89.5,
+       "negative": 251,
+       "positive": 505,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 789,
+       "critical": 689,
+       "critical_pct": 87.3,
+       "negative": 192,
+       "positive": 523,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 926,
+       "critical": 834,
+       "critical_pct": 90.1,
+       "negative": 298,
+       "positive": 567,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 924,
+       "critical": 829,
+       "critical_pct": 89.7,
+       "negative": 273,
+       "positive": 584,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1164,
+       "critical": 1007,
+       "critical_pct": 86.5,
+       "negative": 325,
+       "positive": 712,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 948,
+       "critical": 848,
+       "critical_pct": 89.5,
+       "negative": 419,
+       "positive": 482,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1235,
+       "critical": 1052,
+       "critical_pct": 85.2,
+       "negative": 412,
+       "positive": 761,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1150,
+       "critical": 993,
+       "critical_pct": 86.3,
+       "negative": 432,
+       "positive": 649,
+       "partial_period": false
+      }
+     ],
+     "total": 10980,
+     "critical_total": 9531,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.201,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.204
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "tuberculosis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "tuberculosis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4497,
+     "carrying": 1306,
+     "availability_pct": 29.04,
+     "items": [
+      {
+       "country": "united states",
+       "count": 314,
+       "share_pct": 6.98
+      },
+      {
+       "country": "india",
+       "count": 277,
+       "share_pct": 6.16
+      },
+      {
+       "country": "canada",
+       "count": 142,
+       "share_pct": 3.16
+      },
+      {
+       "country": "italy",
+       "count": 87,
+       "share_pct": 1.93
+      },
+      {
+       "country": "nigeria",
+       "count": 65,
+       "share_pct": 1.45
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 421
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.054,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.057
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "tuberculosis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "tuberculosis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "latent infections",
+       "count": 635,
+       "share": 21.98,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 416,
+       "delta_pct": 52.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "infectious disease complications in chronic illnesses",
+       "count": 538,
+       "share": 18.62,
+       "lift": 1520.14,
+       "baseline_count": 1,
+       "previous_period_count": 315,
+       "delta_pct": 70.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "diagnosis of atypical pathogens",
+       "count": 262,
+       "share": 9.07,
+       "lift": 740.29,
+       "baseline_count": 1,
+       "previous_period_count": 176,
+       "delta_pct": 48.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "community-acquired infections",
+       "count": 242,
+       "share": 8.38,
+       "lift": 683.78,
+       "baseline_count": 1,
+       "previous_period_count": 109,
+       "delta_pct": 122.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "opportunistic infections in immunocompromised patients",
+       "count": 575,
+       "share": 19.9,
+       "lift": 406.17,
+       "baseline_count": 4,
+       "previous_period_count": 408,
+       "delta_pct": 40.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4497,
+     "carrying": 2889,
+     "carrier_share_pct": 64.24,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.96,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.964
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "tuberculosis",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "tuberculosis",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e35962c70111d65ec8d3e6",
+       "headline": "Old disease, new battle: Central Texas health experts working to fight Tuberculosis cases in Texas",
+       "url": "https://www.kxxv.com/news/local-news/in-your-neighborhood/brazos-county/old-disease-new-battle-central-texas-health-experts-working-to-fight-tuberculosis-cases-in-texas",
+       "publisher": "kxxv.com",
+       "published_at": "2026-04-10T22:19:16",
+       "lede": "local leaders at the brazos county health district are fighting back against the high number of tuberculosis cases across texas.watch the full story here:texas currently has the second-highest number of cases in the u.s., trailing only california. there were 1,279 cases reported in the state in 2024. even with the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.92
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e31a848c1f2eecc2d49886",
+       "headline": "Pakistan TB Crisis: 1,800 Daily Cases, 140 Deaths",
+       "url": "https://www.newkerala.com/news/a/pakistans-current-response-tb-insufficient-as-cases-continue-153.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-10T00:01:23",
+       "lede": "a new report highlights pakistan's severe and growing tuberculosis crisis, with over 1,800 new cases and approximately 140 deaths reported daily. the country bears 73% of the tb burden in the eastern mediterranean region and ranks fifth globally, indicating a systemic failure in its public health response. the crisis is",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.84
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf642fd3abc4d3e265724b",
+       "headline": "'White Plague': One Of Humanity's Deadliest Killers Resurging In US",
+       "url": "https://www.ndtv.com/feature/white-plague-one-of-humanitys-deadliest-killers-resurging-in-us-11270554",
+       "publisher": "ndtv.com",
+       "published_at": "2026-03-26T14:30:12",
+       "lede": "the resurgence of the &amp;#039;white plague&amp;#039; in the us: tuberculosis (tb), also known as the &amp;#039;white plague&amp;#039;, is making a comeback in the united states, with cases rising since 2020, the new york post reported. this infectious disease, caused by mycobacterium tuberculosis, primarily affects the lungs, but can spread to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.73
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc133afc7cf950538874b5",
+       "headline": "Cambodia achieves significant results in fight against tuberculosis: PM Manet",
+       "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/03/24/cambodia-achieves-significant-results-in-fight-against-tuberculosis-pm-manet",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-03-24T20:11:00",
+       "lede": "phnom penh: (bernama-xinhua) cambodia has achieved remarkable results in the fight against tuberculosis (tb) over the past two decades, prime minister hun manet said on tuesday (march 24), reported xinhua.in a message to mark world tb day under the theme \"yes! we can end tb!\", hun manet said tb-related deaths",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.8
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.5
+        }
+       ],
+       "country": "cambodia",
+       "organizations": [],
+       "people": [
+        "hun manet"
+       ]
+      },
+      {
+       "id": "69e99735d47fc0283215d6ca",
+       "headline": "Tuberkulose wird für Europa zunehmend zur tödlichen Gefahr",
+       "url": "https://www.n-tv.de/wissen/Tuberkulose-wird-fuer-Europa-zunehmend-zur-toedlichen-Gefahr-id30504456.html",
+       "publisher": "n-tv.de",
+       "published_at": "2026-03-24T09:29:48",
+       "lede": "who: high dark rate tuberculosis is becoming increasingly a deadly danger for europe 24.03.2026, 10:29 h listen to article ( 04:48 min) 00:00 / 04:48 0.5x 0.8x 1.0x 1.2x 1.5x 2.0x tuberculosis is transmitted over the air, among other things. the symptoms include cough, chest pain and loss of appetite.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.9
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.48
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c418258c0b7f50f54c7f19",
+       "headline": "To stop TB we must act now â together",
+       "url": "https://www.dailymaverick.co.za/opinionista/2026-03-23-to-stop-tb-we-must-act-now-together/",
+       "publisher": "dailymaverick.co.za",
+       "published_at": "2026-03-23T15:07:03",
+       "lede": "every year, on 24 march, the world marks world tb day, commemorating the moment in 1882 when dr robert koch identified the bacterium that causes tuberculosis. that discovery made it possible to diagnose and treat a disease that had devastated humanity for centuries.more than 140 years later, tb is still",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.28,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.8
+        }
+       ],
+       "country": "south africa",
+       "organizations": [],
+       "people": [
+        "robert koch"
+       ]
+      },
+      {
+       "id": "69c3a501bff1d4a53ca1c987",
+       "headline": "Alerta por tuberculosis: España registra un repunte del 8% y se aleja de los objetivos de la OMS",
+       "url": "https://www.consalud.es/pacientes/alerta-por-tuberculosis-espana-registra-un-repunte-del-8-y-se-aleja-de-los-objetivos-de-la-oms.html",
+       "publisher": "consalud.es",
+       "published_at": "2026-03-20T12:02:59",
+       "lede": "at the beginning of world tuberculosis day (march 24), the spanish society of epidemiology (see) and the fundación unidad de investigación en tuberculosis de barcelona (fuitb) have issued a joint warning: the current efforts are not enough. despite international commitments, tuberculosis remains the leading cause of infectious death in the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.8
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "9890f751b09104b0f8140bd2",
+       "headline": "Disseminated Tuberculosis With Granulomatous Pericarditis: The Essential Role of Forensic Histopathology in a Case of Unexpected Death.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42046626/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-01T00:00:00",
+       "lede": "disseminated tuberculosis with granulomatous pericarditis: the essential role of forensic histopathology in a case of unexpected death.disseminated tuberculosis, specifically tuberculous pericarditis, represents a diagnostically challenging yet critical contributor to unexpected death in forensic practice, particularly among young migrants from endemic regions who lack access to healthcare. forensic histopathology is often the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986c82811e3205ec9931b82",
+       "headline": "Savannah Guthrie's Mother Missing in Arizona | KTLA - TIme News",
+       "url": "https://time.news/savannah-guthries-mother-missing-in-arizona-ktla/",
+       "publisher": "time.news",
+       "published_at": "2026-02-02T20:08:35",
+       "lede": "california faces triple threat: tuberculosis outbreak, heat wave, and deadly ambusha concerning tuberculosis outbreak at a california high school is unfolding alongside forecasts of record heat for southern california, and a fatal ambush in los angeles that has left a second individual injured. these disparate events paint a picture of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e9808c0b414d24a0199df",
+       "headline": "No sputum needed: Easy-to-use TB test shows accuracy in 7-country analysis",
+       "url": "http://www.cidrap.umn.edu/tuberculosis/no-sputum-needed-easy-use-tb-test-shows-accuracy-7-country-analysis",
+       "publisher": "cidrap.umn.edu",
+       "published_at": "2026-04-30T14:23:31",
+       "lede": "diagnosing tuberculosis (tb) relies primarily on two methods. one involves a process that’s more than 140 years old, and the other is a more recent technological advance. both methods have their limitations. the most prevalent method, smear microscopy, was developed in the early 1880s by german scientist robert koch. it",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.58
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.44
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d57d7b2d589e844b8f23",
+       "headline": "No sputum needed: Easy-to-use TB test shows accuracy in 7-country analysis",
+       "url": "https://www.cidrap.umn.edu/tuberculosis/no-sputum-needed-easy-use-tb-test-shows-accuracy-7-country-analysis",
+       "publisher": "cidrap.umn.edu",
+       "published_at": "2026-04-30T14:23:31",
+       "lede": "diagnosing tuberculosis (tb) relies primarily on two methods. one involves a process that’s more than 140 years old, and the other is a more recent technological advance. both methods have their limitations. the most prevalent method, smear microscopy, was developed in the early 1880s by german scientist robert koch. it",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.58
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.44
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "zambia",
+       "organizations": [],
+       "people": [
+        "robert koch"
+       ]
+      },
+      {
+       "id": "6a2b039b963d76f4af2ec9b5",
+       "headline": "Portable Tuberculosis Test Matches Laboratory Accuracy in Minutes, Study Finds",
+       "url": "https://clpmag.com/diagnostic-technologies/molecular-diagnostics/portable-tuberculosis-test-matches-lab-accuracy/",
+       "publisher": "clpmag.com",
+       "published_at": "2026-04-30T13:45:10",
+       "lede": "a study shows the battery-powered minidock mtb device detects tuberculosis dna using tongue swabs. a portable, battery-powered device called minidock mtb can deliver tuberculosis (tb) test results in less than 30 minutes, matching the effectiveness of traditional laboratory testing. according to a study published in the new england journal of",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d64c713680636eed652e",
+       "headline": "Two Gates grants back Evotec push for shorter, safer TB treatment",
+       "url": "https://www.stocktitan.net/news/EVO/evotec-receives-grants-to-advance-tuberculosis-co6h8tom6xry.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-30T07:20:00",
+       "lede": "grants support discovery and development of novel drug candidates and evaluation and prioritization of advanced drug regimens for clinical testing new funding from the gates foundation extends evotec's commitment to create more effective tuberculosis treatment regimens hamburg, germany / access newswire / april 30, 2026 / evotec se (nasdaq: evo",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.77
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9dabc7b2d589e844f476d",
+       "headline": "Evotec SE / Key word(s): Miscellaneous Evotec Receives Grants to Advance Tuberculosis Treatment 30.04.2026 / 07:30 CET/CEST The issuer is solely responsible for the content of this announcement. Grants support discovery and development of novel drug candidates and evaluation and prioritization of ad",
+       "url": "https://www.eqs-news.com/news/corporate/evotec-receives-grants-to-advance-tuberculosis-treatment/234a08e5-bef4-4b90-9ac5-b3a43083c779_en",
+       "publisher": "eqs-news.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "evotec se / key word(s): miscellaneous evotec receives grants to advance tuberculosis treatment 30.04.2026 / 07:30 cet/cest the issuer is solely responsible for the content of this announcement. grants support discovery and development of novel drug candidates and evaluation and prioritization of advanced drug regimens for clinical testing new funding",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.77
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.46
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "evotec",
+        "evo"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 1325,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwMDowMDowMCIsImkiOiI2OWY5ZGFiYzdiMmQ1ODllODQ0ZjQ3NmQiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.629,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.631
+    }
+   }
+  }
+ ]
+}

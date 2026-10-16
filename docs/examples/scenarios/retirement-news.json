@@ -1,0 +1,722 @@
+{
+ "slug": "retirement-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:20Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "retirement",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "retirement",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 47919,
+     "tone": {
+      "carrying": 47767,
+      "availability_pct": 99.68,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 17114,
+        "share_pct": 35.83
+       },
+       {
+        "group": "neutral",
+        "count": 2538,
+        "share_pct": 5.31
+       },
+       {
+        "group": "positive",
+        "count": 28115,
+        "share_pct": 58.86
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 47885,
+      "count": 18752,
+      "share_pct": 39.16
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.787,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.789
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "retirement",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "retirement",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 11649,
+       "critical": 4128,
+       "critical_pct": 35.4,
+       "negative": 4084,
+       "positive": 6787,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 8066,
+       "critical": 2616,
+       "critical_pct": 32.4,
+       "negative": 2627,
+       "positive": 5052,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 9636,
+       "critical": 3220,
+       "critical_pct": 33.4,
+       "negative": 3766,
+       "positive": 5363,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 11981,
+       "critical": 4206,
+       "critical_pct": 35.1,
+       "negative": 4632,
+       "positive": 6821,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 10421,
+       "critical": 3477,
+       "critical_pct": 33.4,
+       "negative": 3329,
+       "positive": 6651,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 8246,
+       "critical": 3317,
+       "critical_pct": 40.2,
+       "negative": 2949,
+       "positive": 4765,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 8141,
+       "critical": 3145,
+       "critical_pct": 38.6,
+       "negative": 2803,
+       "positive": 4845,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 9818,
+       "critical": 3256,
+       "critical_pct": 33.2,
+       "negative": 3151,
+       "positive": 6115,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 9015,
+       "critical": 3331,
+       "critical_pct": 36.9,
+       "negative": 2971,
+       "positive": 5584,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 11763,
+       "critical": 4574,
+       "critical_pct": 38.9,
+       "negative": 4154,
+       "positive": 6991,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 11853,
+       "critical": 4832,
+       "critical_pct": 40.8,
+       "negative": 4351,
+       "positive": 6814,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 15288,
+       "critical": 6015,
+       "critical_pct": 39.3,
+       "negative": 5638,
+       "positive": 8726,
+       "partial_period": false
+      }
+     ],
+     "total": 125877,
+     "critical_total": 46117,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.356,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.366
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "retirement",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "retirement",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 47919,
+     "carrying": 20631,
+     "availability_pct": 43.05,
+     "items": [
+      {
+       "country": "united states",
+       "count": 12000,
+       "share_pct": 25.04
+      },
+      {
+       "country": "india",
+       "count": 1541,
+       "share_pct": 3.22
+      },
+      {
+       "country": "united kingdom",
+       "count": 1424,
+       "share_pct": 2.97
+      },
+      {
+       "country": "australia",
+       "count": 755,
+       "share_pct": 1.58
+      },
+      {
+       "country": "canada",
+       "count": 648,
+       "share_pct": 1.35
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 4263
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.774,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.778
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "retirement",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "retirement",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 548,
+       "share": 2.03,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 213,
+       "delta_pct": 157.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "retirement savings strategies",
+       "count": 449,
+       "share": 1.66,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 682,
+       "delta_pct": -34.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "executive leadership changes and appointments",
+       "count": 1914,
+       "share": 7.07,
+       "lift": 52.49,
+       "baseline_count": 11,
+       "previous_period_count": 1200,
+       "delta_pct": 59.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "retirement account tax implications (ira, 401k)",
+       "count": 333,
+       "share": 1.23,
+       "lift": 100.46,
+       "baseline_count": 1,
+       "previous_period_count": 243,
+       "delta_pct": 37.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "401(k) and ira contributions",
+       "count": 277,
+       "share": 1.02,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 394,
+       "delta_pct": -29.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 47919,
+     "carrying": 27059,
+     "carrier_share_pct": 56.47,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.992,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.995
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "retirement",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "retirement",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a03ef019c4aac0935368ac3",
+       "headline": "Tyson Fury: Anthony Joshua car crash prompted boxing comeback",
+       "url": "https://www.espn.com.au/boxing/story/_/id/47948567/tyson-fury-anthony-joshua-car-crash-prompted-boxing-comeback",
+       "publisher": "espn.com.au",
+       "published_at": "2026-02-16T20:09:00",
+       "lede": "tyson fury explains his decision to come out of retirement again to face arslanbek makhmudov after more than a year out of the ring. (1:15) open extended reactions tyson fury has wished anthony joshua well and said the incident that saw joshua lose two of his closes friends helped prompt",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 284,
+         "path": "/Sports/Combat Sports/Boxing",
+         "score": 0.85
+        },
+        {
+         "code": 3,
+         "path": "/News/Sports News",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8811643843dd771ceeaf2",
+       "headline": "‘Pretty grim’: Super crisis for 750k Aussies",
+       "url": "https://www.dailytelegraph.com.au/business/australias-retirement-system-not-fit-for-purpose-for-renters-facing-housing-crisis/news-story/8347b49a10d10fffe932400394b88ca4",
+       "publisher": "dailytelegraph.com.au",
+       "published_at": "2026-04-29T23:53:00",
+       "lede": "australia’s superannuation system faces a catastrophic failure, as workers still renting in their retirement are left behind. in a grim prediction, about 750,000 australians approaching retirement will be left renting and without enough superannuation to cover their costs, effectively leaving them in severe financial hardship. according to a home in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 293,
+         "path": "/People & Society/Seniors & Retirement",
+         "score": 0.72
+        },
+        {
+         "code": 263,
+         "path": "/Finance/Financial Planning & Management/Retirement & Pension",
+         "score": 0.66
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f228f9122c4392e0cf0328",
+       "headline": "‘At no point was any decision taken to remove Davy Fitzgerald’ – Antrim GAA chief responds to players’ letter",
+       "url": "https://www.independent.ie/sport/gaelic-games/hurling/at-no-point-was-any-decision-taken-to-remove-davy-fitzgerald-antrim-gaa-chief-responds-to-players-letter/a1815575245.html",
+       "publisher": "independent.ie",
+       "published_at": "2026-04-29T10:02:51",
+       "lede": "top stories money eoin mcgee answers: ‘i started a pension in my early 40s. what do i need to do to catch up and have a comfortable retirement?’ north america multiple young men ‘raped and drugged’ at jeffrey epstein’s us ranch irish news colm tóibín: ‘i wish i had given",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23027c6105443aa5ed5b3",
+       "headline": "Your clients’ retirement portfolios took a hit as global slump impacts institutional returns",
+       "url": "https://www.investmentnews.com/retirement-planning/your-clients-retirement-portfolios-took-a-hit-as-global-slump-impacts-intuitional-returns/266356",
+       "publisher": "investmentnews.com",
+       "published_at": "2026-04-29T07:17:14",
+       "lede": "early 2026 volatility erodes pension and endowment gains, raising long-term concerns. retirement-focused portfolios took a hit in the opening months of 2026, as widespread market declines pushed us institutional investors into negative territory. new data from northern trust, which tracks large pension funds, endowments, and foundations, showed a median return",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 263,
+         "path": "/Finance/Financial Planning & Management/Retirement & Pension",
+         "score": 0.52
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.46
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "northern trust"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cfc2a5706a322e135c10",
+       "headline": "Amid AI shift, tech firms like Microsoft cut staff and alter pay",
+       "url": "https://www.thestar.com.my/tech/tech-news/2026/04/27/amid-ai-shift-tech-firms-like-microsoft-cut-staff-and-alter-pay",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-27T12:00:00",
+       "lede": "microsoft is rolling out voluntary buyouts for some of its us employees, a first for the 51-year-old tech giant as it adjusts to the rapid advancements in artificial intelligence (ai). the one-time retirement programme is open to eligible workers at the senior director level and below who have a combined",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "microsoft"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e1d9836d28f995cb4e49",
+       "headline": "Man in his 60s laid off from Intel hunts for jobs, says ‘retiring doesn’t make sense for me yet’ | Today News",
+       "url": "https://www.livemint.com/news/trends/man-in-his-60s-laid-off-from-intel-hunts-for-jobs-says-retiring-doesn-t-make-sense-for-me-yet-11777221576863.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-26T17:01:02",
+       "lede": "a former employee of intel, laid off in his early 60s, has opened up about the financial challenges he faced and how unemployment disrupted his retirement plans. brad jenkins, a us-based technician, lost his job in mid-2025 after working for four years with the tech company in oregon, according to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "intel",
+        "jenkins"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a6468963d76f4afc3069f",
+       "headline": "Built Your Retirement Corpus? Common Mistakes That Can Destroy It - Outlook Money",
+       "url": "https://www.outlookmoney.com/retirement/built-your-retirement-corpus-common-mistakes-that-can-destroy-it",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-24T04:32:00",
+       "lede": "the story warns that building a large retirement corpus is only half the job; after 45, the real risks shift to preservation and conversion into income. the four hidden risks include sequence of returns, under-insurance, illiquid real estate, and poor tax planning.ignoring these risks can rapidly erode savings if not",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 263,
+         "path": "/Finance/Financial Planning & Management/Retirement & Pension",
+         "score": 0.5
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2a55c37f6c5e663db000",
+       "headline": "Popular '90s Musician Claims a Scam Wiped Out His Retirement Fund—Here's How to Avoid the Same Fate",
+       "url": "https://www.yahoo.com/entertainment/music/articles/popular-90s-musician-claims-scam-154026841.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T15:40:26",
+       "lede": "imagine spending more than a decade saving up for retirement, only to end up losing nearly half a million dollars in a single day. that's what one former 90s rock star says happened to him recently, when a crypto scam robbed him of $420,000. garrett dutton, who goes by the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.8
+        },
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 8,
+     "total_estimate": 4737,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMyAxMTo1MTozMSIsImkiOiI2OWVhMWQxYzczMjA2YWEyOTllYmQ4ZmYiLCJwIjo4fQ",
+     "unresolved": 17,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.768,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "17 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.787
+    }
+   }
+  }
+ ]
+}

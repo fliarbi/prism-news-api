@@ -1,0 +1,893 @@
+{
+ "slug": "large-language-model-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:13:27Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "large language model",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "large language model",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1455,
+     "tone": {
+      "carrying": 1453,
+      "availability_pct": 99.86,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 143,
+        "share_pct": 9.84
+       },
+       {
+        "group": "neutral",
+        "count": 6,
+        "share_pct": 0.41
+       },
+       {
+        "group": "positive",
+        "count": 1304,
+        "share_pct": 89.75
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1455,
+      "count": 1145,
+      "share_pct": 78.69
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.616,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.658
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "large language model",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "large language model",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 286,
+       "critical": 186,
+       "critical_pct": 65.0,
+       "negative": 20,
+       "positive": 259,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 288,
+       "critical": 190,
+       "critical_pct": 66.0,
+       "negative": 33,
+       "positive": 252,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 403,
+       "critical": 246,
+       "critical_pct": 61.0,
+       "negative": 41,
+       "positive": 360,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 388,
+       "critical": 258,
+       "critical_pct": 66.5,
+       "negative": 42,
+       "positive": 346,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 273,
+       "critical": 204,
+       "critical_pct": 74.7,
+       "negative": 18,
+       "positive": 254,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 259,
+       "critical": 196,
+       "critical_pct": 75.7,
+       "negative": 20,
+       "positive": 238,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 350,
+       "critical": 280,
+       "critical_pct": 80.0,
+       "negative": 36,
+       "positive": 312,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 345,
+       "critical": 266,
+       "critical_pct": 77.1,
+       "negative": 17,
+       "positive": 326,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 347,
+       "critical": 286,
+       "critical_pct": 82.4,
+       "negative": 29,
+       "positive": 314,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 345,
+       "critical": 247,
+       "critical_pct": 71.6,
+       "negative": 33,
+       "positive": 310,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 343,
+       "critical": 271,
+       "critical_pct": 79.0,
+       "negative": 36,
+       "positive": 305,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 420,
+       "critical": 341,
+       "critical_pct": 81.2,
+       "negative": 45,
+       "positive": 375,
+       "partial_period": false
+      }
+     ],
+     "total": 4047,
+     "critical_total": 2971,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.498,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.5
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "large language model",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "large language model",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1455,
+     "carrying": 421,
+     "availability_pct": 28.93,
+     "items": [
+      {
+       "country": "united states",
+       "count": 203,
+       "share_pct": 13.95
+      },
+      {
+       "country": "china",
+       "count": 56,
+       "share_pct": 3.85
+      },
+      {
+       "country": "india",
+       "count": 36,
+       "share_pct": 2.47
+      },
+      {
+       "country": "united kingdom",
+       "count": 21,
+       "share_pct": 1.44
+      },
+      {
+       "country": "colombia",
+       "count": 16,
+       "share_pct": 1.1
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 89
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.811,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.816
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "large language model",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "large language model",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "natural language processing models",
+       "count": 210,
+       "share": 25.06,
+       "lift": 681.87,
+       "baseline_count": 3,
+       "previous_period_count": 152,
+       "delta_pct": 38.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "speech recognition and processing systems",
+       "count": 73,
+       "share": 8.71,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 38,
+       "delta_pct": 92.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "deep neural network architectures",
+       "count": 60,
+       "share": 7.16,
+       "lift": 584.46,
+       "baseline_count": 1,
+       "previous_period_count": 37,
+       "delta_pct": 62.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "patient safety and quality improvement studies",
+       "count": 56,
+       "share": 6.68,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 36,
+       "delta_pct": 55.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "medical imaging technique handbooks",
+       "count": 32,
+       "share": 3.82,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 26,
+       "delta_pct": 23.1,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1455,
+     "carrying": 838,
+     "carrier_share_pct": 57.59,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.476,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.478
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "large language model",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "large language model",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69c9a73bcae5463acf0118d5",
+       "headline": "Gemini 3.1 Pro is here, benchmarks says Google is once again leader in AI",
+       "url": "http://www.indiatoday.in/technology/news/story/gemini-31-pro-is-here-benchmarks-says-google-is-once-again-leader-in-ai-2871338-2026-02-20",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-02-20T04:09:14",
+       "lede": "google has announced the release of its latest large language model (llm), gemini 3.1 pro. according to the company, this is its most advanced ai model yet, with major gains compared to gemini 3 pro in terms of handling complex tasks, as well as image generation.google also states that this",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e891d29baafc73569b2f9f",
+       "headline": "February update: MCP, Perturbation Catalogue, Target Novelty",
+       "url": "https://www.linkedin.com/pulse/february-update-mcp-perturbation-catalogue-target-novelty-dqzve",
+       "publisher": "linkedin.com",
+       "published_at": "2026-02-05T15:40:19",
+       "lede": "the first version of our official mcp server for the open targets platform is now available! this dedicated model context protocol server brings our systematic target discovery capabilities to large language model-based workflows. also in this edition: the production version of the perturbation catalogue is live! our metric to identify",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.89,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.59
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "mcp"
+       ],
+       "people": []
+      },
+      {
+       "id": "12aa884a7259fedd9d14d880",
+       "headline": "Agent-based large language model system for extracting structured data from breast cancer synoptic reports: a dual-validation study.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41756715/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-02-01T00:00:00",
+       "lede": "agent-based large language model system for extracting structured data from breast cancer synoptic reports: a dual-validation study.objectives: to develop and validate an agent-based large language model (llm) system for extracting structured data from breast cancer synoptic pathology reports and assess the performance gap between synthetic and real-world validation.\nmaterials and methods:",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.87
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e34972ac57388065911a0d",
+       "headline": "Xiaomi Aktie: Historisches KI-Paradox",
+       "url": "https://www.boerse-express.com/news/articles/xiaomi-aktie-historisches-ki-paradox-890569",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-04-10T14:49:16",
+       "lede": "xiaomi's ai mimo-v2-pro model is now the world's most used large language model — and yet the group is under considerable pressure. because while ai offensive is bearing fruit, the global storage crisis is eating up margins in the most important business area. how mimo-v2-pro overcame the competition the ascent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e52ecbf10c43d29717c94",
+       "headline": "Systematic Analysis of CPU-Induced Slowdowns in Multi-GPU LLM Inference (Georgia Tech)",
+       "url": "https://semiengineering.com/systematic-analysis-of-cpu-induced-slowdowns-in-multi-gpu-llm-inference-georgia-tech/",
+       "publisher": "semiengineering.com",
+       "published_at": "2026-03-27T20:29:54",
+       "lede": "a new technical paper, “characterizing cpu-induced slowdowns in multi-gpu llm inference,” was published by the georgia institute of technology. abstract “large-scale machine learning workloads increasingly rely on multi-gpu systems, yet their performance is often limited by an overlooked component: the cpu. through a detailed study of modern large language model",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.49
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.49
+        },
+        {
+         "code": 214,
+         "path": "/Computers & Electronics/Networking/Distributed & Cloud Computing",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "71484ec593a6388c5099623f",
+       "headline": "Clinical Summaries of Social Media Timelines for Mental Health Monitoring: Human Versus Large Language Model Comparative Evaluation Study.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41894679/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-27T00:00:00",
+       "lede": "clinical summaries of social media timelines for mental health monitoring: human versus large language model comparative evaluation study.background: social media timelines contain rich signals of users' mental states but are too voluminous for direct clinical review. although large language models (llms) demonstrate robust linguistic and summarization capabilities in general‑purpose tasks,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1d0a887c2546189afac49",
+       "headline": "Neue KI aus Wien liest locker jede Papyrus-Rolle",
+       "url": "https://www.oe24.at/oesterreich/politik/neue-ki-aus-wien-liest-locker-jede-papyrus-rolle/673298439",
+       "publisher": "oe24.at",
+       "published_at": "2026-03-18T00:00:00",
+       "lede": "the academy of sciences is easy to resolve the dispute between artificial intelligence (ai) and old languages. the austrian academy of sciences (öaw) is committed to ai: together with european ai companies mistral ai and sail reply, it is working on the development of a large language model (llm) for",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e3d43e6594f7ebaf3b217",
+       "headline": "Hyundai Card Accelerates Internalization of Generative AI Capabilities",
+       "url": "https://ffnews.com/newsarticle/fintech/hyundai-card-accelerates-internalization-of-generative-ai-capabilities",
+       "publisher": "ffnews.com",
+       "published_at": "2026-03-09T00:00:00",
+       "lede": "hyundai card, korea’s leading card issuer, is actively embedding generative ai capabilities within its organization by conducting large language model (llm) training for its leadership group, specifically at the team leader level and above. this training is part of a broader initiative to ensure all executives and employees fully master",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.54
+        },
+        {
+         "code": 95,
+         "path": "/Business & Industrial/Business Operations/Human Resources",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d15485c8ed73346ef237da",
+       "headline": "Building a Telegram-Integrated AI Assistant with ESP32 and Local LLMs",
+       "url": "https://www.linkedin.com/pulse/building-telegram-integrated-ai-assistant-esp32-local-rajkumar-kk--h9lzc",
+       "publisher": "linkedin.com",
+       "published_at": "2026-03-04T09:56:54",
+       "lede": "over the past few days, i successfully built a small but exciting prototype: an ai assistant running on an esp32 that interacts through telegram and uses a locally hosted large language model (llm). this project combined embedded systems, local ai inference, and messaging platforms, demonstrating how lightweight iot devices can",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "iot",
+        "embedded systems"
+       ],
+       "people": []
+      },
+      {
+       "id": "ad768e5786a2baaa490c9ca6",
+       "headline": "The adaptive large language models for vaccine prediction: A novel approach to vaccine demand prediction with engineered deviation prompts.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41801983/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-01T00:00:00",
+       "lede": "the adaptive large language models for vaccine prediction: a novel approach to vaccine demand prediction with engineered deviation prompts.accurate vaccine demand forecasting is crucial for minimizing wastage and ensuring efficient immunization programs. in this study, we introduce an adaptive large language model for vaccine prediction (allmvp) that integrates large language",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.63
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9db687b2d589e844fca1a",
+       "headline": "Scaring the Customers: When Hype Outruns Performance, AI Sales Stall",
+       "url": "https://www.linkedin.com/pulse/scaring-customers-when-hype-outruns-performance-ai-sales-pallor-wmaze",
+       "publisher": "linkedin.com",
+       "published_at": "2026-02-26T16:44:25",
+       "lede": "i saw a post on facebook by an executive at one of the companies with a leading large language model product. the culprit will go unnamed because it’s not important, they all do this. the post said that ai will replace most executives within 18 months. i commented “will someone",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 57,
+         "path": "/Business & Industrial/Business Operations/Management",
+         "score": 0.62
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfdb0486bd23245a9223fb",
+       "headline": "In advanced process nodes, the severe decoupling between SRAM scaling stagnation and logic circuit scaling, combined with the surging on-chip memory demands from Large Language Model (LLM) training and large-scale inference applications, has made SRAM a critical factor determining yield and long-ter",
+       "url": "https://www.design-reuse.com/blog/56264-an-effective-sram-repair-strategy-based-on-ememory-neofuse-otp-and-siemens-tessent-memorybist/",
+       "publisher": "design-reuse.com",
+       "published_at": "2026-02-11T00:00:00",
+       "lede": "in advanced process nodes, the severe decoupling between sram scaling stagnation and logic circuit scaling, combined with the surging on-chip memory demands from large language model (llm) training and large-scale inference applications, has made sram a critical factor determining yield and long-term reliability. facing the yield cliff challenge, traditional efuse",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.9,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.41
+        }
+       ],
+       "country": "south korea",
+       "organizations": [
+        "efuse",
+        "sram"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ed01883fc01faba48fe8d",
+       "headline": "Anthropic-Chef Dario Amodei warnt: Mit KI könnte jeder Bio-Waffen bauen",
+       "url": "https://www.bild.de/leben-wissen/digital/anthropic-chef-dario-amodei-warnt-mit-ki-koennte-jeder-bio-waffen-bauen-6979e31755dd99352277a6fb",
+       "publisher": "bild.de",
+       "published_at": "2026-01-28T13:18:09",
+       "lede": "artificial intelligence is becoming more and more clever, faster, omniscient – and could thus become a tear-up test for the species human. this powerful warning has now been presented by dario amodei, head of ai company anthropic, in a 19.191-word essay. his company is developing the large language model (llm)",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "98f367bee0fa415ba2a569a4",
+       "headline": "Reliable Communication in Distributed Photovoltaic Sensor Networks: A Large Language Model-Driven Approach.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41682356/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-01-27T00:00:00",
+       "lede": "reliable communication in distributed photovoltaic sensor networks: a large language model-driven approach.distributed photovoltaic (dpv) systems present a cost-effective and sustainable industrial energy solution, yet their reliable monitoring faces significant technological constraints. this paper proposes a hierarchical optimization framework that integrates hysteresis-based traffic shaping at the network layer with large language",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.84,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c81256afb29ab51090ab6a",
+       "headline": "MIT Recursive Language Models Shatter the LLM Context Window Limit",
+       "url": "https://www.startuphub.ai/ai-news/ai-video/2026/mit-recursive-language-models-shatter-the-llm-context-window-limit/",
+       "publisher": "startuphub.ai",
+       "published_at": "2026-01-17T21:54:04",
+       "lede": "the constraints inherent to large language model (llm) context windows—the finite memory dictating how much input an ai can process at once—have long been considered a fundamental bottleneck to truly long-horizon tasks. that bottleneck has just been decisively shattered. researchers from mit’s computer science and artificial intelligence laboratory (csail) have",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.88
+        },
+        {
+         "code": 228,
+         "path": "/Computers & Electronics/Programming/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 43,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMS0xNyAyMTo1NDowNCIsImkiOiI2OWM4MTI1NmFmYjI5YWI1MTA5MGFiNmEiLCJwIjo3fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.396,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.398
+    }
+   }
+  }
+ ]
+}

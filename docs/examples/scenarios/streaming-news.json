@@ -1,0 +1,986 @@
+{
+ "slug": "streaming-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:04Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "streaming",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "streaming",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 57757,
+     "tone": {
+      "carrying": 57659,
+      "availability_pct": 99.83,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 7671,
+        "share_pct": 13.3
+       },
+       {
+        "group": "neutral",
+        "count": 1126,
+        "share_pct": 1.95
+       },
+       {
+        "group": "positive",
+        "count": 48862,
+        "share_pct": 84.74
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 57718,
+      "count": 7307,
+      "share_pct": 12.66
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.58,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.582
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "streaming",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "streaming",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 9186,
+       "critical": 1183,
+       "critical_pct": 12.9,
+       "negative": 1203,
+       "positive": 7708,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 6797,
+       "critical": 879,
+       "critical_pct": 12.9,
+       "negative": 851,
+       "positive": 5821,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 8799,
+       "critical": 1197,
+       "critical_pct": 13.6,
+       "negative": 1355,
+       "positive": 7331,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 10288,
+       "critical": 1608,
+       "critical_pct": 15.6,
+       "negative": 1608,
+       "positive": 8527,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 9371,
+       "critical": 1340,
+       "critical_pct": 14.3,
+       "negative": 1416,
+       "positive": 7776,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 8478,
+       "critical": 1402,
+       "critical_pct": 16.5,
+       "negative": 1461,
+       "positive": 6896,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 8627,
+       "critical": 1214,
+       "critical_pct": 14.1,
+       "negative": 1275,
+       "positive": 7213,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 10340,
+       "critical": 2131,
+       "critical_pct": 20.6,
+       "negative": 1528,
+       "positive": 8642,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 9552,
+       "critical": 1286,
+       "critical_pct": 13.5,
+       "negative": 1273,
+       "positive": 8089,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 11738,
+       "critical": 2112,
+       "critical_pct": 18.0,
+       "negative": 1863,
+       "positive": 9658,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 13590,
+       "critical": 1871,
+       "critical_pct": 13.8,
+       "negative": 1990,
+       "positive": 11256,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 22877,
+       "critical": 2038,
+       "critical_pct": 8.9,
+       "negative": 2545,
+       "positive": 19859,
+       "partial_period": false
+      }
+     ],
+     "total": 129643,
+     "critical_total": 18261,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.082,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.086
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "streaming",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "streaming",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 57757,
+     "carrying": 25661,
+     "availability_pct": 44.43,
+     "items": [
+      {
+       "country": "united states",
+       "count": 15380,
+       "share_pct": 26.63
+      },
+      {
+       "country": "india",
+       "count": 2004,
+       "share_pct": 3.47
+      },
+      {
+       "country": "united kingdom",
+       "count": 1885,
+       "share_pct": 3.26
+      },
+      {
+       "country": "japan",
+       "count": 480,
+       "share_pct": 0.83
+      },
+      {
+       "country": "australia",
+       "count": 468,
+       "share_pct": 0.81
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 5444
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.726,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.728
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "streaming",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "streaming",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "video monetization models (subscription, ads, etc.)",
+       "count": 1348,
+       "share": 4.48,
+       "lift": 365.9,
+       "baseline_count": 1,
+       "previous_period_count": 842,
+       "delta_pct": 60.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "xxx-rated media and content",
+       "count": 1178,
+       "share": 3.92,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 12,
+       "delta_pct": 9716.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "adult entertainment industry",
+       "count": 1031,
+       "share": 3.43,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 4,
+       "delta_pct": 25675.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "ott (over-the-top) media services",
+       "count": 2047,
+       "share": 6.81,
+       "lift": 185.21,
+       "baseline_count": 3,
+       "previous_period_count": 1057,
+       "delta_pct": 93.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "video-on-demand (vod) platforms",
+       "count": 866,
+       "share": 2.88,
+       "lift": 235.07,
+       "baseline_count": 1,
+       "previous_period_count": 385,
+       "delta_pct": 124.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 57757,
+     "carrying": 30073,
+     "carrier_share_pct": 52.07,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.42,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.425
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "streaming",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "streaming",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e287d73aab8d96aa2d824d",
+       "headline": "Xxtenations 2018 Death Killer 2026 Digital Library Update #819",
+       "url": "https://zephyrpeacock.com/insidersecretsbuzz126/xxtenations-2018-death-killer/",
+       "publisher": "zephyrpeacock.com",
+       "published_at": "2026-04-04T17:06:34",
+       "lede": "contents start today xxtenations 2018 death killer premier on-demand viewing. free from subscriptions on our cinema hub. be enthralled by in a endless array of clips unveiled in flawless visuals, optimal for prime viewing geeks. with hot new media, you’ll always stay updated. locate xxtenations 2018 death killer recommended streaming",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e285ba601121844c30e9f7",
+       "headline": "R Kelly Sexual Tape Newest Upload Hub 2026 #930",
+       "url": "https://zephyrpeacock.com/insidersecretsbuzz1366/r-kelly-sexual-tape/",
+       "publisher": "zephyrpeacock.com",
+       "published_at": "2026-04-04T12:46:45",
+       "lede": "contents open now r kelly sexual tape elite content delivery. freely available on our media hub. get swept away by in a comprehensive repository of media brought to you in high definition, great for prime streaming admirers. with contemporary content, you’ll always be in the know. experience r kelly sexual",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.65
+        },
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5bf9963d76f4afbcda8f",
+       "headline": "JioHotstar OTT growth delivers stunning win in OTT battle",
+       "url": "https://punemirror.com/entertainment/jiohotstar-ott-growth-fy26-market-shift/",
+       "publisher": "punemirror.com",
+       "published_at": "2026-04-28T10:47:27",
+       "lede": "jiohotstar ott growth is rapidly rewriting the rules of india’s streaming and tv market, and the latest fy26 numbers underline how dramatic that shift has become. jiohotstar ott growth drives record profits jiohotstar, housed under reliance industries’ jiostar media venture with disney and bodhi tree systems, reported operating revenue of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaaba727212302c5f0259",
+       "headline": "The Peacock Streaming Service Has Lost A Staggering Amount Of Money - SlashFilm",
+       "url": "https://www.slashfilm.com/2156508/peacock-streaming-service-lost-money/",
+       "publisher": "slashfilm.com",
+       "published_at": "2026-04-24T21:00:00",
+       "lede": "streaming profits still pale in comparison to the heydays of cable television, but most of the major players in that space are at least making money now. netflix is the clear winner of the streaming wars and the company everyone else is still chasing. but hbo max, disney+, and even",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.57
+        },
+        {
+         "code": 91,
+         "path": "/Arts & Entertainment/TV & Video/Online Video",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "netflix",
+        "hbo max"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e9cfb8e67a2fcb3a8de17",
+       "headline": "Inside the huge sum Tyson Fury got for his Morecambe house",
+       "url": "https://www.mirror.co.uk/tv/tv-news/inside-huge-amount-tyson-fury-37065232",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-04-24T12:55:52",
+       "lede": "netflix audiences have been hooked on season two of at home with the furys after it landed on the streaming platform recently on april 12. the british fly-on-the-wall reality series and documentary first came to netflix back in 2023 and proved to be a huge hit, leading to a renewal",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 41,
+         "path": "/Arts & Entertainment/TV & Video/TV Shows & Programs",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab1a727212302c5f4697",
+       "headline": "Twitch star ExtraEmily goes on indefinite break after viewbot controversy",
+       "url": "https://www.hindustantimes.com/world-news/us-news/twitch-star-extraemily-goes-on-indefinite-break-after-viewbot-controversy-101776970163514.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-04-24T04:25:06",
+       "lede": "popular twitch streamer emily ‘extraemily’ zhang has declared that she will take an indefinite break from live streaming. the decision came amid the viewbot controversy, a scandal that has since drawn in reddit moderators, platform administrators and thousands of viewers.the clip that fueled the controversyin early april, a video of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 91,
+         "path": "/Arts & Entertainment/TV & Video/Online Video",
+         "score": 0.79
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "reddit"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea553eb0517977015db28b",
+       "headline": "Taylor Swift Crowned Most-Streamed Artist in Spotify History With Over 120 Billion Streams",
+       "url": "https://www.ibtimes.com.au/taylor-swift-crowned-most-streamed-artist-spotify-history-over-120-billion-streams-1867380",
+       "publisher": "ibtimes.com.au",
+       "published_at": "2026-04-23T16:17:38",
+       "lede": "new york &mdash; taylor swift has solidified her status as the undisputed queen of streaming, becoming the most-streamed artist of all time on spotify with more than 120 billion career streams as of april 2026.the global pop powerhouse surpassed all competitors, including heavyweights like drake and bad bunny, cementing a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 149,
+         "path": "/Arts & Entertainment/Music & Audio/Pop Music",
+         "score": 0.72
+        },
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "spotify",
+        "swift"
+       ],
+       "people": [
+        "taylor swift"
+       ]
+      },
+      {
+       "id": "69e873e59baafc7356876176",
+       "headline": "Netflix co-founder Reed Hastings exits as chairman, company shares slump",
+       "url": "https://www.malaymail.com/news/showbiz/2026/04/19/netflix-co-founder-reed-hastings-exits-as-chairman-company-shares-slump/216900",
+       "publisher": "malaymail.com",
+       "published_at": "2026-04-19T17:14:50",
+       "lede": "los gatos (california), april 19 — netflix shares fell more than 10 per cent in early trading on friday, as investors digested a tepid forecast and the ‌surprise exit of co-founder and chairman reed hastings amid worries over the streaming pioneer’s next growth driver. the company has been broadening its",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 91,
+         "path": "/Arts & Entertainment/TV & Video/Online Video",
+         "score": 0.68
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "netflix"
+       ],
+       "people": [
+        "reed hastings"
+       ]
+      },
+      {
+       "id": "69e865579baafc73567dba51",
+       "headline": "Netflix Shares Fall 8% on Q2 Miss Despite Q1 Beat and Hastings Board Exit - Time News",
+       "url": "https://time.news/netflix-shares-fall-8-on-q2-miss-despite-q1-beat-and-hastings-board-exit/",
+       "publisher": "time.news",
+       "published_at": "2026-04-16T20:57:33",
+       "lede": "netflix shares dropped 8% in extended trading on thursday after the company reported stronger-than-expected first-quarter results but disappointed with second-quarter guidance and announced that co-founder reed hastings will leave the board in june. the streaming giant posted first-quarter revenue of $12.25 billion, topping the $12.18 billion analysts expected and marking",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.8
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "netflix"
+       ],
+       "people": [
+        "reed hastings"
+       ]
+      },
+      {
+       "id": "6a2ae2d5c37f6c5e660a4ca9",
+       "headline": "Justin Bieber's Coachella Headline Ignites Massive Streaming Surge for Publishers and Songwriters - Radio Facts",
+       "url": "https://radiofacts.com/justin-biebers-coachella-headline-ignites-massive-streaming-surge-for-publishers-and-songwriters/",
+       "publisher": "radiofacts.com",
+       "published_at": "2026-04-15T10:56:51",
+       "lede": "0 views publishers and songwriters holding stakes in justin bieber’s deep catalog are cashing in big right now, as his coachella headline detonated a streaming explosion that proves live spectacle still drives royalty checks in the dsp era. bieber’s streams explode post-coachella justin bieber’s highly-anticipated return to the stage has",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8d4f49baafc7356d26995",
+       "headline": "Netflix Q1 2026 earnings ad growth and content spending in focus",
+       "url": "https://indiantelevision.com/mam/netflix-q1-2026-earnings-ad-growth-and-content-spending-in-focus/",
+       "publisher": "indiantelevision.com",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "mumbai: netflix is about to hit play on its latest quarterly numbers and investors are hoping the plot thickens in all the right ways. the streaming leader reports its first-quarter 2026 earnings on thursday, marking its first set of results since it walked away from a proposed takeover of warner",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 91,
+         "path": "/Arts & Entertainment/TV & Video/Online Video",
+         "score": 0.81
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "netflix"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ad429963d76f4af0daf1e",
+       "headline": "Why Streaming Costs More Than Cable: 3 Ways Hollywood Killed Cord Cutting",
+       "url": "https://techaeris.com/2026/04/14/why-streaming-costs-more-than-cable-2026/",
+       "publisher": "techaeris.com",
+       "published_at": "2026-04-14T19:36:46",
+       "lede": "we were promised a revolution. for years, the rallying cry of the tech-savvy consumer was simple: cancel your satellite, burn your cable box, and save a fortune. but if you look at your bank statement lately, you will notice a frustrating reality. the question of why streaming costs more than",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 91,
+         "path": "/Arts & Entertainment/TV & Video/Online Video",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1d795cefb83fe87932a7",
+       "headline": "Justin Bieber Had His Biggest Streaming Day of the Year After His Coachella Set",
+       "url": "https://www.yahoo.com/entertainment/music/articles/justin-bieber-had-biggest-streaming-183554752.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-14T18:35:54",
+       "lede": "justin bieber’s music was streamed 24.6 million times in the united states on april 12, the day after his much-talked-about set at coachella, according to preliminary data from luminate. that streaming count marks a 54% vault over april 11’s 15.9 million streams and a 74% surge over april 10, the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.6
+        },
+        {
+         "code": 149,
+         "path": "/Arts & Entertainment/Music & Audio/Pop Music",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e63db49e87ccc43e301533",
+       "headline": "Roblox announces age-based accounts for young users as child safety lawsuits pile up",
+       "url": "https://sherwood.news/culture/roblox-announces-age-based-accounts-for-young-users-child-safety-lawsuits/",
+       "publisher": "sherwood.news",
+       "published_at": "2026-04-13T13:01:22",
+       "lede": "the move reflects a level of subscriber security from youtube, which last year said its paid premium and music plans had 125 million subscribers (far fewer than netflix’s 325 million subscribers). the platform continues to dominate overall streaming market share, accounting for 12.5% of tv viewing time in january, per",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [
+        "netflix"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e5060c430a4927fdc6d03c",
+       "headline": "What to watch on TV and streaming today: Charmain And The Prophet, At Home With The Furys and Young Forever: The Death of Ageing?",
+       "url": "https://www.independent.ie/entertainment/television/what-to-watch-on-tv-and-streaming-today-charmain-and-the-prophet-at-home-with-the-furys-and-young-forever-the-death-of-ageing/a1214548998.html",
+       "publisher": "independent.ie",
+       "published_at": "2026-04-13T04:30:00",
+       "lede": "planning a night on the couch? here are today’s top tv and streaming picks: pick of the day young forever: the death of ageing? rté one, 9.35pm first of a two-part documentary in which kathryn thomas investigates the reasons why many women feel under pressure to remain youthful. she also",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.69,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "kathryn thomas"
+       ]
+      },
+      {
+       "id": "69e841375cfa3e5ba5dd550a",
+       "headline": "¿Qué sigue para los imputados «Propofest»?",
+       "url": "https://flipr.com.ar/nacionales/streaming/tn/que-sigue-para-los-imputados-propofest/",
+       "publisher": "flipr.com.ar",
+       "published_at": "2026-04-13T03:38:15",
+       "lede": "arrow_back_ios abstract ia × what follows for the accused \"propofest\"? generating summary with ai... based on the article and its multimedia content what follows for the accused \"propofest\"? tn streaming 13/04  00:38 ★ subscribe to our channel → https://bit.ly/365otis ★ report on the news from our website → https://tn.com.ar/",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 29,
+         "path": "/News/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6600c37f6c5e66b51587",
+       "headline": "India's OTT market expands to 1.45 billion monthly active users driven by data, smartphones",
+       "url": "https://telecom.economictimes.indiatimes.com/news/mvas-apps/indias-ott-market-expands-to-1-45-billion-monthly-active-users-driven-by-data-smartphones/130157014",
+       "publisher": "telecom.economictimes.indiatimes.com",
+       "published_at": "2026-04-10T07:31:23",
+       "lede": "india's streaming, or ott, sector is witnessing rapid expansion, driven by affordable mobile data, rising smartphone penetration and a surge in digital content consumption.a report by brokerage clsa said the country's total ott monthly active users (maus) have reached about 1.45 billion, reflecting a 20% increase over three years and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 91,
+         "path": "/Arts & Entertainment/TV & Video/Online Video",
+         "score": 0.48
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87eb35cfa3e5ba50274a1",
+       "headline": "India's OTT market expands to 1.45 billion monthly active users driven by data and smartphones, as per CLSA report -",
+       "url": "https://tele.net.in/indias-ott-market-expands-to-1-45-billion-monthly-active-users-driven-by-data-and-smartphones-as-per-clsa-report/",
+       "publisher": "tele.net.in",
+       "published_at": "2026-04-10T05:01:13",
+       "lede": "according to report by clsa, india’s streaming, or over-the-top (ott), sector is witnessing rapid expansion, driven by affordable mobile data, rising smartphone penetration, and a surge in digital content consumption. the country’s total ott monthly active users (maus) have reached around 1.45 billion, reflecting a 20 per cent increase over",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "clsa"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 3278,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOCAxNToyNTowMCIsImkiOiI2OWUzNDk1MWM3MDExMWQ2NWVjNTVkZGMiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.237,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.249
+    }
+   }
+  }
+ ]
+}

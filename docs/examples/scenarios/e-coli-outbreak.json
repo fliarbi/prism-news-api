@@ -1,0 +1,923 @@
+{
+ "slug": "e-coli-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:00:49Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "E. coli",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "e. coli",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1616,
+     "tone": {
+      "carrying": 1613,
+      "availability_pct": 99.81,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 767,
+        "share_pct": 47.55
+       },
+       {
+        "group": "neutral",
+        "count": 56,
+        "share_pct": 3.47
+       },
+       {
+        "group": "positive",
+        "count": 790,
+        "share_pct": 48.98
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1615,
+      "count": 1417,
+      "share_pct": 87.74
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.067,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.069
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "E. coli",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "e. coli",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 295,
+       "critical": 239,
+       "critical_pct": 81.0,
+       "negative": 111,
+       "positive": 170,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 329,
+       "critical": 275,
+       "critical_pct": 83.6,
+       "negative": 140,
+       "positive": 170,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 320,
+       "critical": 238,
+       "critical_pct": 74.4,
+       "negative": 126,
+       "positive": 179,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 506,
+       "critical": 418,
+       "critical_pct": 82.6,
+       "negative": 283,
+       "positive": 210,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 311,
+       "critical": 255,
+       "critical_pct": 82.0,
+       "negative": 107,
+       "positive": 187,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 291,
+       "critical": 256,
+       "critical_pct": 88.0,
+       "negative": 128,
+       "positive": 151,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 268,
+       "critical": 230,
+       "critical_pct": 85.8,
+       "negative": 84,
+       "positive": 166,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 335,
+       "critical": 296,
+       "critical_pct": 88.4,
+       "negative": 126,
+       "positive": 194,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 346,
+       "critical": 290,
+       "critical_pct": 83.8,
+       "negative": 87,
+       "positive": 238,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 335,
+       "critical": 293,
+       "critical_pct": 87.5,
+       "negative": 143,
+       "positive": 179,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 452,
+       "critical": 417,
+       "critical_pct": 92.3,
+       "negative": 252,
+       "positive": 187,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 483,
+       "critical": 417,
+       "critical_pct": 86.3,
+       "negative": 285,
+       "positive": 186,
+       "partial_period": false
+      }
+     ],
+     "total": 4271,
+     "critical_total": 3624,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.975,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.978
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "E. coli",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "e. coli",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1616,
+     "carrying": 492,
+     "availability_pct": 30.45,
+     "items": [
+      {
+       "country": "united states",
+       "count": 354,
+       "share_pct": 21.91
+      },
+      {
+       "country": "united kingdom",
+       "count": 25,
+       "share_pct": 1.55
+      },
+      {
+       "country": "india",
+       "count": 21,
+       "share_pct": 1.3
+      },
+      {
+       "country": "canada",
+       "count": 15,
+       "share_pct": 0.93
+      },
+      {
+       "country": "australia",
+       "count": 9,
+       "share_pct": 0.56
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 68
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.761,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.764
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "E. coli",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "e. coli",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "antimicrobial stewardship programs",
+       "count": 135,
+       "share": 11.73,
+       "lift": 957.43,
+       "baseline_count": 1,
+       "previous_period_count": 132,
+       "delta_pct": 2.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "proteomic profiling and protein interactions",
+       "count": 58,
+       "share": 5.04,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 59,
+       "delta_pct": -1.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "treatment of multidrug-resistant organisms",
+       "count": 115,
+       "share": 9.99,
+       "lift": 271.86,
+       "baseline_count": 3,
+       "previous_period_count": 113,
+       "delta_pct": 1.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "bioremediation techniques for ecosystems",
+       "count": 48,
+       "share": 4.17,
+       "lift": 340.42,
+       "baseline_count": 1,
+       "previous_period_count": 52,
+       "delta_pct": -7.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "biotechnology innovations in medicine",
+       "count": 39,
+       "share": 3.39,
+       "lift": 276.59,
+       "baseline_count": 1,
+       "previous_period_count": 34,
+       "delta_pct": 14.7,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1616,
+     "carrying": 1151,
+     "carrier_share_pct": 71.23,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.272,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.275
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "E. coli",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "e. coli",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f22ddec6105443aa5dd48e",
+       "headline": "Un motocycliste perd la vie après avoir percuté un arbre dans la province d'Anvers",
+       "url": "http://www.dhnet.be/actu/faits/2026/04/25/un-motocycliste-perd-la-vie-apres-avoir-percute-un-arbre-dans-la-province-danvers-SED2U7QY4FCHDE5BCOG7OHGIAU/",
+       "publisher": "dhnet.be",
+       "published_at": "2026-04-25T07:16:35",
+       "lede": "an 18-month-old, from enghien, in a serious state following the contraction of the bacteria e. coli, \"it goes very fast, like a snake bite\" 1 drugs, threats and chaos: at 27 years old, he makes live a hell to his family who can legally not put him at the door,",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8c2a385010bf777004fb4",
+       "headline": "FDA Reports More Severe E. Coli Illnesses Linked to Raw Cheese From a California Farm",
+       "url": "https://www.today.com/health/recall/fda-reports-severe-e-coli-illnesses-linked-raw-cheese-california-farm-rcna265405",
+       "publisher": "today.com",
+       "published_at": "2026-03-27T23:11:28",
+       "lede": "an e. coli outbreak linked to cheddar cheese made from raw milk at a california farm has expanded to nine people in three states, the food and drug administration said. more than half of the people sickened so far are children under age 5.three people had to be hospitalized after",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.59
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.59
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8bfe253ed30b7ef4f1c68",
+       "headline": "Outbreak linked to raw cheese grows; 9 cases total, one with kidney failure",
+       "url": "https://arstechnica.com/health/2026/03/kidney-failure-case-reported-in-raw-cheese-outbreak-maker-still-denies-link/",
+       "publisher": "arstechnica.com",
+       "published_at": "2026-03-27T21:43:00",
+       "lede": "two more illnesses have been identified in an e. coli outbreak linked to unpasteurized cheese and milk, the food and drug administration reported thursday. the maker of the products, california-based raw farm, continues to deny the link and has refused to issue a recall.according to the fda, at least nine",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc43a8f111344e7e7c412d",
+       "headline": "E. coli illnesses, kidney damage, linked to raw cheese from a California dairy farm",
+       "url": "https://www.nbcnews.com/health/health-news/e-coli-kidney-raw-milk-cheese-california-dairy-farm-fda-rcna265460",
+       "publisher": "nbcnews.com",
+       "published_at": "2026-03-27T20:59:13",
+       "lede": "an e. coli outbreak linked to cheddar cheese made from raw milk at a california farm has expanded to nine people in three states, the food and drug administration said. more than half of the people sickened so far are children under age 5.three people had to be hospitalized after",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.59
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.59
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8c2cd9a5db4d404956779",
+       "headline": "9 sickened in E. coli outbreak tied to a California company's raw milk and cheese - WWAYTV3",
+       "url": "https://www.wwaytv3.com/9-sickened-in-e-coli-outbreak-tied-to-a-california-companys-raw-milk-and-cheese/",
+       "publisher": "wwaytv3.com",
+       "published_at": "2026-03-27T11:32:32",
+       "lede": "9 sickened in e. coli outbreak tied to a california company’s raw milk and cheesefda warns of e. coli outbreak from frozen falafel from aldi (photo: mgn)(abc) — nine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "aldi"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a59e1c37f6c5e66ac11f1",
+       "headline": "9 sickened in E. coli outbreak tied to a California company’s raw milk and cheese",
+       "url": "https://www.sandiegouniontribune.com/2026/03/26/raw-milk-cheese-e-coli-raw-farm/",
+       "publisher": "sandiegouniontribune.com",
+       "published_at": "2026-03-27T00:09:03",
+       "lede": "by jonel aleccia nine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said. two cases in california were added thursday to the outbreak first",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c1c97f3a572cf4b17215",
+       "headline": "9 sickened in E. coli outbreak tied to a California company’s raw milk and cheese",
+       "url": "https://www.orlandosentinel.com/2026/03/26/raw-milk-cheese-e-coli-raw-farm/",
+       "publisher": "orlandosentinel.com",
+       "published_at": "2026-03-27T00:09:03",
+       "lede": "by jonel aleccia nine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said. two cases in california were added thursday to the outbreak first",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cffab3cb5c22a56f7e7f6b",
+       "headline": "9 sickened in E. coli outbreak tied to a California company’s raw milk and cheese",
+       "url": "https://www.sgvtribune.com/2026/03/26/raw-milk-cheese-e-coli-raw-farm/",
+       "publisher": "sgvtribune.com",
+       "published_at": "2026-03-27T00:09:03",
+       "lede": "by jonel aleccia nine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said. two cases in california were added thursday to the outbreak first",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc54649b458c7914888240",
+       "headline": "9 sickened in E. coli outbreak tied to a California company’s raw milk and cheese",
+       "url": "https://www.dailydemocrat.com/2026/03/26/raw-milk-cheese-e-coli-raw-farm/",
+       "publisher": "dailydemocrat.com",
+       "published_at": "2026-03-27T00:09:03",
+       "lede": "by jonel aleccianine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said.two cases in california were added thursday to the outbreak first announced march",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8ab0b85010bf777ffbd3a",
+       "headline": "9 sickened in E. coli outbreak tied to a California company’s raw milk and cheese",
+       "url": "https://www.courant.com/2026/03/26/raw-milk-cheese-e-coli-raw-farm/",
+       "publisher": "courant.com",
+       "published_at": "2026-03-27T00:09:03",
+       "lede": "by jonel aleccianine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said.two cases in california were added thursday to the outbreak first announced march",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8a58d4ca06a20fbc40d2f",
+       "headline": "9 sickened in E. coli outbreak tied to a California company’s raw milk and cheese",
+       "url": "https://www.dailycamera.com/2026/03/26/raw-milk-cheese-e-coli-raw-farm/",
+       "publisher": "dailycamera.com",
+       "published_at": "2026-03-27T00:09:03",
+       "lede": "by jonel aleccianine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said.two cases in california were added thursday to the outbreak first announced march",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8a58279a596b4f7c06419",
+       "headline": "9 sickened in E. coli outbreak tied to a California company’s raw milk and cheese",
+       "url": "https://www.citizensvoice.com/2026/03/26/raw-milk-cheese-e-coli-raw-farm/",
+       "publisher": "citizensvoice.com",
+       "published_at": "2026-03-27T00:09:03",
+       "lede": "by jonel aleccianine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said.two cases in california were added thursday to the outbreak first announced march",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8a580f0ef2e3a980f3ceb",
+       "headline": "9 sickened in E. coli outbreak tied to a California company’s raw milk and cheese",
+       "url": "https://www.record-bee.com/2026/03/26/raw-milk-cheese-e-coli-raw-farm/",
+       "publisher": "record-bee.com",
+       "published_at": "2026-03-27T00:09:03",
+       "lede": "by jonel aleccianine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said.two cases in california were added thursday to the outbreak first announced march",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee9228e67a2fcb3f0f5ce",
+       "headline": "9 sickened in E. coli outbreak tied to a California company's raw milk and cheese",
+       "url": "https://www.yahoo.com/news/articles/9-sickened-e-coli-outbreak-000249890.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-27T00:02:49",
+       "lede": "nine people, including children, have been sickened in an expanding outbreak of e. coli food poisoning tied to raw milk and cheddar cheese made with it from raw farm, a fresno, california, producer, health officials said. two cases in california were added thursday to the outbreak first announced march 15,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.61
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69a1d48a19997f07ce2de0bf",
+       "headline": "E. coli Outbreak Linked to McDonald's Quarter Pounders - CDC News - News Directory 3",
+       "url": "https://www.newsdirectory3.com/e-coli-outbreak-linked-to-mcdonalds-quarter-pounders-cdc-news/",
+       "publisher": "newsdirectory3.com",
+       "published_at": "2026-02-09T03:38:10",
+       "lede": "a multi-state outbreak of e. coli o157:h7 infections linked to mcdonald’s quarter pounder hamburgers has sickened at least 49 people across 10 states, with one death reported in colorado. the centers for disease control and prevention (cdc) is investigating the source of the outbreak, focusing on fresh slivered onions and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.64
+        },
+        {
+         "code": 277,
+         "path": "/Food & Drink/Restaurants/Fast Food",
+         "score": 0.63
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "centers for disease control and prevention",
+        "mcdonald"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 475,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wOSAwMzozODoxMCIsImkiOiI2OWExZDQ4YTE5OTk3ZjA3Y2UyZGUwYmYiLCJwIjo5fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.684,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.687
+    }
+   }
+  }
+ ]
+}

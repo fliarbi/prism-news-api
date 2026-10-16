@@ -1,0 +1,920 @@
+{
+ "slug": "sensex-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:14Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "sensex",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "sensex",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 11978,
+     "tone": {
+      "carrying": 11975,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5599,
+        "share_pct": 46.76
+       },
+       {
+        "group": "neutral",
+        "count": 96,
+        "share_pct": 0.8
+       },
+       {
+        "group": "positive",
+        "count": 6280,
+        "share_pct": 52.44
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 11976,
+      "count": 4923,
+      "share_pct": 41.11
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.785,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.79
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "sensex",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "sensex",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2234,
+       "critical": 812,
+       "critical_pct": 36.3,
+       "negative": 715,
+       "positive": 1514,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2068,
+       "critical": 658,
+       "critical_pct": 31.8,
+       "negative": 581,
+       "positive": 1481,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2524,
+       "critical": 709,
+       "critical_pct": 28.1,
+       "negative": 1030,
+       "positive": 1483,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3515,
+       "critical": 1376,
+       "critical_pct": 39.1,
+       "negative": 1241,
+       "positive": 2256,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2912,
+       "critical": 1141,
+       "critical_pct": 39.2,
+       "negative": 938,
+       "positive": 1928,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1906,
+       "critical": 509,
+       "critical_pct": 26.7,
+       "negative": 402,
+       "positive": 1496,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1924,
+       "critical": 548,
+       "critical_pct": 28.5,
+       "negative": 604,
+       "positive": 1316,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1982,
+       "critical": 596,
+       "critical_pct": 30.1,
+       "negative": 800,
+       "positive": 1170,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2059,
+       "critical": 885,
+       "critical_pct": 43.0,
+       "negative": 1017,
+       "positive": 1029,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3073,
+       "critical": 926,
+       "critical_pct": 30.1,
+       "negative": 1015,
+       "positive": 2006,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3032,
+       "critical": 1497,
+       "critical_pct": 49.4,
+       "negative": 1942,
+       "positive": 1084,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3814,
+       "critical": 1615,
+       "critical_pct": 42.3,
+       "negative": 1625,
+       "positive": 2161,
+       "partial_period": false
+      }
+     ],
+     "total": 31043,
+     "critical_total": 11272,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.313,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.315
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "sensex",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "sensex",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 11978,
+     "carrying": 5876,
+     "availability_pct": 49.06,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2172,
+       "share_pct": 18.13
+      },
+      {
+       "country": "india",
+       "count": 1960,
+       "share_pct": 16.36
+      },
+      {
+       "country": "iran",
+       "count": 667,
+       "share_pct": 5.57
+      },
+      {
+       "country": "china",
+       "count": 393,
+       "share_pct": 3.28
+      },
+      {
+       "country": "japan",
+       "count": 219,
+       "share_pct": 1.83
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 465
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.559,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.563
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "sensex",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "sensex",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "asian financial market developments",
+       "count": 2974,
+       "share": 32.06,
+       "lift": 2617.16,
+       "baseline_count": 1,
+       "previous_period_count": 2166,
+       "delta_pct": 37.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market volatility indicators",
+       "count": 3643,
+       "share": 39.27,
+       "lift": 1602.94,
+       "baseline_count": 2,
+       "previous_period_count": 2243,
+       "delta_pct": 62.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "emerging markets economic updates",
+       "count": 2242,
+       "share": 24.17,
+       "lift": 1972.99,
+       "baseline_count": 1,
+       "previous_period_count": 1553,
+       "delta_pct": 44.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stock market index composition",
+       "count": 3411,
+       "share": 36.77,
+       "lift": 1500.86,
+       "baseline_count": 2,
+       "previous_period_count": 2281,
+       "delta_pct": 49.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "international/emerging markets stocks",
+       "count": 3101,
+       "share": 33.43,
+       "lift": 909.64,
+       "baseline_count": 3,
+       "previous_period_count": 2136,
+       "delta_pct": 45.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 11978,
+     "carrying": 9276,
+     "carrier_share_pct": 77.44,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.671,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.678
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "sensex",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "sensex",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a0eb7acc0b414d24a199200",
+       "headline": "Sensex, Nifty end 7 per cent higher in April",
+       "url": "https://www.thehindubusinessline.com/markets/stock-markets/sensex-nifty-end-7-per-cent-higher-in-april/article70926006.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-30T16:37:06",
+       "lede": "april, the first month of fy27, saw a sharp recovery across the board for indian equities, despite benchmark indices down nearly 0.75 per cent on thursday. the nifty and the sensex surged around 7 per cent while nifty defence, nifty realty and nifty capital market indices were resilient by skyrocketing",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5eb4c37f6c5e66afbc78",
+       "headline": "Sensex, Nifty fall amid FII selling and surge in crude oil prices",
+       "url": "https://www.newindianexpress.com/business/2026/Apr/30/sensex-nifty-fall-amid-fii-selling-and-surge-in-crude-oil-prices",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-30T14:53:11",
+       "lede": "mumbai: india’s equity markets declined on thursday, with the bse sensex and nse nifty falling sharply in intraday trade due to continued selling by foreign institutional investors and rising crude oil prices.the sensex fell about 1,237 points and the nifty dropped around 380 points during the session. both indices recovered",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d567713680636eecbeaf",
+       "headline": "Why is the stock market closed on May 1? See NSE BSE Holiday List 2026",
+       "url": "https://www.theweek.in/news/biz-tech/2026/04/30/indian-stock-market-holiday-may-1-sensex-nifty.html",
+       "publisher": "theweek.in",
+       "published_at": "2026-04-30T11:25:43",
+       "lede": "the indian stock markets are closed for trading on may 1, friday, on account of <i style='font-size: 1.125rem;'>maharashtra day</i>. this year, the day also coincides with <i style='font-size: 1.125rem;'>buddha purnima</i>, or <i style='font-size: 1.125rem;'>buddha jayanti.</i> the sensex closed on thursday for the week after falling more than 582 points to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.52
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "nse"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8a8f4bbf1d314559a46ae",
+       "headline": "Sensex, Nifty end lower amid rising crude oil prices",
+       "url": "https://www.ibtimes.co.in/sensex-nifty-end-lower-amid-rising-crude-oil-prices-901655",
+       "publisher": "ibtimes.co.in",
+       "published_at": "2026-04-30T10:41:16",
+       "lede": "indian equity benchmarks nifty and sensex ended lower on the day, weighed down by rising crude oil prices amid escalating tensions between the united states and iran. the nifty declined by 180.10 points, or 0.74 per cent, to close at 23,997.55, while the sensex fell 582.86 points, or 0.75 per",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.49
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a778f963d76f4afce4c07",
+       "headline": "Sensex, Nifty Fall Nearly 1% Today: Oil Price Surge Weighs on Sentiment - Business League",
+       "url": "https://www.businessleague.in/sensex-nifty-fall-nearly-1-today-oil-price-surge-weighs-on-sentiment/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-30T08:26:01",
+       "lede": "now indian equity benchmarks have faced a sharp decline this thursday. both the sensex and nifty dropped nearly 1 per cent in early deals. therefore, investor sentiment has weakened significantly due to soaring crude oil prices. meanwhile, the india vix indicates a rise in market volatility. thus, global macro pressures",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.82
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a040a5f62bbf617b0442b5e",
+       "headline": "Record High Oil, All-Time Low Rupee Batters Sensex, Nifty; IndiGo, Eternal Top Losers Chart",
+       "url": "https://www.freepressjournal.in/business/record-high-oil-rupee-plunge-batter-sensex-nifty-indigo-eternal-top-losers-chart",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-04-30T06:31:49",
+       "lede": "2 days of stock market slump wipes out ₹18.60 lakh crore from investors' wealth | battered by record crude oil prices and falling rupee, the domestic equity indices further extended losses on thursday after opening lower. the 30-share sensex hit its intraday low at 76,258 points, down by almost 1.6",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f885cf43843dd771d19f00",
+       "headline": "6 reasons why markets are falling today: Sensex nosedives 1,100 points, Crude spikes to $125",
+       "url": "https://www.financialexpress.com/market/6-reasons-why-markets-are-falling-today-sensex-nosedives-1100-points-nifty-plunges-to-23900-4222994/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-30T06:21:07",
+       "lede": "the indian domestic indices are seeing a sharp sell-off today. at this hour, the sensex has plunged over 1,100 points to hover near 76,400, while the nifty has slipped below the 23,900 mark, down more than 350 points in intraday trade. both the headline indices plunged over 1.5% each in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.74
+        }
+       ],
+       "country": "south korea",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d6ad7b2d589e844c54a8",
+       "headline": "Stocks to buy: Nagaraj Shetti recommends Time Technoplast, Gujarat Ambuja Exports shares to buy | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-nagaraj-shetti-recommends-time-technoplast-gujarat-ambuja-exports-shares-to-buy-11777528414947.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T06:08:22",
+       "lede": "stock market today: the indian stock market saw a significant across-the-board selloff in morning trade on thursday, april 30, dragging the benchmarks, the sensex and the nifty 50, down by more than 1%.the 30-share pack sensex fell over 1,150 points, or 1.5%, to an intraday low of 76,349, while the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8ab3343843dd771d27f45",
+       "headline": "Why Is Stock Market Down Today, April 30, 2026? | LatestLY",
+       "url": "https://www.latestly.com/business/why-is-stock-market-down-today-april-30-2026-7412906.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-04-30T04:48:19",
+       "lede": "indian benchmark indices declined sharply on thursday, april 30, 2026, with the sensex falling over 1,000 points and the nifty slipping below the 23,900 mark in early trade. the sell-off was broad-based, with losses across sectors, reflecting weak global sentiment and rising macroeconomic concerns. the downturn follows a volatile week",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.88
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.69
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d6a07b2d589e844c4b7b",
+       "headline": "Stocks to buy or sell: Osho Krishan of Angel One suggests buying Chennai Petroleum Corp, Bharti Airtel shares to buy | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-or-sell-osho-krishan-of-angel-one-suggests-buying-chennai-petroleum-corp-bharti-airtel-shares-to-buy-11777522637744.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T04:32:42",
+       "lede": "stock market today: the domestic benchmark indices, nifty 50 and sensex, began thursday, april 30, on a negative note, as a significant increase in oil prices weakened investor sentiment and overshadowed the positive outlook from corporate earnings. the nifty 50 fell by 1.16% to 23,898.70, while the bse sensex decreased",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.74
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.63
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a99c8937ef12fc0b02f8",
+       "headline": "Market outlook amid assembly election exit polls 2026 results; Sensex, Nifty levels to watch tomorrow - BusinessToday",
+       "url": "https://www.businesstoday.in/markets/stocks/story/market-outlook-amid-assembly-election-exit-polls-2026-results-sensex-nifty-levels-to-watch-tomorrow-528084-2026-04-29",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-29T12:50:03",
+       "lede": "market participants are eagerly awaiting the exit poll results on wednesday evening, as voting for five state elections conclude today. earlier in the day, benchmark indices sensex and nifty ended higher after seeing some profit taking in the afternoon session. analysts believe the short-term positive outlook looks intact, based on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.63
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8aadcbbf1d314559a5d13",
+       "headline": "Stock Market Today: Sensex, Nifty End Higher Amid Global Uncertainty | 📰 LatestLY",
+       "url": "https://www.latestly.com/india/news/stock-market-today-sensex-nifty-end-higher-amid-global-uncertainty-7412073.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-04-29T11:26:32",
+       "lede": "mumbai, april 29: indian equity benchmarks ended higher on the wednesday but surrendered a large portion of their intra-day gains as a sharp rise in global crude oil prices weighed on investor sentiment. the nifty closed at 24,177.65, up 0.76 per cent or 181.95 points, while the sensex settled at",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.82
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.59
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.49
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22dc227117df83f94e47c",
+       "headline": "Sensex, Nifty end higher amid global uncertainty",
+       "url": "https://www.ibtimes.co.in/sensex-nifty-end-higher-amid-global-uncertainty-901626",
+       "publisher": "ibtimes.co.in",
+       "published_at": "2026-04-29T10:58:20",
+       "lede": "indian equity benchmarks ended higher on the wednesday but surrendered a large portion of their intra-day gains as a sharp rise in global crude oil prices weighed on investor sentiment. the nifty closed at 24,177.65, up 0.76 per cent or 181.95 points, while the sensex settled at 77,496.36, gaining 0.79",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.81,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.82
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.7
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.4
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.4
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f229c8c6105443aa5d2fe8",
+       "headline": "Sensex, Nifty end higher amid global uncertainty - Social News XYZ",
+       "url": "https://www.socialnews.xyz/2026/04/29/sensex-nifty-end-higher-amid-global-uncertainty/",
+       "publisher": "socialnews.xyz",
+       "published_at": "2026-04-29T09:24:29",
+       "lede": "mumbai, april 29 (socialnews.xyz) indian equity benchmarks ended higher on the wednesday but surrendered a large portion of their intra-day gains as a sharp rise in global crude oil prices weighed on investor sentiment. the nifty closed at 24,177.65, up 0.76 per cent or 181.95 points, while the sensex settled",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.84,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.63
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.46
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [
+        "xyz"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 4488,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAwODoyMjo1MSIsImkiOiI2YTJhNTcyYzk2M2Q3NmY0YWZiOTY5MWYiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.766,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.771
+    }
+   }
+  }
+ ]
+}

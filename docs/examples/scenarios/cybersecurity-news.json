@@ -1,0 +1,972 @@
+{
+ "slug": "cybersecurity-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:09:32Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "cybersecurity",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cybersecurity",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 134496,
+     "tone": {
+      "carrying": 134323,
+      "availability_pct": 99.87,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 68835,
+        "share_pct": 51.25
+       },
+       {
+        "group": "neutral",
+        "count": 1851,
+        "share_pct": 1.38
+       },
+       {
+        "group": "positive",
+        "count": 63637,
+        "share_pct": 47.38
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 134431,
+      "count": 96084,
+      "share_pct": 71.47
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.5,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.513
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "cybersecurity",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cybersecurity",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 22164,
+       "critical": 15564,
+       "critical_pct": 70.2,
+       "negative": 11804,
+       "positive": 9969,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 19442,
+       "critical": 13638,
+       "critical_pct": 70.1,
+       "negative": 9849,
+       "positive": 9323,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 24618,
+       "critical": 15796,
+       "critical_pct": 64.2,
+       "negative": 13907,
+       "positive": 10407,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 21784,
+       "critical": 15032,
+       "critical_pct": 69.0,
+       "negative": 11784,
+       "positive": 9705,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 23098,
+       "critical": 16513,
+       "critical_pct": 71.5,
+       "negative": 11594,
+       "positive": 11071,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 23188,
+       "critical": 16706,
+       "critical_pct": 72.0,
+       "negative": 10988,
+       "positive": 11869,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 23313,
+       "critical": 16899,
+       "critical_pct": 72.5,
+       "negative": 11657,
+       "positive": 11326,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 22790,
+       "critical": 16741,
+       "critical_pct": 73.5,
+       "negative": 11259,
+       "positive": 11191,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 23278,
+       "critical": 16510,
+       "critical_pct": 70.9,
+       "negative": 11735,
+       "positive": 11139,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 34970,
+       "critical": 25421,
+       "critical_pct": 72.7,
+       "negative": 17855,
+       "positive": 16553,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 32965,
+       "critical": 23928,
+       "critical_pct": 72.6,
+       "negative": 17007,
+       "positive": 15483,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 43283,
+       "critical": 30225,
+       "critical_pct": 69.8,
+       "negative": 22238,
+       "positive": 20462,
+       "partial_period": false
+      }
+     ],
+     "total": 314893,
+     "critical_total": 222973,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.822,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.825
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "cybersecurity",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cybersecurity",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 134496,
+     "carrying": 54761,
+     "availability_pct": 40.72,
+     "items": [
+      {
+       "country": "united states",
+       "count": 22059,
+       "share_pct": 16.4
+      },
+      {
+       "country": "india",
+       "count": 10265,
+       "share_pct": 7.63
+      },
+      {
+       "country": "united kingdom",
+       "count": 4122,
+       "share_pct": 3.06
+      },
+      {
+       "country": "china",
+       "count": 1651,
+       "share_pct": 1.23
+      },
+      {
+       "country": "australia",
+       "count": 1291,
+       "share_pct": 0.96
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 15373
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.262,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.263
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "cybersecurity",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cybersecurity",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "threat intelligence integration for networks",
+       "count": 3331,
+       "share": 4.55,
+       "lift": 185.53,
+       "baseline_count": 2,
+       "previous_period_count": 2013,
+       "delta_pct": 65.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "secure remote access solutions (e.g., rdp, ssh)",
+       "count": 1409,
+       "share": 1.92,
+       "lift": 156.95,
+       "baseline_count": 1,
+       "previous_period_count": 928,
+       "delta_pct": 51.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "zero trust network architecture",
+       "count": 1220,
+       "share": 1.66,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 880,
+       "delta_pct": 38.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "network incident response strategies",
+       "count": 1735,
+       "share": 2.37,
+       "lift": 96.63,
+       "baseline_count": 2,
+       "previous_period_count": 944,
+       "delta_pct": 83.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "malware and threat analysis in network traffic",
+       "count": 1719,
+       "share": 2.35,
+       "lift": 95.74,
+       "baseline_count": 2,
+       "previous_period_count": 1066,
+       "delta_pct": 61.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 134496,
+     "carrying": 73281,
+     "carrier_share_pct": 54.49,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.964,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.977
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "cybersecurity",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "cybersecurity",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f22e5cc6105443aa5e2258",
+       "headline": "CVE-2026-3854 RCE Flaw In GitHub Enterprise Server",
+       "url": "https://thecyberexpress.com/cve-2026-3854-rce-github-enterprise-server/",
+       "publisher": "thecyberexpress.com",
+       "published_at": "2026-04-29T09:51:54",
+       "lede": "cybersecurity researchers have revealed critical details about a newly identified rce vulnerability, tracked as cve-2026-3854, affecting both github’s cloud infrastructure and github enterprise server deployments. the flaw, which carries a high cvss score of 8.7, could allow an authenticated user to execute arbitrary code on affected systems with a single",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.78
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "rce",
+        "github"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cc19399b489398e0c707",
+       "headline": "FBI extradites Chinese hacker accused of stealing COVID-19 research",
+       "url": "https://www.foxnews.com/us/fbi-extradites-chinese-hacker-accused-stealing-covid-19-research",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-28T18:00:01",
+       "lede": "a chinese hacker accused of stealing covid-19 research from u.s. institutions in a massive cyberattack has been extradited to american soil.&nbsp; fbi director kash patel said the case involving xu zewei is a \"historic win for our cybersecurity efforts under president trump, bringing bad actors who target american infrastructure to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.65
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "xu"
+       ],
+       "people": [
+        "kash patel"
+       ]
+      },
+      {
+       "id": "69efac29727212302c60250f",
+       "headline": "Personal and Medical Records of 160,312 Americans Potentially Exposed After Major Data Breach Hits Healthcare Firm - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/25/personal-and-medical-records-of-160312-americans-potentially-exposed-after-major-data-breach-hits-healthcare-firm/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-25T17:40:27",
+       "lede": "the sensitive data of hundreds of thousands of americans is at risk after a healthcare firm was hit by a cybersecurity attack. according to the u.s. department of health and human services office for civil rights, southern illinois dermatology has <a href=\"https://ocrportal.hhs.gov/ocr/breach/breach_report_hip.jsf\" rel=\"noopener\" target=\"_blank\">reported</a> a hacking and it incident affecting",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99ba975f157062cafd1ab",
+       "headline": "Sensitive Information Belonging to 337,917 People Potentially Exposed As Tennessee Healthcare Firm Hit by Data Breach - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/20/sensitive-information-belonging-to-337917-people-potentially-exposed-as-tennessee-healthcare-firm-hit-by-data-breach/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-20T12:30:04",
+       "lede": "hundreds thousands of people are impacted by a cybersecurity incident at a us healthcare facility. according to a new <a href=\"https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/fb04ea66-92bb-4a15-b02c-8d1a9f783461.html\" rel=\"noopener\" target=\"_blank\">filing</a> with the maine attorney general, the hackers who targeted the tennessee-based cookeville regional medical center (crmc) have affected 337,917 people, including 22 maine residents. the healthcare firm",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.48
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e50026d5e7fc42ee0f001c",
+       "headline": "46,666 People Affected After Hackers Hit Healthcare Firm – Company Warns Data Now on Dark Web in 'Limited Amount' - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/11/46666-people-affected-after-hackers-hit-healthcare-firm-company-warns-data-now-on-dark-web-in-limited-amount/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-11T13:55:31",
+       "lede": "tens of thousands of people are affected by a medical cybersecurity incident involving patient information. according to a new <a href=\"https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/ec29e611-132e-4e18-83ac-219721dd96de.html\" rel=\"noopener\" target=\"_blank\">filing</a> with the maine attorney general, the incident at alabama-based heart south cardiovascular group affected 46,666 people, including three maine residents. the healthcare firm says it learned on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b3ed9baafc7356b7244d",
+       "headline": "Supercomputer Hacked in China: Hacker Steals Secret Data Related to Fighter Jets",
+       "url": "https://www.indiaherald.com/Viral/Read/994887174/Supercomputer-Hacked-in-China-Hacker-Steals-Secret-Data-Related-to-Fighter-Jets",
+       "publisher": "indiaherald.com",
+       "published_at": "2026-04-11T00:00:00",
+       "lede": "a major cybersecurity incident has been reported in china where a state-run supercomputer system was allegedly hacked, leading to the theft of a massive volume of highly sensitive data, including information linked to fighter jets, missile systems, and defense research. the incident is being described by media reports as one",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.92
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.56
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e88bbd7bb1410d4c8e6fab",
+       "headline": "U.S. water infrastructure is vulnerable to hacks. Iran knows it.",
+       "url": "https://dnyuz.com/2026/04/10/u-s-water-infrastructure-is-vulnerable-to-hacks-iran-knows-it/",
+       "publisher": "dnyuz.com",
+       "published_at": "2026-04-10T10:20:39",
+       "lede": "<p><i>jake braun is executive director of the cyber policy initiative at the university of chicago harris school of public policy, co-founder of the def con franklin cybersecurity initiative and a former white house adviser on cybersecurity.</i></p> <p>no matter what becomes of the iran war ceasefire, another form of warfare waged",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.61
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "jake braun"
+       ]
+      },
+      {
+       "id": "69e35555ac5738806593991e",
+       "headline": "China supercomputer breach exposes massive defence data, sparks security concerns",
+       "url": "https://economictimes.indiatimes.com/magazines/panache/china-supercomputer-breach-exposes-massive-defence-data-sparks-security-concerns/articleshow/130164411.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-10T08:46:00",
+       "lede": "a major cybersecurity breach has reportedly exposed highly sensitive data from a chinese government supercomputer, raising serious concerns around national security and data protection. the story reported by cnn broke out recently. according to reports, a hacker managed to infiltrate a system linked to the national supercomputing centre in tianjin,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.75
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.52
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.42
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "cnn"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e851797bb1410d4c698dbf",
+       "headline": "Trump's 'cease-fire' won't stop Iranian hackers for long, cyber experts say | Fortune",
+       "url": "https://fortune.com/2026/04/09/trumps-cease-fire-wont-stop-iranian-hackers-for-long-cyber-experts-say/",
+       "publisher": "fortune.com",
+       "published_at": "2026-04-09T13:31:28",
+       "lede": "hackers backing tehran say an uncertain ceasefire between iran and the united states and israel won’t end their retaliatory cyberattacks, a warning that american cybersecurity experts say potential targets in the u.s. and israel should take seriously. one leading hacking group known as handala said after the ceasefire announcement that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e34f1fc70111d65ec65d2b",
+       "headline": "Trump's 'cease-fire' won't stop Iranian hackers for long, cyber experts say | Fortune",
+       "url": "https://www.fortune.com/2026/04/09/trumps-cease-fire-wont-stop-iranian-hackers-for-long-cyber-experts-say/",
+       "publisher": "fortune.com",
+       "published_at": "2026-04-09T13:31:28",
+       "lede": "hackers backing tehran say an uncertain ceasefire between iran and the united states and israel won’t end their retaliatory cyberattacks, a warning that american cybersecurity experts say potential targets in the u.s. and israel should take seriously. one leading hacking group known as handala said after the ceasefire announcement that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8dd3d9baafc7356d93edb",
+       "headline": "Shaky Ceasefire Unlikely to Stop Cyberattacks From Iran-Linked Hackers for Long",
+       "url": "https://www.securityweek.com/shaky-ceasefire-unlikely-to-stop-cyberattacks-from-iran-linked-hackers-for-long/",
+       "publisher": "securityweek.com",
+       "published_at": "2026-04-09T01:22:35",
+       "lede": "hackers backing tehran say an uncertain ceasefire between iran and the united states and israel won’t end their retaliatory cyberattacks, a warning that american cybersecurity experts say potential targets in the u.s. and israel should take seriously. one leading hacking group known as handala said after the ceasefire announcement that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ecdaf83fc01faba467011",
+       "headline": "Shaky ceasefire unlikely to stop cyberattacks from Iran-linked hackers for long",
+       "url": "https://www.sandiegouniontribune.com/2026/04/08/iran-us-cyberthreats/",
+       "publisher": "sandiegouniontribune.com",
+       "published_at": "2026-04-08T20:16:53",
+       "lede": "by david klepper washington (ap) — hackers backing tehran say an uncertain ceasefire between iran and the united states and israel won’t end their retaliatory cyberattacks, a warning that american cybersecurity experts say potential targets in the u.s. and israel should take seriously. one leading hacking group known as handala",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e855287bb1410d4c6bd172",
+       "headline": "Shaky ceasefire unlikely to stop cyberattacks from Iran-linked hackers for long",
+       "url": "https://www.readingeagle.com/2026/04/08/iran-us-cyberthreats/",
+       "publisher": "readingeagle.com",
+       "published_at": "2026-04-08T20:16:53",
+       "lede": "by david klepper washington (ap) — hackers backing tehran say an uncertain ceasefire between iran and the united states and israel won’t end their retaliatory cyberattacks, a warning that american cybersecurity experts say potential targets in the u.s. and israel should take seriously. one leading hacking group known as handala",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e640b32461615d5f436383",
+       "headline": "Shaky ceasefire unlikely to stop cyberattacks from Iran-linked hackers for long",
+       "url": "https://www.reporterherald.com/2026/04/08/iran-us-cyberthreats/",
+       "publisher": "reporterherald.com",
+       "published_at": "2026-04-08T20:16:53",
+       "lede": "by david klepper washington (ap) — hackers backing tehran say an uncertain ceasefire between iran and the united states and israel won’t end their retaliatory cyberattacks, a warning that american cybersecurity experts say potential targets in the u.s. and israel should take seriously. one leading hacking group known as handala",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e63dd79e87ccc43e302936",
+       "headline": "Shaky ceasefire unlikely to stop cyberattacks from Iran-linked hackers for long",
+       "url": "https://www.mainlinemedianews.com/2026/04/08/iran-us-cyberthreats/",
+       "publisher": "mainlinemedianews.com",
+       "published_at": "2026-04-08T20:16:53",
+       "lede": "by david klepper washington (ap) — hackers backing tehran say an uncertain ceasefire between iran and the united states and israel won’t end their retaliatory cyberattacks, a warning that american cybersecurity experts say potential targets in the u.s. and israel should take seriously. one leading hacking group known as handala",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e63db09e87ccc43e301356",
+       "headline": "Shaky ceasefire unlikely to stop cyberattacks from Iran-linked hackers for long",
+       "url": "https://www.fortmorgantimes.com/2026/04/08/iran-us-cyberthreats/",
+       "publisher": "fortmorgantimes.com",
+       "published_at": "2026-04-08T20:16:53",
+       "lede": "by david klepper washington (ap) — hackers backing tehran say an uncertain ceasefire between iran and the united states and israel won’t end their retaliatory cyberattacks, a warning that american cybersecurity experts say potential targets in the u.s. and israel should take seriously. one leading hacking group known as handala",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 14381,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOCAyMDoxNjo1MyIsImkiOiI2OWU2M2Q4ZTllODdjY2M0M2UyZmZmYjYiLCJwIjo5fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.447,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.454
+    }
+   }
+  }
+ ]
+}

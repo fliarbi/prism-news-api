@@ -1,0 +1,867 @@
+{
+ "slug": "rent-control-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:08:10Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "rent control",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rent control",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 170,
+     "tone": {
+      "carrying": 170,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 141,
+        "share_pct": 82.94
+       },
+       {
+        "group": "neutral",
+        "count": 3,
+        "share_pct": 1.76
+       },
+       {
+        "group": "positive",
+        "count": 26,
+        "share_pct": 15.29
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 170,
+      "count": 129,
+      "share_pct": 75.88
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.567,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.57
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "rent control",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rent control",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 31,
+       "critical": 23,
+       "critical_pct": 74.2,
+       "negative": 26,
+       "positive": 5,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 31,
+       "critical": 26,
+       "critical_pct": 83.9,
+       "negative": 23,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 37,
+       "critical": 22,
+       "critical_pct": 59.5,
+       "negative": 32,
+       "positive": 4,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 63,
+       "critical": 46,
+       "critical_pct": 73.0,
+       "negative": 55,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 51,
+       "critical": 39,
+       "critical_pct": 76.5,
+       "negative": 36,
+       "positive": 14,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 49,
+       "critical": 39,
+       "critical_pct": 79.6,
+       "negative": 40,
+       "positive": 9,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 65,
+       "critical": 41,
+       "critical_pct": 63.1,
+       "negative": 50,
+       "positive": 11,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 50,
+       "critical": 42,
+       "critical_pct": 84.0,
+       "negative": 40,
+       "positive": 7,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 32,
+       "critical": 23,
+       "critical_pct": 71.9,
+       "negative": 23,
+       "positive": 9,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 38,
+       "critical": 31,
+       "critical_pct": 81.6,
+       "negative": 28,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 34,
+       "critical": 29,
+       "critical_pct": 85.3,
+       "negative": 30,
+       "positive": 4,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 66,
+       "critical": 46,
+       "critical_pct": 69.7,
+       "negative": 60,
+       "positive": 5,
+       "partial_period": false
+      }
+     ],
+     "total": 547,
+     "critical_total": 407,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.045,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.05
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "rent control",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rent control",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 170,
+     "carrying": 99,
+     "availability_pct": 58.24,
+     "items": [
+      {
+       "country": "united states",
+       "count": 55,
+       "share_pct": 32.35
+      },
+      {
+       "country": "united kingdom",
+       "count": 23,
+       "share_pct": 13.53
+      },
+      {
+       "country": "canada",
+       "count": 5,
+       "share_pct": 2.94
+      },
+      {
+       "country": "india",
+       "count": 4,
+       "share_pct": 2.35
+      },
+      {
+       "country": "ghana",
+       "count": 2,
+       "share_pct": 1.18
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 10
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.021,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.024
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "rent control",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rent control",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "regulatory compliance and legal business issues",
+       "count": 10,
+       "share": 9.09,
+       "lift": 742.09,
+       "baseline_count": 1,
+       "previous_period_count": 6,
+       "delta_pct": 66.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rent control and stabilization regulations",
+       "count": 9,
+       "share": 8.18,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 33,
+       "delta_pct": -72.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "landlord-tenant eviction proceedings",
+       "count": 8,
+       "share": 7.27,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 20,
+       "delta_pct": -60.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "rent control policies",
+       "count": 6,
+       "share": 5.45,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 12,
+       "delta_pct": -50.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "tenant rights advocacy",
+       "count": 6,
+       "share": 5.45,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 9,
+       "delta_pct": -33.3,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 170,
+     "carrying": 110,
+     "carrier_share_pct": 64.71,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.069,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.072
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "rent control",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "rent control",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e852449baafc7356722e99",
+       "headline": "Tenants under pressure, JFR report favours rent control",
+       "url": "https://www.landlordzone.co.uk/news/tenants-under-pressure-jfr-report-favours-rent-control",
+       "publisher": "landlordzone.co.uk",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "tenants under pressure, jfr report favours rent control the joseph rowntree foundation’s latest housing market report highlights the affordability issues facing tenants. overview the joseph rowntree foundation's april 2026 briefing, blower, r. elliott, j. worsdale, r. (2026). under pressure: the affordability challenges facing private renters, effectively calls for rent control.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.52
+        },
+        {
+         "code": 398,
+         "path": "/Real Estate/Real Estate Listings/Residential Rentals",
+         "score": 0.48
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9aee6bdd09a23d0961049",
+       "headline": "Rent Control, the idea that never dies.",
+       "url": "https://www.landlordzone.co.uk/news/rent-control-the-idea-that-never-dies",
+       "publisher": "landlordzone.co.uk",
+       "published_at": "2026-04-22T00:00:00",
+       "lede": "rent control, the idea that never dies could the renters’ rights act introduce rent control by another name? the phrase \"rent control\" has a habit of resurfacing again and again, especially whenever the housing market is under stress. it’s been a regular theme here on landlordzone. right now, the conditions",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.66
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8d3487bb1410d4cc83d96",
+       "headline": "Put Rent Control on the Ballot",
+       "url": "https://www.independent.com/2026/04/14/put-rent-control-on-the-ballot/",
+       "publisher": "independent.com",
+       "published_at": "2026-04-14T18:03:48",
+       "lede": "rent control has dominated the conversation on city council lately, despite the myriad other important tasks on our docket. as experience in other municipalities has shown, this type of ordinance can prove to be a real gamechanger in terms of rental property viability, availability, and market value. whether housing production",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.6
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8d33a5cfa3e5ba5433b6e",
+       "headline": "Randy Rowse: Put Rent Control on the Ballot Before It Reshapes Santa Barbara",
+       "url": "https://www.noozhawk.com/randy-rowse-put-rent-control-on-the-ballot-before-it-reshapes-santa-barbara/",
+       "publisher": "noozhawk.com",
+       "published_at": "2026-04-14T17:30:00",
+       "lede": "rent control has dominated the conversation at the santa barbara city council lately, despite the myriad other important tasks on our docket. as experience in other municipalities has shown, this type of ordinance can prove to be a real gamechanger in terms of rental property viability, availability and market value.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.63
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c3bbbd7b10565a3f930c",
+       "headline": "AIM: Rent Control Will Stifle Needed Housing Development",
+       "url": "https://aimnet.org/aim-rent-control-will-stifle-needed-housing-development/",
+       "publisher": "aimnet.org",
+       "published_at": "2026-04-06T12:06:01",
+       "lede": "associated industries of massachusetts (aim), the massachusetts biotechnology council (massbio), and the massachusetts business roundtable (mbr) today announced that they have joined housing for massachusetts, the coalition formed in opposition to the proposed rent control ballot question. the three organizations, which together represent thousands of employers across industries in massachusetts",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d10d2920d9f696ce64bb71",
+       "headline": "Real estate-backed study warns that rent control could tank Massachusetts property values - The Boston Globe",
+       "url": "http://www.bostonglobe.com/2026/03/12/business/rent-control-property-values-massachusetts/",
+       "publisher": "bostonglobe.com",
+       "published_at": "2026-03-23T22:00:29",
+       "lede": "a new study — commissioned by the greater boston real estate board, one of the real estate supergroups behind the rent control opposition campaign — found that the rent cap policy on track to go before voters in november would, if passed, shrink the expected growth of the residential property",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.48
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.45
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c4193d2f2f15690319fced",
+       "headline": "Manitoba government proposes new grocery rules, rent control, some hydro hikes",
+       "url": "https://canadiangrocer.com/manitoba-government-proposes-new-grocery-rules-rent-control-some-hydro-hikes",
+       "publisher": "canadiangrocer.com",
+       "published_at": "2026-03-12T23:34:42",
+       "lede": "new rule would forbid sellers from using customer data to raise pricesthe manitoba government is planning to expand rent control, set new rules for grocers and charge higher electricity rates for some large users.among more than a dozen bills and regulations put forward is one that would expand the province's",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.63
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2aaf09b322e6b3e9f31c4",
+       "headline": "Manitoba government proposes new grocery rules, rent control, some hydro hikes",
+       "url": "https://www.winnipegfreepress.com/arts-and-life/food/2026/03/12/manitoba-government-proposes-new-grocery-rules-rent-control-some-hydro-hikes",
+       "publisher": "winnipegfreepress.com",
+       "published_at": "2026-03-12T22:04:27",
+       "lede": "winnipeg – the manitoba government announced plans thursday to expand rent control, raise electricity rates for some large users and keep grocery prices from fluctuating for different consumers. the proposals were among more than 15 bills and potential regulations introduced at the legislature before politicians broke for the weekend. the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.68
+        },
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3d25cc921ef846d3368f0",
+       "headline": "STUDY: Rent Control Could Cost Massachusetts $300B In Lost Property Values",
+       "url": "https://www.bisnow.com/boston/news/multifamily/rent-control-could-cost-massachusetts-300b-property-values-study-133627",
+       "publisher": "bisnow.com",
+       "published_at": "2026-03-12T15:27:00",
+       "lede": "as real estate groups line up to fight the rent control initiative on the massachusetts ballot this fall, a new economic report shows what may be at stake.the towers at longfellow apartments in bostonan economic analysis conducted by the tufts university center for state policy analysis found that if the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.43
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a70d78fa4844c9c614ce",
+       "headline": "I didn’t know their struggles; I apologise to Rent Control staff for name-calling – Acting Commissioner - Adomonline.com",
+       "url": "https://www.adomonline.com/i-didnt-know-their-struggles-i-apologise-to-rent-control-staff-for-name-calling-acting-commissioner/",
+       "publisher": "adomonline.com",
+       "published_at": "2026-03-11T12:16:30",
+       "lede": "the acting rent commissioner, frederick opoku, has publicly apologised to staff of the rent control department for his previous criticisms of the institution.speaking in an interview on dwaso nsem on adom fm, mr. opoku reflected on his earlier views about the department’s performance before assuming office, saying his perspective has",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.42
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "ghana",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc92156bf4fc1dd52fae6d",
+       "headline": "Fewer than half of Providence apartments would be rent-controlled under current proposal, city estimates - The Boston Globe",
+       "url": "https://www.bostonglobe.com/2026/02/20/metro/rent-control-providence-city-council-stabilization/",
+       "publisher": "bostonglobe.com",
+       "published_at": "2026-02-21T22:01:39",
+       "lede": "a city spokesperson said mancini’s estimate is preliminary and does not yet account for all of the exemptions to rent control written into the proposal, including an exception for new construction.the newly-calculated estimate, which has been elusive since the proposal was released in january, was revealed last week by larry",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b0fa9c37f6c5e6629f9a7",
+       "headline": "Boston Mayor Wu says she would support rent control ballot question",
+       "url": "https://www.yahoo.com/news/articles/boston-mayor-wu-says-she-161126291.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-11T16:11:26",
+       "lede": "boston mayor michelle wu said this week that if a proposed ballot question implementing rent control statewide made it to a vote this fall, she would vote in support. “it’s not perfect,” she said of the ballot question during an interview on gbh’s boston public radio on tuesday. “but i’m",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.79,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.61
+        },
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfbc10da2167bba6002deb",
+       "headline": "**California Rent Control Bill Stalls in Committee** A bill proposed in the California Assembly to expand rent control across the state has failed to advance, effectively halting its progress for the current legislative session. The legislation, introduced by Assemblymember Ash Kalra (D-San Jose), d",
+       "url": "https://cremarketbeat.com/california-rent-control-legislation-fails-to-advance-in-committee/",
+       "publisher": "cremarketbeat.com",
+       "published_at": "2026-02-06T00:00:00",
+       "lede": "**california rent control bill stalls in committee** a bill proposed in the california assembly to expand rent control across the state has failed to advance, effectively halting its progress for the current legislative session. the legislation, introduced by assemblymember ash kalra (d-san jose), did not secure enough votes to move",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 338,
+         "path": "/Law & Government/Legal/Real Estate Law",
+         "score": 0.89
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        },
+        {
+         "code": 398,
+         "path": "/Real Estate/Real Estate Listings/Residential Rentals",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "ash kalra"
+       ]
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 35,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wNiAwMDowMDowMCIsImkiOiI2OWRmYmMxMGRhMjE2N2JiYTYwMDJkZWIiLCJwIjo3fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.528,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.531
+    }
+   }
+  }
+ ]
+}

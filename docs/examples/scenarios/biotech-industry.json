@@ -1,0 +1,983 @@
+{
+ "slug": "biotech-industry",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:53:28Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "biotech",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "biotech",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10201,
+     "tone": {
+      "carrying": 10191,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1077,
+        "share_pct": 10.57
+       },
+       {
+        "group": "neutral",
+        "count": 219,
+        "share_pct": 2.15
+       },
+       {
+        "group": "positive",
+        "count": 8895,
+        "share_pct": 87.28
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10201,
+      "count": 6497,
+      "share_pct": 63.69
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.663,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.666
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "biotech",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "biotech",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2057,
+       "critical": 1363,
+       "critical_pct": 66.3,
+       "negative": 306,
+       "positive": 1703,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1686,
+       "critical": 1150,
+       "critical_pct": 68.2,
+       "negative": 200,
+       "positive": 1466,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1816,
+       "critical": 1200,
+       "critical_pct": 66.1,
+       "negative": 300,
+       "positive": 1490,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 11481,
+       "critical": 1373,
+       "critical_pct": 12.0,
+       "negative": 374,
+       "positive": 11079,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2433,
+       "critical": 1554,
+       "critical_pct": 63.9,
+       "negative": 250,
+       "positive": 2143,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2481,
+       "critical": 1713,
+       "critical_pct": 69.0,
+       "negative": 222,
+       "positive": 2235,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2220,
+       "critical": 1554,
+       "critical_pct": 70.0,
+       "negative": 223,
+       "positive": 1964,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2274,
+       "critical": 1494,
+       "critical_pct": 65.7,
+       "negative": 272,
+       "positive": 1959,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2500,
+       "critical": 1575,
+       "critical_pct": 63.0,
+       "negative": 183,
+       "positive": 2275,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2945,
+       "critical": 1873,
+       "critical_pct": 63.6,
+       "negative": 292,
+       "positive": 2586,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2195,
+       "critical": 1457,
+       "critical_pct": 66.4,
+       "negative": 286,
+       "positive": 1847,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2561,
+       "critical": 1592,
+       "critical_pct": 62.2,
+       "negative": 316,
+       "positive": 2187,
+       "partial_period": false
+      }
+     ],
+     "total": 36649,
+     "critical_total": 17898,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.073,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.077
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "biotech",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "biotech",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10201,
+     "carrying": 4958,
+     "availability_pct": 48.6,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2685,
+       "share_pct": 26.32
+      },
+      {
+       "country": "china",
+       "count": 443,
+       "share_pct": 4.34
+      },
+      {
+       "country": "india",
+       "count": 413,
+       "share_pct": 4.05
+      },
+      {
+       "country": "united kingdom",
+       "count": 255,
+       "share_pct": 2.5
+      },
+      {
+       "country": "australia",
+       "count": 205,
+       "share_pct": 2.01
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 957
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.059,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.069
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "biotech",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "biotech",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "biotechnology innovations in medicine",
+       "count": 713,
+       "share": 12.34,
+       "lift": 1007.66,
+       "baseline_count": 1,
+       "previous_period_count": 413,
+       "delta_pct": 72.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oncology and targeted therapy advancements",
+       "count": 670,
+       "share": 11.6,
+       "lift": 946.89,
+       "baseline_count": 1,
+       "previous_period_count": 560,
+       "delta_pct": 19.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gene therapy and crispr technologies",
+       "count": 613,
+       "share": 10.61,
+       "lift": 866.33,
+       "baseline_count": 1,
+       "previous_period_count": 467,
+       "delta_pct": 31.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease therapies and orphan drugs",
+       "count": 507,
+       "share": 8.78,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 458,
+       "delta_pct": 10.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "drug discovery and development processes",
+       "count": 329,
+       "share": 5.7,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 171,
+       "delta_pct": 92.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 10201,
+     "carrying": 5776,
+     "carrier_share_pct": 56.62,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.025,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.03
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "biotech",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "biotech",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2b02785cefb83fe86640a6",
+       "headline": "Janux Halts EGFR-Targeted T-cell Engager Program",
+       "url": "http://www.precisionmedicineonline.com/precision-oncology/janux-halts-egfr-targeted-t-cell-engager-program",
+       "publisher": "precisionmedicineonline.com",
+       "published_at": "2026-04-29T14:47:31",
+       "lede": "new york – janux therapeutics has decided to stop developing janx008, an egfr-targeted tumor-activated t-cell engager (tractr), in egfr-positive solid tumors. in a statement this week, the san diego-based biotech said it halted the program after reviewing data within a phase ia dose-escalation and expansion study involving patients with multiple",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.89
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9ee7c37f6c5e66d98b21",
+       "headline": "Janux Halts EGFR-Targeted T-cell Engager Program",
+       "url": "https://www.precisionmedicineonline.com/precision-oncology/janux-halts-egfr-targeted-t-cell-engager-program",
+       "publisher": "precisionmedicineonline.com",
+       "published_at": "2026-04-29T14:47:31",
+       "lede": "new york – janux therapeutics has decided to stop developing janx008, an egfr-targeted tumor-activated t-cell engager (tractr), in egfr-positive solid tumors. in a statement this week, the san diego-based biotech said it halted the program after reviewing data within a phase ia dose-escalation and expansion study involving patients with multiple",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.89
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f231fec6105443aa5fc27e",
+       "headline": "Biotech company patenting world's first AI voice test for substance abuse",
+       "url": "https://themarketonline.ca/biotech-company-patenting-worlds-first-ai-voice-test-for-substance-abuse-2026-04-29/",
+       "publisher": "themarketonline.ca",
+       "published_at": "2026-04-29T12:52:00",
+       "lede": "biotech company mindbio therapeutics (cse:mbio) filed a patent application for the world’s first ai model capable of detecting alcohol and drug use though vocal analysis. the technology offers clear appeal across heavily regulated industries, holding the potential for multiple revenue streams once commercial testing gets underway in q2. mindbio stock",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.6
+        },
+        {
+         "code": 799,
+         "path": "/Health/Substance Abuse/Drug & Alcohol Testing",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "mindbio therapeutics"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f229cf27117df83f943f7a",
+       "headline": "What will define the winners in a crowded GLP-1 era?  - Drug Discovery World (DDW)",
+       "url": "https://www.ddw-online.com/what-will-define-the-winners-in-a-crowded-glp-1-era-41438-202604/",
+       "publisher": "ddw-online.com",
+       "published_at": "2026-04-29T09:08:36",
+       "lede": "hh kim, ceo and president of metavia, asks what the next generation of glp-1 drugs might look like. over the past two decades, only a few biotech sectors have experienced a hype cycle as rapid and publicly frenzied as the obesity drug sector. in just over a year, glp-1s have",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eecfe83fc01faba667903",
+       "headline": "A 20-Year Mouse Cloning Experiment Reached a Grim Breaking Point",
+       "url": "https://www.yahoo.com/news/articles/20-mouse-cloning-experiment-reached-123200085.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T12:32:00",
+       "lede": "the post a 20-year mouse cloning experiment reached a grim breaking point appeared first on a-z animals. once in a blue moon, an animal cloning story appears in the headlines before disappearing back into the ether. cloning is one of the most novel feats in biotech, so one wonders why",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.81
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab22727212302c5f4cfe",
+       "headline": "IPO Pipeline Thaws in 2026: Cerebras AI Chips, Clean Energy Giants X-energy and Fervo Lead Massive Public Debuts",
+       "url": "https://beamstart.com/news/the-ipo-pipeline-finally-gets-17770286302730",
+       "publisher": "beamstart.com",
+       "published_at": "2026-04-24T12:49:25",
+       "lede": "the ipo pipeline for venture-backed startups is finally thawing, with a surge of public s-1 filings signaling genuine momentum after years of market caution. high-profile companies in ai, semiconductors, clean energy, biotech, space, and defense are driving this revival, contrasting sharply with the absence of traditional software firms. ai and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.51
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a61f25cefb83fe8fa2553",
+       "headline": "EU privacy regulators adopt a single data-processing lawful basis for clinical trials",
+       "url": "https://www.osborneclarke.com/insights/eu-privacy-regulators-adopt-single-data-processing-lawful-basis-clinical-trials",
+       "publisher": "osborneclarke.com",
+       "published_at": "2026-04-24T07:46:34",
+       "lede": "the edpb and the edps back the proposed european biotech act but urge stronger safeguards for health and genetic data europe's data protection authorities have backed the eu's proposed european biotech act but warned that the drive for regulatory simplification must not come at the cost of weakening the rights",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69eaf628eb123d7f5caf754d",
+       "headline": "Aktien von RevMed und BioNTech sinken: Neue Wirkstoffe wecken Hoffnung bei Bauchspeicheldrüsenkrebs",
+       "url": "https://www.finanzen.ch/nachrichten/aktien/aktien-von-revmed-und-biontech-sinken-neue-wirkstoffe-wecken-hoffnung-bei-bauchspeicheldruesenkrebs-1036047756",
+       "publisher": "finanzen.ch",
+       "published_at": "2026-04-22T20:02:00",
+       "lede": "• breakthrough in cancer research: experimental medicine for pancreatic cancer• personalized mrna vaccine for patients biotech shares in the focus of investors breakthrough in the fight against pancreatic cancer pancreatic cancer has long been considered one of the most difficult to treat diseases, as over 90 percent of tumours have",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.94
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e883aa9baafc7356916e98",
+       "headline": "SEC accuses ex-adviser associate of trading biotech tips through relative",
+       "url": "https://www.investmentnews.com/regulation-legal-compliance/sec-accuses-ex-adviser-associate-of-trading-biotech-tips-through-relative/266239",
+       "publisher": "investmentnews.com",
+       "published_at": "2026-04-21T17:58:34",
+       "lede": "a senior associate allegedly traded biotech deals in a relative's account. the sec says he pocketed about $65,000. a new york investment adviser's former senior associate allegedly traded biotech stocks in a relative's account using confidential deal data, pocketing roughly $65,000. the sec says rakesh ahuja, 42, spent years inside",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.78
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e995c5bdd09a23d08d52ae",
+       "headline": "Medtronic: During an Altaviva Implant, the Patient Talked About Lunch. That Was the Point",
+       "url": "https://www.finanznachrichten.de/nachrichten-2026-04/68255640-medtronic-during-an-altaviva-implant-the-patient-talked-about-lunch-that-was-the-point-200.htm",
+       "publisher": "finanznachrichten.de",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "the altaviva device was recently named a 2026 edison award winner in the health, medical and biotech category. northampton, ma / access newswire / april 21, 2026 / when sarah tapani sat in on one of the first altaviva implants, the patient wasn't focused on the procedure. she was chatting",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.73,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.6
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.57
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e884c59baafc7356921eb2",
+       "headline": "Biotech has become a good news story. Let the sun shine",
+       "url": "https://www.biospace.com/drug-development/biotech-has-become-a-good-news-story-let-the-sun-shine",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-20T14:41:42",
+       "lede": "doubling survival in pancreatic cancer, a long-fought rare disease approval, a massive ipo and ambitious biotech entrepreneurs have <i>biospace</i> senior editor annalee armstrong feeling upbeat about the biotech scene. html embeddoes it feel a little weird to be reading so much good biotech news lately? trust me, from the other",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.78
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.59
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "biospace"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e992e0bdd09a23d08af682",
+       "headline": "Kailera makes history with record-breaking $625m IPO - Pharmaceutical Technology",
+       "url": "https://www.pharmaceutical-technology.com/news/kailera-therapeutics-625m-biotech-ipo/",
+       "publisher": "pharmaceutical-technology.com",
+       "published_at": "2026-04-17T14:30:13",
+       "lede": "kaliera’s $625m ipo is one of the largest in biotech history. credit: alex syu / shutterstock.com. obesity biotech kailera therapeutics has set its sights on the us public market through an upsized $625m ipo, marking one of the largest public offerings in the sector’s history. in a 16 april statement,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.61
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.54
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "kailera"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e865e35cfa3e5ba5f2f347",
+       "headline": "In Brief This Week: Grace Science, Sophia Genetics, City of Hope, Medera",
+       "url": "https://www.precisiononcologynews.com/precision-oncology/brief-week-grace-science-sophia-genetics-city-hope-medera",
+       "publisher": "precisiononcologynews.com",
+       "published_at": "2026-04-17T13:18:00",
+       "lede": "new york – the us food and drug administration has granted regenerative medicine advanced therapy (rmat) designation to gs-100, a gene therapy that grace science is developing for ngly1 deficiency, the menlo park, california-based biotech said this week. rmat designation is for treatments that meet the fda's definition of a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.77
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "grace science",
+        "gene therapy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8ecf65cfa3e5ba5575cfc",
+       "headline": "Hims & Hers Stock: How RFK Jr Loosened Peptide Regulations and Sent Shares Higher",
+       "url": "https://www.barrons.com/articles/hims-hers-stock-rfk-peptides-regulation-46f9b697",
+       "publisher": "barrons.com",
+       "published_at": "2026-04-16T12:46:00",
+       "lede": "biotech and pharma how rfk jr. sent hims & hers stock higher by mackenzie tatananni share add us on google choose barron's as a preferred source of financial news resize in this article hims novo.b spx hims & hers health acquired a peptide manufacturing facility in california earlier this year.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.83
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e84b387bb1410d4c65be89",
+       "headline": "Latest News GenScript Sets New Benchmark for Responsible Biotech Leadership with 2025 ESG Report - Businessfortnight",
+       "url": "https://businessfortnight.com/genscript-sets-new-benchmark-for-responsible-biotech-leadership-with-2025-esg-report/",
+       "publisher": "businessfortnight.com",
+       "published_at": "2026-04-14T13:59:04",
+       "lede": "advancing climate action, governance excellence, and global scientific impact piscataway, n.j., april 14, 2026 /prnewswire/ — genscript biotech corporation today announced its 2025 environmental, social, and governance (esg) report, positioning the company at the forefront of responsible innovation in biotechnology and reinforcing its role as a trusted global partner powering",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.79,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.71
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.51
+        },
+        {
+         "code": 187,
+         "path": "/Finance/Investing/Socially Responsible Investing",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "esg",
+        "genscript"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b16315cefb83fe87415d2",
+       "headline": "PanGIA Biotech Non-Invasive Cancer Detection Abstracts Accepted for Presentation at AACR Annual Meeting 2026",
+       "url": "https://www.biospace.com/press-releases/pangia-biotech-non-invasive-cancer-detection-abstracts-accepted-for-presentation-at-aacr-annual-meeting-2026",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-14T13:39:06",
+       "lede": "highlights the continued expansion of the diagnostic capabilities of the pangia analysis system to include oral cancer delray beach, fla., april 14, 2026 /prnewswire/ -- pangia biotech, inc. (\"pangia biotech\" or \"company\") announced that two research abstracts have been accepted for presentation at the american association for cancer research (\"aacr\")",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.75,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.8
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 982,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNCAxMzozOTowNiIsImkiOiI2YTJiMTYzMTVjZWZiODNmZTg3NDE1ZDIiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.294,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.297
+    }
+   }
+  }
+ ]
+}

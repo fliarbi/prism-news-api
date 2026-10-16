@@ -1,0 +1,859 @@
+{
+ "slug": "polio-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:27Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "polio",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "polio",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 733,
+     "tone": {
+      "carrying": 726,
+      "availability_pct": 99.05,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 362,
+        "share_pct": 49.86
+       },
+       {
+        "group": "neutral",
+        "count": 18,
+        "share_pct": 2.48
+       },
+       {
+        "group": "positive",
+        "count": 346,
+        "share_pct": 47.66
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 733,
+      "count": 627,
+      "share_pct": 85.54
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.551,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.562
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "polio",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "polio",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 294,
+       "critical": 227,
+       "critical_pct": 77.2,
+       "negative": 149,
+       "positive": 126,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 155,
+       "critical": 137,
+       "critical_pct": 88.4,
+       "negative": 92,
+       "positive": 58,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 193,
+       "critical": 133,
+       "critical_pct": 68.9,
+       "negative": 120,
+       "positive": 72,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 267,
+       "critical": 219,
+       "critical_pct": 82.0,
+       "negative": 188,
+       "positive": 71,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 326,
+       "critical": 296,
+       "critical_pct": 90.8,
+       "negative": 228,
+       "positive": 95,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 239,
+       "critical": 208,
+       "critical_pct": 87.0,
+       "negative": 102,
+       "positive": 130,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 120,
+       "critical": 108,
+       "critical_pct": 90.0,
+       "negative": 58,
+       "positive": 60,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 263,
+       "critical": 204,
+       "critical_pct": 77.6,
+       "negative": 65,
+       "positive": 193,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 117,
+       "critical": 97,
+       "critical_pct": 82.9,
+       "negative": 56,
+       "positive": 52,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 232,
+       "critical": 212,
+       "critical_pct": 91.4,
+       "negative": 120,
+       "positive": 105,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 152,
+       "critical": 128,
+       "critical_pct": 84.2,
+       "negative": 70,
+       "positive": 79,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 232,
+       "critical": 190,
+       "critical_pct": 81.9,
+       "negative": 116,
+       "positive": 110,
+       "partial_period": false
+      }
+     ],
+     "total": 2590,
+     "critical_total": 2159,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.474,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.477
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "polio",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "polio",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 733,
+     "carrying": 408,
+     "availability_pct": 55.66,
+     "items": [
+      {
+       "country": "united states",
+       "count": 186,
+       "share_pct": 25.38
+      },
+      {
+       "country": "pakistan",
+       "count": 38,
+       "share_pct": 5.18
+      },
+      {
+       "country": "india",
+       "count": 34,
+       "share_pct": 4.64
+      },
+      {
+       "country": "nigeria",
+       "count": 29,
+       "share_pct": 3.96
+      },
+      {
+       "country": "united kingdom",
+       "count": 12,
+       "share_pct": 1.64
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 109
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.666,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.668
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "polio",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "polio",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "global vaccination campaigns (e.g., who, unicef)",
+       "count": 79,
+       "share": 17.32,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 158,
+       "delta_pct": -50.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "vaccine equity and access in low-income regions",
+       "count": 49,
+       "share": 10.75,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 54,
+       "delta_pct": -9.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "vaccine distribution and cold chain logistics",
+       "count": 36,
+       "share": 7.89,
+       "lift": 644.45,
+       "baseline_count": 1,
+       "previous_period_count": 23,
+       "delta_pct": 56.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vaccine myths and misinformation countermeasures",
+       "count": 35,
+       "share": 7.68,
+       "lift": 626.55,
+       "baseline_count": 1,
+       "previous_period_count": 45,
+       "delta_pct": -22.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "historical perspectives on vaccine development",
+       "count": 32,
+       "share": 7.02,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 14,
+       "delta_pct": 128.6,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 733,
+     "carrying": 456,
+     "carrier_share_pct": 62.21,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.19,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.192
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "polio",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "polio",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2ad113c37f6c5e66fda3d3",
+       "headline": "Formula 1 driver Romain Grosjean partners with GPEI to ‘finish the race’ against Polio for World Immunisation Week | SportsZ News",
+       "url": "https://sportsz.news/news/formula-1-driver-romain-grosjean-partners-with-gpei-to-finish-the-race-against-polio-for-world-immunisation-week/",
+       "publisher": "sportsz.news",
+       "published_at": "2026-04-29T09:56:05",
+       "lede": "april 29, 2026 – during world immunisation week (24-30 april), the global polio eradication initiative (gpei) is launching the last square campaign to raise awareness of the urgent need to end polio, in partnership with formula 1 driver romain grosjean. drawing inspiration from the global spectacle of formula 1 and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f229a227117df83f9429f0",
+       "headline": "Formula 1 driver Romain Grosjean partners with GPEI to ‘finish the race’ against Polio for World Immunisation Week - Online Media Cafe",
+       "url": "https://onlinemediacafe.com/news/formula-1-driver-romain-grosjean-partners-with-gpei-to-finish-the-race-against-polio-for-world-immunisation-week/",
+       "publisher": "onlinemediacafe.com",
+       "published_at": "2026-04-29T09:55:35",
+       "lede": "share post share april 29, 2026 – during world immunisation week (24-30 april), the global polio eradication initiative (gpei) is launching the last square campaign to raise awareness of the urgent need to end polio, in partnership with formula 1 driver romain grosjean. drawing inspiration from the global spectacle of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "formula 1"
+       ],
+       "people": [
+        "romain grosjean"
+       ]
+      },
+      {
+       "id": "69f22906c6105443aa5cdae3",
+       "headline": "Formula 1 driver Romain Grosjean partners with GPEI to ‘finish the race’ against Polio for World Immunisation Week",
+       "url": "https://mediabulletins.com/news/formula-1-driver-romain-grosjean-partners-with-gpei-to-finish-the-race-against-polio-for-world-immunisation-week/",
+       "publisher": "mediabulletins.com",
+       "published_at": "2026-04-29T09:55:30",
+       "lede": "april 29, 2026 – during world immunisation week (24-30 april), the global polio eradication initiative (gpei) is launching the last square campaign to raise awareness of the urgent need to end polio, in partnership with formula 1 driver romain grosjean. drawing inspiration from the global spectacle of formula 1 and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "formula 1"
+       ],
+       "people": [
+        "romain grosjean"
+       ]
+      },
+      {
+       "id": "69f21894da8ae7be8d2223ed",
+       "headline": "Formula 1 driver Romain Grosjean partners with GPEI to ‘finish the race’ against Polio for World Immunisation Week",
+       "url": "https://businessnewsthisweek.com/news/formula-1-driver-romain-grosjean-partners-with-gpei-to-finish-the-race-against-polio-for-world-immunisation-week/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-04-29T09:55:28",
+       "lede": "april 29, 2026 – during world immunisation week (24-30 april), the global polio eradication initiative (gpei) is launching the last square campaign to raise awareness of the urgent need to end polio, in partnership with formula 1 driver romain grosjean. drawing inspiration from the global spectacle of formula 1 and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "formula 1"
+       ],
+       "people": [
+        "romain grosjean"
+       ]
+      },
+      {
+       "id": "69efaa1e727212302c5e9088",
+       "headline": "Letters: I survived polio. I want others to be spared that ordeal.",
+       "url": "https://www.chicagotribune.com/2026/04/25/letters-042526-polio/",
+       "publisher": "chicagotribune.com",
+       "published_at": "2026-04-25T10:00:46",
+       "lede": "at a time when many have forgotten the threat of infectious diseases like polio, i feel a duty as a polio survivor to remind the public that polio anywhere is a threat everywhere. the polio vaccine is one of the greatest public health achievements of our time, protecting against a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.26,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9aa5275f157062cb3ce8a",
+       "headline": "The Victorian-era disease that 'hasn't disappeared' from England",
+       "url": "https://www.manchestereveningnews.co.uk/news/greater-manchester-news/victorian-era-disease-hasnt-disappeared-33787059",
+       "publisher": "manchestereveningnews.co.uk",
+       "published_at": "2026-04-17T13:38:30",
+       "lede": "believed by many to have been consigned to the victorian era, polio has been detected in engand for the tenth time in just two years. the highly contagious viral infection primarily affects young children. in rare cases it can attack the nervous system, leading to paralysis - most commonly in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.27,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.69
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e0fa9baafc7356dc4678",
+       "headline": "Polio team threatened in Pakistan, case registered | Indiablooms - First Portal on Digital News Management",
+       "url": "https://www.indiablooms.com/world/polio-team-threatened-in-pakistan-case-registered/details",
+       "publisher": "indiablooms.com",
+       "published_at": "2026-04-17T12:23:12",
+       "lede": "pakistani police have registered a case against four individuals for allegedly threatening a polio vaccination team. photo: chatgpt recreated pakistani police have registered a case against four individuals for allegedly threatening a polio vaccination team in sadiqabad on wednesday, according to media reports. no arrests have been made so far.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.41
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8dd417bb1410d4cd01e9c",
+       "headline": "Courage Amidst Conflict: Pakistan's Polio Battleground | Law-Order",
+       "url": "https://www.devdiscourse.com/article/law-order/3875184-courage-amidst-conflict-pakistans-polio-battleground",
+       "publisher": "devdiscourse.com",
+       "published_at": "2026-04-15T14:20:10",
+       "lede": "in a troubling escalation of violence against health initiatives, a police officer was killed and another wounded in two separate incidents targeting polio vaccination teams in pakistan on wednesday, authorities disclosed. the attacks unfolded amid pakistan's ongoing battle against polio, one of the few countries where the virus still persists.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.65
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.42
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8431b7bb1410d4c60a7a5",
+       "headline": "No polio case reported in Balochistan during last 15 months",
+       "url": "https://www.24newshd.tv/14-Apr-2026/polio-case-reported-balochistan-last-15-months",
+       "publisher": "24newshd.tv",
+       "published_at": "2026-04-14T07:31:47",
+       "lede": "efforts to make balochistan a polio-free province have begun to bear fruit as no polio case has been reported in the province during the last 15 months, reported 24newshd tv channel on tuesday. according to balochistan health minister bakht kakar, eliminating polio in the province is a major success of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.86,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "pakistan",
+       "organizations": [
+        "cco"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8b8af7bb1410d4cb21ac8",
+       "headline": "Suspected militants kill police officer assigned to guard polio team",
+       "url": "https://abcnews.com/International/wireStory/suspected-militants-kill-police-officer-assigned-guard-polio-131984411",
+       "publisher": "abcnews.com",
+       "published_at": "2026-04-13T09:31:56",
+       "lede": "suspected militants have opened fire on a vehicle carrying police officers assigned to protect polio workers in northwestern pakistan, killing one of them and wounding four others islamabad -- suspected militants opened fire on a vehicle carrying police officers assigned to protect polio workers in northwestern pakistan on tuesday, killing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.69
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e63fdd2461615d5f42e326",
+       "headline": "Tragedy Strikes: Militants Target Polio Vaccination Team in Pakistan | Health",
+       "url": "https://www.devdiscourse.com/article/health/3872059-tragedy-strikes-militants-target-polio-vaccination-team-in-pakistan",
+       "publisher": "devdiscourse.com",
+       "published_at": "2026-04-13T08:56:32",
+       "lede": "in a grave incident in pakistan's khyber pakhtunkhwa province, militants attacked a security contingent protecting a polio vaccination team, leading to the death of a police constable and injuring four others. the attack unfolded in chapri waziran, hangue district, on the campaign's opening day. the attackers targeted the police, prompting",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.81
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e641112be6445e46089505",
+       "headline": "Policeman martyred, four hurt in Hangu attack on polio security team",
+       "url": "https://www.24newshd.tv/13-Apr-2026/policeman-martyred-four-hurt-hangu-attack-polio-security-team",
+       "publisher": "24newshd.tv",
+       "published_at": "2026-04-13T06:35:00",
+       "lede": "a police officer was martyred and four others injured in an attack on a security team assigned to protect polio workers in hangu, khyber pakhtunkhwa, as pakistan launched its second nationwide vaccination campaign of the year on monday. according to the 24newshd tv channel, the incident took place near the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.59
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.52
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bb2b7bb1410d4cb43ab0",
+       "headline": "WHO Sending 1.2 Million Polio Vaccines to Gaza as Israel Continues Its Genocidal War",
+       "url": "https://www.democracynow.org/2024/8/8/headlines/who_sending_12_million_polio_vaccines_to_gaza_as_israel_continues_its_genocidal_war",
+       "publisher": "democracynow.org",
+       "published_at": "2026-04-03T00:00:00",
+       "lede": "the world health organization has announced plans to send 1.2 million polio vaccine doses to gaza amid fears of a polio outbreak after the virus was detected in wastewater. over the past 10 months, israel has destroyed all of gaza’s wastewater treatment plants and most of gaza’s sewage pumps. the",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.87,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.91
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e29423d754bf662cd43288",
+       "headline": "Risk of POLIO outbreak in UK is 'highest in a generation' - the 6 signs to know",
+       "url": "https://www.thescottishsun.co.uk/health/16112417/polio-outbreak-uk-highest-risk-generation/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-04-02T15:56:49",
+       "lede": "the risk of a polio outbreak hitting the uk is now the “highest in a generation”, leading health experts have warned. great britain was declared clear of polio in 2003 with the last case identified in 1984. sign up for scottish sun newsletter thank you! email address please provide a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.84
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 192,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xOSAxMDozNToxNyIsImkiOiI2OWJjM2M3NGE3NWZjMGRjYjAyMTNjZjEiLCJwIjo5fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.01,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.016
+    }
+   }
+  }
+ ]
+}

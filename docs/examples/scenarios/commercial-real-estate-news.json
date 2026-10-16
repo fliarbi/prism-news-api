@@ -1,0 +1,1008 @@
+{
+ "slug": "commercial-real-estate-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:22Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "commercial real estate",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "commercial real estate",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4805,
+     "tone": {
+      "carrying": 4803,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 571,
+        "share_pct": 11.89
+       },
+       {
+        "group": "neutral",
+        "count": 109,
+        "share_pct": 2.27
+       },
+       {
+        "group": "positive",
+        "count": 4123,
+        "share_pct": 85.84
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4805,
+      "count": 1254,
+      "share_pct": 26.1
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.155,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.159
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "commercial real estate",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "commercial real estate",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 600,
+       "critical": 150,
+       "critical_pct": 25.0,
+       "negative": 80,
+       "positive": 502,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 570,
+       "critical": 139,
+       "critical_pct": 24.4,
+       "negative": 77,
+       "positive": 476,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 665,
+       "critical": 188,
+       "critical_pct": 28.3,
+       "negative": 104,
+       "positive": 540,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 855,
+       "critical": 216,
+       "critical_pct": 25.3,
+       "negative": 143,
+       "positive": 701,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 739,
+       "critical": 181,
+       "critical_pct": 24.5,
+       "negative": 87,
+       "positive": 635,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 758,
+       "critical": 219,
+       "critical_pct": 28.9,
+       "negative": 83,
+       "positive": 655,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 620,
+       "critical": 173,
+       "critical_pct": 27.9,
+       "negative": 73,
+       "positive": 530,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 779,
+       "critical": 243,
+       "critical_pct": 31.2,
+       "negative": 106,
+       "positive": 649,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 808,
+       "critical": 186,
+       "critical_pct": 23.0,
+       "negative": 86,
+       "positive": 694,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1246,
+       "critical": 417,
+       "critical_pct": 33.5,
+       "negative": 186,
+       "positive": 1040,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1349,
+       "critical": 309,
+       "critical_pct": 22.9,
+       "negative": 141,
+       "positive": 1174,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1402,
+       "critical": 342,
+       "critical_pct": 24.4,
+       "negative": 158,
+       "positive": 1215,
+       "partial_period": false
+      }
+     ],
+     "total": 10391,
+     "critical_total": 2763,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.265,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.293
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "commercial real estate",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "commercial real estate",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4805,
+     "carrying": 2523,
+     "availability_pct": 52.51,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1561,
+       "share_pct": 32.49
+      },
+      {
+       "country": "united kingdom",
+       "count": 463,
+       "share_pct": 9.64
+      },
+      {
+       "country": "india",
+       "count": 140,
+       "share_pct": 2.91
+      },
+      {
+       "country": "canada",
+       "count": 71,
+       "share_pct": 1.48
+      },
+      {
+       "country": "australia",
+       "count": 29,
+       "share_pct": 0.6
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 259
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.743,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.747
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "commercial real estate",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "commercial real estate",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "commercial office buildings",
+       "count": 294,
+       "share": 13.19,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 158,
+       "delta_pct": 86.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "real estate technology (proptech) innovations",
+       "count": 165,
+       "share": 7.4,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 47,
+       "delta_pct": 251.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "data center properties",
+       "count": 133,
+       "share": 5.97,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 26,
+       "delta_pct": 411.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "self-storage facilities",
+       "count": 132,
+       "share": 5.92,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 12,
+       "delta_pct": 1000.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "cannabis dispensaries and grow facilities",
+       "count": 90,
+       "share": 4.04,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 8,
+       "delta_pct": 1025.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4805,
+     "carrying": 2229,
+     "carrier_share_pct": 46.39,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.823,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.826
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "commercial real estate",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "commercial real estate",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f8853c8937ef12fc09c2a7",
+       "headline": "Bethpage shopping center where double-murder took place sells for $5.9 million",
+       "url": "https://www.longislandpress.com/2026/04/30/bethpage-shoppng-murder/",
+       "publisher": "longislandpress.com",
+       "published_at": "2026-04-30T17:28:53",
+       "lede": "a great neck-based commercial real estate investment firm has purchased an 18,710-square-foot shopping center in bethpage for nearly $6 million, with one of the stores at the property, where the scene of a double murder took place in december 2025. fondrenwood two llc purchased the shopping center at 4222-4258 hicksville",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e1877bb1410d4cd391c6",
+       "headline": "Big Banks Are Still Shedding Real Estate Debt",
+       "url": "https://www.bisnow.com/national/news/capital-markets/big-banks-still-shedding-real-estate-debt-and-thats-a-good-thing-134177",
+       "publisher": "bisnow.com",
+       "published_at": "2026-04-17T15:46:18",
+       "lede": "big banks aren’t letting a new war stop them from cleaning up their commercial real estate debt portfolios. three of the country’s largest banks, led by bank of america, continued to whittle away at their nonperforming commercial real estate debt holdings in the first quarter. despite war with iran pushing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.55
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "bank of america"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ac5a95cefb83fe83b9dc5",
+       "headline": "Delhi-Dehradun Expressway Spurs Realty Boom, Prices May Rise 15–25 Per Cent - Outlook Money",
+       "url": "https://outlookmoney.com/invest/delhi-dehradun-expressway-spurs-realty-boom-prices-may-rise-1525",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-14T10:37:04",
+       "lede": "apart from enhancing regional connectivity, the delhi–dehradun economic corridor is also expected to significantly boost real estate valuations across north india.upgrades to major connectivity projects result in shortened travel times, which reinvigorates the demand for residential and commercial real estate along the corridor.micro markets in ncr and western up will",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3560a751e10666661055a",
+       "headline": "Colliers: Iran War To Increase Real Estate Capital Costs, Drive Warehouse Demand",
+       "url": "https://www.bisnow.com/national/news/capital-markets/colliers-iran-war-increase-real-estate-capital-costs-drive-warehouse-demand-134077",
+       "publisher": "bisnow.com",
+       "published_at": "2026-04-10T16:27:31",
+       "lede": "days into a tenuous ceasefire between the u.s. and iran, the impacts of the war for commercial real estate are becoming clearer. a tomahawk land attack missile is fired during operation epic fury on march 21. oil prices remained at around $90 per barrel friday, down from last week but",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.73
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d150d696395f5ca3c3899d",
+       "headline": "India’s Booming Real Estate Market in 2026: Why Commercial Spaces Are in High Demand Again",
+       "url": "https://www.businessoutreach.in/indias-booming-real-estate-market/",
+       "publisher": "businessoutreach.in",
+       "published_at": "2026-03-31T15:52:59",
+       "lede": "in 2021, india’s skyline told a residential story. in 2026, the story looks completely different. commercial real estate is now leading the narrative. if you look closely, the shift is clear. commercial real estate (cre) is no longer a side-player. it has become a major force in the indian economy.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c42a2ae4862fa95aed8443",
+       "headline": "Is commercial real estate a good investment amid volatility in share markets? Here's what experts say",
+       "url": "https://www.indiatvnews.com/business/news/is-commercial-real-estate-a-good-investment-amid-volatility-in-share-markets-here-s-what-experts-say-2026-03-24-1034914",
+       "publisher": "indiatvnews.com",
+       "published_at": "2026-03-24T10:59:37",
+       "lede": "new delhi:at a time when global markets are navigating renewed turbulence, triggered by ongoing middle east conflicts, supply chain disruptions, and persistent inflationary pressures, most asset classes have shown visible signs of strain. yet, almost unexpectedly, commercial real estate in india has held its ground. the sector has not been",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 118,
+         "path": "/Real Estate/Real Estate Listings/Commercial Properties",
+         "score": 0.71
+        },
+        {
+         "code": 386,
+         "path": "/Business & Industrial/Business Services/Warehousing",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "supply chain"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbf49c1c2c193028d69e9c",
+       "headline": "Affordable housing is possible, if we stop ignoring the obvious | Opinion",
+       "url": "http://www.usatoday.com/story/opinion/2026/03/23/affordable-housing-vacant-offices-remote-work/89085433007/",
+       "publisher": "usatoday.com",
+       "published_at": "2026-03-23T09:04:09",
+       "lede": "sam rausopinion contributormarch 23, 2026, 5:04 a.m. etamerican cities are short on housing yet full of unused space. since covid-19-era shutdowns, large chunks of commercial real estate – particularly in urban epicenters where people once commuted to work – have sat vacant for more than half a decade.prior to the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.74
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.72
+        },
+        {
+         "code": 118,
+         "path": "/Real Estate/Real Estate Listings/Commercial Properties",
+         "score": 0.55
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c438cd0b314eaa72e48b2d",
+       "headline": "Affordable housing is possible, if we stop ignoring the obvious | Opinion",
+       "url": "https://www.usatoday.com/story/opinion/2026/03/23/affordable-housing-vacant-offices-remote-work/89085433007/",
+       "publisher": "usatoday.com",
+       "published_at": "2026-03-23T09:04:09",
+       "lede": "sam rausopinion contributormarch 23, 2026, 5:04 a.m. etamerican cities are short on housing yet full of unused space. since covid-19-era shutdowns, large chunks of commercial real estate – particularly in urban epicenters where people once commuted to work – have sat vacant for more than half a decade.prior to the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.74
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.72
+        },
+        {
+         "code": 118,
+         "path": "/Real Estate/Real Estate Listings/Commercial Properties",
+         "score": 0.55
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d41f713680636eebdcdd",
+       "headline": "The Office Isn’t Dead, the Bad Office Is. And Here’s the Data to Prove It.",
+       "url": "https://www.linkedin.com/pulse/office-isnt-dead-bad-heres-data-prove-aihp-group-3jrac",
+       "publisher": "linkedin.com",
+       "published_at": "2026-03-13T09:46:45",
+       "lede": "remember 2020? every linkedin feed looked the same. \"the office is dead.\" \"remote is forever.\" \"commercial real estate is finished.\" think pieces, hot takes, and a whole lot of people who’d never managed a square foot of office space confidently declaring the end of an era. it’s now 2026. and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 118,
+         "path": "/Real Estate/Real Estate Listings/Commercial Properties",
+         "score": 0.77
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.47
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "linkedin"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bcfb9f0bf92aede2f6a499",
+       "headline": "$875B in property debt is due soon — and regional banks may be the weak link Bitcoin is watching",
+       "url": "https://bitcoinethereumnews.com/bitcoin/875b-in-property-debt-is-due-soon-and-regional-banks-may-be-the-weak-link-bitcoin-is-watching/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-03-07T21:26:34",
+       "lede": "a large volume of us commercial real estate (cre) debt is rolling into a very different market from the one that produced it.the mortgage bankers association says $875 billion of commercial and multifamily mortgages are scheduled to mature in 2026, equal to 17% of the roughly $5 trillion of outstanding",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 118,
+         "path": "/Real Estate/Real Estate Listings/Commercial Properties",
+         "score": 0.55
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [
+        "cre"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bc95ef72dfd2e900a40542",
+       "headline": "Supreme Court’s Tariffs Ruling Leaves Real Estate in Familiar Spot",
+       "url": "https://commercialobserver.com/2026/02/supreme-court-tariffs-commercial-real-estate-strategy/",
+       "publisher": "commercialobserver.com",
+       "published_at": "2026-02-27T21:18:49",
+       "lede": "just a week ago, it looked as though the tariff clouds were clearing for commercial real estate.the supreme court had invalidated a major portion of president donald trump’s tariff policies, dangling the prospect of $175 billion in refunds to the more than 300,000 businesses estimated to have paid import duties",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.51
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2a7b47c37f6c5e66c1ef6d",
+       "headline": "I posted on the Daily Diary on Wednesday that I didn’t know whether the continued deterioration throughout a large chunk of the commercial real estate market or more cockroaches starting to emerge in private credit markets was more worrying. One thing seems certain; both areas bear close monitoring ",
+       "url": "https://pro.thestreet.com/market-commentary/cracks-appear-in-credit-markets-amid-echoes-of-great-recession",
+       "publisher": "pro.thestreet.com",
+       "published_at": "2026-02-27T15:00:00",
+       "lede": "i posted on the daily diary on wednesday that i didn’t know whether the continued deterioration throughout a large chunk of the commercial real estate market or more cockroaches starting to emerge in private credit markets was more worrying. one thing seems certain; both areas bear close monitoring for prudent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e29dd29b322e6b3e9c9763",
+       "headline": "Rent Affordability Improves To Best Level Since 2021",
+       "url": "https://www.linkedin.com/pulse/rent-affordability-improves-best-level-since-2021-tim-safransky-cpa-jmgjf",
+       "publisher": "linkedin.com",
+       "published_at": "2026-02-26T13:50:48",
+       "lede": "a commercial real estate market signal renters — and investors — should not ignore with appreciation to kristen smithberg, whose reporting continues to bring timely clarity to shifting housing and commercial real estate conditions, the latest affordability data highlights a subtle but meaningful turning point for u.s. renters and for",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.72
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.64
+        },
+        {
+         "code": 118,
+         "path": "/Real Estate/Real Estate Listings/Commercial Properties",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bcf72c0f7c42aae0d59535",
+       "headline": "Real Estate Braces For Fresh Tariff Whiplash After Supreme Court Ruling",
+       "url": "https://www.bisnow.com/national/news/commercial-real-estate/supreme-court-tariff-trump-response-real-estate-133360",
+       "publisher": "bisnow.com",
+       "published_at": "2026-02-23T22:35:20",
+       "lede": "commercial real estate’s collective sigh of relief after the supreme court’s decision friday to strike down a portion of president donald trump’s tariffs was swiftly followed with a sharp inhale, as the industry soon realized it was entering a new era of uncertainty.the court’s ruling removes tariffs imposed under the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2a73b2c37f6c5e66bcaad3",
+       "headline": "Navi Mumbai Emerging as MMR’s Next Commercial Hub",
+       "url": "https://www.crematrix.com/blog/navi-mumbai-mmrs-next-core-commercial-hub/",
+       "publisher": "crematrix.com",
+       "published_at": "2026-02-18T14:18:00",
+       "lede": "navi mumbai is rapidly evolving from a satellite city into a key growth engine within the mumbai metropolitan region (mmr). according to cre matrix’s latest report, navi mumbai rising: a comprehensive perspective on india’s next commercial real estate hub, this transformation is being fueled by strong occupier demand, a growing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.84,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbf7e0fa3bff8ab9a2457f",
+       "headline": "Lenders Push CRE Owners to Pay Down Debt Before Markets Tighten",
+       "url": "https://propmodo.com/lenders-push-cre-owners-to-pay-down-debt-before-markets-tighten/",
+       "publisher": "propmodo.com",
+       "published_at": "2026-02-17T20:24:44",
+       "lede": "lenders are sending what amounts to a blunt message to commercial real estate owners: manage your loans now, or face pain later. in recent weeks, a string of banks and capital providers has accelerated demands for prepayments, tighter covenants, and voluntary defeasance on loans secured by office and retail properties,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bb3a93cdd39d5d97226fef",
+       "headline": "MBA: Commercial, Multifamily Mortgage Originations to Rise 27 Percent in 2026",
+       "url": "https://rebusinessonline.com/mba-commercial-multifamily-mortgage-originations-to-rise-27-percent-in-2026/",
+       "publisher": "rebusinessonline.com",
+       "published_at": "2026-02-12T12:29:00",
+       "lede": "washington, d.c. — total commercial mortgage origination volume is expected to reach $805.5 billion in 2026, according to the mortgage bankers association (mba). the real estate finance organization announced the commercial real estate finance (cref) forecast at its 2026 commercial/multifamily finance convention and expo this week in san diego.according to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 303,
+         "path": "/Business & Industrial/Business Finance/Commercial Lending",
+         "score": 0.59
+        },
+        {
+         "code": 118,
+         "path": "/Real Estate/Real Estate Listings/Commercial Properties",
+         "score": 0.56
+        },
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.5
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 559,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xMCAxNjo0MzoyNiIsImkiOiI2OWM0MjUwN2ZkYzZmNjYyOWQ5ZmE0ZjYiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.475,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.493
+    }
+   }
+  }
+ ]
+}

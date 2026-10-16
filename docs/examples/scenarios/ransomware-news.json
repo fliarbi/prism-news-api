@@ -1,0 +1,929 @@
+{
+ "slug": "ransomware-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:44Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "ransomware",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ransomware",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5415,
+     "tone": {
+      "carrying": 5410,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3484,
+        "share_pct": 64.4
+       },
+       {
+        "group": "neutral",
+        "count": 21,
+        "share_pct": 0.39
+       },
+       {
+        "group": "positive",
+        "count": 1905,
+        "share_pct": 35.21
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 5414,
+      "count": 4710,
+      "share_pct": 87.0
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.779,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.782
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "ransomware",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ransomware",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1276,
+       "critical": 1119,
+       "critical_pct": 87.7,
+       "negative": 916,
+       "positive": 356,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 961,
+       "critical": 820,
+       "critical_pct": 85.3,
+       "negative": 657,
+       "positive": 297,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1545,
+       "critical": 1161,
+       "critical_pct": 75.1,
+       "negative": 1150,
+       "positive": 389,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1446,
+       "critical": 1256,
+       "critical_pct": 86.9,
+       "negative": 1103,
+       "positive": 339,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1135,
+       "critical": 1011,
+       "critical_pct": 89.1,
+       "negative": 802,
+       "positive": 331,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1258,
+       "critical": 1109,
+       "critical_pct": 88.2,
+       "negative": 811,
+       "positive": 444,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1036,
+       "critical": 897,
+       "critical_pct": 86.6,
+       "negative": 673,
+       "positive": 360,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1149,
+       "critical": 996,
+       "critical_pct": 86.7,
+       "negative": 714,
+       "positive": 428,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1056,
+       "critical": 911,
+       "critical_pct": 86.3,
+       "negative": 682,
+       "positive": 372,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1571,
+       "critical": 1369,
+       "critical_pct": 87.1,
+       "negative": 1056,
+       "positive": 508,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1474,
+       "critical": 1281,
+       "critical_pct": 86.9,
+       "negative": 863,
+       "positive": 604,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1314,
+       "critical": 1149,
+       "critical_pct": 87.4,
+       "negative": 883,
+       "positive": 421,
+       "partial_period": false
+      }
+     ],
+     "total": 15221,
+     "critical_total": 13079,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.404,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.41
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "ransomware",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ransomware",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5415,
+     "carrying": 2002,
+     "availability_pct": 36.97,
+     "items": [
+      {
+       "country": "united states",
+       "count": 995,
+       "share_pct": 18.37
+      },
+      {
+       "country": "united kingdom",
+       "count": 199,
+       "share_pct": 3.67
+      },
+      {
+       "country": "india",
+       "count": 100,
+       "share_pct": 1.85
+      },
+      {
+       "country": "south africa",
+       "count": 55,
+       "share_pct": 1.02
+      },
+      {
+       "country": "china",
+       "count": 54,
+       "share_pct": 1.0
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 599
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.733,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.738
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "ransomware",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ransomware",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "threat intelligence integration for networks",
+       "count": 584,
+       "share": 18.09,
+       "lift": 738.18,
+       "baseline_count": 2,
+       "previous_period_count": 359,
+       "delta_pct": 62.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "ransomware attack vectors",
+       "count": 350,
+       "share": 10.84,
+       "lift": 884.81,
+       "baseline_count": 1,
+       "previous_period_count": 465,
+       "delta_pct": -24.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "malware and threat analysis in network traffic",
+       "count": 454,
+       "share": 14.06,
+       "lift": 573.86,
+       "baseline_count": 2,
+       "previous_period_count": 316,
+       "delta_pct": 43.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "network incident response strategies",
+       "count": 370,
+       "share": 11.46,
+       "lift": 467.69,
+       "baseline_count": 2,
+       "previous_period_count": 238,
+       "delta_pct": 55.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "anomaly detection in network behavior",
+       "count": 147,
+       "share": 4.55,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 79,
+       "delta_pct": 86.1,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 5415,
+     "carrying": 3229,
+     "carrier_share_pct": 59.63,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.41,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.413
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "ransomware",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ransomware",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e863299baafc73567c4b56",
+       "headline": "Cookeville Hospital Discloses Rhysida Breach Hitting 337,917",
+       "url": "https://www.infosecurity-magazine.com/news/cookeville-medical-center-data/",
+       "publisher": "infosecurity-magazine.com",
+       "published_at": "2026-04-16T15:01:00",
+       "lede": "more than 337,000 patients of cookeville regional medical center (crmc) in tennessee have been notified that their personal and medical data was compromised in a july 2025 ransomware attack, the hospital confirmed this week. the 309-bed facility began mailing breach notification letters on april 14, 2026, roughly nine months after",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc3e354a99add5b297e52b",
+       "headline": "Energy Sector Ransomware Threats Surge In 2025",
+       "url": "https://thecyberexpress.com/energy-sector-ransomware-threats-2025/",
+       "publisher": "thecyberexpress.com",
+       "published_at": "2026-03-27T06:49:17",
+       "lede": "the global surge in energy sector ransomware attacks intensified throughout 2025, exposing deep vulnerabilities in critical infrastructure. as organizations prepare for what’s coming next, the lessons are becoming harder to ignore. the systems that power homes, fuel industries, and sustain modern life are under siege, not by isolated hackers, but",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.68
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.54
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a042153220687a966b67f6f",
+       "headline": "Iran-Linked Hackers Wipe 200,000 Devices in Stryker Incident, Redefining Cyberwar",
+       "url": "https://digitalterminal.in/hot-news/iran-linked-hackers-wipe-200000-devices-in-stryker-incident-redefining-cyberwar",
+       "publisher": "digitalterminal.in",
+       "published_at": "2026-03-23T11:03:37",
+       "lede": "the cyberattack on medical device giant stryker has emerged as a stark reminder that the nature of cyber conflict is evolving rapidly, blurring the line between traditional cybercrime and modern warfare. what might initially appear as another ransomware incident has instead unfolded as a deeply disruptive and strategically motivated operation,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.77
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0eaf83285a58da6f300747",
+       "headline": "Interpol Nets 94 Arrests in Major Cybercrime Sweep",
+       "url": "https://www.infosecurity-magazine.com/news/interpol-operation-synergia3-94/",
+       "publisher": "infosecurity-magazine.com",
+       "published_at": "2026-03-13T16:15:00",
+       "lede": "police forces have made 94 arrests in a large-scale law enforcement operation against phishing and ransomware. the effort, codenamed operation synergia iii, ran from july, 18 2025 to january 31, 2026. it was coordinated by interpol and involved law enforcement units from 72 countries as well as private sector partners,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.79
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.66
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3d27aa195857674c7e060",
+       "headline": "Interpol teams up with tech firms to seize 45,000 malicious IPs, servers in global cyber crime crackdown",
+       "url": "https://www.itpro.com/security/cyber-crime/interpol-teams-up-with-tech-firms-to-seize-45-000-malicious-ips-servers-in-global-cyber-crime-crackdown",
+       "publisher": "itpro.com",
+       "published_at": "2026-03-13T11:48:22",
+       "lede": "interpol has taken down more than 40,000 malicious ip addresses and servers as part of an international cyber crime operation targeting phishing, malware and ransomware activities.law enforcement bodies from 72 countries and territories took part in operation synergia iii between july 2025 and the end of january this year, with",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.72
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.64
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9de512ef7157f445b7b56",
+       "headline": "Conduent data breach hits millions across multiple states",
+       "url": "https://www.foxnews.com/tech/conduent-data-breach-hits-millions-across-multiple-states",
+       "publisher": "foxnews.com",
+       "published_at": "2026-02-22T15:00:18",
+       "lede": "new you can now listen to fox news articles!a ransomware attack on government technology giant conduent is turning out to be far bigger than first reported. what initially sounded like a limited incident now appears to affect tens of millions of people across multiple states. in texas alone, at least",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "conduent",
+        "fox news"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e993ad75f157062ca97fb6",
+       "headline": "UMMC clinics close, surgeries delayed today after cyberattack",
+       "url": "https://www.clarionledger.com/story/news/2026/02/19/ummc-clinics-close-cyberattack/88756061007/",
+       "publisher": "clarionledger.com",
+       "published_at": "2026-02-19T15:33:37",
+       "lede": "updated feb. 19, 2026, 1:37 p.m. ct the fbi is investigating after a ransomware attack caused the university of mississippi medical center to close clinics across the state and reschedule some surgeries on thursday, feb. 19 during a news conference, vice chancellor for health affairs louann woodward said a ransomware",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 88,
+         "path": "/Health/Medical Facilities & Services/Other",
+         "score": 0.4
+        },
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbd0a09d363b9587545f3f",
+       "headline": "Rançongiciel : un affilié russe de Phobos a comparu devant la justice française - INCYBER NEWS",
+       "url": "https://incyber.org/article/rancongiciel-affilie-russe-phobos-comparu-devant-justice-francaise/",
+       "publisher": "incyber.org",
+       "published_at": "2026-02-17T07:55:38",
+       "lede": "a russian affiliate of the phobos ransomware gang appeared before the 13th correctional chamber of the paris court, together with his companion, on 11 february 2026. the police arrested them in milan in august 2023. he is accused of attacking 65 organisations in france, for a total damage of 900,000",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.69
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dc9147623c4685114af1fa",
+       "headline": "Kettering Health Notifying Patients of Interlock Breach",
+       "url": "https://www.bankinfosecurity.com/kettering-health-notifying-patients-interlock-breach-a-30774",
+       "publisher": "bankinfosecurity.com",
+       "published_at": "2026-02-17T00:00:00",
+       "lede": "fraud management & cybercrime , incident & breach response , ransomware kettering health notifying patients of interlock breach cybercrime group first listed ohio health system as a data theft victim last june kettering health is notifying an unspecified number of current and former patients and \"affiliates\" of a data breach",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.75
+        },
+        {
+         "code": 88,
+         "path": "/Health/Medical Facilities & Services/Other",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "kettering health"
+       ],
+       "people": []
+      },
+      {
+       "id": "698dbd0f8d29a990b6dc2cf2",
+       "headline": "Nitrogen ransomware programmers lock themselves out of a payment — key management bug encrypts victims' data forever",
+       "url": "https://www.tomshardware.com/tech-industry/cyber-security/nitrogen-ransomware-programmers-lock-themselves-out-of-a-payment-key-management-bug-encrypts-victims-data-forever",
+       "publisher": "tomshardware.com",
+       "published_at": "2026-02-07T12:00:00",
+       "lede": "anyone who's been on the receiving side of a ransomware attack can tell you they didn't have a good day. but what if that day was terrible for not just the victim, but also the attacker? thanks to a coding bug, that's precisely the case with a variant of ransomware",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6996b7f30d0db262fa573762",
+       "headline": "Ingram Micro data breach affects 42,000 individuals",
+       "url": "https://www.techzine.eu/news/security/138091/ingram-micro-data-breach-affects-42000-individuals/",
+       "publisher": "techzine.eu",
+       "published_at": "2026-01-20T10:58:15",
+       "lede": "more than six months after a ransomware attack, ingram micro has announced how many people have been affected. the data breach affected more than 42,000 individuals, including employees and job applicants, whose personal data was stolen between july 2 and july 3, 2025.on july 3, 2025, the it distributor discovered",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ingram micro"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8df559baafc7356db00a0",
+       "headline": "42,000 Impacted by Ingram Micro Ransomware Attack",
+       "url": "https://www.securityweek.com/42000-impacted-by-ingram-micro-ransomware-attack/",
+       "publisher": "securityweek.com",
+       "published_at": "2026-01-19T10:51:28",
+       "lede": "it giant ingram micro is notifying roughly 42,000 people that their personal information was compromised in a ransomware attack. the incident occurred on july 3, 2025, and forced the it products and services distributor to take certain systems offline to contain the attack, which resulted in widespread outages across its",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.48
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ingram micro"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bb2658bb3472e5f4c4dc66",
+       "headline": "Weekly Darkweb – December Week 5, 2025",
+       "url": "https://www.linkedin.com/pulse/weekly-darkweb-december-week-5-2025-s2winc-xqrdc",
+       "publisher": "linkedin.com",
+       "published_at": "2026-01-08T00:00:07",
+       "lede": "this week, we report on cyber threats impacting the media, aerospace, and telecommunications sectors.key incidents include a ransomware attack, the sale of sensitive internal data, and unauthorized system access trading.🔍 subsidiary ‘o’ of japanese media giant ‘t’ infected with lynx ransomware• on december 23, confidential data from company o, a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.7
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6c345cefb83fe80050aa",
+       "headline": "Former incident responders sentenced to 4 years in prison for committing ransomware attacks",
+       "url": "https://cyberscoop.com/incident-responders-ryan-goldberg-kevin-martin-sentenced-ransomware/",
+       "publisher": "cyberscoop.com",
+       "published_at": "2026-04-30T23:29:01",
+       "lede": "two former cybersecurity professionals who moonlighted as cybercriminals, committing a series of ransomware attacks in 2023, were each sentenced to four years in prison, the justice department said thursday. ryan clifford goldberg and kevin tyler martin previously pleaded guilty to one of three charges brought against them in december and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.72
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a6fd43843dd771d24abe",
+       "headline": "VECT ransomware: Why paying won't get your files back - TNGlobal",
+       "url": "https://technode.global/2026/04/30/vect-ransomware-why-paying-wont-get-your-files-back/",
+       "publisher": "technode.global",
+       "published_at": "2026-04-30T09:59:21",
+       "lede": "key findings do not pay the ransom. vect permanently destroys large files rather than locking them. even the attackers cannot recover them. payment will not restore your data. vect partnered with teampcp and breachforums to build one of the largest ransomware affiliate networks ever assembled, giving them a ready-made pipeline",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.49
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1740,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwOTo1OToyMSIsImkiOiI2OWY4YTZmZDQzODQzZGQ3NzFkMjRhYmUiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.163,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.169
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,881 @@
+{
+ "slug": "housing-market-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:55:56Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "housing market",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "housing market",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6918,
+     "tone": {
+      "carrying": 6904,
+      "availability_pct": 99.8,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3728,
+        "share_pct": 54.0
+       },
+       {
+        "group": "neutral",
+        "count": 122,
+        "share_pct": 1.77
+       },
+       {
+        "group": "positive",
+        "count": 3054,
+        "share_pct": 44.24
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6916,
+      "count": 3913,
+      "share_pct": 56.58
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.027,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.029
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "housing market",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "housing market",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1017,
+       "critical": 555,
+       "critical_pct": 54.6,
+       "negative": 573,
+       "positive": 435,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 944,
+       "critical": 555,
+       "critical_pct": 58.8,
+       "negative": 507,
+       "positive": 433,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1508,
+       "critical": 740,
+       "critical_pct": 49.1,
+       "negative": 828,
+       "positive": 664,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1581,
+       "critical": 785,
+       "critical_pct": 49.7,
+       "negative": 847,
+       "positive": 714,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1395,
+       "critical": 828,
+       "critical_pct": 59.4,
+       "negative": 782,
+       "positive": 604,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1226,
+       "critical": 751,
+       "critical_pct": 61.3,
+       "negative": 600,
+       "positive": 601,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1420,
+       "critical": 818,
+       "critical_pct": 57.6,
+       "negative": 834,
+       "positive": 577,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1268,
+       "critical": 722,
+       "critical_pct": 56.9,
+       "negative": 598,
+       "positive": 654,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1510,
+       "critical": 869,
+       "critical_pct": 57.5,
+       "negative": 846,
+       "positive": 650,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1597,
+       "critical": 900,
+       "critical_pct": 56.4,
+       "negative": 841,
+       "positive": 746,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1713,
+       "critical": 970,
+       "critical_pct": 56.6,
+       "negative": 842,
+       "positive": 801,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2098,
+       "critical": 1174,
+       "critical_pct": 56.0,
+       "negative": 1199,
+       "positive": 857,
+       "partial_period": false
+      }
+     ],
+     "total": 17277,
+     "critical_total": 9667,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.69,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.693
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "housing market",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "housing market",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6918,
+     "carrying": 3300,
+     "availability_pct": 47.7,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1621,
+       "share_pct": 23.43
+      },
+      {
+       "country": "united kingdom",
+       "count": 409,
+       "share_pct": 5.91
+      },
+      {
+       "country": "india",
+       "count": 231,
+       "share_pct": 3.34
+      },
+      {
+       "country": "australia",
+       "count": 228,
+       "share_pct": 3.3
+      },
+      {
+       "country": "canada",
+       "count": 133,
+       "share_pct": 1.92
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 678
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.747,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.75
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "housing market",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "housing market",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economy news: housing market trends",
+       "count": 651,
+       "share": 18.97,
+       "lift": 1548.4,
+       "baseline_count": 1,
+       "previous_period_count": 421,
+       "delta_pct": 54.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economic policy impact on businesses",
+       "count": 553,
+       "share": 16.11,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 320,
+       "delta_pct": 72.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "business lending and financing news",
+       "count": 362,
+       "share": 10.55,
+       "lift": 861.02,
+       "baseline_count": 1,
+       "previous_period_count": 338,
+       "delta_pct": 7.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "real estate market forecasting tools",
+       "count": 522,
+       "share": 15.21,
+       "lift": 310.39,
+       "baseline_count": 4,
+       "previous_period_count": 254,
+       "delta_pct": 105.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "regulatory compliance and legal business issues",
+       "count": 180,
+       "share": 5.24,
+       "lift": 428.13,
+       "baseline_count": 1,
+       "previous_period_count": 129,
+       "delta_pct": 39.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6918,
+     "carrying": 3432,
+     "carrier_share_pct": 49.61,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.686,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.689
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "housing market",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "housing market",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2aa0de963d76f4afe972e3",
+       "headline": "'Five homes affordable': Rental market at breaking point for young South Aussies - News | InDaily, Inside South Australia",
+       "url": "https://www.indailysa.com.au/news/just-in/2026/04/30/five-homes-affordable-rental-market-at-breaking-point-for-young-south-aussies",
+       "publisher": "indailysa.com.au",
+       "published_at": "2026-04-30T02:57:30",
+       "lede": "a new rental snapshot shows a single person on a minimum wage could only afford to rent five homes on the south australian housing market in march. renters are being locked out of safe and stable housing as large groups battled for 1,990 listed homes across the state, according to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.66
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f882fabbf1d3145597b1bb",
+       "headline": "How a plan to fix the housing market may be making it worse - realestate.com.au",
+       "url": "https://www.dailytelegraph.com.au/real-estate/national/how-a-plan-to-fix-the-housing-market-may-be-making-it-worse/news-story/bb0c724ab7531d67115aa7e8365a23e9",
+       "publisher": "dailytelegraph.com.au",
+       "published_at": "2026-04-29T19:00:00",
+       "lede": "government attempts to “fix” the housing market could be contributing to the very affordability crisis it was trying to solve. property market analysts have warned that generous first-home buyer support could be partly fuelling the high inflation that has prompted the rba to hike interest rates, making housing pricier. and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.76
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f881dcbbf1d31455971c9f",
+       "headline": "March existing home sales hit slowest pace since 2009. Here's why.",
+       "url": "https://www.bangordailynews.com/2026/04/29/business/business-housing/march-existing-home-sales/",
+       "publisher": "bangordailynews.com",
+       "published_at": "2026-04-29T18:19:14",
+       "lede": "february showed promise for the spring housing market. existing home sales increased, mortgage rates dropped below 6% for the first time in years and home prices weren’t rising as fast as they had been. but that all fell by the wayside in march. data released by the national association of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.88
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22e65c6105443aa5e2849",
+       "headline": "Lloyds takes £151m hit from Iran war as it forecasts rise in UK unemployment",
+       "url": "https://www.theguardian.com/business/2026/apr/29/lloyds-iran-war-forecasts-rise-in-uk-unemployment",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-29T09:06:35",
+       "lede": "lloyds has said that the economic fallout from the middle east conflict could cost it £151m amid rising unemployment and inflation and a slowdown in the housing market. the ftse 100 group, whose brands include lloyds bank, halifax and bank of scotland, issued a downbeat economic forecast that it said",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.68
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "lloyds bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ce30a5706a322e1258c1",
+       "headline": "Canada’s deflating housing bubble stymies wealth effect of booming stock market",
+       "url": "https://www.theglobeandmail.com/investing/article-canadas-deflating-housing-bubble-stymies-wealth-effect-of-booming/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-28T10:39:29",
+       "lede": "canada’s housing market slump, the longest in recent decades, is straining household spending even as a record high domestic stock market generates hundreds of billions of dollars of increased wealth. canada was the only group of seven advanced economy to post a home price decline last year in nominal terms,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5b0bc37f6c5e66acf112",
+       "headline": "Florida's Middle Class Is Being Priced Out—And the Math Is Getting Worse - Zillow Group (NASDAQ:Z)",
+       "url": "https://www.benzinga.com/real-estate/26/04/52056782/floridas-middle-class-is-being-priced-out-and-the-math-is-getting-worse",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-27T10:38:56",
+       "lede": "wealthy transplants are reshaping florida's housing market, pushing out the middle class and the workers who keep the state's economy running, according to a report. the average income of people moving to florida from another state was $122,530, the highest among all u.s. states, according to gay cororaton, chief economist",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.26,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.62
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9b4fd75f157062cb47620",
+       "headline": "Perth’s most expensive places to rent as prices hit a record",
+       "url": "https://www.perthnow.com.au/news/business/property/domain-data-shows-perth-rents-at-new-record-prices-as-housing-market-vacancies-tighten-c-22172876",
+       "publisher": "perthnow.com.au",
+       "published_at": "2026-04-23T04:21:00",
+       "lede": "perth rents have rebounded sharply to jump to new records, as pressure continues across the nation’s housing market. nationally, vacancy rates for rental housing fell to a record low of 0.7 per cent in the march quarter, according to new data from domain. while some tightening was expected in the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.75
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.71
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9afb6bdd09a23d0961791",
+       "headline": "Perth’s most expensive places to rent as prices hit a record",
+       "url": "https://thewest.com.au/business/property/perth-rents-rebound-as-housing-market-vacancies-tighten-c-22172876",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-04-23T04:21:00",
+       "lede": "perth rents have rebounded sharply to jump to new records, as pressure continues across the nation’s housing market. nationally, vacancy rates for rental housing fell to a record low of 0.7 per cent in the march quarter, according to new data from domain. while some tightening was expected in the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.75
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.71
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9915b75f157062ca7ad57",
+       "headline": "Pending home sales see sharpest decline in three months as market headwinds mount - WestsideToday",
+       "url": "https://westsidetoday.com/2026/04/20/pending-home-sales-see-sharpest-decline-in-three-months-as-market-headwinds-mount/",
+       "publisher": "westsidetoday.com",
+       "published_at": "2026-04-20T09:32:26",
+       "lede": "rising mortgage rates and geopolitical uncertainty push the typical time-on-market to a five-year high. u.s. pending home sales dropped 2.4% year-over-year during the four weeks ending april 5, marking the sharpest contraction in three months as high mortgage rates and geopolitical instability cooled the spring housing market. “luxury buyers aren’t",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.68
+        },
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.64
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.56
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87bcc7bb1410d4c83ee4c",
+       "headline": "While higher mortgage rates and increased competition among sellers has dampened typical spring growth, the housing market has shown resilience in the face of global uncertainty, Rightmove reports. Data from the platform shows the average price of a newly listed home increased by 0.8% (+£2,929) this",
+       "url": "https://bebeez.eu/2026/04/20/rightmove-market-surprisingly-resilient-despite-mortgage-rate-rises/",
+       "publisher": "bebeez.eu",
+       "published_at": "2026-04-20T00:00:00",
+       "lede": "while higher mortgage rates and increased competition among sellers has dampened typical spring growth, the housing market has shown resilience in the face of global uncertainty, rightmove reports. data from the platform shows the average price of a newly listed home increased by 0.8% (+£2,929) this month to £373,971 –",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.93
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.81
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "rightmove"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a6ccb5cefb83fe80087e8",
+       "headline": "Housing market resilient despite Iran uncertainty and rate rises – Rightmove - Introducer Today",
+       "url": "https://www.introducertoday.co.uk/breaking-news/2026/04/housing-market-resilient-despite-iran-uncertainty-and-rate-rises-rightmove/",
+       "publisher": "introducertoday.co.uk",
+       "published_at": "2026-04-19T23:05:00",
+       "lede": "the housing market has so far remained surprisingly resilient, despite mortgage rates rising fast in recent weeks due to the uncertainty caused by the war in iran, according to rightmove’s latest housing price index. their latest real-time snapshot of daily market activity shows that buyer demand in april to date,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.87
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2acb4dc37f6c5e66f97331",
+       "headline": "Priced out of Lisbon: When a full-time job isn’t enough",
+       "url": "https://www.dw.com/en/priced-out-of-lisbon-when-a-full-time-job-isnt-enough/video-76841904",
+       "publisher": "dw.com",
+       "published_at": "2026-04-18T11:47:20",
+       "lede": "lisbon is considered a dream city; but when it comes to its housing market, many people who live and work here are fighting to survive. since 2020, rent costs in the greater lisbon area have risen by around 42 per cent, while incomes have stayed largely the same. an increasing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87a8a9baafc73568b9487",
+       "headline": "US mortgage rates drop for second week to 6.3%, Freddie Mac says",
+       "url": "https://www.businesstimes.com.sg/property/us-mortgage-rates-drop-second-week-6-3-freddie-mac-says",
+       "publisher": "businesstimes.com.sg",
+       "published_at": "2026-04-16T22:51:35",
+       "lede": "the housing market has been rattled by the war in iran the war in iran has fuelled inflation fears and pushed mortgage rates higher after they briefly dipped below 6% in late february. photo: bloomberg deeperdive is a beta ai feature. refer to full articles for the facts. learn more",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.71
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.54
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 1286,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNiAxNjoyNjozNiIsImkiOiI2YTJiMGNiNmMzN2Y2YzVlNjYyN2VmNmIiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 9.348,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 9.351
+    }
+   }
+  }
+ ]
+}

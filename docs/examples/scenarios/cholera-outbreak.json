@@ -1,0 +1,855 @@
+{
+ "slug": "cholera-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:09Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "cholera",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cholera",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 355,
+     "tone": {
+      "carrying": 349,
+      "availability_pct": 98.31,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 211,
+        "share_pct": 60.46
+       },
+       {
+        "group": "neutral",
+        "count": 7,
+        "share_pct": 2.01
+       },
+       {
+        "group": "positive",
+        "count": 131,
+        "share_pct": 37.54
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 355,
+      "count": 303,
+      "share_pct": 85.35
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.75,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.754
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "cholera",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cholera",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 151,
+       "critical": 124,
+       "critical_pct": 82.1,
+       "negative": 108,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 112,
+       "critical": 92,
+       "critical_pct": 82.1,
+       "negative": 86,
+       "positive": 26,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 150,
+       "critical": 109,
+       "critical_pct": 72.7,
+       "negative": 110,
+       "positive": 32,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 243,
+       "critical": 220,
+       "critical_pct": 90.5,
+       "negative": 200,
+       "positive": 40,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 154,
+       "critical": 141,
+       "critical_pct": 91.6,
+       "negative": 101,
+       "positive": 50,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 106,
+       "critical": 92,
+       "critical_pct": 86.8,
+       "negative": 57,
+       "positive": 47,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 141,
+       "critical": 132,
+       "critical_pct": 93.6,
+       "negative": 77,
+       "positive": 61,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 77,
+       "critical": 67,
+       "critical_pct": 87.0,
+       "negative": 49,
+       "positive": 23,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 94,
+       "critical": 87,
+       "critical_pct": 92.6,
+       "negative": 45,
+       "positive": 44,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 76,
+       "critical": 66,
+       "critical_pct": 86.8,
+       "negative": 50,
+       "positive": 24,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 55,
+       "critical": 45,
+       "critical_pct": 81.8,
+       "negative": 36,
+       "positive": 17,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 130,
+       "critical": 105,
+       "critical_pct": 80.8,
+       "negative": 80,
+       "positive": 46,
+       "partial_period": false
+      }
+     ],
+     "total": 1489,
+     "critical_total": 1280,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.021,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.023
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "cholera",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cholera",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 355,
+     "carrying": 139,
+     "availability_pct": 39.15,
+     "items": [
+      {
+       "country": "united states",
+       "count": 36,
+       "share_pct": 10.14
+      },
+      {
+       "country": "india",
+       "count": 23,
+       "share_pct": 6.48
+      },
+      {
+       "country": "nigeria",
+       "count": 17,
+       "share_pct": 4.79
+      },
+      {
+       "country": "kenya",
+       "count": 9,
+       "share_pct": 2.54
+      },
+      {
+       "country": "mozambique",
+       "count": 7,
+       "share_pct": 1.97
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 47
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.085,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.087
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "cholera",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cholera",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "community health initiatives",
+       "count": 37,
+       "share": 16.16,
+       "lift": 1318.91,
+       "baseline_count": 1,
+       "previous_period_count": 58,
+       "delta_pct": -36.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infectious disease control strategies",
+       "count": 16,
+       "share": 6.99,
+       "lift": 570.34,
+       "baseline_count": 1,
+       "previous_period_count": 20,
+       "delta_pct": -20.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "environmental health risk assessments",
+       "count": 24,
+       "share": 10.48,
+       "lift": 427.76,
+       "baseline_count": 2,
+       "previous_period_count": 18,
+       "delta_pct": 33.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "epidemiological surveillance systems",
+       "count": 15,
+       "share": 6.55,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 18,
+       "delta_pct": -16.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "sanitation and hygiene initiatives",
+       "count": 29,
+       "share": 12.66,
+       "lift": 344.58,
+       "baseline_count": 3,
+       "previous_period_count": 48,
+       "delta_pct": -39.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 355,
+     "carrying": 229,
+     "carrier_share_pct": 64.51,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.615,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.618
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "cholera",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "cholera",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6985f6c3fdcc616c15dc8753",
+       "headline": "Cholera kills 12 in Mozambique within 24 hours, as cases spike in Malawi - Adomonline.com",
+       "url": "https://www.adomonline.com/cholera-kills-12-in-mozambique-within-24-hours-as-cases-spike-in-malawi/",
+       "publisher": "adomonline.com",
+       "published_at": "2026-02-02T09:00:54",
+       "lede": "mozambique has recorded 12 deaths from cholera in the last 24 hours, as well as 135 new cases, according to official data released on saturday.according to data from the directorate of public health, since the current outbreak began in september last year, new cases have spiked in the provinces of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.62
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "mozambique",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "02b39b14d1dff00f47fdb7f8",
+       "headline": "Epidemiologic Characteristics and Predictors of Mortality in Somalia's 2024 Cholera Outbreak.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41538089/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-01-15T00:00:00",
+       "lede": "epidemiologic characteristics and predictors of mortality in somalia's 2024 cholera outbreak.background: cholera remains a persistent public health threat in fragile and conflict affected settings where inadequate water, sanitation, and hygiene infrastructure, population displacement, and climate shocks contribute to recurrent outbreaks. somalia has experienced cyclical cholera epidemics for decades, yet recent",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.55
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87cbe5cfa3e5ba5013872",
+       "headline": "Water access expanded amid rising cholera risk - Daily News",
+       "url": "https://dailynews.co.tz/water-access-expanded-amid-rising-cholera-risk/",
+       "publisher": "dailynews.co.tz",
+       "published_at": "2026-04-17T08:36:35",
+       "lede": "zanzibar: zanzibar authorities have intensified efforts to expand access to clean and safe water as the risk of cholera increases during the ongoing rainy season. permanent secretary in the ministry of water, energy and minerals, mr joseph kilangi, said the government is accelerating water infrastructure projects to address long-standing service",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 84,
+         "path": "/Business & Industrial/Energy & Utilities/Other",
+         "score": 0.65
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6feb963d76f4afc979dc",
+       "headline": "NCDC Alerts 10 States On Flood-Linked Cholera, Disease Outbreak Risks",
+       "url": "https://sciencenigeria.com/ncdc-alerts-10-states-on-flood-linked-cholera-disease-outbreak-risks/",
+       "publisher": "sciencenigeria.com",
+       "published_at": "2026-04-15T22:07:34",
+       "lede": "- advertisement - - advertisement - - advertisement - - advertisement - children fetching dirty, polluted water. the nigeria centre for disease control and prevention (ncdc) has alerted residents of 10 states to the heightened risk of cholera and other public health emergencies following flood predictions issued by relevant government",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69db54969c0f414f426c4624",
+       "headline": "The numbers (of infected) will explode.\" That's Elizabeth Byrs from the United Nations talking about the cholera outbreak in Haiti, which has killed over 1000 and there are more than 16,700 are infected. The UN is calling for calm following riots in several towns in Haiti. One person died in the rio",
+       "url": "https://www.bbc.co.uk/blogs/worldhaveyoursay/2010/11/on_air_your_questions_on_haiti.html",
+       "publisher": "bbc.co.uk",
+       "published_at": "2026-04-12T00:00:00",
+       "lede": "the numbers (of infected) will explode.\" that's elizabeth byrs from the united nations talking about the cholera outbreak in haiti, which has killed over 1000 and there are more than 16,700 are infected. the un is calling for calm following riots in several towns in haiti. one person died in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.47
+        },
+        {
+         "code": 103,
+         "path": "/People & Society/Social Issues & Advocacy/Charity & Philanthropy",
+         "score": 0.46
+        }
+       ],
+       "country": "haiti",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e640a62be6445e460852f0",
+       "headline": "Cholera can quickly become life-threatening, but the best defense might be sitting in your pantry. New research from UC Riverside in Southern California reveals that a high-protein diet can effectively \"disarm\" the bacteria, slash infection levels by 100-fold, and stop the disease in its tracks befo",
+       "url": "https://www.foxnews.com/health/deadly-bacterial-disease-could-stopped-common-pantry-staple-study-suggests.print",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-08T20:48:52",
+       "lede": "cholera can quickly become life-threatening, but the best defense might be sitting in your pantry. new research from uc riverside in southern california reveals that a high-protein diet can effectively \"disarm\" the bacteria, slash infection levels by 100-fold, and stop the disease in its tracks before it turns fatal. published",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2512c37f6c5e663972a9",
+       "headline": "Cholera aid for African countries stalled by Iran conflict",
+       "url": "https://www.yahoo.com/news/articles/cholera-aid-african-countries-stalled-114909191.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-27T11:49:09",
+       "lede": "by emma farge geneva, march 27 (reuters) - emergency cholera medical supplies for several african countries have become stuck in a logistical quagmire caused by the iran war, aid officials told ‌reuters, raising concerns about preparations ahead of the high-risk rainy season. the stocks stranded in ‌dubai warehouses are contingency",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.67
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "708ebc008fe03c0e14b180b5",
+       "headline": "Co-administration of oral killed whole-cell recombinant cholera toxin B-subunit vaccine (WC-rCTB) and live Salmonella Typhi Ty21a vaccine: a prospective randomized open-label trial.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41641963/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-02T00:00:00",
+       "lede": "co-administration of oral killed whole-cell recombinant cholera toxin b-subunit vaccine (wc-rctb) and live salmonella typhi ty21a vaccine: a prospective randomized open-label trial.background: cholera and typhoid fever are often co-endemic, making vaccine co-administration practical. however, due to lack of immunogenicity data, current guidelines advise against co-administration of the oral inactivated whole-cell",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.76
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.46
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc746d981d28529ed1665c",
+       "headline": "Japan boosts Lagos' cholera response with $1.7 million medical supplies",
+       "url": "https://www.premiumtimesng.com/health/health-news/858291-japan-boosts-lagos-cholera-response-with-1-7-million-medical-supplies.html",
+       "publisher": "premiumtimesng.com",
+       "published_at": "2026-02-20T19:40:02",
+       "lede": "lagos state’s cholera response got a major boost as the japanese government handed over a new shipment of emergency medical supplies and preparedness items to the state government.tunbosun ogunbanwo, director, public affairs, lagos ministry of health, in a statement on friday, said the donation aimed to prevent a recurrence of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.22,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e649c52461615d5f4880d6",
+       "headline": "Man dies from rare cholera-like disease in the UK",
+       "url": "https://metro.co.uk/2026/02/12/man-dies-rare-cholera-like-disease-uk-26851205/",
+       "publisher": "metro.co.uk",
+       "published_at": "2026-02-12T11:12:51",
+       "lede": "the disease was eradicated from britain in the 1860s and is today primarily found in the poorest parts of asia and africa (pictures: getty/seventyfour/kateryna kon/science photo libra) an elderly man has died after contracting a rare cholera-like illness that causes severe diarrhoea and vomiting. the dad-of-two, who was aged in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.9
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bb1360bb3472e5f4c4994c",
+       "headline": "Cholera Death UK: 125 Years After Epidemic | News - TIme News",
+       "url": "https://time.news/cholera-death-uk-125-years-after-epidemic-news/",
+       "publisher": "time.news",
+       "published_at": "2026-02-11T21:10:35",
+       "lede": "nuneaton, warwickshire — february 14, 2024 — a man in his 80s has died after contracting a rare strain of bacteria resembling cholera, marking the first such case in the uk in over a century. the pensioner, a father of two, began experiencing sickness and diarrhea last week, and his",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.93
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbf68e7b829b095252777e",
+       "headline": "15 cholera cases in 3 days in Jamnagar, pipeline leakage suspected",
+       "url": "https://www.hindustantimes.com/india-news/15-cholera-cases-in-3-days-in-jamnagar-pipeline-leakage-suspected-101770731793641.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-02-10T13:56:33",
+       "lede": "fifteen cholera cases have been confirmed in jamnagar, gujarat in the last three days, health officials said on tuesday. another 15 patients with diarrhoea and vomiting have been admitted to the government hospital and are under observation, and their test results are awaited, said an official at jamnagar municipal corporation.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.58
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "jamnagar municipal corporation"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e295707f3a572cf4a82171",
+       "headline": "Guterres condemns escalating violence in South Sudan as aid operations come under fire",
+       "url": "https://www.maravipost.com/guterres-condemns-escalating-violence-in-south-sudan-as-aid-operations-come-under-fire/",
+       "publisher": "maravipost.com",
+       "published_at": "2026-02-07T12:32:00",
+       "lede": "more stories health uk govt fines pastor chris oyakhilome’s channel £125,000 over “misinforming” covid-19... lloyd m’bwana - 2022-04-16 0 health malawi registers first cholera in machinga for 2022 maravi post reporter - 2022-03-04 0 health world news in brief: end e-cigarette boom urges who, measles surge... maravi post reporter -",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.66
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.6
+        }
+       ],
+       "country": "malawi",
+       "organizations": [],
+       "people": [
+        "chris oyakhilome"
+       ]
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 74,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wMiAwNzozNTo1OCIsImkiOiI2OTg2ZDNlZTA2OWMwNWNiZTI3ZDc1ZGIiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.951,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.955
+    }
+   }
+  }
+ ]
+}

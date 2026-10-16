@@ -1,0 +1,957 @@
+{
+ "slug": "stock-market-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:55:35Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "stock market",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "stock market",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 226944,
+     "tone": {
+      "carrying": 226882,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 58446,
+        "share_pct": 25.76
+       },
+       {
+        "group": "neutral",
+        "count": 6041,
+        "share_pct": 2.66
+       },
+       {
+        "group": "positive",
+        "count": 162395,
+        "share_pct": 71.58
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 226880,
+      "count": 64714,
+      "share_pct": 28.52
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.435,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.439
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "stock market",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "stock market",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 33813,
+       "critical": 11570,
+       "critical_pct": 34.2,
+       "negative": 8403,
+       "positive": 24636,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 36236,
+       "critical": 7952,
+       "critical_pct": 21.9,
+       "negative": 6065,
+       "positive": 29479,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 23722,
+       "critical": 9507,
+       "critical_pct": 40.1,
+       "negative": 7216,
+       "positive": 15903,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 28040,
+       "critical": 10404,
+       "critical_pct": 37.1,
+       "negative": 7205,
+       "positive": 20225,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 35288,
+       "critical": 12158,
+       "critical_pct": 34.5,
+       "negative": 7223,
+       "positive": 27098,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 30992,
+       "critical": 13063,
+       "critical_pct": 42.1,
+       "negative": 8301,
+       "positive": 21102,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 30732,
+       "critical": 13384,
+       "critical_pct": 43.6,
+       "negative": 9094,
+       "positive": 20707,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 29963,
+       "critical": 12099,
+       "critical_pct": 40.4,
+       "negative": 8149,
+       "positive": 20552,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 45166,
+       "critical": 11385,
+       "critical_pct": 25.2,
+       "negative": 9417,
+       "positive": 34596,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 52325,
+       "critical": 16665,
+       "critical_pct": 31.8,
+       "negative": 13096,
+       "positive": 37841,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 46743,
+       "critical": 16471,
+       "critical_pct": 35.2,
+       "negative": 15865,
+       "positive": 29459,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 82710,
+       "critical": 20193,
+       "critical_pct": 24.4,
+       "negative": 20068,
+       "positive": 60499,
+       "partial_period": false
+      }
+     ],
+     "total": 475730,
+     "critical_total": 154851,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 7.945,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 7.949
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "stock market",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "stock market",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 226944,
+     "carrying": 100518,
+     "availability_pct": 44.29,
+     "items": [
+      {
+       "country": "united states",
+       "count": 64520,
+       "share_pct": 28.43
+      },
+      {
+       "country": "india",
+       "count": 5984,
+       "share_pct": 2.64
+      },
+      {
+       "country": "united kingdom",
+       "count": 4255,
+       "share_pct": 1.87
+      },
+      {
+       "country": "canada",
+       "count": 3704,
+       "share_pct": 1.63
+      },
+      {
+       "country": "china",
+       "count": 3366,
+       "share_pct": 1.48
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 18689
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.519,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.522
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "stock market",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "stock market",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "market volatility indicators",
+       "count": 8287,
+       "share": 5.51,
+       "lift": 224.76,
+       "baseline_count": 2,
+       "previous_period_count": 5630,
+       "delta_pct": 47.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "asian financial market developments",
+       "count": 4632,
+       "share": 3.08,
+       "lift": 251.26,
+       "baseline_count": 1,
+       "previous_period_count": 2924,
+       "delta_pct": 58.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "short selling strategies",
+       "count": 3684,
+       "share": 2.45,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1534,
+       "delta_pct": 140.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "stock market index composition",
+       "count": 5809,
+       "share": 3.86,
+       "lift": 157.55,
+       "baseline_count": 2,
+       "previous_period_count": 3496,
+       "delta_pct": 66.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "emerging markets economic updates",
+       "count": 3353,
+       "share": 2.23,
+       "lift": 181.88,
+       "baseline_count": 1,
+       "previous_period_count": 2080,
+       "delta_pct": 61.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 226944,
+     "carrying": 150486,
+     "carrier_share_pct": 66.31,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.213,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.222
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "stock market",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "stock market",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a0e983bc0b414d24a01bda8",
+       "headline": "US-Iran Ceasefire Deadline: क्या क्रैश होगा शेयर मार्केट? सीजफायर खत्म होने से पहले ट्रंप की ईरान को चेतावनी | मार्केट न्यूज़",
+       "url": "https://www.livemint.com/hindi/market/share-market-crash-countdow-us-iran-tensions-gift-nifty-slips-as-trump-rejects-ceasefire-extension-portfolio-safe-241776787480847.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-21T16:46:22",
+       "lede": "donald trump iran statement: the ongoing siegefire between the us and iran is about to end on wednesday. in such a situation, everything from the indian stock market to the common man's kitchen is going to be affected by whether this ceasefire will increase or cease. if you look at",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.82
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e50276d5e7fc42ee10504b",
+       "headline": "$1.5 trillion relief rally erupts on Wall Street after Trump hits pause on Iran strikes | Fortune",
+       "url": "https://www.fortune.com/2026/04/08/markets-sp-trump-truce-ceasefire-iran-war-rally-strait-of-hormuz/",
+       "publisher": "fortune.com",
+       "published_at": "2026-04-08T15:17:32",
+       "lede": "five weeks of held breath just exhaled from the u.s. stock market this morning, and it was worth about $1.5 trillion. the rally caps a frantic 24 hours. trump set an 8 p.m. tuesday deadline for iran to reopen the strait of hormuz or face strikes on its bridges, power",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.63
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e326a9660da7a6a202d7d0",
+       "headline": "Ibovespa zera perdas e fecha estável com pedido de trégua do Paquistão",
+       "url": "https://exame.com/invest/mercados/ibovespa-hoje-07-04-2026fechamento/",
+       "publisher": "exame.com",
+       "published_at": "2026-04-07T17:18:18",
+       "lede": "the stock market and abroad suffered a setback in the last half hour of negotiations of the day. pakistan is trying to mediate a temporary truce between the united states and iran a few hours after the end of a deadline set by president donald trump for his opponent to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e98119341f3dc2ad69279",
+       "headline": "U.S. stocks rally to the finish of their best month since 2020, even as oil prices whipsaw",
+       "url": "https://www.latimes.com/business/story/2026-04-30/u-s-stocks-rally-to-finish-of-their-best-month-since-2020",
+       "publisher": "latimes.com",
+       "published_at": "2026-04-30T21:51:39",
+       "lede": "the u.s stock market motored to more records thursday as profits keep piling up for alphabet, caterpillar and other big businesses. the gains came after the latest whipsaw moves for oil prices, which surged toward their highest levels since the war with iran began only to quickly regress. the standard",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.75
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aeab8c37f6c5e660fc5ff",
+       "headline": "US stocks rally to the finish of their best month since 2020, even as oil prices whipsaw",
+       "url": "https://ca.finance.yahoo.com/news/brent-crude-tops-125-barrel-044922386.html",
+       "publisher": "ca.finance.yahoo.com",
+       "published_at": "2026-04-30T20:16:11",
+       "lede": "new york (ap) — the u.s stock market motored to more records thursday as profits keep piling up for alphabet, caterpillar and other big businesses. the gains came after the latest whipsaw moves for oil prices, which surged toward their highest levels since the war with iran began only to",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.75
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eea1a83fc01faba6383e7",
+       "headline": "Senate Prohibits Members, Staff From Using Prediction Markets",
+       "url": "https://www.yahoo.com/news/articles/senate-prohibits-members-staff-using-193346837.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T19:33:46",
+       "lede": "on the same day congress ended the most recent government shutdown and the stock market shot up more than 800 points, the u.s. senate passed a resolution thursday banning its members and staff from using prediction markets. the body unanimously passed the resolution by voice vote, marking the first time",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.66
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d7f2a088760d34c16244",
+       "headline": "Solana-based yield trading platform Exponent has raised $5 million in seed funding, led by Multicoin Capital.",
+       "url": "https://www.panewslab.com/articles/019ddef8-244e-72b0-9a8b-813265ed54ec",
+       "publisher": "panewslab.com",
+       "published_at": "2026-04-30T15:17:00",
+       "lede": "popular articles funding weekly report | 17 publicly disclosed funding events; crypto derivatives trading platform liquid completes $18 million series a funding. 融资周报 the bizarre south korean stock market: parents open stock accounts for their babies. 吴晓波频道 tim draper, the \"godfather of venture capital\" in silicon valley, gave a recent",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "tim draper"
+       ]
+      },
+      {
+       "id": "6a2a8bf05cefb83fe814883f",
+       "headline": "El petróleo frena su escalada y se aleja de los máximos de 2022 | Diario Sur",
+       "url": "https://www.diariosur.es/economia/mercados/petroleo-alcanza-maximos-2022-sacude-mercados-financieros-20260430102516-ntrc.html",
+       "publisher": "diariosur.es",
+       "published_at": "2026-04-30T08:25:25",
+       "lede": "oil and the stock market crossed again abruptly this thursday on a day marked by high volatility in the parks derived ... from geopolitical tension. behind these swings was brent's barrel, of reference in europe, which went from exceeding 126 dollars - its highest level since 2022- during the early",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.76
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.51
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a040a5f62bbf617b0442b5e",
+       "headline": "Record High Oil, All-Time Low Rupee Batters Sensex, Nifty; IndiGo, Eternal Top Losers Chart",
+       "url": "https://www.freepressjournal.in/business/record-high-oil-rupee-plunge-batter-sensex-nifty-indigo-eternal-top-losers-chart",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-04-30T06:31:49",
+       "lede": "2 days of stock market slump wipes out ₹18.60 lakh crore from investors' wealth | battered by record crude oil prices and falling rupee, the domestic equity indices further extended losses on thursday after opening lower. the 30-share sensex hit its intraday low at 76,258 points, down by almost 1.6",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d6ad7b2d589e844c54a8",
+       "headline": "Stocks to buy: Nagaraj Shetti recommends Time Technoplast, Gujarat Ambuja Exports shares to buy | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-nagaraj-shetti-recommends-time-technoplast-gujarat-ambuja-exports-shares-to-buy-11777528414947.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T06:08:22",
+       "lede": "stock market today: the indian stock market saw a significant across-the-board selloff in morning trade on thursday, april 30, dragging the benchmarks, the sensex and the nifty 50, down by more than 1%.the 30-share pack sensex fell over 1,150 points, or 1.5%, to an intraday low of 76,349, while the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87fb98937ef12fc069ef1",
+       "headline": "U.S. Stocks Rally To The Finish Of Their Best Month Since 2020, Even As Oil Prices Whipsaw",
+       "url": "https://www.huffpost.com/entry/oil-prices_n_69f2e91ee4b0831c4cc7bf78",
+       "publisher": "huffpost.com",
+       "published_at": "2026-04-30T05:37:03",
+       "lede": "loading error loading new york (ap) — the u.s stock market motored to more records thursday as profits keep piling up for alphabet, caterpillar and other big businesses. the gains came after the latest whipsaw moves for oil prices, which surged toward their highest levels since the war with iran",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.72
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d6a07b2d589e844c4b7b",
+       "headline": "Stocks to buy or sell: Osho Krishan of Angel One suggests buying Chennai Petroleum Corp, Bharti Airtel shares to buy | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-or-sell-osho-krishan-of-angel-one-suggests-buying-chennai-petroleum-corp-bharti-airtel-shares-to-buy-11777522637744.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T04:32:42",
+       "lede": "stock market today: the domestic benchmark indices, nifty 50 and sensex, began thursday, april 30, on a negative note, as a significant increase in oil prices weakened investor sentiment and overshadowed the positive outlook from corporate earnings. the nifty 50 fell by 1.16% to 23,898.70, while the bse sensex decreased",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.74
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.63
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a91d8937ef12fc0afe59",
+       "headline": "Stock market: BJP win in Bengal elections? What JM, others say on exit poll results 2026 - BusinessToday",
+       "url": "https://www.businesstoday.in/markets/stocks/story/stock-market-bjp-win-in-bengal-elections-what-jm-others-say-on-exit-poll-results-2026-528144-2026-04-30",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-30T04:06:26",
+       "lede": "stock market investors are keenly awaiting the outcome of assembly elections in west bengal, kerala, assam, tamil nadu and the union territory of puducherry, with results scheduled for may 4. ahead of the verdict, exit polls indicated a potential maiden win for the bjp in west bengal, while a bjp-led",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9dcbaa088760d34c51773",
+       "headline": "Huang Licheng has gone from profit to loss, with a loss of $3.29 million in the past week.",
+       "url": "https://www.panewslab.com/en/articles/019ddc12-474d-7543-81d8-8d7759c0fbc8",
+       "publisher": "panewslab.com",
+       "published_at": "2026-04-30T01:47:00",
+       "lede": "popular articles funding weekly report | 17 publicly disclosed funding events; crypto derivatives trading platform liquid completes $18 million series a funding. 融资周报 the bizarre south korean stock market: parents open stock accounts for their babies. 吴晓波频道 bitcoin 2026 insights: the decline of mining, the rise of ai, and a",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.96
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d6987b2d589e844c45a5",
+       "headline": "Vedanta demerger: When will four spun-off entities of the mining major trade on Dalal Street? CEO answers | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/vedanta-demerger-when-will-four-spun-off-entities-of-the-mining-major-trade-on-dalal-street-ceo-answers-11777484311804.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-29T17:44:23",
+       "lede": "ahead of the special session for the price discovery of the demerged vedanta limited, the metal and mining major's ceo told investors in an earnings call that the four spun-off businesses could list in the indian stock market by june.according to a pti report, vedanta resources ceo deshnee naidoo said",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.71
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.7
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f88482bbf1d31455988cd3",
+       "headline": "AI Stock Market Rally Faces Defining Moment as Hyperscaler Earnings Take Center Stage",
+       "url": "https://influencermagazine.uk/2026/04/ai-stock-market-rally-faces-defining-moment-as-hyperscaler-earnings-take-center-stage/",
+       "publisher": "influencermagazine.uk",
+       "published_at": "2026-04-29T17:15:37",
+       "lede": "the recent u.s. stock market boom powered by artificial intelligence (ai) is reaching a pivotal moment, with quarterly results from some of the most powerful technology firms in the world arriving in quick succession. the success of these companies has not only fuels the recent surge in the stock market,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.74
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.66
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 12885,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAxNDozODoxNSIsImkiOiI2OWY5ZDQ0OTdiMmQ1ODllODQ0YWMwZjgiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.362,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.365
+    }
+   }
+  }
+ ]
+}

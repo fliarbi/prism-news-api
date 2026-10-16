@@ -1,0 +1,853 @@
+{
+ "slug": "gdp-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:50Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "GDP",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gdp",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12655,
+     "tone": {
+      "carrying": 12644,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5062,
+        "share_pct": 40.03
+       },
+       {
+        "group": "neutral",
+        "count": 349,
+        "share_pct": 2.76
+       },
+       {
+        "group": "positive",
+        "count": 7233,
+        "share_pct": 57.2
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 12649,
+      "count": 9030,
+      "share_pct": 71.39
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.17,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 4.172
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "GDP",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gdp",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3653,
+       "critical": 2456,
+       "critical_pct": 67.2,
+       "negative": 1954,
+       "positive": 1545,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2927,
+       "critical": 2015,
+       "critical_pct": 68.8,
+       "negative": 1541,
+       "positive": 1218,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2626,
+       "critical": 1870,
+       "critical_pct": 71.2,
+       "negative": 1242,
+       "positive": 1302,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2644,
+       "critical": 2035,
+       "critical_pct": 77.0,
+       "negative": 1137,
+       "positive": 1406,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2707,
+       "critical": 2041,
+       "critical_pct": 75.4,
+       "negative": 1073,
+       "positive": 1559,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2176,
+       "critical": 1648,
+       "critical_pct": 75.7,
+       "negative": 980,
+       "positive": 1136,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2103,
+       "critical": 1646,
+       "critical_pct": 78.3,
+       "negative": 819,
+       "positive": 1224,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2740,
+       "critical": 1988,
+       "critical_pct": 72.6,
+       "negative": 1034,
+       "positive": 1596,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2605,
+       "critical": 2029,
+       "critical_pct": 77.9,
+       "negative": 908,
+       "positive": 1632,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3317,
+       "critical": 2639,
+       "critical_pct": 79.6,
+       "negative": 1323,
+       "positive": 1905,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2442,
+       "critical": 1861,
+       "critical_pct": 76.2,
+       "negative": 1192,
+       "positive": 1152,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 4291,
+       "critical": 2501,
+       "critical_pct": 58.3,
+       "negative": 1639,
+       "positive": 2544,
+       "partial_period": false
+      }
+     ],
+     "total": 34231,
+     "critical_total": 24729,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.985,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.988
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "GDP",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gdp",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12655,
+     "carrying": 6028,
+     "availability_pct": 47.63,
+     "items": [
+      {
+       "country": "china",
+       "count": 1321,
+       "share_pct": 10.44
+      },
+      {
+       "country": "india",
+       "count": 1285,
+       "share_pct": 10.15
+      },
+      {
+       "country": "united states",
+       "count": 1253,
+       "share_pct": 9.9
+      },
+      {
+       "country": "united kingdom",
+       "count": 216,
+       "share_pct": 1.71
+      },
+      {
+       "country": "nigeria",
+       "count": 190,
+       "share_pct": 1.5
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1763
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.854,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.857
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "GDP",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gdp",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economy news: gdp growth reports",
+       "count": 2243,
+       "share": 28.58,
+       "lift": 466.67,
+       "baseline_count": 5,
+       "previous_period_count": 1776,
+       "delta_pct": 26.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: economic forecast revisions",
+       "count": 649,
+       "share": 8.27,
+       "lift": 675.14,
+       "baseline_count": 1,
+       "previous_period_count": 447,
+       "delta_pct": 45.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: productivity and efficiency trends",
+       "count": 308,
+       "share": 3.93,
+       "lift": 320.4,
+       "baseline_count": 1,
+       "previous_period_count": 229,
+       "delta_pct": 34.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: government debt levels",
+       "count": 740,
+       "share": 9.43,
+       "lift": 192.45,
+       "baseline_count": 4,
+       "previous_period_count": 553,
+       "delta_pct": 33.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: fiscal policy updates",
+       "count": 820,
+       "share": 10.45,
+       "lift": 170.6,
+       "baseline_count": 5,
+       "previous_period_count": 635,
+       "delta_pct": 29.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 12655,
+     "carrying": 7847,
+     "carrier_share_pct": 62.01,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.453,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.457
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "GDP",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "gdp",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f88240bbf1d31455975062",
+       "headline": "Growing GDP, thank GPT",
+       "url": "https://www.marketplace.org/episode/2026/04/30/growing-gdp-thank-gpt",
+       "publisher": "marketplace.org",
+       "published_at": "2026-04-30T22:15:00",
+       "lede": "gdp rose at an annual rate of 2% from january to march, according to data out today from the bureau of economic analysis. a big reason why: investment in ai. gdp improves to start 2026, driven by ai investment by daniel ackerman charly triballeau/afp via getty images gdp rose at",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.61
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "getty images",
+        "bureau of economic analysis"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2adfc05cefb83fe84e3f5e",
+       "headline": "US Public Debt Surpasses National Economic Output",
+       "url": "https://world.infonasional.com/us-debt-exceeds-gdp-milestone",
+       "publisher": "world.infonasional.com",
+       "published_at": "2026-04-30T21:31:14",
+       "lede": "the united states' publicly held debt officially exceeded the nation's total economic output as of march 31, 2026, marking a significant fiscal milestone. national debt reached $31.265 trillion against a gross domestic product (gdp) of $31.215 trillion, according to data reported by the dailycaller and the wall street journal.the debt-to-gdp",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8b3efbbf1d314559a8af8",
+       "headline": "America’s Debt Just Hit Grim Milestone After Decades Of Politicians Spending Like Drunken Sailors | U. S. Politics | Before It's News",
+       "url": "https://beforeitsnews.com/u-s-politics/2026/04/americas-debt-just-hit-grim-milestone-after-decades-of-politicians-spending-like-drunken-sailors-2628486.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-30T17:49:01",
+       "lede": "the u.s. national debt exceeded the total amount of output from the entire economy as of march 31, the wall street journal reported thursday. the country’s publicly held debt was $31.265 trillion, while the nation’s gross domestic product (gdp), the total value of goods and services in the economy, was",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 227,
+         "path": "/Health/Alternative & Natural Medicine/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "the wall street journal"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a8ffcc37f6c5e66cfb789",
+       "headline": "WTTC says Middle East travel growth beats global average as Saudi Arabia leads expansion",
+       "url": "https://travel.economictimes.indiatimes.com/news/research-and-statistics/research/saudi-arabia-leads-middle-east-travel-growth-surpassing-global-average/130575600",
+       "publisher": "travel.economictimes.indiatimes.com",
+       "published_at": "2026-04-28T15:10:56",
+       "lede": "image credit - pexelsthe world travel &amp; tourism council (wttc) has reported that the middle east continued to outperform global tourism markets in 2025, with travel &amp; tourism gdp growth of 5.3 per cent , compared with the global average of 4.1 per cent .according to wttc&rsquo;s latest economic impact",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 100,
+         "path": "/Travel & Transportation/Tourist Destinations/Other",
+         "score": 0.7
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.67
+        },
+        {
+         "code": 215,
+         "path": "/Travel & Transportation/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa526963d76f4afec56cd",
+       "headline": "L’Inde : un marché prometteur pour nos exportateurs",
+       "url": "http://www.edc.ca/fr/article/affaires-inde-conseils-importateurs-exportateurs.html",
+       "publisher": "edc.ca",
+       "published_at": "2026-04-28T14:56:37",
+       "lede": "india is a market with enormous potential for canadian exporters. this country, which already forms the largest democracy in the world, surpassed china as the most populous country in 2023. the indian economy is growing at a similar rate. with a gross domestic product (gdp) of us$3,800 billion, it is",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa483c37f6c5e66dd6b0f",
+       "headline": "L’Inde : un marché prometteur pour nos exportateurs",
+       "url": "http://www.edc.ca/fr/blog/opportunity-canadian-companies-in-india.html",
+       "publisher": "edc.ca",
+       "published_at": "2026-04-28T14:56:37",
+       "lede": "india is a market with enormous potential for canadian exporters. this country, which already forms the largest democracy in the world, surpassed china as the most populous country in 2023. the indian economy is growing at a similar rate. with a gross domestic product (gdp) of us$3,800 billion, it is",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cae81e3933a6dd8facf5",
+       "headline": "Nepal’s growth holds steady at 3.85 percent despite shocks",
+       "url": "https://kathmandupost.com/money/2026/04/28/nepal-s-growth-holds-steady-at-3-85-percent-despite-shocks",
+       "publisher": "kathmandupost.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "in nominal terms, nepal’s gross domestic product at current prices has reached rs6.6 trillion, an increase of rs400 billion compared to the previous fiscal year. gdp at current price is also referred to as ‘nominal gdp’, evaluated at current market prices. it includes all of the changes in market prices",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.8
+        }
+       ],
+       "country": "nepal",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23335c6105443aa609c63",
+       "headline": "UEMOA | L'endettement Galopant, Une Bombe à Retardement Pour La",
+       "url": "https://maliactu.net/uemoa-l-endettement-galopant-une-bombe-a-retardement-pour-la-souverainete-africaine/",
+       "publisher": "maliactu.net",
+       "published_at": "2026-04-25T04:14:32",
+       "lede": "in a decade, the public debt of the west african economic and monetary union (waemu) doubled from 32% to a dizzying 62.5% of gross domestic product (gdp) in 2025. this icy figure, revealed at a regional courts of accounts workshop in abidjan in april 2026, is not just an economic",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.66
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa8f9727212302c5dbfbf",
+       "headline": "Russland droht andauernde Wirtschaftsflaute",
+       "url": "https://de.finance.yahoo.com/nachrichten/russland-droht-andauernde-wirtschaftsflaute-030021304.html",
+       "publisher": "de.finance.yahoo.com",
+       "published_at": "2026-04-24T14:10:41",
+       "lede": "moscow (dpa) - russian economy is going badly - and kremlin chief vladimir putin continues to push his subordinates. in the first two months, russia's gross domestic product (gdp) had fallen by 1.8 percent, he read the gloomy statistics at a government meeting last week. the central bank had only",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6fea5706a322e0ee73b",
+       "headline": "Russlands Wirtschaft extrem unter Druck",
+       "url": "https://www.gmx.net/magazine/politik/russland-krieg-ukraine/russlands-wirtschaft-extrem-druck-42188172",
+       "publisher": "gmx.net",
+       "published_at": "2026-04-24T12:19:06",
+       "lede": "the unilateral interpretation of the russian economy in the ukraine war is increasingly burdening the country. putin could face an economic collapse. russian economy is going badly – and kremlin chief vladimir putin continues to push his subordinates. in the first two months, russia's gross domestic product (gdp) had fallen",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9c4d5bdd09a23d0976ea1",
+       "headline": "Germany halves 2026 growth forecast as Mideast tensions hit economy",
+       "url": "https://www.thestar.com.my/news/world/2026/04/23/germany-halves-2026-growth-forecast-as-mideast-tensions-hit-economy",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-23T01:22:00",
+       "lede": "berlin, april 22 (xinhua) -- germany's government on wednesday halved its economic growth forecast for 2026, as escalating tensions in the middle east pushed energy prices higher and weighed on europe's largest economy. the government now expects gross domestic product (gdp) to expand by just 0.5 percent this year, down",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.71
+        }
+       ],
+       "country": "germany",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99fb4bdd09a23d094bba9",
+       "headline": "Jordan to access USD 200 million as it reaches agreement with IMF",
+       "url": "https://internationalfinance.com/macroeconomy/jordan-access-usd-million-reaches-agreement-with-imf/",
+       "publisher": "internationalfinance.com",
+       "published_at": "2026-04-23T00:03:00",
+       "lede": "imf mission chief cesar serra lauded the jordanian government's commitment to reducing public debt to 80% of gdp by 2028 the international monetary fund (imf) reached a staff-level agreement with the jordanian government on two reviews to support economic reform, enabling the kingdom to access approximately usd 200 million. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.25,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.49
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        }
+       ],
+       "country": "jordan",
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e886d27bb1410d4c8b0406",
+       "headline": "IMF projects Ghana’s debt-to-GDP to rise to 53% by 2026 despite recent gains - Adomonline.com",
+       "url": "https://www.adomonline.com/imf-projects-ghanas-debt-to-gdp-to-rise-to-53-by-2026-despite-recent-gains/",
+       "publisher": "adomonline.com",
+       "published_at": "2026-04-22T07:04:34",
+       "lede": "ghana’s debt-to-gdp ratio is projected to rise to 53.0% by the end of 2026, up from 45.3% recorded in 2025, according to the international monetary fund (imf). the projection is contained in the imf’s fiscal monitor report released on the sidelines of the 2026 spring meetings of the imf and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.82
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 1528,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAwNzowNDozNCIsImkiOiI2OWU4ODZkMjdiYjE0MTBkNGM4YjA0MDYiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.995,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.997
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,917 @@
+{
+ "slug": "depression-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:42Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "depression",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "depression",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 40179,
+     "tone": {
+      "carrying": 40082,
+      "availability_pct": 99.76,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 8826,
+        "share_pct": 22.02
+       },
+       {
+        "group": "neutral",
+        "count": 470,
+        "share_pct": 1.17
+       },
+       {
+        "group": "positive",
+        "count": 30786,
+        "share_pct": 76.81
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 40171,
+      "count": 15254,
+      "share_pct": 37.97
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.656,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.659
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "depression",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "depression",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3797,
+       "critical": 2256,
+       "critical_pct": 59.4,
+       "negative": 1555,
+       "positive": 2150,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2783,
+       "critical": 1774,
+       "critical_pct": 63.7,
+       "negative": 1237,
+       "positive": 1475,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 4196,
+       "critical": 2398,
+       "critical_pct": 57.1,
+       "negative": 1888,
+       "positive": 2233,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 5079,
+       "critical": 2678,
+       "critical_pct": 52.7,
+       "negative": 1956,
+       "positive": 3006,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 4516,
+       "critical": 2552,
+       "critical_pct": 56.5,
+       "negative": 1724,
+       "positive": 2673,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 3440,
+       "critical": 2436,
+       "critical_pct": 70.8,
+       "negative": 1648,
+       "positive": 1674,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 3306,
+       "critical": 2113,
+       "critical_pct": 63.9,
+       "negative": 1397,
+       "positive": 1810,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 3612,
+       "critical": 2459,
+       "critical_pct": 68.1,
+       "negative": 1569,
+       "positive": 1919,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 10755,
+       "critical": 4181,
+       "critical_pct": 38.9,
+       "negative": 2230,
+       "positive": 8330,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 11079,
+       "critical": 3888,
+       "critical_pct": 35.1,
+       "negative": 2441,
+       "positive": 8513,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 9267,
+       "critical": 3459,
+       "critical_pct": 37.3,
+       "negative": 1985,
+       "positive": 7163,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 9078,
+       "critical": 3726,
+       "critical_pct": 41.0,
+       "negative": 2170,
+       "positive": 6780,
+       "partial_period": false
+      }
+     ],
+     "total": 70908,
+     "critical_total": 33920,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.19,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.205
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "depression",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "depression",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 40179,
+     "carrying": 10024,
+     "availability_pct": 24.95,
+     "items": [
+      {
+       "country": "united states",
+       "count": 5900,
+       "share_pct": 14.68
+      },
+      {
+       "country": "iran",
+       "count": 682,
+       "share_pct": 1.7
+      },
+      {
+       "country": "united kingdom",
+       "count": 586,
+       "share_pct": 1.46
+      },
+      {
+       "country": "india",
+       "count": 386,
+       "share_pct": 0.96
+      },
+      {
+       "country": "canada",
+       "count": 205,
+       "share_pct": 0.51
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 2265
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.024,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.027
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "depression",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "depression",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "herbal medicine and plant-based remedies",
+       "count": 3815,
+       "share": 20.36,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 18,
+       "delta_pct": 21094.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "supplements for cognitive function enhancement",
+       "count": 3095,
+       "share": 16.52,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 600,
+       "delta_pct": 415.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "adaptogenic herbs for stress relief",
+       "count": 3090,
+       "share": 16.49,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 597,
+       "delta_pct": 417.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "herbal supplements and their uses",
+       "count": 3072,
+       "share": 16.4,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 596,
+       "delta_pct": 415.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mental health research and foundations",
+       "count": 756,
+       "share": 4.04,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 664,
+       "delta_pct": 13.9,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 40179,
+     "carrying": 18735,
+     "carrier_share_pct": 46.63,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.301,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.304
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "depression",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "depression",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2e9d4de540a46fb53fe861",
+       "headline": "“Storage Wars”’ Darrell Sheets Opened Up About Depression Nearly 10 Years Before Death by Suicide",
+       "url": "https://www.yahoo.com/entertainment/tv/articles/storage-wars-darrell-sheets-opened-032346109.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-24T03:23:46",
+       "lede": "need to know storage wars star darrell sheets opened up about his journey with depression almost 10 years before he died by suicide \"depression is the devil's way of attacking us,\" sheets wrote in a 2018 instagram post sheets was found dead at the age of 67 in lake havasu",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b32aa5cefb83fe889a222",
+       "headline": "Storage Wars’ Darrell Sheets Opened Up About Depression Nearly 10 Years Before Death by Suicide",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/storage-wars-darrell-sheets-opened-234718030.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T23:47:18",
+       "lede": "late storage wars star darrell sheets previously opened up about struggling with depression nearly a decade before his death. “depression is the devil’s way of attacking us,” sheets wrote via instagram in june 2018. “it knows no mercy, it takes our smiles it comes and goes, it ruins our relationships,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaae4a84b609af2b310e7",
+       "headline": "Storage Wars’ Darrell Sheets Opened Up About Depression Nearly 10 Years Before Death by Suicide",
+       "url": "https://www.usmagazine.com/celebrity-news/news/storage-wars-darrell-sheets-had-depression-years-before-death/",
+       "publisher": "usmagazine.com",
+       "published_at": "2026-04-23T23:47:18",
+       "lede": "late storage wars star darrell sheets previously opened up about struggling with depression nearly a decade before his death. “depression is the devil’s way of attacking us,” sheets wrote via instagram in june 2018. “it knows no mercy, it takes our smiles it comes and goes, it ruins our relationships,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0af9c5636c977421340328",
+       "headline": "When a nation starts to question its own mind",
+       "url": "https://www.monitor.co.ug/uganda/oped/commentary/when-a-nation-starts-to-question-its-own-mind-5418752",
+       "publisher": "monitor.co.ug",
+       "published_at": "2026-04-10T08:12:35",
+       "lede": "one in four ugandans is living with a mental health condition. when you first hear it, the number is almost impossible to grasp. out of a population of roughly 45 million, that means about 11 million people—children, youth, adults—quietly struggling with anxiety, depression, trauma, or other mental health challenges. breaking",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc4d4cda8c239a5293e9f1",
+       "headline": "25-year-old woman with depression to die by euthanasia in landmark case",
+       "url": "https://www.uniladtech.com/news/tech-news/noelia-castillo-ramos-depression-euthanasia-case-744409-20260326",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-03-26T10:51:50",
+       "lede": "warning: this article contains discussion of assisted dying, which some readers may find distressing.the tragic story of noelia castillo ramos has grabbed the attention of the world's media, with a landmark case seeing her opt for euthanasia in a desperate plea to cure her depression at the age of just",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 99,
+         "path": "/Sensitive Subjects/Other",
+         "score": 0.87
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "noelia"
+       ]
+      },
+      {
+       "id": "69cf5fcb7cb89f1b0658e76f",
+       "headline": "Rapist attacked vulnerable man in Lancashire 8 years after release for same offence",
+       "url": "https://www.lancashiretelegraph.co.uk/news/25924288.rapist-attacked-vulnerable-man-lancashire-8-years-release-offence/",
+       "publisher": "lancashiretelegraph.co.uk",
+       "published_at": "2026-03-10T14:26:01",
+       "lede": "andrew morris attacked a man in his 30s in march last year and had twice previously sexually assaulted him. morris’ victim was described as vulnerable, with him suffering from anxiety and depression, and being easily manipulated. they were known to one another, with the victim reporting to a care support",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.93
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9c8783fc01faba19ea11",
+       "headline": "TikToker Riziki Ilenre Died by Suicide, Alabama Officials Confirm",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/tiktoker-riziki-ilenre-died-suicide-164513334.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-05T16:45:13",
+       "lede": "tiktoker riziki ilenre's death has been ruled as a suicide, tmz has learned. the alabama department of forensic sciences has determined the 27-year-old died by hanging herself from a ceiling fan ... and was found during a welfare check. she had a documented history of depression and past suicide attempts,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 390,
+         "path": "/Sensitive Subjects/Self-Harm",
+         "score": 0.69
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bd1369bc0fe678ea69ee09",
+       "headline": "Traumas do estupro: medo, vergonha e culpa perseguem vítimas de violência sexual, dizem especialistas",
+       "url": "https://oglobo.globo.com/rio/noticia/2026/03/04/traumas-do-estupro-medo-vergonha-e-culpa-perseguem-vitimas-de-violencia-sexual-dizem-especialistas.ghtml",
+       "publisher": "oglobo.globo.com",
+       "published_at": "2026-03-04T07:26:23",
+       "lede": "if the fear of sexual violence haunts girls and women daily, those who have been victims can develop mental disorders at different levels of severity, such as depression, anxiety and panic attacks, experts say. the impacts are even worse when the crimes fall on people still in formation, as is",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.94,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.89
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9d3561f37db756888c5c9",
+       "headline": "Telangana: Depressed mother kills her 6-year-old son, dies by suicide in Telanganaâs Vikarabad | Hyderabad News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/city/hyderabad/depressed-mother-kills-her-6-yr-old-son-dies-by-suicide/articleshow/128648902.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-02-21T15:26:00",
+       "lede": "28-year-old woman kills child, dies by suicide (file photo)hyderabad: tech hub for ireland-india, 6 communities seek new names, hc seeks grievance proof & morehyderabad: a 28-year-old woman struggling with depression killed her six-year-old son before taking her own life in yalal, vikarabad district, on friday evening.the incident took place around",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.55
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986a72cca3bd326c77cf799",
+       "headline": "Depressão Kristin | Timor-Leste aprova donativo de 4,2 milhões de euros de apoio a Portugal",
+       "url": "https://hojemacau.com.mo/2026/02/05/depressao-kristin-timor-leste-aprova-donativo-de-42-milhoes-de-euros-de-apoio-a-portugal/",
+       "publisher": "hojemacau.com.mo",
+       "published_at": "2026-02-04T22:07:30",
+       "lede": "the government of timor-leste approved yesterday, on a council of ministers, a grant of €4.2 million of support to portugal to deal with the destruction that occurred following the kristin depression. . .this financial support aims to contribute to the immediate response and recovery efforts of the most affected areas,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5cf8c37f6c5e66ae6503",
+       "headline": "Tempestade Kristin deixou rasto de destruição. Como foi afetado o acesso à internet? - Tek Notícias",
+       "url": "https://tek.sapo.pt/noticias/internet/artigos/tempestade-kristin-deixou-rasto-de-destruicao-como-foi-afetado-o-acesso-a-internet/",
+       "publisher": "tek.sapo.pt",
+       "published_at": "2026-01-28T12:51:38",
+       "lede": "the storm kristin, which hit portugal continental during the morning of today, with winds of 150 km/h, caused several damage to infrastructure, which left the cities of leiria and coimbra without electricity and internet access. the bad weather caused by the depression kristin, which hit the national territory during the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.77
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6989701194d3f481f3e59e6d",
+       "headline": "Hyderabad: Woman dies, three critical after alleged suicide attempt in Jagathgirigutta",
+       "url": "https://telanganatoday.com/hyderabad-woman-dies-three-critical-after-alleged-suicide-attempt-in-jagathgirigutta",
+       "publisher": "telanganatoday.com",
+       "published_at": "2026-01-22T09:00:50",
+       "lede": "hyderabad: woman dies, three critical after alleged suicide attempt in jagathgiriguttaa woman died while three members of her family were hospitalised in critical condition following an alleged suicide attempt in jagathgirigutta. police said financial distress pushed the family into depression, leading to the tragic incident. a case has been registered.by",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.81
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "698054186cfa3dda3494cc70",
+       "headline": "Tamil Nadu Rains: Heavy downpour in several districts, IMD issues orange alert – See full forecast",
+       "url": "https://www.financialexpress.com/india-news/tamil-nadu-rains-heavy-downpour-in-several-districts-imd-issues-orange-alert-see-full-forecast/4103555/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-01-11T05:12:52",
+       "lede": "large swathes of tamil nadu are set to receive heavy rainfall next week — with the india meteorological department sounding an orange alert for multiple areas on monday. a deep depression over the bay of bengal has weakened into a depression and is very likely to cross the north sri",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.93
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "india meteorological department"
+       ],
+       "people": []
+      },
+      {
+       "id": "6986cd0f069c05cbe27d4fae",
+       "headline": "IMD warns of heavy rain in TN as Bay of Bengal depression weakens",
+       "url": "https://english.mathrubhumi.com/news/india/imd-warns-of-heavy-rain-in-tn-as-bay-of-bengal-depression-weakens-hwj4b427",
+       "publisher": "english.mathrubhumi.com",
+       "published_at": "2026-01-11T01:38:11",
+       "lede": "heavy rainfall is expected at isolated places over thanjavur, tiruvarur, nagapattinam, mayiladuthurai, pudukkottai, karaikal, chengalpattu, villupuram, cuddalore, kallakurichi, ariyalur and ramanathapuram districts.chennai: a ‘deep depression’ over the bay of bengal has weakened into a ‘depression’ and is very likely to cross the north sri lanka coast on saturday, the india",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.83
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bb0f9a8b0987d8182a41a1",
+       "headline": "Depression weakens after crossing SL coast; yellow alert for Chennai on Jan 11",
+       "url": "https://www.dtnext.in/news/chennai/depression-weakens-after-crossing-sl-coast-yellow-alert-for-chennai-on-jan-11",
+       "publisher": "dtnext.in",
+       "published_at": "2026-01-10T17:15:52",
+       "lede": "chennai: a deep depression over the southwest bay of bengal weakened into a depression on saturday morning and crossed the northeast sri lanka coast close to mullaittivu in the evening. under its influence, chennai experienced cloudy skies and intermittent drizzle throughout the day. a yellow alert has been issued for",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.9
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "698f1b468d29a990b6f654c5",
+       "headline": "Will it rain in Chennai? This is IMD’s latest alert for the city amid deep depression in Bay of Bengal",
+       "url": "https://www.theweek.in/news/india/2026/01/09/will-it-rain-in-chennai-this-is-imd-s-latest-alert-for-chennai-amid-deep-depression-in-bay-of-bengal.html",
+       "publisher": "theweek.in",
+       "published_at": "2026-01-09T07:29:50",
+       "lede": "as the deep depression is brewing over the southwest bay of bengal heads northwestwards towards the sri lankan coast, the indian meteorological department (imd) has withdrawn the heavy rain alert for chennai, according to reports. though there are chances for some showers in chengalpet, which could receive heavy rainfall of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.93
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "imd"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f883d88937ef12fc08f050",
+       "headline": "A Mental Health Lifeline: How Psychedelics Could Offer Millions of Americans Hope | Milbank Memorial Fund",
+       "url": "https://www.milbank.org/quarterly/opinions/a-mental-health-lifeline-how-psychedelics-could-offer-millions-of-americans-hope/",
+       "publisher": "milbank.org",
+       "published_at": "2026-04-30T13:39:56",
+       "lede": "getting your trinity audio player ready... on october 8, 2025, stanford neuroscientist nolan williams—a pioneer of rapid-acting treatments for severe depression—died by suicide at age 42. his premature death, and the profound loss it represents, underscores the urgency that drove his work: the need for fast-acting, effective treatment options for",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 117,
+         "path": "/Sensitive Subjects/Recreational Drugs",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 3076,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAxMzo1Njo0MCIsImkiOiI2OWYyMzIwOWM2MTA1NDQzYWE1ZmNiZTciLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.451,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.453
+    }
+   }
+  }
+ ]
+}

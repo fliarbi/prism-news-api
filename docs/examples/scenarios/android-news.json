@@ -1,0 +1,1028 @@
+{
+ "slug": "android-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:16Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "android",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "android",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 62104,
+     "tone": {
+      "carrying": 62040,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 11738,
+        "share_pct": 18.92
+       },
+       {
+        "group": "neutral",
+        "count": 1421,
+        "share_pct": 2.29
+       },
+       {
+        "group": "positive",
+        "count": 48881,
+        "share_pct": 78.79
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 62090,
+      "count": 13153,
+      "share_pct": 21.18
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.564,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.568
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "android",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "android",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 13666,
+       "critical": 2212,
+       "critical_pct": 16.2,
+       "negative": 1880,
+       "positive": 9958,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 10601,
+       "critical": 2023,
+       "critical_pct": 19.1,
+       "negative": 1601,
+       "positive": 8650,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 14869,
+       "critical": 2480,
+       "critical_pct": 16.7,
+       "negative": 2379,
+       "positive": 11993,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 31572,
+       "critical": 5889,
+       "critical_pct": 18.7,
+       "negative": 7637,
+       "positive": 20048,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 14488,
+       "critical": 3025,
+       "critical_pct": 20.9,
+       "negative": 2723,
+       "positive": 11363,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 12462,
+       "critical": 2489,
+       "critical_pct": 20.0,
+       "negative": 2119,
+       "positive": 9759,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 13347,
+       "critical": 2695,
+       "critical_pct": 20.2,
+       "negative": 2140,
+       "positive": 10773,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 14074,
+       "critical": 2511,
+       "critical_pct": 17.8,
+       "negative": 1858,
+       "positive": 9989,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 12173,
+       "critical": 2360,
+       "critical_pct": 19.4,
+       "negative": 1824,
+       "positive": 9752,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 13953,
+       "critical": 3029,
+       "critical_pct": 21.7,
+       "negative": 2517,
+       "positive": 11147,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 17039,
+       "critical": 4197,
+       "critical_pct": 24.6,
+       "negative": 3854,
+       "positive": 12885,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 18939,
+       "critical": 3567,
+       "critical_pct": 18.8,
+       "negative": 3543,
+       "positive": 15097,
+       "partial_period": false
+      }
+     ],
+     "total": 187183,
+     "critical_total": 36477,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.546,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.554
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "android",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "android",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 62104,
+     "carrying": 29134,
+     "availability_pct": 46.91,
+     "items": [
+      {
+       "country": "united states",
+       "count": 12913,
+       "share_pct": 20.79
+      },
+      {
+       "country": "india",
+       "count": 4166,
+       "share_pct": 6.71
+      },
+      {
+       "country": "south korea",
+       "count": 2983,
+       "share_pct": 4.8
+      },
+      {
+       "country": "united kingdom",
+       "count": 1497,
+       "share_pct": 2.41
+      },
+      {
+       "country": "china",
+       "count": 990,
+       "share_pct": 1.59
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 6585
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.065,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.082
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "android",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "android",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mobile phone hardware components",
+       "count": 2849,
+       "share": 7.59,
+       "lift": 619.23,
+       "baseline_count": 1,
+       "previous_period_count": 2483,
+       "delta_pct": 14.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone battery performance",
+       "count": 2429,
+       "share": 6.47,
+       "lift": 527.94,
+       "baseline_count": 1,
+       "previous_period_count": 2544,
+       "delta_pct": -4.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone camera technology",
+       "count": 2912,
+       "share": 7.75,
+       "lift": 316.46,
+       "baseline_count": 2,
+       "previous_period_count": 3535,
+       "delta_pct": -17.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone storage solutions",
+       "count": 1444,
+       "share": 3.84,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 2226,
+       "delta_pct": -35.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mobile phone display technologies",
+       "count": 2291,
+       "share": 6.1,
+       "lift": 248.97,
+       "baseline_count": 2,
+       "previous_period_count": 2358,
+       "delta_pct": -2.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 62104,
+     "carrying": 37557,
+     "carrier_share_pct": 60.47,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.031,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.039
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "android",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "android",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e864309baafc73567cf97a",
+       "headline": "Android users eligible for payout as part of $135M settlement",
+       "url": "https://abc11.com/post/android-users-eligible-payout-part-135-million-settlement/18891777/",
+       "publisher": "abc11.com",
+       "published_at": "2026-04-16T01:59:00",
+       "lede": "philadelphia -- some potential cash is coming for android users. google has reached a $135 million settlement over allegations its operating system caused mobile devices to consistently transmit data. anyone who has used android since late 2017 may qualify if they file a claim through the settlement's website. google has",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.72
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e287067f3a572cf4a5af50",
+       "headline": "Mental health apps are leaking your private thoughts. How do you protect yourself?",
+       "url": "https://www.kaspersky.com/blog/mental-health-apps-issues-2026/55395/",
+       "publisher": "kaspersky.com",
+       "published_at": "2026-03-10T15:33:22",
+       "lede": "in february 2026, the cybersecurity firm oversecured published a report that makes you want to factory reset your phone and move into a remote cabin in the woods. researchers audited 10 popular android mental health apps — ranging from mood trackers and ai therapists to tools for managing depression and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.59
+        },
+        {
+         "code": 72,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons",
+         "score": 0.48
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "api"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8804243843dd771ce6c60",
+       "headline": "EU orders Google to let rival AI assistants use 'Hey Google' wake word on Android",
+       "url": "https://cybernews.com/ai-news/brussels-google-android-rival-ai-assistants/",
+       "publisher": "cybernews.com",
+       "published_at": "2026-04-30T07:38:00",
+       "lede": "the european commission has sent preliminary findings to google to make ai services from google competitors work better with android. the measures would force the tech giant to share access to key android features, including the \"hey google\" wake word, gmail integration, and data that’s on the device. on january",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.78
+        },
+        {
+         "code": 283,
+         "path": "/Computers & Electronics/Software/Intelligent Personal Assistants",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22dacc6105443aa5db226",
+       "headline": "‘Time for Linux phones’: Android protests against major Google app change in September grow as developers warn ‘your phone is about to stop being yours’",
+       "url": "https://www.techradar.com/phones/android/your-phone-is-about-to-stop-being-yours-anger-brewing-among-android-fans-as-major-google-app-change-draws-near",
+       "publisher": "techradar.com",
+       "published_at": "2026-04-29T10:53:20",
+       "lede": "a site called 'keep android open' is counting down the days until google will require app developers to verify themselves the site argues that, when this happens, your phone will stop being yours there's also growing discontent about the upcoming change on reddit we’ve known for a while that google",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 72,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons",
+         "score": 0.56
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google",
+        "reddit"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e9538e540a46fb539c223",
+       "headline": "'Hey ChatGPT' on Android? EU wants Google to give users choice of AI",
+       "url": "https://www.yahoo.com/news/articles/hey-chatgpt-android-eu-wants-130914493.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T13:09:14",
+       "lede": "say \"hey chatgpt\" to a locked android smartphone or google device and you won't get an answer. that's because google wants you to use its own ai chatbot, gemini. however, that could soon change thanks to a request from european union officials that google give anyone with an android smartphone",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.71
+        },
+        {
+         "code": 283,
+         "path": "/Computers & Electronics/Software/Intelligent Personal Assistants",
+         "score": 0.69
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0af6ed47abc155c28837bf",
+       "headline": "Brussels to Google: share Android's platform with AI rivals",
+       "url": "https://www.theregister.com/software/2026/04/28/brussels-to-google-share-androids-platform-with-ai-rivals/5219634",
+       "publisher": "theregister.com",
+       "published_at": "2026-04-28T12:30:12",
+       "lede": "dma enforcers want rival assistants to get same deep device access as gemini those pencil pushers at the european commission are drawing up measures to ensure google opens up its android smartphone platform to something few users asked for – competing ai services. landing on google's desk are proposed measures",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cc09399b489398e0be7a",
+       "headline": "Brussels to Google: share Android's platform with AI rivals",
+       "url": "https://www.theregister.com/2026/04/28/ai_competition_in_android_phones/",
+       "publisher": "theregister.com",
+       "published_at": "2026-04-28T12:30:12",
+       "lede": "those pencil pushers at the european commission are drawing up measures to ensure google opens up its android smartphone platform to something few users asked for – competing ai services. landing on google's desk are proposed measures the chocolate factory may have to implement, aimed at ensuring third parties get",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c8a5a5706a322e0fe9ab",
+       "headline": "Exactly when you need to opt in by to claim share of $135 million Android settlement",
+       "url": "https://www.uniladtech.com/news/android-google-135m-settlement-deadline-212141-20260427",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-04-28T11:27:36",
+       "lede": "google could owe millions of us android users a payout following a $135 million settlement. here is everything you need to know before the deadline passes. what is the android lawsuit about? google has agreed to pay $135 million to settle claims that its android operating system quietly sent data",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cb86a5706a322e111aae",
+       "headline": "Brussels consults on Google measures to give Android users choice on AI services - EUbusiness.com | EU news, business and politics",
+       "url": "https://www.eubusiness.com/competition/eu-sends-google-measures-to-give-android-users-ai-choice/",
+       "publisher": "eubusiness.com",
+       "published_at": "2026-04-28T09:51:34",
+       "lede": "the eu commission has sent preliminary findings to google outlining draft measures google should implement to ensure that third parties have effective access and interoperability with key capabilities of android. the preliminary findings form part of pecification proceedings it started on 27 january under the the digital markets act (dma),",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.64
+        },
+        {
+         "code": 283,
+         "path": "/Computers & Electronics/Software/Intelligent Personal Assistants",
+         "score": 0.49
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e472836d28f995cb7f71",
+       "headline": "EU tells Google to open Android to AI rivals - TechCentral.ie",
+       "url": "https://www.techcentral.ie/eu-tells-google-to-open-android-to-ai-rivals/",
+       "publisher": "techcentral.ie",
+       "published_at": "2026-04-28T09:31:33",
+       "lede": "eu tells google to open android to ai rivals brussels says proposals will provide android users with a wider choice of ai services life the eu on monday laid out measures it wants google to take to open up its operating system to rival ai services, in a move slammed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.65
+        }
+       ],
+       "country": "belgium",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a7a14c37f6c5e66c1221a",
+       "headline": "The European Commission has launched a public consultation on draft measures requiring Alphabet (Google) to ensure effective interoperability within its Android operating system under the Digital Markets Act (DMA). The measures were shared with Google on 27 April 2026 as part of specification procee",
+       "url": "https://www.fonearena.com/blog/481182/eu-android-interoperability-rules-consultation-dma.html",
+       "publisher": "fonearena.com",
+       "published_at": "2026-04-28T04:33:29",
+       "lede": "the european commission has launched a public consultation on draft measures requiring alphabet (google) to ensure effective interoperability within its android operating system under the digital markets act (dma). the measures were shared with google on 27 april 2026 as part of specification proceedings opened on 27 january 2026 under",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.51
+        },
+        {
+         "code": 38,
+         "path": "/Computers & Electronics/Software/Operating Systems",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a04002462bbf617b03fea1a",
+       "headline": "EU tells Google to open Android to AI rivals",
+       "url": "https://www.thehindu.com/sci-tech/technology/eu-tells-google-to-open-android-to-ai-rivals/article70914679.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-04-28T04:16:04",
+       "lede": "the eu on monday laid out measures it wants google to take to open up its operating system to rival ai services, in a move slammed by the u.s. tech giant. \"the proposed measures aim to ensure that competing ai services can effectively interact with applications on users' android devices",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6ee399b489398de6428",
+       "headline": "EU tells Google to open Android to AI rivals",
+       "url": "https://www.24newshd.tv/27-Apr-2026/eu-tells-google-open-android-ai-rivals",
+       "publisher": "24newshd.tv",
+       "published_at": "2026-04-27T18:41:31",
+       "lede": "the eu on monday laid out measures it wants google to take to open up its operating system to rival ai services, in a move slammed by the us tech giant. \"the proposed measures aim to ensure that competing ai services can effectively interact with applications on users' android devices",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.56
+        }
+       ],
+       "country": "belgium",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e5310bf10c43d2971919e",
+       "headline": "EU tells Google to open Android to AI rivals",
+       "url": "https://www.digitaljournal.com/article/eu-tells-google-to-open-android-to-ai-rivals/",
+       "publisher": "digitaljournal.com",
+       "published_at": "2026-04-27T17:27:32",
+       "lede": "the eu on monday laid out measures it wants google to take to open up its operating system to rival ai services, in a move slammed by the us tech giant. “the proposed measures aim to ensure that competing ai services can effectively interact with applications on users’ android devices",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e989ac0b414d24a02026d",
+       "headline": "Old Android Phones Face WhatsApp Shutdown, Check if Your Device is on the List",
+       "url": "https://www.analyticsinsight.net/news/old-android-phones-face-whatsapp-shutdown-check-if-your-device-is-on-the-list",
+       "publisher": "analyticsinsight.net",
+       "published_at": "2026-04-27T12:01:01",
+       "lede": "millions of smartphone users could soon face a major disruption. whatsapp has decided to drop support for several aging android devices. the change will be implemented in september this year and will affect phones running android 5 and 5.1. these versions were released more than a decade ago and are",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 331,
+         "path": "/Internet & Telecom/Email & Messaging/Text & Instant Messaging",
+         "score": 0.81
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.46
+        },
+        {
+         "code": 72,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons",
+         "score": 0.44
+        },
+        {
+         "code": 38,
+         "path": "/Computers & Electronics/Software/Operating Systems",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec4a0e540a46fb5632761",
+       "headline": "Google’s AI power over Android ecosystem targeted by EU",
+       "url": "https://sg.finance.yahoo.com/news/google-ai-power-over-android-084718011.html",
+       "publisher": "sg.finance.yahoo.com",
+       "published_at": "2026-04-27T08:47:18",
+       "lede": "google was targeted by european union (eu) watchdogs who unveiled a slate of proposals aimed at prising open its android ecosystem to rivals’ artificial intelligence (ai) services. (april 28): google was targeted by european union (eu) watchdogs who unveiled a slate of proposals aimed at prising open its android ecosystem",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.78
+        },
+        {
+         "code": 38,
+         "path": "/Computers & Electronics/Software/Operating Systems",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4239bf10c43d2966ffbf",
+       "headline": "Android alert as popular phones hit by infuriating bug, check your device now",
+       "url": "https://www.express.co.uk/life-style/science-technology/2198666/Android-Pixel-battery-drain-issue",
+       "publisher": "express.co.uk",
+       "published_at": "2026-04-27T06:56:00",
+       "lede": "if you own an android phone and have suddenly noticed a huge drop in performance, you are not alone. a concerning bug is affecting some devices, with many users reporting that their phone batteries are draining rapidly even when idle. the issue appears to have started after a recent software",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.88
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.47
+        },
+        {
+         "code": 38,
+         "path": "/Computers & Electronics/Software/Operating Systems",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad4f45cefb83fe846bede",
+       "headline": "Apple Backs Google Against EU AI Measures Under DMA",
+       "url": "https://theoutpost.ai/news-story/apple-defends-google-against-eu-s-digital-markets-act-proposal-to-open-android-to-rival-ai-services-26255/",
+       "publisher": "theoutpost.ai",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "appleinsider.com apple slams eu dma over privacy and innovation risks - for android the european union wants google to allow any ai company to use its services, and the company hates the idea. apple agrees with google. apple doesn't seem to be listened to by the european union when it",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.85,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.7
+        },
+        {
+         "code": 38,
+         "path": "/Computers & Electronics/Software/Operating Systems",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 7293,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAwMDowMDowMCIsImkiOiI2YTJhYTgzZDVjZWZiODNmZTgyNmY4YmQiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.612,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.617
+    }
+   }
+  }
+ ]
+}

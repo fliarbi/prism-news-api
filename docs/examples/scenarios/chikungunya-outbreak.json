@@ -1,0 +1,859 @@
+{
+ "slug": "chikungunya-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:56Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "chikungunya",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "chikungunya",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 895,
+     "tone": {
+      "carrying": 895,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 517,
+        "share_pct": 57.77
+       },
+       {
+        "group": "neutral",
+        "count": 26,
+        "share_pct": 2.91
+       },
+       {
+        "group": "positive",
+        "count": 352,
+        "share_pct": 39.33
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 894,
+      "count": 703,
+      "share_pct": 78.64
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.482,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.487
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "chikungunya",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "chikungunya",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 508,
+       "critical": 347,
+       "critical_pct": 68.3,
+       "negative": 295,
+       "positive": 183,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 180,
+       "critical": 148,
+       "critical_pct": 82.2,
+       "negative": 130,
+       "positive": 43,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 310,
+       "critical": 253,
+       "critical_pct": 81.6,
+       "negative": 212,
+       "positive": 84,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 621,
+       "critical": 545,
+       "critical_pct": 87.8,
+       "negative": 505,
+       "positive": 110,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 283,
+       "critical": 231,
+       "critical_pct": 81.6,
+       "negative": 191,
+       "positive": 89,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 270,
+       "critical": 237,
+       "critical_pct": 87.8,
+       "negative": 206,
+       "positive": 59,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 180,
+       "critical": 123,
+       "critical_pct": 68.3,
+       "negative": 111,
+       "positive": 63,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 206,
+       "critical": 166,
+       "critical_pct": 80.6,
+       "negative": 106,
+       "positive": 93,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 165,
+       "critical": 138,
+       "critical_pct": 83.6,
+       "negative": 91,
+       "positive": 69,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 245,
+       "critical": 183,
+       "critical_pct": 74.7,
+       "negative": 155,
+       "positive": 85,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 187,
+       "critical": 141,
+       "critical_pct": 75.4,
+       "negative": 90,
+       "positive": 89,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 298,
+       "critical": 241,
+       "critical_pct": 80.9,
+       "negative": 181,
+       "positive": 109,
+       "partial_period": false
+      }
+     ],
+     "total": 3453,
+     "critical_total": 2753,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.487,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.491
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "chikungunya",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "chikungunya",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 895,
+     "carrying": 176,
+     "availability_pct": 19.66,
+     "items": [
+      {
+       "country": "united states",
+       "count": 41,
+       "share_pct": 4.58
+      },
+      {
+       "country": "india",
+       "count": 38,
+       "share_pct": 4.25
+      },
+      {
+       "country": "brazil",
+       "count": 15,
+       "share_pct": 1.68
+      },
+      {
+       "country": "united kingdom",
+       "count": 13,
+       "share_pct": 1.45
+      },
+      {
+       "country": "cook islands",
+       "count": 10,
+       "share_pct": 1.12
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 59
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.73,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.734
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "chikungunya",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "chikungunya",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "vector-borne disease mitigation",
+       "count": 129,
+       "share": 20.54,
+       "lift": 1676.79,
+       "baseline_count": 1,
+       "previous_period_count": 190,
+       "delta_pct": -32.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vector-borne disease epidemiology",
+       "count": 258,
+       "share": 41.08,
+       "lift": 838.4,
+       "baseline_count": 4,
+       "previous_period_count": 333,
+       "delta_pct": -22.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "global health challenges",
+       "count": 98,
+       "share": 15.61,
+       "lift": 1273.84,
+       "baseline_count": 1,
+       "previous_period_count": 119,
+       "delta_pct": -17.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "zoonotic disease prevention measures",
+       "count": 139,
+       "share": 22.13,
+       "lift": 903.39,
+       "baseline_count": 2,
+       "previous_period_count": 225,
+       "delta_pct": -38.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "travel-related infectious disease risks",
+       "count": 113,
+       "share": 17.99,
+       "lift": 734.41,
+       "baseline_count": 2,
+       "previous_period_count": 102,
+       "delta_pct": 10.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 895,
+     "carrying": 628,
+     "carrier_share_pct": 70.17,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.023,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.027
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "chikungunya",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "chikungunya",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f0e7fcd32561089420c88d",
+       "headline": "COE confirma mais uma morte suspeita por Chikungunya em Dourados - RCN67",
+       "url": "https://www.rcn67.com.br/dourados/coe-confirma-mais-uma-morte-suspeita-por-chikungunya-em-dourados-2/",
+       "publisher": "rcn67.com.br",
+       "published_at": "2026-04-28T15:49:57",
+       "lede": "the emergency operations centre in public health (coe), created by the dourados prefecture to coordinate the confrontation with the chikungunya epidemic in the indigenous reserve and in the city's urban perimeter, confirmed on tuesday (28) that another death is being investigated as a result of chikungunya. now there are four",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 129,
+         "path": "/Law & Government/Public Safety/Emergency Services",
+         "score": 0.58
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "505722af06545401939768cd",
+       "headline": "Seroprevalence of chikungunya virus infection and co-occurrence with malaria among patients with febrile illness in Oguma, the middle belt region of Nigeria.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42036962/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-26T00:00:00",
+       "lede": "seroprevalence of chikungunya virus infection and co-occurrence with malaria among patients with febrile illness in oguma, the middle belt region of nigeria.globally, chikungunya virus infection has become a major public health concern due to the frequent epidemics and increased introduction into new regions. the current study provided a baseline report",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.77
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.45
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99de7bdd09a23d093826b",
+       "headline": "Dourados tem 6.411 notificaÃ§Ãµes e 2.204 casos confirmados de Chikungunya, segundo o Informe EpidemiolÃ³gico - RCN67",
+       "url": "https://www.rcn67.com.br/dourados/dourados-tem-6-411-notificacoes-e-2-204-casos-confirmados-de-chikungunya/",
+       "publisher": "rcn67.com.br",
+       "published_at": "2026-04-22T21:18:00",
+       "lede": "golden has reached the mark of 6,411 notifications to chikungunya, with 2,204 confirmed cases, 4,959 probable cases, 1,462 rejected cases and 2,755 cases in investigation, according to the epidemiological report number 30, released on wednesday (22). .the situation continues to be extremely worrying, with overcrowding of the public health network",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a040bf5220687a966acabf9",
+       "headline": "Vector-Borne Infections: Current Happenings 2026\nformulated By Dr.T.V.Rao MD",
+       "url": "https://www.linkedin.com/pulse/vector-borne-infections-current-happenings-2026-formulated-dr-t-v-rao-rb5xc",
+       "publisher": "linkedin.com",
+       "published_at": "2026-04-19T02:39:40",
+       "lede": "vector-borne infections: current happenings 2026 formulated by dr.t.v.rao md the current trends on vector borne diseases certainly lead to expansion of dengue and chikungunya, alongside renewed focus on lyme disease and rocky mountain spotted fever vector-borne infections are surging globally in 2026, with dengue, chikungunya, and yellow fever driving outbreaks",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.88
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9db04a088760d34c3a451",
+       "headline": "Chikungunya therapy shows promise in first-in-human study",
+       "url": "https://healio.com/news/infectious-disease/20260419/chikungunya-therapy-shows-promise-in-firstinhuman-study",
+       "publisher": "healio.com",
+       "published_at": "2026-04-19T00:00:00",
+       "lede": "chikungunya therapy shows promise in first-in-human study key takeaways: chikungunya, a neglected tropical disease, is spreading beyond its historical tropical and subtropical boundaries. there are no available treatments for the disease, and two licensed vaccines are scarcely used. munich — a monoclonal antibody being studied as a potential therapy for",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.79
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ee375cfa3e5ba55830bc",
+       "headline": "Chikungunya therapy shows promise in first-in-human study",
+       "url": "http://www.healio.com/news/infectious-disease/20260419/chikungunya-therapy-shows-promise-in-firstinhuman-study",
+       "publisher": "healio.com",
+       "published_at": "2026-04-19T00:00:00",
+       "lede": "chikungunya therapy shows promise in first-in-human study key takeaways: chikungunya, a neglected tropical disease, is spreading beyond its historical tropical and subtropical boundaries. there are no available treatments for the disease, and two licensed vaccines are scarcely used. munich — a monoclonal antibody being studied as a potential therapy for",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.75
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86bca7bb1410d4c79b87e",
+       "headline": "Dourados chega a 5 mil casos prováveis de chikungunya",
+       "url": "https://midiamax.com.br/cotidiano/2026/dourados-chega-5-mil-casos-provaveis-chikungunya/",
+       "publisher": "midiamax.com.br",
+       "published_at": "2026-04-18T15:44:56",
+       "lede": "in mato grosso do sul, there are already 12 deaths confirmed by chikungunya, being eight in dourados lethycia angelos - epicenter of the chikungunya outbreak in mato grosso do sul, dourados reached the mark of 5,000 probable cases of the disease and almost 2,000 confirmations in 2026. in brazil, there",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86b6b9baafc735681bd71",
+       "headline": "Com 5,8 mil casos e 12 mortes, três cidades de MS decretam emergência por chikungunya",
+       "url": "https://midiamax.com.br/cotidiano/2026/58-mil-casos-12-mortes-tres-cidades-ms-decretam-emergencia-chikungunya/",
+       "publisher": "midiamax.com.br",
+       "published_at": "2026-04-17T12:13:32",
+       "lede": "the emergency situation in public health can allow purchases without bidding, temporary contracts and even forced entry into properties for prevention murilo medeiros - in addition to gold, which is the epicenter of the chikungunya epidemic in mato grosso do sul, jardim and itaporã also decreed emergency situation in public",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86b9a7bb1410d4c799742",
+       "headline": "Conselheiro de Saúde aciona MPF contra saída da Força Nacional do SUS de Dourados",
+       "url": "https://midiamax.com.br/cotidiano/2026/conselheiro-saude-aciona-mpf-contra-saida-forca-nacional-sus-dourados/",
+       "publisher": "midiamax.com.br",
+       "published_at": "2026-04-16T18:44:02",
+       "lede": "the city recorded eight deaths and more than 4.8 thousand probable cases of chikungunya, in the middle of the murilo medeiros epidemic - member of the municipal health council of dourados, city 225 kilometers from campo grande, triggered the mpf (federal public ministry) against the exit of the national sus",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e5109baafc7356dfce76",
+       "headline": "Epidemia: MS concentra 63% das mortes causadas por chikungunya no país",
+       "url": "https://midiamax.com.br/cotidiano/2026/ms-confirma-12a-morte-chikungunya-concentra-63-obitos-pais/",
+       "publisher": "midiamax.com.br",
+       "published_at": "2026-04-16T17:13:11",
+       "lede": "mato grosso do sul confirmed the 12th death by chikungunya on thursday (16), 8th in dourados letycia angelos - dourados confirmed another death by chikungunya on thursday (16) and raised the number of deaths to 12 in mato grosso do sul. with this, the state has a total of 63%",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a300032e540a46fb59af5b7",
+       "headline": "Bavarian Nordic Receives Swissmedic Approval for Chikungunya Vaccine",
+       "url": "https://www.globenewswire.com/news-release/2026/04/16/3275022/0/en/Bavarian-Nordic-Receives-Swissmedic-Approval-for-Chikungunya-Vaccine.html",
+       "publisher": "globenewswire.com",
+       "published_at": "2026-04-16T05:30:00",
+       "lede": "copenhagen, denmark, april 16, 2026 – bavarian nordic a/s (omx: bava) today announced that the swiss agency for therapeutic products, swissmedic, has approved vimkunya® (recombinant, adsorbed) for active immunization for the prevention of disease caused by chikungunya virus in individuals aged 12 years and above. the virus-like particle (vlp) single-dose",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.93
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.61
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.55
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e843a49baafc7356691a4a",
+       "headline": "Chikungunya cases reported in Kerala: State govt steps up surveillance, issues advisory",
+       "url": "https://www.indiatvnews.com/news/india/chikungunya-cases-reported-in-kerala-state-govt-steps-up-surveillance-issues-advisory-2026-04-14-1037527",
+       "publisher": "indiatvnews.com",
+       "published_at": "2026-04-14T13:51:02",
+       "lede": "after cases of chikungunya were reported from parts of ernakulam district in kerala, health authorities on tuesday urged people to remain vigilant in the state. officials said clusters have been identified in kunnukara and chengamanad panchayats. so far, nine cases have been confirmed, while 19 are suspected, according to a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.87
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e845369baafc73566a1cd9",
+       "headline": "Casos de chikungunya aumentam na região urbana e Dourados chega a 1,5 mil infectados",
+       "url": "https://midiamax.com.br/cotidiano/2026/casos-chikungunya-aumentam-regiao-urbana-dourados-chega-15-mil-infectados/",
+       "publisher": "midiamax.com.br",
+       "published_at": "2026-04-11T16:48:41",
+       "lede": "deaths in the city are all of indigenous people dandara genelhu - in public health emergency, dourados reached 1,576 cases of chikungunya. the epidemiological bulletin of this saturday (11) shows an increase in cases in the urban region of the second largest city of mato grosso do sul. so far,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8a90f7bb1410d4ca5e8f0",
+       "headline": "Mato Grosso do Sul Reports Chikungunya Deaths and Rising Cases - Time News",
+       "url": "https://time.news/mato-grosso-do-sul-reports-chikungunya-deaths-and-rising-cases/",
+       "publisher": "time.news",
+       "published_at": "2026-04-11T11:30:14",
+       "lede": "health authorities in mato grosso do sul are grappling with a significant surge in mosquito-borne illnesses, confirming 2,102 cases of chikungunya and 10 related deaths as of april 4, 2024. the figures, released in a recent epidemiological bulletin from the state health department, highlight a concerning trend of severe outcomes",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.82
+        }
+       ],
+       "country": "brazil",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 472,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMCAxNzo0Mjo1NiIsImkiOiI2OWUzNTYwMGM3MDExMWQ2NWVjODA0ODQiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.68,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.682
+    }
+   }
+  }
+ ]
+}

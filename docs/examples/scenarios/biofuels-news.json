@@ -1,0 +1,887 @@
+{
+ "slug": "biofuels-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:13Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "biofuels",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "biofuels",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1872,
+     "tone": {
+      "carrying": 1868,
+      "availability_pct": 99.79,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 498,
+        "share_pct": 26.66
+       },
+       {
+        "group": "neutral",
+        "count": 90,
+        "share_pct": 4.82
+       },
+       {
+        "group": "positive",
+        "count": 1280,
+        "share_pct": 68.52
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1870,
+      "count": 1210,
+      "share_pct": 64.71
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.661,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.663
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "biofuels",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "biofuels",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 507,
+       "critical": 214,
+       "critical_pct": 42.2,
+       "negative": 139,
+       "positive": 325,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 270,
+       "critical": 172,
+       "critical_pct": 63.7,
+       "negative": 49,
+       "positive": 213,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 290,
+       "critical": 201,
+       "critical_pct": 69.3,
+       "negative": 66,
+       "positive": 219,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 367,
+       "critical": 240,
+       "critical_pct": 65.4,
+       "negative": 81,
+       "positive": 279,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 425,
+       "critical": 308,
+       "critical_pct": 72.5,
+       "negative": 75,
+       "positive": 344,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 397,
+       "critical": 281,
+       "critical_pct": 70.8,
+       "negative": 84,
+       "positive": 298,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 325,
+       "critical": 223,
+       "critical_pct": 68.6,
+       "negative": 69,
+       "positive": 248,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 335,
+       "critical": 208,
+       "critical_pct": 62.1,
+       "negative": 53,
+       "positive": 266,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 320,
+       "critical": 229,
+       "critical_pct": 71.6,
+       "negative": 52,
+       "positive": 257,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 405,
+       "critical": 242,
+       "critical_pct": 59.8,
+       "negative": 77,
+       "positive": 302,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 530,
+       "critical": 344,
+       "critical_pct": 64.9,
+       "negative": 190,
+       "positive": 306,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 617,
+       "critical": 395,
+       "critical_pct": 64.0,
+       "negative": 179,
+       "positive": 415,
+       "partial_period": false
+      }
+     ],
+     "total": 4788,
+     "critical_total": 3057,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.948,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.951
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "biofuels",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "biofuels",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1872,
+     "carrying": 663,
+     "availability_pct": 35.42,
+     "items": [
+      {
+       "country": "united states",
+       "count": 300,
+       "share_pct": 16.03
+      },
+      {
+       "country": "india",
+       "count": 115,
+       "share_pct": 6.14
+      },
+      {
+       "country": "brazil",
+       "count": 31,
+       "share_pct": 1.66
+      },
+      {
+       "country": "united kingdom",
+       "count": 23,
+       "share_pct": 1.23
+      },
+      {
+       "country": "china",
+       "count": 19,
+       "share_pct": 1.01
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 175
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.07,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.072
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "biofuels",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "biofuels",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "biofuel production & algae-based energy",
+       "count": 349,
+       "share": 27.74,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 307,
+       "delta_pct": 13.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "renewable energy in agriculture (biogas, solar irrigation)",
+       "count": 173,
+       "share": 13.75,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 120,
+       "delta_pct": 44.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "biomass energy conversion processes",
+       "count": 137,
+       "share": 10.89,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 120,
+       "delta_pct": 14.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "waste-to-energy conversion technologies",
+       "count": 47,
+       "share": 3.74,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 51,
+       "delta_pct": -7.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "crude oil refining methods",
+       "count": 46,
+       "share": 3.66,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 16,
+       "delta_pct": 187.5,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1872,
+     "carrying": 1258,
+     "carrier_share_pct": 67.2,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.942,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.945
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "biofuels",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "biofuels",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69efaa038a54b8f07c95c726",
+       "headline": "Mother of one of the girls killed in plant explosion files lawsuit against Horizon Biofuels",
+       "url": "https://www.ketv.com/article/fremont-plant-explosion-mother-files-lawsuit/71114278",
+       "publisher": "ketv.com",
+       "published_at": "2026-04-24T03:26:00",
+       "lede": "the mother of one of the girls killed in a deadly plant explosion in fremont has filed a lawsuit against horizon biofuels.dylan danielson, 32, and his two daughters, 12-year-old hayven and 8-year-old fayeah, died in the blast in july 2025.horizon biofuels owned the plant.the lawsuit said was filed by fayeah's",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.83,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.72
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e869c95cfa3e5ba5f56c2e",
+       "headline": "Advanced Biofuels Market: Share, Growth and Outlook Driven by Renewable Energy Solutions and Decarbonization Goals",
+       "url": "https://www.openpr.com/news/4474475/advanced-biofuels-market-share-growth-and-outlook-driven",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-16T10:26:28",
+       "lede": "advanced biofuels market: share, growth and outlook driven by renewable energy solutions and decarbonization goals advanced biofuels market https://www.skyquestt.com/sample-request/advanced-biofuels-market https://www.skyquestt.com/speak-with-analyst/advanced-biofuels-market https://www.skyquestt.com/add-to-cart-buy-now/advanced-biofuels-market https://www.skyquestt.com/report/advanced-biofuels-market https://insightsbyskyquest.blogspot.com/ https://www.skyquestt.com/ the advanced biofuels market size was valued at usd 123.29 billion in 2025 and is projected to reach usd 290.34 billion by 2033, growing at a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.78
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69dfc1cdc1e955063e154b38",
+       "headline": "PM Narendra Modi bets big on hydrocarbons and biofuels | Autocar Professional",
+       "url": "http://www.autocarpro.in/news-national/pm-narendra-modi-bets-hydrocarbons-biofuels-22835",
+       "publisher": "autocarpro.in",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "in new delhi today, the prime minister inaugurated the petrotech conference on the theme of ‘hydrocarbons to fuel the future – choices & challenges’. prime minister narendra modi has highlighted the importance of hydrocarbons and biofuels as the future of energy and mobility sectors. in new delhi today, the prime",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.59
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "69dfbeb2a9936a33b35c6caf",
+       "headline": "PM Narendra Modi bets big on hydrocarbons and biofuels | Autocar Professional",
+       "url": "https://www.autocarpro.in/news-national/pm-narendra-modi-bets-hydrocarbons-biofuels-22835",
+       "publisher": "autocarpro.in",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "in new delhi today, the prime minister inaugurated the petrotech conference on the theme of ‘hydrocarbons to fuel the future – choices & challenges’. prime minister narendra modi has highlighted the importance of hydrocarbons and biofuels as the future of energy and mobility sectors. in new delhi today, the prime",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.59
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "69dfcd9544a6646a5b2bf9cd",
+       "headline": "ExxonMobil, IIT Madras and IIT Bombay to research on biofuel | Autocar Professional",
+       "url": "https://www.autocarpro.in/news-national/exxonmobil-partners-iit-bombay-and-iit-madras-for-advanced-research-on-biofuels-44380",
+       "publisher": "autocarpro.in",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "american multinational oil and gas corporation, exxonmobil signed a five-year agreement with iit-bombay and iit-madras yesterday, which focusses on progressing research in biofuels and bio-products, gas transport and conversion, climate and environment, and low-emissions technologies for the power and industrial sectors. the agreements will partner the institutes’ areas of expertise",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.76
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "exxonmobil"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2da8dbd7b10565a44bd4d",
+       "headline": "Chalmers declares renewables are answer to fuel crisis",
+       "url": "https://thenightly.com.au/politics/treasurer-jim-chalmers-says-renewable-energy-is-answer-to-fuel-crisis-as-anthony-albanese-visits-singapore--c-22114601",
+       "publisher": "thenightly.com.au",
+       "published_at": "2026-04-09T02:48:44",
+       "lede": "treasurer jim chalmers has declared renewable energy from biofuels is the answer to the global oil crisis as his boss anthony albanese visits singapore to secure supplies from australia’s biggest source of imported fuel. an uncertain two-week ceasefire between the us and iran, announced on wednesday, has so far failed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.74
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": [
+        "anthony albanese"
+       ]
+      },
+      {
+       "id": "6a2e4960e6594f7ebafb0608",
+       "headline": "U.S. Biofuels Target Could Fuel Destruction of Tropical Rainforest",
+       "url": "https://www.yahoo.com/news/articles/u-biofuels-target-could-fuel-070000801.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-03T07:00:00",
+       "lede": "the u.s. doesn’t produce enough vegetable oil to meet a new biofuels mandate, so suppliers will have to ramp up imports, putting pressure on tropical forests overseas, which may be cleared to grow oil crops. president donald trump stood on the truman balcony at the white house during the “great",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.66
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b0a50c37f6c5e66262f54",
+       "headline": "'Failed experiment’: Experts query the true sustainability of biofuels",
+       "url": "http://euronews.com/2026/04/02/a-failed-experiment-biofuels-under-the-spotlight-as-eu-scrambles-for-alternative-energy",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-02T05:00:59",
+       "lede": "biofuels are being touted as the solution to europe’s dwindling oil supplies, as the war on iran continues to send prices soaring.european commissioner dan jørgensen has urged nations to outline measures to reduce the use of oil and gas, particularly in transport. it comes after ministers gathered on tuesday (31",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.73
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc45beda8c239a52935d5d",
+       "headline": "For last 15 years, rule of fear, corruption and appeasement politics going on in West Bengal: Amit Shah in Kolkata. | Newsalert",
+       "url": "https://www.devdiscourse.com/article/Newsalert/3853857-for-last-15-years-rule-of-fear-corruption-and-appeasement-politics-going-on-in-west-bengal-amit-shah-in-kolkata",
+       "publisher": "devdiscourse.com",
+       "published_at": "2026-03-28T08:13:27",
+       "lede": "also read bjp's 'charge sheet' highlights tmc's misrule, syndicate raj, and how ruling party turned bengal into laboratory of corruption: amit shah. biofuels boost sparks clash between trump administration and oil industry vp jd vance leads anti-fraud task force for trump administration u.s. small business administration offers new support to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.71
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "tmc"
+       ],
+       "people": [
+        "amit shah"
+       ]
+      },
+      {
+       "id": "69c8bec385010bf777003b0c",
+       "headline": "EPA Finalizes Historic New Renewable Fuel Standards to Strengthen American Energy Security, Support Rural Economies | US EPA",
+       "url": "https://www.epa.gov/newsreleases/epa-finalizes-historic-new-renewable-fuel-standards-strengthen-american-energy",
+       "publisher": "epa.gov",
+       "published_at": "2026-03-27T13:43:17",
+       "lede": "epa finalizes historic new renewable fuel standards to strengthen american energy security, support rural economiesrule sets balanced biofuels growth for 2026 and 2027, bolstering domestic oil and feedstockmarch 27, 2026contact information epa press office ( press@epa.govwashington – today at the white house great american agriculture celebration, president trump announced that",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.51
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "87c6075bfca09cee931f244a",
+       "headline": "A pennycress transparent testa 8 knockout mutant has drastic changes in seed coat anatomy and chemical compositions.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41685867/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-27T00:00:00",
+       "lede": "a pennycress transparent testa 8 knockout mutant has drastic changes in seed coat anatomy and chemical compositions.pennycress is a winter annual intermediate crop with ∼30% seed oil content suitable for producing biofuels. here, we evaluated seed development, anatomy, and agronomically relevant traits of a transparent testa 8 knockout mutant (tt8-2bp)",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 170,
+         "path": "/Business & Industrial/Agriculture & Forestry/Crops & Seed",
+         "score": 0.7
+        },
+        {
+         "code": 270,
+         "path": "/Science/Biological Sciences/Genetics",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9e794fe85228ad69be045",
+       "headline": "Brazil has a secret weapon against oil shocks",
+       "url": "https://www.economist.com/the-americas/2026/03/26/brazil-has-a-secret-weapon-against-oil-shocks",
+       "publisher": "economist.com",
+       "published_at": "2026-03-26T13:57:17",
+       "lede": "f ew countries were ready for the oil shock caused by israel and america’s war with iran. brazil was. during the past half-century, the agriculture giant has built the world’s most sophisticated biofuels industry. it is the second-largest producer of ethanol, an alcohol that can be used to power cars,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.26,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1da5027543ca5d7d7d3c9",
+       "headline": "Verbio SE: Zweite Energiekrise in Folge als neuer Katalysator; Schätzungen und Kursziel angehoben; KAUFEN beibehalten.",
+       "url": "https://www.finanznachrichten.de/nachrichten-2026-03/68021446-verbio-se-zweite-energiekrise-in-folge-als-neuer-katalysator-schaetzungen-und-kursziel-angehoben-kaufen-beibehalten-098.htm",
+       "publisher": "finanznachrichten.de",
+       "published_at": "2026-03-24T00:00:00",
+       "lede": "the current geopolitical tensions around iran act as a supportive macroeconomic background for verbio, rather than as a headwind. given already increased energy prices, it is likely that additional pressure on fossil fuel markets will increase the policy focus on energy security and thus biofuels, which in turn should lead",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.45
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "dc542857e1891afe6cfe38b3",
+       "headline": "Slowdown of Enzymatic Cellulose Conversion Emerges from Cellulase Mode of Action.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41884406/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-20T00:00:00",
+       "lede": "slowdown of enzymatic cellulose conversion emerges from cellulase mode of action.the problem of early slowing of the conversion rate in cellulose hydrolysis, and the resulting large amounts of cellulase enzymes required to achieve just useful conversion efficiencies, remains a major obstacle in the development of cellulosic biofuels. while numerous studies",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.79
+        },
+        {
+         "code": 464,
+         "path": "/Science/Chemistry",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 386,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xMSAxNzo1OTowNiIsImkiOiI2YTJhOWY5Nzk2M2Q3NmY0YWZlODkyNjEiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.732,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.735
+    }
+   }
+  }
+ ]
+}

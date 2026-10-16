@@ -1,0 +1,1013 @@
+{
+ "slug": "medicare-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:22Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "medicare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "medicare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 22346,
+     "tone": {
+      "carrying": 22316,
+      "availability_pct": 99.87,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 11944,
+        "share_pct": 53.52
+       },
+       {
+        "group": "neutral",
+        "count": 609,
+        "share_pct": 2.73
+       },
+       {
+        "group": "positive",
+        "count": 9763,
+        "share_pct": 43.75
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 22342,
+      "count": 17455,
+      "share_pct": 78.13
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.623,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.626
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "medicare",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "medicare",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 4918,
+       "critical": 3759,
+       "critical_pct": 76.4,
+       "negative": 3131,
+       "positive": 1708,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 3131,
+       "critical": 2446,
+       "critical_pct": 78.1,
+       "negative": 1950,
+       "positive": 1084,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 5985,
+       "critical": 4094,
+       "critical_pct": 68.4,
+       "negative": 3834,
+       "positive": 2019,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 8028,
+       "critical": 5696,
+       "critical_pct": 71.0,
+       "negative": 5251,
+       "positive": 2644,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 4395,
+       "critical": 3434,
+       "critical_pct": 78.1,
+       "negative": 2535,
+       "positive": 1764,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 4908,
+       "critical": 3940,
+       "critical_pct": 80.3,
+       "negative": 2869,
+       "positive": 1946,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4041,
+       "critical": 2928,
+       "critical_pct": 72.5,
+       "negative": 2061,
+       "positive": 1828,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 3925,
+       "critical": 3050,
+       "critical_pct": 77.7,
+       "negative": 1862,
+       "positive": 1911,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3814,
+       "critical": 2928,
+       "critical_pct": 76.8,
+       "negative": 1712,
+       "positive": 2002,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 7757,
+       "critical": 6452,
+       "critical_pct": 83.2,
+       "negative": 4319,
+       "positive": 3275,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 4587,
+       "critical": 3440,
+       "critical_pct": 75.0,
+       "negative": 2497,
+       "positive": 1933,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 6188,
+       "critical": 4635,
+       "critical_pct": 74.9,
+       "negative": 3416,
+       "positive": 2553,
+       "partial_period": false
+      }
+     ],
+     "total": 61677,
+     "critical_total": 46802,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.069,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.071
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "medicare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "medicare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 22346,
+     "carrying": 12725,
+     "availability_pct": 56.95,
+     "items": [
+      {
+       "country": "united states",
+       "count": 11608,
+       "share_pct": 51.95
+      },
+      {
+       "country": "australia",
+       "count": 232,
+       "share_pct": 1.04
+      },
+      {
+       "country": "united kingdom",
+       "count": 114,
+       "share_pct": 0.51
+      },
+      {
+       "country": "canada",
+       "count": 102,
+       "share_pct": 0.46
+      },
+      {
+       "country": "germany",
+       "count": 97,
+       "share_pct": 0.43
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 572
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.809,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.812
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "medicare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "medicare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "medicare and medicaid eligibility guidelines",
+       "count": 472,
+       "share": 3.61,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 509,
+       "delta_pct": -7.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "patient safety and quality improvement studies",
+       "count": 270,
+       "share": 2.06,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 243,
+       "delta_pct": 11.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "medical billing and coding services",
+       "count": 238,
+       "share": 1.82,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 126,
+       "delta_pct": 88.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "medicare and medicaid policy updates",
+       "count": 825,
+       "share": 6.31,
+       "lift": 73.55,
+       "baseline_count": 7,
+       "previous_period_count": 890,
+       "delta_pct": -7.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "health insurance fraud awareness",
+       "count": 180,
+       "share": 1.38,
+       "lift": 112.33,
+       "baseline_count": 1,
+       "previous_period_count": 98,
+       "delta_pct": 83.7,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 22346,
+     "carrying": 13081,
+     "carrier_share_pct": 58.54,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.17,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.177
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "medicare",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "medicare",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e99979bdd09a23d0903be8",
+       "headline": "Dr. Oz touts ‘Fraud War Room,’ ending payments to 400 Calif. hospices over fears of $100B fraud - Amed Post",
+       "url": "https://amedpost.com/dr-oz-touts-fraud-war-room-ending-payments-to-400-calif-hospices-over-fears-of-100b-fraud/",
+       "publisher": "amedpost.com",
+       "published_at": "2026-04-22T10:11:51",
+       "lede": "washington — over 400 hospices in los angeles have been shut down or cut off as the centers for medicare & medicaid services’ (cms) “fraud war room” kicks into gear, administrator dr. mehmet oz revealed on “pod force one.” shockingly, cms received “zero” complaints over the “hundreds of millions” of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "mehmet oz"
+       ]
+      },
+      {
+       "id": "69e99aefbdd09a23d091552f",
+       "headline": "Exclusive | Dr. Oz touts ‘Fraud War Room,’ ending payments to 400 hospices in California over fears of $100B fraud",
+       "url": "https://nypost.com/2026/04/22/us-news/dr-oz-touts-fraud-war-room-ending-payments-to-400-calif-hospices-over-fears-of-100b-fraud/",
+       "publisher": "nypost.com",
+       "published_at": "2026-04-22T10:06:17",
+       "lede": "washington — over 400 hospices in los angeles have been shut down or cut off as the centers for medicare & medicaid services’ (cms) “fraud war room” kicks into gear, administrator dr. mehmet oz revealed on “pod force one.” shockingly, cms received “zero” complaints over the “hundreds of millions” of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "mehmet oz"
+       ]
+      },
+      {
+       "id": "69e2c2e1ff2654c79d6d2e05",
+       "headline": "War abroad, tyranny at home — and the theft of a nation",
+       "url": "https://www.presstelegram.com/2026/04/07/war-abroad-tyranny-at-home-and-the-theft-of-a-nation/",
+       "publisher": "presstelegram.com",
+       "published_at": "2026-04-07T22:38:24",
+       "lede": "“we’re fighting wars, we can’t take care of … daycare, medicaid, medicare, all these individual things… we have to take care of one thing: military protection.”—president donald j. trump every bomb dropped abroad is a bill sent home. every war waged in the name of “security” is paid for by",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.86
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2b62390d9a716b4c1b324",
+       "headline": "War abroad, tyranny at home — and the theft of a nation",
+       "url": "https://www.dailybulletin.com/2026/04/07/war-abroad-tyranny-at-home-and-the-theft-of-a-nation/",
+       "publisher": "dailybulletin.com",
+       "published_at": "2026-04-07T22:38:24",
+       "lede": "“we’re fighting wars, we can’t take care of … daycare, medicaid, medicare, all these individual things… we have to take care of one thing: military protection.”—president donald j. trump every bomb dropped abroad is a bill sent home. every war waged in the name of “security” is paid for by",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.86
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2877edc480588dc98d3a7",
+       "headline": "8 people, including nurses, took over $50M in false claims, prosecutors say",
+       "url": "https://www.aol.com/articles/8-people-including-nurses-took-050020581.html",
+       "publisher": "aol.com",
+       "published_at": "2026-04-03T05:00:20",
+       "lede": "authorities arrested eight people accused of conducting a series of health care fraud schemes that bilked tens of millions of dollars from medicare and other insurance companies across southern california, prosecutors announced april 2. first assistant u.s. attorney bill essayli said the eight defendants, including three nurses, a chiropractor, and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.6
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.53
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2817e9b322e6b3e9760d3",
+       "headline": "Multiple arrests in 'Operation Never Say Die,' targeting hospice, healthcare fraud in CA",
+       "url": "https://www.ktul.com/news/nation-world/multiple-arrests-in-operation-never-say-die-targeting-hospice-healthcare-fraud-in-ca-gavin-newsom-justice-department-los-angeles",
+       "publisher": "ktul.com",
+       "published_at": "2026-04-03T02:33:02",
+       "lede": "federal authorities announced on thursday the arrest of multiple people in southern california in connection with a massive healthcare fraud takedown targeting sham hospice facilities. the defendants allegedly cheated medicare out of millions of dollars. called 'operation never say die,’ vice president jd vance wrote on social media, the fraudsters",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e283e190d9a716b4b7d9f6",
+       "headline": "Oz Goes After California Fraud, Announces Sweeping Arrests",
+       "url": "https://news.bloomberglaw.com/health-law-and-business/oz-goes-after-california-fraud-announces-sweeping-arrests",
+       "publisher": "news.bloomberglaw.com",
+       "published_at": "2026-04-02T18:34:44",
+       "lede": "the trump administration thursday announced sweeping arrests and criminal charges over health-care fraud in california. nurses, a psychologist, and a chiropractor are among the eight defendants arrested for allegedly scheming to defraud the us health-care system of more than $50 million, according to a press release issued by the us",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.79,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.76
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.47
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e29129277be6ed2d97d052",
+       "headline": "The End of \"Trust the Voice on the Phone\": Is This a Real Human? | Pindrop",
+       "url": "https://www.pindrop.com/article/end-of-voice-trust-on-phone/",
+       "publisher": "pindrop.com",
+       "published_at": "2026-03-30T17:49:56",
+       "lede": "for decades, the american healthcare system has relied on a simple assumption: if someone calls a medicare hotline, a marketplace call center, or a health plan’s member services line and can answer a few security questions, they are who they claim to be. that assumption is no longer safe. ai-generated",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 88,
+         "path": "/Health/Medical Facilities & Services/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a036458c2856acf8e883c55",
+       "headline": "Stopping fraud to save Medicare",
+       "url": "https://standard-democrat.com/opinion/stopping-fraud-to-save-medicare-251b3cb8",
+       "publisher": "standard-democrat.com",
+       "published_at": "2026-04-30T20:45:22",
+       "lede": "medicare was created as a promise to every american who spent decades working and paying into the system so that when the time came, they could get the care they needed. today, that promise is under attack. the ways and means committee, which i chair, has jurisdiction over the medicare",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.49
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.46
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9de5ea088760d34c6b4c3",
+       "headline": "Trump administration defers $91M more in Minnesota Medicaid funding citing fraud vulnerabilities",
+       "url": "https://www.ajc.com/news/2026/04/trump-administration-defers-91m-more-in-minnesota-medicaid-funding-citing-fraud-vulnerabilities/",
+       "publisher": "ajc.com",
+       "published_at": "2026-04-30T20:43:49",
+       "lede": "nation & world news trump administration defers $91m more in minnesota medicaid funding citing fraud vulnerabilities the trump administration has deferred an additional $91 million in medicaid funding to minnesota, citing concerns about fraud in state-run programs centers for medicare & medicaid services administrator dr. mehmet oz speaks speaks during",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.72
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "oz"
+       ],
+       "people": [
+        "mehmet oz"
+       ]
+      },
+      {
+       "id": "6a2a73565cefb83fe8042f05",
+       "headline": "New CAC Reimbursement for Routine Chest CT Scans - Riverain Tech",
+       "url": "https://www.riveraintech.com/new-cac-reimbursement-for-routine-chest-ct-scans/",
+       "publisher": "riveraintech.com",
+       "published_at": "2026-04-30T20:29:40",
+       "lede": "healthcare providers are sitting on an untapped opportunity hidden within routine chest ct scans. with the introduction of medicare code g0680, effective april 1, 2026, ai-powered detection and quantification of coronary artery calcium (cac) and aortic valve calcification (avc) can now be reimbursed—creating a new pathway to generate revenue from",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.58
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.57
+        },
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f885fa8937ef12fc0a61d6",
+       "headline": "Trump's Medicaid Work Requirements Will Rob 5-10 Million of Health Coverage - NCPSSM",
+       "url": "https://www.ncpssm.org/entitledtoknow/trumps-medicaid-work-requirements-will-rob-5-10-million-of-health-coverage/",
+       "publisher": "ncpssm.org",
+       "published_at": "2026-04-30T19:14:58",
+       "lede": "medicaid work requirements are coming for millions of people’s health care. this is thanks to trump’s big, ugly bill, which mandates that states institute work requirements in order for patients to enroll or maintain health coverage under medicaid. work requirements are projected to strip 5-10 million people of health insurance",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.69
+        },
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23122c6105443aa5f5e57",
+       "headline": "Lawmakers Support CMS Rules to Streamline Prior Authorizations | Psychiatric Times",
+       "url": "http://www.psychiatrictimes.com/view/lawmakers-support-cms-rules-to-streamline-prior-authorizations",
+       "publisher": "psychiatrictimes.com",
+       "published_at": "2026-04-29T13:54:12",
+       "lede": "senators are supporting proposed regulations that would streamline the prior authorization process for physicians and patients using medicare advantage plans. the centers for medicare &amp; medicaid services (cms) announced the draft rule in december 2022 with 5 key provisions and 5 requests for information. if implemented, cms estimated the changes",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.77
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.64
+        },
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2edd5183fc01faba56d116",
+       "headline": "Trump’s Medicaid fraud crackdown may sound sensible, but it could harm Americans who require long-term care",
+       "url": "https://www.yahoo.com/news/articles/trump-medicaid-fraud-crackdown-may-133219459.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-29T13:32:19",
+       "lede": "mehmet oz, the centers for medicare & medicaid services administrator, is ordering all states to step up their efforts to crack down on medicaid fraud. his april 21, 2026, announcement expanded on the trump administration’s related enforcement actions, such as withholding medicaid funds from minnesota and threatening to do that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.65
+        },
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.64
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c9f9a5706a322e10946b",
+       "headline": "ADD THE BLACK BOX TO MORE LABELS? | Psychiatric Times",
+       "url": "http://www.psychiatrictimes.com/view/add-black-box-more-labels",
+       "publisher": "psychiatrictimes.com",
+       "published_at": "2026-04-29T05:50:56",
+       "lede": "wang ps, schneeweiss s, avorn j, et al. risk of death in elderly users of conventional vs. atypical antipsychotic medications. n engl j med. 2005;353:2335-2441. summary a retrospective study of 22,890 persons aged 65 years or older who were enrolled in a state-sponsored drug benefit program was conducted using medicare",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.91
+        },
+        {
+         "code": 503,
+         "path": "/Health/Aging & Geriatrics/Other",
+         "score": 0.67
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "austria",
+       "organizations": [
+        "wang"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c8f1399b489398df7da9",
+       "headline": "CMS Announces No Changes for Antidepressant and Antipsychotic Access | Psychiatric Times",
+       "url": "http://www.psychiatrictimes.com/view/cms-announces-no-changes-antidepressant-and-antipsychotic-access",
+       "publisher": "psychiatrictimes.com",
+       "published_at": "2026-04-29T05:43:35",
+       "lede": "the medicare program announced it would not reevaluate for the 2010 calendar year the 2 psychiatric drug categories protected under part d &quot;all or substantially all.&quot; seniors who need antidepressants and antipsychotics will still be able to get &quot;all or substantially all&quot; of the chemically distinct drugs offered in those",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.71
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c77c1e3933a6dd8e0811",
+       "headline": "Medicare Fraudster Sentenced In $14M LA County Hospice Scheme",
+       "url": "https://patch.com/california/los-angeles/medicare-fraudster-sentenced-14m-la-county-hospice-scheme",
+       "publisher": "patch.com",
+       "published_at": "2026-04-28T23:59:17",
+       "lede": "crime & safety medicare fraudster sentenced in $14m la county hospice scheme the scammers conned medicare out of millions, according to federal prosecutors. los angeles, ca — a burbank man was sentenced tuesday to federal prison for his role in a scheme to defraud medicare out of at least $14",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 3109,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAyMzo1OToxNyIsImkiOiI2OWYxYzc3YzFlMzkzM2E2ZGQ4ZTA4MTEiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.888,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.9
+    }
+   }
+  }
+ ]
+}

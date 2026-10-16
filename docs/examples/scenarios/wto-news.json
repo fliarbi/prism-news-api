@@ -1,0 +1,955 @@
+{
+ "slug": "wto-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:06:55Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "WTO",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wto",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6515,
+     "tone": {
+      "carrying": 6507,
+      "availability_pct": 99.88,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2411,
+        "share_pct": 37.05
+       },
+       {
+        "group": "neutral",
+        "count": 191,
+        "share_pct": 2.94
+       },
+       {
+        "group": "positive",
+        "count": 3905,
+        "share_pct": 60.01
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6513,
+      "count": 3327,
+      "share_pct": 51.08
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.84,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.866
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "WTO",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wto",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1587,
+       "critical": 896,
+       "critical_pct": 56.5,
+       "negative": 768,
+       "positive": 746,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 952,
+       "critical": 534,
+       "critical_pct": 56.1,
+       "negative": 401,
+       "positive": 526,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1724,
+       "critical": 979,
+       "critical_pct": 56.8,
+       "negative": 838,
+       "positive": 855,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2766,
+       "critical": 1352,
+       "critical_pct": 48.9,
+       "negative": 1308,
+       "positive": 1375,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1783,
+       "critical": 1106,
+       "critical_pct": 62.0,
+       "negative": 775,
+       "positive": 966,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1274,
+       "critical": 708,
+       "critical_pct": 55.6,
+       "negative": 501,
+       "positive": 742,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1053,
+       "critical": 576,
+       "critical_pct": 54.7,
+       "negative": 364,
+       "positive": 664,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1130,
+       "critical": 533,
+       "critical_pct": 47.2,
+       "negative": 367,
+       "positive": 740,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1195,
+       "critical": 602,
+       "critical_pct": 50.4,
+       "negative": 434,
+       "positive": 742,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1463,
+       "critical": 800,
+       "critical_pct": 54.7,
+       "negative": 570,
+       "positive": 854,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2431,
+       "critical": 1257,
+       "critical_pct": 51.7,
+       "negative": 958,
+       "positive": 1375,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1426,
+       "critical": 668,
+       "critical_pct": 46.8,
+       "negative": 449,
+       "positive": 934,
+       "partial_period": false
+      }
+     ],
+     "total": 18784,
+     "critical_total": 10011,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.906,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.91
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "WTO",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wto",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6515,
+     "carrying": 4590,
+     "availability_pct": 70.45,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2822,
+       "share_pct": 43.32
+      },
+      {
+       "country": "india",
+       "count": 316,
+       "share_pct": 4.85
+      },
+      {
+       "country": "united kingdom",
+       "count": 242,
+       "share_pct": 3.71
+      },
+      {
+       "country": "china",
+       "count": 217,
+       "share_pct": 3.33
+      },
+      {
+       "country": "brazil",
+       "count": 70,
+       "share_pct": 1.07
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 923
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.231,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.234
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "WTO",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wto",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "political economy and resource allocation",
+       "count": 206,
+       "share": 5.09,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 65,
+       "delta_pct": 216.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "economy news: global trade agreements",
+       "count": 182,
+       "share": 4.5,
+       "lift": 183.6,
+       "baseline_count": 2,
+       "previous_period_count": 123,
+       "delta_pct": 48.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: trade deficit/surplus announcements",
+       "count": 104,
+       "share": 2.57,
+       "lift": 209.83,
+       "baseline_count": 1,
+       "previous_period_count": 45,
+       "delta_pct": 131.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "public policy analysis and implementation",
+       "count": 92,
+       "share": 2.27,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 18,
+       "delta_pct": 411.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "environmental policy and climate governance",
+       "count": 141,
+       "share": 3.48,
+       "lift": 142.24,
+       "baseline_count": 2,
+       "previous_period_count": 85,
+       "delta_pct": 65.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6515,
+     "carrying": 4046,
+     "carrier_share_pct": 62.1,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.033,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.037
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "WTO",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "wto",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a0efa212c33d6ff98350c42",
+       "headline": "India invokes WTO peace clause for FY25 rice subsidies for farmers",
+       "url": "https://economictimes.indiatimes.com/news/economy/agriculture/india-invokes-wto-peace-clause-for-fy25-rice-subsidies-for-farmers/articleshow/130616628.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-29T18:54:00",
+       "lede": "new delhi: india has invoked the peace clause for the seventh time for exceeding the 10% ceiling on subsidies offered to rice farmers under the world trade organisation rules.the country informed the wto on wednesday that it gave subsidies worth $7.6 billion to rice farmers in 2024-25, which was about",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.51
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8751963d76f4afd8f0c2",
+       "headline": "WTO accepts request of India, Taipei to defer ICT import duty dispute ruling until Oct 2026",
+       "url": "https://cfo.economictimes.indiatimes.com/news/news/wto-accepts-request-of-india-taipei-to-defer-ict-import-duty-dispute-ruling-until-oct-2026/130431205",
+       "publisher": "cfo.economictimes.indiatimes.com",
+       "published_at": "2026-04-22T09:02:00",
+       "lede": "the wto's dispute settlement body has agreed to india's and taiwan's request to defer the adoption of a ruling against new delhi's import duties on certain information and technology products till october 2026, as both sides are engaged in resolving the matter mutually, an official said on tuesday.the request was",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.79
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0412ec220687a966afd375",
+       "headline": "WTO accepts request of India, Taipei to defer ICT import duty dispute ruling until Oct 2026",
+       "url": "https://www.thehindubusinessline.com/economy/wto-accepts-request-of-india-taipei-to-defer-ict-import-duty-dispute-ruling-until-oct-2026/article70891263.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-22T03:51:22",
+       "lede": "the wto's dispute settlement body has agreed to india's and taiwan's request to defer the adoption of a ruling against new delhi's import duties on certain information and technology products till october 2026, as both sides are engaged in resolving the matter mutually, an official said on tuesday. the request",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.79
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a040d3b220687a966ad47aa",
+       "headline": "India, Taiwan get time till October to settle ICT tariff dispute - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-taiwan-get-time-till-october-to-settle-ict-tariff-dispute/printarticle/130426346.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-21T19:09:00",
+       "lede": "new delhi: india and taiwan on tuesday requested the dispute settlement body (dsb) of the world trade organization (wto) to delay the adoption of a ruling against new delhi's import duties on certain information and communication technology (ict) products till october 27, as both sides are engaged in resolving the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.7
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.64
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.54
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9941fd47fc028321350eb",
+       "headline": "India, Taiwan get time till October to settle ICT tariff dispute",
+       "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-taiwan-get-time-till-october-to-settle-ict-tariff-dispute/articleshow/130426346.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-21T19:09:00",
+       "lede": "new delhi: india and taiwan on tuesday requested the dispute settlement body (dsb) of the world trade organization (wto) to delay the adoption of a ruling against new delhi's import duties on certain information and communication technology (ict) products till october 27, as both sides are engaged in resolving the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.7
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.64
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.54
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "ict",
+        "world trade organization",
+        "world trade organization"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a95efc37f6c5e66d3e69b",
+       "headline": "WTO accepts request of India, Taipei to defer ICT import duty dispute ruling until Oct 2026 - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/wto-accepts-request-of-india-taipei-to-defer-ict-import-duty-dispute-ruling-until-oct-2026/printarticle/130424327.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-21T17:53:00",
+       "lede": "the wto's dispute settlement body has agreed to india's and taiwan's request to defer the adoption of a ruling against new delhi's import duties on certain information and technology products till october 2026, as both sides are engaged in resolving the matter mutually, an official said on tuesday. the request",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.78
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.54
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ea49c285a58da6f283c48",
+       "headline": "WTO accepts request of India, Taipei to defer ICT import duty dispute ruling until Oct 2026",
+       "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/wto-accepts-request-of-india-taipei-to-defer-ict-import-duty-dispute-ruling-until-oct-2026/articleshow/130424327.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-21T17:53:00",
+       "lede": "the wto's dispute settlement body has agreed to india's and taiwan's request to defer the adoption of a ruling against new delhi's import duties on certain information and technology products till october 2026, as both sides are engaged in resolving the matter mutually, an official said on tuesday. the request",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.78
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.54
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e872787bb1410d4c7e255a",
+       "headline": "Experts examine WTO verdict on cross-border subsidies, flag policy challenges",
+       "url": "https://munsifdaily.com/experts-examine-wto-verdict-on-cross-border/",
+       "publisher": "munsifdaily.com",
+       "published_at": "2026-04-19T11:12:19",
+       "lede": "new delhi: the legal and policy implications of the wto panel report on transnational subsidies, particularly under the agreement on subsidies and countervailing measures, came under sharp focus during a panel discussion held in the national capital on sunday, as experts examined its impact on global trade rules and evolving",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.55
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.5
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d2e390d9a716b4c834d9",
+       "headline": "World Trade Organization Ministerial Post-Mortem",
+       "url": "https://www.csis.org/analysis/world-trade-organization-ministerial-post-mortem",
+       "publisher": "csis.org",
+       "published_at": "2026-04-08T12:00:00",
+       "lede": "i was preparing to comment on the 14th world trade organization (wto) ministerial conference and praise ministers for passing the low bar i discussed two weeks ago. unfortunately, they failed to meet even that standard. what began two years ago after the 13th ministerial conference with high ambitions—reform the institution,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.61
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "world trade organization",
+        "world trade organization"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e29c41277be6ed2d99f8b6",
+       "headline": "WTO moratorium lapse opens door for digital duties, experts warn of daunting task",
+       "url": "https://www.financialexpress.com/business/news/wto-moratorium-lapse-opens-door-for-digital-duties-experts-warn-of-daunting-task/4197715/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-07T00:41:38",
+       "lede": "the expiry of the world trade organisation&#039;s (wto) e-commerce moratorium on march 31 has given india theoretical policy space to impose customs duties on digital imports like software downloads, streaming content, e-books, cloud services and video games. however, tax experts warn that actually imposing such duties would face formidable legal,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.7
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.46
+        },
+        {
+         "code": 94,
+         "path": "/Business & Industrial/Business Services/E-Commerce Services",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2b93690d9a716b4c261fc",
+       "headline": "OPINION | Why India needs a duty-free trade in digitally delivered services- Moneycontrol.com",
+       "url": "https://www.moneycontrol.com/news/opinion/why-india-needs-a-duty-free-trade-in-digitally-delivered-services-13880957.html",
+       "publisher": "moneycontrol.com",
+       "published_at": "2026-04-06T07:13:57",
+       "lede": "with india being a net exporter of digitally delivered services, its it sector relies on seamless, low-cost cross-border flows—making taxation on such transactions economically self-defeating tax digital trade the world trade organization’s ministerial conference 14 (mc14) ended not with consensus, but with a rupture. for nearly three decades, the wto",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.64
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "world trade organization",
+        "world trade organization"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2824b9b322e6b3e978f5b",
+       "headline": "China-India Trade Talks at WTO: Wang Meets Goyal",
+       "url": "https://www.newkerala.com/news/a/china-calls-stronger-trade-cooperation-india-after-ministerial-557.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-03T15:01:22",
+       "lede": "commerce ministers from india and china met on the sidelines of the wto's 14th ministerial conference in cameroon. china expressed its readiness to strengthen bilateral economic and trade cooperation, describing it as a stabilizing \"ballast.\" meanwhile, indian minister piyush goyal highlighted india's push for preferential market access in trade talks",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "piyush goyal"
+       ]
+      },
+      {
+       "id": "69e2839c90d9a716b4b7cc35",
+       "headline": "India Secured ‘Best’ U.S. Trade Deal Among Peers, Says Piyush Goyal - IndUS Business Journal",
+       "url": "https://indusbusinessjournal.com/2026/04/india-secured-best-u-s-trade-deal-among-peers-says-piyush-goyal/",
+       "publisher": "indusbusinessjournal.com",
+       "published_at": "2026-04-02T17:50:36",
+       "lede": "new delhi — india has secured the most favorable trade arrangement with the united states among competing economies and is now “sitting in a sweet spot,” commerce and industry minister piyush goyal said thursday. speaking after the 14th ministerial conference of the world trade organization (wto) in cameroon, goyal said",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.52
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.52
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.5
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "world trade organization",
+        "world trade organization",
+        "world trade organization"
+       ],
+       "people": [
+        "piyush goyal"
+       ]
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 872,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wMiAxNTo0NjowMCIsImkiOiI2OWUyYjkzNWJkN2IxMDU2NWEzZDM3MDciLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.42,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.424
+    }
+   }
+  }
+ ]
+}

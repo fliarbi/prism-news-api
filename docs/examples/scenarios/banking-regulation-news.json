@@ -1,0 +1,871 @@
+{
+ "slug": "banking-regulation-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:23Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "banking regulation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "banking regulation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 375,
+     "tone": {
+      "carrying": 375,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 167,
+        "share_pct": 44.53
+       },
+       {
+        "group": "neutral",
+        "count": 29,
+        "share_pct": 7.73
+       },
+       {
+        "group": "positive",
+        "count": 179,
+        "share_pct": 47.73
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 375,
+      "count": 304,
+      "share_pct": 81.07
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.154,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.157
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "banking regulation",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "banking regulation",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 32,
+       "critical": 23,
+       "critical_pct": 71.9,
+       "negative": 17,
+       "positive": 14,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 36,
+       "critical": 29,
+       "critical_pct": 80.6,
+       "negative": 15,
+       "positive": 21,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 74,
+       "critical": 54,
+       "critical_pct": 73.0,
+       "negative": 26,
+       "positive": 43,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 62,
+       "critical": 49,
+       "critical_pct": 79.0,
+       "negative": 29,
+       "positive": 26,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 61,
+       "critical": 38,
+       "critical_pct": 62.3,
+       "negative": 19,
+       "positive": 34,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 59,
+       "critical": 47,
+       "critical_pct": 79.7,
+       "negative": 12,
+       "positive": 43,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 71,
+       "critical": 60,
+       "critical_pct": 84.5,
+       "negative": 28,
+       "positive": 37,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 100,
+       "critical": 73,
+       "critical_pct": 73.0,
+       "negative": 35,
+       "positive": 61,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 73,
+       "critical": 62,
+       "critical_pct": 84.9,
+       "negative": 35,
+       "positive": 32,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 77,
+       "critical": 61,
+       "critical_pct": 79.2,
+       "negative": 37,
+       "positive": 35,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 93,
+       "critical": 70,
+       "critical_pct": 75.3,
+       "negative": 29,
+       "positive": 53,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 132,
+       "critical": 111,
+       "critical_pct": 84.1,
+       "negative": 66,
+       "positive": 59,
+       "partial_period": false
+      }
+     ],
+     "total": 870,
+     "critical_total": 677,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.877,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.88
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "banking regulation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "banking regulation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 375,
+     "carrying": 128,
+     "availability_pct": 34.13,
+     "items": [
+      {
+       "country": "united states",
+       "count": 47,
+       "share_pct": 12.53
+      },
+      {
+       "country": "india",
+       "count": 23,
+       "share_pct": 6.13
+      },
+      {
+       "country": "united kingdom",
+       "count": 18,
+       "share_pct": 4.8
+      },
+      {
+       "country": "turkey",
+       "count": 15,
+       "share_pct": 4.0
+      },
+      {
+       "country": "nigeria",
+       "count": 5,
+       "share_pct": 1.33
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 20
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.457,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.459
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "banking regulation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "banking regulation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "crisis management and banking sector resilience",
+       "count": 52,
+       "share": 22.03,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 21,
+       "delta_pct": 147.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "regulatory compliance challenges in banking",
+       "count": 32,
+       "share": 13.56,
+       "lift": 1106.85,
+       "baseline_count": 1,
+       "previous_period_count": 14,
+       "delta_pct": 128.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "operational risk management in banking",
+       "count": 23,
+       "share": 9.75,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 8,
+       "delta_pct": 187.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "impact of geopolitical events on banking stability",
+       "count": 17,
+       "share": 7.2,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 8,
+       "delta_pct": 112.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "banking education and financial literacy programs",
+       "count": 12,
+       "share": 5.08,
+       "lift": 415.07,
+       "baseline_count": 1,
+       "previous_period_count": 2,
+       "delta_pct": 500.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 375,
+     "carrying": 236,
+     "carrier_share_pct": 62.93,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.069,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.076
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "banking regulation",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "banking regulation",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9d6eb713680636eedd2e0",
+       "headline": "Karin Keller-Sutter fustige lâinfluence financiÃ¨re des partis bourgeois",
+       "url": "https://www.tdg.ch/ubs-keller-sutter-denonce-les-pressions-financieres-sur-les-partis-371559472123",
+       "publisher": "tdg.ch",
+       "published_at": "2026-04-30T09:42:27",
+       "lede": "the minister of finance accuses parliamentarians of beingnd under financial pressure from ubs on banking regulation. at the federal palace, critics are running. karin keller-sutter criticises ubs and its pressure on parliament around the new banking regulation. keystone/peter klaunzer brief: federal councillor karin keller-sutter accuses ubs of exerting financial pressure",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.58
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8d7eb5cfa3e5ba546f009",
+       "headline": "Latest AI News: Banking Risks, Chip Demand Surge, Layoffs and $635 bn Spending Drive Industry Shift - InfotechLead",
+       "url": "https://infotechlead.com/artificial-intelligence/latest-ai-news-banking-risks-chip-demand-surge-layoffs-and-635-bn-spending-drive-industry-shift-95080",
+       "publisher": "infotechlead.com",
+       "published_at": "2026-04-15T14:35:21",
+       "lede": "investment in artificial intelligence (ai) is set to reshape global industries in 2026, with developments spanning banking regulation, semiconductor demand, workforce restructuring, and large-scale infrastructure investments. governments are moving toward stronger oversight, while technology companies are accelerating ai adoption across operations and products. government and ai agent deployments donald trump",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.66
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69bb553b8dcdeb577ebba358",
+       "headline": "Turkiye Flags Offshore Lira Funding as Banks Tap Cheap Loans Abroad - Bazaar Times",
+       "url": "https://bazaartimes.com/turkiye-flags-offshore-lira-funding-as-banks-tap-cheap-loans-abroad/",
+       "publisher": "bazaartimes.com",
+       "published_at": "2026-01-28T06:18:23",
+       "lede": "cheap access to offshore turkish lira loans has drawn the attention of turkish authorities after a surge in transactions by local lenders to secure low‑cost funding abroad, as the banking regulation and supervision agency (brsa) warned banks to curb such practices, bloomberg reported on tuesday.according to people familiar with the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.62
+        }
+       ],
+       "country": "turkey",
+       "organizations": [
+        "banking regulation and supervision agency"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2acb155cefb83fe83fbb52",
+       "headline": "Keller-Sutter frontal angegriffen: So zofft sich die FDP im UBS-Streit",
+       "url": "https://www.aargauerzeitung.ch/schweiz/ubs-streit-ruedi-noser-kritisiert-bundesraetin-keller-sutter-scharf-ld.4160720",
+       "publisher": "aargauerzeitung.ch",
+       "published_at": "2026-04-29T15:06:05",
+       "lede": "banking regulation noser attacks keller-sutter frontally – fdp is in the ubs dispute by julian spörri 29.04.2026, 17.06 uhr fdp-urgestein ruedi noser misses the stamp \"unswiss\" by her own federal councillor. now party colleagues are admonishing for the objectification of the debate. abo-icon exclusive for subscribers home region sign in",
+       "sentiment": {
+        "label": "none",
+        "score": 0.46,
+        "group": "neutral"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a72f1c37f6c5e66bc42c7",
+       "headline": "Keller-Sutter frontal angegriffen: So zofft sich die FDP im UBS-Streit",
+       "url": "https://www.solothurnerzeitung.ch/schweiz/ubs-streit-ruedi-noser-kritisiert-bundesraetin-keller-sutter-scharf-ld.4160720",
+       "publisher": "solothurnerzeitung.ch",
+       "published_at": "2026-04-29T15:06:05",
+       "lede": "banking regulation noser attacks keller-sutter frontally – fdp is in the ubs dispute by julian spörri 29.04.2026, 17.06 uhr fdp-urgestein ruedi noser misses the stamp \"unswiss\" by her own federal councillor. now party colleagues are admonishing the debate to be objectified. exclusive for subscribers home region sign in menu copyright",
+       "sentiment": {
+        "label": "none",
+        "score": 0.64,
+        "group": "neutral"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f230c2c6105443aa5f2b1b",
+       "headline": "Keller-Sutter frontal angegriffen: So zofft sich die FDP im UBS-Streit",
+       "url": "https://www.luzernerzeitung.ch/schweiz/ubs-streit-ruedi-noser-kritisiert-bundesraetin-keller-sutter-scharf-ld.4160720",
+       "publisher": "luzernerzeitung.ch",
+       "published_at": "2026-04-29T15:06:05",
+       "lede": "banking regulation noser attacks keller-sutter frontally – fdp is in the ubs dispute by julian spörri 29.04.2026, 17.06 uhr fdp-urgestein ruedi noser misses the stamp \"unswiss\" by her own federal councillor. now party colleagues are admonishing the debate to be objectified. exclusive for subscribers home region login menu copyright ©",
+       "sentiment": {
+        "label": "none",
+        "score": 0.67,
+        "group": "neutral"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efac308a54b8f07c9789c4",
+       "headline": "Lex UBS: Keller-Sutters Kantengang",
+       "url": "http://www.nzz.ch/schweiz/les-ubs-keller-sutters-kantengang-ld.10004305",
+       "publisher": "nzz.ch",
+       "published_at": "2026-04-26T05:30:00",
+       "lede": "«lex ubs»: keller-sutter threatens a defeat in parliament whether the new banking regulation in parliament remains in place is questionable. even fellow party women from the free-minded finance minister warn of a massive job cuts in the financial sector. simon marti 26.04.2026, 05.30 5 minutes of reading listen 7:56 summary",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.85,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efac1a727212302c6013e5",
+       "headline": "Lex UBS: Keller-Sutters Kantengang",
+       "url": "https://www.nzz.ch/schweiz/les-ubs-keller-sutters-kantengang-ld.10004305",
+       "publisher": "nzz.ch",
+       "published_at": "2026-04-26T05:30:00",
+       "lede": "«lex ubs»: keller-sutter threatens a defeat in parliament whether the new banking regulation in parliament remains in place is questionable. even fellow party women from the free-minded finance minister warn of a massive job cuts in the financial sector. simon marti 26.04.2026, 05.30 5 minutes of reading listen 7:56 summary",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.85,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a036756ca027fb5990d2f1a",
+       "headline": "RBI cancels Paytm Payments Bank licence - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/tech/technology/rbi-cancels-paytm-payments-bank-licence/articleshow/130495976.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-24T13:37:46",
+       "lede": "the reserve bank âof â india â on friday said it has â cancelled âthe banking licence issued â to paytm payments bank limited.in a release, the central bank said paytm payments bank can no longer conduct banking business under the banking regulation act.it said the bankâs affairs and management",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea38398266d9339996b58d",
+       "headline": "UBS lehnt vorgeschlagenes Regulierungspaket entschieden ab",
+       "url": "https://www.onvista.de/news/2026/04-22-ubs-lehnt-vorgeschlagenes-regulierungspaket-entschieden-ab-0-10-26503645",
+       "publisher": "onvista.de",
+       "published_at": "2026-04-22T16:30:33",
+       "lede": "zürich (dpa-afx) - ubs continues to oppose the proposed tightening of banking regulation. the regulation package adopted by the federal council on wednesday is firmly opposed to it. the bank states that this is \"extreme\", that it does not have an international vote and ignores the majority of the concerns",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.67
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea20b673206aa299ec1b81",
+       "headline": "UBS lehnt vorgeschlagenes Regulierungspaket entschieden ab",
+       "url": "https://de.finance.yahoo.com/nachrichten/ubs-lehnt-vorgeschlagenes-regulierungspaket-entschieden-163033003.html",
+       "publisher": "de.finance.yahoo.com",
+       "published_at": "2026-04-22T16:30:33",
+       "lede": "zürich (dpa-afx) - ubs ch0244767585 continues to oppose the proposed tightening of banking regulation. the regulation package adopted by the federal council on wednesday is firmly opposed to it. the bank states that this is \"extreme\", that it does not have an international vote and ignores the majority of the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.7
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99f9875f157062cb2b26f",
+       "headline": "UBS lehnt vorgeschlagenes Regulierungspaket entschieden ab",
+       "url": "https://www.moneycab.com/finanz/ubs-lehnt-vorgeschlagenes-regulierungspaket-entschieden-ab/",
+       "publisher": "moneycab.com",
+       "published_at": "2026-04-22T16:19:02",
+       "lede": "zurich – ubs continues to oppose the proposed tightening of banking regulation. the regulation package adopted by the federal council on wednesday is firmly opposed to it. this is \"extreme\", does not mean an international vote and ignores the majority of the concerns expressed in the consultation, grossbank writes in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.55
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e991b8d47fc028321161c1",
+       "headline": "SNB und Finma begrüssen Massnahmen zur Bankenregulierung - Kritik der SBVg",
+       "url": "https://www.moneycab.com/finanz/snb-und-finma-begruessen-massnahmen-zur-bankenregulierung-kritik-der-sbvg/",
+       "publisher": "moneycab.com",
+       "published_at": "2026-04-22T15:04:12",
+       "lede": "bern/zurich – the swiss national bank (snb) and the swiss financial market supervisory authority (finma) welcome the measures adopted by the federal council on wednesday on the subject of banking regulation. they are crucial to address regulatory weaknesses identified by the credit suisse crisis, the snb writes in a statement.",
+       "sentiment": {
+        "label": "none",
+        "score": 0.44,
+        "group": "neutral"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a041ca29c4aac0935498b9b",
+       "headline": "Applaus, aber auch viel Unmut: Erste Reaktionen zur Lex UBS",
+       "url": "https://finews.com/news/banken/71951-snb-finma-bankiervereinigung-eigenmottel-ubs-bundesrat-regulierung-finanzplatz-schweiz-arbeitgeberbanken-zurcher-bankenverband-economiesuisse",
+       "publisher": "finews.com",
+       "published_at": "2026-04-22T14:28:05",
+       "lede": "the swiss national bank (snb) welcomes the federal council's approval of the new swiss national bank on 22 december. the commission has also taken the necessary steps to ensure that the measures in question are implemented in the field of banking regulation. the measures envisaged are crucial to address regulatory",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.81
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a9a6bdd09a23d095ab3a",
+       "headline": "Applaus, aber auch viel Unmut: Erste Reaktionen zur Lex UBS",
+       "url": "https://www.finews.ch/news/banken/71951-snb-finma-bankiervereinigung-eigenmottel-ubs-bundesrat-regulierung-finanzplatz-schweiz-arbeitgeberbanken-zurcher-bankenverband-economiesuisse",
+       "publisher": "finews.ch",
+       "published_at": "2026-04-22T14:28:05",
+       "lede": "the swiss national bank (snb) welcomes the federal council's approval of the new swiss national bank on 22 december. the commission has also taken the necessary steps to ensure that the measures in question are implemented in the field of banking regulation. the measures envisaged are crucial to address regulatory",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.81
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 44,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAxNDoyODowNSIsImkiOiI2OWU5OTA0Yzc1ZjE1NzA2MmNhNmVkNTIiLCJwIjo3fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.568,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.573
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,872 @@
+{
+ "slug": "green-hydrogen-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:17Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "green hydrogen",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "green hydrogen",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3161,
+     "tone": {
+      "carrying": 3157,
+      "availability_pct": 99.87,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 249,
+        "share_pct": 7.89
+       },
+       {
+        "group": "neutral",
+        "count": 33,
+        "share_pct": 1.05
+       },
+       {
+        "group": "positive",
+        "count": 2875,
+        "share_pct": 91.07
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3161,
+      "count": 2606,
+      "share_pct": 82.44
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.483,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.487
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "green hydrogen",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "green hydrogen",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 937,
+       "critical": 803,
+       "critical_pct": 85.7,
+       "negative": 46,
+       "positive": 885,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 752,
+       "critical": 630,
+       "critical_pct": 83.8,
+       "negative": 49,
+       "positive": 696,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 765,
+       "critical": 625,
+       "critical_pct": 81.7,
+       "negative": 60,
+       "positive": 699,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 581,
+       "critical": 471,
+       "critical_pct": 81.1,
+       "negative": 58,
+       "positive": 521,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 700,
+       "critical": 567,
+       "critical_pct": 81.0,
+       "negative": 47,
+       "positive": 649,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 641,
+       "critical": 520,
+       "critical_pct": 81.1,
+       "negative": 34,
+       "positive": 603,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 624,
+       "critical": 511,
+       "critical_pct": 81.9,
+       "negative": 39,
+       "positive": 578,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 588,
+       "critical": 515,
+       "critical_pct": 87.6,
+       "negative": 31,
+       "positive": 548,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 699,
+       "critical": 567,
+       "critical_pct": 81.1,
+       "negative": 43,
+       "positive": 651,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 860,
+       "critical": 711,
+       "critical_pct": 82.7,
+       "negative": 63,
+       "positive": 792,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 834,
+       "critical": 714,
+       "critical_pct": 85.6,
+       "negative": 60,
+       "positive": 761,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 768,
+       "critical": 614,
+       "critical_pct": 79.9,
+       "negative": 83,
+       "positive": 671,
+       "partial_period": false
+      }
+     ],
+     "total": 8749,
+     "critical_total": 7248,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.843,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.845
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "green hydrogen",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "green hydrogen",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3161,
+     "carrying": 1637,
+     "availability_pct": 51.79,
+     "items": [
+      {
+       "country": "india",
+       "count": 538,
+       "share_pct": 17.02
+      },
+      {
+       "country": "united states",
+       "count": 173,
+       "share_pct": 5.47
+      },
+      {
+       "country": "united kingdom",
+       "count": 107,
+       "share_pct": 3.39
+      },
+      {
+       "country": "germany",
+       "count": 101,
+       "share_pct": 3.2
+      },
+      {
+       "country": "china",
+       "count": 86,
+       "share_pct": 2.72
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 632
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.36,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.362
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "green hydrogen",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "green hydrogen",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "green hydrogen production methods",
+       "count": 1034,
+       "share": 46.22,
+       "lift": 3773.15,
+       "baseline_count": 1,
+       "previous_period_count": 910,
+       "delta_pct": 13.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hydrogen fuel cell technology",
+       "count": 905,
+       "share": 40.46,
+       "lift": 3302.42,
+       "baseline_count": 1,
+       "previous_period_count": 801,
+       "delta_pct": 13.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 80,
+       "share": 3.58,
+       "lift": 291.93,
+       "baseline_count": 1,
+       "previous_period_count": 37,
+       "delta_pct": 116.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "sustainability initiatives and esg reporting",
+       "count": 292,
+       "share": 13.05,
+       "lift": 133.19,
+       "baseline_count": 8,
+       "previous_period_count": 216,
+       "delta_pct": 35.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hydrogen fuel cell vehicle development",
+       "count": 70,
+       "share": 3.13,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 75,
+       "delta_pct": -6.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3161,
+     "carrying": 2237,
+     "carrier_share_pct": 70.77,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.073,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.076
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "green hydrogen",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "green hydrogen",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f0e23b45272de32e8beaff",
+       "headline": "Puri Meets S&P Global President on Energy Markets & Supply Chains",
+       "url": "https://www.newkerala.com/news/a/hardeep-singh-puri-meets-sp-global-president-dave-470.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-28T06:45:36",
+       "lede": "union minister hardeep singh puri met s&p global president dave ernsberger to discuss global energy trends and supply chain stability. india is accelerating its transition to sustainable energy with green hydrogen and biofuel blending. separately, uttarakhand cm pushkar singh dhami requested additional lpg cylinders for the char dham yatra. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.44
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "lpg",
+        "s&p global"
+       ],
+       "people": [
+        "pushkar singh dhami",
+        "hardeep singh puri"
+       ]
+      },
+      {
+       "id": "6a2a6e525cefb83fe8017692",
+       "headline": "Key Statistics: Status of domestic solar, wind and electrolyser manufacturing - Renewable Watch",
+       "url": "https://renewablewatch.in/2026/04/27/key-statistics-status-of-domestic-solar-wind-and-electrolyser-manufacturing/",
+       "publisher": "renewablewatch.in",
+       "published_at": "2026-04-27T08:44:42",
+       "lede": "the bihar renewable energy development agency (breda) has released the draft bihar green hydrogen policy 2026. the policy aims to promote the growth of green hydrogen and green ammonia production in the state, create markets, […] waaree energies limited has approved plans to set up a 300 mw electrolyser manufacturing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea1fc673206aa299ebfd90",
+       "headline": "India Targets 5 Million Tonnes of Green Hydrogen by 2030 as China Scales Faster and Costs Fall Toward $2 per Kilogram - Energy News",
+       "url": "https://energynews.biz/india-targets-5-million-tonnes-of-green-hydrogen-by-2030-as-china-scales-faster-and-costs-fall-toward-2-per-kilogram/",
+       "publisher": "energynews.biz",
+       "published_at": "2026-04-23T06:18:00",
+       "lede": "india’s target of 5 million metric tonnes of green hydrogen production annually by 2030 would exceed the current global market by a factor of five, highlighting both the scale of ambition and the execution gap facing the sector. backed by approximately $2.1 billion in subsidies under its national green hydrogen",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.61
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9908ad47fc02832107f42",
+       "headline": "India aims to outpace China in green hydrogen production",
+       "url": "https://www.newsbytesapp.com/news/business/india-wants-to-produce-5m-mt-of-green-hydrogen-year/story",
+       "publisher": "newsbytesapp.com",
+       "published_at": "2026-04-22T14:12:40",
+       "lede": "india is targeting to produce five million metric tons of green hydrogen annually by 2030. this ambitious goal is five times the current size of the global market and nearly double what analysts expect china to achieve in that same time frame. the indian government's national green hydrogen mission, launched",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.56
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eb55483fc01faba2ecdb4",
+       "headline": "Minimize supply-chain risks: Here’s how India could pursue self-sufficiency in energy storage | Mint",
+       "url": "http://livemint.com/opinion/online-views/minimize-supply-chain-risks-india-self-sufficiency-energy-storage-china-exports-geopolitics-11776695881156.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-21T02:00:40",
+       "lede": "the technology that holds most promise is probably green hydrogen, in which re is used to split water into hydrogen and oxygen. this hydrogen can be stored, transported and used as fuel in a combined-cycle gas turbine to produce power. in the first cycle, fuel ignites to create a combustive",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad5aac37f6c5e6600f4d7",
+       "headline": "Minimize supply-chain risks: Here’s how India could pursue self-sufficiency in energy storage | Mint",
+       "url": "https://livemint.com/opinion/online-views/minimize-supply-chain-risks-india-self-sufficiency-energy-storage-china-exports-geopolitics-11776695881156.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-21T02:00:40",
+       "lede": "the technology that holds most promise is probably green hydrogen, in which re is used to split water into hydrogen and oxygen. this hydrogen can be stored, transported and used as fuel in a combined-cycle gas turbine to produce power. in the first cycle, fuel ignites to create a combustive",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ae94b5cefb83fe854b231",
+       "headline": "India is steadily positioning itself as a global player in the clean energy landscape through a calibrated mix of policy support, technological innovation, and industry participation, Union Minister of State Dr Jitendra Singh said on Thursday. The minister said the country is simultaneously advancin",
+       "url": "https://investmentguruindia.com/newsdetail/india-expanding-energy-roadmap-with-focus-on-innovation-industry-collaboration-minister436341",
+       "publisher": "investmentguruindia.com",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "india is steadily positioning itself as a global player in the clean energy landscape through a calibrated mix of policy support, technological innovation, and industry participation, union minister of state dr jitendra singh said on thursday. the minister said the country is simultaneously advancing green hydrogen, expanding nuclear energy capacity,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86a929baafc73568127e0",
+       "headline": "India's Multi-Pronged Energy Strategy: Green Hydrogen & Nuclear Growth",
+       "url": "https://www.newkerala.com/news/a/india-expanding-energy-roadmap-focus-innovation-industry-collaboration-998.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-16T18:55:47",
+       "lede": "india is advancing a multi-dimensional energy strategy combining sustainability with security, according to union minister dr jitendra singh. the national green hydrogen mission positions india as a frontrunner in developing alternative fuel ecosystems to decarbonize sectors like steel and cement. simultaneously, the country is pursuing a major nuclear expansion, targeting",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "singh"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a6d985cefb83fe80103b5",
+       "headline": "Germany Commits €200m Loan to Boost Energy Transition",
+       "url": "https://theelectricityhub.com/germany-commits-e200m-loan-to-boost-energy-transition/",
+       "publisher": "theelectricityhub.com",
+       "published_at": "2026-04-16T10:30:18",
+       "lede": "germany commits a €200 million concessional loan to south africa, strengthening the electricity grid infrastructure. the partnership expands clean energy cooperation, including additional funding for green hydrogen and battery industries under the just energy transition framework. germany has committed a €200 million concessional loan to support south africa in strengthening",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.85
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e503a79d0e7fe469a87212",
+       "headline": "First Engineering Framework for Industrial-Scale Seawater Hydrogen Production Established - Energy News",
+       "url": "https://energynews.biz/first-engineering-framework-for-industrial-scale-seawater-hydrogen-production-established/",
+       "publisher": "energynews.biz",
+       "published_at": "2026-04-12T23:39:00",
+       "lede": "the global green hydrogen industry is confronting a resource allocation problem that grows more acute as deployment ambitions scale upward. freshwater electrolysis, the dominant production method for green hydrogen today, consumes between nine and ten litres of high-purity water per kilogram of hydrogen produced. at the volumes required to decarbonise",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.75
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d528a088760d34bf747d",
+       "headline": "Ed Miliband invests £86.5m into UK-first Sheffield clean hydrogen project",
+       "url": "https://yorkshirepost.co.uk/business/miliband-uk-first-sheffield-clean-hydrogen-project-6568740",
+       "publisher": "yorkshirepost.co.uk",
+       "published_at": "2026-04-09T11:34:41",
+       "lede": "itm power, based in meadowhall, will use the funds to build state of the art technology, known as “chronos”, which is used to generate green hydrogen. the government says this is “vital” for the country to hit net zero by decarbonising heavy industries that are hard to electrify, such as",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.57
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.52
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "net zero",
+        "itm power",
+        "chronos"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e84da85cfa3e5ba5e4ccd8",
+       "headline": "Ed Miliband invests £86.5m into UK-first Sheffield clean hydrogen project",
+       "url": "https://www.yorkshirepost.co.uk/business/miliband-uk-first-sheffield-clean-hydrogen-project-6568740",
+       "publisher": "yorkshirepost.co.uk",
+       "published_at": "2026-04-09T11:34:41",
+       "lede": "itm power, based in meadowhall, will use the funds to build state of the art technology, known as “chronos”, which is used to generate green hydrogen. the government says this is “vital” for the country to hit net zero by decarbonising heavy industries that are hard to electrify, such as",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.57
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "net zero",
+        "chronos",
+        "itm power"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2dd1f601121844c4339ad",
+       "headline": "Global CO2-Derived Chemicals Market: Key Questions and Strategic Insights",
+       "url": "https://www.openpr.com/news/4458611/global-co2-derived-chemicals-market-key-questions",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-07T14:43:52",
+       "lede": "global co2-derived chemicals market: key questions and strategic insights co2-derived chemicals market to hit $38.6b by 2036, driven by decarbonization, green hydrogen. https://www.meticulousresearch.com/download-sample-report/cp_id=6564 https://www.meticulousresearch.com/product/co%e2%82%82-derived-chemicals-market-6564 https://www.meticulousresearch.com/view-pricing/1881 https://www.meticulousresearch.com/product/microbial-control-chemical-market-4449 https://www.meticulousresearch.com/product/green-chemicals-market-5008 https://www.meticulousresearch.com/ https://www.linkedin.com/company/meticulous-research the global co2-derived chemicals market is experiencing remarkable growth as industries and governments increasingly prioritize sustainability and carbon reduction strategies. in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.6,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 161,
+         "path": "/Business & Industrial/Chemicals Industry/Other",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e28709d754bf662cd2075b",
+       "headline": "Stegra installs all electrolyser modules at 740-MW green hydrogen plant",
+       "url": "https://renewablesnow.com/news/stegra-installs-all-electrolyser-modules-at-740-mw-green-hydrogen-plant-1292595/",
+       "publisher": "renewablesnow.com",
+       "published_at": "2026-04-03T11:33:47",
+       "lede": "all 37 modules are now in place and are coming together to form what will become europe’s largest green hydrogen production facility, the industrial start-up, formerly called h2 green steel, said on thursday. the hydrogen plant will use alkaline water electrolysis to produce over 100,000 tonnes of green hydrogen per",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.42
+        }
+       ],
+       "country": "germany",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 1059,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wMSAwNjo1NToyNSIsImkiOiI2YTJhYmJhNmMzN2Y2YzVlNjZlZGYzMjAiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.428,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.43
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1060 @@
+{
+ "slug": "renewable-energy-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:14:58Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "renewable energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "renewable energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 66413,
+     "tone": {
+      "carrying": 66318,
+      "availability_pct": 99.86,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 12163,
+        "share_pct": 18.34
+       },
+       {
+        "group": "neutral",
+        "count": 917,
+        "share_pct": 1.38
+       },
+       {
+        "group": "positive",
+        "count": 53238,
+        "share_pct": 80.28
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 66391,
+      "count": 48640,
+      "share_pct": 73.26
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.1,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.103
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "renewable energy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "renewable energy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 11733,
+       "critical": 8089,
+       "critical_pct": 68.9,
+       "negative": 2338,
+       "positive": 9163,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 10086,
+       "critical": 7118,
+       "critical_pct": 70.6,
+       "negative": 1560,
+       "positive": 8392,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 11610,
+       "critical": 8003,
+       "critical_pct": 68.9,
+       "negative": 2156,
+       "positive": 9273,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 11191,
+       "critical": 7573,
+       "critical_pct": 67.7,
+       "negative": 2085,
+       "positive": 8967,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 12960,
+       "critical": 9633,
+       "critical_pct": 74.3,
+       "negative": 1980,
+       "positive": 10822,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 12755,
+       "critical": 9531,
+       "critical_pct": 74.7,
+       "negative": 1801,
+       "positive": 10800,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 12751,
+       "critical": 9658,
+       "critical_pct": 75.7,
+       "negative": 2001,
+       "positive": 10621,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 12508,
+       "critical": 9413,
+       "critical_pct": 75.3,
+       "negative": 1733,
+       "positive": 10632,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 12514,
+       "critical": 9299,
+       "critical_pct": 74.3,
+       "negative": 1801,
+       "positive": 10545,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 17138,
+       "critical": 12696,
+       "critical_pct": 74.1,
+       "negative": 2855,
+       "positive": 13994,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 16390,
+       "critical": 11827,
+       "critical_pct": 72.2,
+       "negative": 3315,
+       "positive": 12824,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 20371,
+       "critical": 14818,
+       "critical_pct": 72.7,
+       "negative": 4192,
+       "positive": 15875,
+       "partial_period": false
+      }
+     ],
+     "total": 162007,
+     "critical_total": 117658,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.346,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.348
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "renewable energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "renewable energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 66413,
+     "carrying": 34282,
+     "availability_pct": 51.62,
+     "items": [
+      {
+       "country": "united states",
+       "count": 10036,
+       "share_pct": 15.11
+      },
+      {
+       "country": "india",
+       "count": 6398,
+       "share_pct": 9.63
+      },
+      {
+       "country": "united kingdom",
+       "count": 2696,
+       "share_pct": 4.06
+      },
+      {
+       "country": "china",
+       "count": 1642,
+       "share_pct": 2.47
+      },
+      {
+       "country": "australia",
+       "count": 1386,
+       "share_pct": 2.09
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 12124
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.843,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.849
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "renewable energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "renewable energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 3186,
+       "share": 7.2,
+       "lift": 587.34,
+       "baseline_count": 1,
+       "previous_period_count": 1747,
+       "delta_pct": 82.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "solar photovoltaic (pv) energy systems",
+       "count": 7088,
+       "share": 16.01,
+       "lift": 261.33,
+       "baseline_count": 5,
+       "previous_period_count": 4699,
+       "delta_pct": 50.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "smart grid integration for renewables",
+       "count": 2284,
+       "share": 5.16,
+       "lift": 421.05,
+       "baseline_count": 1,
+       "previous_period_count": 1258,
+       "delta_pct": 81.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "energy-efficient home solutions",
+       "count": 1429,
+       "share": 3.23,
+       "lift": 263.44,
+       "baseline_count": 1,
+       "previous_period_count": 1063,
+       "delta_pct": 34.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy investment & financing models",
+       "count": 1272,
+       "share": 2.87,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 609,
+       "delta_pct": 108.9,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 66413,
+     "carrying": 44280,
+     "carrier_share_pct": 66.67,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.962,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.982
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "renewable energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "renewable energy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9da607b2d589e844f0570",
+       "headline": "Europe’s climate crisis worsens as warming outpaces global trends",
+       "url": "https://www.openaccessgovernment.org/europes-climate-crisis-worsens-as-warming-outpaces-global-trends/208889/",
+       "publisher": "openaccessgovernment.org",
+       "published_at": "2026-04-30T11:22:14",
+       "lede": "europe is warming faster than any other region on earth, according to newly released climate data the latest 2025 european state of the climate (esotc) report reveals that at least 95% of the continent experienced above-average temperatures in 2025 the data confirms earlier warnings that europe is heating at roughly",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.62
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.47
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.46
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa0ea84b609af2b26c94",
+       "headline": "Did Trump’s Economic War Backfire as Xi Turns Crisis into Strategic Gain",
+       "url": "https://www.timesnownews.com/world/us/us-news/did-trumps-economic-war-backfire-as-xi-turns-crisis-into-strategic-gain-article-154169240",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-25T20:12:41",
+       "lede": "as president donald trump prepares for his first visit to china in nearly a decade, scheduled for mid-may, the ongoing conflict in the middle east has quietly shifted the balance of power. what began as a military confrontation with iran has evolved into a broader economic war, one that appears",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.77
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.72
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69eaf636cb232e514c416cd4",
+       "headline": "IEA: World Faces Biggest Energy Security Threat in History",
+       "url": "https://www.newkerala.com/news/a/world-facing-biggest-energy-security-threat-history-iea-813.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-23T14:55:49",
+       "lede": "the international energy agency chief fatih birol has issued a stark warning that the world faces its biggest energy security threat in history. the crisis stems from a double-blockade of the strait of hormuz, which has halted the transport of 20 million barrels of oil daily. birol predicts the crisis",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "international energy agency"
+       ],
+       "people": [
+        "fatih birol"
+       ]
+      },
+      {
+       "id": "69f8817ebbf1d3145596eedd",
+       "headline": "The Debate - World's worst energy crisis? Iran war sparks scramble for alternatives to Gulf oil",
+       "url": "https://www.france24.com/en/tv-shows/the-debate/20260422-world-s-worst-energy-crisis-iran-war-sparks-scramble-for-alternatives-to-gulf-oil",
+       "publisher": "france24.com",
+       "published_at": "2026-04-22T18:10:51",
+       "lede": "world's worst energy crisis? iran war sparks scramble for alternatives to gulf oil middle east to display this content from youtube, you must enable advertisement tracking and audience measurement. accept manage my choices one of your browser extensions seems to be blocking the video player from loading. to watch this",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.83
+        }
+       ],
+       "country": "france",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9963fbdd09a23d08db4c3",
+       "headline": "Singapore’s resilience and ‘unnatural resourcefulness’ amid global shocks",
+       "url": "https://www.businesstimes.com.sg/opinion-features/singapores-resilience-and-unnatural-resourcefulness-amid-global-shocks",
+       "publisher": "businesstimes.com.sg",
+       "published_at": "2026-04-21T23:00:00",
+       "lede": "the nation’s ‘resources’, built through infrastructure, markets and trusted relationships, may prove critical in times of disruption the chokehold on strait of hormuz has revealed a new geo-economic weapon that impacts not only energy but sectors such as transport, fertilisers and chemicals. photo: reuters deeperdive is a beta ai feature.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.53
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.42
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e882be7bb1410d4c8861bf",
+       "headline": "As global crude oil crisis deepens, the only cure may be a demand shock",
+       "url": "https://www.indiatoday.in/business/commodities/story/global-oil-crisis-resolution-cure-use-less-demand-destruction-explaned-2899291-2026-04-21",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-04-21T07:04:49",
+       "lede": "the strait of hormuz still remains blocked, and much of the world is waiting for it to reopen. there is growing urgency across nations because the blockade has choked a vital oil route and triggered an energy crisis that appears to be worsening with each passing day.but there may be",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.92
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87b139baafc73568bea18",
+       "headline": "Climate Change and Its Comprehensive Impact on Planet Earth - Jordan News | Latest News from Jordan, MENA",
+       "url": "https://www.jordannews.jo/Section-29/Analysis/Climate-Change-and-Its-Comprehensive-Impact-on-Planet-Earth-50721",
+       "publisher": "jordannews.jo",
+       "published_at": "2026-04-20T12:18:51",
+       "lede": "اضافة اعلان climate change is one of the most pressing challenges facing our planet today. it represents a complex interaction of atmospheric, oceanic, and terrestrial systems that together shape the earth’s climate. over recent decades, scientific observations have confirmed a steady rise in global temperatures, driven primarily by increased concentrations",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.73
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e997e1d47fc028321668a9",
+       "headline": "Iran War: Strait of Hormuz Open Amid Israel-Lebanon Truce",
+       "url": "https://en.tempo.co/read/2098896/iran-war-strait-of-hormuz-open-amid-israel-lebanon-truce",
+       "publisher": "en.tempo.co",
+       "published_at": "2026-04-17T14:20:22",
+       "lede": "tempo.co, jakarta - iranian foreign minister abbas araghchi said that tehran was \"completely\" reopening the strait of hormuz for the rest of the ceasefire period.\"in line with the ceasefire in lebanon, the passage for all commercial vessels through strait of hormuz is declared completely open for the remaining period of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.64
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "abbas araghchi",
+        "abbas araghchi"
+       ]
+      },
+      {
+       "id": "69de1cde574a48be0d7408f6",
+       "headline": "As I write these lines… | FairPlanet",
+       "url": "https://www.fairplanet.org/dossier/climate-change/as-i-write-these-lines/",
+       "publisher": "fairplanet.org",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "as i write these lines, the carbon dioxide content in the atmosphere has risen to 410 ppm (parts per million), the highest value ever measured. this year's may was declared the hottest may since the beginning of weather records, once again, as in the previous year and the year before.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.51
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8773c5cfa3e5ba5fdee85",
+       "headline": "Trump says Iran doing \"very poor job\" of letting oil through Hormuz Strait",
+       "url": "https://www.newsweek.com/trump-iran-poor-job-oil-hormuz-strait-11808527",
+       "publisher": "newsweek.com",
+       "published_at": "2026-04-09T22:57:40",
+       "lede": "president donald trump accused iran of violating the terms of the recently announced u.s.-iran ceasefire on thursday, saying tehran was failing to allow oil shipments to move freely through the strait of hormuz. in a post on truth social, trump wrote: “iran is doing a very poor job, dishonorable some",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.58
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "truth social"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e85c529baafc7356783fd5",
+       "headline": "What does Trump have to do with taco Tuesday? Social jabs explained",
+       "url": "https://www.dailycommercial.com/story/news/trump/2026/04/09/donald-trump-taco-tariffs-iran/89517075007/",
+       "publisher": "dailycommercial.com",
+       "published_at": "2026-04-09T17:39:32",
+       "lede": "april 9, 2026, 1:39 p.m. et president trump has repeatedly threatened and then delayed attacks on iran, leading critics to use the acronym \"taco.\" \"taco\" stands for \"trump always chickens out,\" a term coined by a financial times columnist to describe his pattern of making threats and then backing down.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "financial times"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e859c59baafc735676c0a9",
+       "headline": "What does Trump have to do with taco Tuesday? Social jabs explained",
+       "url": "https://www.news-press.com/story/news/trump/2026/04/09/donald-trump-taco-tariffs-iran/89517075007/",
+       "publisher": "news-press.com",
+       "published_at": "2026-04-09T17:39:32",
+       "lede": "april 9, 2026, 1:39 p.m. et president trump has repeatedly threatened and then delayed attacks on iran, leading critics to use the acronym \"taco.\" \"taco\" stands for \"trump always chickens out,\" a term coined by a financial times columnist to describe his pattern of making threats and then backing down.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.71
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "financial times"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e31bb88fb0fff17dd1980c",
+       "headline": "What does Trump have to do with taco Tuesday? Social jabs explained",
+       "url": "https://www.gainesville.com/story/news/trump/2026/04/09/donald-trump-taco-tariffs-iran/89517075007/",
+       "publisher": "gainesville.com",
+       "published_at": "2026-04-09T17:39:32",
+       "lede": "april 9, 2026, 1:39 p.m. et president trump has repeatedly threatened and then delayed attacks on iran, leading critics to use the acronym \"taco.\" \"taco\" stands for \"trump always chickens out,\" a term coined by a financial times columnist to describe his pattern of making threats and then backing down.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.71
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "financial times"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e31b778c1f2eecc2d4d037",
+       "headline": "What does Trump have to do with taco Tuesday? Social jabs explained",
+       "url": "https://www.tallahassee.com/story/news/trump/2026/04/09/donald-trump-taco-tariffs-iran/89517075007/",
+       "publisher": "tallahassee.com",
+       "published_at": "2026-04-09T17:39:32",
+       "lede": "april 9, 2026, 1:39 p.m. et president trump has repeatedly threatened and then delayed attacks on iran, leading critics to use the acronym \"taco.\" \"taco\" stands for \"trump always chickens out,\" a term coined by a financial times columnist to describe his pattern of making threats and then backing down.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.71
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "financial times"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e31a37adcc4eacc587d5f4",
+       "headline": "What does Trump have to do with taco Tuesday? Social jabs explained",
+       "url": "https://www.floridatoday.com/story/news/trump/2026/04/09/donald-trump-taco-tariffs-iran/89517075007/",
+       "publisher": "floridatoday.com",
+       "published_at": "2026-04-09T17:39:32",
+       "lede": "april 9, 2026, 1:39 p.m. et president trump has repeatedly threatened and then delayed attacks on iran, leading critics to use the acronym \"taco.\" \"taco\" stands for \"trump always chickens out,\" a term coined by a financial times columnist to describe his pattern of making threats and then backing down.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "financial times"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2e038277be6ed2da8e12f",
+       "headline": "Global Energy Crisis: Iran War Analysis and Regulatory Hurdles - Time News",
+       "url": "https://time.news/global-energy-crisis-iran-war-analysis-and-regulatory-hurdles/",
+       "publisher": "time.news",
+       "published_at": "2026-04-09T07:02:52",
+       "lede": "the volatile intersection of middle eastern geopolitics and global energy markets has forced a fundamental shift in how nations secure their power grids. as tensions escalate involving iran and the broader region, the resulting energy instability has triggered a massive, fragmented response across 60 nations, each attempting to insulate their",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.56
+        }
+       ],
+       "country": "belgium",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d88d3aab8d96aa3e4294",
+       "headline": "Fuel prices on edge as ceasefire shows 'fragility'",
+       "url": "https://www.gloucesteradvocate.com.au/story/9218139/fuel-prices-on-edge-as-ceasefire-shows-fragility/",
+       "publisher": "gloucesteradvocate.com.au",
+       "published_at": "2026-04-08T21:48:25",
+       "lede": "drivers may have to wait months for fuel prices to come down as a ceasefire aimed at reopening the strait of hormuz is pushed to the brink. in exchange for american attacks being put on hold for two weeks, iran had agreed to allow tankers to resume travelling through the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.7
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.63
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.63
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d685d754bf662ce276ee",
+       "headline": "Fuel prices on edge as ceasefire shows 'fragility'",
+       "url": "http://www.examiner.com.au/story/9218139/fuel-prices-on-edge-as-ceasefire-shows-fragility/",
+       "publisher": "examiner.com.au",
+       "published_at": "2026-04-08T21:48:25",
+       "lede": "drivers may have to wait months for fuel prices to come down as a ceasefire aimed at reopening the strait of hormuz is pushed to the brink. in exchange for american attacks being put on hold for two weeks, iran had agreed to allow tankers to resume travelling through the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.7
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.63
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.63
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 34031,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOCAyMTo0ODoyNSIsImkiOiI2OWUyZDY4NWQ3NTRiZjY2MmNlMjc2ZWUiLCJwIjo5fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.742,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.744
+    }
+   }
+  }
+ ]
+}

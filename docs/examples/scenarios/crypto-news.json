@@ -1,0 +1,861 @@
+{
+ "slug": "crypto-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:55:33Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "crypto",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "crypto",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 66190,
+     "tone": {
+      "carrying": 66159,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 22037,
+        "share_pct": 33.31
+       },
+       {
+        "group": "neutral",
+        "count": 807,
+        "share_pct": 1.22
+       },
+       {
+        "group": "positive",
+        "count": 43315,
+        "share_pct": 65.47
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 66182,
+      "count": 39201,
+      "share_pct": 59.23
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.435,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.439
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "crypto",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "crypto",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 18293,
+       "critical": 11207,
+       "critical_pct": 61.3,
+       "negative": 4419,
+       "positive": 13670,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 15508,
+       "critical": 9309,
+       "critical_pct": 60.0,
+       "negative": 3681,
+       "positive": 11677,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 12394,
+       "critical": 7001,
+       "critical_pct": 56.5,
+       "negative": 2571,
+       "positive": 9649,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 11962,
+       "critical": 6975,
+       "critical_pct": 58.3,
+       "negative": 2754,
+       "positive": 9070,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 15303,
+       "critical": 8961,
+       "critical_pct": 58.6,
+       "negative": 2888,
+       "positive": 12255,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 17159,
+       "critical": 10901,
+       "critical_pct": 63.5,
+       "negative": 4192,
+       "positive": 12824,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 16747,
+       "critical": 10643,
+       "critical_pct": 63.6,
+       "negative": 5018,
+       "positive": 11558,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 15496,
+       "critical": 9603,
+       "critical_pct": 62.0,
+       "negative": 4204,
+       "positive": 11141,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 12000,
+       "critical": 7121,
+       "critical_pct": 59.3,
+       "negative": 3120,
+       "positive": 8706,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 18934,
+       "critical": 10070,
+       "critical_pct": 53.2,
+       "negative": 7909,
+       "positive": 10820,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 14938,
+       "critical": 9034,
+       "critical_pct": 60.5,
+       "negative": 4659,
+       "positive": 10087,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 20318,
+       "critical": 12976,
+       "critical_pct": 63.9,
+       "negative": 6349,
+       "positive": 13702,
+       "partial_period": false
+      }
+     ],
+     "total": 189052,
+     "critical_total": 113801,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.976,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.98
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "crypto",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "crypto",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 66190,
+     "carrying": 30483,
+     "availability_pct": 46.05,
+     "items": [
+      {
+       "country": "united states",
+       "count": 18249,
+       "share_pct": 27.57
+      },
+      {
+       "country": "iran",
+       "count": 1219,
+       "share_pct": 1.84
+      },
+      {
+       "country": "united kingdom",
+       "count": 1013,
+       "share_pct": 1.53
+      },
+      {
+       "country": "china",
+       "count": 884,
+       "share_pct": 1.34
+      },
+      {
+       "country": "india",
+       "count": 854,
+       "share_pct": 1.29
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 8264
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.416,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.419
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "crypto",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "crypto",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "cryptocurrency impact on forex markets",
+       "count": 34125,
+       "share": 68.27,
+       "lift": 185.76,
+       "baseline_count": 30,
+       "previous_period_count": 37530,
+       "delta_pct": -9.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "technical analysis for currency markets",
+       "count": 2093,
+       "share": 4.19,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1478,
+       "delta_pct": 41.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "exchange-traded funds (etfs) for currency exposure",
+       "count": 1975,
+       "share": 3.95,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 2647,
+       "delta_pct": -25.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "regulatory compliance in foreign exchange trading",
+       "count": 7052,
+       "share": 14.11,
+       "lift": 164.52,
+       "baseline_count": 7,
+       "previous_period_count": 5578,
+       "delta_pct": 26.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forex trading risk management frameworks",
+       "count": 1760,
+       "share": 3.52,
+       "lift": 287.42,
+       "baseline_count": 1,
+       "previous_period_count": 997,
+       "delta_pct": 76.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 66190,
+     "carrying": 49986,
+     "carrier_share_pct": 75.52,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.959,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.962
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "crypto",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "crypto",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e866805cfa3e5ba5f35763",
+       "headline": "Iran Conflict: Diplomacy and International Mediation Efforts - Time News",
+       "url": "https://time.news/iran-conflict-diplomacy-and-international-mediation-efforts/",
+       "publisher": "time.news",
+       "published_at": "2026-04-11T18:02:20",
+       "lede": "the geopolitical landscape of the middle east remains precariously balanced as international mediators scramble to prevent a full-scale escalation in iran. on saturday, april 11, diplomatic efforts intensified across multiple fronts, ranging from the corridors of the vatican to the hotel suites of rome, as global powers attempt to navigate",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.59
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.43
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e98e983fc01faba173b4d",
+       "headline": "US-Iran Tensions Spike as Trump Sets 48-Hour Deadline on Strait of Hormuz Blockade",
+       "url": "https://coingape.com/us-iran-tensions-spike-as-trump-sets-48-hour-deadline-on-strait-of-hormuz-blockade/",
+       "publisher": "coingape.com",
+       "published_at": "2026-03-22T07:26:07",
+       "lede": "highlights trump gives iran 48-hour deadline to reopen the strait of hormuz. iran warns of retaliation targeting us infrastructure. oil prices surge as crypto market faces fresh losses. us‑iran war tensions take a sharp turn as president donald trump issued a stark 48-hour ultimatum, demanding that tehran reopen the strait",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.73
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.61
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d09cebac6a8f04801c63db",
+       "headline": "Iran sends chilling WW3 warning - 'The Gates of Hell will open'",
+       "url": "https://www.express.co.uk/news/world/2177617/iran-war-us-israel-ww3-warning",
+       "publisher": "express.co.uk",
+       "published_at": "2026-03-03T11:54:00",
+       "lede": "operation epic fury was launched on saturday iran issued a chilling warning to the us and israel, three days into operation epic fury. a spokesman for the iranian revolutionary guards lashed out at washington and jerusalem as strikes continue to target the regime. ali mohammad naini told state tv: \"the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.94
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8927963d76f4afda3d12",
+       "headline": "US Cracks Down on Iran’s Crypto Network With Crypto Seizures",
+       "url": "https://coinlaw.io/us-iran-crypto-seizure-sanctions-crackdown/",
+       "publisher": "coinlaw.io",
+       "published_at": "2026-04-30T17:36:00",
+       "lede": "the united states has seized nearly $500 million in iranian cryptocurrency as part of a widening financial crackdown targeting tehran’s global funding channels. key takeaways the us has seized close to $500 million in iran linked crypto assets under operation economic fury. authorities previously froze about $344 million in digital",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03f4db9c4aac0935387b6e",
+       "headline": "Could Pepeto Be the Next Crypto to Explode as Strategy Loads 818,334 BTC While SOL and BNB Stall",
+       "url": "https://www.openpr.com/news/4497376/could-pepeto-be-the-next-crypto-to-explode-as-strategy-loads",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-30T17:09:12",
+       "lede": "could pepeto be the next crypto to explode as strategy loads 818,334 btc while sol and bnb stall https://pepetoswap.com https://pepetoswap.com https://youtu.be/syr4vqeyebi https://pepetoswap.com https://www.tokenwire.io strategy just dropped $255 million on btc, and that purchase tells more than the chart. when the largest corporate holder keeps buying at $76,200 with oil above",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.27,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.89
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa1a1c37f6c5e66db7503",
+       "headline": "Justin Sun And Trump-Linked WLFI Move From Crypto Alliance To Court Fight",
+       "url": "https://cryptoadventure.com/justin-sun-and-trump-linked-wlfi-move-from-crypto-alliance-to-court-fight/",
+       "publisher": "cryptoadventure.com",
+       "published_at": "2026-04-30T04:58:36",
+       "lede": "justin sun’s relationship with trump-linked world liberty financial has shifted from high-profile support to open litigation, after the tron founder sued the crypto venture over frozen wlfi tokens, voting rights, and alleged threats to destroy his holdings. the lawsuit, filed in california federal court, alleges that world liberty financial illegally",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f880cc43843dd771cebf1d",
+       "headline": "Here's Why XRP (Ripple) Could Drop Below $1 and Stay There | The Motley Fool",
+       "url": "https://www.fool.com/investing/2026/04/29/heres-why-xrp-ripple-could-drop-below-1-and-stay-t/",
+       "publisher": "fool.com",
+       "published_at": "2026-04-29T22:30:00",
+       "lede": "often, investors focus on arbitrary price levels to determine their stance on an asset. for xrp, (xrp +0.51%) the $1 level likely has that importance for a lot of people, as to breach $1, it would need to lose around 30% from its current price of $1.39. that kind of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "iran",
+       "organizations": [
+        "xrp"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8a6f68937ef12fc0ae28c",
+       "headline": "Is Crypto Becoming Part of Everyday Life, or Is Mass Adoption Still Far Away? - Crypto Economy",
+       "url": "https://crypto-economy.com/is-crypto-becoming-part-of-everyday-life-or-is-mass-adoption-still-far-away/",
+       "publisher": "crypto-economy.com",
+       "published_at": "2026-04-29T22:28:06",
+       "lede": "crypto doesn’t arrive with a manifesto. it arrives as a line item on your phone bill, as a debit card that earns yield while you sleep, as a cross-border payment that settles before the coffee gets cold. by early 2026, the industry stopped waiting for a symbolic moment of mass",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ecfcb83fc01faba48aa65",
+       "headline": "Bitcoin Drops $75,000 As Ethereum, XRP Trade Lose 3%",
+       "url": "https://www.benzinga.com/crypto/cryptocurrency/26/04/52145880/bitcoin-drops-75000-as-ethereum-xrp-trade-lose-3",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-29T18:49:40",
+       "lede": "bitcoin slipped to around $75,000 as traders reduced risk, with broader sentiment shifting from neutral to fear. cryptocurrencytickerpricebitcoin(crypto: btc)$75,282ethereum(crypto: eth)$2,225solana(crypto: sol)$81.89xrp(crypto: xrp)$1.35dogecoin(crypto: doge)$0.1017shiba inu(crypto: shib)$0.056039 notable statistics: coinglass data shows 179,931 traders were liquidated in the past 24 hours for $674.74 million. sosovalue data shows net inflows of $440.7 million",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 1.0
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a08b4cbcdd78e41b0ef743c",
+       "headline": "Nigel Farage faces standards probe over $6.7 million gift from Tether billionaire Christopher Harborne",
+       "url": "https://www.coindesk.com/policy/2026/04/29/u-k-s-farage-faces-standards-probe-over-usd6-7-million-gift-from-tether-billionaire-christopher-harborne",
+       "publisher": "coindesk.com",
+       "published_at": "2026-04-29T17:37:05",
+       "lede": "reform uk leader nigel farage received about £5 million (around $6.7 million) from crypto billionaire christopher harborne before announcing his run for the clacton seat in 2024, the guardian reported wednesday. the conservatives have referred him to the parliamentary standards commissioner, while labour has also accused him of breaking house",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.25,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22ee4c6105443aa5e4bed",
+       "headline": "MEXC and Sumsub Partner to Strengthen Global Compliance and Combat Emerging Identity Fraud Risks",
+       "url": "https://mediabulletins.com/business/mexc-and-sumsub-partner-to-strengthen-global-compliance-and-combat-emerging-identity-fraud-risks/",
+       "publisher": "mediabulletins.com",
+       "published_at": "2026-04-29T11:03:17",
+       "lede": "victoria, seychelles, april 29, 2026 /prnewswire/ — mexc, the world leader in zero‑fee digital asset trading, has today announced a strategic partnership with sumsub, a global verification and fraud prevention leader, to tackle one of the crypto industry’s most urgent threats: ai-driven cybercrime. with artificial intelligence making deepfake technology cheaper",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.28,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.82
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "sumsub"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f884f98937ef12fc0997db",
+       "headline": "MEXC and Sumsub partner to strengthen global compliance and combat emerging identity fraud risks",
+       "url": "https://cryptobriefing.com/mexc-and-sumsub-partner-to-strengthen-global-compliance-and-combat-emerging-identity-fraud-risks/",
+       "publisher": "cryptobriefing.com",
+       "published_at": "2026-04-29T10:04:09",
+       "lede": "apr. 29, 2026 victoria, seychelles, april 29, 2026 – mexc, the world leader in zero‑fee digital asset trading, has today announced a strategic partnership with sumsub, a global verification and fraud prevention leader, to tackle one of the crypto industry’s most urgent threats: ai-driven cybercrime. with artificial intelligence making deepfake",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.27,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.84
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "sumsub"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f2293927117df83f93f5c8",
+       "headline": "FOMC Meeting Today: Powell Speech and Fed Interest Rate Decision Could Move BTC, ETH, XRP and Altcoins",
+       "url": "https://coinpedia.org/news/fed-rate-cut-news-how-powells-words-could-move-btc-eth-and-altcoins/",
+       "publisher": "coinpedia.org",
+       "published_at": "2026-04-29T09:46:06",
+       "lede": "rizwan is an experienced crypto journalist with almost half a decade of experience covering everything related to the growing crypto industry — from price analysis to blockchain disruption. during this period, he’s authored more than 3,000 news articles for coinpedia news. story highlights federal reserve is expected to keep interest",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.92
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "blockchain",
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 5834,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAwOTo0NjowNiIsImkiOiI2OWYyMjkzOTI3MTE3ZGY4M2Y5M2Y1YzgiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.824,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.829
+    }
+   }
+  }
+ ]
+}

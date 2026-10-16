@@ -1,0 +1,876 @@
+{
+ "slug": "treasury-yields-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:25Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "treasury yields",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "treasury yields",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 688,
+     "tone": {
+      "carrying": 688,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 395,
+        "share_pct": 57.41
+       },
+       {
+        "group": "neutral",
+        "count": 8,
+        "share_pct": 1.16
+       },
+       {
+        "group": "positive",
+        "count": 285,
+        "share_pct": 41.42
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 688,
+      "count": 395,
+      "share_pct": 57.41
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.641,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 4.659
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "treasury yields",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "treasury yields",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 330,
+       "critical": 238,
+       "critical_pct": 72.1,
+       "negative": 230,
+       "positive": 97,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 123,
+       "critical": 74,
+       "critical_pct": 60.2,
+       "negative": 90,
+       "positive": 31,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 120,
+       "critical": 58,
+       "critical_pct": 48.3,
+       "negative": 59,
+       "positive": 61,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 166,
+       "critical": 100,
+       "critical_pct": 60.2,
+       "negative": 79,
+       "positive": 85,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 191,
+       "critical": 135,
+       "critical_pct": 70.7,
+       "negative": 114,
+       "positive": 77,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 105,
+       "critical": 78,
+       "critical_pct": 74.3,
+       "negative": 71,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 93,
+       "critical": 58,
+       "critical_pct": 62.4,
+       "negative": 55,
+       "positive": 37,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 190,
+       "critical": 128,
+       "critical_pct": 67.4,
+       "negative": 116,
+       "positive": 69,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 125,
+       "critical": 93,
+       "critical_pct": 74.4,
+       "negative": 77,
+       "positive": 47,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 167,
+       "critical": 87,
+       "critical_pct": 52.1,
+       "negative": 79,
+       "positive": 88,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 253,
+       "critical": 149,
+       "critical_pct": 58.9,
+       "negative": 171,
+       "positive": 78,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 143,
+       "critical": 66,
+       "critical_pct": 46.2,
+       "negative": 68,
+       "positive": 72,
+       "partial_period": false
+      }
+     ],
+     "total": 2006,
+     "critical_total": 1264,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.051,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.053
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "treasury yields",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "treasury yields",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 688,
+     "carrying": 341,
+     "availability_pct": 49.56,
+     "items": [
+      {
+       "country": "united states",
+       "count": 229,
+       "share_pct": 33.28
+      },
+      {
+       "country": "iran",
+       "count": 45,
+       "share_pct": 6.54
+      },
+      {
+       "country": "india",
+       "count": 17,
+       "share_pct": 2.47
+      },
+      {
+       "country": "china",
+       "count": 12,
+       "share_pct": 1.74
+      },
+      {
+       "country": "united arab emirates",
+       "count": 6,
+       "share_pct": 0.87
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 32
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.488,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.491
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "treasury yields",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "treasury yields",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 136,
+       "share": 22.97,
+       "lift": 937.64,
+       "baseline_count": 2,
+       "previous_period_count": 48,
+       "delta_pct": 183.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 124,
+       "share": 20.95,
+       "lift": 854.91,
+       "baseline_count": 2,
+       "previous_period_count": 44,
+       "delta_pct": 181.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "central bank monetary policy announcements",
+       "count": 250,
+       "share": 42.23,
+       "lift": 574.54,
+       "baseline_count": 6,
+       "previous_period_count": 257,
+       "delta_pct": -2.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market volatility and risk assessment",
+       "count": 155,
+       "share": 26.18,
+       "lift": 712.42,
+       "baseline_count": 3,
+       "previous_period_count": 52,
+       "delta_pct": 198.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "european central bank (ecb) decisions",
+       "count": 150,
+       "share": 25.34,
+       "lift": 689.44,
+       "baseline_count": 3,
+       "previous_period_count": 161,
+       "delta_pct": -6.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 688,
+     "carrying": 592,
+     "carrier_share_pct": 86.05,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.762,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.764
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "treasury yields",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "treasury yields",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e6458e2be6445e460b2db6",
+       "headline": "Treasury yields are little changed as collapse of Iran talks clouds inflation outlook - IndiaVision India News & Information",
+       "url": "https://www.indiavision.com/business/treasury-yields-are-little-changed-as-collapse-of-iran-talks-clouds-inflation-outlook/601509/",
+       "publisher": "indiavision.com",
+       "published_at": "2026-04-13T15:02:10",
+       "lede": "how tweaking `hybrid vigor` gene generates higher tomato crop yields treasury yields are little changed as collapse of iran talks clouds inflation outlook **geopolitical uncertainty casts shadow over treasury market, inflation prospects remain muted** **washington d.c.** – treasury yields experienced minimal fluctuation on monday, a day marked by renewed geopolitical",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e63f0b2461615d5f42604e",
+       "headline": "Treasury yields are little changed as collapse of Iran talks clouds inflation outlook - IndiaVision India News & Information",
+       "url": "https://www.indiavision.com/national/treasury-yields-are-little-changed-as-collapse-of-iran-talks-clouds-inflation-outlook/601509/",
+       "publisher": "indiavision.com",
+       "published_at": "2026-04-13T15:02:10",
+       "lede": "how tweaking `hybrid vigor` gene generates higher tomato crop yields treasury yields are little changed as collapse of iran talks clouds inflation outlook **geopolitical uncertainty casts shadow over treasury market, inflation prospects remain muted** **washington d.c.** – treasury yields experienced minimal fluctuation on monday, a day marked by renewed geopolitical",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc157362898d9e03c89681",
+       "headline": "Analysis-Treasury market's next test: rising war costs",
+       "url": "https://finance.yahoo.com/economy/policy/articles/analysis-treasury-markets-next-test-100526857.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-03-31T10:05:26",
+       "lede": "by karen brettellmarch 31 (reuters) - inflation risks have driven treasury yields higher since the u.s. clash with iran ignited energy prices. now another threat to bond market health is coming into view: the cost of an extended conflict.wall street continues to expect the war to end soon, easing pressure",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.57
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.56
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c441a88ac21b0272b07880",
+       "headline": "US Dollar Stable, Risks Remain On Diplomatic Hopes",
+       "url": "https://businessnewsthisweek.com/business/us-dollar-stable-risks-remain-on-diplomatic-hopes/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-03-25T12:21:31",
+       "lede": "today’s markets analysis on behalf of joseph dahrieh, managing director at tickmillthe dollar index was relatively stable on wednesday, but could come under pressure as treasury yields retreat to a certain extent on hopes of potential de-escalation in the middle east. the 10-year treasury yield slipped and could continue to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6af3c37f6c5e66b7fcf8",
+       "headline": "Bank of America Stock Price Jumps 1.4%: Why BAC Rose While Wall Street Fell",
+       "url": "https://ts2.tech/en/bank-of-america-stock-price-jumps-1-4-why-bac-rose-while-wall-street-fell/",
+       "publisher": "ts2.tech",
+       "published_at": "2026-03-24T21:59:17",
+       "lede": "new york, march 24, 2026, 16:23 edt bank of america closed tuesday at $48.17, gaining roughly 1.4%, despite a weaker session for the major u.s. indexes. traders are no longer factoring in federal reserve rate cuts for 2026, with treasury yields and oil both moving higher. that’s pushed attention back",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.67
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c437d749b8d23961ff8954",
+       "headline": "Wall Street indexes mixed on rising yields, worries about Middle East war | Stock Market News",
+       "url": "https://www.livemint.com/market/wall-street-indexes-mixed-on-rising-yields-worries-about-middle-east-war-11774378412615.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-03-24T18:53:32",
+       "lede": "march 24 (reuters) - wall street's main indexes were volatile on tuesday as oil prices and u.s. treasury yields rose, while investors reacted to the latest reports on the middle east conflict a day after the market had a relief rally following the u.s. postponement of strikes on iranian power",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc4e7bf038a023dcc3f9f3",
+       "headline": "Why the real market shock is in long bonds",
+       "url": "https://malaysia.news.yahoo.com/why-the-real-market-shock-is-in-long-bonds-200720064.html",
+       "publisher": "malaysia.news.yahoo.com",
+       "published_at": "2026-03-13T06:08:44",
+       "lede": "forget the slow bleed in stocks.the more important story in the second trump presidency has been the bond market, where long-term treasury yields are again pushing toward levels that have rattled stocks before.as rsm chief economist joe brusuelas said on yahoo finance's stocks in translation in december 2024, \"the stock",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.44
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c441f6aeca06e4513b0f46",
+       "headline": "Treasury Yields Hold Above 4% as Oil Tensions, Fed Politics Rattle Bond Market",
+       "url": "https://news.bitcoin.com/treasury-yields-hold-above-4-as-oil-tensions-fed-politics-rattle-bond-market/",
+       "publisher": "news.bitcoin.com",
+       "published_at": "2026-03-12T17:26:09",
+       "lede": "treasury yields jumpy as a cat on a hot tin roof amid oil tensions and fed politicsu.s. treasury yields are holding stubbornly high this week, with the benchmark 10-year hovering around 4.24% as of midday march 12. that’s roughly 18–20 basis points higher than a month ago—no small move in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.59
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.49
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dfbbaec1e955063e1526a5",
+       "headline": "**Duration Divergence: Bond Markets Signal Disbelief in the Fed’s Inflation Narrative** While the Federal Reserve holds sway over the short end of the yield curve, the long end is largely shaped by market sentiment. Right now, that sentiment is sending a clear warning of discomfort. Historically, Tr",
+       "url": "https://cremarketbeat.com/bond-market-signals-doubt-in-feds-inflation-outlook-through-duration-divergence/",
+       "publisher": "cremarketbeat.com",
+       "published_at": "2026-02-06T00:00:00",
+       "lede": "**duration divergence: bond markets signal disbelief in the fed’s inflation narrative** while the federal reserve holds sway over the short end of the yield curve, the long end is largely shaped by market sentiment. right now, that sentiment is sending a clear warning of discomfort. historically, treasury yields have strongly",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "federal reserve",
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a80c3963d76f4afd493cf",
+       "headline": "Treasury Yields Jump: Investors Monitor Bond Market Volatility Amid Geopolitical Concerns",
+       "url": "https://world.infonasional.com/treasury-yields-jump-bond-market-volatility",
+       "publisher": "world.infonasional.com",
+       "published_at": "2026-01-24T08:04:20",
+       "lede": "the recent surge in treasury yields has put investors on high alert, raising concerns about potential ripple effects, including increased borrowing costs for the u.s. government, corporations, and consumers. this development gains significance as president donald trump prioritizes affordability initiatives during his second term, ahead of the upcoming midterm elections.despite",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eb29383fc01faba2d2b92",
+       "headline": "India bonds tick up; high US yields cap RBI buying hope",
+       "url": "https://bfsi.economictimes.indiatimes.com/news/industry/india-bonds-tick-up-high-us-yields-cap-rbi-buying-hope/126800163",
+       "publisher": "bfsi.economictimes.indiatimes.com",
+       "published_at": "2026-01-20T18:01:13",
+       "lede": "(updates at market close)by khushi malhotramumbai, -indian government bonds edged &zwj;higher on tuesday, snapping a four-session losing streak, but gains were capped as a &#8288;surge in u.s. treasury yields offset hopes of reserve bank of india buying in the secondary market.the benchmark 10-year 6.48% 2035 bond yield ended at 6.6722%.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.71
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5d12963d76f4afbdad4c",
+       "headline": "India bonds track U.S. debt lower, overlooking state supply cut",
+       "url": "https://bfsi.economictimes.indiatimes.com/news/financial-services/india-bonds-decline-amid-rising-us-treasury-yields-despite-lower-state-debt-supply/126669082",
+       "publisher": "bfsi.economictimes.indiatimes.com",
+       "published_at": "2026-01-19T10:49:05",
+       "lede": "indian government bonds extended last &zwj;week's losing run early on monday, tracking a sharp increase in u.s. treasury yields &#8288;and overlooking lower-than-scheduled state debt supply for the week. the yield on the 10-year benchmark bond traded at 6.6864% as of 10:35 a.m., versus friday's close of 6.6767%. bond yields move",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.69
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bb989baafc7356bd5b3a",
+       "headline": "Wall Street ends mixed at the top of the new year; Treasury yields move higher",
+       "url": "https://za.investing.com/news/stock-market-news/stocks-make-upbeat-start-to-2026-precious-metals-extend-sparkling-rally-4044571",
+       "publisher": "za.investing.com",
+       "published_at": "2026-01-02T02:48:27",
+       "lede": "by stephen culp new york, jan 2 (reuters) - u.s. stocks oscillated to a mixed close, u.s. treasury yields climbed and the dollar firmed on friday, the first trading day of 2026. while all three major u.s. stock indexes seesawed for much of the session, the s&p 500 and dow",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.81
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 107,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMS0wMiAwMjo0ODoyNyIsImkiOiI2OWU4YmI5ODliYWFmYzczNTZiZDViM2EiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.558,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.562
+    }
+   }
+  }
+ ]
+}

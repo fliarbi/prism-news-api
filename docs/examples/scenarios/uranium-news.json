@@ -1,0 +1,1033 @@
+{
+ "slug": "uranium-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:15:57Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "uranium",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "uranium",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6342,
+     "tone": {
+      "carrying": 6338,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3781,
+        "share_pct": 59.66
+       },
+       {
+        "group": "neutral",
+        "count": 225,
+        "share_pct": 3.55
+       },
+       {
+        "group": "positive",
+        "count": 2332,
+        "share_pct": 36.79
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6341,
+      "count": 5037,
+      "share_pct": 79.44
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.679,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.681
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "uranium",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "uranium",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 835,
+       "critical": 617,
+       "critical_pct": 73.9,
+       "negative": 424,
+       "positive": 373,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2065,
+       "critical": 1700,
+       "critical_pct": 82.3,
+       "negative": 1559,
+       "positive": 462,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 966,
+       "critical": 679,
+       "critical_pct": 70.3,
+       "negative": 540,
+       "positive": 399,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 762,
+       "critical": 580,
+       "critical_pct": 76.1,
+       "negative": 328,
+       "positive": 398,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 814,
+       "critical": 590,
+       "critical_pct": 72.5,
+       "negative": 266,
+       "positive": 529,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 539,
+       "critical": 356,
+       "critical_pct": 66.0,
+       "negative": 127,
+       "positive": 393,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 563,
+       "critical": 404,
+       "critical_pct": 71.8,
+       "negative": 196,
+       "positive": 351,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 593,
+       "critical": 358,
+       "critical_pct": 60.4,
+       "negative": 96,
+       "positive": 459,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 693,
+       "critical": 415,
+       "critical_pct": 59.9,
+       "negative": 139,
+       "positive": 517,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1353,
+       "critical": 992,
+       "critical_pct": 73.3,
+       "negative": 687,
+       "positive": 619,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1558,
+       "critical": 1309,
+       "critical_pct": 84.0,
+       "negative": 983,
+       "positive": 522,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2738,
+       "critical": 2321,
+       "critical_pct": 84.8,
+       "negative": 1972,
+       "positive": 674,
+       "partial_period": false
+      }
+     ],
+     "total": 13479,
+     "critical_total": 10321,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.102,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.105
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "uranium",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "uranium",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6342,
+     "carrying": 3018,
+     "availability_pct": 47.59,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1814,
+       "share_pct": 28.6
+      },
+      {
+       "country": "iran",
+       "count": 336,
+       "share_pct": 5.3
+      },
+      {
+       "country": "canada",
+       "count": 297,
+       "share_pct": 4.68
+      },
+      {
+       "country": "india",
+       "count": 134,
+       "share_pct": 2.11
+      },
+      {
+       "country": "australia",
+       "count": 58,
+       "share_pct": 0.91
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 379
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.039,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.042
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "uranium",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "uranium",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mineral exploration drilling techniques",
+       "count": 302,
+       "share": 6.28,
+       "lift": 512.31,
+       "baseline_count": 1,
+       "previous_period_count": 273,
+       "delta_pct": 10.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "geological surveying technologies",
+       "count": 154,
+       "share": 3.2,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 124,
+       "delta_pct": 24.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "disarmament and arms control agreements",
+       "count": 791,
+       "share": 16.44,
+       "lift": 95.85,
+       "baseline_count": 14,
+       "previous_period_count": 125,
+       "delta_pct": 532.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "weapons of mass destruction (wmds)",
+       "count": 816,
+       "share": 16.96,
+       "lift": 65.92,
+       "baseline_count": 21,
+       "previous_period_count": 128,
+       "delta_pct": 537.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economic sanctions and wartime trade",
+       "count": 802,
+       "share": 16.67,
+       "lift": 59.15,
+       "baseline_count": 23,
+       "previous_period_count": 124,
+       "delta_pct": 546.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6342,
+     "carrying": 4812,
+     "carrier_share_pct": 75.88,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.451,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.457
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "uranium",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "uranium",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e99696d47fc02832155458",
+       "headline": "Trump says recovering Iran uranium 'will be a long and difficult process'",
+       "url": "https://myrepublica.nagariknetwork.com/news/trump-says-recovering-iran-uranium-will-be-a-long-and-difficult-process-56-26.html",
+       "publisher": "myrepublica.nagariknetwork.com",
+       "published_at": "2026-04-21T06:16:00",
+       "lede": "washington, april 21: us president donald trump said late monday the united states obtaining uranium from iran would be \"long\" and \"difficult\" in the aftermath of last year's us strikes on tehran's nuclear sites. \"operation midnight hammer was a complete and total obliteration of the nuclear dust sites in iran,\"",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.64
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.42
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e8e2e49baafc7356ddd664",
+       "headline": "'We're Going to Take It Back Home to the US': Trump Reiterates to Take Enriched Uranium Despite Iran's Denial",
+       "url": "https://www.republicworld.com/world-news/we-re-going-to-take-it-back-home-to-the-us-trump-reiterates-to-take-enriched-uranium-despite-iran-s-denial",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-18T01:31:49",
+       "lede": "arizona: us president donald trump on friday (local time) reiterated that the united states will take enriched uranium from iran as part of ongoing negotiations, even as tehran strongly denied any agreement to transfer nuclear material. while speaking at the turning point usa event here, trump said the operation would",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.66
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2aecc05cefb83fe8570088",
+       "headline": "Trump: Iran Has Agreed to Hand Over Its Nuclear Dust",
+       "url": "https://www.abhs.in/blog/trump-iran-agreed-no-nuclear-weapon-hand-over-nuclear-dust-april-2026",
+       "publisher": "abhs.in",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "trump announced april 17 that iran agreed to not develop a nuclear weapon and hand over its enriched uranium. what \"nuclear dust\" means, the russia transfer mechanism, and what comes next. trump posted on truth social this morning that iran has agreed to not develop a nuclear weapon — and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.67
+        },
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.55
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e864fe7bb1410d4c753b5f",
+       "headline": "Trump says Iran agrees to hand over its enriched uranium",
+       "url": "http://www.radionz.co.nz/news/world/592647/trump-says-iran-agrees-to-hand-over-its-enriched-uranium",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-04-16T22:14:43",
+       "lede": "photo: brendan smialowski / afp us president donald trump says washington and tehran were \"very close\" to a peace deal and insisted that iran had agreed to hand over its enriched uranium, a key sticking point in negotiations. the united states had earlier threatened to resume airstrikes on the islamic",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.8,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.84
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.73
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.51
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e649de9e87ccc43e36ea7b",
+       "headline": "Israel-Lebanon Op Threatens Iran-US Ceasefire, Peace Talks",
+       "url": "https://www.newkerala.com/news/a/stalemate-over-israel-op-lebanon-threatens-west-asia-530.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-09T05:46:22",
+       "lede": "iran's parliament speaker has accused the us and israel of violating the temporary ceasefire agreement, specifically citing ongoing israeli operations in lebanon, a breach of iranian airspace, and denial of iran's uranium enrichment rights. in response, israeli prime minister benjamin netanyahu insists the lebanon ceasefire was never part of the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.88
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.63
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "benjamin netanyahu",
+        "benjamin netanyahu"
+       ]
+      },
+      {
+       "id": "6a0ebcaec0b414d24a1be04b",
+       "headline": "Netanyahu: ceasefire fragile, Israel ready for war again",
+       "url": "https://www.thehindubusinessline.com/news/world/netanyahu-says-israel-will-achieve-goals-by-agreement-or-resuming-fighting-warns-iran-with-finger-on-trigger/article70840212.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-08T23:22:34",
+       "lede": "israeli prime minister benjamin netanyahu signalled that the temporary ceasefire remains fragile as tel aviv is determined to achieve its objectives through negotiation or “resuming the fighting”. israel’s primary objective is to prohibit iran from enriching uranium, which tel aviv believes will be used to make a nuclear weapon. in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.75
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.68
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.47
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c51ebd7b10565a3fe16d",
+       "headline": "Rescue or ruse: Iran accuses US of using operation to retrieve airman as cover to 'steal' uranium",
+       "url": "https://www.indiatvnews.com/news/world/rescue-or-ruse-iran-accuses-us-of-using-operation-to-retrieve-airman-as-cover-to-steal-its-uranium-2026-04-07-1036541",
+       "publisher": "indiatvnews.com",
+       "published_at": "2026-04-07T01:18:19",
+       "lede": "iran&rsquo;s foreign ministry has accused the united states of attempting to steal its enriched uranium under the guise of a rescue mission for a downed airman.&nbsp; speaking on monday, foreign ministry spokesman esmail baghaei stated that washington used the mission to recover the f-15e airman, whose aircraft was shot down",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c37d601121844c3d65a2",
+       "headline": "Cover ‘to steal enriched uranium’: Iran on US motives behind ‘daring’ operation for rescue of F-15E aviator",
+       "url": "https://www.hindustantimes.com/world-news/cover-to-steal-enriched-uranium-iran-on-us-motives-behind-daring-operation-for-rescue-of-f-15e-aviator-101775511442839.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-04-06T21:45:48",
+       "lede": "iran's foreign ministry alleged on monday that a us operation to rescue the f-15e airman, whose jet was shot down by tehran’s forces over its territory, may have been a cover to \"steal enriched uranium\" from the islamic republic.us president donald trump had announced on sunday that his country’s special",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e298473aab8d96aa305e31",
+       "headline": "US Could Use Rescue of Pilots as Cover to Steal Iranian Uranium - Iranian Foreign Ministry",
+       "url": "https://sputnikglobe.com/20260406/us-could-use-rescue-of-pilots-as-cover-to-steal-iranian-uranium---iranian-foreign-ministry-1123953193.html",
+       "publisher": "sputnikglobe.com",
+       "published_at": "2026-04-06T10:36:00",
+       "lede": "https://sputnikglobe.com/20260406/us-could-use-rescue-of-pilots-as-cover-to-steal-iranian-uranium---iranian-foreign-ministry-1123953193.html us could use rescue of pilots as cover to steal iranian uranium - iranian foreign ministry us could use rescue of pilots as cover to steal iranian uranium - iranian foreign ministry sputnik international iran believes that us attempt to save its pilots could have been cover to steal",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.75
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e29ac6d754bf662cd57f56",
+       "headline": "West Asia War Escalates: Iran Rejects Proposed 45-Day Ceasefire, Says 'No Concessions On Hormuz, Uranium'",
+       "url": "https://www.freepressjournal.in/world/west-asia-war-escalates-iran-rejects-proposed-45-day-ceasefire-says-no-concessions-on-hormuz-uranium",
+       "publisher": "freepressjournal.in",
+       "published_at": "2026-04-06T07:08:15",
+       "lede": "a sharp escalation in rhetoric and strategic posturing has intensified tensions in west asia, with iran refusing to control over the strait of hormuz or its enriched uranium stockpile, even as us president donald trump issued a provocative deadline and threat of military action. iran rejects ceasefire terms tehran has",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.62
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e27f41ff2654c79d5f6c72",
+       "headline": "US Military Plans for Iran: Trump Requests Options to Seize Nuclear Material & Middle East Buildup - Time News",
+       "url": "https://time.news/us-military-plans-for-iran-trump-requests-options-to-seize-nuclear-material-middle-east-buildup/",
+       "publisher": "time.news",
+       "published_at": "2026-04-02T06:18:27",
+       "lede": "washington – the united states military, at the request of former president donald trump, reportedly developed a plan to seize approximately 454 kilograms (1,000 pounds) of enriched uranium from iran, according to reporting by the wall street journal. the proposal, which was detailed to trump in the waning days of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.84
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.78
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "the wall street journal"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e27f27dc480588dc971c19",
+       "headline": "President Trump Posts Video Showing Fiery Bunker Buster Bomb Attack in Iran",
+       "url": "https://www.tmz.com/2026/03/31/president-trump-posts-video-of-iranian-bomb-strike/",
+       "publisher": "tmz.com",
+       "published_at": "2026-03-31T13:06:42",
+       "lede": "president donald trump is keeping up his attacks on iran, unleashing a massive bomb strike on the city of isfahan that was captured on eye-popping video. dt posted the 31-second clip on truth social monday night, showing 2,000-pound bunker-buster bombs exploding in isfahan where it's believed uranium — which is",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.77
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.59
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "truth social"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e873975cfa3e5ba5fbb284",
+       "headline": "High-risk US plan to extract Iran’s uranium under review by Trump; Netanyahu claims war turning point - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/news/defence/high-risk-us-plan-to-extract-irans-uranium-under-review-by-trump-netanyahu-claims-war-turning-point/printarticle/129914598.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-03-31T02:31:00",
+       "lede": "donald trump is considering a high-risk military operation to extract nearly 1,000 pounds of uranium from iran, according to us officials cited by the wall street journal.the proposed mission, described as complex and hazardous, could require american forces to operate inside iranian territory for several days or longer. officials said",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.79
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.51
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "the wall street journal"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e2d44fa85be7e50666fe3d",
+       "headline": "High-risk US plan to extract Iran’s uranium under review by Trump; Netanyahu claims war turning point",
+       "url": "https://economictimes.indiatimes.com/news/defence/high-risk-us-plan-to-extract-irans-uranium-under-review-by-trump-netanyahu-claims-war-turning-point/articleshow/129914598.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-03-31T02:31:00",
+       "lede": "donald trump is considering a high-risk military operation to extract nearly 1,000 pounds of uranium from iran, according to us officials cited by the wall street journal.the proposed mission, described as complex and hazardous, could require american forces to operate inside iranian territory for several days or longer. officials said",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.79
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.51
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "the wall street journal"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2e528cbf10c43d29713991",
+       "headline": "Trump weighs military action to seize 1,000 lbs of Iranian uranium",
+       "url": "https://www.yahoo.com/news/articles/trump-weighs-military-action-seize-160156312.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-30T16:01:56",
+       "lede": "president donald trump is weighing whether to send u.s. forces into iran to secure nearly 1,000 pounds of enriched uranium, according to reporting by the wall street journal and the associated press. he has not made a final decision and is balancing the risk to u.s. troops while also pressing",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.68
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee46f83fc01faba5dc714",
+       "headline": "Report: Trump weighing sending military to take Iran's uranium",
+       "url": "https://www.yahoo.com/news/articles/report-trump-weighing-sending-military-081425775.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-30T08:14:25",
+       "lede": "us president donald trump is considering a military mission in iran to seize around 400 kilograms of highly enriched uranium, according to the wall street journal. the paper on sunday quoted us officials as saying that trump is currently assessing how dangerous this would be for the ground troops required",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.46
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 1234,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0zMCAwODoxNDoyNSIsImkiOiI2YTJlZTQ2ZjgzZmMwMWZhYmE1ZGM3MTQiLCJwIjo5fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.302,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.305
+    }
+   }
+  }
+ ]
+}

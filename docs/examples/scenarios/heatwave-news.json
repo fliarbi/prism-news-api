@@ -1,0 +1,932 @@
+{
+ "slug": "heatwave-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:52Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "heatwave",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "heatwave",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2902,
+     "tone": {
+      "carrying": 2897,
+      "availability_pct": 99.83,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2067,
+        "share_pct": 71.35
+       },
+       {
+        "group": "neutral",
+        "count": 152,
+        "share_pct": 5.25
+       },
+       {
+        "group": "positive",
+        "count": 678,
+        "share_pct": 23.4
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2902,
+      "count": 1747,
+      "share_pct": 60.2
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.804,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.807
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "heatwave",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "heatwave",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 554,
+       "critical": 312,
+       "critical_pct": 56.3,
+       "negative": 363,
+       "positive": 170,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1696,
+       "critical": 856,
+       "critical_pct": 50.5,
+       "negative": 1080,
+       "positive": 536,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1470,
+       "critical": 767,
+       "critical_pct": 52.2,
+       "negative": 918,
+       "positive": 497,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1175,
+       "critical": 675,
+       "critical_pct": 57.4,
+       "negative": 754,
+       "positive": 371,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 141,
+       "critical": 104,
+       "critical_pct": 73.8,
+       "negative": 103,
+       "positive": 36,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 89,
+       "critical": 59,
+       "critical_pct": 66.3,
+       "negative": 50,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 91,
+       "critical": 68,
+       "critical_pct": 74.7,
+       "negative": 56,
+       "positive": 30,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 100,
+       "critical": 68,
+       "critical_pct": 68.0,
+       "negative": 72,
+       "positive": 26,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 353,
+       "critical": 273,
+       "critical_pct": 77.3,
+       "negative": 248,
+       "positive": 99,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 131,
+       "critical": 81,
+       "critical_pct": 61.8,
+       "negative": 100,
+       "positive": 23,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 584,
+       "critical": 381,
+       "critical_pct": 65.2,
+       "negative": 437,
+       "positive": 119,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1834,
+       "critical": 1012,
+       "critical_pct": 55.2,
+       "negative": 1282,
+       "positive": 437,
+       "partial_period": false
+      }
+     ],
+     "total": 8218,
+     "critical_total": 4656,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.111,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.112
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "heatwave",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "heatwave",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2902,
+     "carrying": 1876,
+     "availability_pct": 64.65,
+     "items": [
+      {
+       "country": "india",
+       "count": 1193,
+       "share_pct": 41.11
+      },
+      {
+       "country": "australia",
+       "count": 249,
+       "share_pct": 8.58
+      },
+      {
+       "country": "united states",
+       "count": 215,
+       "share_pct": 7.41
+      },
+      {
+       "country": "malaysia",
+       "count": 62,
+       "share_pct": 2.14
+      },
+      {
+       "country": "united kingdom",
+       "count": 28,
+       "share_pct": 0.96
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 129
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.958,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.973
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "heatwave",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "heatwave",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "extreme weather events",
+       "count": 469,
+       "share": 21.34,
+       "lift": 435.45,
+       "baseline_count": 4,
+       "previous_period_count": 18,
+       "delta_pct": 2505.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "heatwave advisories",
+       "count": 1370,
+       "share": 62.33,
+       "lift": 141.33,
+       "baseline_count": 36,
+       "previous_period_count": 62,
+       "delta_pct": 2109.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "seasonal weather trends",
+       "count": 103,
+       "share": 4.69,
+       "lift": 191.26,
+       "baseline_count": 2,
+       "previous_period_count": 5,
+       "delta_pct": 1960.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "daily temperature reports",
+       "count": 311,
+       "share": 14.15,
+       "lift": 67.94,
+       "baseline_count": 17,
+       "previous_period_count": 6,
+       "delta_pct": 5083.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "regional weather patterns",
+       "count": 114,
+       "share": 5.19,
+       "lift": 47.04,
+       "baseline_count": 9,
+       "previous_period_count": 3,
+       "delta_pct": 3700.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2902,
+     "carrying": 2198,
+     "carrier_share_pct": 75.74,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.659,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.662
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "heatwave",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "heatwave",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2ac9345cefb83fe83e6a8d",
+       "headline": "South-east Asia office workers swelter in energy-saving drive, heatwave",
+       "url": "http://www.straitstimes.com/asia/se-asia/south-east-asia-office-workers-swelter-in-energy-saving-drive-heatwave",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-28T00:58:00",
+       "lede": "sign up now: get insights on the biggest stories in malaysia among the hardest-hit countries is thailand, where temperatures soared to above 40 deg c in recent weeks . singapore – a heatwave sweeping across south-east asia is making offices even warmer, as workers continue to adjust to energy-saving measures",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.54
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad12f5cefb83fe8440ddd",
+       "headline": "Bangladesh sweats as Middle East fuel shortages force power cuts",
+       "url": "http://www.straitstimes.com/asia/south-asia/bangladesh-sweats-as-middle-east-fuel-shortages-force-power-cuts",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-24T09:30:00",
+       "lede": "sign up now: get insights on asia's fast-moving developments a severe heatwave is sweeping across bangladesh, with temperatures hitting 40 deg c in some areas. – bangladesh is battling a heatwave and frequent power cuts, as soaring electricity demand outstrips limited generation capacity constrained by shortages linked to the middle",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99c1975f157062cb02937",
+       "headline": "Almost 30% of Us Face 5x More Heat-Drought Extremes by End of Century",
+       "url": "https://www.sciencealert.com/almost-30-of-us-face-5x-more-heat-drought-extremes-by-end-of-century",
+       "publisher": "sciencealert.com",
+       "published_at": "2026-04-22T12:00:48",
+       "lede": "the world is heating up, and a new study warns that almost one-third of people could face the double-whammy of a heatwave and drought five times more often by the 2090s. researchers in germany and china looked at compound hot-dry extremes, events where severe drought and intense heatwaves happen at",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.74
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.45
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "heatwave"
+       ],
+       "people": []
+      },
+      {
+       "id": "69dfd6561d88cc4f6cae5847",
+       "headline": "Australia-Heatwave.",
+       "url": "https://www.farminguk.com/news/australia-heatwave-_10888.html",
+       "publisher": "farminguk.com",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "australia the worse heat wave in the nations history has caused havoc to farmers and is believed to have caused the deaths of six people. yesterday provided some relief, although authorities warned the risks were not over. temperatures are expected to stay high for the next five days and they",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.53
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.42
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2926a9b322e6b3e9a5ac9",
+       "headline": "Thailand Weather Forecast: Extreme Heat in Bangkok, Light Rain in North and Northeast - Time News",
+       "url": "https://time.news/thailand-weather-forecast-extreme-heat-in-bangkok-light-rain-in-north-and-northeast/",
+       "publisher": "time.news",
+       "published_at": "2026-04-05T02:20:24",
+       "lede": "residents across thailand are facing a starkly divided weather pattern this saturday, as an intense heatwave grips the capital while scattered thunderstorms provide a brief, albeit insufficient, reprieve for the northern and northeastern regions. according to the latest พยากรณ์อากาศวันนี้, the thai meteorological department (tmd) has issued warnings for extreme heat,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.85
+        }
+       ],
+       "country": "thailand",
+       "organizations": [
+        "heatwave"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0365a6ca027fb5990c7c5c",
+       "headline": "USA's record-breaking heatwave set to get worse as experts warn climate change threat is 'here'",
+       "url": "https://uniladtech.com/news/usa-record-breaking-heatwave-to-get-worse-959497-20260331",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-03-31T08:59:26",
+       "lede": "the warnings about climate change have been growing louder for years. scientists have warned about rising death tolls, collapsing ecosystems and increasingly extreme weather events that will make large parts of the planet difficult to live in. now, a record-breaking heatwave has descended across the western united states, pushing temperatures",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.72
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bb497bb1410d4cb44ef4",
+       "headline": "USA's record-breaking heatwave set to get worse as experts warn climate change threat is 'here'",
+       "url": "https://www.uniladtech.com/news/usa-record-breaking-heatwave-to-get-worse-959497-20260331",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-03-31T08:59:26",
+       "lede": "the warnings about climate change have been growing louder for years. scientists have warned about rising death tolls, collapsing ecosystems and increasingly extreme weather events that will make large parts of the planet difficult to live in. now, a record-breaking heatwave has descended across the western united states, pushing temperatures",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.72
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "heatwave"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a6aaa7ba394ca596b047",
+       "headline": "Health minister warns of 40°C danger as heatwave scorches Malaysia, claiming life of child left in car",
+       "url": "https://www.malaymail.com/news/malaysia/2026/03/23/health-minister-warns-of-40c-danger-as-heatwave-scorches-malaysia-claiming-life-of-child-left-in-car/213549",
+       "publisher": "malaymail.com",
+       "published_at": "2026-03-23T11:47:44",
+       "lede": "putrajaya, march 23 — a total of 15 heat-related cases have been reported so far this year, including three cases of heatstroke and one death involving a child left in a vehicle, said health minister datuk seri dr dzulkefly ahmad.in a post on his official facebook page today, he said",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.44
+        }
+       ],
+       "country": "malaysia",
+       "organizations": [],
+       "people": [
+        "dzulkefly ahmad"
+       ]
+      },
+      {
+       "id": "69cbd319f331a1b39ff77284",
+       "headline": "15 heat-related cases this year, including one child death, says Dzulkefly",
+       "url": "https://www.thestar.com.my/news/nation/2026/03/23/15-heat-related-cases-this-year-including-one-child-death-says-dzulkefly",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-03-23T10:52:00",
+       "lede": "putrajaya: a total of 15 heat-related cases have been reported so far this year, including three cases of heatstroke and one death involving a child left in a vehicle, said health minister datuk seri dr dzulkefly ahmad.in a post on his official facebook page on monday (march 23), he said",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.67
+        }
+       ],
+       "country": "malaysia",
+       "organizations": [],
+       "people": [
+        "dzulkefly ahmad"
+       ]
+      },
+      {
+       "id": "69cc5ba41e1adbe011dae2f2",
+       "headline": "Dzulkefly: 15-heat-related cases this year, including one child death | Borneo Post Online",
+       "url": "https://www.theborneopost.com/2026/03/23/dzulkefly-15-heat-related-cases-this-year-including-one-child-death/",
+       "publisher": "theborneopost.com",
+       "published_at": "2026-03-23T02:18:28",
+       "lede": "facebook twitter linkedin threads whatsapp telegramputrajaya (march 23): a total of 15 heat-related cases have been reported so far this year, including three cases of heatstroke and one death involving a child left in a vehicle, said health minister datuk seri dr dzulkefly ahmad.in a post on his official facebook",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.65
+        }
+       ],
+       "country": "malaysia",
+       "organizations": [],
+       "people": [
+        "dzulkefly ahmad"
+       ]
+      },
+      {
+       "id": "69e5009e9d0e7fe469a6a629",
+       "headline": "What is a snow drought? Why California’s 'warm snow drought' matters",
+       "url": "https://www.usatoday.com/story/news/nation/california/2026/03/21/snow-drought-explained-what-californias-warm-winter-means/89244124007/",
+       "publisher": "usatoday.com",
+       "published_at": "2026-03-21T14:18:06",
+       "lede": "march 21, 2026, 10:18 a.m. et the heatwave california has been experiencing since early march has had lasting consequences, including future water availability, even though it is not in a drought. the national oceanic and atmospheric administration, or noaa, records the amount of water and snowfall nationwide, as well as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.8
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "national oceanic and atmospheric administration",
+        "heatwave"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d152b496395f5ca3c3d0b4",
+       "headline": "What is a snow drought? Why California’s 'warm snow drought' matters",
+       "url": "https://www.vvdailypress.com/story/news/nation/california/2026/03/21/snow-drought-explained-what-californias-warm-winter-means/89244124007/",
+       "publisher": "vvdailypress.com",
+       "published_at": "2026-03-21T14:18:06",
+       "lede": "march 21, 2026, 7:18 a.m. pt the heatwave california has been experiencing since early march has had lasting consequences, including future water availability, even though it is not in a drought. the national oceanic and atmospheric administration, or noaa, records the amount of water and snowfall nationwide, as well as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.81
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "heatwave",
+        "national oceanic and atmospheric administration"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d09ec25ee7803f526923d2",
+       "headline": "What is a snow drought? Why California’s 'warm snow drought' matters",
+       "url": "https://thehuddle.com/story/news/nation/california/2026/03/21/snow-drought-explained-what-californias-warm-winter-means/89244124007/",
+       "publisher": "thehuddle.com",
+       "published_at": "2026-03-21T14:18:06",
+       "lede": "march 21, 2026, 10:18 a.m. et the heatwave california has been experiencing since early march has had lasting consequences, including future water availability, even though it is not in a drought. the national oceanic and atmospheric administration, or noaa, records the amount of water and snowfall nationwide, as well as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.8
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "heatwave",
+        "national oceanic and atmospheric administration"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc4a3a74cdb9f7951ccea5",
+       "headline": "What is a snow drought? Why California’s 'warm snow drought' matters",
+       "url": "https://www.desertsun.com/story/news/nation/california/2026/03/21/snow-drought-explained-what-californias-warm-winter-means/89244124007/",
+       "publisher": "desertsun.com",
+       "published_at": "2026-03-21T14:18:06",
+       "lede": "march 21, 2026, 7:18 a.m. ptthe heatwave california has been experiencing since early march has had lasting consequences, including future water availability, even though it is not in a drought.the national oceanic and atmospheric administration, or noaa, records the amount of water and snowfall nationwide, as well as the temperature",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.81
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "national oceanic and atmospheric administration",
+        "heatwave",
+        "national oceanic and atmospheric administration"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2b515c1991f786cebeb31",
+       "headline": "Historic heat wave in the United States: States that will see record temperatures according to the NWS",
+       "url": "https://en.as.com/latest_news/historic-heat-wave-in-the-united-states-states-that-will-see-record-temperatures-according-to-the-nws-f202603-n/",
+       "publisher": "en.as.com",
+       "published_at": "2026-03-17T18:37:22",
+       "lede": "the national weather service (nws) is warning that a major heat wave will hit large parts of the united states this week. temperatures are expected to climb 20 to 30°f above normal, bringing june‑like heat in the middle of march. some areas could even reach the upper 90s and low",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.93
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "national weather service"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1232,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0yOCAwNTozMDowMCIsImkiOiI2OWJjYWNiMzlmYTM2M2JjZTM2NGU0NGYiLCJwIjo5fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.209,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.211
+    }
+   }
+  }
+ ]
+}

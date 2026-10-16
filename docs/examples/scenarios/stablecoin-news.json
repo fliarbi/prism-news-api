@@ -1,0 +1,927 @@
+{
+ "slug": "stablecoin-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:39Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "stablecoin",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "stablecoin",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10217,
+     "tone": {
+      "carrying": 10216,
+      "availability_pct": 99.99,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1911,
+        "share_pct": 18.71
+       },
+       {
+        "group": "neutral",
+        "count": 102,
+        "share_pct": 1.0
+       },
+       {
+        "group": "positive",
+        "count": 8203,
+        "share_pct": 80.3
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10217,
+      "count": 7747,
+      "share_pct": 75.82
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.861,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.864
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "stablecoin",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "stablecoin",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2395,
+       "critical": 1865,
+       "critical_pct": 77.9,
+       "negative": 442,
+       "positive": 1939,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2943,
+       "critical": 2251,
+       "critical_pct": 76.5,
+       "negative": 398,
+       "positive": 2525,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1859,
+       "critical": 1340,
+       "critical_pct": 72.1,
+       "negative": 256,
+       "positive": 1591,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1709,
+       "critical": 1356,
+       "critical_pct": 79.3,
+       "negative": 246,
+       "positive": 1456,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2473,
+       "critical": 1896,
+       "critical_pct": 76.7,
+       "negative": 231,
+       "positive": 2221,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2530,
+       "critical": 2004,
+       "critical_pct": 79.2,
+       "negative": 383,
+       "positive": 2131,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2597,
+       "critical": 2023,
+       "critical_pct": 77.9,
+       "negative": 516,
+       "positive": 2063,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2607,
+       "critical": 2034,
+       "critical_pct": 78.0,
+       "negative": 414,
+       "positive": 2167,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1945,
+       "critical": 1421,
+       "critical_pct": 73.1,
+       "negative": 289,
+       "positive": 1635,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2517,
+       "critical": 1887,
+       "critical_pct": 75.0,
+       "negative": 514,
+       "positive": 1968,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2432,
+       "critical": 1844,
+       "critical_pct": 75.8,
+       "negative": 497,
+       "positive": 1905,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3323,
+       "critical": 2595,
+       "critical_pct": 78.1,
+       "negative": 611,
+       "positive": 2695,
+       "partial_period": false
+      }
+     ],
+     "total": 29330,
+     "critical_total": 22516,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.875,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.877
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "stablecoin",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "stablecoin",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10217,
+     "carrying": 5054,
+     "availability_pct": 49.47,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2947,
+       "share_pct": 28.84
+      },
+      {
+       "country": "china",
+       "count": 277,
+       "share_pct": 2.71
+      },
+      {
+       "country": "singapore",
+       "count": 217,
+       "share_pct": 2.12
+      },
+      {
+       "country": "united kingdom",
+       "count": 217,
+       "share_pct": 2.12
+      },
+      {
+       "country": "south korea",
+       "count": 191,
+       "share_pct": 1.87
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1205
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.431,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.434
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "stablecoin",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "stablecoin",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "regulatory compliance in foreign exchange trading",
+       "count": 2495,
+       "share": 30.6,
+       "lift": 356.82,
+       "baseline_count": 7,
+       "previous_period_count": 1693,
+       "delta_pct": 47.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "cryptocurrency impact on forex markets",
+       "count": 5641,
+       "share": 69.18,
+       "lift": 188.24,
+       "baseline_count": 30,
+       "previous_period_count": 5685,
+       "delta_pct": -0.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "currency pegs and their market implications",
+       "count": 1338,
+       "share": 16.41,
+       "lift": 334.87,
+       "baseline_count": 4,
+       "previous_period_count": 1341,
+       "delta_pct": -0.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "institutional forex market participation",
+       "count": 378,
+       "share": 4.64,
+       "lift": 378.42,
+       "baseline_count": 1,
+       "previous_period_count": 352,
+       "delta_pct": 7.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forex market liquidity analysis",
+       "count": 159,
+       "share": 1.95,
+       "lift": 159.18,
+       "baseline_count": 1,
+       "previous_period_count": 137,
+       "delta_pct": 16.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 10217,
+     "carrying": 8154,
+     "carrier_share_pct": 79.81,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.908,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.911
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "stablecoin",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "stablecoin",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f1cfa5a5706a322e13457a",
+       "headline": "Hong Kong HKMA Warns of Fake HKDAP and HSBC Tokens in Market",
+       "url": "https://www.cryptotimes.io/2026/04/29/hong-kong-hkma-warns-of-fake-hkdap-and-hsbc-tokens-in-market/",
+       "publisher": "cryptotimes.io",
+       "published_at": "2026-04-29T08:24:03",
+       "lede": "show ai summary hong kong’s financial regulator warns of fake stablecoins amid a broader push to establish the region as a hub for regulated digital assets the emergence of fraudulent tokens highlights potential risks in the rapidly evolving stablecoin market, where licensed issuers are set to launch new products major",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.94
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87fcbbbf1d3145595dcc8",
+       "headline": "Is Binance Stablecoin Inflows Putting Bitcoin’s $79K Test in Focus?",
+       "url": "https://www.analyticsinsight.net/news/is-binance-stablecoin-inflows-putting-bitcoins-79k-test-in-focus",
+       "publisher": "analyticsinsight.net",
+       "published_at": "2026-04-28T12:17:13",
+       "lede": "bitcoin’s short-term market outlook strengthened in april as binance recorded nearly $3.5 billion in net stablecoin inflows, even as global markets dealt with renewed united states and iran tensions. the inflows came while bitcoin traded around $77,000, suggesting that traders were moving fresh liquidity back onto the exchange after a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.99
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "bitcoin",
+        "binance"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e16e836d28f995cb46c5",
+       "headline": "A digital shekel is here: Israel approves its first-ever regulated stablecoin",
+       "url": "https://www.coindesk.com/policy/2026/04/28/a-digital-shekel-is-here-israel-approves-its-first-regulated-stablecoin",
+       "publisher": "coindesk.com",
+       "published_at": "2026-04-28T10:39:57",
+       "lede": "israel's capital market authority granted approval for a stablecoin pegged to the shekel for the first time. tel aviv-based cryptocurrency exchange bits of gold received authorization to issue the token after a two-year evaluation and pilot process, the authority said in a post on linkedin. the token, bils, was developed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.25,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 1.0
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "bits of gold",
+        "linkedin"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a8bd5963d76f4afdbe780",
+       "headline": "The US froze $344 million in Tether in a single phone call to Paolo Ardoino - Startup Fortune",
+       "url": "https://startupfortune.com/the-us-froze-344-million-in-tether-in-a-single-phone-call-to-paolo-ardoino/",
+       "publisher": "startupfortune.com",
+       "published_at": "2026-04-25T08:11:29",
+       "lede": "tether's largest single compliance freeze in stablecoin history just demonstrated something the crypto industry has debated for years: stablecoins are not decentralized money, and bitcoin is not interchangeable with them. on april 23, tether blacklisted two wallet addresses on the tron blockchain, collectively holding $344 million in usdt, after receiving",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.82
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69eaf621eb123d7f5caf6fe7",
+       "headline": "Banking Industry Demands 60 More Days Before Responding to Stablecoin Regulations",
+       "url": "https://bitcoinethereumnews.com/tech/banking-industry-demands-60-more-days-before-responding-to-stablecoin-regulations/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-23T19:18:13",
+       "lede": "four major banking lobby groups wrote jointly to treasury, fdic, fincen, and ofac. banks say three stablecoin rules rely on an occ framework not yet made final. comment deadlines fall june 2 to 9, before the occ rule is even close to done. four of the most powerful banking lobby",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8764963d76f4afd8fdb2",
+       "headline": "Tether Freeze Record $344 Million in USDT As Worldwide Clampdown on Illegal Crypto Dealings Tightens Across Regions - NullTX",
+       "url": "https://nulltx.com/tether-freeze-record-344-million-in-usdt-as-worldwide-clampdown-on-illegal-crypto-dealings-tightens-across-regions/",
+       "publisher": "nulltx.com",
+       "published_at": "2026-04-23T16:40:54",
+       "lede": "tether, the leading stablecoin provider, has announced the largest asset freeze in its history by blocking more than $344 million in usdt. this is as part of a collaboration with u.s. treasury’s office of foreign assets control (ofac) and federal law enforcement authorities. tether supports freeze of more than $344",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.25,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eaa3983fc01faba252c54",
+       "headline": "Tether Locks $344M USDT On Tron In Biggest Single Enforcement Move Yet | Yellow.com",
+       "url": "http://yellow.com/news/tether-tron-freeze-usdt-enforcement-action",
+       "publisher": "yellow.com",
+       "published_at": "2026-04-23T16:03:36",
+       "lede": "tether locks $344m usdt on tron in biggest single enforcement move yet tether froze $344 million worth of its stablecoin (usdt) across two tron (trx) wallets on thursday, its largest single enforcement move to date. record usdt freeze on tron the stablecoin issuer said the freeze followed information shared by",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.93
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9992c37f6c5e66d654cc",
+       "headline": "Tether Locks $344M USDT On Tron In Biggest Single Enforcement Move Yet | Yellow.com",
+       "url": "https://yellow.com/news/tether-tron-freeze-usdt-enforcement-action",
+       "publisher": "yellow.com",
+       "published_at": "2026-04-23T16:03:36",
+       "lede": "tether locks $344m usdt on tron in biggest single enforcement move yet tether froze $344 million worth of its stablecoin (usdt) across two tron (trx) wallets on thursday, its largest single enforcement move to date. record usdt freeze on tron the stablecoin issuer said the freeze followed information shared by",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.93
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea38888266d9339996be91",
+       "headline": "Tether Freezes $344M USDT in Coordination with U.S. Law Enforcement",
+       "url": "https://bitcoinethereumnews.com/tech/tether-freezes-344m-usdt-in-coordination-with-u-s-law-enforcement/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-23T15:00:14",
+       "lede": "the stablecoin issuer says it has now supported more than 2,300 cases worldwide, including over 1,200 with u.s. agencies. tether said thursday it has frozen $344 million in usdt across two wallet addresses on the tron blockchain, acting on information shared by u.s. authorities about activity tied to “unlawful conduct.”",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.93
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "tron",
+        "usdt"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea31eb8266d9339995fb11",
+       "headline": "Tether Freezes Addresses Holding $344M in USDT: A Critical Move for Stablecoin Compliance",
+       "url": "https://bitcoinworld.co.in/tether-freezes-344m-usdt-addresses/",
+       "publisher": "bitcoinworld.co.in",
+       "published_at": "2026-04-23T12:45:17",
+       "lede": "tether, the leading issuer of the usdt stablecoin, has frozen two cryptocurrency addresses containing a combined total of $344 million. on-chain analyst mlm (@mlmabc) reported the action on x, revealing that one address held $213 million and another held $131 million. this enforcement marks one of the largest single freezes",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "usdt"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e9bcf0bdd09a23d096e99f",
+       "headline": "Banking Groups Seek Extension on GENIUS Act Feedback",
+       "url": "https://www.cryptotimes.io/2026/04/23/banking-groups-seek-extension-on-genius-act-feedback/",
+       "publisher": "cryptotimes.io",
+       "published_at": "2026-04-23T06:20:04",
+       "lede": "show ai summary regulatory complexity sparks calls for deadline extensions on stablecoin rules. trade groups cite dependence on unfinished occ guidance as a major hurdle. proposed rules are interconnected, making it difficult to assess without the occ framework. major u.s. banking trade groups have urged regulators to delay public comment",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9bebe75f157062cb50cd1",
+       "headline": "Circle Shares Drop 10%: Drift Exploit Impact",
+       "url": "https://bitcoinethereumnews.com/tech/circle-shares-drop-10-drift-exploit-impact/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-23T05:40:13",
+       "lede": "stablecoin issuer circle internet group’s shares sharply declined on thursday following wall street downgrade notes and reports of legal investigations related to the exploit in the drift detailed analysis protocol. it closed at $85.10, down 9.9% in nasdaq trading. the stock has lost 24% in the last month and 43%",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b27725cefb83fe880b024",
+       "headline": "Tether Freezes $344M in Dollar-Pegged USDt Stablecoins",
+       "url": "https://cointelegraph.com/news/tether-freezes-344m-usdt-stablecoins",
+       "publisher": "cointelegraph.com",
+       "published_at": "2026-04-23T00:00:00",
+       "lede": "the stablecoin issuer cited \"activity tied to unlawful conduct” but no further explanation for the freezing of the dollar-pegged tokens held in two wallet addresses. tether, the company that issues the usdt dollar-pegged stablecoin, said thursday that it froze more than $344 million in usdt at the request of us",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8825d5cfa3e5ba504c43e",
+       "headline": "REPORT: Nigerian Web3 Startups Raised $43 million in 2025 - Tech | Business | Economy",
+       "url": "https://techeconomy.ng/report-nigerian-web3-startups-raised-43-million-in-2025/",
+       "publisher": "techeconomy.ng",
+       "published_at": "2026-04-21T17:12:02",
+       "lede": "quick read: nigerian web3 founders raised $43 million in 2025, more than doubling the $20 million recorded in 2024. the finance sector captured 89% of total funding ($38 million), a five-fold increase from 2024, driven by stablecoin-focused startups. nigeria led in 24-hour stablecoin p2p transfer volume on centralized exchanges, reaching",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.67
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "p2p"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8809b9baafc73568f6e95",
+       "headline": "USDT supply hits fresh $188b ATH as Tether tightens grip on stablecoins",
+       "url": "https://crypto.news/usdt-supply-hits-fresh-188b-ath-as-tether-tightens-grip-on-stablecoins/",
+       "publisher": "crypto.news",
+       "published_at": "2026-04-21T16:14:47",
+       "lede": "tether ceo paolo ardoino says usdt supply has hit a record $188b, cementing the stablecoin’s dominance as broader stablecoin liquidity sits near all-time highs. summary tether ceo paolo ardoino says usdt supply has reached a record $188 billion. the new peak comes weeks after stablecoins hit a combined $315 billion",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.94
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": "argentina",
+       "organizations": [
+        "usdt"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e885155cfa3e5ba506861a",
+       "headline": "Nigeria emerges global Web3 powerhouse as funding hits $43m",
+       "url": "https://thesun.ng/nigeria-emerges-global-web3-powerhouse-as-funding-hits-43m-stablecoin-volume-surges-report/",
+       "publisher": "thesun.ng",
+       "published_at": "2026-04-21T15:52:45",
+       "lede": "by chinenye anufoe nigeria’s web3 ecosystem is entering a decisive growth phase, with new data showing a sharp rebound in investment, rising global influence in developer talent, and a dominant position in stablecoin transactions despite persistent regulatory uncertainties. the “nigeria web3 landscape report 2025,” released by hashed emergent, reveals that",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.9
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a70a9963d76f4afc9f568",
+       "headline": "Banking Group Asks for More Time to Comment on US Stablecoin Bill",
+       "url": "https://cointelegraph.com/news/banking-groups-ask-for-more-time-to-comment-on-genius-act-potentially-delaying-implementation",
+       "publisher": "cointelegraph.com",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "the letter to four us government agencies said banks needed 60 more days for comment after occ stablecoin rulemaking had been finalized. the american bankers association (aba) has asked us government agencies responsible for regulations related to a stablecoin bill for more time to comment, potentially delaying implementation by as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.81
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 3277,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMSAwMDowMDowMCIsImkiOiI2YTJhNzBhOTk2M2Q3NmY0YWZjOWY1NjgiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.64,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.644
+    }
+   }
+  }
+ ]
+}

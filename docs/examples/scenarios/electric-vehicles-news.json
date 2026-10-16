@@ -1,0 +1,969 @@
+{
+ "slug": "electric-vehicles-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:15:01Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "electric vehicles",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "electric vehicles",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 49613,
+     "tone": {
+      "carrying": 49602,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 9642,
+        "share_pct": 19.44
+       },
+       {
+        "group": "neutral",
+        "count": 4900,
+        "share_pct": 9.88
+       },
+       {
+        "group": "positive",
+        "count": 35060,
+        "share_pct": 70.68
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 49608,
+      "count": 22254,
+      "share_pct": 44.86
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.733,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.735
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "electric vehicles",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "electric vehicles",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 7725,
+       "critical": 4232,
+       "critical_pct": 54.8,
+       "negative": 1847,
+       "positive": 5763,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 7086,
+       "critical": 3720,
+       "critical_pct": 52.5,
+       "negative": 1866,
+       "positive": 5149,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 10699,
+       "critical": 4439,
+       "critical_pct": 41.5,
+       "negative": 2405,
+       "positive": 8175,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 7564,
+       "critical": 3984,
+       "critical_pct": 52.7,
+       "negative": 1614,
+       "positive": 5862,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 9172,
+       "critical": 4874,
+       "critical_pct": 53.1,
+       "negative": 1847,
+       "positive": 7208,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 8516,
+       "critical": 4591,
+       "critical_pct": 53.9,
+       "negative": 1944,
+       "positive": 6461,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 7107,
+       "critical": 3818,
+       "critical_pct": 53.7,
+       "negative": 1297,
+       "positive": 5677,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 8353,
+       "critical": 4197,
+       "critical_pct": 50.2,
+       "negative": 1728,
+       "positive": 6541,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 9288,
+       "critical": 4745,
+       "critical_pct": 51.1,
+       "negative": 2151,
+       "positive": 7008,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 16804,
+       "critical": 5789,
+       "critical_pct": 34.5,
+       "negative": 2322,
+       "positive": 9990,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 10575,
+       "critical": 4934,
+       "critical_pct": 46.7,
+       "negative": 2584,
+       "positive": 7863,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 12946,
+       "critical": 6786,
+       "critical_pct": 52.4,
+       "negative": 2585,
+       "positive": 10199,
+       "partial_period": false
+      }
+     ],
+     "total": 115835,
+     "critical_total": 56109,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.989,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.994
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "electric vehicles",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "electric vehicles",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 49613,
+     "carrying": 25371,
+     "availability_pct": 51.14,
+     "items": [
+      {
+       "country": "india",
+       "count": 10262,
+       "share_pct": 20.68
+      },
+      {
+       "country": "united states",
+       "count": 6634,
+       "share_pct": 13.37
+      },
+      {
+       "country": "china",
+       "count": 1991,
+       "share_pct": 4.01
+      },
+      {
+       "country": "united kingdom",
+       "count": 1375,
+       "share_pct": 2.77
+      },
+      {
+       "country": "australia",
+       "count": 534,
+       "share_pct": 1.08
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 4575
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.678,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.681
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "electric vehicles",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "electric vehicles",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "government incentives for alternative fuel vehicles",
+       "count": 2393,
+       "share": 8.07,
+       "lift": 658.8,
+       "baseline_count": 1,
+       "previous_period_count": 1714,
+       "delta_pct": 39.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "electric vehicle (ev) technology",
+       "count": 3488,
+       "share": 11.76,
+       "lift": 480.13,
+       "baseline_count": 2,
+       "previous_period_count": 2937,
+       "delta_pct": 18.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "electric vehicle charging infrastructure",
+       "count": 2788,
+       "share": 9.4,
+       "lift": 383.77,
+       "baseline_count": 2,
+       "previous_period_count": 2294,
+       "delta_pct": 21.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "lithium-ion battery advancements for evs",
+       "count": 1400,
+       "share": 4.72,
+       "lift": 385.42,
+       "baseline_count": 1,
+       "previous_period_count": 762,
+       "delta_pct": 83.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "alternative fuel vehicle market trends",
+       "count": 1260,
+       "share": 4.25,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 510,
+       "delta_pct": 147.1,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 49613,
+     "carrying": 29651,
+     "carrier_share_pct": 59.76,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.079,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.081
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "electric vehicles",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "electric vehicles",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69c3a28cbff1d4a53ca1bdbe",
+       "headline": "A reminder as oil prices spike: EVs are the #1 route to energy independence",
+       "url": "https://electrek.co/2026/03/10/a-reminder-as-oil-prices-spike-evs-are-the-1-route-to-energy-independence/",
+       "publisher": "electrek.co",
+       "published_at": "2026-03-10T17:55:46",
+       "lede": "with the news of the us and israel’s actions in iran in the last ten days, which caused oil prices to surge by +50%, we are reminded again of how reducing oil demand can lead to less conflict and more energy independence – and electric vehicles are every country’s best",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.75
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.68
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d7f8713680636eee98c0",
+       "headline": "Govt mulls partial credit guarantee, interest subvention support for pvt sector electric bus, truck adoption | Mint",
+       "url": "https://www.livemint.com/economy/india-government-plans-finance-electric-private-buses-trucks-clean-mobility-11777473638619.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-29T17:09:37",
+       "lede": "new delhi: the heavy industries ministry is mulling ways to help private bus and truck operators finance electric vehicles, through loan guarantee schemes and interest subsidies, as the government tries to spread its clean-mobility push beyond state-run fleets to the commercial sector that dominates the country's roads.mint reported on 4",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 63,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
+         "score": 0.66
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f229d427117df83f944247",
+       "headline": "China commerce minister says reached 'soft landing' with EU over EV tariffs",
+       "url": "https://www.auto.economictimes.indiatimes.com/news/industry/china-commerce-minister-says-reached-soft-landing-with-eu-over-ev-tariffs/130599949",
+       "publisher": "auto.economictimes.indiatimes.com",
+       "published_at": "2026-04-29T13:10:36",
+       "lede": "beijing also urged the eu to revise restrictive measures, as both sides navigate pricing and quota arrangements for ev imports.chinese commerce minister wang wentao said china and the european union had \"reached a soft landing\" over the bloc's import tariffs on electric vehicles, &zwnj;during a &#8288;meeting &#8288;with the head of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.71
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.6
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "wang"
+       ],
+       "people": [
+        "wang wentao"
+       ]
+      },
+      {
+       "id": "6a2a5ea85cefb83fe8f7bdf2",
+       "headline": "Two million electric vehicles registered in the UK",
+       "url": "https://transportandenergy.com/2026/04/29/two-million-electric-vehicles-registered-in-the-uk/",
+       "publisher": "transportandenergy.com",
+       "published_at": "2026-04-29T10:36:43",
+       "lede": "more than two million electric vehicles (ev) have been registered across the uk, according to new department for transport statistics. the figures show that the electric car grant (ecg) has assisted more than 100,000 drivers save up to £3750 off a new ev. ev registrations are up 15% on last",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 63,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
+         "score": 0.92
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a041a2c220687a966b33a1d",
+       "headline": "China's auto industry races to embed AI in just about everything",
+       "url": "https://www.detroitnews.com/story/business/autos/2026/04/24/chinas-auto-industry-races-to-embed-ai-in-just-about-everything/89770948007/",
+       "publisher": "detroitnews.com",
+       "published_at": "2026-04-24T14:24:42",
+       "lede": "reuters updated april 24, 2026, 11:11 a.m. et beijing — it took china 25 years to dominate the market for electric vehicles. now, the country's auto industry is hurtling toward the next disruption: embedding artificial intelligence in cars that will make the next generation of evs not just network-connected, but",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.78
+        },
+        {
+         "code": 269,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Autonomous Vehicles",
+         "score": 0.57
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa9d98a54b8f07c95a6c1",
+       "headline": "After call from Beijing, China’s auto industry races to embed AI in just about everything",
+       "url": "https://www.straitstimes.com/asia/east-asia/after-call-from-beijing-chinas-auto-industry-races-to-embed-ai-in-just-about-everything",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-24T09:05:00",
+       "lede": "sign up now: get insights on asia's fast-moving developments in recent days, chinese carmakers and their suppliers have flooded the zone with investment commitments and new ai systems. – it took china 25 years to dominate the market for electric vehicles. now, the country’s auto industry is hurtling towards the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.79
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.52
+        },
+        {
+         "code": 269,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Autonomous Vehicles",
+         "score": 0.46
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa95a8a54b8f07c954873",
+       "headline": "China's auto industry races to embed AI in line with Beijing mandate",
+       "url": "https://www.asiaone.com/money/chinas-auto-industry-races-embed-ai-line-beijing-mandate",
+       "publisher": "asiaone.com",
+       "published_at": "2026-04-24T07:16:00",
+       "lede": "beijing — it took china 25 years to dominate the market for electric vehicles. now, the country's auto industry is hurtling toward the next disruption: embedding artificial intelligence in cars that will make the next generation of evs not just network-connected, but self-reasoning machines running on chinese chips and software.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.84
+        },
+        {
+         "code": 269,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Autonomous Vehicles",
+         "score": 0.57
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.45
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa9158a54b8f07c951649",
+       "headline": "Tariff waiver raises fresh concerns for automotive policy, stability",
+       "url": "https://guardian.ng/business-services/tariff-waiver-raises-fresh-concerns-for-automotive-policy-stability-2/",
+       "publisher": "guardian.ng",
+       "published_at": "2026-04-24T03:40:33",
+       "lede": "industry stakeholders have expressed concern about the federal government’s decision to waive import duties on electric vehicles, mass-transit buses and selected machinery. the experts warned that the move could have unintended consequences for nigeria’s fragile automotive sector. the managing partner of transtech industrial consulting, luqman mamudu, described the tariff differential",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.51
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.45
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "transtech"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea4ae67e2e5111202560aa",
+       "headline": "The Plant That Could End America's Reliance on Foreign Rare-Earth Metals",
+       "url": "https://indiandefencereview.com/the-plant-that-could-end-rare-earth-metals/",
+       "publisher": "indiandefencereview.com",
+       "published_at": "2026-04-23T12:30:00",
+       "lede": "rare-earth elements power everything from electric vehicles to wind turbines, yet securing a reliable domestic supply has long eluded the united states. researchers have now developed a method that brings one unconventional solution significantly closer to reality. the technique works on living plant tissue and leaves the plant entirely intact,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea206e75c44d9ce8822631",
+       "headline": "Solar, battery, EV exports from China hit record USD 21.9B in March, surge 70%",
+       "url": "https://powerphilippines.com/solar-battery-ev-exports-from-china-hit-record-usd-21-9b-in-march-surge-70/",
+       "publisher": "powerphilippines.com",
+       "published_at": "2026-04-23T07:06:02",
+       "lede": "china’s exports of key clean energy technologies—solar, batteries and electric vehicles—reached a record usd 21.9 billion in march 2026, rising 70% year-on-year, according to initial customs data analyzed by ember. the surge comes amid elevated global energy prices linked to the us-israel war with iran and ahead of changes to",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.6
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99f5875f157062cb27fae",
+       "headline": "IEA: 2025 Global Electricity Demand to Rise 3%, EVs and Data Centers Become Core Engines",
+       "url": "https://autonews.gasgoo.com/articles/news/iea-2025-global-electricity-demand-to-rise-3-evs-and-data-centers-become-core-engines-2046958701091487745",
+       "publisher": "autonews.gasgoo.com",
+       "published_at": "2026-04-22T22:25:49",
+       "lede": "gasgoo munich- global energy demand growth is set to slow to 1.3% in 2025, yet electricity consumption will climb 3% year-on-year, according to the international energy agency’s (iea) global energy assessment report released on april 20. electric vehicles and data centers are emerging as the primary engines driving that surge",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "international energy agency"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99d12d47fc028321a6b29",
+       "headline": "IEA: 2025 Global Electricity Demand to Rise 3%, EVs and Data Centers Become Core Engines",
+       "url": "https://autonews.gasgoo.com/articles/market-industry/iea-2025-global-electricity-demand-to-rise-3-evs-and-data-centers-become-core-engines-2046958701091487745",
+       "publisher": "autonews.gasgoo.com",
+       "published_at": "2026-04-22T22:25:49",
+       "lede": "gasgoo munich- global energy demand growth is set to slow to 1.3% in 2025, yet electricity consumption will climb 3% year-on-year, according to the international energy agency’s (iea) global energy assessment report released on april 20. electric vehicles and data centers are emerging as the primary engines driving that surge",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "international energy agency"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8bc647bb1410d4cb539e6",
+       "headline": "Govt Speeds Up EV Shift After Missing Production, Charging Stations Targets",
+       "url": "https://www.techjuice.pk/govt-speeds-up-ev-shift-after-missing-production-charging-stations-targets/",
+       "publisher": "techjuice.pk",
+       "published_at": "2026-04-22T11:44:04",
+       "lede": "pakistan plans rapid electric vehicle expansion as prime minister shehbaz sharif orders faster implementation measures, highlighting cost savings, energy security and public interest demand. he directed authorities during a meeting to accelerate initiatives promoting electric vehicles, emphasizing quicker execution of policies already introduced under the national electric vehicle framework. officials",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 63,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
+         "score": 0.85
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": [
+        "shehbaz sharif"
+       ]
+      },
+      {
+       "id": "69e8aae37bb1410d4ca76373",
+       "headline": "'Drill, Baby, Drill' backfires: Iran-linked oil shock is now powering shift to renewables",
+       "url": "https://english.mathrubhumi.com/features/specials/drill-baby-drill-backfires-iran-linked-oil-shock-is-now-powering-shift-to-renewables-qpy5dha1",
+       "publisher": "english.mathrubhumi.com",
+       "published_at": "2026-04-22T10:08:21",
+       "lede": "us president donald trump, the world’s most prominent climate‑denying, fossil‑fuel‑friendly leader, may be inadvertently accelerating the global shift from oil and gas to renewables and electric vehicles. united states president donald trump, long the world's most prominent climate‑denying, oil‑friendly leader whose energy mantra is \"drill, baby, drill,\" may, through irony",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.59
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a08b73bcdd78e41b0f05d92",
+       "headline": "The end of oil? As fuel shocks cascade, 53 nations gather to plan a fossil fuel phaseout",
+       "url": "https://www.thehindubusinessline.com/news/world/the-end-of-oil-as-fuel-shocks-cascade-53-nations-gather-to-plan-a-fossil-fuel-phaseout/article70891768.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-22T08:11:03",
+       "lede": "us president donald trump is a longtime climate denier and oil industry ally, who sums up his own energy policy as “drill, baby, drill”. yet he is doing more than almost anyone to speed up the global shift from fossil fuels to clean energy and electric vehicles (evs). after the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.85
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b0f17bb1410d4cac2468",
+       "headline": "The end of oil? 53 nations gather to plan a fossil fuel phaseout",
+       "url": "https://telanganatoday.com/the-end-of-oil-53-nations-gather-to-plan-a-fossil-fuel-phaseout",
+       "publisher": "telanganatoday.com",
+       "published_at": "2026-04-22T07:04:21",
+       "lede": "sydney: us president donald trump is a longtime climate denier and oil industry ally, who sums up his own energy policy as \"drill, baby, drill\". yet he is doing more than almost anyone to speed up the global shift from fossil fuels to clean energy and electric vehicles (evs). after",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.84
+        }
+       ],
+       "country": "colombia",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 5947,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAwNzowNDoyMSIsImkiOiI2OWU4YjBmMTdiYjE0MTBkNGNhYzI0NjgiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.679,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.681
+    }
+   }
+  }
+ ]
+}

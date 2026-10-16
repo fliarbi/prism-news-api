@@ -1,0 +1,950 @@
+{
+ "slug": "climate-change-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:14:41Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "climate change",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "climate change",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 117428,
+     "tone": {
+      "carrying": 117206,
+      "availability_pct": 99.81,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 57223,
+        "share_pct": 48.82
+       },
+       {
+        "group": "neutral",
+        "count": 4460,
+        "share_pct": 3.81
+       },
+       {
+        "group": "positive",
+        "count": 55523,
+        "share_pct": 47.37
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 117353,
+      "count": 75653,
+      "share_pct": 64.47
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.564,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.567
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "climate change",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "climate change",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 23983,
+       "critical": 15641,
+       "critical_pct": 65.2,
+       "negative": 11196,
+       "positive": 11562,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 20201,
+       "critical": 13313,
+       "critical_pct": 65.9,
+       "negative": 9125,
+       "positive": 10317,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 26509,
+       "critical": 16933,
+       "critical_pct": 63.9,
+       "negative": 13220,
+       "positive": 12392,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 25015,
+       "critical": 16080,
+       "critical_pct": 64.3,
+       "negative": 13018,
+       "positive": 10864,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 23188,
+       "critical": 16164,
+       "critical_pct": 69.7,
+       "negative": 10046,
+       "positive": 12266,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 22766,
+       "critical": 15811,
+       "critical_pct": 69.5,
+       "negative": 10010,
+       "positive": 11916,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 26801,
+       "critical": 18571,
+       "critical_pct": 69.3,
+       "negative": 12334,
+       "positive": 13342,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 22801,
+       "critical": 15759,
+       "critical_pct": 69.1,
+       "negative": 10923,
+       "positive": 11050,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 24493,
+       "critical": 16366,
+       "critical_pct": 66.8,
+       "negative": 12363,
+       "positive": 11261,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 27806,
+       "critical": 18456,
+       "critical_pct": 66.4,
+       "negative": 13791,
+       "positive": 12991,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 27985,
+       "critical": 17956,
+       "critical_pct": 64.2,
+       "negative": 13331,
+       "positive": 13458,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 37144,
+       "critical": 22875,
+       "critical_pct": 61.6,
+       "negative": 17738,
+       "positive": 17813,
+       "partial_period": false
+      }
+     ],
+     "total": 308692,
+     "critical_total": 203925,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.283,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.285
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "climate change",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "climate change",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 117428,
+     "carrying": 46626,
+     "availability_pct": 39.71,
+     "items": [
+      {
+       "country": "united states",
+       "count": 18979,
+       "share_pct": 16.16
+      },
+      {
+       "country": "india",
+       "count": 6882,
+       "share_pct": 5.86
+      },
+      {
+       "country": "united kingdom",
+       "count": 2739,
+       "share_pct": 2.33
+      },
+      {
+       "country": "canada",
+       "count": 1866,
+       "share_pct": 1.59
+      },
+      {
+       "country": "australia",
+       "count": 1658,
+       "share_pct": 1.41
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 14502
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.553,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.572
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "climate change",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "climate change",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "sustainable construction materials and practices",
+       "count": 2407,
+       "share": 2.96,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 657,
+       "delta_pct": 266.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "winter weather preparedness",
+       "count": 3707,
+       "share": 4.55,
+       "lift": 185.86,
+       "baseline_count": 2,
+       "previous_period_count": 1920,
+       "delta_pct": 93.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "green building certifications and standards",
+       "count": 2332,
+       "share": 2.86,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 609,
+       "delta_pct": 282.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "energy-efficient home solutions",
+       "count": 2074,
+       "share": 2.55,
+       "lift": 207.97,
+       "baseline_count": 1,
+       "previous_period_count": 1225,
+       "delta_pct": 69.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "indoor air quality management in buildings",
+       "count": 2061,
+       "share": 2.53,
+       "lift": 206.66,
+       "baseline_count": 1,
+       "previous_period_count": 388,
+       "delta_pct": 431.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 117428,
+     "carrying": 81408,
+     "carrier_share_pct": 69.33,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.042,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 6.044
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "climate change",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "climate change",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f88528bbf1d3145598f12b",
+       "headline": "Europe is the world’s fastest-warming continent",
+       "url": "https://intellinews.com/europe-is-the-world-s-fastest-warming-continent-440388/",
+       "publisher": "intellinews.com",
+       "published_at": "2026-04-30T09:17:34",
+       "lede": "“we’ve seen record heatwaves from the mediterranean to the arctic, while glaciers have been shrinking and snow cover melting. the evidence is unequivocal: climate change is not a future threat. it is our present reality,” the european union said in its latest european state of the climate 2025 report. the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.78
+        }
+       ],
+       "country": "norway",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87f968937ef12fc0689e0",
+       "headline": "Warming warnings as Europe reviews climate laws",
+       "url": "https://www.prmoment.com/esg/warming-warnings-as-europe-reviews-climate-laws",
+       "publisher": "prmoment.com",
+       "published_at": "2026-04-30T07:48:00",
+       "lede": "europe has become the fastest-warming region on the planet as climate change continues to drive dangerously high temperatures that impact society and nature. thatâs the headline finding of an extensive new report released this week, produced by a body of the world meteorological organizationâ (wmo).â almost all of the continent",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.56
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "world meteorological organization",
+        "world meteorological organization"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f23254c6105443aa600b89",
+       "headline": "Europe is the world’s fastest-warming continent, twice as fast as global average says UN-backed study | Today News",
+       "url": "https://www.livemint.com/news/world/europe-is-the-world-s-fastest-warming-continent-twice-as-fast-as-global-average-wmo-copernicus-study-11777462103343.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-29T11:37:17",
+       "lede": "a new report by the un’s world meteorological organization (wmo) and the eu's copernicus climate change service has said that almost all of europe experienced above-average heat in 2025, a year that broke records for wildfires, sea temperatures, and heatwaves as climate change worsens. according to the european state of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.62
+        }
+       ],
+       "country": "sweden",
+       "organizations": [
+        "world meteorological organization"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f22a7a27117df83f947ad9",
+       "headline": "Europa: Rekordjahr 2025! Klimawandel bringt Dürren, Hitze, Waldbrände",
+       "url": "https://www.rtl.de/news/europa-rekordjahr-2025-klimawandel-bringt-duerren-hitze-waldbraende-id30767095.html",
+       "publisher": "rtl.de",
+       "published_at": "2026-04-29T11:04:52",
+       "lede": "the annual report on the state of the climate in europe is devastating. there are a lot of negative record numbers. limiting global warming to 1.5 degrees will probably not be possible. climate change is becoming increasingly evident in europe: in 2025, the continent experienced a huge decline in snow",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2af8ffc37f6c5e6619999f",
+       "headline": "Nearly all of Europe had above-average heat last year, as climate records toppled - BusinessWorld Online",
+       "url": "https://bworldonline.com/world/2026/04/29/746376/nearly-all-of-europe-had-above-average-heat-last-year-as-climate-records-toppled/",
+       "publisher": "bworldonline.com",
+       "published_at": "2026-04-29T09:56:22",
+       "lede": "brussels — almost all of europe experienced above-average heat in 2025, a year that broke records for wildfires, sea temperatures and heatwaves as climate change worsens, eu scientists and the world meteorological organization said on wednesday. at least 95% of europe experienced above-average temperatures, while wildfires burnt more than 1",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.62
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cc7fa5706a322e118dbb",
+       "headline": "Europe named fastest-warming continent in latest climate change report - IndiaVision India News & Information",
+       "url": "https://www.indiavision.com/international/europe-named-fastest-warming-continent-in-latest-climate-change-report/602107/",
+       "publisher": "indiavision.com",
+       "published_at": "2026-04-29T07:02:10",
+       "lede": "europe named fastest-warming continent in latest climate change report **europe experiences unprecedented warming, climate report reveals** a recent comprehensive assessment of global climate trends has identified europe as the continent experiencing the most rapid temperature increase, underscoring the urgent and escalating impacts of climate change across the region. the findings,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.75
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cf44399b489398e27093",
+       "headline": "Klimabericht: Fast ganz Europa erlebte 2025 Extremwetter",
+       "url": "https://www.moneycab.com/klima-umwelt/klimabericht-fast-ganz-europa-erlebte-2025-extremwetter/",
+       "publisher": "moneycab.com",
+       "published_at": "2026-04-29T06:17:36",
+       "lede": "geneva – climate change is becoming increasingly evident in europe: in 2025, the continent experienced a huge decline in snow and ice cover, droughts, heat waves, forest fires and sea warming, many of which were at record levels. this is summarised in the report on the state of climate in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aef9dc37f6c5e6613452a",
+       "headline": "Hitze, Eisschmelze, Meereserwärmung: 2025 war ein Jahr der Extreme in Europa",
+       "url": "https://www.abendblatt.de/panorama/article411848880/hitze-eisschmelze-meereserwaermung-2025-war-ein-jahr-der-extreme-in-europa.html",
+       "publisher": "abendblatt.de",
+       "published_at": "2026-04-29T03:59:39",
+       "lede": "no continent warms up as fast as europe – and the consequences of climate change are clearly felt. this is the conclusion of the european climate change report, which was published on wednesday. the report confirms that since 1980 europe has warmed up twice as fast as the global average,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.66
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac5815cefb83fe83b7cf9",
+       "headline": "Hitze, Eisschmelze, Meereserwärmung: 2025 war ein Jahr der Extreme in Europa",
+       "url": "https://www.nrz.de/panorama/article411848880/hitze-eisschmelze-meereserwaermung-2025-war-ein-jahr-der-extreme-in-europa.html",
+       "publisher": "nrz.de",
+       "published_at": "2026-04-29T03:59:39",
+       "lede": "no continent warms up as fast as europe – and the consequences of climate change are clearly felt. this is the conclusion of the european climate change report, which was published on wednesday. the report confirms that since 1980 europe has warmed up twice as fast as the global average,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.66
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a86175cefb83fe810b15f",
+       "headline": "Hitze, Eisschmelze, Meereserwärmung: 2025 war ein Jahr der Extreme in Europa",
+       "url": "https://www.wp.de/panorama/article411848880/hitze-eisschmelze-meereserwaermung-2025-war-ein-jahr-der-extreme-in-europa.html",
+       "publisher": "wp.de",
+       "published_at": "2026-04-29T03:59:39",
+       "lede": "no continent warms up as fast as europe – and the consequences of climate change are clearly felt. this is the conclusion of the european climate change report, which was published on wednesday. the report confirms that since 1980 europe has warmed up twice as fast as the global average,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.66
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7b1cc37f6c5e66c1d560",
+       "headline": "Hitze, Eisschmelze, Meereserwärmung: 2025 war ein Jahr der Extreme in Europa",
+       "url": "https://www.waz.de/panorama/article411848880/hitze-eisschmelze-meereserwaermung-2025-war-ein-jahr-der-extreme-in-europa.html",
+       "publisher": "waz.de",
+       "published_at": "2026-04-29T03:59:39",
+       "lede": "no continent warms up as fast as europe – and the consequences of climate change are clearly felt. this is the conclusion of the european climate change report, which was published on wednesday. the report confirms that since 1980 europe has warmed up twice as fast as the global average,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.66
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b0d77963d76f4af35a543",
+       "headline": "Nearly all of Europe had above-average heat last year, as climate records toppled",
+       "url": "https://rnz.co.nz/news/world/593723/nearly-all-of-europe-had-above-average-heat-last-year-as-climate-records-toppled",
+       "publisher": "rnz.co.nz",
+       "published_at": "2026-04-29T03:10:00",
+       "lede": "by kate abnett, reuters photo: mouneb taim / middle east images via afp almost all of europe experienced above-average heat in 2025, a year that broke records for wildfires, sea temperatures and heatwaves as climate change worsens, eu scientists and the world meteorological organization say. at least 95 percent of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03f01762bbf617b03a0680",
+       "headline": "Nearly all of Europe had above-average heat last year, as climate records toppled",
+       "url": "http://www.radionz.co.nz/news/world/593723/nearly-all-of-europe-had-above-average-heat-last-year-as-climate-records-toppled",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-04-29T03:10:00",
+       "lede": "by kate abnett, reuters photo: mouneb taim / middle east images via afp almost all of europe experienced above-average heat in 2025, a year that broke records for wildfires, sea temperatures and heatwaves as climate change worsens, eu scientists and the world meteorological organization say. at least 95 percent of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03efd7220687a966a148f5",
+       "headline": "Nearly all of Europe had above-average heat last year, as climate records toppled",
+       "url": "http://www.radionz.co.nz/news/environment/593723/nearly-all-of-europe-had-above-average-heat-last-year-as-climate-records-toppled",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-04-29T03:10:00",
+       "lede": "by kate abnett, reuters photo: mouneb taim / middle east images via afp almost all of europe experienced above-average heat in 2025, a year that broke records for wildfires, sea temperatures and heatwaves as climate change worsens, eu scientists and the world meteorological organization say. at least 95 percent of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cc8e399b489398e109e8",
+       "headline": "Nearly all of Europe had above-average heat last year, as climate records toppled",
+       "url": "https://www.radionz.co.nz/news/world/593723/nearly-all-of-europe-had-above-average-heat-last-year-as-climate-records-toppled",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-04-29T03:10:00",
+       "lede": "by kate abnett, reuters photo: mouneb taim / middle east images via afp almost all of europe experienced above-average heat in 2025, a year that broke records for wildfires, sea temperatures and heatwaves as climate change worsens, eu scientists and the world meteorological organization say. at least 95 percent of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.47
+        }
+       ],
+       "country": "finland",
+       "organizations": [
+        "world meteorological organization",
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c9b7399b489398dfd7d6",
+       "headline": "Nearly all of Europe had above-average heat last year, as climate records toppled",
+       "url": "https://www.radionz.co.nz/news/environment_climate/593723/nearly-all-of-europe-had-above-average-heat-last-year-as-climate-records-toppled",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-04-29T03:10:00",
+       "lede": "by kate abnett, reuters photo: mouneb taim / middle east images via afp almost all of europe experienced above-average heat in 2025, a year that broke records for wildfires, sea temperatures and heatwaves as climate change worsens, eu scientists and the world meteorological organization say. at least 95 percent of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.47
+        }
+       ],
+       "country": "finland",
+       "organizations": [
+        "world meteorological organization",
+        "reuters"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 11482,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAwMzoxMDowMCIsImkiOiI2OWYxYzliNzM5OWI0ODkzOThkZmQ3ZDYiLCJwIjo5fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.492,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.494
+    }
+   }
+  }
+ ]
+}

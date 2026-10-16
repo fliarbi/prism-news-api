@@ -1,0 +1,1055 @@
+{
+ "slug": "cbam-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:32Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "CBAM",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cbam",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1534,
+     "tone": {
+      "carrying": 1534,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 631,
+        "share_pct": 41.13
+       },
+       {
+        "group": "neutral",
+        "count": 31,
+        "share_pct": 2.02
+       },
+       {
+        "group": "positive",
+        "count": 872,
+        "share_pct": 56.84
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1534,
+      "count": 1336,
+      "share_pct": 87.09
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.683,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.705
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "CBAM",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cbam",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 198,
+       "critical": 179,
+       "critical_pct": 90.4,
+       "negative": 82,
+       "positive": 111,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 180,
+       "critical": 156,
+       "critical_pct": 86.7,
+       "negative": 54,
+       "positive": 122,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 339,
+       "critical": 263,
+       "critical_pct": 77.6,
+       "negative": 135,
+       "positive": 196,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 165,
+       "critical": 141,
+       "critical_pct": 85.5,
+       "negative": 63,
+       "positive": 98,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 201,
+       "critical": 182,
+       "critical_pct": 90.5,
+       "negative": 63,
+       "positive": 126,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 280,
+       "critical": 241,
+       "critical_pct": 86.1,
+       "negative": 87,
+       "positive": 185,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 289,
+       "critical": 260,
+       "critical_pct": 90.0,
+       "negative": 126,
+       "positive": 154,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 335,
+       "critical": 295,
+       "critical_pct": 88.1,
+       "negative": 164,
+       "positive": 161,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 549,
+       "critical": 494,
+       "critical_pct": 90.0,
+       "negative": 204,
+       "positive": 340,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 414,
+       "critical": 354,
+       "critical_pct": 85.5,
+       "negative": 156,
+       "positive": 247,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 263,
+       "critical": 234,
+       "critical_pct": 89.0,
+       "negative": 122,
+       "positive": 139,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 308,
+       "critical": 254,
+       "critical_pct": 82.5,
+       "negative": 149,
+       "positive": 146,
+       "partial_period": false
+      }
+     ],
+     "total": 3521,
+     "critical_total": 3053,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.279,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.283
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "CBAM",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cbam",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1534,
+     "carrying": 878,
+     "availability_pct": 57.24,
+     "items": [
+      {
+       "country": "india",
+       "count": 196,
+       "share_pct": 12.78
+      },
+      {
+       "country": "united states",
+       "count": 182,
+       "share_pct": 11.86
+      },
+      {
+       "country": "united kingdom",
+       "count": 81,
+       "share_pct": 5.28
+      },
+      {
+       "country": "china",
+       "count": 75,
+       "share_pct": 4.89
+      },
+      {
+       "country": "belgium",
+       "count": 31,
+       "share_pct": 2.02
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 313
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.86,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.862
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "CBAM",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cbam",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "carbon footprint reduction techniques",
+       "count": 221,
+       "share": 21.31,
+       "lift": 434.91,
+       "baseline_count": 4,
+       "previous_period_count": 194,
+       "delta_pct": 13.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "metal export-import regulations",
+       "count": 60,
+       "share": 5.79,
+       "lift": 472.3,
+       "baseline_count": 1,
+       "previous_period_count": 30,
+       "delta_pct": 100.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "climate change mitigation strategies",
+       "count": 252,
+       "share": 24.3,
+       "lift": 165.31,
+       "baseline_count": 12,
+       "previous_period_count": 225,
+       "delta_pct": 12.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "political economy and resource allocation",
+       "count": 47,
+       "share": 4.53,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 22,
+       "delta_pct": 113.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "industrial metal market analysis",
+       "count": 68,
+       "share": 6.56,
+       "lift": 267.64,
+       "baseline_count": 2,
+       "previous_period_count": 23,
+       "delta_pct": 195.7,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1534,
+     "carrying": 1037,
+     "carrier_share_pct": 67.6,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.071,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.075
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "CBAM",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "cbam",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9d762a088760d34c0fd19",
+       "headline": "EU mulls carbon tax break on key Ukrainian military resource",
+       "url": "https://www.politico.eu/article/kyiv-in-talks-with-brussels-over-steel-exemption-from-carbon-border-tax/",
+       "publisher": "politico.eu",
+       "published_at": "2026-04-30T04:00:00",
+       "lede": "“he’s asking us for some analytics,” ryzhenkov said. “he’s asking us for some ideas.” ukraine's steel sector is a bright spot in its war-torn economy and represents a critical military resource. likewise, europe’s rush to meet nato's new spending goals — which were hiked last year under pressure from washington",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.53
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [
+        "nato"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f87fe38937ef12fc06b90e",
+       "headline": "Morocco's Energy Wager: What European Partners Should Expect by 2030",
+       "url": "http://www.kas.de/de/web/europaeische-und-internationale-zusammenarbeit/laenderberichte/detail/-/content/morocco-s-energy-wager-what-european-partners-should-expect-by-2030",
+       "publisher": "kas.de",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "the contemporary european energy landscape faces an acute reordering characterized by the rupture of legacy hydrocarbon corridors, the accelerated decarbonization of industrial demand, and the securitization of supply geographies against chokepoint dependencies. this fragmentation has created an unprecedented opportunity structure for states possessing credible renewable capital and atlantic-facing infrastructure to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.84
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [
+        "european energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e9add32561089420e225",
+       "headline": "European Parliament demands €200 billion extra for EU budget",
+       "url": "https://www.euronews.com/my-europe/2026/04/28/european-parliament-demands-200-billion-extra-for-eu-budget-in-hardball-talks",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-28T17:03:41",
+       "lede": "the european parliament will call for an increase of nearly €200 billion in the next common eu budget, setting the stage for heated political talks over resources.meps are calling for an overall increase of around 10% and want to keep the repayment of next generation eu — the joint debt",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.78
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.52
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european parliament",
+        "european parliament"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e973d32561089420de86",
+       "headline": "European Parliament demands €200 billion extra for EU budget",
+       "url": "http://www.euronews.com/my-europe/2026/04/28/european-parliament-demands-200-billion-extra-for-eu-budget-in-hardball-talks",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-28T17:03:41",
+       "lede": "the european parliament will call for an increase of nearly €200 billion in the next common eu budget, setting the stage for heated political talks over resources.meps are calling for an overall increase of around 10% and want to keep the repayment of next generation eu — the joint debt",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.78
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.52
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european parliament",
+        "european parliament"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8ad275cfa3e5ba524c42b",
+       "headline": "How China’s AI carbon accounting model points the finger at the US",
+       "url": "https://www.scmp.com/news/china/science/article/3351009/how-chinas-new-ai-carbon-accounting-model-points-finger-us",
+       "publisher": "scmp.com",
+       "published_at": "2026-04-22T09:21:20",
+       "lede": "china has launched what it calls the world’s first “panoramic” carbon accounting system, a model that revises down the country’s emissions compared to other estimates and raises them for the united states. unlike other models that assign responsibility for emissions based on total carbon output from facilities such as power",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.76,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.65
+        },
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8997e7bb1410d4c98d62a",
+       "headline": "Iran-linked disruption fuels calls to delay UK carbon border tax",
+       "url": "https://www.farminguk.com/news/iran-linked-disruption-fuels-calls-to-delay-uk-carbon-border-tax_68373.html",
+       "publisher": "farminguk.com",
+       "published_at": "2026-04-22T09:00:55",
+       "lede": "farmers warn a new carbon tax on fertiliser imports could further squeeze margins and threaten uk food production. the nfu is calling on the government to delay the introduction of the carbon border adjustment mechanism (cbam), due in january 2027, as global instability adds fresh pressure to already stretched farm",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.57
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "cbam"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e997b575f157062cacdd7a",
+       "headline": "Global supply chains face “normalization” of overlapping risks",
+       "url": "https://www.thescxchange.com/finance-strategy/global-supply-chains-face-normalization-of-overlapping-risks",
+       "publisher": "thescxchange.com",
+       "published_at": "2026-04-20T16:08:06",
+       "lede": "global supply chains in the first quarter of 2026 are being shaped by a convergence of geopolitical tension, trade policy volatility, and regulatory expansion, according to a report from international law firm squire patton boggs llp. what distinguishes the current environment is not isolated disruption, but the increasing normalization of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 81,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Maritime Transport",
+         "score": 0.45
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.42
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "squire patton boggs",
+        "supply chain"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e864229baafc73567cf04b",
+       "headline": "India’s quiet masterclass in managing an energy shock",
+       "url": "https://www.financialexpress.com/policy/economy/indias-quiet-masterclass-in-managing-an-energy-shock/4210508/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-17T20:04:43",
+       "lede": "the world has seen no shortage of energy crises in recent memory. what it has consistently lacked is a government that managed one well—absorbing the shock, protecting citizens, keeping industry running, and emerging without rewriting the rulebook in haste. during the recent west asian conflict, when supply routes faltered and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.26,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aec445cefb83fe856a7b4",
+       "headline": "EU's proposed CBAM expansion may impact Indian exporters: GTRI",
+       "url": "https://energy.economictimes.indiatimes.com/news/renewable/eus-proposed-cbam-expansion-may-impact-indian-exporters-gtri/130321276",
+       "publisher": "energy.economictimes.indiatimes.com",
+       "published_at": "2026-04-17T08:07:23",
+       "lede": "the changes include extending cbam to around 180 additional steel- and aluminium-based manufactured products from january 1, 2028.new delhi: the european union is planning an expansion of its carbon border adjustment mechanism (cbam) and the move could increase carbon tax costs on indian manufactured exports to europe, think tank gtri",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.54
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8964b9baafc73569e8095",
+       "headline": "EU's proposed CBAM expansion may impact Indian exporters: GTRI",
+       "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/eus-proposed-cbam-expansion-may-impact-indian-exporters-gtri/articleshow/130305156.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-16T11:11:00",
+       "lede": "new delhi: the european union is planning an expansion of its carbon border adjustment mechanism (cbam) and the move could increase carbon tax costs on indian manufactured exports to europe, think tank gtri said on thursday. it said that indian exporters selling into europe may need to accelerate emissions accounting,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.52
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "cbam"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0406bd220687a966aa6f66",
+       "headline": "EU  to include more products under CBAM, several Indian exports to be hit",
+       "url": "https://www.newindianexpress.com/business/2026/Apr/16/eu-to-include-more-products-under-cbam-several-indian-exports-to-be-hit",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-16T09:13:46",
+       "lede": "the european union’s plan to significantly expand its carbon border adjustment mechanism (cbam) and plans to charge cbam tax on 180 new steel- and aluminium-based products from january 2028, according to a draft proposal by the european parliament’s environment committee. this move&nbsp;is likely to&nbsp; raise the costs for a wide",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.73
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.44
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e861485cfa3e5ba5f026d7",
+       "headline": "Bidding Goodbye to COP33: Has India Missed a Trick?",
+       "url": "https://www.thequint.com/climate-change/india-withdraws-bid-to-host-cop33-why",
+       "publisher": "thequint.com",
+       "published_at": "2026-04-16T05:39:44",
+       "lede": "last week, india withdrew its bid to host cop33—the 33rd annual climate conference of the united nations framework convention on climate change (unfccc)—in 2028, vaguely stating that it had done so after reviewing its commitments.while the withdrawal was quiet, the decision itself speaks volumes about india's shifting climate priorities.for years,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.65
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e84dbe7bb1410d4c674801",
+       "headline": "Sustainability in an Age of Strategic Disorder",
+       "url": "https://www.orfonline.org/expert-speak/sustainability-in-an-age-of-strategic-disorder",
+       "publisher": "orfonline.org",
+       "published_at": "2026-04-15T18:58:22",
+       "lede": "as wars, debt, and strategic rivalry reshape the global order, sustainability is no longer only a developmental concern but a question of finance, trade, and geopolitical stability. for much of the last decade, sustainability was framed through targets, metrics, and transition pathways, under the assumption that ambitious government commitments, market",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.64
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e83fe19baafc735666cc2e",
+       "headline": "Meloni: 'Immediate stop EU stability pact, no Russian gas. Renewal of defence agreement with Israel suspended\"",
+       "url": "https://en.ilsole24ore.com/art/meloni-subito-stop-patto-stabilita-ue-gas-russo-capisco-descalzi-ma-fare-attenzione-AILwflUC",
+       "publisher": "en.ilsole24ore.com",
+       "published_at": "2026-04-14T09:28:00",
+       "lede": "suspending the stability pact 'could help. the eu should not underestimate the impact the crisis may have', 'moving too late is a huge error of judgement'. \"we are calling for both the suspension of the pact and the ets. to fight in the eu' on these issues is 'for the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.55
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ets"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e83f789baafc73566685bb",
+       "headline": "Meloni: 'Immediate stop EU stability pact, no Russian gas. Renewal of defence agreement with Israel suspended\"",
+       "url": "https://en.ilsole24ore.com/art/meloni-immediately-stop-eu-stability-pact-russian-gas-i-understand-descalzi-but-be-careful-AILwflUC",
+       "publisher": "en.ilsole24ore.com",
+       "published_at": "2026-04-14T09:28:00",
+       "lede": "suspending the stability pact 'could help. the eu should not underestimate the impact the crisis may have', 'moving too late is a huge error of judgement'. \"we are calling for both the suspension of the pact and the ets. to fight in the eu' on these issues is 'for the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.55
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ets"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e641b02461615d5f43fcef",
+       "headline": "UFU president says Northern Ireland farmers need direct support amid rising energy and fertiliser costs",
+       "url": "https://www.newsletter.co.uk/country-and-farming/farmers-in-northern-ireland-facing-very-real-crunch-ufu-president-warns-6573339",
+       "publisher": "newsletter.co.uk",
+       "published_at": "2026-04-13T15:21:00",
+       "lede": "however, william irvine said he believed “blocking roads is not the way forward” ahead of expected protests in northern ireland over the rising cost of fuel. mr irvine met political parties at stormont on monday, and will be meeting government officials in westminster on tuesday. he called on political leaders",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b6759baafc7356b911e6",
+       "headline": "The rise in fertilizer prices threatens food costs",
+       "url": "https://en.ara.cat/economy/the-rise-in-fertilizer-prices-threatens-food-costs_1_5705605.html",
+       "publisher": "en.ara.cat",
+       "published_at": "2026-04-13T05:04:15",
+       "lede": "the cost of producing food is expected to rise in the coming months due to the war in the middle east. the reason is the dependence of world agriculture on fertilizers, some of the main producers of which are the persian gulf countries. the export of these chemical products has",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b6985cfa3e5ba52bce17",
+       "headline": "Conflict shocks sector • Recycling International",
+       "url": "https://recyclinginternational.com/markets/ferrous-metal-recycling-markets/conflict-shocks-sector/63790/",
+       "publisher": "recyclinginternational.com",
+       "published_at": "2026-04-11T22:05:57",
+       "lede": "higher gas and oil prices driven by the iran crisis have struck hopes of growth with analysts seeing structural stresses to supply chains. the lunar new year holidays in mid-february heavily reduced activity on the asian markets with restocking activity largely completed before workers took leave. by late-february the global",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "supply chain"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e319ef660da7a6a2ffdd46",
+       "headline": "Tata Steel Plans 6-7 MT Capacity Growth, Focuses on Existing Sites",
+       "url": "https://www.newkerala.com/news/a/tata-steel-plans-6-7-mt-capacity-expansion-india-840.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-09T17:56:40",
+       "lede": "tata steel managing director t v narendran has announced plans to expand the company's indian capacity by 6-7 million tonnes, focusing on existing assets like the neelachal and acquired bhushan steel plants. he ruled out any immediate merger or acquisition activities, stating the company is content with its current footprint.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.72
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "tata steel"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 19,
+     "total_estimate": 871,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOSAxNzo1Njo0MCIsImkiOiI2OWUzMTllZjY2MGRhN2E2YTJmZmRkNDYiLCJwIjo4fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.568,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.57
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,523 @@
+{
+ "slug": "ai-in-education-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:12:30Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "AI in education",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai in education",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 132,
+     "tone": {
+      "carrying": 132,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 19,
+        "share_pct": 14.39
+       },
+       {
+        "group": "neutral",
+        "count": 0,
+        "share_pct": 0.0
+       },
+       {
+        "group": "positive",
+        "count": 113,
+        "share_pct": 85.61
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 132,
+      "count": 108,
+      "share_pct": 81.82
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.849,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.853
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "AI in education",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai in education",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 16,
+       "critical": 13,
+       "critical_pct": 81.2,
+       "negative": 3,
+       "positive": 13,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 22,
+       "critical": 19,
+       "critical_pct": 86.4,
+       "negative": 2,
+       "positive": 20,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 24,
+       "critical": 17,
+       "critical_pct": 70.8,
+       "negative": 2,
+       "positive": 22,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 28,
+       "critical": 22,
+       "critical_pct": 78.6,
+       "negative": 2,
+       "positive": 26,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 22,
+       "critical": 15,
+       "critical_pct": 68.2,
+       "negative": 2,
+       "positive": 20,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 10,
+       "critical": 9,
+       "critical_pct": 90.0,
+       "negative": 1,
+       "positive": 9,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 23,
+       "critical": 17,
+       "critical_pct": 73.9,
+       "negative": 4,
+       "positive": 19,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 20,
+       "critical": 18,
+       "critical_pct": 90.0,
+       "negative": 1,
+       "positive": 19,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 26,
+       "critical": 19,
+       "critical_pct": 73.1,
+       "negative": 5,
+       "positive": 21,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 34,
+       "critical": 28,
+       "critical_pct": 82.4,
+       "negative": 2,
+       "positive": 32,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 16,
+       "critical": 15,
+       "critical_pct": 93.8,
+       "negative": 4,
+       "positive": 12,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 56,
+       "critical": 46,
+       "critical_pct": 82.1,
+       "negative": 8,
+       "positive": 48,
+       "partial_period": false
+      }
+     ],
+     "total": 297,
+     "critical_total": 238,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.021,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.024
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "AI in education",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai in education",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 132,
+     "carrying": 71,
+     "availability_pct": 53.79,
+     "items": [
+      {
+       "country": "united states",
+       "count": 39,
+       "share_pct": 29.55
+      },
+      {
+       "country": "india",
+       "count": 11,
+       "share_pct": 8.33
+      },
+      {
+       "country": "china",
+       "count": 5,
+       "share_pct": 3.79
+      },
+      {
+       "country": "united kingdom",
+       "count": 5,
+       "share_pct": 3.79
+      },
+      {
+       "country": "spain",
+       "count": 2,
+       "share_pct": 1.52
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 9
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.2,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.203
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "AI in education",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai in education",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "technology integration tools (e.g., coding, robotics)",
+       "count": 9,
+       "share": 16.98,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 6,
+       "delta_pct": 50.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "professional development for teachers",
+       "count": 6,
+       "share": 11.32,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 3,
+       "delta_pct": 100.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "natural language processing models",
+       "count": 11,
+       "share": 20.75,
+       "lift": 564.74,
+       "baseline_count": 3,
+       "previous_period_count": 1,
+       "delta_pct": 1000.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "ethical considerations in ai development",
+       "count": 14,
+       "share": 26.42,
+       "lift": 67.38,
+       "baseline_count": 32,
+       "previous_period_count": 4,
+       "delta_pct": 250.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 4,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 132,
+     "carrying": 53,
+     "carrier_share_pct": 40.15,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.918,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.92
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "AI in education",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ai in education",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e28429277be6ed2d95a393",
+       "headline": "AI in Education - Approaches to Purposeful Adoption",
+       "url": "https://newsela.com/resource/ai-in-education-approaches-to-purposeful-adoption",
+       "publisher": "newsela.com",
+       "published_at": "2026-01-22T21:45:14",
+       "lede": "ai in education - approaches to purposeful adoption this webinar helps education leaders navigate the rapidly evolving landscape of ai in education. speakers discuss how to evaluate ai tools, align them to instructional goals, and adopt technology in ways that genuinely support teaching and learning. participants gain frameworks for moving",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 323,
+         "path": "/Jobs & Education/Education/Teaching & Classroom Resources",
+         "score": 0.77
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.6
+        },
+        {
+         "code": 407,
+         "path": "/Computers & Electronics/Software/Educational Software",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "webinar"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 1,
+     "total_estimate": 1,
+     "next_cursor": null,
+     "unresolved": 0,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.737,
+     "coverage": {
+      "available": false
+     },
+     "notes": [],
+     "request_seconds": 2.74
+    }
+   }
+  }
+ ]
+}

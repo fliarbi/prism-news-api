@@ -1,0 +1,713 @@
+{
+ "slug": "pension-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:14Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "pension",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "pension",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13172,
+     "tone": {
+      "carrying": 13128,
+      "availability_pct": 99.67,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5494,
+        "share_pct": 41.85
+       },
+       {
+        "group": "neutral",
+        "count": 852,
+        "share_pct": 6.49
+       },
+       {
+        "group": "positive",
+        "count": 6782,
+        "share_pct": 51.66
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 13160,
+      "count": 7680,
+      "share_pct": 58.36
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.405,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.409
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "pension",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "pension",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2939,
+       "critical": 1685,
+       "critical_pct": 57.3,
+       "negative": 1407,
+       "positive": 1233,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2426,
+       "critical": 1343,
+       "critical_pct": 55.4,
+       "negative": 1102,
+       "positive": 1133,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 3096,
+       "critical": 1717,
+       "critical_pct": 55.5,
+       "negative": 1389,
+       "positive": 1509,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3899,
+       "critical": 2301,
+       "critical_pct": 59.0,
+       "negative": 1936,
+       "positive": 1763,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3664,
+       "critical": 2117,
+       "critical_pct": 57.8,
+       "negative": 1451,
+       "positive": 1974,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 3130,
+       "critical": 1921,
+       "critical_pct": 61.4,
+       "negative": 1455,
+       "positive": 1425,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 3400,
+       "critical": 2058,
+       "critical_pct": 60.5,
+       "negative": 1755,
+       "positive": 1403,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2891,
+       "critical": 1662,
+       "critical_pct": 57.5,
+       "negative": 1292,
+       "positive": 1370,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2911,
+       "critical": 1619,
+       "critical_pct": 55.6,
+       "negative": 1094,
+       "positive": 1691,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3251,
+       "critical": 1855,
+       "critical_pct": 57.1,
+       "negative": 1346,
+       "positive": 1685,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2993,
+       "critical": 1836,
+       "critical_pct": 61.3,
+       "negative": 1296,
+       "positive": 1459,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 4017,
+       "critical": 2370,
+       "critical_pct": 59.0,
+       "negative": 1758,
+       "positive": 1947,
+       "partial_period": false
+      }
+     ],
+     "total": 38617,
+     "critical_total": 22484,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.646,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.651
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "pension",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "pension",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13172,
+     "carrying": 5191,
+     "availability_pct": 39.41,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1913,
+       "share_pct": 14.52
+      },
+      {
+       "country": "united kingdom",
+       "count": 1056,
+       "share_pct": 8.02
+      },
+      {
+       "country": "india",
+       "count": 868,
+       "share_pct": 6.59
+      },
+      {
+       "country": "nigeria",
+       "count": 216,
+       "share_pct": 1.64
+      },
+      {
+       "country": "canada",
+       "count": 107,
+       "share_pct": 0.81
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1031
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.017,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.019
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "pension",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "pension",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "arts and creative community features",
+       "count": 206,
+       "share": 3.03,
+       "lift": 247.25,
+       "baseline_count": 1,
+       "previous_period_count": 352,
+       "delta_pct": -41.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "government pension schemes",
+       "count": 168,
+       "share": 2.47,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 317,
+       "delta_pct": -47.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "retirement account tax implications (ira, 401k)",
+       "count": 148,
+       "share": 2.18,
+       "lift": 177.64,
+       "baseline_count": 1,
+       "previous_period_count": 98,
+       "delta_pct": 51.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "government labor and employment regulations",
+       "count": 413,
+       "share": 6.07,
+       "lift": 99.14,
+       "baseline_count": 5,
+       "previous_period_count": 463,
+       "delta_pct": -10.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "pension plan management",
+       "count": 140,
+       "share": 2.06,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 156,
+       "delta_pct": -10.3,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 13172,
+     "carrying": 6801,
+     "carrier_share_pct": 51.63,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.03,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.033
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "pension",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "pension",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a0e94d1285a58da6f1d4f0f",
+       "headline": "SC directs Allahabad HC to urgently hear 77-year-old cancer patient’s nine-year-old pension plea",
+       "url": "https://www.newindianexpress.com/india/2026/Apr/30/sc-directs-allahabad-hc-to-urgently-hear-77-year-old-cancer-patients-nine-year-old-pension-plea",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-30T09:50:00",
+       "lede": "coming to the aid of a 77-year-old cancer patient, the supreme court on thursday directed the allahabad high court to urgently hear his long-pending plea on pension and post-retiral benefits.a bench comprising chief justice of india surya kant and justice joymalya bagchi asked the high court to take up the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a036265ca027fb5990ac91a",
+       "headline": "SC directs Allahabad HC to urgently hear 77-year-old cancer patient’s nine-year-old pension plea",
+       "url": "https://www.newindianexpress.com/nation/2026/Apr/30/sc-directs-allahabad-hc-to-urgently-hear-77-year-old-cancer-patients-nine-year-old-pension-plea",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-30T09:50:00",
+       "lede": "coming to the aid of a 77-year-old cancer patient, the supreme court on thursday directed the allahabad high court to urgently hear his long-pending plea on pension and post-retiral benefits.a bench comprising chief justice of india surya kant and justice joymalya bagchi asked the high court to take up the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f228f9122c4392e0cf0328",
+       "headline": "‘At no point was any decision taken to remove Davy Fitzgerald’ – Antrim GAA chief responds to players’ letter",
+       "url": "https://www.independent.ie/sport/gaelic-games/hurling/at-no-point-was-any-decision-taken-to-remove-davy-fitzgerald-antrim-gaa-chief-responds-to-players-letter/a1815575245.html",
+       "publisher": "independent.ie",
+       "published_at": "2026-04-29T10:02:51",
+       "lede": "top stories money eoin mcgee answers: ‘i started a pension in my early 40s. what do i need to do to catch up and have a comfortable retirement?’ north america multiple young men ‘raped and drugged’ at jeffrey epstein’s us ranch irish news colm tóibín: ‘i wish i had given",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c87d399b489398df4ca5",
+       "headline": "89-Year-Old Man Arrested After Random Shootings in Athens Injure Five",
+       "url": "https://us.headtopics.com/news/89-year-old-man-arrested-after-random-shootings-in-athens-82796903",
+       "publisher": "us.headtopics.com",
+       "published_at": "2026-04-29T01:33:00",
+       "lede": "89-year-old man arrested after random shootings in athens injure five an elderly man with a history of mental health issues and pension disputes is in custody after a series of shootings in athens left five people injured. the suspect, an 89-year-old former garbage collector, allegedly targeted social security and court",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.71
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aba51c37f6c5e66ed036b",
+       "headline": "High Court Directs Punjab To Clear DA, DR Dues, Scraps Staggered Pension Arrears Payment - Outlook Money",
+       "url": "https://outlookmoney.com/retirement/pension/high-court-directs-punjab-to-clear-da-dr-dues-scraps-staggered-pension-arrears-payment",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-28T09:33:12",
+       "lede": "the punjab and haryana high court struck down punjab’s staggered, age-based liquidation plan for paying pension arrears and da/dr.it termed the liquidation plan arbitrary and violative of article 14. the court ordered the state to release pension arrears and da/dr to employees and pensioners by june 30, 2026.the employees and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 263,
+         "path": "/Finance/Financial Planning & Management/Retirement & Pension",
+         "score": 0.47
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        },
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a648d5cefb83fe8fbfdf4",
+       "headline": "High Court Directs Punjab To Clear DA, DR Dues, Scraps Staggered Pension Arrears Payment - Outlook Money",
+       "url": "https://www.outlookmoney.com/retirement/pension/high-court-directs-punjab-to-clear-da-dr-dues-scraps-staggered-pension-arrears-payment",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-28T09:33:12",
+       "lede": "the punjab and haryana high court struck down punjab’s staggered, age-based liquidation plan for paying pension arrears and da/dr.it termed the liquidation plan arbitrary and violative of article 14. the court ordered the state to release pension arrears and da/dr to employees and pensioners by june 30, 2026.the employees and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 263,
+         "path": "/Finance/Financial Planning & Management/Retirement & Pension",
+         "score": 0.47
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        },
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87daf9baafc73568d8356",
+       "headline": "NPA pensioners threaten nationwide protest over unpaid benefits",
+       "url": "https://www.vanguardngr.com/2026/04/npa-pensioners-threaten-nationwide-protest-over-unpaid-benefits/",
+       "publisher": "vanguardngr.com",
+       "published_at": "2026-04-19T23:07:00",
+       "lede": "nigerian ports authority. •claim is false, they’re paid before workers — npa by tunde oso retirees of the nigerian ports authority (npa) have threatened to embark on a nationwide protest due to their over 16 years accrued unpaid constitutional pension benefits, which according to them, has subjected their members to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 263,
+         "path": "/Finance/Financial Planning & Management/Retirement & Pension",
+         "score": 0.66
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "nigerian ports authority"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b2527963d76f4af46a0b7",
+       "headline": "Son kept mum’s body in freezer home for years and spent her cash",
+       "url": "https://www.dailystar.co.uk/news/uk-news/son-kept-elderly-mums-body-37027374",
+       "publisher": "dailystar.co.uk",
+       "published_at": "2026-04-16T13:22:55",
+       "lede": "a man has admitted to storing his mother’s body in a freezer for years while continuing to withdraw her pension. christopher phillips, 60, pleaded guilty to preventing the “lawful and decent” burial of sylvia phillips, who died in 2023, aged 89. officers discovered her body on february 17 at a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.79
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 8,
+     "total_estimate": 945,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNiAxMjowMDowMCIsImkiOiI2OWU4ZWUzZTdiYjE0MTBkNGNkZDgyMGEiLCJwIjo4fQ",
+     "unresolved": 17,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.371,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "17 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.374
+    }
+   }
+  }
+ ]
+}

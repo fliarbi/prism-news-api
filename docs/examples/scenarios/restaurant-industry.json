@@ -1,0 +1,917 @@
+{
+ "slug": "restaurant-industry",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:51:29Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "restaurant industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "restaurant industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1870,
+     "tone": {
+      "carrying": 1867,
+      "availability_pct": 99.84,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 588,
+        "share_pct": 31.49
+       },
+       {
+        "group": "neutral",
+        "count": 19,
+        "share_pct": 1.02
+       },
+       {
+        "group": "positive",
+        "count": 1260,
+        "share_pct": 67.49
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1870,
+      "count": 647,
+      "share_pct": 34.6
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.736,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.739
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "restaurant industry",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "restaurant industry",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 329,
+       "critical": 98,
+       "critical_pct": 29.8,
+       "negative": 86,
+       "positive": 239,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 326,
+       "critical": 74,
+       "critical_pct": 22.7,
+       "negative": 105,
+       "positive": 220,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 377,
+       "critical": 111,
+       "critical_pct": 29.4,
+       "negative": 146,
+       "positive": 225,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 546,
+       "critical": 165,
+       "critical_pct": 30.2,
+       "negative": 181,
+       "positive": 362,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 368,
+       "critical": 77,
+       "critical_pct": 20.9,
+       "negative": 80,
+       "positive": 286,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 309,
+       "critical": 107,
+       "critical_pct": 34.6,
+       "negative": 93,
+       "positive": 213,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 386,
+       "critical": 144,
+       "critical_pct": 37.3,
+       "negative": 123,
+       "positive": 262,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 387,
+       "critical": 150,
+       "critical_pct": 38.8,
+       "negative": 92,
+       "positive": 290,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 372,
+       "critical": 89,
+       "critical_pct": 23.9,
+       "negative": 77,
+       "positive": 291,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 474,
+       "critical": 173,
+       "critical_pct": 36.5,
+       "negative": 135,
+       "positive": 334,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 527,
+       "critical": 196,
+       "critical_pct": 37.2,
+       "negative": 212,
+       "positive": 312,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 497,
+       "critical": 189,
+       "critical_pct": 38.0,
+       "negative": 164,
+       "positive": 323,
+       "partial_period": false
+      }
+     ],
+     "total": 4898,
+     "critical_total": 1573,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.07,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.072
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "restaurant industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "restaurant industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1870,
+     "carrying": 919,
+     "availability_pct": 49.14,
+     "items": [
+      {
+       "country": "united states",
+       "count": 610,
+       "share_pct": 32.62
+      },
+      {
+       "country": "india",
+       "count": 117,
+       "share_pct": 6.26
+      },
+      {
+       "country": "united kingdom",
+       "count": 46,
+       "share_pct": 2.46
+      },
+      {
+       "country": "canada",
+       "count": 29,
+       "share_pct": 1.55
+      },
+      {
+       "country": "china",
+       "count": 12,
+       "share_pct": 0.64
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 105
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.071,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.074
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "restaurant industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "restaurant industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "ghost kitchens and virtual restaurants",
+       "count": 114,
+       "share": 11.89,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 74,
+       "delta_pct": 54.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "airport and transit terminal restaurants",
+       "count": 53,
+       "share": 5.53,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 35,
+       "delta_pct": 51.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "food trucks and mobile eateries",
+       "count": 52,
+       "share": 5.42,
+       "lift": 442.62,
+       "baseline_count": 1,
+       "previous_period_count": 21,
+       "delta_pct": 147.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "robot-staffed or automated service restaurants",
+       "count": 75,
+       "share": 7.82,
+       "lift": 319.2,
+       "baseline_count": 2,
+       "previous_period_count": 33,
+       "delta_pct": 127.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 24,
+       "share": 2.5,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 11,
+       "delta_pct": 118.2,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1870,
+     "carrying": 959,
+     "carrier_share_pct": 51.28,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.027,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.029
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "restaurant industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "restaurant industry",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e99208d47fc0283211a16b",
+       "headline": "Hotel and restaurant workers have started their strike - In this country",
+       "url": "https://medianews.az/en/otel-ve-restoran-iscileri-tetile-baslayiblar-bu-olkede",
+       "publisher": "medianews.az",
+       "published_at": "2026-04-19T13:30:00",
+       "lede": "negotiations between trade unions and employers in norway have broken down, leading to a large-scale strike in the hotel and restaurant industry. the trade unions \"fellesforbundet\" and \"parat\" have not been able to reach an agreement with the employers' association \"nho reiseliv\". from today, 1922 employees working in the industry",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 135,
+         "path": "/People & Society/Social Issues & Advocacy/Work & Labor Issues",
+         "score": 0.78
+        }
+       ],
+       "country": "norway",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e865895cfa3e5ba5f2b786",
+       "headline": "Chicago mayor links restaurant industry to ‘slavery’ as tipped wage fight intensifies",
+       "url": "https://www.foxnews.com/politics/chicago-mayor-links-restaurant-industry-slavery-tipped-wage-fight-intensifies",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-17T20:07:38",
+       "lede": "chicago mayor brandon johnson linked the restaurant industry to \"slavery\" wednesday as he defended his push to eliminate the tipped wage, doubling down after surviving a city council effort to block the policy. johnson’s remarks came after the chicago city council failed to override his veto of a measure that",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 135,
+         "path": "/People & Society/Social Issues & Advocacy/Work & Labor Issues",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0420d89c4aac09354b6c13",
+       "headline": "Indian restaurants' 'slowdown' is ringing up a ₹79,000 cr bill as Iran war chokes LPG supply",
+       "url": "https://economictimes.indiatimes.com/industry/services/hotels-/-restaurants/west-asia-lpg-shortage-india-restaurants-79000-crore-monthly-loss-iran-war-impact/articleshow/130303754.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-16T10:51:00",
+       "lede": "a shortage of commercial lpg is estimated to be inflicting a monthly economic hit of about ₹79,000 crore on india’s restaurant industry, according to a report by the phd chamber of commerce and industry (phdcci). as a sector that relies heavily on uninterrupted fuel availability for daily kitchen operations, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2cb9ec1991f786cf0f715",
+       "headline": "UK fast food chain savages Labour after entering administration - 'killing us'",
+       "url": "https://www.express.co.uk/news/uk/2191672/uk-fast-food-chain-leon-administration",
+       "publisher": "express.co.uk",
+       "published_at": "2026-04-08T12:11:00",
+       "lede": "leon's chief executive has criticised the government, accusing it of 'killing' the restaurant sector the head of a major uk fast food chain that recently entered administration has accused labour of “totally killing the restaurant industry”. john vincent, co-founder of leon, said “everyone knows restaurants are done” as he slammed",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 115,
+         "path": "/Food & Drink/Restaurants/Other",
+         "score": 0.65
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "vincent"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2ace83aab8d96aa3474a0",
+       "headline": "Leon founder: Labour ‘killing’ restaurant industry",
+       "url": "https://www.cityam.com/leon-founder-labour-killing-restaurant-industry/",
+       "publisher": "cityam.com",
+       "published_at": "2026-04-07T14:33:11",
+       "lede": "leon founder: labour ‘killing’ restaurant industry leon entered administration after being bought back by its founder the founder of fast food chain leon has accused the government of “killing” the restaurant industry by saddling the industry with a crushing tax burden. john vincent, who founded leon and recently bought it",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 115,
+         "path": "/Food & Drink/Restaurants/Other",
+         "score": 0.52
+        }
+       ],
+       "country": "spain",
+       "organizations": [
+        "vincent"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc44f0f8e7de13bc1cde62",
+       "headline": "Gas price spike is eating up fast food sales: Chart",
+       "url": "https://finance.yahoo.com/news/gas-price-spike-is-eating-up-fast-food-sales-chart-131624351.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-03-27T13:16:24",
+       "lede": "the us war on iran is frying fast food sales.restaurant industry sales have fallen every week in march as the iran war sent gas prices surging across the country, pressuring consumers' disposable income.\"the war in iran is likely having negative effects on both restaurant demand and on supply, with rising",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.65
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.55
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8cfe711792db0641eb442",
+       "headline": "Gas price spike is eating up fast food sales: Chart",
+       "url": "https://malaysia.news.yahoo.com/gas-price-spike-is-eating-up-fast-food-sales-chart-131624351.html",
+       "publisher": "malaysia.news.yahoo.com",
+       "published_at": "2026-03-27T13:16:24",
+       "lede": "the us war on iran is frying fast food sales.restaurant industry sales have fallen every week in march as the iran war sent gas prices surging across the country, pressuring consumers' disposable income.\"the war in iran is likely having negative effects on both restaurant demand and on supply, with rising",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.64
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e280ce90d9a716b4b72f91",
+       "headline": "Rising gas prices could disrupt restaurant sales recovery",
+       "url": "https://www.nrn.com/restaurant-finance/rising-gas-prices-could-disrupt-restaurant-sales-recovery",
+       "publisher": "nrn.com",
+       "published_at": "2026-03-11T16:35:02",
+       "lede": "the restaurant industry has been navigating whiplash for years now caused by uncertainties over everything from record-high beef prices to swiftly changing tariff policies. many operators, dizzied by the consistent lack of predictability and relentlessly high input costs, have taken a profit hit. the national restaurant association state of the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 115,
+         "path": "/Food & Drink/Restaurants/Other",
+         "score": 0.79
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        },
+        {
+         "code": 343,
+         "path": "/Business & Industrial/Hospitality Industry/Food Service",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87eec5cfa3e5ba5029a65",
+       "headline": "Former Employees And Coworkers Describe Volatile Kitchen Culture At San Diego’s Only Three-Michelin-Star Restaurant",
+       "url": "https://www.sandiegoville.com/2026/03/former-employees-describe-volatile.html",
+       "publisher": "sandiegoville.com",
+       "published_at": "2026-03-11T00:00:00",
+       "lede": "sandiegoville also received an email from a person claiming to be a former addison employee. the individual, who requested anonymity due to fears of retaliation within the tightly connected restaurant industry, described what they characterized as a toxic workplace environment during their time at the restaurant. among the claims described",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd906e6465b4d56528b45",
+       "headline": "Middle East crisis: Hospitality industry seeks urgent government action over commercial LPG supply disruption | India News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/india/middle-east-crisis-hospitality-industry-seeks-urgent-government-action-over-commercial-lpg-supply-disruption/articleshow/129348886.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-03-09T18:01:00",
+       "lede": "lpg cylinder price rise heats up inflation debate as opposition targets modi governmentnew delhi: the hotel and restaurant industry raised its concerns over an acute shortage of commercial lpg cylinders after suppliers reportedly withheld deliveries. the association called for an immediate intervention from the centre, as they cited recent government",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.83
+        }
+       ],
+       "country": "cameroon",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc9b2e981d28529ed1f21b",
+       "headline": "'Bar Rescue' host Jon Taffer sounds the alarm as weight-loss drugs threaten America's restaurants",
+       "url": "https://www.foxnews.com/entertainment/bar-rescue-host-jon-taffer-sounds-alarm-weight-loss-drugs-threaten-americas-restaurants.print",
+       "publisher": "foxnews.com",
+       "published_at": "2026-02-28T16:00:56",
+       "lede": "'bar rescue' host jon taffer sounds the alarm as weight-loss drugs threaten america's restaurantsby lauryn overhultzjon taffer claims a popular weight-loss trend has taken a bite out of the bar and restaurant industry.the \"bar rescue\" host warned restaurants are in worse shape than when he launched the hit tv show",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "jon taffer"
+       ]
+      },
+      {
+       "id": "6a2a6654c37f6c5e66b5552d",
+       "headline": "Biryani to Billions: How a Hyderabad Tax Probe May Uncover a ₹70,000 Crore Digital Evasion Scandal",
+       "url": "https://goachronicle.com/biryani-to-billions-how-a-hyderabad-tax-probe-may-uncover-a-%e2%82%b970000-crore-digital-evasion-scandal/",
+       "publisher": "goachronicle.com",
+       "published_at": "2026-02-21T03:30:00",
+       "lede": "the aroma of biryani has long symbolised celebration in hyderabad. but this week, that aroma carries the unmistakable scent of something else – a simmering national scandal that could fundamentally alter how india’s restaurant industry is taxed and regulated. what began as a routine financial scrutiny of three popular hyderabad-based",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbae679e3448abf0a24e95",
+       "headline": "Singapore Eateries Appeal for Increased Subsidies and Rent Control Amid Skyrocketing Business Closures",
+       "url": "https://www.retailnews.asia/singapore-eateries-appeal-for-increased-subsidies-and-rent-control-amid-skyrocketing-business-closures/",
+       "publisher": "retailnews.asia",
+       "published_at": "2026-01-23T07:40:27",
+       "lede": "amid numerous business closures, the restaurant industry in singapore is urging the government for additional labor cost subsidies and measures to control excessive rental hikes for the food and beverage sector. this appeal was recently put forward by the restaurant association of singapore, which suggested an increase in subsidies under",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 115,
+         "path": "/Food & Drink/Restaurants/Other",
+         "score": 0.6
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2adf4ec37f6c5e6607cc97",
+       "headline": "Restaurants on the Brink as Inflation has Damaged a Sector",
+       "url": "https://www.stl.news/restaurants-brink-inflation-has-damaged-a-sector/",
+       "publisher": "stl.news",
+       "published_at": "2026-01-06T14:11:04",
+       "lede": "restaurants on the brink: how inflation is quietly hollowing out a vital economic sector by stl.news | credit: st. louis restaurant review (stl.news) the restaurant industry is experiencing what can only be described as a quiet economic extinction. there is no single dramatic collapse, no overnight shutdown of an entire",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 115,
+         "path": "/Food & Drink/Restaurants/Other",
+         "score": 0.73
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69fa46b3713680636ef5a9be",
+       "headline": "BBQ Chain Smokey Bones Shuts Down All Locations—And Customers Are Saying ‘HALLELUJAH’",
+       "url": "https://www.delish.com/food-news/a71180235/smokey-bones-closed-customers-react/",
+       "publisher": "delish.com",
+       "published_at": "2026-04-30T21:33:25",
+       "lede": "the restaurant industry has been feeling the pain lately, and the combination of rising costs and reduced consumer spending has been pushing both local spots and national chains to a breaking point. businesses are scaling down operations, closing underperforming locations, and in the case of smokey bones, shutting down entirely.the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.23,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 115,
+         "path": "/Food & Drink/Restaurants/Other",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "smokey bones"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d864a088760d34c1b4c3",
+       "headline": "BBQ Chain Smokey Bones Shuts Down All Locations—And Customers Are Saying ‘HALLELUJAH’",
+       "url": "https://delish.com/food-news/a71180235/smokey-bones-closed-customers-react/",
+       "publisher": "delish.com",
+       "published_at": "2026-04-30T21:33:25",
+       "lede": "the restaurant industry has been feeling the pain lately, and the combination of rising costs and reduced consumer spending has been pushing both local spots and national chains to a breaking point. businesses are scaling down operations, closing underperforming locations, and in the case of smokey bones, shutting down entirely.the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.23,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 115,
+         "path": "/Food & Drink/Restaurants/Other",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "smokey bones"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 192,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNSAxMDozMzoyNCIsImkiOiI2OWVmYWI3NjcyNzIxMjMwMmM1Zjg4MjEiLCJwIjo3fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.521,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.523
+    }
+   }
+  }
+ ]
+}

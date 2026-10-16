@@ -1,0 +1,976 @@
+{
+ "slug": "gold-price-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:55:33Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "gold price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gold price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2439,
+     "tone": {
+      "carrying": 2438,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 953,
+        "share_pct": 39.09
+       },
+       {
+        "group": "neutral",
+        "count": 49,
+        "share_pct": 2.01
+       },
+       {
+        "group": "positive",
+        "count": 1436,
+        "share_pct": 58.9
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2425,
+      "count": 350,
+      "share_pct": 14.43
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.431,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.439
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "gold price",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gold price",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 523,
+       "critical": 148,
+       "critical_pct": 28.3,
+       "negative": 278,
+       "positive": 240,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 375,
+       "critical": 85,
+       "critical_pct": 22.7,
+       "negative": 174,
+       "positive": 199,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 331,
+       "critical": 73,
+       "critical_pct": 22.1,
+       "negative": 111,
+       "positive": 217,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 362,
+       "critical": 79,
+       "critical_pct": 21.8,
+       "negative": 128,
+       "positive": 222,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 480,
+       "critical": 82,
+       "critical_pct": 17.1,
+       "negative": 92,
+       "positive": 384,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 651,
+       "critical": 116,
+       "critical_pct": 17.8,
+       "negative": 204,
+       "positive": 420,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 341,
+       "critical": 73,
+       "critical_pct": 21.4,
+       "negative": 114,
+       "positive": 216,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 382,
+       "critical": 57,
+       "critical_pct": 14.9,
+       "negative": 110,
+       "positive": 268,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 520,
+       "critical": 71,
+       "critical_pct": 13.7,
+       "negative": 166,
+       "positive": 347,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 569,
+       "critical": 82,
+       "critical_pct": 14.4,
+       "negative": 185,
+       "positive": 376,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 604,
+       "critical": 98,
+       "critical_pct": 16.2,
+       "negative": 286,
+       "positive": 306,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 746,
+       "critical": 99,
+       "critical_pct": 13.3,
+       "negative": 316,
+       "positive": 407,
+       "partial_period": false
+      }
+     ],
+     "total": 5884,
+     "critical_total": 1063,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 6.448,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 6.451
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "gold price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gold price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2439,
+     "carrying": 1085,
+     "availability_pct": 44.49,
+     "items": [
+      {
+       "country": "united states",
+       "count": 391,
+       "share_pct": 16.03
+      },
+      {
+       "country": "india",
+       "count": 334,
+       "share_pct": 13.69
+      },
+      {
+       "country": "iran",
+       "count": 97,
+       "share_pct": 3.98
+      },
+      {
+       "country": "pakistan",
+       "count": 41,
+       "share_pct": 1.68
+      },
+      {
+       "country": "china",
+       "count": 30,
+       "share_pct": 1.23
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 192
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.41,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.413
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "gold price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gold price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "derivatives trading (futures, options)",
+       "count": 736,
+       "share": 37.23,
+       "lift": 1519.47,
+       "baseline_count": 2,
+       "previous_period_count": 476,
+       "delta_pct": 54.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "commodity trading and price changes",
+       "count": 1251,
+       "share": 63.28,
+       "lift": 516.54,
+       "baseline_count": 10,
+       "previous_period_count": 967,
+       "delta_pct": 29.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "precious metal spot prices",
+       "count": 266,
+       "share": 13.45,
+       "lift": 1098.31,
+       "baseline_count": 1,
+       "previous_period_count": 286,
+       "delta_pct": -7.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 360,
+       "share": 18.21,
+       "lift": 743.22,
+       "baseline_count": 2,
+       "previous_period_count": 165,
+       "delta_pct": 118.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "precious metals trading trends (gold, silver, platinum)",
+       "count": 601,
+       "share": 30.4,
+       "lift": 413.59,
+       "baseline_count": 6,
+       "previous_period_count": 827,
+       "delta_pct": -27.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2439,
+     "carrying": 1977,
+     "carrier_share_pct": 81.06,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.535,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.551
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "gold price",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "gold price",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2b1f415cefb83fe87a69fe",
+       "headline": "Gold Price Today 15 April 2026: Yellow Metal Retraces from One-Month High as US-Iran Peace Talks Loom - Business League",
+       "url": "https://www.businessleague.in/gold-price-today-15-april-2026-yellow-metal-retraces-from-one-month-high-as-us-iran-peace-talks-loom/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-15T07:14:44",
+       "lede": "now the feverish rally in the global bullion market has hit a technical and geopolitical speed bump. on wednesday, the gold price today 15 april 2026 inched lower after touching a significant one-month high earlier in the session. first, the reversal was triggered by a rebounding us dollar, which made",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.81
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e640362461615d5f43153b",
+       "headline": "Gold Buyers Hold Back as US-Iran Deadlock and Hawkish Fed Outlook Strengthen Dollar",
+       "url": "https://www.bizzbuzz.news/wealth/gold/gold-price-xauusd-us-iran-tensions-analysis-1388867",
+       "publisher": "bizzbuzz.news",
+       "published_at": "2026-04-13T14:56:07",
+       "lede": "earlier this monday, the gold price (xau/usd) is rightly touches a fresh daily high during the initial half of the european session. it looks to build on its intraday bounce from the $4,633-$4,632 area, or a four-day low, touched. the wall street journal reported that regional nations are racing to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.51
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "the wall street journal"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2a8f5277be6ed2d9c7a43",
+       "headline": "20-day EMA acts as key barrier ahead of Trump’s deadline to Iran",
+       "url": "https://bitcoinethereumnews.com/finance/20-day-ema-acts-as-key-barrier-ahead-of-trumps-deadline-to-iran/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-07T11:59:12",
+       "lede": "gold price (xau/usd) trades higher to near $4,675.00, but is broadly sideways, during the european trading session on tuesday. the yellow metal struggles for direction as investors remain cautious about how the middle east war will flare after the completion of united states (us) president donald trump’s final deadline. on",
+       "sentiment": {
+        "label": "none",
+        "score": 0.35,
+        "group": "neutral"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ema"
+       ],
+       "people": [
+        "donald trump",
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2a8c64c37f6c5e66cd6be2",
+       "headline": "Gold Price Crash Accelerates as SPDR GLD ETF Outflows Jump: What Next?",
+       "url": "https://www.banklesstimes.com/articles/2026/03/21/gold-price-crash-accelerates-as-spdr-gld-etf-outflows-jump-what-next/",
+       "publisher": "banklesstimes.com",
+       "published_at": "2026-03-21T10:22:01",
+       "lede": "gold price has tumbled in the last eight consecutive days. the gld etf has suffered substantial outflows in the past three weeks. technical analysis suggests that gold will continue falling in the near term. gold price continued its strong freefall as investors continued to dump their holdings of the spdr",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.81
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c474dc480588dca51665",
+       "headline": "High-Grade Near-Surface Graphite Intersected at Millennium",
+       "url": "https://investingnews.com/high-grade-near-surface-graphite-intersected-at-millennium/",
+       "publisher": "investingnews.com",
+       "published_at": "2026-02-22T23:30:17",
+       "lede": "charlotte mcleod 02 april dr. mark thornton: has gold bottomed? why it fell, key price drivers now dr. mark thornton, senior fellow at the mises institute, shares his thoughts on the gold price, outlining its key drivers and explaining why it's gone down since the iran war began. he also",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "iran",
+       "organizations": [],
+       "people": [
+        "mark thornton"
+       ]
+      },
+      {
+       "id": "69c43912571643fe6f001e3c",
+       "headline": "Canadian Bank Ups 2026 Gold Forecast to $6,000",
+       "url": "https://www.linkedin.com/pulse/canadian-bank-ups-2026-gold-forecast-6000-money-metals-3rv7e",
+       "publisher": "linkedin.com",
+       "published_at": "2026-02-10T16:17:40",
+       "lede": "by michael maharreydespite the recent selloff, canadian imperial bank of commerce ( cibc ) remains bullish, forecasting $6,000 gold and $100 silver in 2026.the canadian bank significantly upped its gold price forecast from $4,500 in october. cibc analysts extended their bullish forecast into 2027, projecting an average price of $6,500",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.61
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "canadian imperial bank of commerce",
+        "canadian imperial bank of commerce"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e45493a4d098b40b93696",
+       "headline": "Gold Price Forecast After Hitting $5K: Brace for a Short-Term Reversal | BanklessTimes",
+       "url": "https://www.banklesstimes.com/articles/2026/01/24/gold-price-forecast-after-hitting-5k-brace-for-a-short-term-reversal/",
+       "publisher": "banklesstimes.com",
+       "published_at": "2026-01-24T08:00:00",
+       "lede": "gold price continued its strong bull run, briefly retesting the key psychological level of $5,000 for the first time ever. it has already jumped by 15% this year, beating the dow jones industrial average and the nasdaq 100. still, there are signs the ongoing rally may pull back briefly soon.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa11a84b609af2b26f18",
+       "headline": "Madhya Pradesh Gold Prices 18, 22 and 24 Carat Today: MP में सोने का बड़ा उलटफेर! कमाई का मौका या नुकसान का खतरा? तुरंत जानें आज का भाव",
+       "url": "https://indianews.in/business/gold-price-today-25-april-2026-in-madhya-pradesh-bhopal-indore-gwalior-jabalpur-ujjain-sagar-satna-rewa-908531/",
+       "publisher": "indianews.in",
+       "published_at": "2026-04-25T04:35:22",
+       "lede": "madhya pradesh gold price today: on friday 24th april, there were no changes in gold and silver prices in india, which increased mcx silver. mcx has also increased gold. due to the pressure of the international bullion market sold, as uncertainty has increased in the middle east. the ongoing blockade",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.59
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "mcx"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a4f855cefb83fe8ecb3de",
+       "headline": "AXCAP VENTURES INC. (CVE:AXCP) | Roxmore Resources dévoile des perspectives économiques positives pour le projet aurifère de Converse",
+       "url": "https://www.webdisclosure.com/article/roxmore-resources-devoile-des-perspectives-economiques-positives-pour-le-projet-aurifere-de-converse-eQPCNVb1Uka",
+       "publisher": "webdisclosure.com",
+       "published_at": "2026-04-20T13:05:00",
+       "lede": "roxmore resources inc. has published a promising preliminary economic assessment (sea) for its converse gold project in nevada. key highlights include a $2.7 billion after-tax npv and a 43% tri at $3,600/oz gold price. the project provides a 14-year life span for the mine and an average annual production of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.66
+        },
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e863797bb1410d4c7440e3",
+       "headline": "Barrick Mining Aktie: Neue Investitionsfelder identifiziert",
+       "url": "https://www.boerse-express.com/news/articles/barrick-mining-aktie-neue-investitionsfelder-identifiziert-894258",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-04-19T02:00:55",
+       "lede": "strong profits, weak yields — barrick mining currently has a wide range of balance sheets and everyday operations. while the group's extremely high gold price is flushing billions into the cash registers, production has fallen to the lowest level in at least a quarter of a century. institutional large investors",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.57
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e3b87bb1410d4cd5663d",
+       "headline": "Gold price increased in India today, check latest rates in top cities",
+       "url": "https://kalingatv.com/business/gold-price-increased-in-india-today-check-latest-rates-in-top-cities-5/",
+       "publisher": "kalingatv.com",
+       "published_at": "2026-04-18T07:14:25",
+       "lede": "advertisement new delhi: the gold price in india today is recorded at rs 1,55,780 per 10 grams for 24 karat gold, rs 1,42,800 per 10 grams for 22 karat gold on april 18, 2026. meanwhile, the 18-carat gold rate is recorded at rs 1,16,840 per 10 grams today. the prices",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.87,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.78
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.64
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e840d49baafc7356677a46",
+       "headline": "Barrick Mining Aktie: Gute Nachrichten begeistern!",
+       "url": "https://www.boerse-express.com/news/articles/barrick-mining-aktie-gute-nachrichten-begeistern-892002",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-04-14T03:00:26",
+       "lede": "while the gold price is running from record to record, barrick mining pulls the tear line on the geopolitical stage. the group is throttling its prestigious reko-diq project in pakistan and is preparing a massive ipo for its north american nuclear facilities instead. instead of risky growth in crisis regions,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.51
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0362667b84f58d6f707146",
+       "headline": "The largest gold miners of 2025",
+       "url": "https://miningmagazine.com/operations/news-analysis/4529651/largest-gold-miners-2025",
+       "publisher": "miningmagazine.com",
+       "published_at": "2026-04-08T14:06:39",
+       "lede": "this year the top ten gold miners produced 25.8moz of gold and achieved an average realised gold price of $3,541/oz with an average aisc of $1,571/oz. the sum of the production of the ten largest, in 2025, fell 9% year-on-year and there was movement in the list. in 2025, newmont",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.85
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.51
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea501ab0517977015d7ac2",
+       "headline": "The largest gold miners of 2025",
+       "url": "https://www.miningmagazine.com/operations/news-analysis/4529651/largest-gold-miners-2025",
+       "publisher": "miningmagazine.com",
+       "published_at": "2026-04-08T14:06:39",
+       "lede": "this year the top ten gold miners produced 25.8moz of gold and achieved an average realised gold price of $3,541/oz with an average aisc of $1,571/oz. the sum of the production of the ten largest, in 2025, fell 9% year-on-year and there was movement in the list. in 2025, newmont",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.85
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.51
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.5
+        }
+       ],
+       "country": "brazil",
+       "organizations": [
+        "newmont"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc2d219d3d4bff9ce876df",
+       "headline": "Barrick Mining Aktie: Spannende Marktchancen!",
+       "url": "https://www.boerse-express.com/news/articles/barrick-mining-aktie-spannende-marktchancen-883466",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-03-26T07:11:09",
+       "lede": "barrick mining reports record profits and announces the ipo of its lucrative north america business for the end of 2026 to better reflect the value of nevada assets. barrick mining provides strong arguments for investors. after a turbulent month for the gold price, the mine operator is shining with record",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.6,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.73
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a68f7a949e1e10fa9f08",
+       "headline": "Sell-off at Barrick Mining, Lahontan Gold, and Newmont: Why Now Is the Perfect Time to Buy More",
+       "url": "https://themarketonline.ca/sell-off-at-barrick-mining-lahontan-gold-and-newmont-why-now-is-the-perfect-time-to-buy-more-2026-03-23/",
+       "publisher": "themarketonline.ca",
+       "published_at": "2026-03-23T06:22:24",
+       "lede": "barrick mining – strong numbers with a downsidein 2025, barrick delivered usd 16.96 billion in revenue and usd 2.73 billion in operating cash flow in the final quarter. these are strong results, driven by a soaring gold price and efficient core mines. however, the outlook for 2026 is more subdued.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.76
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "barrick"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 277,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xNyAyMzozNjo0MiIsImkiOiI2OWMzYTJjYWE1MjhhMzVlMWY0MWUyZjEiLCJwIjo3fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.77,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.774
+    }
+   }
+  }
+ ]
+}

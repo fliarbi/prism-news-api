@@ -1,0 +1,929 @@
+{
+ "slug": "virtual-reality-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:10Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "virtual reality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "virtual reality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3963,
+     "tone": {
+      "carrying": 3961,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 301,
+        "share_pct": 7.6
+       },
+       {
+        "group": "neutral",
+        "count": 54,
+        "share_pct": 1.36
+       },
+       {
+        "group": "positive",
+        "count": 3606,
+        "share_pct": 91.04
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3963,
+      "count": 1449,
+      "share_pct": 36.56
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.989,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.991
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "virtual reality",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "virtual reality",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 943,
+       "critical": 265,
+       "critical_pct": 28.1,
+       "negative": 66,
+       "positive": 858,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 697,
+       "critical": 221,
+       "critical_pct": 31.7,
+       "negative": 38,
+       "positive": 654,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 947,
+       "critical": 252,
+       "critical_pct": 26.6,
+       "negative": 69,
+       "positive": 873,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1072,
+       "critical": 333,
+       "critical_pct": 31.1,
+       "negative": 64,
+       "positive": 1002,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 927,
+       "critical": 355,
+       "critical_pct": 38.3,
+       "negative": 144,
+       "positive": 766,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 735,
+       "critical": 272,
+       "critical_pct": 37.0,
+       "negative": 38,
+       "positive": 692,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 750,
+       "critical": 233,
+       "critical_pct": 31.1,
+       "negative": 26,
+       "positive": 714,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 762,
+       "critical": 287,
+       "critical_pct": 37.7,
+       "negative": 65,
+       "positive": 678,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 848,
+       "critical": 378,
+       "critical_pct": 44.6,
+       "negative": 80,
+       "positive": 757,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 949,
+       "critical": 355,
+       "critical_pct": 37.4,
+       "negative": 56,
+       "positive": 883,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 981,
+       "critical": 317,
+       "critical_pct": 32.3,
+       "negative": 89,
+       "positive": 866,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1185,
+       "critical": 399,
+       "critical_pct": 33.7,
+       "negative": 76,
+       "positive": 1100,
+       "partial_period": false
+      }
+     ],
+     "total": 10796,
+     "critical_total": 3667,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.826,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.831
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "virtual reality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "virtual reality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3963,
+     "carrying": 1747,
+     "availability_pct": 44.08,
+     "items": [
+      {
+       "country": "united states",
+       "count": 741,
+       "share_pct": 18.7
+      },
+      {
+       "country": "china",
+       "count": 132,
+       "share_pct": 3.33
+      },
+      {
+       "country": "india",
+       "count": 124,
+       "share_pct": 3.13
+      },
+      {
+       "country": "colombia",
+       "count": 106,
+       "share_pct": 2.67
+      },
+      {
+       "country": "united kingdom",
+       "count": 101,
+       "share_pct": 2.55
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 543
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.977,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.981
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "virtual reality",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "virtual reality",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "vr training & simulation kits",
+       "count": 51,
+       "share": 2.8,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 40,
+       "delta_pct": 27.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "vr social interaction platforms",
+       "count": 50,
+       "share": 2.74,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 22,
+       "delta_pct": 127.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "digital health tools in medical education",
+       "count": 46,
+       "share": 2.52,
+       "lift": 206.09,
+       "baseline_count": 1,
+       "previous_period_count": 36,
+       "delta_pct": 27.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "telemedicine training programs",
+       "count": 42,
+       "share": 2.31,
+       "lift": 188.17,
+       "baseline_count": 1,
+       "previous_period_count": 28,
+       "delta_pct": 50.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vr gaming accessories",
+       "count": 35,
+       "share": 1.92,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 25,
+       "delta_pct": 40.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3963,
+     "carrying": 1822,
+     "carrier_share_pct": 45.98,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.034,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.043
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "virtual reality",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "virtual reality",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f8aae243843dd771d27a97",
+       "headline": "I would buy a phone now because smartphone prices are facing a second unexpected challenge",
+       "url": "https://www.phonearena.com/news/smartphone-prices-facing-second-unexpected-challenge_id180026",
+       "publisher": "phonearena.com",
+       "published_at": "2026-04-29T22:35:01",
+       "lede": "abdullah asim senior news writer view full bio abdullah loves smartphones, virtual reality, and audio gear. though he covers a wide range of news his favorite is always when he gets to talk about the newest vr venture or when apple sets the industry ablaze with another phenomenal release. read",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.81,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.61
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.6
+        },
+        {
+         "code": 38,
+         "path": "/Computers & Electronics/Software/Operating Systems",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad922963d76f4af1124fb",
+       "headline": "AI, AR-VR to power India’s e-commerce growth to $250 bn by 2030",
+       "url": "https://www.techcircle.in/2026/04/08/ai-ar-vr-to-power-india-s-e-commerce-surge-to-250-bn-by-2030",
+       "publisher": "techcircle.in",
+       "published_at": "2026-04-08T11:40:39",
+       "lede": "artificial intelligence and immersive technologies such as augmented and virtual reality are set to reshape india’s e-commerce landscape fundamentally, driving both consumer engagement and profitability as the market scales to $250 billion by 2030, according to a report by google and deloitte published on wednesday. the report highlights that ai",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.89,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 94,
+         "path": "/Business & Industrial/Business Services/E-Commerce Services",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e28ae7c1991f786ce3962f",
+       "headline": "​Gaming Stocks in India: Top Picks, Risks & How to Invest",
+       "url": "https://www.kotaksecurities.com/investing-guide/share-market/top-gaming-stocks-in-india/",
+       "publisher": "kotaksecurities.com",
+       "published_at": "2026-03-17T11:00:31",
+       "lede": "the gaming industry is booming in india. it is estimated that india’s online gaming sector will hit $4.3 billion by fy2030. it is creating a multi-billion global ecosystem which is powered by mobile gaming, esports, cloud gaming, virtual reality, and in-game economies. this high growth in gaming is due to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "esports"
+       ],
+       "people": []
+      },
+      {
+       "id": "9f84ea1e19e4dda846197f58",
+       "headline": "A randomized control trial for assessing virtual reality for perioperative anxiolysis and postoperative pain modulation in adolescents undergoing MIRPE.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41763294/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-02-26T00:00:00",
+       "lede": "a randomized control trial for assessing virtual reality for perioperative anxiolysis and postoperative pain modulation in adolescents undergoing mirpe.background: pectus deformities, including pectus excavatum, are associated with psychosocial burden and in severe cases impaired cardiorespiratory function. minimally invasive repair of pectus excavatum (mirpe) is the standard corrective surgery; however, the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.5
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf639478f2c338e71a0973",
+       "headline": "The Impact of Technology on Education - and What It Means for the Future of Learning",
+       "url": "https://www.linkedin.com/pulse/impact-technology-education-what-means-future-fmlle",
+       "publisher": "linkedin.com",
+       "published_at": "2026-02-25T12:00:17",
+       "lede": "technology is no longer an add-on in education - it is redefining how students learn, how teachers teach, and how schools prepare young people for the world of work. from ai-powered tools to immersive virtual reality environments, the digital transformation of education is accelerating. the question is no longer if",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.58
+        },
+        {
+         "code": 323,
+         "path": "/Jobs & Education/Education/Teaching & Classroom Resources",
+         "score": 0.43
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c95173682ef7f3f763f8a9",
+       "headline": "AI, Robotics & Tech: The Future of Orthopedic Surgery - News Directory 3",
+       "url": "https://www.newsdirectory3.com/ai-robotics-tech-the-future-of-orthopedic-surgery/",
+       "publisher": "newsdirectory3.com",
+       "published_at": "2026-02-18T21:39:02",
+       "lede": "the evolving landscape of orthopedic surgery: ai, robotics, and the future of careorthopedic surgery, a field dedicated to the restoration of musculoskeletal function, is undergoing a rapid transformation. driven by advances in artificial intelligence (ai), robotics, virtual reality (vr), augmented reality (ar), and digital health tools, the way surgeons evaluate",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "digital health"
+       ],
+       "people": []
+      },
+      {
+       "id": "6989c35294d3f481f3ebef6e",
+       "headline": "Stanford, Princeton scientists launch MedOS AI-XR-cobot clinical system - The Robot Report",
+       "url": "https://www.therobotreport.com/stanford-princeton-scientists-launch-medos-ai-xr-cobot-clinical-system/",
+       "publisher": "therobotreport.com",
+       "published_at": "2026-02-05T14:00:03",
+       "lede": "developers are finding ways to combine artificial intelligence, augmented and virtual reality, and robotics for useful applications. the stanford-princeton ai coscientist team today launched medos, which it claimed is “the first ai–xr-cobot system designed to actively assist clinicians inside real clinical environments.”more than 60% of physicians in the u.s. have",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 88,
+         "path": "/Health/Medical Facilities & Services/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab018a54b8f07c96851e",
+       "headline": "Meta's Reality Labs Records $19 Billion Loss as Strategic Focus Shifts",
+       "url": "https://datafloq.com/metas-reality-labs-records-19-billion-loss-as-strategic-focus-shifts/",
+       "publisher": "datafloq.com",
+       "published_at": "2026-01-29T12:27:22",
+       "lede": "meta’s latest earnings report reveals a challenging financial landscape for reality labs, the company’s dedicated virtual reality and metaverse division. despite significant investments, the unit reported a staggering $19.1 billion loss for the 2025 fiscal year, a slight increase from the $17.7 billion lost in 2024. the financial breakdown the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 313,
+         "path": "/Computers & Electronics/Consumer Electronics/Virtual Reality Devices",
+         "score": 0.46
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "meta",
+        "metaverse"
+       ],
+       "people": []
+      },
+      {
+       "id": "6986080954148f65ea2fde6e",
+       "headline": "Meta burned $19 billion on VR last year, and 2026 won’t be any better | TechCrunch",
+       "url": "https://techcrunch.com/2026/01/28/meta-burned-19-billion-on-vr-last-year-and-2026-wont-be-any-better/",
+       "publisher": "techcrunch.com",
+       "published_at": "2026-01-29T00:20:18",
+       "lede": "earlier this month, meta laid off 10% of the staff for reality labs, its virtual reality unit, reportedly cutting as many as 1,000 employees. now, in a development that seems directly related, the company has revealed that the unit lost many billions of dollars last year.on wednesday, meta’s earnings report",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 313,
+         "path": "/Computers & Electronics/Consumer Electronics/Virtual Reality Devices",
+         "score": 0.73
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a67f6a499b02fbb7fae8",
+       "headline": "Meta Scales Back Virtual Reality as Layoffs Signal Shift Toward AI",
+       "url": "https://www.europeanbusinessreview.com/meta-scales-back-virtual-reality-as-layoffs-signal-shift-toward-ai/",
+       "publisher": "europeanbusinessreview.com",
+       "published_at": "2026-01-14T09:20:50",
+       "lede": "meta is pulling back sharply from the virtual reality push that once defined its future, cutting more than 1,000 jobs and closing several vr game studios as it redirects money and talent toward artificial intelligence and wearable technology.the layoffs, confirmed this week, affect roughly 10 percent of meta’s reality labs",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 313,
+         "path": "/Computers & Electronics/Consumer Electronics/Virtual Reality Devices",
+         "score": 0.72
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bb31b7b54f2a520bb5f7f2",
+       "headline": "Meta Reportedly Set to Axe 10% of Reality Labs Jobs",
+       "url": "https://www.uctoday.com/immersive-workplace-xr-tech/meta-reportedly-reality-labs-layoffs-ai-priority/",
+       "publisher": "uctoday.com",
+       "published_at": "2026-01-13T13:08:11",
+       "lede": "meta is reportedly preparing to cut around 10 percent of staff in its reality labs division – with metaverse and virtual reality teams expected to take the largest hit.the move, first reported by the new york times highlights how the company is pivoting toward artificial intelligence and away from immersive",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.49
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "meta",
+        "metaverse"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f885288937ef12fc09b3e8",
+       "headline": "YouTube Premium crosses a new milestone as more users give in",
+       "url": "https://www.phonearena.com/news/youtube-premium-crosses-new-milestone_id180075",
+       "publisher": "phonearena.com",
+       "published_at": "2026-04-30T19:34:31",
+       "lede": "abdullah asim senior news writer view full bio abdullah loves smartphones, virtual reality, and audio gear. though he covers a wide range of news his favorite is always when he gets to talk about the newest vr venture or when apple sets the industry ablaze with another phenomenal release. read",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.82,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.59
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f885388937ef12fc09bfad",
+       "headline": "Vision Pro: Apple executives now echo sentiment shared by former head of Oculus at launch",
+       "url": "https://www.phonearena.com/news/vision-pro-apple-executives-echo-sentiment-by-former-head-of-oculus_id180057",
+       "publisher": "phonearena.com",
+       "published_at": "2026-04-30T14:59:23",
+       "lede": "abdullah asim senior news writer view full bio abdullah loves smartphones, virtual reality, and audio gear. though he covers a wide range of news his favorite is always when he gets to talk about the newest vr venture or when apple sets the industry ablaze with another phenomenal release. read",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.82,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.59
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee37e83fc01faba5cd895",
+       "headline": "Melania Trump & Queen Camilla Take Students On VR Tour Of UK Landmarks At White House",
+       "url": "https://www.yahoo.com/news/articles/melania-trump-queen-camilla-students-191609546.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T19:16:09",
+       "lede": "first lady melania trump and her majesty queen camilla hosted american students at the white house on monday for a virtual reality tour of british landmarks. some of the students who participated in the event are current state champions in the presidential ai challenge. the challenge, established by an executive",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.75,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e8fa836d28f995cbc1b8",
+       "headline": "A Marine Corps fuel-and-rearm simulator now adds full-body VR movement",
+       "url": "https://www.stocktitan.net/news/VTIX/virtuix-integrates-omni-one-into-u-s-marine-corps-farp-training-f2ge33f93l51.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-28T12:38:00",
+       "lede": "partnership with vigilante adds full-body movement to mission-critical military training integration builds on virtuix’s expanding defense momentum across u.s. marine corps, army, air force, and navy austin, texas, april 28, 2026 (globe newswire) -- virtuix inc. (nasdaq: vtix ), a leading developer of full-body virtual reality (vr) systems, today announced",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 313,
+         "path": "/Computers & Electronics/Consumer Electronics/Virtual Reality Devices",
+         "score": 0.47
+        },
+        {
+         "code": 483,
+         "path": "/Science/Engineering & Technology/Augmented & Virtual Reality",
+         "score": 0.43
+        },
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 635,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAxMjowMDowMCIsImkiOiI2OWYyMmRkODI3MTE3ZGY4M2Y5NGYzNmQiLCJwIjo3fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.475,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.487
+    }
+   }
+  }
+ ]
+}

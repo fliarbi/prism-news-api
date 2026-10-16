@@ -1,0 +1,905 @@
+{
+ "slug": "income-tax-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:07Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "income tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "income tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10088,
+     "tone": {
+      "carrying": 10079,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4015,
+        "share_pct": 39.84
+       },
+       {
+        "group": "neutral",
+        "count": 1533,
+        "share_pct": 15.21
+       },
+       {
+        "group": "positive",
+        "count": 4531,
+        "share_pct": 44.95
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10077,
+      "count": 6087,
+      "share_pct": 60.4
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.735,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.767
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "income tax",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "income tax",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2460,
+       "critical": 949,
+       "critical_pct": 38.6,
+       "negative": 702,
+       "positive": 1034,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1369,
+       "critical": 692,
+       "critical_pct": 50.5,
+       "negative": 452,
+       "positive": 674,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2113,
+       "critical": 1076,
+       "critical_pct": 50.9,
+       "negative": 871,
+       "positive": 927,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2680,
+       "critical": 1490,
+       "critical_pct": 55.6,
+       "negative": 1043,
+       "positive": 1242,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2341,
+       "critical": 1419,
+       "critical_pct": 60.6,
+       "negative": 932,
+       "positive": 1064,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1363,
+       "critical": 740,
+       "critical_pct": 54.3,
+       "negative": 619,
+       "positive": 528,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1832,
+       "critical": 1195,
+       "critical_pct": 65.2,
+       "negative": 987,
+       "positive": 619,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1523,
+       "critical": 964,
+       "critical_pct": 63.3,
+       "negative": 698,
+       "positive": 606,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1694,
+       "critical": 1037,
+       "critical_pct": 61.2,
+       "negative": 725,
+       "positive": 777,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2458,
+       "critical": 1617,
+       "critical_pct": 65.8,
+       "negative": 1004,
+       "positive": 1131,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2737,
+       "critical": 1601,
+       "critical_pct": 58.5,
+       "negative": 975,
+       "positive": 1250,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3199,
+       "critical": 1832,
+       "critical_pct": 57.3,
+       "negative": 1311,
+       "positive": 1373,
+       "partial_period": false
+      }
+     ],
+     "total": 25769,
+     "critical_total": 14612,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.009,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.012
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "income tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "income tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10088,
+     "carrying": 3763,
+     "availability_pct": 37.3,
+     "items": [
+      {
+       "country": "india",
+       "count": 1628,
+       "share_pct": 16.14
+      },
+      {
+       "country": "united states",
+       "count": 1239,
+       "share_pct": 12.28
+      },
+      {
+       "country": "united kingdom",
+       "count": 246,
+       "share_pct": 2.44
+      },
+      {
+       "country": "canada",
+       "count": 55,
+       "share_pct": 0.55
+      },
+      {
+       "country": "singapore",
+       "count": 53,
+       "share_pct": 0.53
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 542
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.672,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.675
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "income tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "income tax",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "personal income tax filing strategies",
+       "count": 825,
+       "share": 14.69,
+       "lift": 1199.16,
+       "baseline_count": 1,
+       "previous_period_count": 742,
+       "delta_pct": 11.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "tax law updates and legislative changes",
+       "count": 283,
+       "share": 5.04,
+       "lift": 411.35,
+       "baseline_count": 1,
+       "previous_period_count": 144,
+       "delta_pct": 96.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "income tax bracket revisions",
+       "count": 230,
+       "share": 4.1,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 109,
+       "delta_pct": 111.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "government taxation strategies and reforms",
+       "count": 225,
+       "share": 4.01,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 115,
+       "delta_pct": 95.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "government taxation and revenue systems",
+       "count": 1342,
+       "share": 23.9,
+       "lift": 102.66,
+       "baseline_count": 19,
+       "previous_period_count": 865,
+       "delta_pct": 55.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 10088,
+     "carrying": 5616,
+     "carrier_share_pct": 55.67,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.182,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.184
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "income tax",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "income tax",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6989d39394d3f481f3ed19a9",
+       "headline": "CJ Roy Suicide Case: Karnataka Home Minister G Parameshwara Says ‘Too Early’ To Blame Income Tax Pressure for Death of Confident Group Chairman; SIT Probe Underway | 📰 LatestLY",
+       "url": "https://www.latestly.com/india/news/httpswww-latestly-comindianewscj-roy-suicide-case-karnataka-home-minister-g-parameshwara-says-too-early-to-blame-income-tax-pressure-for-death-of-confident-group-chairman-sit-probe-underway-7299-7299443.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-02-03T06:54:42",
+       "lede": "bengaluru, february 3: responding to allegations by the family of bengaluru-based industrialist, confident group founder and chairman c.j. roy, that pressure by the income tax department pushed him to suicide, karnataka home minister g. parameshwara stated that it was too early to link the death to the i-t pressure. speaking",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 390,
+         "path": "/Sensitive Subjects/Self-Harm",
+         "score": 0.55
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.5
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "g. parameshwara"
+       ]
+      },
+      {
+       "id": "6a2accadc37f6c5e66fa7267",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "http://autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac8a1c37f6c5e66f77dc6",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "http://www.autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a79695cefb83fe8084bd0",
+       "headline": "Ford Expects $1.3 Billion in Tariff Refunds After SCOTUS Ruling",
+       "url": "https://autoweek.com/news/a71177860/ford-expects-13-billion-tariff-refunds/",
+       "publisher": "autoweek.com",
+       "published_at": "2026-04-30T17:18:00",
+       "lede": "anticipated refund of $1.3 billion of international emergency economic powers act (ieepa) tariffs paid over the last year boosted ford motor company’s first-quarter earnings before income tax (ebit) to $3.5 billion, the automaker reported wednesday. the company posted total gross revenues for the first quarter of $43.3 billion, a year-over-year",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e48c63a4d098b40bb69ff",
+       "headline": "Missouri could move income tax vote from November to August",
+       "url": "https://www.yahoo.com/news/articles/missouri-could-move-income-tax-165923621.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T16:59:23",
+       "lede": "jefferson city, mo. – a proposal to phase out missouri’s income tax, long anticipated to appear on november 2026 ballots, could instead reach voters in the august primary election, which historically sees lower voter turnout. house joint resolution 173 and 174, which includes provisions to phase out the state’s income",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 20,
+         "path": "/News/Politics/Campaigns & Elections",
+         "score": 0.95
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac60e963d76f4af038b53",
+       "headline": "Income Tax Department grants stay to NDTV on Rs 420.36 Crore Income Tax Liability",
+       "url": "https://studycafe.in/income-tax-department-grants-stay-to-ndtv-on-rs-420-36-crore-income-tax-liability-418766.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-30T07:59:23",
+       "lede": "income tax department grants stay to ndtv on rs 420.36 crore income tax liability ndtv (new delhi television), a well-known indian news media company famous for its 24-hour news broadcasting in india, has recently disclosed to the stock exchange, i.e., bse ltd and nse ltd, the temporary stay on a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69fa0758713680636ef4daa2",
+       "headline": "NDTV gets stay on ₹420.36 crore tax demand; subject to review",
+       "url": "https://storyboard18.com/brand-marketing/ndtv-gets-stay-on-%e2%82%b9420-36-crore-tax-demand-subject-to-review-96767.htm",
+       "publisher": "storyboard18.com",
+       "published_at": "2026-04-30T06:50:30",
+       "lede": "new delhi television ltd (ndtv) has received a stay on an outstanding income tax demand of ₹420.36 crore related to the assessment year 2008–09. in a regulatory filing to the bse and nse, the company said the assistant commissioner of income tax, central circle-5, new delhi, passed the order on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.6
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ndtv",
+        "ndtv"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d5387b2d589e844b5d8d",
+       "headline": "NDTV gets stay on ₹420.36 crore tax demand; subject to review",
+       "url": "http://storyboard18.com/brand-marketing/ndtv-gets-stay-on-%e2%82%b9420-36-crore-tax-demand-subject-to-review-96767.htm",
+       "publisher": "storyboard18.com",
+       "published_at": "2026-04-30T06:50:30",
+       "lede": "new delhi television ltd (ndtv) has received a stay on an outstanding income tax demand of ₹420.36 crore related to the assessment year 2008–09. in a regulatory filing to the bse and nse, the company said the assistant commissioner of income tax, central circle-5, new delhi, passed the order on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.6
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ndtv",
+        "ndtv"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ea4e5e540a46fb545aa1f",
+       "headline": "State Pension rise pushes UK pensioners near tax threshold",
+       "url": "https://www.mirror.co.uk/money/triple-lock-state-pension-rise-37088259",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-04-30T04:16:00",
+       "lede": "financial experts have cautioned that the recent state pension increase under the triple lock is pushing more pensioners towards paying income tax. the triple lock mechanism ensures the state pension rises annually by whichever is greater: earnings growth, the consumer price index (cpi) inflation rate, or 2.5 per cent. the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 263,
+         "path": "/Finance/Financial Planning & Management/Retirement & Pension",
+         "score": 0.83
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a97cb963d76f4afe3d4b5",
+       "headline": "Delhi High Court Cancels Time-Barred Reassessment Notice and Assessment Order",
+       "url": "https://studycafe.in/delhi-high-court-cancels-time-barred-reassessment-notice-and-assessment-order-418325.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-28T09:24:14",
+       "lede": "delhi high court cancels time-barred reassessment notice and assessment order the petitioner, m/s supreme build-cap pvt ltd, filed a writ petition with the delhi high court because they weren’t happy with an assessment order dated 29 march 2026. their main complaint? they said the income tax department’s whole reassessment process",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03ef219c4aac0935369a21",
+       "headline": "Madras HC dismisses pleas seeking probe into AIADMK leaders D Jayakumar, CVe Shanmugam’s poll affidavits",
+       "url": "https://www.newindianexpress.com/states/tamil-nadu/2026/Apr/28/madras-hc-dismisses-pleas-seeking-probe-into-aiadmk-leaders-d-jayakumar-cve-shanmugams-poll-affidavits",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-28T02:21:21",
+       "lede": "chennai: the first bench of the madras high court comprising chief justice sushrut arvind dharmadhikari and justice g arul murugan on monday dismissed two petitions seeking directions to the income tax department, the ministry of corporation affairs and the election commission of india to hold inquiry into the alleged suppression",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a93b3c37f6c5e66d23fc5",
+       "headline": "Golpe do imposto de renda já infectou 16 mil celulares: você pode ser o próximo",
+       "url": "https://fdr.com.br/2026/04/27/golpe-do-imposto-de-renda-ja-infectou-16-mil-celulares-voce-pode-ser-o-proximo/",
+       "publisher": "fdr.com.br",
+       "published_at": "2026-04-27T19:30:00",
+       "lede": "the federal revenue issued an urgent alert to all taxpayers: a dangerous blow involving the income tax j&aacute; infected more than 16,000 mobile phones in brazil. the fraud uses fake apps and p&aacute;gender to steal data and money, exploring the proximity of the deadline of declaration&access;&atilde;or in&nbsp;2026. top_titlepayments title5&ordm; dia",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.55
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e8acd32561089420d326",
+       "headline": "Madras HC dismisses a fresh petition seeking probe into financial disclosures of Vijay in poll affidavit",
+       "url": "https://www.newindianexpress.com/states/tamil-nadu/2026/Apr/27/madras-hc-dismisses-a-fresh-petition-seeking-probe-into-financial-disclosures-of-vijay-in-poll-affidavit",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-27T07:09:52",
+       "lede": "chennai: the madras high court on monday dismissed a fresh petition filed by a voter seeking a probe by the income tax department and the ministry of corporate affairs into the discrepancies, suppression and misstatements in the financial disclosures of vijay, actor and president of tvk, made in the affidavit",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "income tax department",
+        "ministry of corporate affairs"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a7321963d76f4afcb5b79",
+       "headline": "Income Tax Department Uncovered Massive Unreported Property Deals Worth Rs 3.12 Lakh Crore Across Multiple States",
+       "url": "https://studycafe.in/income-tax-department-uncovered-massive-unreported-property-deals-worth-rs-3-12-lakh-crore-across-multiple-states-418133.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-27T01:35:52",
+       "lede": "income tax department uncovered massive unreported property deals worth rs 3.12 lakh crore across multiple states the income tax department carried out surveys and on-the-spot checks across punjab, haryana, himachal pradesh, chandigarh, jammu and kashmir, and ladakh. these checks found more than 2.5 lakh property transactions in the past year",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a041f649c4aac09354abf9a",
+       "headline": "TNCC chief doubles down on I-T raid claim",
+       "url": "https://www.newindianexpress.com/states/tamil-nadu/2026/Apr/25/tncc-chief-doubles-down-on-i-t-raid-claim",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-04-25T02:30:07",
+       "lede": "chennai: releasing images purportedly showing income tax department officials conducting searches, tamil nadu congress committee (tncc) president k selvaperunthagai on thursday reiterated that his residence and that of his long-time election manager were raided on the eve of congress leader rahul gandhi’s visit to the state, terming it “intimidation” during",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 2200,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNCAyMDozMTozMyIsImkiOiI2OWVmYTliOThhNTRiOGYwN2M5NThlNzMiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.032,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.051
+    }
+   }
+  }
+ ]
+}

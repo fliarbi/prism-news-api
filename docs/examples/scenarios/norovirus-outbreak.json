@@ -1,0 +1,853 @@
+{
+ "slug": "norovirus-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:08Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "norovirus",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "norovirus",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 729,
+     "tone": {
+      "carrying": 727,
+      "availability_pct": 99.73,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 571,
+        "share_pct": 78.54
+       },
+       {
+        "group": "neutral",
+        "count": 18,
+        "share_pct": 2.48
+       },
+       {
+        "group": "positive",
+        "count": 138,
+        "share_pct": 18.98
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 727,
+      "count": 541,
+      "share_pct": 74.42
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.742,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.745
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "norovirus",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "norovirus",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 99,
+       "critical": 74,
+       "critical_pct": 74.7,
+       "negative": 65,
+       "positive": 30,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 59,
+       "critical": 37,
+       "critical_pct": 62.7,
+       "negative": 23,
+       "positive": 34,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 99,
+       "critical": 60,
+       "critical_pct": 60.6,
+       "negative": 78,
+       "positive": 17,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 105,
+       "critical": 69,
+       "critical_pct": 65.7,
+       "negative": 67,
+       "positive": 35,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 40,
+       "critical": 30,
+       "critical_pct": 75.0,
+       "negative": 23,
+       "positive": 15,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 98,
+       "critical": 72,
+       "critical_pct": 73.5,
+       "negative": 73,
+       "positive": 23,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 83,
+       "critical": 64,
+       "critical_pct": 77.1,
+       "negative": 60,
+       "positive": 21,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 256,
+       "critical": 160,
+       "critical_pct": 62.5,
+       "negative": 209,
+       "positive": 38,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 156,
+       "critical": 121,
+       "critical_pct": 77.6,
+       "negative": 124,
+       "positive": 27,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 275,
+       "critical": 188,
+       "critical_pct": 68.4,
+       "negative": 225,
+       "positive": 44,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 201,
+       "critical": 159,
+       "critical_pct": 79.1,
+       "negative": 161,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 97,
+       "critical": 73,
+       "critical_pct": 75.3,
+       "negative": 61,
+       "positive": 34,
+       "partial_period": false
+      }
+     ],
+     "total": 1568,
+     "critical_total": 1107,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.026,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.029
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "norovirus",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "norovirus",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 729,
+     "carrying": 281,
+     "availability_pct": 38.55,
+     "items": [
+      {
+       "country": "united states",
+       "count": 123,
+       "share_pct": 16.87
+      },
+      {
+       "country": "united kingdom",
+       "count": 38,
+       "share_pct": 5.21
+      },
+      {
+       "country": "canada",
+       "count": 17,
+       "share_pct": 2.33
+      },
+      {
+       "country": "italy",
+       "count": 17,
+       "share_pct": 2.33
+      },
+      {
+       "country": "ireland",
+       "count": 12,
+       "share_pct": 1.65
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 74
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.238,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.241
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "norovirus",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "norovirus",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "community-acquired infections",
+       "count": 63,
+       "share": 11.73,
+       "lift": 957.67,
+       "baseline_count": 1,
+       "previous_period_count": 23,
+       "delta_pct": 173.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 public health policies and lockdown measures",
+       "count": 43,
+       "share": 8.01,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 12,
+       "delta_pct": 258.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "sanitation and hygiene initiatives",
+       "count": 85,
+       "share": 15.83,
+       "lift": 430.7,
+       "baseline_count": 3,
+       "previous_period_count": 94,
+       "delta_pct": -9.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infectious disease control strategies",
+       "count": 38,
+       "share": 7.08,
+       "lift": 577.64,
+       "baseline_count": 1,
+       "previous_period_count": 14,
+       "delta_pct": 171.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 epidemiology and transmission modeling",
+       "count": 33,
+       "share": 6.15,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 24,
+       "delta_pct": 37.5,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 729,
+     "carrying": 537,
+     "carrier_share_pct": 73.66,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.954,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.956
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "norovirus",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "norovirus",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e294bc7f3a572cf4a7fcb1",
+       "headline": "Hospital Steps Down Norovirus Incident but Warns of High Case Numbers - Time News",
+       "url": "https://time.news/hospital-steps-down-norovirus-incident-but-warns-of-high-case-numbers/",
+       "publisher": "time.news",
+       "published_at": "2026-04-04T13:58:31",
+       "lede": "the critical norovirus incident at east surrey hospital has been stood down, signaling a reduction in the emergency response level following a challenging outbreak. however, health officials warn that the facility remains under significant pressure, with a high volume of cases continuing to impact operations. the decision to downgrade the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.83
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.76
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.53
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.45
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.41
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1cfe487c2546189af9a2d",
+       "headline": "Hospital Declares Critical Incident Due to Norovirus & Emergency Department Demand - Time News",
+       "url": "https://time.news/hospital-declares-critical-incident-due-to-norovirus-emergency-department-demand/",
+       "publisher": "time.news",
+       "published_at": "2026-03-30T14:04:21",
+       "lede": "east surrey hospital in redhill, surrey, has declared a critical incident due to sustained high levels of norovirus, combined with significant demand on its emergency department and challenges in managing patient flow while maintaining infection control. the declaration, made by the surrey and sussex healthcare nhs trust, signals the hospital",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.88
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.84
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e298dc601121844c344a5a",
+       "headline": "UK hospital declares critical incident with visiting restrictions in place",
+       "url": "https://www.express.co.uk/news/uk/2188351/surrey-hospital-critical-incident-norovirus-outbreak",
+       "publisher": "express.co.uk",
+       "published_at": "2026-03-30T12:43:00",
+       "lede": "a surrey hospital has declared a critical incident an nhs trust in surrey has declared a critical incident in a hospital as its norovirus outbreak enters its second week. visits have been temporarily restricted on all wards at east surrey hospital in redhill as the surrey & sussex healthcare nhs",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.82
+        },
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.77
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc1d66856d39d4c91bafd5",
+       "headline": "Osaka School Food Poisoning Affects Over 600",
+       "url": "https://www.newkerala.com/news/a/food-poisoning-hits-multiple-schools-japans-osaka-affecting-965.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-03-26T12:15:47",
+       "lede": "more than 600 students and staff across eight schools in osaka's kumatori town have fallen ill with food poisoning symptoms like diarrhea and vomiting. health authorities have detected norovirus in affected individuals and in employees of the company that supplied bread for the schools' lunches. the public health centre has",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d4c7713680636eec4f9e",
+       "headline": "HSE warns people not to go to work if they have these 2 symptoms",
+       "url": "https://www.rsvplive.ie/news/irish-news/hse-warns-people-not-go-36913270",
+       "publisher": "rsvplive.ie",
+       "published_at": "2026-03-24T09:51:18",
+       "lede": "irish health authorities are advising people to stay home from work if they experience two telltale symptoms , as a highly infectious illness continues to sweep the nation. norovirus , commonly referred to as the winter vomiting bug, is \"currently circulating at very high levels in the community\" and the",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.92
+        }
+       ],
+       "country": "ireland",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e31eb2b66a657f69cffb8a",
+       "headline": "153 People on Princess Cruise Ship in the Caribbean Infected With Norovirus",
+       "url": "https://www.today.com/health/news/princess-cruise-ship-norovirus-oubtreak-2026-rcna263655",
+       "publisher": "today.com",
+       "published_at": "2026-03-16T12:56:36",
+       "lede": "more than 150 people on board a princess cruise ship touring the caribbean became ill with norovirus, the centers for disease control and prevention said this week. the total number of people who fell ill was 153, 104 of whom were passengers and 49 of whom were crew members, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 244,
+         "path": "/Travel & Transportation/Transportation/Cruises & Charters",
+         "score": 0.95
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.67
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "centers for disease control and prevention"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d1114097bd33d99f6a1af9",
+       "headline": "153 people on Princess cruise ship in the Caribbean infected with norovirus",
+       "url": "https://www.nbcnews.com/news/us-news/153-people-princess-cruise-ship-caribbean-infected-norovirus-rcna263523",
+       "publisher": "nbcnews.com",
+       "published_at": "2026-03-15T01:22:38",
+       "lede": "more than 150 people on board a princess cruise ship touring the caribbean became ill with norovirus, the centers for disease control and prevention said this week. the total number of people who fell ill was 153, 104 of whom were passengers and 49 of whom were crew members, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 244,
+         "path": "/Travel & Transportation/Transportation/Cruises & Charters",
+         "score": 0.95
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "centers for disease control and prevention"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d14f34b3ae2d64de41b685",
+       "headline": "Sickness Sweeps Through Guests and Crew on Newest Princess Cruises Ship",
+       "url": "https://www.cruisehive.com/sickness-sweeps-through-guests-and-crew-on-newest-princess-cruises-ship/201947",
+       "publisher": "cruisehive.com",
+       "published_at": "2026-03-13T01:07:50",
+       "lede": "key aspects: star princess is dealing with a norovirus outbreak that is impacting its two march 7 sailings, which are being operated simultaneously. more than 100 guests and 49 crew members have experienced gastrointestinal symptoms. enhanced sanitation protocols have been implemented onboard and embarkation will be delayed on march 14",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 244,
+         "path": "/Travel & Transportation/Transportation/Cruises & Charters",
+         "score": 0.92
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.63
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9db56713680636ef118e3",
+       "headline": "Recalled oysters, clams likely contaminated by human waste",
+       "url": "https://healio.com/news/infectious-disease/20260311/recalled-oysters-clams-likely-contaminated-by-human-waste",
+       "publisher": "healio.com",
+       "published_at": "2026-03-11T00:00:00",
+       "lede": "recalled oysters, clams likely contaminated by human waste key takeaways: the clams were shipped to nine states, and the oysters to one state. an expert said human waste likely contaminated the water where the shellfish were harvested. recalled raw oysters and clams that were potentially contaminated with norovirus were sold",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.63
+        },
+        {
+         "code": 211,
+         "path": "/Food & Drink/Food/Meat & Seafood",
+         "score": 0.6
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee64383fc01faba5f9ff9",
+       "headline": "Raw Oysters, Clams Recalled Across 9 States for Potential Norovirus Contamination",
+       "url": "https://www.yahoo.com/news/articles/raw-oysters-clams-recalled-across-164047166.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-10T16:40:47",
+       "lede": "the u.s. food and drug administration is warning restaurants, retailers and consumers about certain raw oysters and manila clams that may be contaminated with norovirus. according to a safety alert issued by the agency, published on monday, march 9, the potentially affected shellfish were harvested in drayton harbor, washington, between",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 211,
+         "path": "/Food & Drink/Food/Meat & Seafood",
+         "score": 0.74
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.68
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1d91c37f6c5e6633d789",
+       "headline": "Oysters and clams in 9 states could be contaminated with norovirus, FDA warns",
+       "url": "https://www.yahoo.com/news/articles/oysters-clams-9-states-could-145508365.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-10T14:55:08",
+       "lede": "the food and drug administration warned consumers monday about oysters and clams that could be contaminated with norovirus and were sent to nine states, including california, florida and new york. the shellfish caution covers \"certain raw oysters\" harvested by drayton harbor oyster co. and manila clams harvested by lummi indian",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.77
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.65
+        },
+        {
+         "code": 211,
+         "path": "/Food & Drink/Food/Meat & Seafood",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 326,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0wNiAxMjoyNDozMSIsImkiOiI2OWJjZjE5YjUxOGZkZjM4NzQyZWUwNmYiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.523,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.525
+    }
+   }
+  }
+ ]
+}

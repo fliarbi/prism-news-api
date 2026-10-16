@@ -1,0 +1,1086 @@
+{
+ "slug": "wind-energy-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:48Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "wind energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wind energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3930,
+     "tone": {
+      "carrying": 3929,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 715,
+        "share_pct": 18.2
+       },
+       {
+        "group": "neutral",
+        "count": 70,
+        "share_pct": 1.78
+       },
+       {
+        "group": "positive",
+        "count": 3144,
+        "share_pct": 80.02
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3929,
+      "count": 3028,
+      "share_pct": 77.07
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.171,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.174
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "wind energy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wind energy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 870,
+       "critical": 659,
+       "critical_pct": 75.7,
+       "negative": 237,
+       "positive": 621,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 718,
+       "critical": 564,
+       "critical_pct": 78.6,
+       "negative": 142,
+       "positive": 563,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1044,
+       "critical": 817,
+       "critical_pct": 78.3,
+       "negative": 299,
+       "positive": 716,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 846,
+       "critical": 630,
+       "critical_pct": 74.5,
+       "negative": 280,
+       "positive": 551,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 750,
+       "critical": 571,
+       "critical_pct": 76.1,
+       "negative": 170,
+       "positive": 569,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 727,
+       "critical": 531,
+       "critical_pct": 73.0,
+       "negative": 70,
+       "positive": 652,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 590,
+       "critical": 456,
+       "critical_pct": 77.3,
+       "negative": 78,
+       "positive": 508,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 829,
+       "critical": 674,
+       "critical_pct": 81.3,
+       "negative": 189,
+       "positive": 631,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 850,
+       "critical": 661,
+       "critical_pct": 77.8,
+       "negative": 143,
+       "positive": 689,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 925,
+       "critical": 681,
+       "critical_pct": 73.6,
+       "negative": 159,
+       "positive": 735,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 905,
+       "critical": 699,
+       "critical_pct": 77.2,
+       "negative": 177,
+       "positive": 714,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1250,
+       "critical": 987,
+       "critical_pct": 79.0,
+       "negative": 236,
+       "positive": 1006,
+       "partial_period": false
+      }
+     ],
+     "total": 10304,
+     "critical_total": 7930,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.395,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.398
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "wind energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wind energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3930,
+     "carrying": 1950,
+     "availability_pct": 49.62,
+     "items": [
+      {
+       "country": "united states",
+       "count": 694,
+       "share_pct": 17.66
+      },
+      {
+       "country": "india",
+       "count": 349,
+       "share_pct": 8.88
+      },
+      {
+       "country": "united kingdom",
+       "count": 97,
+       "share_pct": 2.47
+      },
+      {
+       "country": "china",
+       "count": 94,
+       "share_pct": 2.39
+      },
+      {
+       "country": "australia",
+       "count": 74,
+       "share_pct": 1.88
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 642
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.748,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.75
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "wind energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wind energy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "wind turbine technology & onshore wind farms",
+       "count": 1017,
+       "share": 36.68,
+       "lift": 598.76,
+       "baseline_count": 5,
+       "previous_period_count": 713,
+       "delta_pct": 42.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 260,
+       "share": 9.38,
+       "lift": 765.37,
+       "baseline_count": 1,
+       "previous_period_count": 152,
+       "delta_pct": 71.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "offshore floating wind turbine technology",
+       "count": 222,
+       "share": 8.01,
+       "lift": 653.51,
+       "baseline_count": 1,
+       "previous_period_count": 179,
+       "delta_pct": 24.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "offshore wind energy development",
+       "count": 559,
+       "share": 20.16,
+       "lift": 411.39,
+       "baseline_count": 4,
+       "previous_period_count": 429,
+       "delta_pct": 30.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy investment & financing models",
+       "count": 168,
+       "share": 6.06,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 69,
+       "delta_pct": 143.5,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3930,
+     "carrying": 2773,
+     "carrier_share_pct": 70.56,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.521,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.525
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "wind energy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "wind energy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69bd7ec893b550fcb8274cef",
+       "headline": "Don’t let climate fatalism become a self-fulfilling prophecy",
+       "url": "https://www.popsci.com/environment/dont-let-climate-fatalism-become-a-self-fulfilling-prophecy/",
+       "publisher": "popsci.com",
+       "published_at": "2026-02-16T12:02:00",
+       "lede": "this article was originally featured on mit press reader.this article is adapted from hannah ritchie’s book, “clearing the air.”i read mark lynas’s book “six degrees: our future on a hotter planet” when i was 14 years old, and it scared the life out of me. lynas takes the reader on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.59
+        }
+       ],
+       "country": "greenland",
+       "organizations": [
+        "lynas"
+       ],
+       "people": [
+        "mark lynas"
+       ]
+      },
+      {
+       "id": "69f8ac148937ef12fc0b20b1",
+       "headline": "Intermittent renewables and rising demand: Why grid resilience is now critical",
+       "url": "https://www.pv-magazine-india.com/2026/04/30/intermittent-renewables-and-rising-demand-why-grid-resilience-is-now-critical/",
+       "publisher": "pv-magazine-india.com",
+       "published_at": "2026-04-30T16:28:23",
+       "lede": "india’s energy transition is no longer restricted to ambition; it is now challenged by coordination. the nation’s power sector is evolving faster than the grid’s ability to adapt, creating a new kind of pressure where availability of power does not always translate into reliability of supply. electricity demand has been",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.86
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8aa8cbbf1d314559a5799",
+       "headline": "Asia accelerates electrification as oil supply risks reshape energy strategy",
+       "url": "https://www.domain-b.com/economy/world-economy/asia-electrification-energy-shift-2026",
+       "publisher": "domain-b.com",
+       "published_at": "2026-04-30T10:45:45",
+       "lede": "asia is accelerating electrification to reduce dependence on volatile global oil supply routes (ai generated). 1 summary disruptions around the strait of hormuz—through which a significant share of global oil and lng flows—are reinforcing asia’s push toward electrification. electric two-wheelers are seeing strong growth across markets like india and southeast",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.71
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.49
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a93f8937ef12fc0affc8",
+       "headline": "Global wind installations up 40 percent during 2026, according to GWEC",
+       "url": "https://www.heavyliftpfi.com/business/2026/04/30/global-wind-installations-up-40-percent-during-2026-according-to-gwec/",
+       "publisher": "heavyliftpfi.com",
+       "published_at": "2026-04-30T09:06:10",
+       "lede": "business china and the us lead the way in global wind capacity installation. last year saw a record-breaking 165 gw of new wind capacity installed globally – up 40 percent on 2024 – according to the global wind energy council (gwec). gwec’s global wind report 2026 found that global wind",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "wind energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f2169fda8ae7be8d21d8e9",
+       "headline": "India–Kenya trade surges to USD 4.31 bn, JTC meet deepens economic ties",
+       "url": "https://www.uniindia.com/india-kenya-trade-surges-to-usd-4-31-bn-jtc-meet-deepens-economic-ties/business-economy/news/3826248.html",
+       "publisher": "uniindia.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "india–kenya trade surges to usd 4.31 bn, jtc meet deepens economic ties new delhi, april 29 (uni) india and kenya have reinforced their growing economic partnership at the 10th session of the india–kenya joint trade committee (jtc), held in nairobi on april 27–28, with both sides outlining a roadmap to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.9,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.57
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.55
+        }
+       ],
+       "country": "kenya",
+       "organizations": [
+        "jtc"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1d14c399b489398e2ed3e",
+       "headline": "India–Kenya trade surges to USD 4.31 bn, JTC meet deepens economic ties",
+       "url": "http://www.uniindia.com/~/india-kenya-trade-surges-to-usd-4-31-bn-jtc-meet-deepens-economic-ties/Business Economy/news/3826248.html",
+       "publisher": "uniindia.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "india–kenya trade surges to usd 4.31 bn, jtc meet deepens economic ties new delhi, april 29 (uni) india and kenya have reinforced their growing economic partnership at the 10th session of the india–kenya joint trade committee (jtc), held in nairobi on april 27–28, with both sides outlining a roadmap to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.9,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.57
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.55
+        }
+       ],
+       "country": "kenya",
+       "organizations": [
+        "jtc"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cfc9399b489398e2d5f6",
+       "headline": "India–Kenya trade surges to USD 4.31 bn, JTC meet deepens economic ties",
+       "url": "http://www.uniindia.com/india-kenya-trade-surges-to-usd-4-31-bn-jtc-meet-deepens-economic-ties/business-economy/news/3826248.html",
+       "publisher": "uniindia.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "india–kenya trade surges to usd 4.31 bn, jtc meet deepens economic ties new delhi, april 29 (uni) india and kenya have reinforced their growing economic partnership at the 10th session of the india–kenya joint trade committee (jtc), held in nairobi on april 27–28, with both sides outlining a roadmap to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.9,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.57
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.55
+        }
+       ],
+       "country": "kenya",
+       "organizations": [
+        "jtc"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f215a87d251ccff640eb91",
+       "headline": "Trump administration blocks US wind energy projects in switch to oil and gas",
+       "url": "https://www.theguardian.com/us-news/2026/apr/28/trump-administration-wind-projects",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-28T21:37:43",
+       "lede": "the trump administration blocked two permitted us wind energy projects from development this week, with an agreement to pay millions of dollars in refunds to the companies behind them if those funds are reinvested in oil and gas. us department of the interior officials framed the canceled agreements as a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.79
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "wind energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f228b0122c4392e0cedb6b",
+       "headline": "Trump’s attempt to crush clean energy progress not going to plan, experts say",
+       "url": "https://www.theguardian.com/us-news/2026/apr/28/trump-clean-energy-progress",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-28T12:30:09",
+       "lede": "donald trump has wielded the full might of his administration to crush the progress of clean energy, which he has called a “scam” and “stupid”. but there are signs this assault is not going to plan. in march, the us generated more of its electricity from renewable sources such as",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.89
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69f0e56b45272de32e8c1f9e",
+       "headline": "US wind installations to gain pace through 2028 - Wood Mackenzie",
+       "url": "https://renewablesnow.com/news/us-wind-installations-to-gain-pace-through-2028-wood-mackenzie-1293787/",
+       "publisher": "renewablesnow.com",
+       "published_at": "2026-04-28T06:53:13",
+       "lede": "according to the market analyst’s us wind energy monitor report, 2026 will be the strongest installation year in five years, while the total additions for the period through 2030 are expected to be 48 gw. despite cost pressures, the outlook for 2026-2028 is strong, as 15.4 gw of near-term projects",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "wind energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e561d325610894209fee",
+       "headline": "Third Japanese Management Training Programme in May",
+       "url": "http://island.lk/third-japanese-management-training-programme-in-may/",
+       "publisher": "island.lk",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "in a move that highlights sri lanka’s accelerating push toward a more resilient and renewable-powered electricity system, the national system operator private limited (nso) has called for international bids to modernise the country’s core grid management infrastructure. the tender—issued under the power system strengthening and renewable energy integration project (pssreip)—is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.92
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e4fbd325610894209541",
+       "headline": "ADB-backed grid upgrade tender signals next phase of Sri Lanka’s energy transition",
+       "url": "http://island.lk/adb-backed-grid-upgrade-tender-signals-next-phase-of-sri-lankas-energy-transition/",
+       "publisher": "island.lk",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "in a move that highlights sri lanka’s accelerating push toward a more resilient and renewable-powered electricity system, the national system operator private limited (nso) has called for international bids to modernise the country’s core grid management infrastructure. the tender—issued under the power system strengthening and renewable energy integration project (pssreip)—is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.92
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e58b836d28f995cb8e95",
+       "headline": "WindEurope raises alarm over misinformation risks to wind buildout",
+       "url": "https://renewablesnow.com/news/windeurope-raises-alarm-over-misinformation-risks-to-wind-buildout-1293754/",
+       "publisher": "renewablesnow.com",
+       "published_at": "2026-04-27T13:13:08",
+       "lede": "according to a report presented by uk-based think tank casm technology and windeurope, a large ecosystem of actors, such as anti-wind groups, activists, media outlets and right-wing politicians, spread myths on alleged health, environmental and economic impacts of wind energy across social media. “over the research period of one and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.79
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.42
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "wind energy",
+        "windeurope",
+        "social media"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e8df836d28f995cbc05f",
+       "headline": "U.S. Energy Information Administration Projects 80 GW Surge In Solar, Wind And Storage By 2027",
+       "url": "https://solarquarter.com/2026/04/27/u-s-energy-information-administration-projects-80-gw-surge-in-solar-wind-and-storage-by-2027/",
+       "publisher": "solarquarter.com",
+       "published_at": "2026-04-27T09:33:22",
+       "lede": "u.s. energy information administration has released new data, reviewed by the sun day campaign, showing that the u.s. is set for a major shift in its electricity-generating landscape over the next year. according to the latest projections, utility-scale solar, wind, and battery storage are expected to add more than 80",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.95
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "energy information administration"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e9e845272de32e8c68b3",
+       "headline": "Middle East Construction News",
+       "url": "https://meconstructionnews.com/67265/saudi-invites-bids-for-12000mwh-battery-energy-storage-system",
+       "publisher": "meconstructionnews.com",
+       "published_at": "2026-04-27T04:37:00",
+       "lede": "energy saudi invites bids for 12,000mwh battery energy storage system by three of these 500mw/2000mwh projects are located in the makkah province and one each in madinah, qassim and the eastern province saudi power procurement company, under the supervision of the ministry of energy, has launched the qualification bid process",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.6
+        },
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.4
+        }
+       ],
+       "country": "saudi arabia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e2ff836d28f995cb60fb",
+       "headline": "MP CM Mohan Yadav: Listen to PM Modi’s Mann Ki Baat for Awareness",
+       "url": "https://www.newkerala.com/news/a/mp-cm-mohan-yadav-urges-citizens-listen-pm-578.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-27T03:25:25",
+       "lede": "madhya pradesh chief minister mohan yadav urged citizens to listen to prime minister narendra modi’s ‘mann ki baat’, calling it a key tool for social awareness. speaking after the latest episode, he praised pm modi’s consistent dialogue with the nation since assuming office. in the 133rd episode, pm modi highlighted",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "narendra modi"
+       ],
+       "people": [
+        "narendra modi",
+        "narendra modi",
+        "narendra modi",
+        "narendra modi",
+        "mohan yadav",
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "69f0e62645272de32e8c2fd7",
+       "headline": "ROKY Holdings marks third anniversary with community initiatives and water projects",
+       "url": "http://island.lk/roky-holdings-marks-third-anniversary-with-community-initiatives-and-water-projects/",
+       "publisher": "island.lk",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "in a move that highlights sri lanka’s accelerating push toward a more resilient and renewable-powered electricity system, the national system operator private limited (nso) has called for international bids to modernise the country’s core grid management infrastructure. the tender—issued under the power system strengthening and renewable energy integration project (pssreip)—is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.92
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e623836d28f995cb96cf",
+       "headline": "Fairfirst relocates Bandarawela branch to better serve customers",
+       "url": "http://island.lk/fairfirst-relocates-bandarawela-branch-to-better-serve-customers/",
+       "publisher": "island.lk",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "in a move that highlights sri lanka’s accelerating push toward a more resilient and renewable-powered electricity system, the national system operator private limited (nso) has called for international bids to modernise the country’s core grid management infrastructure. the tender—issued under the power system strengthening and renewable energy integration project (pssreip)—is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.92
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e61e836d28f995cb9564",
+       "headline": "A new digital table: Ceylon Eat.com seeks to transform Sri Lanka’s dining scene",
+       "url": "http://island.lk/a-new-digital-table-ceylon-eat-com-seeks-to-transform-sri-lankas-dining-scene/",
+       "publisher": "island.lk",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "in a move that highlights sri lanka’s accelerating push toward a more resilient and renewable-powered electricity system, the national system operator private limited (nso) has called for international bids to modernise the country’s core grid management infrastructure. the tender—issued under the power system strengthening and renewable energy integration project (pssreip)—is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.92
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e61245272de32e8c2ed4",
+       "headline": "OSC students take on global Slingshot Challenge to expose ocean acidification",
+       "url": "http://island.lk/osc-students-take-on-global-slingshot-challenge-to-expose-ocean-acidification/",
+       "publisher": "island.lk",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "in a move that highlights sri lanka’s accelerating push toward a more resilient and renewable-powered electricity system, the national system operator private limited (nso) has called for international bids to modernise the country’s core grid management infrastructure. the tender—issued under the power system strengthening and renewable energy integration project (pssreip)—is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.92
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e605d32561089420ab64",
+       "headline": "Kaspersky finds 26 fake crypto wallets on Apple’s app store",
+       "url": "http://island.lk/kaspersky-finds-26-fake-crypto-wallets-on-apples-app-store/",
+       "publisher": "island.lk",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "in a move that highlights sri lanka’s accelerating push toward a more resilient and renewable-powered electricity system, the national system operator private limited (nso) has called for international bids to modernise the country’s core grid management infrastructure. the tender—issued under the power system strengthening and renewable energy integration project (pssreip)—is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.92
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 21,
+     "total_estimate": 1939,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAwMDowMDowMCIsImkiOiI2OWYwZTYwNWQzMjU2MTA4OTQyMGFiNjQiLCJwIjo4fQ",
+     "unresolved": 4,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.812,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "4 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.822
+    }
+   }
+  }
+ ]
+}

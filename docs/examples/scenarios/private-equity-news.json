@@ -1,0 +1,932 @@
+{
+ "slug": "private-equity-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:07Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "private equity",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "private equity",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12945,
+     "tone": {
+      "carrying": 12925,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2161,
+        "share_pct": 16.72
+       },
+       {
+        "group": "neutral",
+        "count": 230,
+        "share_pct": 1.78
+       },
+       {
+        "group": "positive",
+        "count": 10534,
+        "share_pct": 81.5
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 12945,
+      "count": 6303,
+      "share_pct": 48.69
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.925,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.93
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "private equity",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "private equity",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2066,
+       "critical": 921,
+       "critical_pct": 44.6,
+       "negative": 243,
+       "positive": 1776,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2095,
+       "critical": 920,
+       "critical_pct": 43.9,
+       "negative": 256,
+       "positive": 1787,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2317,
+       "critical": 1109,
+       "critical_pct": 47.9,
+       "negative": 303,
+       "positive": 1965,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2415,
+       "critical": 1201,
+       "critical_pct": 49.7,
+       "negative": 340,
+       "positive": 2045,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2741,
+       "critical": 1370,
+       "critical_pct": 50.0,
+       "negative": 352,
+       "positive": 2318,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2482,
+       "critical": 1181,
+       "critical_pct": 47.6,
+       "negative": 314,
+       "positive": 2115,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2611,
+       "critical": 1215,
+       "critical_pct": 46.5,
+       "negative": 334,
+       "positive": 2225,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2714,
+       "critical": 1276,
+       "critical_pct": 47.0,
+       "negative": 358,
+       "positive": 2285,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2911,
+       "critical": 1370,
+       "critical_pct": 47.1,
+       "negative": 354,
+       "positive": 2504,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4066,
+       "critical": 2082,
+       "critical_pct": 51.2,
+       "negative": 947,
+       "positive": 3053,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2871,
+       "critical": 1404,
+       "critical_pct": 48.9,
+       "negative": 408,
+       "positive": 2404,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3097,
+       "critical": 1447,
+       "critical_pct": 46.7,
+       "negative": 452,
+       "positive": 2573,
+       "partial_period": false
+      }
+     ],
+     "total": 32386,
+     "critical_total": 15496,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.547,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.55
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "private equity",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "private equity",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12945,
+     "carrying": 6939,
+     "availability_pct": 53.6,
+     "items": [
+      {
+       "country": "united states",
+       "count": 3623,
+       "share_pct": 27.99
+      },
+      {
+       "country": "united kingdom",
+       "count": 939,
+       "share_pct": 7.25
+      },
+      {
+       "country": "china",
+       "count": 481,
+       "share_pct": 3.72
+      },
+      {
+       "country": "india",
+       "count": 471,
+       "share_pct": 3.64
+      },
+      {
+       "country": "singapore",
+       "count": 162,
+       "share_pct": 1.25
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1263
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.594,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.596
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "private equity",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "private equity",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "private equity investments and deals",
+       "count": 453,
+       "share": 6.78,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 270,
+       "delta_pct": 67.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mergers and acquisitions in finance",
+       "count": 474,
+       "share": 7.09,
+       "lift": 289.36,
+       "baseline_count": 2,
+       "previous_period_count": 252,
+       "delta_pct": 88.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "sustainable and esg investing trends",
+       "count": 276,
+       "share": 4.13,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 185,
+       "delta_pct": 49.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 266,
+       "share": 3.98,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 154,
+       "delta_pct": 72.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mergers and acquisitions activity updates",
+       "count": 1235,
+       "share": 18.47,
+       "lift": 115.99,
+       "baseline_count": 13,
+       "previous_period_count": 1083,
+       "delta_pct": 14.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 12945,
+     "carrying": 6686,
+     "carrier_share_pct": 51.65,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.457,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.462
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "private equity",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "private equity",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f1c7c7a5706a322e0f6ddc",
+       "headline": "Maktoum bin Mohammed meets CVC Capital Partners CEO to boost financial sector cooperation",
+       "url": "https://www.emirates247.com/business/maktoum-bin-mohammed-meets-cvc-capital-partners-ceo-to-boost-financial-sector-cooperation/1171",
+       "publisher": "emirates247.com",
+       "published_at": "2026-04-28T14:12:00",
+       "lede": "dubai: his highness sheikh maktoum bin mohammed bin rashid al maktoum, first deputy ruler of dubai, deputy prime minister, minister of finance, and chairman of the dubai international financial centre (difc), today met with rob lucas, chief executive officer of cvc capital partners plc, a global leader in private equity.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united arab emirates",
+       "organizations": [
+        "cvc capital partners"
+       ],
+       "people": [
+        "rob lucas"
+       ]
+      },
+      {
+       "id": "69f9e463a088760d34c72ff3",
+       "headline": "IT firm Virtusa eyes India IPO, could raise over $1 billion",
+       "url": "https://www.thehindubusinessline.com/markets/it-firm-virtusa-eyes-india-ipo-could-raise-over-1-billion/article70915980.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-28T10:22:28",
+       "lede": "virtusa corp, ​a global information technology services firm owned by ⁠swedish private equity giant eqt, is exploring an initial public offering in india that could value it at $7 billion or more, four people with ‌knowledge of the matter said. the company is looking to raise at least $1 billion,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.63
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "eqt",
+        "virtusa"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efaa08727212302c5e8057",
+       "headline": "Blackstone Raises $69B in Q1, Says AI Driving Returns - Mingtiandi",
+       "url": "https://www.mingtiandi.com/real-estate/finance/blackstone-raises-69b-in-q1-says-ai-infrastructure-driving-returns-across-funds/",
+       "publisher": "mingtiandi.com",
+       "published_at": "2026-04-25T18:37:01",
+       "lede": "blackstone booked $68.5 billion in capital inflows during the first quarter of 2026, in a show of the private equity titan’s fundraising resilience amid market turmoil triggered by the iran war. the haul was down only slightly from the previous quarter’s $71.5 billion and brought trailing 12-month inflows to $246.3",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.6
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.5
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "blackstone"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efaa7ca84b609af2b2c0cb",
+       "headline": "Kedaara picks up 5% in Axis Finance for Rs750 crore, sets benchmark for IPO-headed NBFC | Mint",
+       "url": "https://www.livemint.com/economy/india-axis-finance-kedaara-rs-750-crore-5-deal-ahead-of-ipo-11777130514770.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-25T16:05:01",
+       "lede": "axis finance has secured ₹750 crore in primary capital from private equity firm kedaara capital for a 5.08% stake, the non-banking financial company's parent axis bank said in a regulatory notice on saturday.homegrown private equity firm kedaara will be allotted 43 million shares on a preferential basis at rs172.81 apiece,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.65
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "axis bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ed8a08e67a2fcb3e064ab",
+       "headline": "FTC reaches tentative deal in anesthesiology 'roll-up scheme' litigation",
+       "url": "https://fiercehealthcare.com/regulatory/ftc-secures-11th-hour-settlement-pe-firm-welsh-carson-over-alleged-roll-scheme",
+       "publisher": "fiercehealthcare.com",
+       "published_at": "2026-04-23T18:00:00",
+       "lede": "nearly three years and a major changing of the guard later, the federal trade commission appears to be at the end of a competition lawsuit it previously heralded as evidence of its strong hand against private equity and provider consolidation. the regulator on thursday announced it has reached an agreement",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a042269220687a966b6fd34",
+       "headline": "Quadria, PE funds eye stake in Samarth Lifesciences; deal may value firm at Rs 4,500 crore",
+       "url": "https://economictimes.indiatimes.com/industry/banking/finance/quadria-pe-funds-eye-stake-in-samarth-lifesciences-deal-may-value-firm-at-rs-4500-crore/articleshow/130451052.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-23T00:30:00",
+       "lede": "mumbai: quadria capital is among 4-5 private equity investors evaluating a potential acquisition of a controlling 80-85% stake in samarth lifesciences, said people familiar with the matter. a deal could value the manufacturer of critical care drugs at around rs 4,500 crore, they said.promoters of the mumbai-based company are expected",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.3,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa9088a54b8f07c950d11",
+       "headline": "Nahda Capital Partners Appoints Anders Moberg and Ahmed Al Naqbi to Its Investment Committee",
+       "url": "https://ffnews.com/newsarticle/hiring/nahda-capital-partners-appoints-anders-moberg-and-ahmed-al-naqbi-to-its-investment-committee/",
+       "publisher": "ffnews.com",
+       "published_at": "2026-04-22T23:00:00",
+       "lede": "nahda capital partners, the abu dhabi global market based private equity platform, has announced the appointment of two senior independent investment committee members, anders moberg and ahmed al naqbi, strengthening the firm’s governance as it advances its inaugural gcc focused strategy. according to market research and consulting firm prescient &",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.47
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [
+        "gcc",
+        "abu dhabi",
+        "moberg"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e9a008bdd09a23d09506ab",
+       "headline": "Robinhood Invests $75M in OpenAI to Provide Equity Tokens for Users",
+       "url": "https://www.cointelegraph.com/news/robinhood-venture-fund-invests-75m-in-openai",
+       "publisher": "cointelegraph.com",
+       "published_at": "2026-04-22T16:38:27",
+       "lede": "robinhood ventures fund i (rvi), a publicly traded closed-end fund that offers retail investors access to private equity investments, announced a $75 million investment in openai. the company announced on wednesday that it purchased $75 million of the ai developer's common stock, which will be used as the underlying asset",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.77
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "openai"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a92d2c37f6c5e66d19520",
+       "headline": "OpenAI Pledges $1.5 Billion to PE Enterprise AI Project | PYMNTS.com",
+       "url": "https://www.pymnts.com/artificial-intelligence-2/2026/openai-pledges-1-5-billion-to-pe-enterprise-ai-project",
+       "publisher": "pymnts.com",
+       "published_at": "2026-04-22T10:48:10",
+       "lede": "openai has reportedly committed up to $1.5 billion for its private equity (pe) venture. by completing this form, you agree to receive marketing communications from pymnts and to the sharing of your information with our sponsor, if applicable, in accordance with our privacy policy and terms and conditions . complete",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.78
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bb5d5cfa3e5ba52fb895",
+       "headline": "OpenAI Pledges $1.5 Billion to PE Enterprise AI Project | PYMNTS.com",
+       "url": "https://www.pymnts.com/artificial-intelligence-2/2026/openai-pledges-1-5-billion-to-pe-enterprise-ai-project/",
+       "publisher": "pymnts.com",
+       "published_at": "2026-04-22T10:48:10",
+       "lede": "openai has reportedly committed up to $1.5 billion for its private equity (pe) venture. by completing this form, you agree to receive marketing communications from pymnts and to the sharing of your information with our sponsor, if applicable, in accordance with our privacy policy and terms and conditions . complete",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.78
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "openai"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ae105c37f6c5e66090497",
+       "headline": "OpenAI to Invest $1.5bn in Private Equity-Backed Venture to Expand - MSME",
+       "url": "https://msmeafricaonline.com/openai-to-invest-1-5bn-in-private-equity-backed-venture-to-expand-enterprise-ai-push/",
+       "publisher": "msmeafricaonline.com",
+       "published_at": "2026-04-22T10:20:55",
+       "lede": "openai plans to commit $1.5 billion to a new joint venture with several private equity firms, according to a financial times report. the company behind chatgpt will initially invest $500 million in the venture, known internally as deployco, with the new entity expected to reach a $10 billion valuation in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03ef87220687a966a12d26",
+       "headline": "OpenAI in talks to commit up to $1.5 billion to private equity JV",
+       "url": "https://www.thehindubusinessline.com/info-tech/openai-in-talks-to-commit-up-to-15-billion-to-private-equity-jv/article70891474.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-22T05:30:09",
+       "lede": "artificial intelligence firm openai is set to commit ​up to $1.5 billion to a new joint ‌venture with private equity firms, financial times ​reported on wednesday, citing people familiar ⁠with the matter. the chatgpt maker will initially invest $500 million of equity into the joint venture, known ‌internally as deployco,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.8
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e998aa75f157062cad9dce",
+       "headline": "OpenAI in Talks to Commit $1.5B to Private Equity JV: FT",
+       "url": "https://startupnews.fyi/ai-deeptech/openai-in-talks-to-commit-1-5b-to-private-equity-jv-ft",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-04-22T05:29:57",
+       "lede": "from model builder to capital partner openai has historically focused on model development, research and commercial product expansion. however, the reported private equity joint venture suggests a broader strategic ambition. committing up to $1.5 billion implies participation in investment structures that may back ai-adjacent infrastructure, compute capacity, or strategic ecosystem",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.81
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "openai"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0367857b84f58d6f72e9c0",
+       "headline": "OpenAI in talks to commit up to $1.5 billion to private equity joint venture: FT - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-in-talks-to-commit-up-to-1-5-billion-to-private-equity-joint-venture-ft/articleshow/130432065.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-22T04:39:08",
+       "lede": "artificial intelligence firm openai is set to commit up to $1.5 billion to a new joint venture with private equity firms, financial times reported on wednesday, citing people familiar with the matter.the chatgpt maker will initially invest $500 million âof equity into â the joint â venture, known internally as",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.81
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8cbaa9baafc7356cb277d",
+       "headline": "OpenAI In Talks To Commit Up To $1.5 Billion To Private Equity Joint Venture",
+       "url": "http://www.republicworld.com/business/openai-in-talks-to-commit-up-to-15-billion-to-private-equity-joint-venture",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-22T04:25:26",
+       "lede": "artificial intelligence (ai) major openai is set to commit up to $1.5 billion to a new joint venture with private equity firms, the financial times reported on wednesday, citing people with knowledge of the matter. openai will commit an initial $500 million of its equity into the joint venture -",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.79
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "openai",
+        "financial times"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 2432,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAwNDoyNToyNiIsImkiOiI2OWU4Y2JhYTliYWFmYzczNTZjYjI3N2QiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.992,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.016
+    }
+   }
+  }
+ ]
+}

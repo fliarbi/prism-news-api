@@ -1,0 +1,962 @@
+{
+ "slug": "power-outage-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:46Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "power outage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "power outage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2046,
+     "tone": {
+      "carrying": 2041,
+      "availability_pct": 99.76,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1656,
+        "share_pct": 81.14
+       },
+       {
+        "group": "neutral",
+        "count": 26,
+        "share_pct": 1.27
+       },
+       {
+        "group": "positive",
+        "count": 359,
+        "share_pct": 17.59
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2046,
+      "count": 1491,
+      "share_pct": 72.87
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.569,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.571
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "power outage",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "power outage",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 660,
+       "critical": 500,
+       "critical_pct": 75.8,
+       "negative": 570,
+       "positive": 80,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 376,
+       "critical": 308,
+       "critical_pct": 81.9,
+       "negative": 329,
+       "positive": 47,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 431,
+       "critical": 291,
+       "critical_pct": 67.5,
+       "negative": 335,
+       "positive": 91,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 382,
+       "critical": 261,
+       "critical_pct": 68.3,
+       "negative": 306,
+       "positive": 74,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 245,
+       "critical": 166,
+       "critical_pct": 67.8,
+       "negative": 175,
+       "positive": 66,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 270,
+       "critical": 192,
+       "critical_pct": 71.1,
+       "negative": 202,
+       "positive": 67,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 174,
+       "critical": 127,
+       "critical_pct": 73.0,
+       "negative": 133,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 343,
+       "critical": 288,
+       "critical_pct": 84.0,
+       "negative": 288,
+       "positive": 48,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 521,
+       "critical": 383,
+       "critical_pct": 73.5,
+       "negative": 413,
+       "positive": 103,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 423,
+       "critical": 297,
+       "critical_pct": 70.2,
+       "negative": 330,
+       "positive": 84,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 555,
+       "critical": 416,
+       "critical_pct": 75.0,
+       "negative": 470,
+       "positive": 75,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 547,
+       "critical": 395,
+       "critical_pct": 72.2,
+       "negative": 443,
+       "positive": 97,
+       "partial_period": false
+      }
+     ],
+     "total": 4927,
+     "critical_total": 3624,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.874,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.884
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "power outage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "power outage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2046,
+     "carrying": 778,
+     "availability_pct": 38.03,
+     "items": [
+      {
+       "country": "united states",
+       "count": 374,
+       "share_pct": 18.28
+      },
+      {
+       "country": "india",
+       "count": 58,
+       "share_pct": 2.83
+      },
+      {
+       "country": "canada",
+       "count": 49,
+       "share_pct": 2.39
+      },
+      {
+       "country": "ghana",
+       "count": 37,
+       "share_pct": 1.81
+      },
+      {
+       "country": "nigeria",
+       "count": 27,
+       "share_pct": 1.32
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 233
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.274,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.277
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "power outage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "power outage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "electricity grid resilience & disaster recovery",
+       "count": 328,
+       "share": 23.72,
+       "lift": 276.57,
+       "baseline_count": 7,
+       "previous_period_count": 190,
+       "delta_pct": 72.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "electricity distribution networks & management",
+       "count": 354,
+       "share": 25.6,
+       "lift": 208.94,
+       "baseline_count": 10,
+       "previous_period_count": 170,
+       "delta_pct": 108.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "electricity transmission infrastructure & grid systems",
+       "count": 101,
+       "share": 7.3,
+       "lift": 298.07,
+       "baseline_count": 2,
+       "previous_period_count": 42,
+       "delta_pct": 140.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "weather-related travel disruptions",
+       "count": 59,
+       "share": 4.27,
+       "lift": 348.24,
+       "baseline_count": 1,
+       "previous_period_count": 8,
+       "delta_pct": 637.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "power quality analysis & harmonic filtering technologies",
+       "count": 78,
+       "share": 5.64,
+       "lift": 230.19,
+       "baseline_count": 2,
+       "previous_period_count": 48,
+       "delta_pct": 62.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2046,
+     "carrying": 1383,
+     "carrier_share_pct": 67.6,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.463,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.469
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "power outage",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "power outage",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69bc90a672dfd2e900a3f556",
+       "headline": "Chief says more funding needed to repair homes after power outage, flooding",
+       "url": "https://www.winnipegfreepress.com/breakingnews/2026/02/28/chief-says-more-funding-needed-to-repair-homes-after-power-outage-flooding",
+       "publisher": "winnipegfreepress.com",
+       "published_at": "2026-02-28T08:01:52",
+       "lede": "a northern first nation hit by a days-long power outage and subsequent water crisis is seeking additional government funds to cover the cost of mould and asbestos removal in homes.pimicikamak cree nation chief david monias said friday there is a shortage of funding to remediate the hazards and bring homes",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.49
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b02bf5cefb83fe8667416",
+       "headline": "Ukraine Faces Scheduled Power Outages on February 23 After Drone Attacks",
+       "url": "https://mezha.net/eng/bukvy/ukraine-faces-scheduled-power-outages-on-february-23-after-drone-attacks/",
+       "publisher": "mezha.net",
+       "published_at": "2026-02-22T18:02:47",
+       "lede": "as reported by jsc “ukrenergo” on monday, february 23, hourly power outage schedules for residential consumers and power restrictions for industry will be in effect across all regions of ukraine. the information is confirmed by ukrenergo, the national energy company, in its official announcements. the company explains that outages may",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aca9bc37f6c5e66f8ef8d",
+       "headline": "Odesa Faces Power Outage After Russian Drone Strikes",
+       "url": "https://world.infonasional.com/odesa-power-outage-russian-strikes",
+       "publisher": "world.infonasional.com",
+       "published_at": "2026-02-12T08:50:09",
+       "lede": "hundreds of thousands of people in the southern ukrainian city of odesa are without power and water after russia launched a large-scale overnight drone strike, according to local officials. nearly 300,000 people have been affected by the power outage, and one person has been reported injured.the attack was part of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.78,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ea7d783fc01faba22de83",
+       "headline": "Energy crisis in Kyiv unprecedented, Mayor says | Ukraine News",
+       "url": "https://kyivindependent.com/explosions-in-kyiv-energy-infrastructure-air-defense/",
+       "publisher": "kyivindependent.com",
+       "published_at": "2026-01-14T08:58:04",
+       "lede": "people walk with a dog along an unlit, snow-covered street during a power outage in kyiv, ukraine, on jan. 13, 2026. (genya savilov / afp via getty images) explosions rang out on a wednesday morning in central kyiv as russia ramps up its drone and missile attacks on the city's",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c688399b489398de1bb8",
+       "headline": "One year on: Spain’s 2025 blackout still haunts millions",
+       "url": "https://euroweeklynews.com/2026/04/27/apagon-power-outage-one-year-on-spains-2025-blackout-still-haunts-millions-as-claims-deadline-expires/",
+       "publisher": "euroweeklynews.com",
+       "published_at": "2026-04-27T16:00:33",
+       "lede": "by adam woodward • updated: 28 apr 2026 • 17:00 • 4 minutes read 2025 power outage in spain. credit: irene - flickr sudden darkness suddenly hit spain and portugal at 12.33 cest on april 28, 2025, when the “apagón”, a massive power outage, struck the iberian peninsula without warning.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.6
+        },
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.59
+        }
+       ],
+       "country": "spain",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b150e5cefb83fe87340e3",
+       "headline": "Power outage hits Orange Beach",
+       "url": "https://www.yahoo.com/news/articles/power-outage-hits-orange-beach-212842633.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-24T21:28:42",
+       "lede": "video above: ‘news 5 now’ — top stories from april 24, 2026 orange beach, ala. (wkrg) — a power outage in orange beach is affecting residents in the area. deadly mobile shooting: police identify victim and suspect the outage is near the orange beach police department and is affecting traffic",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea31e88266d9339995f9a6",
+       "headline": "5 Advocates Trapped Between Floors in Court Lift After Power Cut",
+       "url": "https://www.awamkasach.com/5-advocates-trapped-between-floors-in-court-lift-after-power-cut/",
+       "publisher": "awamkasach.com",
+       "published_at": "2026-04-23T09:53:42",
+       "lede": "top stories vijayawada: a power outage left five advocates stranded in a lift at a local court complex here on thursday, a police official said. the official stated that the advocates were stranded for about an hour after the lift halted between the seventh and eighth floors during the outage,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.58
+        },
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aadb2c37f6c5e66e3da54",
+       "headline": "Expert report identifies causes of Iberian blackout",
+       "url": "https://www.pveurope.eu/grid-connection/expert-report-identifies-causes-iberian-blackout",
+       "publisher": "pveurope.eu",
+       "published_at": "2026-04-23T08:00:00",
+       "lede": "according to the expert panel of the european association of transmission system operators entso-e, the power outage that struck spain and portugal on 28 april 2025 was the most serious event in the european power grid for over two decades. the panel has now presented its final report, in which",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ec1dfcc30f640539decf88",
+       "headline": "Thousands wake to no power after blackout in Perth Hills",
+       "url": "https://www.thewest.com.au/news/perth/power-outage-leaves-1600-customers-in-roleystone-and-martin-without-power-for-at-least-seven-hours-c-22179930",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-04-22T22:35:00",
+       "lede": "there are 1600 residents in the perth hills facing a morning without electricity after a power outage. the fault, which was reported just after 6am on thursday, has plunged roleystone into darkness, with 1599 customers affected. a single property in the neighbouring suburb of martin has also been caught up",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.78
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87e6e7bb1410d4c859a4d",
+       "headline": "Residents of Lagos community protest 18 months without electricity",
+       "url": "https://www.premiumtimesng.com/regional/ssouth-west/873388-residents-of-lagos-community-protest-18-months-without-electricity.html",
+       "publisher": "premiumtimesng.com",
+       "published_at": "2026-04-20T19:15:12",
+       "lede": "residents of maya olorijo protesting the 18-month power outage at the ikeja electric business district office in ikorodu residents of maya olorijo estate, ikorodu area of lagos state, staged a peaceful protest on monday over an 18-month power outage in the community. the residents said the prolonged blackout has affected",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.49
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee9e6e540a46fb5895796",
+       "headline": "Outage knocks out power to hundreds in SLO County. When will it be back on?",
+       "url": "https://www.yahoo.com/news/articles/outage-knocks-power-hundreds-slo-195512265.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-16T19:55:12",
+       "lede": "this is a developing story. check back to sanluisobispo.com for updates. to get breaking news alerts, click here a power outage cut off electricity to hundreds of pg&e customers in san luis obispo county on thursday afternoon. according to pg&e’s outage report map, 1,027 customers in the area east of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.94
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2d35963d76f4af4d0e29",
+       "headline": "Outage knocks out power to hundreds in SLO County. When will it be back on?",
+       "url": "https://www.sanluisobispo.com/news/local/article315437052.html",
+       "publisher": "sanluisobispo.com",
+       "published_at": "2026-04-16T19:55:12",
+       "lede": "local outage knocks out power to hundreds in slo county. when will it be back on? this is a developing story. check back to sanluisobispo.com for updates. to get breaking news alerts, click here a power outage cut off electricity to hundreds of pg&e customers in san luis obispo county",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.93
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ddc55cfa3e5ba54b93f1",
+       "headline": "Dozens of homes without heat after days-long power outage in Nunavut hamlet",
+       "url": "https://halifax.citynews.ca/2026/04/15/dozens-of-homes-without-heat-after-days-long-power-outage-in-nunavut-hamlet/",
+       "publisher": "halifax.citynews.ca",
+       "published_at": "2026-04-15T17:10:16",
+       "lede": "gjoa haven — the minister responsible for the nunavut housing corporation says heating systems in at least 24 homes were damaged during a days-long power outage in the hamlet of gjoa haven. minister cecile nelvana lyall says six families have been displaced and are staying with friends or family through",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.76
+        },
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.48
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f3a7d5e7fc42ee07fad8",
+       "headline": "Power restored to Gjoa Haven; federal assistance approved for hamlet",
+       "url": "https://ca.news.yahoo.com/power-restored-gjoa-haven-federal-204256767.html",
+       "publisher": "ca.news.yahoo.com",
+       "published_at": "2026-04-11T20:42:56",
+       "lede": "electricity has been restored to gjoa haven, nunavut, days after the hamlet declared a state of emergency because of a power outage. a social media post on saturday from qulliq energy corporation, the power utility in nunavut, around 1:30 p.m. said all customers in the hamlet had electricity. the utility",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.74
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [
+        "qulliq energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e3534a44a7294eaacb34f9",
+       "headline": "Nanaimo wastewater treatment released untreated effluent due to power outage - Ladysmith Chronicle",
+       "url": "https://ladysmithchronicle.com/2026/04/10/nanaimo-wastewater-treatment-released-untreated-effluent-due-to-power-outage/",
+       "publisher": "ladysmithchronicle.com",
+       "published_at": "2026-04-10T18:12:00",
+       "lede": "the report from the b.c. ministry of environment and parks was published march 12. (news bulletin file photo) effluent released from regional district of nanaimo’s duke point wastewater treatment facility was, at times, above maximum fecal amounts, and in one case, not properly disinfected due to a power outage. these",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 164,
+         "path": "/Business & Industrial/Energy & Utilities/Waste Management",
+         "score": 0.71
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.66
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e350f5a8697b10fabe1b17",
+       "headline": "Nanaimo wastewater treatment released untreated effluent due to power outage - Parksville Qualicum News",
+       "url": "https://pqbnews.com/2026/04/10/nanaimo-wastewater-treatment-released-untreated-effluent-due-to-power-outage/",
+       "publisher": "pqbnews.com",
+       "published_at": "2026-04-10T18:12:00",
+       "lede": "the report from the b.c. ministry of environment and parks was published march 12. (news bulletin file photo) effluent released from regional district of nanaimo’s duke point wastewater treatment facility was, at times, above maximum fecal amounts, and in one case, not properly disinfected due to a power outage. these",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 164,
+         "path": "/Business & Industrial/Energy & Utilities/Waste Management",
+         "score": 0.71
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.66
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea314375c44d9ce883ac9c",
+       "headline": "Facts Behind Jakarta's Sudden Blackout on Thursday Night",
+       "url": "https://en.tempo.co/read/2097386/facts-behind-jakartas-sudden-blackout-on-thursday-night",
+       "publisher": "en.tempo.co",
+       "published_at": "2026-04-10T02:41:55",
+       "lede": "tempo.co, jakarta - several areas across jakarta were hit by a sudden power outage on thursday night, april 9, 2026. the electricity disruption struck various sectors, including central, north, and west jakarta.the unannounced blackout temporarily paralyzed parts of jakarta's mrt operations and left residents bewildered. many netizens took to social",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "indonesia",
+       "organizations": [
+        "netizens"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e64b159e87ccc43e379838",
+       "headline": "Power crisis has worsened workers’ plight –NLC",
+       "url": "https://thesun.ng/power-crisis-has-worsened-workers-plight-nlc/",
+       "publisher": "thesun.ng",
+       "published_at": "2026-04-08T23:52:22",
+       "lede": "by adewale sanyaolu the nigeria labour congress (nlc) has said that the persistent power outage in nigeria had worsened workers’ plight, describing it as a deliberate tool of disempowerment against workers. in an easter statement to nigerian workers at the weekend, nlc president, joe ajaero, said the chronic absence of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "nigeria labour congress"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 573,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOCAyMzo1MjoyMiIsImkiOiI2OWU2NGIxNTllODdjY2M0M2UzNzk4MzgiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.217,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.219
+    }
+   }
+  }
+ ]
+}

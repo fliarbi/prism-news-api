@@ -1,0 +1,931 @@
+{
+ "slug": "leprosy-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:04:15Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "leprosy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "leprosy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 479,
+     "tone": {
+      "carrying": 478,
+      "availability_pct": 99.79,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 178,
+        "share_pct": 37.24
+       },
+       {
+        "group": "neutral",
+        "count": 21,
+        "share_pct": 4.39
+       },
+       {
+        "group": "positive",
+        "count": 279,
+        "share_pct": 58.37
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 479,
+      "count": 302,
+      "share_pct": 63.05
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.68,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.682
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "leprosy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "leprosy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 102,
+       "critical": 52,
+       "critical_pct": 51.0,
+       "negative": 42,
+       "positive": 48,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 58,
+       "critical": 36,
+       "critical_pct": 62.1,
+       "negative": 18,
+       "positive": 34,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 75,
+       "critical": 37,
+       "critical_pct": 49.3,
+       "negative": 24,
+       "positive": 46,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 82,
+       "critical": 54,
+       "critical_pct": 65.9,
+       "negative": 34,
+       "positive": 45,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 84,
+       "critical": 53,
+       "critical_pct": 63.1,
+       "negative": 31,
+       "positive": 46,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 59,
+       "critical": 38,
+       "critical_pct": 64.4,
+       "negative": 20,
+       "positive": 38,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 64,
+       "critical": 44,
+       "critical_pct": 68.8,
+       "negative": 16,
+       "positive": 44,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 76,
+       "critical": 56,
+       "critical_pct": 73.7,
+       "negative": 27,
+       "positive": 44,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 188,
+       "critical": 129,
+       "critical_pct": 68.6,
+       "negative": 77,
+       "positive": 100,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 85,
+       "critical": 53,
+       "critical_pct": 62.4,
+       "negative": 32,
+       "positive": 50,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 93,
+       "critical": 64,
+       "critical_pct": 68.8,
+       "negative": 35,
+       "positive": 56,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 113,
+       "critical": 56,
+       "critical_pct": 49.6,
+       "negative": 34,
+       "positive": 73,
+       "partial_period": false
+      }
+     ],
+     "total": 1079,
+     "critical_total": 672,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.602,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.605
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "leprosy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "leprosy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 479,
+     "carrying": 148,
+     "availability_pct": 30.9,
+     "items": [
+      {
+       "country": "india",
+       "count": 71,
+       "share_pct": 14.82
+      },
+      {
+       "country": "united states",
+       "count": 18,
+       "share_pct": 3.76
+      },
+      {
+       "country": "nigeria",
+       "count": 12,
+       "share_pct": 2.51
+      },
+      {
+       "country": "indonesia",
+       "count": 8,
+       "share_pct": 1.67
+      },
+      {
+       "country": "brazil",
+       "count": 4,
+       "share_pct": 0.84
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 35
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.534,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.537
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "leprosy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "leprosy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "neglected tropical diseases",
+       "count": 68,
+       "share": 33.17,
+       "lift": 902.58,
+       "baseline_count": 3,
+       "previous_period_count": 45,
+       "delta_pct": 51.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infectious disease complications in chronic illnesses",
+       "count": 24,
+       "share": 11.71,
+       "lift": 955.67,
+       "baseline_count": 1,
+       "previous_period_count": 11,
+       "delta_pct": 118.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "latent infections",
+       "count": 15,
+       "share": 7.32,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 9,
+       "delta_pct": 66.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "diagnosis of atypical pathogens",
+       "count": 15,
+       "share": 7.32,
+       "lift": 597.29,
+       "baseline_count": 1,
+       "previous_period_count": 4,
+       "delta_pct": 275.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare bacterial infections",
+       "count": 53,
+       "share": 25.85,
+       "lift": 234.49,
+       "baseline_count": 9,
+       "previous_period_count": 53,
+       "delta_pct": 0.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 479,
+     "carrying": 205,
+     "carrier_share_pct": 42.8,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.024,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.029
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "leprosy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "leprosy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f88613bbf1d3145599bcdc",
+       "headline": "Telangana Reports Over 2,500 Leprosy Cases Annually",
+       "url": "https://www.telugu360.com/telangana-reports-over-2500-leprosy-cases-annually/",
+       "publisher": "telugu360.com",
+       "published_at": "2026-04-30T13:01:04",
+       "lede": "telangana continues to record over 2,500 leprosy cases every year, with consistent detection across the state, director of public health dr. ravinder naik said. presenting the latest data, he shared the yearly case numbers: 2022: 2,950 cases 2023: 2,607 cases 2024: 2,376 cases 2025: 2,592 cases with a population of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.23,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "f364151982fda3b95632ca06",
+       "headline": "Temporal Trends and Projections of Leprosy in Brazil: Application of Machine Learning Techniques for Predictive Analysis (2001-2034).",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42066748/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "temporal trends and projections of leprosy in brazil: application of machine learning techniques for predictive analysis (2001-2034).leprosy remains a neglected tropical disease with active transmission. predictive models improve understanding of epidemiological trends and support control strategies in endemic contexts. this study analyzed leprosy in brazil between 2001 and 2024, projecting",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efac018a54b8f07c9755a7",
+       "headline": "NLR India marks 27 years of service with call for stronger last-mile action against leprosy",
+       "url": "https://www.aninews.in/news/world/asia/nlr-india-marks-27-years-of-service-with-call-for-stronger-last-mile-action-against-leprosy20260425030632",
+       "publisher": "aninews.in",
+       "published_at": "2026-04-24T21:36:32",
+       "lede": "new delhi [india], april 25 (ani): no leprosy remains (nlr) india commemorated 27 years of its work in transforming lives affected by leprosy, bringing together policymakers, public health experts, development partners, and community members to highlight the urgency of eliminating the disease and its associated stigma. the event underscored the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2e24ebd7b10565a467cd4",
+       "headline": "Un análisis de sangre combinado con inteligencia artificial abre el camino al diagnóstico precoz de la lepra",
+       "url": "https://www.consalud.es/pacientes/un-analisis-de-sangre-combinado-con-inteligencia-artificial-abre-el-camino-al-diagnostico-precoz-de-la-lepra.html",
+       "publisher": "consalud.es",
+       "published_at": "2026-04-09T09:54:59",
+       "lede": "leprosy, one of the oldest diseases in mankind, remains a challenge to global public health due, in large part, to the lack of early diagnostic tools. however, a research by the university of são paulo (brazil), published in the journal bmc infectious diseases, has opened a new path of hope:",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.86,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.73
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d11aab97bd33d99f6aeb51",
+       "headline": "ईरान के मिसाइल हमले से इजरायल के केमिकल प्लांट में लगी भीषण आग... जहरीली गैस के रिसाव का खतरा",
+       "url": "https://www.agniban.com/missile-attack-causes-massive-fire-at-israeli-chemical-plant-risk-of-toxic-gas-leak/",
+       "publisher": "agniban.com",
+       "published_at": "2026-03-30T06:09:27",
+       "lede": "yarushalam. iran and israel (iran and israel war) have continued a leprosy attack on each other between attempts to eliminate the war through the conversation. iran attacked a chemical plant on sunday in southern israel (southern israel.) after this attack the plant has fired grueling. this causes the risk of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.86
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3d25aebe35327ad9bd71b",
+       "headline": "PAHO Director highlights regional commitment to eliminating leprosy at conference in Rio de Janeiro",
+       "url": "https://www.paho.org/en/news/13-3-2026-paho-director-highlights-regional-commitment-eliminating-leprosy-conference-rio",
+       "publisher": "paho.org",
+       "published_at": "2026-03-13T00:00:00",
+       "lede": "rio de janeiro, march 13, 2026 (paho) —the pan american health organization (paho) reaffirmed its commitment to eliminating leprosy during the national high-level conference on hansen’s disease held yesterday in rio de janeiro, where paho director dr. jarbas barbosa participated in the opening of the event and delivered a presentation",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.44
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "brazil",
+       "organizations": [
+        "pan american health organization",
+        "pan american health organization"
+       ],
+       "people": [
+        "jarbas barbosa"
+       ]
+      },
+      {
+       "id": "69c93541a5dd771f46a16893",
+       "headline": "Health Minister calls for accelerated leprosy screening, surveillance",
+       "url": "https://en.antaranews.com/news/407995/health-minister-calls-for-accelerated-leprosy-screening-surveillance",
+       "publisher": "en.antaranews.com",
+       "published_at": "2026-03-11T10:16:43",
+       "lede": "health minister calls for accelerated leprosy screening, surveillancerelated news: who ambassador reaffirms commitment to end leprosy in indonesiarelated news: indonesia includes leprosy screening in free health checksjakarta (antara) - health minister budi gunadi sadikin highlighted the need for accelerating leprosy screening and surveillance to eliminate the disease, as indonesia ranks",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.28,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.85
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [],
+       "people": [
+        "budi gunadi sadikin"
+       ]
+      },
+      {
+       "id": "69bd125793b550fcb8256d92",
+       "headline": "Chile Eliminates Leprosy: First in Americas, Second Globally | WHO & PAHO Report - News Directory 3",
+       "url": "https://www.newsdirectory3.com/chile-eliminates-leprosy-first-in-americas-second-globally-who-paho-report/",
+       "publisher": "newsdirectory3.com",
+       "published_at": "2026-03-08T04:47:22",
+       "lede": "chile has achieved a historic public health milestone, becoming the first country in the americas – and only the second globally – to be officially verified by the world health organization (who) for eliminating leprosy as a public health problem. the announcement, made on march 5, 2026 , marks a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.82
+        }
+       ],
+       "country": "jordan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c811ec490785b8cec06deb",
+       "headline": "Chile es el primer país de América libre de lepra",
+       "url": "https://www.dw.com/es/chile-es-el-primer-país-de-américa-oficialmente-libre-de-lepra/a-76244196",
+       "publisher": "dw.com",
+       "published_at": "2026-03-06T11:02:03",
+       "lede": "the world health organization officially verified that chile has eliminated leprosy. it is the first american country and the second in the world to achieve this, after jordan in 2024. chile has become the first country in the americas to be officially verified as leprosy free after more than 30",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b00b2963d76f4af2cc9bb",
+       "headline": "Chile Eliminates Leprosy, Sets Regional Benchmark",
+       "url": "https://mexicobusiness.news/health/news/chile-eliminates-leprosy-sets-regional-benchmark",
+       "publisher": "mexicobusiness.news",
+       "published_at": "2026-03-04T23:00:32",
+       "lede": "chile became the first country in the americas to achieve verified leprosy elimination, following decades of mandatory surveillance and coordination with paho and who. the milestone underscores the importance of regulatory continuity, primary care capacity, and stable pharmaceutical supply chains for countries such as mexico that continue to manage active",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf662745603fda2e7e115a",
+       "headline": "Chile becomes the first country in the Americas to be verified by WHO for the elimination of leprosy",
+       "url": "https://www.nationaltribune.com.au/chile-becomes-the-first-country-in-the-americas-to-be-verified-by-who-for-the-elimination-of-leprosy/",
+       "publisher": "nationaltribune.com.au",
+       "published_at": "2026-03-04T15:27:25",
+       "lede": "the world health organization (who), together with the pan american health organization (paho), congratulates chile for becoming the first country in the americas – and the second globally – to be officially verified as having eliminated leprosy disease. leprosy (hansen disease) was historically recorded in chile at the end of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.59
+        }
+       ],
+       "country": "chile",
+       "organizations": [
+        "pan american health organization",
+        "pan american health organization"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cb5c392ac4941070152178",
+       "headline": "Chile becomes the first country in the Americas to be verified by WHO for the elimination of leprosy",
+       "url": "http://www.paho.org/en/news/4-3-2026-chile-becomes-first-country-americas-be-verified-who-elimination-leprosy",
+       "publisher": "paho.org",
+       "published_at": "2026-03-04T00:00:00",
+       "lede": "paho/who representative in chile, giovanni escalante, and chile’s minister of health, ximena aguilera, during the ceremony recognizing the elimination of leprosy, held in santiago, chile.santiago/washington, d.c./geneva, 4 march 2026- the world health organization (who), together with the pan american health organization (paho), congratulates chile for becoming the first country in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.66
+        }
+       ],
+       "country": "chile",
+       "organizations": [
+        "pan american health organization",
+        "pan american health organization"
+       ],
+       "people": [
+        "ximena aguilera"
+       ]
+      },
+      {
+       "id": "69cb5c382ac4941070152161",
+       "headline": "Chile becomes the first country in the Americas to be verified by WHO for the elimination of leprosy",
+       "url": "https://www.paho.org/en/news/4-3-2026-chile-becomes-first-country-americas-be-verified-who-elimination-leprosy",
+       "publisher": "paho.org",
+       "published_at": "2026-03-04T00:00:00",
+       "lede": "paho/who representative in chile, giovanni escalante, and chile’s minister of health, ximena aguilera, during the ceremony recognizing the elimination of leprosy, held in santiago, chile.santiago/washington, d.c./geneva, 4 march 2026- the world health organization (who), together with the pan american health organization (paho), congratulates chile for becoming the first country in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.66
+        }
+       ],
+       "country": "chile",
+       "organizations": [
+        "pan american health organization",
+        "pan american health organization"
+       ],
+       "people": [
+        "ximena aguilera"
+       ]
+      },
+      {
+       "id": "69bcc78a6bf4fc1dd5303eb4",
+       "headline": "US-Israel Attacks Iran LIVE: इजरायल-अमेरिका नहीं... इन तीन देशों पर ईरान ने किया एक साथ हमला",
+       "url": "https://www.aajtak.in/world/story/israel-vs-iran-live-updates-tehran-bombed-attack-middle-east-tensions-us-trump-on-nuclear-talks-ntc-ntyv-2484044-2026-03-02",
+       "publisher": "aajtak.in",
+       "published_at": "2026-03-01T19:17:57",
+       "lede": "u.s. and israel jointly carried out a leprosy attack on iran which is also released on the third day. in response, iran has also attacked u.s. military bases made in many countries, increasing the collision throughout the middle east. on the other hand, after the death of khamenei, iran has",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.91
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.49
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc9b8c0f458341919c7fc1",
+       "headline": "36 new leprosy cases detected in Coimbatore district | Coimbatore News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/city/coimbatore/36-new-leprosy-cases-detected-in-coimbatore-district/articleshow/128892215.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-02-28T16:52:00",
+       "lede": "coimbatore: as many as 36 new leprosy cases were detected during the phase 2 of the door-to-door leprosy case detection campaign in coimbatore district which was held from jan 19 to feb 9, officials said. as many as 20 cases were identified in rural areas and 16 cases in urban",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ccef027dc8ab9004a8b8c4",
+       "headline": "Uttarakhand declares Leprosy a notifiable disease to strengthen Surveillance",
+       "url": "https://medicaldialogues.in/news/health/uttarakhand-declares-leprosy-a-notifiable-disease-to-strengthen-surveillance-165512",
+       "publisher": "medicaldialogues.in",
+       "published_at": "2026-02-28T04:00:51",
+       "lede": "dehradun: uttarakhand has declared leprosy a notifiable disease, requiring all cases detected in private or government hospitals to be reported to the district leprosy officer. this move aims to strengthen surveillance, ensure early treatment, and prevent further transmission.according to data from the national leprosy elimination program (nlep), the prevalence rate",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.62
+        },
+        {
+         "code": 393,
+         "path": "/Health/Health Conditions/Skin Conditions",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bd9e766d4d48dd99c920ee",
+       "headline": "Through My Bible Yr 03 – February 13 | Christian News | Before It's News",
+       "url": "https://beforeitsnews.com/christian-news/2026/02/through-my-bible-yr-03-february-13-2-2631116.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-02-13T02:33:01",
+       "lede": "luke 5jesus heals a leper12 on another occasion, jesus was in one of the towns, and there was a man full of leprosy. when he saw jesus, he fell on his face and begged him, “lord, if you are willing, you can make me clean.”13 jesus stretched out his hand",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.28,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.94
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": [
+        "jesus"
+       ]
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 166,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wNyAxMjo1Mjo1MiIsImkiOiI2OWM4ZDZlYjYxNTZiZDE3NzY0MmYxOGMiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.459,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.463
+    }
+   }
+  }
+ ]
+}

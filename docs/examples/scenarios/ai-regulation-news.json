@@ -1,0 +1,977 @@
+{
+ "slug": "ai-regulation-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:08Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "AI regulation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai regulation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 347,
+     "tone": {
+      "carrying": 346,
+      "availability_pct": 99.71,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 98,
+        "share_pct": 28.32
+       },
+       {
+        "group": "neutral",
+        "count": 10,
+        "share_pct": 2.89
+       },
+       {
+        "group": "positive",
+        "count": 238,
+        "share_pct": 68.79
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 347,
+      "count": 271,
+      "share_pct": 78.1
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.513,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.516
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "AI regulation",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai regulation",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 62,
+       "critical": 48,
+       "critical_pct": 77.4,
+       "negative": 19,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 102,
+       "critical": 91,
+       "critical_pct": 89.2,
+       "negative": 42,
+       "positive": 57,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 117,
+       "critical": 95,
+       "critical_pct": 81.2,
+       "negative": 48,
+       "positive": 66,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 70,
+       "critical": 61,
+       "critical_pct": 87.1,
+       "negative": 18,
+       "positive": 47,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 61,
+       "critical": 53,
+       "critical_pct": 86.9,
+       "negative": 31,
+       "positive": 28,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 89,
+       "critical": 67,
+       "critical_pct": 75.3,
+       "negative": 24,
+       "positive": 62,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 92,
+       "critical": 72,
+       "critical_pct": 78.3,
+       "negative": 44,
+       "positive": 48,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 96,
+       "critical": 78,
+       "critical_pct": 81.2,
+       "negative": 30,
+       "positive": 66,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 54,
+       "critical": 49,
+       "critical_pct": 90.7,
+       "negative": 12,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 99,
+       "critical": 75,
+       "critical_pct": 75.8,
+       "negative": 26,
+       "positive": 70,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 97,
+       "critical": 75,
+       "critical_pct": 77.3,
+       "negative": 27,
+       "positive": 66,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 97,
+       "critical": 72,
+       "critical_pct": 74.2,
+       "negative": 33,
+       "positive": 61,
+       "partial_period": false
+      }
+     ],
+     "total": 1036,
+     "critical_total": 836,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-07-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 7.761,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 7.764
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "AI regulation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai regulation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 347,
+     "carrying": 134,
+     "availability_pct": 38.62,
+     "items": [
+      {
+       "country": "united states",
+       "count": 75,
+       "share_pct": 21.61
+      },
+      {
+       "country": "united kingdom",
+       "count": 19,
+       "share_pct": 5.48
+      },
+      {
+       "country": "india",
+       "count": 8,
+       "share_pct": 2.31
+      },
+      {
+       "country": "china",
+       "count": 7,
+       "share_pct": 2.02
+      },
+      {
+       "country": "australia",
+       "count": 5,
+       "share_pct": 1.44
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 20
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.314,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 5.326
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "AI regulation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai regulation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "ethical considerations in ai development",
+       "count": 94,
+       "share": 37.6,
+       "lift": 95.92,
+       "baseline_count": 32,
+       "previous_period_count": 114,
+       "delta_pct": -17.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "tech policy and government regulations",
+       "count": 56,
+       "share": 22.4,
+       "lift": 107.56,
+       "baseline_count": 17,
+       "previous_period_count": 69,
+       "delta_pct": -18.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "artificial intelligence advancements",
+       "count": 65,
+       "share": 26.0,
+       "lift": 88.43,
+       "baseline_count": 24,
+       "previous_period_count": 65,
+       "delta_pct": 0.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "ai in cybersecurity applications",
+       "count": 25,
+       "share": 10.0,
+       "lift": 136.05,
+       "baseline_count": 6,
+       "previous_period_count": 24,
+       "delta_pct": 4.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "enterprise-grade cybersecurity analytics",
+       "count": 7,
+       "share": 2.8,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 347,
+     "carrying": 250,
+     "carrier_share_pct": 72.05,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.378,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.381
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "AI regulation",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ai regulation",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69ea2c498266d9339995a570",
+       "headline": "India AI Regulation 2026: Govt Plans Stricter Rules",
+       "url": "https://www.startuptalky.com/news/india-govt-considers-stricter-ai-governance/",
+       "publisher": "startuptalky.com",
+       "published_at": "2026-04-23T13:52:09",
+       "lede": "as new worries about cybersecurity, deepfakes, and threats to vital sectors arise from the fast development of ai, the centre is increasing its focus on ai regulation. reportedly, a six-person technology and policy expert committee (tpec) was formed on april 13. the tpec is reportedly working on new rules that",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.61
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.45
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e27ea4ff2654c79d5f4783",
+       "headline": "Navigating the Future: AI Legislative Developments Across the United States in April 2026",
+       "url": "https://www.theedadvocate.org/navigating-the-future-ai-legislative-developments-across-the-united-states-in-april-2026/",
+       "publisher": "theedadvocate.org",
+       "published_at": "2026-04-03T13:02:58",
+       "lede": "spread the love the landscape of artificial intelligence (ai) legislation in the united states is evolving rapidly as states grapple with the implications of this transformative technology. as april 2026 progresses, several key developments have emerged, particularly in nebraska, georgia, and louisiana, showcasing varied approaches to ai regulation. nebraska’s innovative",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.72
+        },
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.61
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e27f1a9b322e6b3e96d54b",
+       "headline": "AI Industry Mobilizes Funds for 2026 Midterms Amid Regulatory Scrutiny",
+       "url": "https://www.theedadvocate.org/ai-industry-mobilizes-funds-for-2026-midterms-amid-regulatory-scrutiny/",
+       "publisher": "theedadvocate.org",
+       "published_at": "2026-04-02T13:05:56",
+       "lede": "spread the love the artificial intelligence (ai) sector is taking a proactive stance in the political arena, pouring millions into the upcoming 2026 midterm elections. as debates surrounding ai regulation intensify, industry stakeholders are strategically allocating their resources to influence legislative outcomes that could shape the future of technology and",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.68
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8757c37f6c5e66ca13e9",
+       "headline": "EU Parliament and Council in favour of new deadlines and bans on AI regulation",
+       "url": "https://www.ebnerstolz.de/en/what-we-offer/services/legal-advice/it-law-and-data-protection/eu-ai-act-digital-omnibus-deadlines-bans-ai-regulation-103007.html",
+       "publisher": "ebnerstolz.de",
+       "published_at": "2026-03-20T09:04:01",
+       "lede": "eu parliament and council in favour of new deadlines and bans on ai regulation eu parliament and council in favour of new deadlines and bans on ai regulation eu parliament and council in favour of new deadlines and bans on ai regulation on 13 march 2026, the council of the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc5739ec94907df10cb91d",
+       "headline": "India’s AI future can’t be built on copy paste regulation, says Google’s Sachin Kakkar - BusinessToday",
+       "url": "https://www.businesstoday.in/technology/news/story/indias-ai-future-cant-be-built-on-copy-paste-regulation-says-googles-sachin-kakkar-517210-2026-02-20",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-02-20T06:36:06",
+       "lede": "on february 20, google’s engineering site director, sachin kakkar, became a part of a panel discussion at the india ai impact summit 2026. during the discussion, kakkar argued about how india is in need of standardised ai regulation.he said copy-pasting ai laws or policy structures from regions like the eu",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.67
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c95167682ef7f3f763f865",
+       "headline": "UK AI Minister Calls for Stronger India Partnership on Technology",
+       "url": "https://www.newkerala.com/news/a/we-lot-do-together-uk-ai-minister-kanishka-561.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-02-19T15:15:39",
+       "lede": "uk ai minister kanishka narayan has called for stronger technological collaboration with india, citing shared values and developmental goals. he made the remarks at the india ai impact summit 2026 in new delhi, highlighting the synergy in both nations' approaches to ai regulation. the summit serves as a key global",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.57
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c95601288a36c0c7b7f9ec",
+       "headline": "India AI Impact Summit 2026: OpenAI CEO Sam Altman calls for urgent AI regulations as superintelligence nears",
+       "url": "https://www.digit.in/news/general/india-ai-impact-summit-2026-openai-ceo-sam-altman-calls-for-global-ai-watchdog-as-superintelligence-nears.html",
+       "publisher": "digit.in",
+       "published_at": "2026-02-19T13:25:00",
+       "lede": "artificial intelligence is undoubtedly evolving faster than the systems designed to govern it. speaking at the india ai impact summit 2026, openai ceo sam altman stated that the world requires immediate ai regulation. the statement comes amid a heated international debate over ai regulation, economic disruption, and the concentration of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.89
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "openai"
+       ],
+       "people": [
+        "sam altman"
+       ]
+      },
+      {
+       "id": "6a2a6e375cefb83fe8016572",
+       "headline": "Global Firms Face Legal Risks Under India's 2026 AI Regulation",
+       "url": "https://www.india-briefing.com/news/india-ai-regulation-2026-foreign-platform-compliance-42745.html/",
+       "publisher": "india-briefing.com",
+       "published_at": "2026-02-12T14:46:55",
+       "lede": "deepfake, content labeling & safe harbor risks for global platforms: india’s 2026 ai regulation india has strengthened its ai regulation through amendments to the it (intermediary guidelines and digital media ethics code) rules, 2021, effective february 20. the revised rules mandate prominent labeling of ai-generated content, introduce expedited takedown timelines",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.44
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2301927117df83f95fe21",
+       "headline": "AI Regulation Is Here...And It’s Already Global",
+       "url": "https://www.linkedin.com/pulse/ai-regulation-hereand-its-already-global-john-cloud-lvhwc",
+       "publisher": "linkedin.com",
+       "published_at": "2026-01-23T17:48:24",
+       "lede": "tldr ai regulation has moved decisively from debate to execution. governments across asia, europe and emerging innovation hubs are no longer experimenting within the margins, instead they are setting binding rules that will shape how ai is built, deployed and governed worldwide. for business leaders, ai strategy is now inseparable",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.82
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8559d7bb1410d4c6c12d9",
+       "headline": "Florida session: DeSantis looks to cement legacy but trainwreck may loom",
+       "url": "https://www.tallahassee.com/story/news/local/state/2026/01/08/desantis-session-preview/88035209007/",
+       "publisher": "tallahassee.com",
+       "published_at": "2026-01-08T17:37:18",
+       "lede": "jan. 8, 2026, 12:37 p.m. et florida governor ron desantis and the gop-led legislature are set to tackle a contentious agenda including property taxes, ai regulation, and gun laws. a feud between gov. desantis and house speaker daniel perez over tax cuts and other issues could complicate the legislative session.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.74
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "ron desantis"
+       ]
+      },
+      {
+       "id": "69e878de7bb1410d4c8227f6",
+       "headline": "Hannover Messe: Merz will industrielle KI aus EU-Richtlinien herausnehmen",
+       "url": "https://www.handelsblatt.com/politik/deutschland/hannover-messe-merz-will-industrielle-ki-aus-eu-richtlinien-herausnehmen/100218272.html",
+       "publisher": "handelsblatt.com",
+       "published_at": "2026-04-20T04:30:26",
+       "lede": "federal chancellor friedrich merz aims to substantially relax the eu regulation on artificial intelligence (ai). \"i will be committed to facilitating the european ai regulation and if possible to release industrial ai from the currently too narrow corset of the ai regulation of the european union\", merz said on sunday",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.85
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2adc34c37f6c5e6605903a",
+       "headline": "Revizto research finds Australia leading in digital delivery",
+       "url": "https://telconews.com.au/story/revizto-research-finds-australia-leading-in-digital-delivery",
+       "publisher": "telconews.com.au",
+       "published_at": "2026-04-12T23:13:00",
+       "lede": "revizto has published research indicating australia's architecture, engineering, and construction sector is ahead of global peers in digital project delivery, while concern is rising over data control and ai regulation. the study surveyed 2,006 industry leaders across major markets, including 300 respondents in australia, among them 90 chief information officers.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b72d7bb1410d4cb0e1de",
+       "headline": "Revizto research finds Australia leading in digital delivery",
+       "url": "https://www.itbrief.com.au/story/revizto-research-finds-australia-leading-in-digital-delivery",
+       "publisher": "itbrief.com.au",
+       "published_at": "2026-04-12T23:13:00",
+       "lede": "revizto has published research indicating australia's architecture, engineering, and construction sector is ahead of global peers in digital project delivery, while concern is rising over data control and ai regulation. the study surveyed 2,006 industry leaders across major markets, including 300 respondents in australia, among them 90 chief information officers.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.43
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "revizto"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8b59e7bb1410d4cafaf9b",
+       "headline": "Revizto research finds Australia leading in digital delivery",
+       "url": "https://itbrief.com.au/story/revizto-research-finds-australia-leading-in-digital-delivery",
+       "publisher": "itbrief.com.au",
+       "published_at": "2026-04-12T23:13:00",
+       "lede": "revizto has published research indicating australia's architecture, engineering, and construction sector is ahead of global peers in digital project delivery, while concern is rising over data control and ai regulation. the study surveyed 2,006 industry leaders across major markets, including 300 respondents in australia, among them 90 chief information officers.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.43
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "revizto"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a89be5cefb83fe8132c39",
+       "headline": "EU-Verordnung zwingt Unternehmen zur Kontrolle von KI-Agenten",
+       "url": "https://www.it-boltwise.de/eu-verordnung-zwingt-unternehmen-zur-kontrolle-von-ki-agenten.html",
+       "publisher": "it-boltwise.de",
+       "published_at": "2026-04-12T10:46:49",
+       "lede": "london (it boltwise) – the european ai regulation presents new challenges to companies. high-risk ai systems must be compliant by august 2026, otherwise high penalties are threatened. companies must focus on controlling autonomous agents, while new standards such as nist and iso/iec 42001 provide guidance. the european ai regulation, which",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.71
+        },
+        {
+         "code": 172,
+         "path": "/Business & Industrial/Business Finance/Risk Management",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd1be7ef280d4636acfcc",
+       "headline": "Competition guru Rod Sims goes Galatians 6:7 on Atlassian's Mike Cannon-Brookes",
+       "url": "https://www.startupdaily.net/advice/opinion/competition-guru-rod-sims-goes-galatians-67-on-atlassians-mike-cannon-brookes/",
+       "publisher": "startupdaily.net",
+       "published_at": "2026-03-19T10:41:45",
+       "lede": "if you like this article, share it with your friends.the former accc boss delivers a reap what you sow-sized call to look at ai regulation amid the plunge in atlassian’s share priceformer accc chair rod sims had some thoughts about the karma bus today, in the wake of atlassian’s cofounders",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.49
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "atlassian"
+       ],
+       "people": [
+        "rod sims"
+       ]
+      },
+      {
+       "id": "6a2acc7f963d76f4af085260",
+       "headline": "Nach Abstimmung im EU-Parlament: TÜV-Verband warnt vor Flickenteppich bei KI-Regeln",
+       "url": "https://www.firmenpresse.de/pressinfo2238756-nach-abstimmung-im-eu-parlament-tuev-verband-warnt-vor-flickenteppich-bei-ki-regeln.html",
+       "publisher": "firmenpresse.de",
+       "published_at": "2026-03-18T12:53:32",
+       "lede": "tüv association e. v. after voting in the eu parliament: tüv association warns against patchwork in ai rules id: 2238756 further news from tüv-verband e. v. recent news from the category: biotechnology (ots) - proposal to remove essential high-risk applications from the ai regulation, leads to more bureaucracy for start-ups",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 39,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0yNCAwMDowMDowMCIsImkiOiI0N2Q0YjhjYzQzMTFhZjYwMmZmNWI2ZmIiLCJwIjo3fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.504,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.507
+    }
+   }
+  }
+ ]
+}

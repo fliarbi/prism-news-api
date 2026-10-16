@@ -1,0 +1,1007 @@
+{
+ "slug": "bird-flu-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:00:47Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "bird flu",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "bird flu",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 807,
+     "tone": {
+      "carrying": 807,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 684,
+        "share_pct": 84.76
+       },
+       {
+        "group": "neutral",
+        "count": 2,
+        "share_pct": 0.25
+       },
+       {
+        "group": "positive",
+        "count": 121,
+        "share_pct": 14.99
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 807,
+      "count": 667,
+      "share_pct": 82.65
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.726,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.728
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "bird flu",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "bird flu",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 522,
+       "critical": 417,
+       "critical_pct": 79.9,
+       "negative": 419,
+       "positive": 86,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 163,
+       "critical": 136,
+       "critical_pct": 83.4,
+       "negative": 138,
+       "positive": 25,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 321,
+       "critical": 217,
+       "critical_pct": 67.6,
+       "negative": 292,
+       "positive": 27,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 280,
+       "critical": 223,
+       "critical_pct": 79.6,
+       "negative": 235,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 153,
+       "critical": 132,
+       "critical_pct": 86.3,
+       "negative": 135,
+       "positive": 17,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 241,
+       "critical": 161,
+       "critical_pct": 66.8,
+       "negative": 220,
+       "positive": 16,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 425,
+       "critical": 359,
+       "critical_pct": 84.5,
+       "negative": 388,
+       "positive": 35,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 185,
+       "critical": 150,
+       "critical_pct": 81.1,
+       "negative": 155,
+       "positive": 29,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 152,
+       "critical": 132,
+       "critical_pct": 86.8,
+       "negative": 133,
+       "positive": 19,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 288,
+       "critical": 238,
+       "critical_pct": 82.6,
+       "negative": 255,
+       "positive": 32,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 209,
+       "critical": 170,
+       "critical_pct": 81.3,
+       "negative": 171,
+       "positive": 37,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 158,
+       "critical": 127,
+       "critical_pct": 80.4,
+       "negative": 125,
+       "positive": 33,
+       "partial_period": false
+      }
+     ],
+     "total": 3097,
+     "critical_total": 2462,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.829,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.832
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "bird flu",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "bird flu",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 807,
+     "carrying": 431,
+     "availability_pct": 53.41,
+     "items": [
+      {
+       "country": "united states",
+       "count": 190,
+       "share_pct": 23.54
+      },
+      {
+       "country": "india",
+       "count": 122,
+       "share_pct": 15.12
+      },
+      {
+       "country": "united kingdom",
+       "count": 36,
+       "share_pct": 4.46
+      },
+      {
+       "country": "nepal",
+       "count": 12,
+       "share_pct": 1.49
+      },
+      {
+       "country": "australia",
+       "count": 11,
+       "share_pct": 1.36
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 60
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.383,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.386
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "bird flu",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "bird flu",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "emerging zoonotic viruses",
+       "count": 278,
+       "share": 43.71,
+       "lift": 713.62,
+       "baseline_count": 5,
+       "previous_period_count": 302,
+       "delta_pct": -7.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "zoonotic disease transmission pathways",
+       "count": 347,
+       "share": 54.56,
+       "lift": 636.24,
+       "baseline_count": 7,
+       "previous_period_count": 456,
+       "delta_pct": -23.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "one health approaches",
+       "count": 214,
+       "share": 33.65,
+       "lift": 686.67,
+       "baseline_count": 4,
+       "previous_period_count": 194,
+       "delta_pct": 10.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "poultry farming & production",
+       "count": 78,
+       "share": 12.26,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 135,
+       "delta_pct": -42.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "livestock biosecurity measures",
+       "count": 56,
+       "share": 8.81,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 19,
+       "delta_pct": 194.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 807,
+     "carrying": 636,
+     "carrier_share_pct": 78.81,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.607,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.612
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "bird flu",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "bird flu",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69de31c9cd06d0eb78034a98",
+       "headline": "Scientists concerned about transmission of bird flu to cows",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/bird-flu-1715810471",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-12T00:00:00",
+       "lede": "the outbreak of bird flu in the u.s. has alarmed researchers and prompted new efforts to track the virus that’s already killed millions of birds from europe to antarctica. as h5n1 continues to jump into mammals, many scientists are concerned that we’re not watching closely enough as this virus spreads.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 217,
+         "path": "/Pets & Animals/Animal Products & Services/Animal Welfare",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b27fc5cefb83fe8811ebe",
+       "headline": "Pa. Governor Josh Shapiro discusses bird flu outbreak",
+       "url": "https://www.yahoo.com/news/articles/pa-governor-josh-shapiro-discusses-000011565.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-25T01:27:54",
+       "lede": "pennsylvania governor josh shapiro and pennsylvania's secretary of agriculture visited lancaster county on tuesday, amid a highly contagious nationwide bird flu outbreak. \"pennsylvania is really sadly at the epicenter of this,\" governor shapiro said. so far, 7.6 million birds have died this year in pennsylvania. shapiro says the state has",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee0b983fc01faba5a2109",
+       "headline": "France reports two bird flu outbreaks after easing restrictions",
+       "url": "https://www.yahoo.com/news/articles/france-reports-two-bird-flu-161221230.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T16:36:57",
+       "lede": "paris, april 30 (reuters) - france has reported outbreaks of bird flu on two farms ‌in the southwest, the world organisation for ‌animal health said on thursday, just days after the country eased ​restrictions linked to the disease. the global spread of highly pathogenic avian influenza has alarmed governments and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0414c8220687a966b0c4e8",
+       "headline": "Housing order for all poultry, captive birds to be lifted",
+       "url": "https://www.rte.ie/news/2026/0429/1570879-housing-order-birds/",
+       "publisher": "rte.ie",
+       "published_at": "2026-04-29T13:47:40",
+       "lede": "a housing order for all poultry and captive birds in the country will be lifted from next tuesday, 5 may. agriculture minister martin heydon introduced the housing order last november amid heightened risk from avian influenza, or bird flu. five outbreaks of highly pathogenic avian influenza (hpai) h5n1 were confirmed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 218,
+         "path": "/Business & Industrial/Agriculture & Forestry/Livestock",
+         "score": 0.79
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cae11e3933a6dd8fa980",
+       "headline": "New H5N1 bird flu vaccine shows strong protection in animals, researchers say",
+       "url": "https://www.openaccessgovernment.org/new-h5n1-bird-flu-vaccine-shows-strong-protection-in-animals-researchers-say/208727/",
+       "publisher": "openaccessgovernment.org",
+       "published_at": "2026-04-27T13:09:22",
+       "lede": "researchers at the university of nebraska–lincoln have developed a new h5n1 bird flu vaccine that shows strong protection in mice and cattle, raising hopes for improved control of the virus in animals and agriculture strong early animal studies in both mice and cattle, led by virologist eric weaver, indicate the",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 218,
+         "path": "/Business & Industrial/Agriculture & Forestry/Livestock",
+         "score": 0.8
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "eric weaver"
+       ]
+      },
+      {
+       "id": "6a2b323ec37f6c5e6643f3c7",
+       "headline": "भागलपुर में फैला बर्ड फ्लू, सरकारी पोल्ट्री फॉर्म बना एपिक सेंटर",
+       "url": "https://www.livehindustan.com/bihar/bhagalpur/story-bird-flu-outbreak-confirmed-at-bhagalpur-poultry-center-h5n1-variant-detected-201777231303926.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-04-26T19:21:45",
+       "lede": "bhagalpur, chief correspondent. the cause of death of chickens from a previous outbreak has been revealed at the regional chicken breeding centre in barari. the chickens kept in the centre had spread bird flu disease. this has been confirmed by the national institute of high security animal disease (nisad), bhopal",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 218,
+         "path": "/Business & Industrial/Agriculture & Forestry/Livestock",
+         "score": 0.83
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.77
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e19645272de32e8bdefe",
+       "headline": "Bird Flu Outbreak Contained in Bengaluru, No Human Cases",
+       "url": "https://www.newkerala.com/news/a/bird-flu-outbreak-contained-bengaluru-no-human-cases-624.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-25T16:05:17",
+       "lede": "the karnataka health department has successfully contained a bird flu outbreak at a government poultry training centre in hesaraghatta near bengaluru. following a 10-day intensive surveillance drive, no human cases of h5n1 infection have been detected. a total of 28,172 people across 22 villages were monitored, and poultry activities at",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.88,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.8
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4b2fbf10c43d296cc087",
+       "headline": "China bans Chile poultry imports due to bird flu",
+       "url": "https://www.yahoo.com/news/articles/china-bans-chile-poultry-imports-085451221.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T08:54:51",
+       "lede": "beijing, april 23 (reuters) - china has banned poultry imports from chile due ‌to a recent bird flu outbreak ‌in the south american country, the chinese customs ​authority said in a statement. the prohibition, effective immediately, covers all poultry and related products originating from chile, the government said, citing the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 218,
+         "path": "/Business & Industrial/Agriculture & Forestry/Livestock",
+         "score": 0.68
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99e1375f157062cb19697",
+       "headline": "Moderna, after losing US funding, rebounds to start mRNA bird flu vaccine trial",
+       "url": "https://www.biopharmadive.com/news/moderna-mrna-bird-flu-vaccine-trial-cepi-hhs/818172/",
+       "publisher": "biopharmadive.com",
+       "published_at": "2026-04-22T11:21:00",
+       "lede": "dive brief: moderna is plowing ahead with plans for a vaccine to fight a possible human outbreak of h5 influenza, or bird flu, even after losing hundreds of millions of dollars in funding from the u.s. government. on tuesday, moderna said researchers have administered the first doses in a phase",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.91
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.89
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.61
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "moderna"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e9963c75f157062caba8b5",
+       "headline": "First bird flu mRNA vaccine enters late-stage trial - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/etimes/wellness/first-bird-flu-mrna-vaccine-enters-late-stage-trial/articleshow/130433005.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-22T05:38:00",
+       "lede": "moderna moved its h5n1 vaccine candidate into the first late-stage human trial for a pandemic bird flu shot made with mrna technology. the phase 3 study will evaluate the safety and immunogenicity of mrna-1018 in healthy adults ages 18 and older, and is expected to enroll approximately 4,000 participants across",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.87
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.45
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "moderna"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e887665cfa3e5ba508083e",
+       "headline": "Moderna launches H5N1 bird flu vaccine trial in US and UK after HHS funding cut - Time News",
+       "url": "https://time.news/moderna-launches-h5n1-bird-flu-vaccine-trial-in-us-and-uk-after-hhs-funding-cut/",
+       "publisher": "time.news",
+       "published_at": "2026-04-22T03:42:10",
+       "lede": "moderna has begun a large-scale phase iii trial of its mrna-based h5n1 bird flu vaccine in the united kingdom and united states after federal funding was withdrawn by the department of health and human services. the trial, which will enroll 4,000 participants — 3,000 in the uk and 1,000 in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.82
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.7
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.46
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "moderna"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a802c963d76f4afd42ca7",
+       "headline": "Moderna starts late-stage trial of bird flu vaccine in US, UK",
+       "url": "https://www.globalbankingandfinance.com/moderna-starts-late-stage-trial-bird-flu-vaccine-us-uk/",
+       "publisher": "globalbankingandfinance.com",
+       "published_at": "2026-04-21T23:17:08",
+       "lede": "moderna initiates late-stage bird flu vaccine trial in us and uk with cepi funding overview of moderna's bird flu vaccine trial trial launch and scope april 21 (reuters) - moderna said on tuesday it had started a late-stage study of its experimental bird flu vaccine in the u.s. and the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.89
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.89
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.6
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e994e1bdd09a23d08c9b2c",
+       "headline": "If a bird flu pandemic starts, we may have an mRNA vaccine ready",
+       "url": "https://www.newscientist.com/article/2523838-if-a-bird-flu-pandemic-starts-we-may-have-an-mrna-vaccine-ready/",
+       "publisher": "newscientist.com",
+       "published_at": "2026-04-21T23:01:21",
+       "lede": "a final-stage trial has started of an mrna vaccine against the bird flu strain infecting many animals – and occasionally people – worldwide a vaccine now in development could help in the event of a bird flu pandemic weyo / alamy it was roughly a year after the earliest cases",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.63
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ef00b83fc01faba699647",
+       "headline": "New case of bird flu detected in South Georgia",
+       "url": "https://www.yahoo.com/news/articles/case-bird-flu-detected-south-152048033.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-18T15:20:48",
+       "lede": "the state department of agriculture said it has confirmed a new case of bird flu in south georgia. the infected birds were part of a backyard flock in pierce county. the flock included “approximately 60 chickens, ducks, geese, and turkeys,” the agricultural department said. our team acted swiftly to respond",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.86
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4998bf10c43d296ba2f2",
+       "headline": "Humans may already have some immunity to H5N1 bird flu, study suggests",
+       "url": "https://www.yahoo.com/news/articles/humans-may-already-immunity-h5n1-142716248.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-17T14:27:16",
+       "lede": "many humans may already have some immunity to h5n1 bird flu, raising hopes that the virus could pose less of a threat than previously thought, new research suggests. tests on hospital workers in the netherlands found that those who had either been previously infected with seasonal flu or received the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eacece540a46fb54d384f",
+       "headline": "Bird flu scare intensifies in Karnataka as mysterious peacock deaths rise",
+       "url": "https://article.wn.com/view/2026/05/08/Bird_flu_scare_intensifies_in_Karnataka_as_mysterious_peacoc/",
+       "publisher": "article.wn.com",
+       "published_at": "2026-04-17T00:00:00",
+       "lede": "tumakuru: fear of bird flu continues to spread across the tumakuru district of karnataka after the number of peacock deaths crossed 54 within the last month, triggering fresh concern among residents and authorities. a few days ago, laboratory reports confirmed that the deaths of 44 peacocks in the district ...",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f229a8122c4392e0cf6041",
+       "headline": "Arkansas Reported Largest Bird Flu Outbreak Of The Year | Survival | Before It's News",
+       "url": "https://beforeitsnews.com/survival/2026/04/arkansas-reported-largest-bird-flu-outbreak-of-the-year-2802894.html",
+       "publisher": "beforeitsnews.com",
+       "published_at": "2026-04-16T14:09:01",
+       "lede": "% of readers think this story is fact. add your two cents. in a diagnosis, which was confirmed on april 10th, arkansas reported its largest bird flu outbreak of the year. as war has gripped the world, the bird flu issue has been relegated to the bottom of google searches;",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 218,
+         "path": "/Business & Industrial/Agriculture & Forestry/Livestock",
+         "score": 0.64
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 375,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNiAxNDowOTowMSIsImkiOiI2OWYyMjlhODEyMmM0MzkyZTBjZjYwNDEiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.938,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.943
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,883 @@
+{
+ "slug": "eu-ai-act-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:26Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "AI Act",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai act",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 649,
+     "tone": {
+      "carrying": 649,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 200,
+        "share_pct": 30.82
+       },
+       {
+        "group": "neutral",
+        "count": 16,
+        "share_pct": 2.47
+       },
+       {
+        "group": "positive",
+        "count": 433,
+        "share_pct": 66.72
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 649,
+      "count": 523,
+      "share_pct": 80.59
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.665,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.668
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "AI Act",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai act",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 95,
+       "critical": 78,
+       "critical_pct": 82.1,
+       "negative": 40,
+       "positive": 54,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 109,
+       "critical": 93,
+       "critical_pct": 85.3,
+       "negative": 41,
+       "positive": 62,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 269,
+       "critical": 215,
+       "critical_pct": 79.9,
+       "negative": 102,
+       "positive": 160,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 167,
+       "critical": 143,
+       "critical_pct": 85.6,
+       "negative": 53,
+       "positive": 111,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 148,
+       "critical": 129,
+       "critical_pct": 87.2,
+       "negative": 45,
+       "positive": 101,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 191,
+       "critical": 144,
+       "critical_pct": 75.4,
+       "negative": 46,
+       "positive": 143,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 235,
+       "critical": 214,
+       "critical_pct": 91.1,
+       "negative": 106,
+       "positive": 124,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 154,
+       "critical": 128,
+       "critical_pct": 83.1,
+       "negative": 43,
+       "positive": 109,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 140,
+       "critical": 108,
+       "critical_pct": 77.1,
+       "negative": 40,
+       "positive": 100,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 158,
+       "critical": 125,
+       "critical_pct": 79.1,
+       "negative": 53,
+       "positive": 99,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 161,
+       "critical": 131,
+       "critical_pct": 81.4,
+       "negative": 44,
+       "positive": 112,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 190,
+       "critical": 159,
+       "critical_pct": 83.7,
+       "negative": 63,
+       "positive": 122,
+       "partial_period": false
+      }
+     ],
+     "total": 2017,
+     "critical_total": 1667,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-07-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.03,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.032
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "AI Act",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai act",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 649,
+     "carrying": 203,
+     "availability_pct": 31.28,
+     "items": [
+      {
+       "country": "united states",
+       "count": 94,
+       "share_pct": 14.48
+      },
+      {
+       "country": "united kingdom",
+       "count": 24,
+       "share_pct": 3.7
+      },
+      {
+       "country": "france",
+       "count": 15,
+       "share_pct": 2.31
+      },
+      {
+       "country": "belgium",
+       "count": 10,
+       "share_pct": 1.54
+      },
+      {
+       "country": "ireland",
+       "count": 9,
+       "share_pct": 1.39
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 51
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.514,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.517
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "AI Act",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai act",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "network compliance and auditing standards",
+       "count": 26,
+       "share": 5.73,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1,
+       "delta_pct": 2500.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "ai in cybersecurity applications",
+       "count": 63,
+       "share": 13.88,
+       "lift": 188.79,
+       "baseline_count": 6,
+       "previous_period_count": 56,
+       "delta_pct": 12.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "ethical considerations in ai development",
+       "count": 172,
+       "share": 37.89,
+       "lift": 96.64,
+       "baseline_count": 32,
+       "previous_period_count": 193,
+       "delta_pct": -10.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "explainable ai (xai) techniques",
+       "count": 25,
+       "share": 5.51,
+       "lift": 224.75,
+       "baseline_count": 2,
+       "previous_period_count": 35,
+       "delta_pct": -28.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "compliance and regulatory risk controls",
+       "count": 13,
+       "share": 2.86,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 9,
+       "delta_pct": 44.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 649,
+     "carrying": 454,
+     "carrier_share_pct": 69.95,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.218,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.221
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "AI Act",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ai act",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a90a9963d76f4afdee572",
+       "headline": "EU AI Act Update: Omnibus Talks Stall, but Clock Is Still Ticking",
+       "url": "https://natlawreview.com/article/eu-ai-act-update-omnibus-talks-stall-clock-still-ticking",
+       "publisher": "natlawreview.com",
+       "published_at": "2026-04-30T17:48:51",
+       "lede": "talks between european union legislators broke down on wednesday as they tried to agree on proposed amendments to the eu ai act. at the center of the debate is the digital omnibus on ai, first introduced in november 2025, which would delay several key compliance deadlines under the act. if",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.88,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.54
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99e8775f157062cb1e78c",
+       "headline": "AI Act and Digital Omnibus Integration of AI and health data 2026",
+       "url": "https://www.taylorwessing.com/en/international-life-sciences-newsletter/life-sciences-legal-lens-vol-1/ai-act-and-digital-omnibus-integration-of-ai-and-health-data-2026",
+       "publisher": "taylorwessing.com",
+       "published_at": "2026-04-21T08:09:36",
+       "lede": "2026 will mark the integration phase of the ai act for health and life sciences companies. ai-supported medical devices, diagnostic solutions and clinical decision support systems will in many cases qualify as high-risk ai systems. risk management, data governance and technical documentation must therefore be adapted at an early stage",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e6465e2be6445e460ba7dd",
+       "headline": "Musk’s xAI Sues Colorado Over Landmark AI Regulation | PYMNTS.com",
+       "url": "https://www.pymnts.com/cpi-posts/musks-xai-sues-colorado-over-landmark-ai-regulation/",
+       "publisher": "pymnts.com",
+       "published_at": "2026-04-13T20:25:16",
+       "lede": "new regulations regularly trigger legal challenges from the affected industries and interest groups, and colorado’s landmark ai act is no exception. last week, elon musk’s xai filed a lawsuit seeking to block the state from enforcing the law, which formally took effect february 1. by completing this form, you agree",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.71
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "xai"
+       ],
+       "people": [
+        "elon musk"
+       ]
+      },
+      {
+       "id": "69e27f17277be6ed2d948590",
+       "headline": "Latest News Bureau Veritas Launches an Independent AI Assessment Offering for European Enterprises, Developed in Partnership with Amazon Web Services (AWS) - Businessfortnight",
+       "url": "https://businessfortnight.com/bureau-veritas-launches-an-independent-ai-assessment-offering-for-european-enterprises-developed-in-partnership-with-amazon-web-services-aws/",
+       "publisher": "businessfortnight.com",
+       "published_at": "2026-04-02T06:32:00",
+       "lede": "business wire india bureau veritas, a global leader in testing, inspection, and certification services (tic), announces the launch of an ai systems audit to help european enterprises assess and demonstrate their compliance with the european union's \"ai act\" regulatory requirements. this offering combines on-site audits, document analysis, and direct testing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "france",
+       "organizations": [
+        "veritas",
+        "bureau veritas"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c8be0bf0ef2e3a980fdd11",
+       "headline": "EU Parliament backs delaying AI Act deadlines for biometrics, high-risk applications | Biometric Update",
+       "url": "https://www.biometricupdate.com/202603/eu-parliament-backs-delaying-ai-act-deadlines-for-biometrics-high-risk-applications",
+       "publisher": "biometricupdate.com",
+       "published_at": "2026-03-27T16:00:31",
+       "lede": "the european parliament has voted in favor of delaying certain rules of the eu ai act related to high-risk ai applications, including those involving biometrics. members also backed a ban on “nudifier” apps that create explicit images of a real person without their consent.the digital omnibus package on simplification was",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.66
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.44
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "european parliament",
+        "european parliament"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c8d52f6743c370e2253be2",
+       "headline": "45 industry associations sign joint statement to boost Europe's AI competitiveness",
+       "url": "https://www.dqindia.com/esdm/45-industry-associations-sign-joint-statement-to-boost-europes-ai-competitiveness-11254940",
+       "publisher": "dqindia.com",
+       "published_at": "2026-03-26T04:00:37",
+       "lede": "digitaleurope, together with 44 european and national industry associations, has published the first joint industry statement on the ai simplification package.advertismentthe joint movement brings together associations representing companies across sectors affected by the ai act, including manufacturing, healthcare, energy and digital technologies.while discussions on the ai omnibus are moving quickly,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "digitaleurope",
+        "sme"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a03f90e9c4aac09353a2b41",
+       "headline": "European Council includes ban on nudification tools in its proposal for amending AI Act",
+       "url": "https://therecord.media/european-council-includes-nudification-ban-ai-act",
+       "publisher": "therecord.media",
+       "published_at": "2026-03-13T16:33:08",
+       "lede": "the european council on friday released its proposal for streamlining the continent's landmark ai act, adding a prohibition for ai nudification tools and tougher standards for processing some categories of personal data. the european council sets the overall political direction for the eu and its actions on the proposal are",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a6dfdc60619379a812ea",
+       "headline": "EU lawmakers deal to ban AI non-consensual intimate deepfakes",
+       "url": "https://thenextweb.com/news/eu-lawmakers-deal-to-ban-ai-non-consensual-intimate-deepfakes",
+       "publisher": "thenextweb.com",
+       "published_at": "2026-03-12T10:17:21",
+       "lede": "a march 11 political agreement on ai act amendments will add an explicit prohibition on non-consensual intimate ai-generated images, direct fallout from the grok scandal.it took a scandal, a wave of regulatory anger, and a coalition of 57 european parliament members to get there, but the eu’s landmark ai act",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.7
+        },
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.4
+        }
+       ],
+       "country": "france",
+       "organizations": [
+        "european parliament",
+        "european parliament"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bd18111d0b3f0860f0507a",
+       "headline": "EU: EDPB and EDPS publish joint opinion on the European Commission’s Proposal for the Digital Omnibus on AI",
+       "url": "https://www.jdsupra.com/legalnews/eu-edpb-and-edps-publish-joint-opinion-1310614/",
+       "publisher": "jdsupra.com",
+       "published_at": "2026-02-17T15:30:58",
+       "lede": "[co-authors: ciara kelly, rachel de souza]navigating simplification without sacrificing safeguards: key takeawaysas the eu begins the complex task of making the european artificial intelligence act[1] (the “ai act”) workable in real life, the european commission’s proposal for a regulation amending regulations (eu) 2024/1689 and (eu) 2018/1139 as regards the simplification",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.81
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "rachel de souza",
+        "ciara kelly"
+       ]
+      },
+      {
+       "id": "6a0eabfd285a58da6f2dda5a",
+       "headline": "“Deepfake scams hurt everyone, but Big Tech platforms don’t care” says EBU in call for evidence",
+       "url": "https://www.ebu.ch/news/2026/02/deepfake-scams-hurt-everyone-but-big-tech-platforms-don-t-care-says-ebu-in-call-for-evidence",
+       "publisher": "ebu.ch",
+       "published_at": "2026-02-16T00:00:00",
+       "lede": "the ebu feedback to the european commission highlights the dangers of deepfake scams that exploit trust in journalists and media, spreading fraud and misinformation. under the digital services act and ai act, we call for stronger and more targeted measures to stop bad actors from abusing advertising systems and ai",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8111206d9d68a2065e192",
+       "headline": "CES26: EU, South Korea Frame Early Global Push for AI Regulation",
+       "url": "https://broadbandbreakfast.com/ces26-eu-south-korea-frame-early-global-push-for-ai-regulation/",
+       "publisher": "broadbandbreakfast.com",
+       "published_at": "2026-01-06T22:18:17",
+       "lede": "las vegas, jan. 6, 2025 — officials from ireland, canada and south korea said at ces2026 on tuesday that artificial intelligence policy and innovation are entering a phase where coordination across borders matters as much as domestic investment, as two major regulatory frameworks — the european union’s ai act and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.89
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a08b40c4a7a0d94c1243fd4",
+       "headline": "PRAD The European Digital Capacity Index",
+       "url": "https://www.politico.eu/prad-the-european-digital-capacity-index/",
+       "publisher": "politico.eu",
+       "published_at": "2026-04-29T22:54:15",
+       "lede": "why digital capacity matters over the past decade, the eu has rolled out a sweeping wave of digital regulation, from the ai act to the data act and the data governance act, reflecting a high level of ambition and scale. yet the outcomes tell a different story. european businesses continue",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23339c6105443aa60a074",
+       "headline": "EU lawmakers fail to agree on watered-down AI Act, talks pushed to May",
+       "url": "https://www.computerworld.com/article/4164963/eu-lawmakers-fail-to-agree-on-watered-down-ai-act-talks-pushed-to-may.html",
+       "publisher": "computerworld.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "eu member states and the european parliament failed to agree on changes that would have softened the bloc's ai act and pushed back its toughest enforcement deadlines. the talks ran for about 12 hours on tuesday and ended without an agreement, reuters reported, citing a cypriot official who said it",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "ireland",
+       "organizations": [
+        "european parliament",
+        "reuters",
+        "european parliament"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efaaff727212302c5f3257",
+       "headline": "EU AI Act: Neue Regeln und Sicherheitsrisiken im April 2026",
+       "url": "https://www.boerse-express.com/news/articles/eu-ai-act-neue-regeln-und-sicherheitsrisiken-im-april-2026-897835",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-04-26T05:30:01",
+       "lede": "while companies are preparing for the main enforcement phase of the eu ai act, regulators and technology providers are bringing new tools and guidelines to the market. standardised templates for risk assessments and extended data protection filters signal a shift towards technical enforcement – compliance as code in an era",
+       "sentiment": {
+        "label": "none",
+        "score": 0.56,
+        "group": "neutral"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 172,
+         "path": "/Business & Industrial/Business Finance/Risk Management",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 91,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMyAxNjo0NTowMiIsImkiOiI2OWVhNTBkNjdlMmU1MTExMjAyNWUxZDYiLCJwIjo3fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.084,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.088
+    }
+   }
+  }
+ ]
+}

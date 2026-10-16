@@ -1,0 +1,853 @@
+{
+ "slug": "influenza-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:00:26Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "influenza",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "influenza",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5182,
+     "tone": {
+      "carrying": 5177,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2708,
+        "share_pct": 52.31
+       },
+       {
+        "group": "neutral",
+        "count": 165,
+        "share_pct": 3.19
+       },
+       {
+        "group": "positive",
+        "count": 2304,
+        "share_pct": 44.5
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 5181,
+      "count": 3770,
+      "share_pct": 72.77
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.059,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.066
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "influenza",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "influenza",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1764,
+       "critical": 993,
+       "critical_pct": 56.3,
+       "negative": 933,
+       "positive": 763,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 769,
+       "critical": 562,
+       "critical_pct": 73.1,
+       "negative": 353,
+       "positive": 391,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 907,
+       "critical": 620,
+       "critical_pct": 68.4,
+       "negative": 443,
+       "positive": 420,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1047,
+       "critical": 744,
+       "critical_pct": 71.1,
+       "negative": 516,
+       "positive": 481,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1072,
+       "critical": 787,
+       "critical_pct": 73.4,
+       "negative": 502,
+       "positive": 524,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1175,
+       "critical": 808,
+       "critical_pct": 68.8,
+       "negative": 577,
+       "positive": 565,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1369,
+       "critical": 928,
+       "critical_pct": 67.8,
+       "negative": 794,
+       "positive": 535,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1896,
+       "critical": 1246,
+       "critical_pct": 65.7,
+       "negative": 1042,
+       "positive": 777,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1593,
+       "critical": 1195,
+       "critical_pct": 75.0,
+       "negative": 850,
+       "positive": 682,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1357,
+       "critical": 1023,
+       "critical_pct": 75.4,
+       "negative": 785,
+       "positive": 533,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 984,
+       "critical": 676,
+       "critical_pct": 68.7,
+       "negative": 478,
+       "positive": 478,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1248,
+       "critical": 876,
+       "critical_pct": 70.2,
+       "negative": 595,
+       "positive": 611,
+       "partial_period": false
+      }
+     ],
+     "total": 15181,
+     "critical_total": 10458,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.204,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.206
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "influenza",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "influenza",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5182,
+     "carrying": 1385,
+     "availability_pct": 26.73,
+     "items": [
+      {
+       "country": "united states",
+       "count": 737,
+       "share_pct": 14.22
+      },
+      {
+       "country": "india",
+       "count": 126,
+       "share_pct": 2.43
+      },
+      {
+       "country": "united kingdom",
+       "count": 68,
+       "share_pct": 1.31
+      },
+      {
+       "country": "australia",
+       "count": 49,
+       "share_pct": 0.95
+      },
+      {
+       "country": "china",
+       "count": 45,
+       "share_pct": 0.87
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 360
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.62,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.623
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "influenza",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "influenza",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "pandemic preparedness and response",
+       "count": 219,
+       "share": 6.18,
+       "lift": 504.14,
+       "baseline_count": 1,
+       "previous_period_count": 253,
+       "delta_pct": -13.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "zoonotic disease transmission pathways",
+       "count": 721,
+       "share": 20.33,
+       "lift": 237.11,
+       "baseline_count": 7,
+       "previous_period_count": 795,
+       "delta_pct": -9.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "emerging zoonotic viruses",
+       "count": 510,
+       "share": 14.38,
+       "lift": 234.81,
+       "baseline_count": 5,
+       "previous_period_count": 529,
+       "delta_pct": -3.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 variants (alpha, delta, omicron) and mutations",
+       "count": 173,
+       "share": 4.88,
+       "lift": 398.25,
+       "baseline_count": 1,
+       "previous_period_count": 127,
+       "delta_pct": 36.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "immunization strategies for rare diseases",
+       "count": 162,
+       "share": 4.57,
+       "lift": 372.93,
+       "baseline_count": 1,
+       "previous_period_count": 155,
+       "delta_pct": 4.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 5182,
+     "carrying": 3546,
+     "carrier_share_pct": 68.43,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.933,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.935
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "influenza",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "influenza",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e878a89baafc73568a6e58",
+       "headline": "Triple alerta sanitaria en Cusco por brotes virales: menores de cinco años son los más afectados",
+       "url": "https://larepublica.pe/sociedad/2026/04/14/triple-alerta-sanitaria-en-cusco-por-brotes-virales-menores-de-cinco-anos-son-los-mas-afectados-1339268",
+       "publisher": "larepublica.pe",
+       "published_at": "2026-04-14T22:36:52",
+       "lede": "cusco faces a triple health threat due to the simultaneous increase in cases of diseases such as hand, foot and mouth, measles and influenza ah3n2, reported the director of health intelligence of the regional health management, alex jaramillo., this situation mainly affects children under five years of age and has",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.57
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.45
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc53fff111344e7e7d44f0",
+       "headline": "4 Massachusetts Children Killed By Flu",
+       "url": "https://patch.com/massachusetts/across-ma/4-massachusetts-children-killed-flu",
+       "publisher": "patch.com",
+       "published_at": "2026-01-07T15:07:36",
+       "lede": "health & fitness 4 massachusetts children killed by flu two of the four children were from boston, the first to die from influenza in 12 years, according to the mayor's office.four massachusetts children have died from influenza-related illness, health officials said.\"tragically, influenza has already been reported to be associated with",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.65
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d117e990f098f0395db540",
+       "headline": "MA Reports 1st Flu-Related Child Death Of Season",
+       "url": "https://patch.com/massachusetts/across-ma/massachusetts-reports-1st-flu-related-child-death-season",
+       "publisher": "patch.com",
+       "published_at": "2026-01-05T14:35:34",
+       "lede": "massachusetts reported the first influenza-related death of a child this season. influenza-like illness visits are above baseline in the latest data and have risen in the last week. in addition to the child, the state reported 29 influenza-related deaths of adults between aug. 24 and dec. 27. during the week",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.78
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c75ca5706a322e0f2c12",
+       "headline": "How the concept of ‘medical freedom’ is reshaping the military’s decades-long stance on the flu vaccine mandate â and endangering troops’ readiness",
+       "url": "https://www.nationaltribune.com.au/how-the-concept-of-medical-freedom-is-reshaping-the-military-s-decades-long-stance-on-the-flu-vaccine-mandate-and-endangering-troops-readiness/",
+       "publisher": "nationaltribune.com.au",
+       "published_at": "2026-04-28T12:39:36",
+       "lede": "for the first time in almost 80 years, u.s. service members will no longer be mandated to receive the annual influenza vaccine. defense secretary pete hegseth announced the change on april 22, 2026 . citing medical autonomy and religious freedom, he described the requirement as “overly broad and not rational,”",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.85
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.44
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "pete hegseth",
+        "pete hegseth"
+       ]
+      },
+      {
+       "id": "6a7c8004b283e66636fb2761",
+       "headline": "How the concept of ‘medical freedom’ is reshaping the military’s decades-long stance on the flu vaccine mandate − and endangering troops’ readiness",
+       "url": "http://theconversation.com/how-the-concept-of-medical-freedom-is-reshaping-the-militarys-decades-long-stance-on-the-flu-vaccine-mandate-and-endangering-troops-readiness-281387",
+       "publisher": "theconversation.com",
+       "published_at": "2026-04-28T12:28:47",
+       "lede": "for the first time in almost 80 years, u.s. service members will no longer be mandated to receive the annual influenza vaccine. defense secretary pete hegseth announced the change on april 22, 2026. citing medical autonomy and religious freedom, he described the requirement as “overly broad and not rational,” telling",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.85
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.44
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99ff9d47fc028321c9604",
+       "headline": "Annual influenza vaccines now optional under US Department of War guidance changes",
+       "url": "https://www.defenceconnect.com.au/geopolitics-and-policy/18063-annual-influenza-vaccines-now-optional-under-us-department-of-war-guidance-changes",
+       "publisher": "defenceconnect.com.au",
+       "published_at": "2026-04-23T01:57:43",
+       "lede": "the us department of war has announced that annual influenza vaccines are no longer mandatory, under a newly signed memorandum. us secretary of war pete hegseth signed the memorandum that provides updated guidance, indicating that the annual influenza vaccine is now voluntary, effective immediately, for all active and reserve component",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.84
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.76
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "pete hegseth"
+       ]
+      },
+      {
+       "id": "6a2eeb438e67a2fcb3f31af1",
+       "headline": "ESCMID Global 2026: repeat vaccination with mRNA-1010 safe and effective",
+       "url": "https://www.yahoo.com/news/articles/escmid-global-2026-repeat-vaccination-160817609.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-21T16:08:17",
+       "lede": "at the european society of clinical microbiology and infectious diseases (escmid) global 2026 conference in munich, germany, late-breaking data on moderna’s seasonal influenza vaccine candidate, mrna-1010, was presented. mrna-1010 has been accepted for regulatory review in the us, eu, canada, and australia. the us food and drug administration (fda) has",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.86
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.75
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8826a9baafc7356909641",
+       "headline": "Hegseth will mit Abschaffung der Impfpflicht \"Ära des Verrats\" beenden",
+       "url": "https://www.n-tv.de/politik/Hegseth-will-mit-Abschaffung-der-Impfpflicht-Aera-des-Verrats-beenden-id30739610.html",
+       "publisher": "n-tv.de",
+       "published_at": "2026-04-21T15:59:32",
+       "lede": "influenza prevention at u.s. military hegseth wants to end with the abolition of the vaccination obligation \"era of treason\" 21.04.2026, 17:59 h listen to article ( 03:10 min) 00:00 / 03:10 0.5x 0.8x 1.0x 1.2x 1.5x 2.0x the duty to immunize is \"an inexorable war against our soldiers,\" says hegseth.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e881ce9baafc7356902c8b",
+       "headline": "ESCMID Global 2026: repeat vaccination with mRNA-1010 safe and effective",
+       "url": "https://www.clinicaltrialsarena.com/analyst-comment/escmid-global-2026-repeat-vaccination-mrna-1010/",
+       "publisher": "clinicaltrialsarena.com",
+       "published_at": "2026-04-21T15:08:17",
+       "lede": "at the european society of clinical microbiology and infectious diseases (escmid) global 2026 conference in munich, germany, late-breaking data on moderna’s seasonal influenza vaccine candidate, mrna-1010, was presented. mrna-1010 has been accepted for regulatory review in the us, eu, canada, and australia. the us food and drug administration (fda) has",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.86
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.73
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european society of clinical microbiology and infectious diseases",
+        "moderna",
+        "european society of clinical microbiology and infectious diseases"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99e8475f157062cb1e5a2",
+       "headline": "Why early action matters for cardiovascular health",
+       "url": "https://www.politico.eu/sponsored-content/why-early-action-matters-for-cardiovascular-health/",
+       "publisher": "politico.eu",
+       "published_at": "2026-04-21T05:00:00",
+       "lede": "respiratory infections such as influenza, covid-19 and respiratory syncytial virus (rsv) are well-established drivers of cvd and seasonal hospital strain. influenza vaccination alone can reduce major adverse cardiovascular events by over one-third. yet, across the eu a mismatch persists: high burden and low vaccination coverage rates. covid-19 vaccination rates in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.92
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.43
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d80d7b2d589e844d5039",
+       "headline": "Study: Flu plays larger role in winter deaths than recognized",
+       "url": "https://healio.com/news/infectious-disease/20260418/study-flu-plays-larger-role-in-winter-deaths-than-recognized",
+       "publisher": "healio.com",
+       "published_at": "2026-04-18T00:00:00",
+       "lede": "study: flu plays larger role in winter deaths than recognized key takeaways: influenza may contribute more to winter deaths than records indicate, a study found. researchers said the findings demonstrate a need for enhanced surveillance. munich — winter deaths associated with influenza may be significantly undercounted, a team of spanish",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.8
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "spain",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 904,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xOCAwMDowMDowMCIsImkiOiI2OWY5ZDgwZDdiMmQ1ODllODQ0ZDUwMzkiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.341,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.345
+    }
+   }
+  }
+ ]
+}

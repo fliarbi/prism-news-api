@@ -1,0 +1,827 @@
+{
+ "slug": "disaster-management-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:08:42Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "disaster management",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "disaster management",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3797,
+     "tone": {
+      "carrying": 3786,
+      "availability_pct": 99.71,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1988,
+        "share_pct": 52.51
+       },
+       {
+        "group": "neutral",
+        "count": 105,
+        "share_pct": 2.77
+       },
+       {
+        "group": "positive",
+        "count": 1693,
+        "share_pct": 44.72
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3793,
+      "count": 2973,
+      "share_pct": 78.38
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.226,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.229
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "disaster management",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "disaster management",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1167,
+       "critical": 958,
+       "critical_pct": 82.1,
+       "negative": 737,
+       "positive": 400,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 851,
+       "critical": 651,
+       "critical_pct": 76.5,
+       "negative": 470,
+       "positive": 356,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1100,
+       "critical": 818,
+       "critical_pct": 74.4,
+       "negative": 680,
+       "positive": 399,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1588,
+       "critical": 1381,
+       "critical_pct": 87.0,
+       "negative": 1121,
+       "positive": 440,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1114,
+       "critical": 967,
+       "critical_pct": 86.8,
+       "negative": 730,
+       "positive": 344,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 851,
+       "critical": 724,
+       "critical_pct": 85.1,
+       "negative": 539,
+       "positive": 300,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 984,
+       "critical": 882,
+       "critical_pct": 89.6,
+       "negative": 646,
+       "positive": 315,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 845,
+       "critical": 708,
+       "critical_pct": 83.8,
+       "negative": 478,
+       "positive": 344,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 712,
+       "critical": 562,
+       "critical_pct": 78.9,
+       "negative": 374,
+       "positive": 315,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 945,
+       "critical": 748,
+       "critical_pct": 79.2,
+       "negative": 475,
+       "positive": 433,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 854,
+       "critical": 664,
+       "critical_pct": 77.8,
+       "negative": 446,
+       "positive": 392,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1286,
+       "critical": 999,
+       "critical_pct": 77.7,
+       "negative": 693,
+       "positive": 553,
+       "partial_period": false
+      }
+     ],
+     "total": 12297,
+     "critical_total": 10062,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.16,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.164
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "disaster management",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "disaster management",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3797,
+     "carrying": 1992,
+     "availability_pct": 52.46,
+     "items": [
+      {
+       "country": "india",
+       "count": 875,
+       "share_pct": 23.04
+      },
+      {
+       "country": "united states",
+       "count": 219,
+       "share_pct": 5.77
+      },
+      {
+       "country": "indonesia",
+       "count": 90,
+       "share_pct": 2.37
+      },
+      {
+       "country": "afghanistan",
+       "count": 81,
+       "share_pct": 2.13
+      },
+      {
+       "country": "japan",
+       "count": 63,
+       "share_pct": 1.66
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 664
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.966,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.974
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "disaster management",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "disaster management",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "weather-related travel disruptions",
+       "count": 72,
+       "share": 2.89,
+       "lift": 236.04,
+       "baseline_count": 1,
+       "previous_period_count": 33,
+       "delta_pct": 118.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "disaster response and recovery teams",
+       "count": 214,
+       "share": 8.59,
+       "lift": 116.93,
+       "baseline_count": 6,
+       "previous_period_count": 257,
+       "delta_pct": -16.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "emergency preparedness and public education",
+       "count": 175,
+       "share": 7.03,
+       "lift": 114.74,
+       "baseline_count": 5,
+       "previous_period_count": 137,
+       "delta_pct": 27.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "flood mitigation strategies and case studies",
+       "count": 572,
+       "share": 22.97,
+       "lift": 60.49,
+       "baseline_count": 31,
+       "previous_period_count": 874,
+       "delta_pct": -34.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hurricane/cyclone impact studies and preparedness",
+       "count": 239,
+       "share": 9.6,
+       "lift": 71.23,
+       "baseline_count": 11,
+       "previous_period_count": 430,
+       "delta_pct": -44.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3797,
+     "carrying": 2490,
+     "carrier_share_pct": 65.58,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.029,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.031
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "disaster management",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "disaster management",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a0affd7636c977421383e5e",
+       "headline": "Líbano afirma que han muerto 2,387 personas por el ataque de Israel a Hezbolá",
+       "url": "http://www.eleconomista.com.mx/internacionales/libano-afirma-han-muerto-2-387-personas-ataque-israel-hezbola-20260420-809546.html",
+       "publisher": "eleconomista.com.mx",
+       "published_at": "2026-04-20T20:50:57",
+       "lede": "israeli attacks in lebanon killed at least 2,387 people since the war against the pro-iranian hezbollah movement broke out, the government reported monday in a new balance sheet. the disaster management unit added that 7,702 people were injured. similarly, since a 10-day ceasefire came into effect on friday, authorities and",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.92,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.95
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e854725cfa3e5ba5e8d7c0",
+       "headline": "Nationwide rain toll reaches 96 as NDMA reports widespread damage",
+       "url": "https://www.24newshd.tv/08-Apr-2026/nationwide-rain-toll-reaches-96-ndma-reports-widespread-damage",
+       "publisher": "24newshd.tv",
+       "published_at": "2026-04-08T16:17:05",
+       "lede": "the national disaster management authority (ndma) has reported significant loss of life and property damage across the country due to heavy rains between march 19 and april 8, 2026. according to the report, at least 96 people lost their lives while 192 others were injured in rain-related incidents nationwide. khyber",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.8
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a84b9963d76f4afd7320b",
+       "headline": "Durban Floods: Chatsworth, Morningside Hit Hard as City Teams Clear Debris",
+       "url": "https://www.joburgetc.com/news/durban-flood-damage-city-teams-race-to-restore-order-after-weekend-storm/",
+       "publisher": "joburgetc.com",
+       "published_at": "2026-04-08T10:17:19",
+       "lede": "the ethekwini municipality says its disaster management teams are working around the clock after severe weekend rains caused widespread flooding and damage across parts of durban. the municipality confirmed on monday that teams were immediately deployed following the storm, which left a trail of submerged roads, fallen trees, and damaged",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2e275bd7b10565a4684c6",
+       "headline": "Pakistan et Afghanistan | Des intempéries font 188 morts",
+       "url": "https://www.lapresse.ca/international/asie-et-oceanie/2026-04-07/pakistan-et-afghanistan/des-intemperies-font-188-morts.php",
+       "publisher": "lapresse.ca",
+       "published_at": "2026-04-07T13:48:47",
+       "lede": "(kabul) the heavy rains, floods and snowfalls that have hit afghanistan and pakistan for more than two weeks have killed 188 people, the disaster management agencies of both countries said on tuesday. in afghanistan, already facing one of the worst humanitarian crises in the world, \"123 people have died since",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.78,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2946c7f3a572cf4a7ed66",
+       "headline": "77 killed, over 100 injured in Afghanistan floods since March 26: Govt officials",
+       "url": "https://businessnewsthisweek.com/international/77-killed-over-100-injured-in-afghanistan-floods-since-march-26-govt-officials/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-04-05T11:00:47",
+       "lede": "kabul, april 5: at least 77 people were killed, and 137 others were injured in floods that swept across several provinces of afghanistan between march 26 and april 4, local media reported on sunday, quoting disaster management officials. afghanistan’s national disaster preparedness and disaster management authority said that floods have",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.96,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.84
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.44
+        }
+       ],
+       "country": "afghanistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2849c37f6c5e663c0557",
+       "headline": "Autoridades de Afganistán reportan 77 muertos en 10 días por inundaciones y deslaves",
+       "url": "https://apnews.com/article/afganistan-tormentas-deslaves-inundaciones-d407e6d3a5935f8af1cedf10ad26a7da",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-04T14:14:40",
+       "lede": "kabul (ap) — the widespread flooding, landslides and lightning from heavy rains and storms across afghanistan have left 77 dead and 137 injured in the last 10 days, the country's disaster management authority reported on saturday. more rains have been forecast for the coming days throughout afghanistan, and the authorities",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.64
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ccbb7d31777bc8a59c73a3",
+       "headline": "PDMA issues rain alert for Punjab from tomorrow | 24 News HD",
+       "url": "https://www.24newshd.tv/31-Mar-2026/pdma-issues-rain-alert-punjab-tomorrow",
+       "publisher": "24newshd.tv",
+       "published_at": "2026-03-31T06:09:00",
+       "lede": "the provincial disaster management authority (pdma) of punjab on tuesday issued an alert for more rains in the province from tomorrow until april 4, reported 24newshd tv channel.according to the spokesman for the pdma, heavy rains were expected in most districts of the province.elaborating further, he said that lahore, rawalpindi,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.72
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.47
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8591e5cfa3e5ba5eb8e38",
+       "headline": "Heavy rains and floods kill at least 45 people",
+       "url": "https://k24.digital/news/heavy-rains-and-floods-kill-at-least-45-people",
+       "publisher": "k24.digital",
+       "published_at": "2026-03-30T20:55:20",
+       "lede": "heavy rains and floods kill at least 45 people al jazeera 11:55 pm floods in afghanistan. photo/https://www.facebook.com/afghanistanunicef heavy rain that has caused severe flooding and landslides has killed at least 45 people in afghanistan and pakistan over the past five days, authorities say. afghanistan’s national disaster management authority (andma) said",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.81,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.81
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d10b18a5e6552470ee8caa",
+       "headline": "All trapped victims rescued from Accra Newtown building collapse – NADMO - MyJoyOnline",
+       "url": "https://www.myjoyonline.com/all-trapped-victims-rescued-from-accra-newtown-building-collapse-nadmo/",
+       "publisher": "myjoyonline.com",
+       "published_at": "2026-03-30T13:19:30",
+       "lede": "the director-general of the national disaster management organisation (nadmo), major (rtd) dr joseph bikanyi kuyon, has confirmed that all persons trapped beneath the collapsed building near the newtown experimental d/a school have been successfully retrieved. the incident occurred on sunday, march 29, when the structure collapsed while worshippers had gathered",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.69
+        }
+       ],
+       "country": "ghana",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1d02b17c374136f82cc31",
+       "headline": "पाकिस्तान में भारी बारिश के कारण नौ की मौत",
+       "url": "https://www.livehindustan.com/ncr/new-delhi/story-heavy-rain-in-khyber-pakhtunkhwa-9-dead-including-8-children-201774867136467.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-03-30T10:38:59",
+       "lede": "the agency. nine people, including eight children, have died and 47 others have been injured as heavy rains have been raining in pakistan's khyber pakhtunkhwa province since last week. the authorities informed on monday. according to the preliminary report released by the provincial disaster management authority (pdma), most people died",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9d13d1f37db756888b2d4",
+       "headline": "Ascienden a 228 los muertos por las inundaciones que afectan a Mozambique desde octubre",
+       "url": "https://cdn.com.do/internacionales/228-muertos-por-inundaciones-en-mozambique/",
+       "publisher": "cdn.com.do",
+       "published_at": "2026-02-20T22:54:02",
+       "lede": "nairobi. at least 228 people died and an additional 863,000 were affected by the impact of floods in mozambique since last october by torrential rains and the recent passage of tropical cyclone gezani, reported on friday by the national institute for disaster management (ingd). between october 1, 2025 and february",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.89,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.82
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c42dae516feee340031873",
+       "headline": "Ciclone deixa 59 mortos e milhares desalojados em Madagascar",
+       "url": "https://veja.abril.com.br/mundo/ciclone-deixa-59-mortos-e-milhares-desalojados-em-madagascar/",
+       "publisher": "veja.abril.com.br",
+       "published_at": "2026-02-16T20:56:23",
+       "lede": "tropical cyclone gezani left at least 59 dead in madagascar and forced 16,428 people to leave their homes, according to a report released on monday, 16, by the national office of risk and disaster management (bngrc). another 15 people are still missing and 804 are injured. in total, 423,986 residents",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc8286650bbd41e03ea401",
+       "headline": "Chuvas em Moçambique já mataram 215 pessoas desde outubro",
+       "url": "http://expresso.pt/palop/2026-02-16-chuvas-em-mocambique-ja-mataram-215-pessoas-desde-outubro-6a318790",
+       "publisher": "expresso.pt",
+       "published_at": "2026-02-16T12:57:47",
+       "lede": "the total number of deaths in the current rainy season in mozambique has risen to 215, with a record of over 856,000 people affected, since october, according to the update made this monday by the institute of disaster management. according to information from the national institute for disaster risk management",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 703,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xNiAxMTozNzowOSIsImkiOiI2OWJiY2UzZDg1YzM5YmI0NmM3MGJiYjMiLCJwIjo5fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.444,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.447
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,904 @@
+{
+ "slug": "minimum-wage-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:06:22Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "minimum wage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "minimum wage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4545,
+     "tone": {
+      "carrying": 4541,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2698,
+        "share_pct": 59.41
+       },
+       {
+        "group": "neutral",
+        "count": 410,
+        "share_pct": 9.03
+       },
+       {
+        "group": "positive",
+        "count": 1433,
+        "share_pct": 31.56
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4543,
+      "count": 2896,
+      "share_pct": 63.75
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.631,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.635
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "minimum wage",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "minimum wage",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1067,
+       "critical": 601,
+       "critical_pct": 56.3,
+       "negative": 576,
+       "positive": 374,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 739,
+       "critical": 461,
+       "critical_pct": 62.4,
+       "negative": 466,
+       "positive": 220,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 879,
+       "critical": 522,
+       "critical_pct": 59.4,
+       "negative": 583,
+       "positive": 250,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1080,
+       "critical": 633,
+       "critical_pct": 58.6,
+       "negative": 747,
+       "positive": 269,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 638,
+       "critical": 439,
+       "critical_pct": 68.8,
+       "negative": 407,
+       "positive": 176,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 543,
+       "critical": 361,
+       "critical_pct": 66.5,
+       "negative": 268,
+       "positive": 224,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 738,
+       "critical": 478,
+       "critical_pct": 64.8,
+       "negative": 355,
+       "positive": 291,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1316,
+       "critical": 748,
+       "critical_pct": 56.8,
+       "negative": 690,
+       "positive": 476,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 965,
+       "critical": 533,
+       "critical_pct": 55.2,
+       "negative": 512,
+       "positive": 351,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1247,
+       "critical": 796,
+       "critical_pct": 63.8,
+       "negative": 695,
+       "positive": 411,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 937,
+       "critical": 631,
+       "critical_pct": 67.3,
+       "negative": 577,
+       "positive": 296,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1396,
+       "critical": 936,
+       "critical_pct": 67.0,
+       "negative": 914,
+       "positive": 375,
+       "partial_period": false
+      }
+     ],
+     "total": 11545,
+     "critical_total": 7139,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.032,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.061
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "minimum wage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "minimum wage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4545,
+     "carrying": 1431,
+     "availability_pct": 31.49,
+     "items": [
+      {
+       "country": "united states",
+       "count": 580,
+       "share_pct": 12.76
+      },
+      {
+       "country": "united kingdom",
+       "count": 247,
+       "share_pct": 5.43
+      },
+      {
+       "country": "india",
+       "count": 173,
+       "share_pct": 3.81
+      },
+      {
+       "country": "nigeria",
+       "count": 58,
+       "share_pct": 1.28
+      },
+      {
+       "country": "canada",
+       "count": 32,
+       "share_pct": 0.7
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 341
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.07,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.072
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "minimum wage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "minimum wage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "compensation and benefits structures",
+       "count": 285,
+       "share": 12.34,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 278,
+       "delta_pct": 2.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "minimum wage legislation debates",
+       "count": 302,
+       "share": 13.08,
+       "lift": 355.89,
+       "baseline_count": 3,
+       "previous_period_count": 224,
+       "delta_pct": 34.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "payroll management systems",
+       "count": 129,
+       "share": 5.59,
+       "lift": 456.05,
+       "baseline_count": 1,
+       "previous_period_count": 100,
+       "delta_pct": 29.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "labor & employment law - minimum wage legislation",
+       "count": 102,
+       "share": 4.42,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 81,
+       "delta_pct": 25.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "hr compliance and labor laws",
+       "count": 203,
+       "share": 8.79,
+       "lift": 239.22,
+       "baseline_count": 3,
+       "previous_period_count": 157,
+       "delta_pct": 29.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4545,
+     "carrying": 2309,
+     "carrier_share_pct": 50.8,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.205,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.207
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "minimum wage",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "minimum wage",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8c1e87bb1410d4cb9f0cf",
+       "headline": "Haiti Workers Protest for Higher Minimum Wage - Time News",
+       "url": "https://time.news/haiti-workers-protest-for-higher-minimum-wage/",
+       "publisher": "time.news",
+       "published_at": "2026-04-13T22:56:48",
+       "lede": "more than 1,000 workers took to the streets of port-au-prince on monday, launching a wave of protests to demand a significant increase in the minimum wage. the demonstrations come as a surge in global oil prices, triggered by deepening conflict in iran, has pushed the cost of basic goods and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.46
+        }
+       ],
+       "country": "haiti",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9dc88a088760d34c4e5de",
+       "headline": "¿Doscientos cuarenta… qué? | El Feed | Caracas Chronicles",
+       "url": "https://www.caracaschronicles.com/el-feed/doscientos-cuarenta-que/",
+       "publisher": "caracaschronicles.com",
+       "published_at": "2026-04-30T23:27:50",
+       "lede": "subscribe to el feed a string of venezuela-related stuff delivered straight to your inbox. submit economy dawn of venezuela’s minimum wage… again it’s not that we want to be deliberately repetitive… it’s just that the government keeps doing the same stupid thing. anabella abadi m. october 28, 2016 politics is",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 20,
+         "path": "/News/Politics/Campaigns & Elections",
+         "score": 0.5
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.49
+        }
+       ],
+       "country": "venezuela",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2ca9c37f6c5e663f87b1",
+       "headline": "Minimum wage hikes 'killing off job opportunities for the young'",
+       "url": "https://www.thisismoney.co.uk/money/markets/article-15776263/Minimum-wage-hikes-killing-job-opportunities-young-warns-CBI-chief.html",
+       "publisher": "thisismoney.co.uk",
+       "published_at": "2026-04-29T23:01:55",
+       "lede": "labour is killing off job opportunities for the young by pricing them out of work with huge increases in the minimum wage, according to the new boss of the confederation of british industry. in a hard-hitting speech on thursday evening, city grandee cressida hogg will warn that forcing firms to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8859e43843dd771d177c4",
+       "headline": "WA rentals out of reach for thousands on income support",
+       "url": "https://www.thewest.com.au/politics/state-politics/wa-rentals-falling-further-out-of-reach-for-thousands-on-income-support-and-minimum-wage-c-22207627",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-04-29T16:02:00",
+       "lede": "more and more west australians relying on income support or minimum wage are falling through the cracks in housing, with fewer rentals than ever being accessible to those struggling most. one such struggling renter is nicolette murphy who was diagnosed with multiple sclerosis in 2010 and has since been forced",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22e3027117df83f952e0a",
+       "headline": "‘Zero options’ left for low income renters in parts of southern Qld - realestate.com.au",
+       "url": "https://www.goldcoastbulletin.com.au/real-estate/queensland/zero-options-left-for-low-income-renters-in-parts-of-southern-qld/news-story/5b17181431cc3dfd53765e848f7d2518",
+       "publisher": "goldcoastbulletin.com.au",
+       "published_at": "2026-04-29T14:00:00",
+       "lede": "low income families are being locked out of rental properties in southern queensland, with some areas offering zero options for those on income support or minimum wage. the dire finding was revealed in anglicare southern queensland’s 2026 rental affordability snapshot, which revealed that the rental market was now effectively out",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.45
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c859a5706a322e0fbebf",
+       "headline": "Democrats Introduce Bill To More Than Triple The Minimum Wage",
+       "url": "https://www.huffpost.com/entry/house-democrats-25-minimum-wage_n_69f0b51ce4b0093689a9cb3d",
+       "publisher": "huffpost.com",
+       "published_at": "2026-04-28T15:19:31",
+       "lede": "loading error loading a group of house democrats introduced a bill tuesday that would hike the minimum wage to $25 per hour, the boldest target any progressives in congress have set for the federal wage floor. the legislation from reps. delia ramirez (ill.) and analilia mejia (n.j.) won’t be going",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.65
+        },
+        {
+         "code": 250,
+         "path": "/Law & Government/Legal/Labor & Employment Law",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ramirez"
+       ],
+       "people": [
+        "delia ramirez"
+       ]
+      },
+      {
+       "id": "69f0e366d325610894207d57",
+       "headline": "Minimum wage, housing affordability, data center crackdown among NC Democrats' 2026 priorities",
+       "url": "https://www.wral.com/news/nccapitol/nc-democrats-priorities-minimum-wage-data-center-housing-afford-april-2026/",
+       "publisher": "wral.com",
+       "published_at": "2026-04-27T18:10:10",
+       "lede": "bills to mandate a near-universal $15-per-hour minimum wage, boost new housing development and enact stricter new rules for data centers aimed at their energy and water consumption are among the top priorities for democrats in the north carolina house of representatives want to highlight during the 2026 legislative session. democrats",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.52
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "north carolina house of representatives"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efaa88727212302c5edde1",
+       "headline": "Regional wage hikes 'justified' due to fuel-driven inflation--Libanan",
+       "url": "https://mb.com.ph/2026/04/26/regional-wage-hikes-justified-due-to-fuel-driven-inflation-libanan",
+       "publisher": "mb.com.ph",
+       "published_at": "2026-04-26T12:07:00",
+       "lede": "house minority leader and 4ps party-list rep. marcelino “nonoy” libanan says it's now \"justified\" for the country’s 17 regional wage boards to roll out a fresh round of minimum wage increases starting this june. “there’s no question that a new round of regional wage hikes is now fully justified, mainly",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ncr"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa904a84b609af2b1a7d0",
+       "headline": "ZCTU implores govt to review US$150 minimum wage - NewZimbabwe.com",
+       "url": "https://www.newzimbabwe.com/zctu-implores-govt-to-review-us150-minimum-wage/",
+       "publisher": "newzimbabwe.com",
+       "published_at": "2026-04-23T23:10:43",
+       "lede": "the zimbabwe congress of trade unions (zctu) says the government gazetted us$150 minimum wages is choking collective bargaining negotiations prompting calls for an urgent review. the national minimum wage in zimbabwe is set at us$150 per month (or the equivalent in the zimbabwe gold/zig currency), as established by statutory instrument",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 135,
+         "path": "/People & Society/Social Issues & Advocacy/Work & Labor Issues",
+         "score": 0.7
+        }
+       ],
+       "country": "zimbabwe",
+       "organizations": [
+        "zimbabwe congress of trade unions"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e9a4e475f157062cb365c7",
+       "headline": "Colombia’s Petro Warns of Another Minimum Wage Gike if Interest Rates Rise Again",
+       "url": "https://colombiaone.com/2026/04/22/colombia-petro-warns-minimum-wage-gike-interest-rates-rise/",
+       "publisher": "colombiaone.com",
+       "published_at": "2026-04-22T16:08:11",
+       "lede": "colombia’s president gustavo petro warned that the minimum wage will rise again if the central bank continues to raise interest rates. credit: presidency of colombia. colombia’s president, gustavo petro, once again strained relations with the central bank (banco de la republica) by issuing a direct warning: if the monetary authority",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.63
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.54
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "central bank"
+       ],
+       "people": [
+        "gustavo petro"
+       ]
+      },
+      {
+       "id": "69ea2e058266d9339995b35f",
+       "headline": "2027: UK-based Surveyor declares for presidency under PDP",
+       "url": "https://guardian.ng/news/2027-uk-based-surveyor-declares-for-presidency-under-pdp/",
+       "publisher": "guardian.ng",
+       "published_at": "2026-04-22T11:42:57",
+       "lede": "…..vows to make minimum wage n150,000 ….tackles banditry with 3m security forces in 24 hours a uk-based quantity surveyor victor femi ekunyan, has declared his intention to contest the 2027 presidential election on the platform of the people’s democratic party (pdp), vowing to increase workers minimum wage to n150,000 if",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bc527bb1410d4cb52b97",
+       "headline": "027: UK-based Surveyor declares for presidency under PDP",
+       "url": "https://guardian.ng/news/027-uk-based-surveyor-declares-for-presidency-under-pdp/",
+       "publisher": "guardian.ng",
+       "published_at": "2026-04-22T11:42:57",
+       "lede": "…..vows to make minimum wage n150,000 ….tackles banditry with 3m security forces in 24 hours a uk-based quantity surveyor victor femi ekunyan, has declared his intention to contest the 2027 presidential election on the platform of the people’s democratic party (pdp), vowing to increase workers minimum wage to n150,000 if",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e885299baafc73569260e3",
+       "headline": "Hows Trump's war in Iran is hitting hospitality",
+       "url": "https://www.cityam.com/hows-trumps-war-in-iran-is-hitting-hospitality/",
+       "publisher": "cityam.com",
+       "published_at": "2026-04-22T04:57:00",
+       "lede": "hows trump’s war in iran is hitting hospitality the hospitality sector has already been hammered by taxes, regulation and minimum wage hikes. now trump’s war in iran is hitting everyone’s discretionary spending, says sacha lord i’ve written so much about how hospitality, not just in london, but across the whole",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "sacha lord"
+       ]
+      },
+      {
+       "id": "69e994f9bdd09a23d08cadcc",
+       "headline": "In Noida and beyond, workers’ protests are proof that cost of living crisis can no longer be ignored",
+       "url": "https://indianexpress.com/article/opinion/columns/in-noida-and-beyond-workers-protests-are-proof-that-cost-of-living-crisis-can-no-longer-be-ignored-10647106/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-21T00:50:33",
+       "lede": "one of the major demands of workers in the recent protests across states has been to raise the minimum wage. most workers complained of their inability to meet the basic cost of living from the wages they earn. this was despite many of them working overtime, when inflation was 1",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 135,
+         "path": "/People & Society/Social Issues & Advocacy/Work & Labor Issues",
+         "score": 0.52
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.49
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.49
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87de27bb1410d4c853a3b",
+       "headline": "COTU to Push for 23% Minimum Wage Increase Ahead of Labour Day",
+       "url": "https://www.capitalfm.co.ke/news/2026/04/cotu-to-push-for-23-minimum-wage-increase-ahead-of-labour-day/",
+       "publisher": "capitalfm.co.ke",
+       "published_at": "2026-04-20T17:23:34",
+       "lede": "nairobi, kenya apr 20 – the central organisation of trade unions kenya (cotu-k) is set to demand a 23 per cent increase in the minimum wage during this year’s labour day celebrations, as pressure mounts over the rising cost of living and worsening labour conditions. the resolution was reached during",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 135,
+         "path": "/People & Society/Social Issues & Advocacy/Work & Labor Issues",
+         "score": 0.53
+        }
+       ],
+       "country": "kenya",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1722,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMCAxNTo1ODowMCIsImkiOiI2OWU5OTgxZGQ0N2ZjMDI4MzIxNjk5M2EiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.861,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.864
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1002 @@
+{
+ "slug": "antimicrobial-resistance-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:16Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "antimicrobial resistance",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "antimicrobial resistance",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3088,
+     "tone": {
+      "carrying": 3075,
+      "availability_pct": 99.58,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 800,
+        "share_pct": 26.02
+       },
+       {
+        "group": "neutral",
+        "count": 111,
+        "share_pct": 3.61
+       },
+       {
+        "group": "positive",
+        "count": 2164,
+        "share_pct": 70.37
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3087,
+      "count": 2876,
+      "share_pct": 93.16
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.835,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.838
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "antimicrobial resistance",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "antimicrobial resistance",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 500,
+       "critical": 447,
+       "critical_pct": 89.4,
+       "negative": 123,
+       "positive": 350,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 546,
+       "critical": 483,
+       "critical_pct": 88.5,
+       "negative": 160,
+       "positive": 362,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 529,
+       "critical": 493,
+       "critical_pct": 93.2,
+       "negative": 138,
+       "positive": 365,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 554,
+       "critical": 516,
+       "critical_pct": 93.1,
+       "negative": 159,
+       "positive": 364,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 654,
+       "critical": 606,
+       "critical_pct": 92.7,
+       "negative": 203,
+       "positive": 433,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 676,
+       "critical": 622,
+       "critical_pct": 92.0,
+       "negative": 207,
+       "positive": 440,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 834,
+       "critical": 781,
+       "critical_pct": 93.6,
+       "negative": 265,
+       "positive": 537,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 874,
+       "critical": 819,
+       "critical_pct": 93.7,
+       "negative": 238,
+       "positive": 593,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1095,
+       "critical": 1026,
+       "critical_pct": 93.7,
+       "negative": 293,
+       "positive": 756,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 663,
+       "critical": 625,
+       "critical_pct": 94.3,
+       "negative": 170,
+       "positive": 466,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 604,
+       "critical": 566,
+       "critical_pct": 93.7,
+       "negative": 161,
+       "positive": 418,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 726,
+       "critical": 659,
+       "critical_pct": 90.8,
+       "negative": 176,
+       "positive": 524,
+       "partial_period": false
+      }
+     ],
+     "total": 8255,
+     "critical_total": 7643,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.033,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.038
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "antimicrobial resistance",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "antimicrobial resistance",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3088,
+     "carrying": 448,
+     "availability_pct": 14.51,
+     "items": [
+      {
+       "country": "united states",
+       "count": 114,
+       "share_pct": 3.69
+      },
+      {
+       "country": "india",
+       "count": 79,
+       "share_pct": 2.56
+      },
+      {
+       "country": "united kingdom",
+       "count": 57,
+       "share_pct": 1.85
+      },
+      {
+       "country": "nigeria",
+       "count": 17,
+       "share_pct": 0.55
+      },
+      {
+       "country": "australia",
+       "count": 14,
+       "share_pct": 0.45
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 167
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.163,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.166
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "antimicrobial resistance",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "antimicrobial resistance",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "antimicrobial stewardship programs",
+       "count": 1223,
+       "share": 47.72,
+       "lift": 3895.18,
+       "baseline_count": 1,
+       "previous_period_count": 1184,
+       "delta_pct": 3.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "treatment of multidrug-resistant organisms",
+       "count": 1124,
+       "share": 43.85,
+       "lift": 1193.29,
+       "baseline_count": 3,
+       "previous_period_count": 1086,
+       "delta_pct": 3.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "antimicrobial-resistant pathogens",
+       "count": 1317,
+       "share": 51.39,
+       "lift": 599.22,
+       "baseline_count": 7,
+       "previous_period_count": 1266,
+       "delta_pct": 4.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "antibiotic resistance and novel treatments",
+       "count": 334,
+       "share": 13.03,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 289,
+       "delta_pct": 15.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "antibiotic resistance research",
+       "count": 251,
+       "share": 9.79,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 278,
+       "delta_pct": -9.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3088,
+     "carrying": 2563,
+     "carrier_share_pct": 83.0,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.018,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.02
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "antimicrobial resistance",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "antimicrobial resistance",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "1fbcebfbd87b798f97eae8ec",
+       "headline": "Antimicrobial Resistance in Somalia: A Silent Public Health Crisis Demanding Immediate Action.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41777727/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-01-01T00:00:00",
+       "lede": "antimicrobial resistance in somalia: a silent public health crisis demanding immediate action.antimicrobial resistance (amr) is a critical global public health threat, particularly in fragile and conflict-affected settings. in somalia, decades of armed conflict, large-scale displacement, and limited healthcare infrastructure have created conditions conducive to the emergence and spread of resistant",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.8
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "77ffedc386d925fbd641cefc",
+       "headline": "Antimicrobial pharmacodynamics: defining regimens of antibiotics that are safe, effective and prevent the emergence of resistance.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42057718/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "antimicrobial pharmacodynamics: defining regimens of antibiotics that are safe, effective and prevent the emergence of resistance.the substantial value of modern antibacterial agents is eroded by the inexorable development of antimicrobial resistance (amr). the discovery and development of antibiotics are central aspects of addressing amr. since new drug-resistant mechanisms are continually",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.54
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "f5bbc332091d9b19f41f4467",
+       "headline": "Antimicrobial Efficacy and Mechanistic Insights of 0D, 1D, 2D, and 3D Nanoparticles: A Review.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42083404/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "antimicrobial efficacy and mechanistic insights of 0d, 1d, 2d, and 3d nanoparticles: a review.the escalating global challenge of antimicrobial resistance (amr) underscores the urgent need for alternative therapeutic approaches beyond conventional antibiotics. nanoparticles (np), with their distinct physicochemical properties, tunable morphologies, high surface reactivity, and structural diversity, have emerged as",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.87,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.47
+        },
+        {
+         "code": 464,
+         "path": "/Science/Chemistry",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "948930e439499b895c457b30",
+       "headline": "Revisiting Fluoroquinolone Prophylaxis in Hematological Malignancies and Hematopoietic Cell Transplantation: A Decade of Evidence and Gaps in Understanding the Impact of Gut Colonization with Fluoroquinolone-Resistant Enterobacterales.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42055352/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "revisiting fluoroquinolone prophylaxis in hematological malignancies and hematopoietic cell transplantation: a decade of evidence and gaps in understanding the impact of gut colonization with fluoroquinolone-resistant enterobacterales.rising antimicrobial resistance necessitates reevaluation of fluoroquinolone (fq) prophylaxis (fqp) in patients with hematologic malignancies undergoing intensive chemotherapy or hematopoietic cell transplantation (hct). this narrative",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.58
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.51
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.47
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.47
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "1f51c32a5571f3790ad45192",
+       "headline": "Antibacterial Activity of Quantum-Confined One-Dimensional Titanate Nanofilaments.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42041112/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-27T00:00:00",
+       "lede": "antibacterial activity of quantum-confined one-dimensional titanate nanofilaments.the emergence of antimicrobial resistance demands fundamentally new classes of antibacterial materials that operate through mechanisms distinct from conventional chemical or photodynamic pathways. here, we introduce quantum-confined, one-dimensional lepidocrocite titanate nanofilaments (1dl nfs) as a previously unexplored inorganic nanomaterial platform that inactivates bacteria through",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "f87a08b4303240ffee61387a",
+       "headline": "Molecular epidemiology and genomic plasticity of ESBL-producing and carbapenem-non-susceptible Klebsiella pneumoniae in a tertiary care hospital in northern Thailand.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42031126/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-22T00:00:00",
+       "lede": "molecular epidemiology and genomic plasticity of esbl-producing and carbapenem-non-susceptible klebsiella pneumoniae in a tertiary care hospital in northern thailand.multidrug-resistant klebsiella pneumoniae is spreading rapidly worldwide. the emergence of high-risk clones reinforces the vital need for genomic surveillance to monitor emerging antimicrobial resistance. in this study, we characterized 19 non-duplicate esbl-producing",
+       "sentiment": {
+        "label": "none",
+        "score": 0.58,
+        "group": "neutral"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.89
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "7de858760119df7dc983a4a5",
+       "headline": "Assessing N. gonorrhoeae prevalence and testing capacity for new treatment rollout: a scoping review for Cambodia, Thailand, Vietnam and South Africa.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42021210/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-22T00:00:00",
+       "lede": "assessing n. gonorrhoeae prevalence and testing capacity for new treatment rollout: a scoping review for cambodia, thailand, vietnam and south africa.background: neisseria gonorrhoeae, a major cause of sexually transmitted bacterial infections, poses a significant public health challenge, particularly due to rising antimicrobial resistance (amr). regions such as south-east asia and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 619,
+         "path": "/Health/Reproductive Health/Other",
+         "score": 0.91
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e887c89baafc73569416ec",
+       "headline": "Redefining the Fight Against AMR: Anti-Virulence Strategies and Phage Therapy Lead the Way",
+       "url": "https://indiamedtoday.com/redefining-the-fight-against-amr-anti-virulence-strategies-and-phage-therapy-lead-the-way/",
+       "publisher": "indiamedtoday.com",
+       "published_at": "2026-04-21T04:30:00",
+       "lede": "in the shadow of a mounting antimicrobial resistance (amr) crisis, india stands at a critical crossroads. with drug-resistant infections claiming nearly 300,000 lives in 2019 alone, according to icmr data, and resistance rates soaring to 80% for pathogens like carbapenem-resistant acinetobacter baumannii, traditional antibiotics are losing ground fast. overuse, inadequate",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.82
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.44
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.43
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "amr"
+       ],
+       "people": []
+      },
+      {
+       "id": "b1e4a4c6bb22d3d6daa3a392",
+       "headline": "Injectable natural hydrogel-loaded Ta4C3 quantum dots self-assembled with Phillyrin-mediated NIR-II anti-infection for acute sinusitis.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42009968/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-20T00:00:00",
+       "lede": "injectable natural hydrogel-loaded ta4c3 quantum dots self-assembled with phillyrin-mediated nir-ii anti-infection for acute sinusitis.acute sinusitis, common across populations, worsens seasonally due to pollution and improper medication, increasing the risk of chronic disease and impairing quality of life. to improve treatment and limit antimicrobial resistance in acute sinusitis, we developed a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e991b7d47fc02832116167",
+       "headline": "ICU infections show alarming antibiotic resistance in Pune hospital study",
+       "url": "https://www.hindustantimes.com/cities/pune-news/icu-infections-show-alarming-antibiotic-resistance-in-pune-hospital-study-101776623261742.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-04-19T23:04:16",
+       "lede": "a hospital-based study by byramjee jeejeebhoy government medical college (bjmc), sassoon general hospital (sgh), and johns hopkins university has highlighted a concerning rise in antimicrobial resistance (amr) among critically ill patients, especially in intensive care units (icus).titled “antimicrobial resistance in gram-negative pathogens isolated from blood cultures of intensive care unit",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.94
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "johns hopkins university",
+        "sgh",
+        "amr"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99e7075f157062cb1d91f",
+       "headline": "Resistência antimicrobiana avança no mundo e ameaça tornar infecções comuns novamente potencialmente fatais",
+       "url": "https://www.em.com.br/emgiro/2026/04/7401131-resistencia-antimicrobiana-avanca-no-mundo-e-ameaca-tornar-infeccoes-comuns-novamente-potencialmente-fatais.html",
+       "publisher": "em.com.br",
+       "published_at": "2026-04-18T18:16:56",
+       "lede": "antimicrobial resistance has ceased to be a subject restricted to hospitals and laboratories and has become a global health concern. in simple terms, it is the ability of bacteria, viruses, fungi and parasites to survive drugs that previously worked well, such as common antibiotics used to treat infections of the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.87
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2af969963d76f4af2772ba",
+       "headline": "Why birds, foxes could provide warning signs of antibiotic resistance",
+       "url": "https://euronews.com/health/2026/04/16/why-birds-and-foxes-could-act-as-early-warning-systems-of-antibiotic-resistance-across-eco",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-16T12:28:43",
+       "lede": "antimicrobial resistance (amr) has been a growing problem for a number of years now, with resistance against antimicrobials key for human medicine being especially worrying. however, new research has found that wildlife such as foxes and birds could be critical early warning systems for antibiotic resistance at the ecosystem level.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.79
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e98eb7d47fc028320f1c08",
+       "headline": "Nigeria to host landmark global AMR summit amid rising drug resistance concerns",
+       "url": "https://www.vanguardngr.com/2026/04/nigeria-to-host-landmark-global-amr-summit-amid-rising-drug-resistance-concerns/",
+       "publisher": "vanguardngr.com",
+       "published_at": "2026-04-16T00:57:00",
+       "lede": "…over 100 countries expected as stakeholders push to curb misuse of medicines by chioma obinna nigeria is set to host the world’s top ministerial meeting on antimicrobial resistance (amr) for the first time in africa, amid growing global concern over the rising misuse and overuse of life-saving medicines. the 5th",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "amr"
+       ],
+       "people": []
+      },
+      {
+       "id": "bf2ebb2b5aea38cb4b43c69c",
+       "headline": "Overcoming Challenges in Wound Infection: Biofilm and Antimicrobial Resistance.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41991329/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-16T00:00:00",
+       "lede": "overcoming challenges in wound infection: biofilm and antimicrobial resistance.significance: chronic wounds represent a growing clinical and economic burden, affecting 1-2% of the global population, with prevalence expected to rise due to aging and increasing rates of diabetes, obesity, and vascular diseases. wound persistence is often driven by infection and compounded",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 512,
+         "path": "/Health/Health Conditions/Injury",
+         "score": 0.58
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.53
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.47
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "3b12638c5d327df57e96ce6a",
+       "headline": "Electrospinning of Natural Polymeric Fibers with Essential Oils for the Control of Multidrug-Resistant Pathogens.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42076356/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-16T00:00:00",
+       "lede": "electrospinning of natural polymeric fibers with essential oils for the control of multidrug-resistant pathogens.antimicrobial resistance (amr) represents one of the major threats to global health, driven by the indiscriminate use of antibiotics and decline in the development of new therapeutic agents. in this context, essential oils (eos) have emerged as",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e856137bb1410d4c6c5b1b",
+       "headline": "Nigeria leads global fight against drug resistance",
+       "url": "https://thesun.ng/nigeria-leads-global-fight-against-drug-resistance/",
+       "publisher": "thesun.ng",
+       "published_at": "2026-04-15T23:37:55",
+       "lede": "by doris obinna nigeria will take centre stage in the global fight against antimicrobial resistance (amr) as it hosts a ministerial summit in abuja from june 28 to 30, 2026. the meeting, the first of its kind in africa, signals a critical push to confront the growing threat of drug",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.5
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.5
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "amr"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0e96fb285a58da6f1ed1d6",
+       "headline": "Comparing the antibiotic resistance threat to COVID fails to reduce antibiotic-seeking, survey finds",
+       "url": "http://www.cidrap.umn.edu/antimicrobial-stewardship/comparing-antibiotic-resistance-threat-covid-fails-reduce-antibiotic",
+       "publisher": "cidrap.umn.edu",
+       "published_at": "2026-04-15T15:56:02",
+       "lede": "antimicrobial resistance (amr) is a major threat to public health, but finding an effective way to communicate that threat to the public—and explain how overuse of antibiotics makes the problem worse—is notoriously difficult. to date, many public messaging campaigns aiming to encourage responsible antibiotic use by the public—like not seeking",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 949,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNSAxNTo1NjowMiIsImkiOiI2YTBlOTZmYjI4NWE1OGRhNmYxZWQxZDYiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.273,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.275
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1058 @@
+{
+ "slug": "obamacare-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:30Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "obamacare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "obamacare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 800,
+     "tone": {
+      "carrying": 800,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 693,
+        "share_pct": 86.62
+       },
+       {
+        "group": "neutral",
+        "count": 3,
+        "share_pct": 0.38
+       },
+       {
+        "group": "positive",
+        "count": 104,
+        "share_pct": 13.0
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 800,
+      "count": 731,
+      "share_pct": 91.38
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.623,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.626
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "obamacare",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "obamacare",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 332,
+       "critical": 273,
+       "critical_pct": 82.2,
+       "negative": 285,
+       "positive": 36,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 241,
+       "critical": 204,
+       "critical_pct": 84.6,
+       "negative": 227,
+       "positive": 14,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 612,
+       "critical": 387,
+       "critical_pct": 63.2,
+       "negative": 541,
+       "positive": 67,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1494,
+       "critical": 1071,
+       "critical_pct": 71.7,
+       "negative": 1323,
+       "positive": 160,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 261,
+       "critical": 247,
+       "critical_pct": 94.6,
+       "negative": 244,
+       "positive": 17,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1273,
+       "critical": 1166,
+       "critical_pct": 91.6,
+       "negative": 1207,
+       "positive": 59,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1041,
+       "critical": 971,
+       "critical_pct": 93.3,
+       "negative": 952,
+       "positive": 74,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1048,
+       "critical": 831,
+       "critical_pct": 79.3,
+       "negative": 895,
+       "positive": 103,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 277,
+       "critical": 267,
+       "critical_pct": 96.4,
+       "negative": 235,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 197,
+       "critical": 181,
+       "critical_pct": 91.9,
+       "negative": 154,
+       "positive": 42,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 158,
+       "critical": 146,
+       "critical_pct": 92.4,
+       "negative": 146,
+       "positive": 12,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 168,
+       "critical": 137,
+       "critical_pct": 81.5,
+       "negative": 158,
+       "positive": 9,
+       "partial_period": false
+      }
+     ],
+     "total": 7102,
+     "critical_total": 5881,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.689,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.693
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "obamacare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "obamacare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 800,
+     "carrying": 451,
+     "availability_pct": 56.38,
+     "items": [
+      {
+       "country": "united states",
+       "count": 435,
+       "share_pct": 54.38
+      },
+      {
+       "country": "iran",
+       "count": 4,
+       "share_pct": 0.5
+      },
+      {
+       "country": "ukraine",
+       "count": 2,
+       "share_pct": 0.25
+      },
+      {
+       "country": "united kingdom",
+       "count": 2,
+       "share_pct": 0.25
+      },
+      {
+       "country": "cuba",
+       "count": 1,
+       "share_pct": 0.12
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 7
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.566,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.569
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "obamacare",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "obamacare",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "aca (affordable care act) health insurance policies",
+       "count": 67,
+       "share": 14.14,
+       "lift": 576.92,
+       "baseline_count": 2,
+       "previous_period_count": 806,
+       "delta_pct": -91.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "health insurance marketplaces and exchanges",
+       "count": 39,
+       "share": 8.23,
+       "lift": 671.64,
+       "baseline_count": 1,
+       "previous_period_count": 98,
+       "delta_pct": -60.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "health insurance subsidies and tax credits",
+       "count": 56,
+       "share": 11.81,
+       "lift": 482.2,
+       "baseline_count": 2,
+       "previous_period_count": 638,
+       "delta_pct": -91.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "health insurance coverage and reform policies",
+       "count": 69,
+       "share": 14.56,
+       "lift": 297.07,
+       "baseline_count": 4,
+       "previous_period_count": 346,
+       "delta_pct": -80.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mental health policy and advocacy",
+       "count": 26,
+       "share": 5.49,
+       "lift": 447.76,
+       "baseline_count": 1,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 800,
+     "carrying": 474,
+     "carrier_share_pct": 59.25,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.138,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.142
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "obamacare",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "obamacare",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69ea1f0775c44d9ce8820de8",
+       "headline": "Terry Savage: The health insurance sinkhole",
+       "url": "https://www.chicagotribune.com/2026/04/23/terry-savage-the-health-insurance-sinkhole/",
+       "publisher": "chicagotribune.com",
+       "published_at": "2026-04-23T07:30:08",
+       "lede": "last year, when the additional subsidies for the purchase of health insurance under the affordable care act (obamacare) were removed, there were widespread predictions that millions of americans would go without health insurance. premiums were expected to rise sharply, even to double, without the government subsidies. we’ve become inured to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.79
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ada59baafc7356b2036c",
+       "headline": "Ezekiel Emanuel: ACA Has Done Good, But 'The System Sucks, It's Broken'",
+       "url": "https://www.breitbart.com/clips/2026/04/11/ezekiel-emanuel-aca-has-done-good-but-the-system-sucks-its-broken/",
+       "publisher": "breitbart.com",
+       "published_at": "2026-04-11T21:47:00",
+       "lede": "on friday’s broadcast of hbo’s “real time,” dr. ezekiel emanuel argued that while obamacare has gotten people insured and saved the government money, “do we need reform? 100%. i’m the first person to say the system sucks, it’s broken.” host bill maher asked, “where is obamacare? what do we need",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.67
+        },
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "hbo"
+       ],
+       "people": [
+        "bill maher",
+        "ezekiel emanuel"
+       ]
+      },
+      {
+       "id": "69e2a052a85be7e5065b8840",
+       "headline": "Analysis: Trump keeps saying ‘nobody’ knew or expected things lots of people knew or expected | CNN Politics",
+       "url": "https://www.cnn.com/2026/03/28/politics/trump-claims-nobody-knows-quotes",
+       "publisher": "cnn.com",
+       "published_at": "2026-03-28T12:00:55",
+       "lede": "when president donald trump says “nobody” knew or expected something, that often means lots of people knew or expected it. trump made wildly inaccurate “nobody” claims about multiple subjects during his first presidency. perhaps most famously, he declared in 2017, while trying and failing to pass a replacement for obamacare,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.78
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2ed018e540a46fb56ec96e",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.sandiegouniontribune.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "sandiegouniontribune.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare. he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc54c062898d9e03ceafa7",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.lowellsun.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "lowellsun.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc54be856d39d4c91e7185",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.citizensvoice.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "citizensvoice.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc547174cdb9f7951d6cd9",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.record-bee.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "record-bee.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc545efc7cf950538b5fd7",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.fortmorgantimes.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "fortmorgantimes.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc177462898d9e03c8ca15",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.orlandosentinel.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "orlandosentinel.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c9e815eff444794ed91212",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.bostonherald.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "bostonherald.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c97451cae5463acfffd48d",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.eastbaytimes.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "eastbaytimes.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c95feca5dd771f46a287b4",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.dailycamera.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "dailycamera.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c95fccc14329b30ec419b3",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.pilotonline.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "pilotonline.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c934b877f2c3a5a192a216",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.mainlinemedianews.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "mainlinemedianews.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c8e7e96156bd1776434b81",
+       "headline": "Rising health costs push some middle-aged adults to skip the doctor until Medicare",
+       "url": "https://www.reporterherald.com/2026/03/27/waiting-until-medicare/",
+       "publisher": "reporterherald.com",
+       "published_at": "2026-03-27T17:57:40",
+       "lede": "john galvin knows he needs a colonoscopy. but he’s waiting to schedule the procedure until december, when he turns 65 and qualifies for medicare.he was already thinking about delaying it — then his monthly obamacare insurance premium payment tripled this year to $2,460, about a third of his income, he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.72
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "aca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc16acdcf7c26bbed5fe3d",
+       "headline": "Travis Kelce Admits He Had a Job Selling Obamacare Before Being Drafted by the Chiefs",
+       "url": "https://us.headtopics.com/news/travis-kelce-admits-he-had-a-job-selling-obamacare-before-81488793",
+       "publisher": "us.headtopics.com",
+       "published_at": "2026-03-26T14:27:00",
+       "lede": "source of breaking news and analysis, insightful commentary and original reporting, curated and written specifically for the new generation of independent and conservative thinkers.kansas city chiefs star travis kelce has admitted he worked selling obamacare before being drafted by the chiefs, calling it the “worst” job he ever had.that he",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 68,
+         "path": "/Sports/Team Sports/American Football",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "kansas city chiefs",
+        "travis"
+       ],
+       "people": [
+        "travis kelce"
+       ]
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 125,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yMyAxMDo1MTowMCIsImkiOiI2OWMzYTg3YmUzNmMzMDY0ZTQ1NWUzMmQiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.442,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.449
+    }
+   }
+  }
+ ]
+}

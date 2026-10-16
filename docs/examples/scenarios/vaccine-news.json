@@ -1,0 +1,762 @@
+{
+ "slug": "vaccine-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:01:16Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "vaccine",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "vaccine",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12906,
+     "tone": {
+      "carrying": 12881,
+      "availability_pct": 99.81,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5664,
+        "share_pct": 43.97
+       },
+       {
+        "group": "neutral",
+        "count": 229,
+        "share_pct": 1.78
+       },
+       {
+        "group": "positive",
+        "count": 6988,
+        "share_pct": 54.25
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 12904,
+      "count": 11113,
+      "share_pct": 86.12
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.576,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.578
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "vaccine",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "vaccine",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 5713,
+       "critical": 4236,
+       "critical_pct": 74.1,
+       "negative": 1945,
+       "positive": 3499,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2575,
+       "critical": 2184,
+       "critical_pct": 84.8,
+       "negative": 1213,
+       "positive": 1310,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 3933,
+       "critical": 2756,
+       "critical_pct": 70.1,
+       "negative": 1957,
+       "positive": 1917,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 8864,
+       "critical": 6957,
+       "critical_pct": 78.5,
+       "negative": 4559,
+       "positive": 4225,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 5735,
+       "critical": 4636,
+       "critical_pct": 80.8,
+       "negative": 2680,
+       "positive": 2981,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2781,
+       "critical": 2044,
+       "critical_pct": 73.5,
+       "negative": 835,
+       "positive": 1879,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2307,
+       "critical": 1913,
+       "critical_pct": 82.9,
+       "negative": 830,
+       "positive": 1430,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 4193,
+       "critical": 3563,
+       "critical_pct": 85.0,
+       "negative": 1750,
+       "positive": 2303,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3176,
+       "critical": 2796,
+       "critical_pct": 88.0,
+       "negative": 1184,
+       "positive": 1922,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3491,
+       "critical": 3018,
+       "critical_pct": 86.5,
+       "negative": 1599,
+       "positive": 1829,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2898,
+       "critical": 2509,
+       "critical_pct": 86.6,
+       "negative": 1419,
+       "positive": 1433,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3341,
+       "critical": 2790,
+       "critical_pct": 83.5,
+       "negative": 1462,
+       "positive": 1804,
+       "partial_period": false
+      }
+     ],
+     "total": 49007,
+     "critical_total": 39402,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.85,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.852
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "vaccine",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "vaccine",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12906,
+     "carrying": 4537,
+     "availability_pct": 35.15,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2700,
+       "share_pct": 20.92
+      },
+      {
+       "country": "india",
+       "count": 371,
+       "share_pct": 2.87
+      },
+      {
+       "country": "united kingdom",
+       "count": 278,
+       "share_pct": 2.15
+      },
+      {
+       "country": "australia",
+       "count": 116,
+       "share_pct": 0.9
+      },
+      {
+       "country": "canada",
+       "count": 104,
+       "share_pct": 0.81
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 968
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.071,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.075
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "vaccine",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "vaccine",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "vaccine development and clinical trials",
+       "count": 840,
+       "share": 8.62,
+       "lift": 704.0,
+       "baseline_count": 1,
+       "previous_period_count": 709,
+       "delta_pct": 18.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 vaccine development and efficacy trials",
+       "count": 2112,
+       "share": 21.68,
+       "lift": 295.01,
+       "baseline_count": 6,
+       "previous_period_count": 2999,
+       "delta_pct": -29.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vaccine mandates and policy debates",
+       "count": 609,
+       "share": 6.25,
+       "lift": 510.4,
+       "baseline_count": 1,
+       "previous_period_count": 1045,
+       "delta_pct": -41.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vaccine myths and misinformation countermeasures",
+       "count": 555,
+       "share": 5.7,
+       "lift": 465.14,
+       "baseline_count": 1,
+       "previous_period_count": 921,
+       "delta_pct": -39.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 vaccination campaigns and rollout strategies",
+       "count": 1381,
+       "share": 14.18,
+       "lift": 289.35,
+       "baseline_count": 4,
+       "previous_period_count": 2008,
+       "delta_pct": -31.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 12906,
+     "carrying": 9740,
+     "carrier_share_pct": 75.47,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.07,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.073
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "vaccine",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "vaccine",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69efaa1e727212302c5e9088",
+       "headline": "Letters: I survived polio. I want others to be spared that ordeal.",
+       "url": "https://www.chicagotribune.com/2026/04/25/letters-042526-polio/",
+       "publisher": "chicagotribune.com",
+       "published_at": "2026-04-25T10:00:46",
+       "lede": "at a time when many have forgotten the threat of infectious diseases like polio, i feel a duty as a polio survivor to remind the public that polio anywhere is a threat everywhere. the polio vaccine is one of the greatest public health achievements of our time, protecting against a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.26,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86eb69baafc735683f4b1",
+       "headline": "Flu shots not helping many of us",
+       "url": "https://lancasteronline.com/news/flu-shots-not-helping-many-of-us/article_0e0dc769-0727-5917-a33b-de60dd95a4a0.html",
+       "publisher": "lancasteronline.com",
+       "published_at": "2026-04-19T00:00:00",
+       "lede": "you got your flu shot this year. and you still came down with the flu. what gives? blame a rogue flu strain, which was not included in this year's vaccine, that is making the rounds. the county, state and nation are in the midst of a swelling flu season, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.87
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b5827bb1410d4caf98e1",
+       "headline": "Felt like I was dying: Musk backs insider who said Covid vaccine killed thousands",
+       "url": "https://www.indiatoday.in/science/story/elon-musk-pfizer-toxicologist-covid-vaccine-bundestag-germany-60000-deaths-mrna-approval-2895204-2026-04-13",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-04-13T03:30:00",
+       "lede": "elon musk has claimed his second covid-19 vaccine dose felt like it was killing him.this comes after a clip of a former pfizer toxicologist, who left the company back in 2007, telling germany’s parliament that the mrna vaccine should never have been approved went viral online.he claimed that tens of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.78
+        }
+       ],
+       "country": "france",
+       "organizations": [
+        "pfizer"
+       ],
+       "people": [
+        "elon musk"
+       ]
+      },
+      {
+       "id": "69e32bb862c473c381f71cf3",
+       "headline": "Bangladesh says suspected measles outbreak kills about 100 children",
+       "url": "https://www.straitstimes.com/asia/south-asia/bangladesh-says-suspected-measles-outbreak-kills-about-100-children",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-05T13:57:54",
+       "lede": "sign up now: get insights on asia's fast-moving developments most bangladeshi children receive a vaccine at nine months, although many of those infected in the recent outbreak were only six months old. dhaka – bangladesh said it suspected measles killed at least 98 children in the past three weeks, official",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.7
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.43
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bb2b7bb1410d4cb43ab0",
+       "headline": "WHO Sending 1.2 Million Polio Vaccines to Gaza as Israel Continues Its Genocidal War",
+       "url": "https://www.democracynow.org/2024/8/8/headlines/who_sending_12_million_polio_vaccines_to_gaza_as_israel_continues_its_genocidal_war",
+       "publisher": "democracynow.org",
+       "published_at": "2026-04-03T00:00:00",
+       "lede": "the world health organization has announced plans to send 1.2 million polio vaccine doses to gaza amid fears of a polio outbreak after the virus was detected in wastewater. over the past 10 months, israel has destroyed all of gaza’s wastewater treatment plants and most of gaza’s sewage pumps. the",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.87,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.91
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dce713778f2c454e15f427",
+       "headline": "Shields and Brooks on inviting Netanyahu",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/shields-and-brooks-on-inviting-netanyahu-1429311841",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-13T00:00:00",
+       "lede": "up next despite ceasefire, military conflict escalates in ukraine video 3:34 will 'world's loneliest orca' be released into the wild? video 1:48 are narendra modi's plans a path out of poverty? video 6:26 vaccine could have saved victims from measles outbreak video 5:32 greek anti-austerity party claims decisive victory video",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.88
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "narendra modi",
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "6988a9b7eefc5d2f542be16c",
+       "headline": "NCDHHS: 63 flu-related deaths reported in one week",
+       "url": "https://abc11.com/post/nc-flu-deaths-63-related-reported-week-according-ncdhhs/18403529/",
+       "publisher": "abc11.com",
+       "published_at": "2026-01-14T22:36:51",
+       "lede": "ncdhhs: 63 flu-related deaths reported in one weekraleigh, n.c. (wtvd) -- the state health department is strongly encouraging folks to get the flu vaccine, warning that while flu cases could be peaking right now there could be a second peak later in the season.the state released new data today and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.87
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9dd197b2d589e84514a05",
+       "headline": "Study projects hepatitis B vaccine delay could increase infections, deaths",
+       "url": "https://triblive.com/news/world/study-projects-hepatitis-b-vaccine-delay-could-increase-infections-deaths/",
+       "publisher": "triblive.com",
+       "published_at": "2026-04-30T05:00:00",
+       "lede": "the trump administration’s recommendation against universal hepatitis b vaccination for babies on the day they’re born could lead to hundreds of infections and dozens of deaths, according to a study published monday in jama pediatrics. the centers for disease control and prevention’s vaccine panel said in december babies born to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.25,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.89
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d8c4713680636eef332f",
+       "headline": "Miranda Devine: The Biden admin’s COVID vaccine cover-up and lies can no longer be denied – or the damage they caused",
+       "url": "https://nypost.com/2026/04/29/opinion/miranda-devine-the-biden-admins-covid-vaccine-cover-up-and-lies-can-no-longer-be-denied-or-the-damage-it-caused/",
+       "publisher": "nypost.com",
+       "published_at": "2026-04-30T03:07:32",
+       "lede": "as dr. anthony fauci’s right-hand man, david morens, was charged this week with conspiracy and destruction of federal records in the covid-19 cover-up, another scandal over the vaccine was unfolding on capitol hill. according to a new senate report and congressional testimony on wednesday, biden administration health officials deliberately ignored",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9d7183fc01faba1a9ceb",
+       "headline": "Trump administration appeals ruling that blocked RFK Jr.'s vaccine overhaul",
+       "url": "https://www.yahoo.com/news/articles/trump-administration-appeals-ruling-blocked-004059111.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T00:40:59",
+       "lede": "the trump administration has appealed a massachusetts federal judge’s ruling that blocked health secretary robert f. kennedy jr.’s recent overhaul of the nation’s childhood vaccine schedule. a filing wednesday evening in the district of massachusetts indicates the administration is appealing judge brian murphy’s order march 16. murphy put any decisions",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.55
+        },
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 3066,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwMDo0MDo1OSIsImkiOiI2YTJlOWQ3MTgzZmMwMWZhYmExYTljZWIiLCJwIjo4fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.511,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.513
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,962 @@
+{
+ "slug": "budget-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:56:51Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "budget",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "budget",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 108920,
+     "tone": {
+      "carrying": 108823,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 36224,
+        "share_pct": 33.29
+       },
+       {
+        "group": "neutral",
+        "count": 4121,
+        "share_pct": 3.79
+       },
+       {
+        "group": "positive",
+        "count": 68478,
+        "share_pct": 62.93
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 108861,
+      "count": 53625,
+      "share_pct": 49.26
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.766,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.781
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "budget",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "budget",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 18635,
+       "critical": 10268,
+       "critical_pct": 55.1,
+       "negative": 9219,
+       "positive": 8540,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 14634,
+       "critical": 8493,
+       "critical_pct": 58.0,
+       "negative": 7446,
+       "positive": 6645,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 18952,
+       "critical": 9615,
+       "critical_pct": 50.7,
+       "negative": 9475,
+       "positive": 8760,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 22875,
+       "critical": 11175,
+       "critical_pct": 48.9,
+       "negative": 10842,
+       "positive": 11304,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 21712,
+       "critical": 8674,
+       "critical_pct": 40.0,
+       "negative": 7596,
+       "positive": 13258,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 16761,
+       "critical": 9050,
+       "critical_pct": 54.0,
+       "negative": 8213,
+       "positive": 7638,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 28066,
+       "critical": 11227,
+       "critical_pct": 40.0,
+       "negative": 17503,
+       "positive": 9598,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 19956,
+       "critical": 8656,
+       "critical_pct": 43.4,
+       "negative": 6901,
+       "positive": 11825,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 19210,
+       "critical": 9805,
+       "critical_pct": 51.0,
+       "negative": 6359,
+       "positive": 11826,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 34849,
+       "critical": 19865,
+       "critical_pct": 57.0,
+       "negative": 10944,
+       "positive": 22659,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 30767,
+       "critical": 11084,
+       "critical_pct": 36.0,
+       "negative": 8307,
+       "positive": 21631,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 24094,
+       "critical": 12871,
+       "critical_pct": 53.4,
+       "negative": 10614,
+       "positive": 12362,
+       "partial_period": false
+      }
+     ],
+     "total": 270511,
+     "critical_total": 130783,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.91,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.919
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "budget",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "budget",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 108920,
+     "carrying": 49591,
+     "availability_pct": 45.53,
+     "items": [
+      {
+       "country": "united states",
+       "count": 16262,
+       "share_pct": 14.93
+      },
+      {
+       "country": "india",
+       "count": 15047,
+       "share_pct": 13.81
+      },
+      {
+       "country": "united kingdom",
+       "count": 2718,
+       "share_pct": 2.5
+      },
+      {
+       "country": "central african republic",
+       "count": 2489,
+       "share_pct": 2.29
+      },
+      {
+       "country": "greece",
+       "count": 1843,
+       "share_pct": 1.69
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 11232
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.66,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.677
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "budget",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "budget",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "interior comfort and ergonomics reviews",
+       "count": 2841,
+       "share": 4.71,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 2009,
+       "delta_pct": 41.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "vehicle dimensions and cargo space specs",
+       "count": 2016,
+       "share": 3.34,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1753,
+       "delta_pct": 15.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "kia fuel efficiency and emissions data",
+       "count": 1866,
+       "share": 3.09,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 173,
+       "delta_pct": 978.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "kia performance and gt-line models",
+       "count": 1824,
+       "share": 3.02,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 171,
+       "delta_pct": 966.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "kia engine specifications and technologies",
+       "count": 1723,
+       "share": 2.86,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 171,
+       "delta_pct": 907.6,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 108920,
+     "carrying": 60322,
+     "carrier_share_pct": 55.38,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.033,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 6.036
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "budget",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "budget",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e880409baafc73568f31c5",
+       "headline": "Budget surplus while families struggle to heat homes, says Sinn Fein leader",
+       "url": "https://www.limerickleader.ie/news/national-news/2066789/budget-surplus-while-families-struggle-to-heat-homes-says-sinn-fein-leader.html",
+       "publisher": "limerickleader.ie",
+       "published_at": "2026-04-21T15:35:21",
+       "lede": "there are “two different realities” in ireland, mary lou mcdonald has said, one of budget surplus billions and another of households unable to heat their homes. the sinn fein leader was speaking at leaders’ questions in the dail on tuesday after the government’s spring economic forecast was published. it said",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "ireland",
+       "organizations": [],
+       "people": [
+        "mary lou mcdonald"
+       ]
+      },
+      {
+       "id": "69e99542d47fc02832143e55",
+       "headline": "Budget surplus while families struggle to heat homes, says Sinn Fein leader",
+       "url": "https://www.kilkennypeople.ie/news/national-news/2066789/budget-surplus-while-families-struggle-to-heat-homes-says-sinn-fein-leader.html",
+       "publisher": "kilkennypeople.ie",
+       "published_at": "2026-04-21T15:32:26",
+       "lede": "there are “two different realities” in ireland, mary lou mcdonald has said, one of budget surplus billions and another of households unable to heat their homes. the sinn fein leader was speaking at leaders’ questions in the dail on tuesday after the government’s spring economic forecast was published. it said",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "ireland",
+       "organizations": [],
+       "people": [
+        "mary lou mcdonald"
+       ]
+      },
+      {
+       "id": "6a2ab3905cefb83fe82edf6c",
+       "headline": "Experts: Sanctions less effective than Ukraine's attacks on Russia's oil ports",
+       "url": "https://news.err.ee/1609980979/experts-sanctions-less-effective-than-ukraine-s-attacks-on-russia-s-oil-ports",
+       "publisher": "news.err.ee",
+       "published_at": "2026-03-29T06:36:00",
+       "lede": "international sanctions to pressure russia into ending its war in ukraine have not been as effective as kyiv's strikes on russian ports and will leave a big hole in russia's budget, estonian experts said. last week, ukraine attacked two of russia's most important ports on the baltic sea, primorsk near",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.7
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.63
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c4419dbcb4bea65814ebc8",
+       "headline": "Delhi Assembly gets bomb threat for second time in 24 hours, search operation underway",
+       "url": "https://www.indiatvnews.com/delhi/delhi-assembly-gets-bomb-threat-for-second-time-in-24-hours-search-operation-underway-2026-03-25-1035026",
+       "publisher": "indiatvnews.com",
+       "published_at": "2026-03-25T07:25:10",
+       "lede": "new delhi:for the second time in a row in 24 hours, the delhi legislative assembly received a fresh bomb threat on wednesday. the assembly on tuesday received similar threats just hours before chief minister rekha gupta's scheduled budget presentation. the latest threat email, sent in the early hours to the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "delhi legislative assembly",
+        "delhi legislative assembly"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a3b843ca26f2274c3019",
+       "headline": "Deux cents milliards de dollars, des fissures au CongrÃ¨s et un alliÃ© qui nâobÃ©it plus",
+       "url": "https://www.24heures.ch/iran-trump-demande-200-milliards-au-congres-pour-la-guerre-482151531148",
+       "publisher": "24heures.ch",
+       "published_at": "2026-03-20T09:33:05",
+       "lede": "abo war in iran â , 200 billion, cracks in congress and an ally that no longer obeys donald trump assures that the conflict is coming to an end, but calls for a budget that exceeds that of the war in iraq at its peak. behind the scenes, washington and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69baffb2b7032a7d5ce01cfd",
+       "headline": "Minneapolis: Nach Todesschüssen breitet sich Protest aus",
+       "url": "https://www.moneycab.com/international/wut-und-protest-nach-toedlichen-schuessen-in-minneapolis/",
+       "publisher": "moneycab.com",
+       "published_at": "2026-01-26T06:30:00",
+       "lede": "minneapolis – after the deadly shots at a us citizen in an ice mission in minneapolis, the protest against president donald trump's government is spreading. in addition to the demonstrations on the streets, the democrats in congress are now planning to build up pressure and block the budget for ice.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbe3338a0c2dc739ed4cf2",
+       "headline": "Abschiebepolitik: Minneapolis: Nach Todesschüssen breitet sich Protest aus",
+       "url": "https://www.tagesspiegel.de/internationales/abschiebepolitik-minneapolis-nach-todesschussen-breitet-sich-protest-aus-15180161.html",
+       "publisher": "tagesspiegel.de",
+       "published_at": "2026-01-26T04:23:43",
+       "lede": "after the fatal shots at a us citizen in an ice deployment in minneapolis, the protest against president donald trump's government is spreading. in addition to the demonstrations on the streets, the democrats in congress are now planning to build up pressure and block the budget allocated to ice. trump,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.42
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f881628937ef12fc07a62d",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Quesnel Cariboo Observer",
+       "url": "https://quesnelobserver.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "quesnelobserver.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f880afbbf1d31455966afd",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Abbotsford News",
+       "url": "https://abbynews.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "abbynews.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f880ae8937ef12fc0737c1",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Cloverdale Reporter",
+       "url": "https://cloverdalereporter.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "cloverdalereporter.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8807ebbf1d31455964cdd",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Chemainus Valley Courier",
+       "url": "https://chemainusvalleycourier.ca/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "chemainusvalleycourier.ca",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8805d8937ef12fc07040f",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Lake Country Calendar",
+       "url": "https://lakecountrycalendar.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "lakecountrycalendar.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f880318937ef12fc06e89c",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Northern Sentinel",
+       "url": "https://northernsentinel.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "northernsentinel.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87fa743843dd771ce0edc",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Parksville Qualicum News",
+       "url": "https://pqbnews.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "pqbnews.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87f7d43843dd771cdf7c5",
+       "headline": "B.C. cancels care home, hospital construction contracts amid budget pressure - Peninsula News Review",
+       "url": "https://peninsulanewsreview.com/2026/04/30/b-c-cancels-care-home-hospital-construction-contracts-amid-budget-pressure/",
+       "publisher": "peninsulanewsreview.com",
+       "published_at": "2026-04-30T22:20:00",
+       "lede": "b.c. is cancelling construction contracts for several long-term care homes and a major hospital redevelopment project as budget constraints continue to impact the government’s ability to deliver on previous commitments. five projects will be impacted, including the burnaby hospital phase 2 plan, as well as long-term care facilities in chilliwack,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.48
+        },
+        {
+         "code": 44,
+         "path": "/Business & Industrial/Construction & Maintenance/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f87fc98937ef12fc06a878",
+       "headline": "Property industry warns against new taxes in next week’s State Budget",
+       "url": "https://www.nationaltribune.com.au/property-industry-warns-against-new-taxes-in-next-week-s-state-budget/",
+       "publisher": "nationaltribune.com.au",
+       "published_at": "2026-04-30T22:12:46",
+       "lede": "victoria’s peak property bodies are calling for a state budget that delivers a decisive plan to restore confidence, unlock housing supply and attract investment as the state risks falling further behind on new home delivery. the property council of australia and the urban development institute of australia, victoria (udia) said",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.51
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.46
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eedd083fc01faba674f78",
+       "headline": "McClatchy endorses the Republican in California’s state Controller primary | Opinion",
+       "url": "https://www.yahoo.com/news/articles/mcclatchy-endorses-republican-california-state-220000662.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T22:00:00",
+       "lede": "as california’s budget approaches $350 billion, tracking the spending is proving a monumental task. it’s been 20 years since the state attempted to truly update its financial information system, known as fi$cal. we now live in a completely different technological world. it falls to the california state controller to be",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 19025,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAyMjowMDowMCIsImkiOiI2YTJlZWRkMDgzZmMwMWZhYmE2NzRmNzgiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.647,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.649
+    }
+   }
+  }
+ ]
+}

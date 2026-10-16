@@ -1,0 +1,953 @@
+{
+ "slug": "antibiotics-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:57Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "antibiotics",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "antibiotics",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4985,
+     "tone": {
+      "carrying": 4976,
+      "availability_pct": 99.82,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1536,
+        "share_pct": 30.87
+       },
+       {
+        "group": "neutral",
+        "count": 225,
+        "share_pct": 4.52
+       },
+       {
+        "group": "positive",
+        "count": 3215,
+        "share_pct": 64.61
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4983,
+      "count": 4254,
+      "share_pct": 85.37
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.555,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.56
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "antibiotics",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "antibiotics",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 973,
+       "critical": 789,
+       "critical_pct": 81.1,
+       "negative": 260,
+       "positive": 666,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 925,
+       "critical": 736,
+       "critical_pct": 79.6,
+       "negative": 205,
+       "positive": 669,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1012,
+       "critical": 815,
+       "critical_pct": 80.5,
+       "negative": 262,
+       "positive": 684,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1114,
+       "critical": 902,
+       "critical_pct": 81.0,
+       "negative": 352,
+       "positive": 700,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1197,
+       "critical": 983,
+       "critical_pct": 82.1,
+       "negative": 370,
+       "positive": 752,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1055,
+       "critical": 903,
+       "critical_pct": 85.6,
+       "negative": 260,
+       "positive": 744,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1113,
+       "critical": 928,
+       "critical_pct": 83.4,
+       "negative": 309,
+       "positive": 743,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1238,
+       "critical": 1030,
+       "critical_pct": 83.2,
+       "negative": 290,
+       "positive": 883,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1480,
+       "critical": 1300,
+       "critical_pct": 87.8,
+       "negative": 318,
+       "positive": 1076,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1119,
+       "critical": 964,
+       "critical_pct": 86.1,
+       "negative": 348,
+       "positive": 718,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1210,
+       "critical": 1030,
+       "critical_pct": 85.1,
+       "negative": 495,
+       "positive": 672,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1176,
+       "critical": 960,
+       "critical_pct": 81.6,
+       "negative": 375,
+       "positive": 749,
+       "partial_period": false
+      }
+     ],
+     "total": 13612,
+     "critical_total": 11340,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.745,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.75
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "antibiotics",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "antibiotics",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4985,
+     "carrying": 941,
+     "availability_pct": 18.88,
+     "items": [
+      {
+       "country": "united states",
+       "count": 378,
+       "share_pct": 7.58
+      },
+      {
+       "country": "united kingdom",
+       "count": 161,
+       "share_pct": 3.23
+      },
+      {
+       "country": "india",
+       "count": 129,
+       "share_pct": 2.59
+      },
+      {
+       "country": "australia",
+       "count": 21,
+       "share_pct": 0.42
+      },
+      {
+       "country": "china",
+       "count": 21,
+       "share_pct": 0.42
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 231
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.345,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.349
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "antibiotics",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "antibiotics",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "antimicrobial stewardship programs",
+       "count": 999,
+       "share": 27.54,
+       "lift": 2248.37,
+       "baseline_count": 1,
+       "previous_period_count": 1023,
+       "delta_pct": -2.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "antibiotic resistance research",
+       "count": 517,
+       "share": 14.25,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 537,
+       "delta_pct": -3.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "treatment of multidrug-resistant organisms",
+       "count": 1019,
+       "share": 28.09,
+       "lift": 764.46,
+       "baseline_count": 3,
+       "previous_period_count": 1019,
+       "delta_pct": 0.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "antibiotic resistance and novel treatments",
+       "count": 421,
+       "share": 11.61,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 362,
+       "delta_pct": 16.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "antimicrobial-resistant pathogens",
+       "count": 1081,
+       "share": 29.8,
+       "lift": 347.56,
+       "baseline_count": 7,
+       "previous_period_count": 1093,
+       "delta_pct": -1.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4985,
+     "carrying": 3627,
+     "carrier_share_pct": 72.76,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.524,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.528
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "antibiotics",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "antibiotics",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e870db9baafc73568565c8",
+       "headline": "Wenn Antibiotika ihre Kraft verlieren",
+       "url": "https://www.wort.lu/panorama/gesundesleben/wenn-antibiotika-ihre-kraft-verlieren/145657118.html",
+       "publisher": "wort.lu",
+       "published_at": "2026-04-14T17:00:00",
+       "lede": "antibiotics have long been considered a miracle medicine. they saved millions of lives, made operations safer, enabled cancer therapies, and helped defeat infections that used to end fatal. but this success story is increasingly on the verge of being a success. more and more often antibiotics fail because bacteria have",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3cb552fd96a624635fae2",
+       "headline": "Doctor on likelihood of national lockdown following Kent meningitis cases",
+       "url": "http://www.express.co.uk/life-style/health/2185351/kent-meningitis-outbreak-national-lockdown",
+       "publisher": "express.co.uk",
+       "published_at": "2026-03-23T09:51:00",
+       "lede": "students queuing to receive vaccines and antibiotics at the university of kent campus in canterbury. the number of cases of meningitis linked to an outbreak in kent has dropped as thousands of young people in the area are vaccinated against the disease. confirmed cases have fallen from 23 to 20,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.79
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.61
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "university of kent"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2fb73a8e67a2fcb301d217",
+       "headline": "Terrified students queue for meninigitis medicine as parents take them home",
+       "url": "https://www.mirror.co.uk/news/uk-news/terrified-students-queue-meninigitis-drugs-36877022",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-03-16T17:27:50",
+       "lede": "terrified university students queued for lifesaving meningitis antibiotics after two people died and then immediately jumped on buses to head home. fear swept across kent university campus yesterday leading to huge 400 yard queues forming across the grounds. hundreds of people wearing face masks stood a metre apart from each",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e9b359341f3dc2ad8d7a2",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "https://www.latimes.com/science/story/2026-04-30/cdc-warns-of-drug-resistant-salmonella-infections-linked-to-backyard-poultry",
+       "publisher": "latimes.com",
+       "published_at": "2026-04-30T19:28:46",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said. backyard poultry include birds such as chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.84
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c9a6a5706a322e106285",
+       "headline": "Antibiotics API Supply Chains Are Fracturing And Most Pharma Companies Aren't Ready",
+       "url": "https://www.openpr.com/news/4494194/antibiotics-api-supply-chains-are-fracturing-and-most-pharma",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-29T06:06:14",
+       "lede": "antibiotics api supply chains are fracturing and most pharma companies aren't ready antibiotics active pharmaceutical ingredient (api) market outlook https://marketmindsadvisory.com/request-sample/?report_id=8255 https://marketmindsadvisory.com/antibiotics-active-pharmaceutical-ingredient-api-market/ https://marketmindsadvisory.com/request-customization/?report_id=8255 https://marketmindsadvisory.com/ https://www.linkedin.com/company/market-minds-advisory/ https://www.facebook.com/resvaultmmadvisory/ https://x.com/marketmindsa https://www.instagram.com/marketmindsadvisory the global antibiotics api market is entering a period of structural instability, driven by geopolitical fragmentation, regulatory divergence, and the collapse of economic",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.92
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "api"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cc42a5706a322e116dc7",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "https://www.turnto23.com/health/cdc-warns-of-drug-resistant-salmonella-infections-linked-to-backyard-poultry",
+       "publisher": "turnto23.com",
+       "published_at": "2026-04-28T17:48:24",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said.backyard poultry include birds like chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including salmonella, that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.91
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cbd9a5706a322e113f63",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "https://www.10news.com/health/cdc-warns-of-drug-resistant-salmonella-infections-linked-to-backyard-poultry",
+       "publisher": "10news.com",
+       "published_at": "2026-04-28T17:48:24",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said.backyard poultry include birds like chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including salmonella, that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.91
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c963399b489398dfab3f",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "https://www.scrippsnews.com/health/cdc-warns-of-drug-resistant-salmonella-infections-linked-to-backyard-poultry",
+       "publisher": "scrippsnews.com",
+       "published_at": "2026-04-28T17:48:24",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said.backyard poultry include birds like chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including salmonella, that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.91
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "77ffedc386d925fbd641cefc",
+       "headline": "Antimicrobial pharmacodynamics: defining regimens of antibiotics that are safe, effective and prevent the emergence of resistance.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42057718/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "antimicrobial pharmacodynamics: defining regimens of antibiotics that are safe, effective and prevent the emergence of resistance.the substantial value of modern antibacterial agents is eroded by the inexorable development of antimicrobial resistance (amr). the discovery and development of antibiotics are central aspects of addressing amr. since new drug-resistant mechanisms are continually",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.54
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eda038e67a2fcb3e1d790",
+       "headline": "CDC Warns of Drug-Resistant Salmonella Infections Linked to Backyard Poultry",
+       "url": "https://foodmanufacturing.com/home/news/22965642/cdc-warns-of-drugresistant-salmonella-infections-linked-to-backyard-poultry",
+       "publisher": "foodmanufacturing.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "this nov. 19, 2013 file photo shows a centers for disease control and prevention logo at the agency's federal headquarters in atlanta. at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.74
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c83a399b489398df2af2",
+       "headline": "CDC Warns of Drug-Resistant Salmonella Infections Linked to Backyard Poultry",
+       "url": "https://www.morningagclips.com/cdc-warns-of-drug-resistant-salmonella-infections-linked-to-backyard-poultry/",
+       "publisher": "morningagclips.com",
+       "published_at": "2026-04-27T22:46:34",
+       "lede": "washington — at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said. backyard poultry includes birds like chickens, ducks, geese, guinea fowl, and turkeys. the animals can carry germs,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.83
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e969a83fc01faba15846a",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "https://www.yahoo.com/news/articles/cdc-warns-drug-resistant-salmonella-220741841.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-27T22:07:41",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said. backyard poultry include birds like chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including salmonella,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.84
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e3d6836d28f995cb7562",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "https://www.chicagotribune.com/2026/04/27/drug-resistant-salmonella-backyard-poultry/",
+       "publisher": "chicagotribune.com",
+       "published_at": "2026-04-27T20:13:12",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said. backyard poultry include birds like chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including salmonella,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.85
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23309c6105443aa607fca",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "http://www.wesh.com/article/backyard-poultry-salmonella-outbreak/71141657",
+       "publisher": "wesh.com",
+       "published_at": "2026-04-27T19:52:00",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said.backyard poultry include birds like chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including salmonella, that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.85
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cc6b399b489398e0f54c",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "https://www.wbaltv.com/article/backyard-poultry-salmonella-outbreak/71141657",
+       "publisher": "wbaltv.com",
+       "published_at": "2026-04-27T19:52:00",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said.backyard poultry include birds like chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including salmonella, that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.85
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cc58a5706a322e1179bc",
+       "headline": "CDC warns of drug-resistant salmonella infections linked to backyard poultry",
+       "url": "https://www.wpbf.com/article/backyard-poultry-salmonella-outbreak/71141657",
+       "publisher": "wpbf.com",
+       "published_at": "2026-04-27T19:52:00",
+       "lede": "at least 34 people in 13 states have been sickened with salmonella poisoning traced to contact with backyard poultry, including some with infections resistant to common antibiotics, federal health officials said.backyard poultry include birds like chicken, ducks, geese, guinea fowl and turkeys. the animals can carry germs, including salmonella, that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.85
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 1116,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAxOTo1MjowMCIsImkiOiI2OWYxY2M0YWE1NzA2YTMyMmUxMTcxOTYiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.853,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.859
+    }
+   }
+  }
+ ]
+}

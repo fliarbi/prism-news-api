@@ -1,0 +1,1028 @@
+{
+ "slug": "saas-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:12:48Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "SaaS",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "saas",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13570,
+     "tone": {
+      "carrying": 13564,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2239,
+        "share_pct": 16.51
+       },
+       {
+        "group": "neutral",
+        "count": 143,
+        "share_pct": 1.05
+       },
+       {
+        "group": "positive",
+        "count": 11182,
+        "share_pct": 82.44
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 13569,
+      "count": 7547,
+      "share_pct": 55.62
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.665,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.667
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "SaaS",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "saas",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2306,
+       "critical": 1109,
+       "critical_pct": 48.1,
+       "negative": 235,
+       "positive": 2034,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2204,
+       "critical": 1069,
+       "critical_pct": 48.5,
+       "negative": 231,
+       "positive": 1947,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 3092,
+       "critical": 1389,
+       "critical_pct": 44.9,
+       "negative": 353,
+       "positive": 2723,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2811,
+       "critical": 1398,
+       "critical_pct": 49.7,
+       "negative": 451,
+       "positive": 2335,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2903,
+       "critical": 1527,
+       "critical_pct": 52.6,
+       "negative": 399,
+       "positive": 2476,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2776,
+       "critical": 1438,
+       "critical_pct": 51.8,
+       "negative": 310,
+       "positive": 2435,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2664,
+       "critical": 1404,
+       "critical_pct": 52.7,
+       "negative": 296,
+       "positive": 2319,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2535,
+       "critical": 1362,
+       "critical_pct": 53.7,
+       "negative": 289,
+       "positive": 2226,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2380,
+       "critical": 1196,
+       "critical_pct": 50.3,
+       "negative": 298,
+       "positive": 2062,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4148,
+       "critical": 2469,
+       "critical_pct": 59.5,
+       "negative": 657,
+       "positive": 3453,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3340,
+       "critical": 1867,
+       "critical_pct": 55.9,
+       "negative": 616,
+       "positive": 2684,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3702,
+       "critical": 2015,
+       "critical_pct": 54.4,
+       "negative": 668,
+       "positive": 2983,
+       "partial_period": false
+      }
+     ],
+     "total": 34861,
+     "critical_total": 18243,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.175,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.178
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "SaaS",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "saas",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13570,
+     "carrying": 5171,
+     "availability_pct": 38.11,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2353,
+       "share_pct": 17.34
+      },
+      {
+       "country": "india",
+       "count": 710,
+       "share_pct": 5.23
+      },
+      {
+       "country": "united kingdom",
+       "count": 320,
+       "share_pct": 2.36
+      },
+      {
+       "country": "netherlands",
+       "count": 128,
+       "share_pct": 0.94
+      },
+      {
+       "country": "australia",
+       "count": 127,
+       "share_pct": 0.94
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1533
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.402,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.407
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "SaaS",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "saas",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "customer relationship management (crm) systems",
+       "count": 238,
+       "share": 3.21,
+       "lift": 261.87,
+       "baseline_count": 1,
+       "previous_period_count": 241,
+       "delta_pct": -1.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "technology adoption and digital transformation",
+       "count": 828,
+       "share": 11.16,
+       "lift": 130.15,
+       "baseline_count": 7,
+       "previous_period_count": 679,
+       "delta_pct": 21.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "enterprise-level cybersecurity solutions",
+       "count": 203,
+       "share": 2.74,
+       "lift": 223.36,
+       "baseline_count": 1,
+       "previous_period_count": 103,
+       "delta_pct": 97.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "zero trust network architecture",
+       "count": 197,
+       "share": 2.66,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 104,
+       "delta_pct": 89.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "secure remote access solutions (e.g., rdp, ssh)",
+       "count": 178,
+       "share": 2.4,
+       "lift": 195.85,
+       "baseline_count": 1,
+       "previous_period_count": 102,
+       "delta_pct": 74.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 13570,
+     "carrying": 7419,
+     "carrier_share_pct": 54.67,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.232,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.236
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "SaaS",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "saas",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e87f2f5cfa3e5ba502c63b",
+       "headline": "Ten airlines cancel thousands of flights as jet fuel crisis worsens",
+       "url": "https://www.liverpoolecho.co.uk/travel/ten-airlines-cancel-thousands-flights-33803951",
+       "publisher": "liverpoolecho.co.uk",
+       "published_at": "2026-04-20T14:28:11",
+       "lede": "europe is left with just six weeks' worth of jet fuel as a result of the continuing conflict in the middle east, prompting several major airlines to ground their fleets. fatih birol, executive director of the international energy agency (iea), has cautioned that flight cancellations could occur \"soon\" should oil",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.66
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.47
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "international energy agency"
+       ],
+       "people": [
+        "fatih birol"
+       ]
+      },
+      {
+       "id": "69e84f1f5cfa3e5ba5e5ab5e",
+       "headline": "China says US-Israeli strikes 'root cause' of Starit of Hormuz disruption",
+       "url": "https://economictimes.indiatimes.com/industry/energy/oil-gas/china-says-us-israeli-strikes-root-cause-of-starit-of-hormuz-disruption/articleshow/129973605.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-02T09:20:00",
+       "lede": "beijing: china said on thursday that us and israeli strikes on iran were the root cause of the strait of hormuz blockage, after us president donald trump called on affected countries to seize the key waterway.trump said countries that receive oil through the hormuz strait should take care of that",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.71
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.65
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69c8d4099d3350d3d977e362",
+       "headline": "A Personal Opinion: How Precision Strikes Silence the Conscience?",
+       "url": "https://www.linkedin.com/pulse/personal-opinion-how-precision-strikes-silence-conscience-marty-yam-pb6rc",
+       "publisher": "linkedin.com",
+       "published_at": "2026-03-06T16:30:16",
+       "lede": "war unleashes the savage within, silencing the conscience that keeps our darkest impulses at bay.there is a photo that should sear itself into the conscience of the world. it is not a battlefield image of soldiers or military hardware. it shows rows of freshly dug graves in the iranian city",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        },
+        {
+         "code": 51,
+         "path": "/Reference/Humanities/History",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9c4e7c14329b30ec69f94",
+       "headline": "Trump sets 10-5 day ultimatum for Iran to make a deal as military buildup grows",
+       "url": "https://dayton247now.com/news/nation-world/trump-sets-1015-day-ultimatum-for-iran-to-make-a-deal-as-military-buildup-grows-state-department-air-force",
+       "publisher": "dayton247now.com",
+       "published_at": "2026-02-20T21:43:26",
+       "lede": "president donald trump has given iran what he calls a final 10-to-15-day window to agree to a new nuclear deal, warning that if tehran refuses, “bad things” will happen.the administration insists its objective is not war, but permanently preventing iran from developing a nuclear weapon. (tnnd)“we’re either going to get",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.59
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.52
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69bc4bae834bfa2337fafe98",
+       "headline": "American tourist beaten, stabbed to death in Bangkok after begging Thai girlfriend to take him back in love triangle horror",
+       "url": "https://nypost.com/2026/02/17/world-news/american-tourist-beaten-stabbed-to-death-in-bangkok-after-begging-thai-girlfriend-to-take-him-back-in-love-triangle-horror/",
+       "publisher": "nypost.com",
+       "published_at": "2026-02-17T22:45:00",
+       "lede": "an armed american tourist was beaten and stabbed to death by four men in bangkok while begging his much younger thai ex-girlfriend to take him back in a bloody love-triangle showdown, according to reports.stein heath cole, 54, was found dead with five stab wounds and two broken legs after four",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.85,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.69
+        }
+       ],
+       "country": "thailand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8c50dbbf1d314559b0d77",
+       "headline": "Nearly half of Australian firms hit by AI incidents",
+       "url": "https://www.itbrief.com.au/story/nearly-half-of-australian-firms-hit-by-ai-incidents",
+       "publisher": "itbrief.com.au",
+       "published_at": "2026-04-30T22:30:00",
+       "lede": "proofpoint research shows that nearly half of australian organisations with ai security controls have experienced a confirmed or suspected ai-related incident, highlighting a gap between ai deployment and incident readiness. the survey found that 80% of australian organisations have moved ai assistants beyond the pilot stage, while 60% are not",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.74
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.47
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.42
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "proofpoint"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8a61643843dd771d2409e",
+       "headline": "Nearly half of Australian firms hit by AI incidents",
+       "url": "https://itbrief.com.au/story/nearly-half-of-australian-firms-hit-by-ai-incidents",
+       "publisher": "itbrief.com.au",
+       "published_at": "2026-04-30T22:30:00",
+       "lede": "proofpoint research shows that nearly half of australian organisations with ai security controls have experienced a confirmed or suspected ai-related incident, highlighting a gap between ai deployment and incident readiness. the survey found that 80% of australian organisations have moved ai assistants beyond the pilot stage, while 60% are not",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.74
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.47
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.42
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "proofpoint"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f881678937ef12fc07a8c7",
+       "headline": "What’s new: As agentic AI capabilities mature and enterprise software-as-a-service (SaaS) vendors build out their platforms to create, integrate, and orchestrate AI agents, how organizations purchase and use software could shift dramatically. In 2026, SaaS applications will become more intelligent, ",
+       "url": "https://deloitte.wsj.com/cmo/how-ai-agents-could-transform-saas-business-models-customer-experience-2d685f0d",
+       "publisher": "deloitte.wsj.com",
+       "published_at": "2026-04-30T19:00:00",
+       "lede": "what’s new: as agentic ai capabilities mature and enterprise software-as-a-service (saas) vendors build out their platforms to create, integrate, and orchestrate ai agents, how organizations purchase and use software could shift dramatically. in 2026, saas applications will become more intelligent, personalized, adaptive, and autonomous, according to deloitte’s “tmt predictions 2026”",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.56
+        },
+        {
+         "code": 79,
+         "path": "/Computers & Electronics/Enterprise Technology/Other",
+         "score": 0.56
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "deloitte",
+        "deloitte",
+        "saas",
+        "deloitte"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a03677dc2856acf8e899fa3",
+       "headline": "SaaS Security Risk Review | CrowdStrike",
+       "url": "https://www.crowdstrike.com/en-us/platform/falcon-shield/saas-security-risk-review/",
+       "publisher": "crowdstrike.com",
+       "published_at": "2026-04-30T16:14:02",
+       "lede": "modern adversaries are exploiting cloud-based saas applications at an alarming rate. microsoft 365 is a top target – threat actors accessed sharepoint in 22% of relevant intrusions and outlook in 17%. 2 strengthening your saas security posture is critical to stay ahead of modern cyberattacks. request a free review modern",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a66e05cefb83fe8fd9ede",
+       "headline": "Nine Seconds to Zero: What the PocketOS Incident Reveals About Enterprise AI Risk",
+       "url": "https://www.unite.ai/pocketos-incident-agentic-ai-security-risks/",
+       "publisher": "unite.ai",
+       "published_at": "2026-04-30T15:40:49",
+       "lede": "on the morning of april 25, 2026, a tech founder watched his company’s production database disappear. not corrupted. not partially overwritten. gone, along with every backup, in nine seconds. the culprit was an ai coding agent running cursor, powered by anthropic’s claude opus 4.6. the victim was pocketos, a saas",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7010c37f6c5e66ba9788",
+       "headline": "Legora Raises $600M, Hits $5.6B Valuation in AI Boom",
+       "url": "https://ventureburn.com/legora-raises-600m-hits-5-6b-valuation-in-ai-boom/",
+       "publisher": "ventureburn.com",
+       "published_at": "2026-04-30T11:15:48",
+       "lede": "legora is moving from “saas” to “agent as a service” (aaas), focusing on ai that can autonomously execute workflows rather than just answering prompts. the round features first-time legal-tech investments from nvidia and atlassian, signalling a convergence of ai infrastructure and workplace collaboration. legora is now valued at $5.6 billion,",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.6
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d4e77b2d589e844b24a5",
+       "headline": "Dreamteam AI CRM startup eyes $40 Mn in Series A funding, targets disruption in global SaaS market | Business Review Live | Business News, Reviews | Entrepreneur Stories, Interviews | Kerala | India",
+       "url": "https://businessreviewlive.com/dreamteam-ai-crm-startup-eyes-40-mn-in-series-a-funding-targets-disruption-in-global-saas-market/",
+       "publisher": "businessreviewlive.com",
+       "published_at": "2026-04-30T10:36:36",
+       "lede": "chennai-based ai startup dreamteam is in advanced discussions to raise around $40 million in its series a funding round, with accel and together fund expected to lead the investment, according to sources. the company is reportedly seeking a valuation between $150 million and $200 million, thereby reflecting strong investor confidence",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.93,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.5
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.49
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.47
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8856b43843dd771d14c40",
+       "headline": "Software: 10 companies that raised the most in 2025",
+       "url": "https://tech.eu/2026/04/30/software-10-companies-that-raised-the-most-in-2025/www.grammarly.com",
+       "publisher": "tech.eu",
+       "published_at": "2026-04-30T08:30:00",
+       "lede": "in 2025, europe’s software ecosystem raised €8.1 billion and grew more focused, selective, and ai-driven. while overall funding remained below peak levels, capital concentrated around a smaller number of scale-stage companies, with large rounds going to players like bending spoons, your.world, and brevo. these deals underscored a growing preference for",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.46
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        },
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.43
+        },
+        {
+         "code": 79,
+         "path": "/Computers & Electronics/Enterprise Technology/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "bending spoons",
+        "brevo"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8853343843dd771d11eab",
+       "headline": "Software: 10 companies that raised the most in 2025",
+       "url": "https://tech.eu/2026/04/30/software-10-companies-that-raised-the-most-in-2025/",
+       "publisher": "tech.eu",
+       "published_at": "2026-04-30T08:30:00",
+       "lede": "in 2025, europe’s software ecosystem raised €8.1 billion and grew more focused, selective, and ai-driven. while overall funding remained below peak levels, capital concentrated around a smaller number of scale-stage companies, with large rounds going to players like bending spoons, your.world, and brevo. these deals underscored a growing preference for",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.46
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        },
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.43
+        },
+        {
+         "code": 79,
+         "path": "/Computers & Electronics/Enterprise Technology/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "bending spoons",
+        "brevo"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f882b043843dd771cfbe1d",
+       "headline": "Amazon Web Service Does an Agentic Shift into the Application Layer",
+       "url": "https://cxotoday.com/research/amazon-web-service-does-an-agentic-shift-into-the-application-layer/",
+       "publisher": "cxotoday.com",
+       "published_at": "2026-04-30T07:38:26",
+       "lede": "earlier this week, amazon connect was rebranded into a four-product family, and launched as the amazon quick app on the desktop – the culmination of an exercise of accepting that infrastructure alone cannot solve the enterprise activation void. also aws had introduced managed ai agents for openai within amazon bedrock",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        },
+        {
+         "code": 101,
+         "path": "/Internet & Telecom/Web Services/Cloud Storage",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "openai"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d943a088760d34c25c05",
+       "headline": "The New Era in Tech Investing Starts Now",
+       "url": "http://www.bain.com/pt-br/insights/new-era-in-tech-investing-starts-now/",
+       "publisher": "bain.com",
+       "published_at": "2026-04-30T04:00:00",
+       "lede": "if software investing has delivered anything to private equity investors so far in 2026, it is the disquieting certainty that the world has changed—probably forever. revenue growth that was running around 20% annually is now trending at half that. net revenue retention (nrr) has dropped about 8 points since 2021",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 5674,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAxODoyMzoxNCIsImkiOiI2OWY4ODA2M2JiZjFkMzE0NTU5NjNiYTYiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.992,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.998
+    }
+   }
+  }
+ ]
+}

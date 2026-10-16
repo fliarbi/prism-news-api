@@ -1,0 +1,923 @@
+{
+ "slug": "mutual-fund-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:59Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "mutual fund",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "mutual fund",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13148,
+     "tone": {
+      "carrying": 13121,
+      "availability_pct": 99.79,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1135,
+        "share_pct": 8.65
+       },
+       {
+        "group": "neutral",
+        "count": 332,
+        "share_pct": 2.53
+       },
+       {
+        "group": "positive",
+        "count": 11654,
+        "share_pct": 88.82
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 13144,
+      "count": 1829,
+      "share_pct": 13.92
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.666,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.669
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "mutual fund",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "mutual fund",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 514,
+       "critical": 204,
+       "critical_pct": 39.7,
+       "negative": 49,
+       "positive": 454,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 610,
+       "critical": 249,
+       "critical_pct": 40.8,
+       "negative": 81,
+       "positive": 511,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1363,
+       "critical": 312,
+       "critical_pct": 22.9,
+       "negative": 74,
+       "positive": 1269,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1093,
+       "critical": 469,
+       "critical_pct": 42.9,
+       "negative": 216,
+       "positive": 858,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2422,
+       "critical": 427,
+       "critical_pct": 17.6,
+       "negative": 106,
+       "positive": 2291,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 888,
+       "critical": 364,
+       "critical_pct": 41.0,
+       "negative": 81,
+       "positive": 787,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 712,
+       "critical": 295,
+       "critical_pct": 41.4,
+       "negative": 62,
+       "positive": 639,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 971,
+       "critical": 436,
+       "critical_pct": 44.9,
+       "negative": 82,
+       "positive": 786,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1407,
+       "critical": 271,
+       "critical_pct": 19.3,
+       "negative": 83,
+       "positive": 1298,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 7505,
+       "critical": 843,
+       "critical_pct": 11.2,
+       "negative": 809,
+       "positive": 6433,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2351,
+       "critical": 360,
+       "critical_pct": 15.3,
+       "negative": 123,
+       "positive": 2200,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1885,
+       "critical": 355,
+       "critical_pct": 18.8,
+       "negative": 120,
+       "positive": 1723,
+       "partial_period": false
+      }
+     ],
+     "total": 21721,
+     "critical_total": 4585,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.362,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.393
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "mutual fund",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "mutual fund",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13148,
+     "carrying": 1600,
+     "availability_pct": 12.17,
+     "items": [
+      {
+       "country": "india",
+       "count": 935,
+       "share_pct": 7.11
+      },
+      {
+       "country": "united states",
+       "count": 353,
+       "share_pct": 2.68
+      },
+      {
+       "country": "nigeria",
+       "count": 50,
+       "share_pct": 0.38
+      },
+      {
+       "country": "canada",
+       "count": 35,
+       "share_pct": 0.27
+      },
+      {
+       "country": "china",
+       "count": 26,
+       "share_pct": 0.2
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 201
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.668,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.752
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "mutual fund",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "mutual fund",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "fund prospectus analysis",
+       "count": 3194,
+       "share": 27.87,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 932,
+       "delta_pct": 242.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "fund expense ratios and fees",
+       "count": 2915,
+       "share": 25.43,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 868,
+       "delta_pct": 235.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "asset allocation and balanced funds",
+       "count": 2878,
+       "share": 25.11,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 914,
+       "delta_pct": 214.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "fund benchmarking methodologies",
+       "count": 2875,
+       "share": 25.09,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1062,
+       "delta_pct": 170.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "tax-efficient fund structures",
+       "count": 2436,
+       "share": 21.25,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 676,
+       "delta_pct": 260.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 13148,
+     "carrying": 11461,
+     "carrier_share_pct": 87.17,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.31,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.313
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "mutual fund",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "mutual fund",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e99c35bdd09a23d0925648",
+       "headline": "Democrat Rep David Scott dead at 80",
+       "url": "https://www.foxnews.com/politics/democrat-rep-david-scott-dead-80",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-22T17:08:29",
+       "lede": "this material may not be published, broadcast, rewritten, or redistributed. ©2026 fox news network, llc. all rights reserved. quotes displayed in real-time or delayed by at least 15 minutes. market data provided by factset . powered and implemented by factset digital solutions . legal statement . mutual fund and etf",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "fox news",
+        "factset",
+        "fox news"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a54845cefb83fe8f0505e",
+       "headline": "Or Moshe",
+       "url": "https://www.foxnews.com/person/m/or-moshe",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-16T21:21:40",
+       "lede": "this material may not be published, broadcast, rewritten, or redistributed. ©2026 fox news network, llc. all rights reserved. quotes displayed in real-time or delayed by at least 15 minutes. market data provided by factset . powered and implemented by factset digital solutions . legal statement . mutual fund and etf",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 129,
+         "path": "/Law & Government/Public Safety/Emergency Services",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8108d934bffb8eef33ea8",
+       "headline": "Fidelity Beats Lawsuit Over Fees in $439 Billion Money Market Fund",
+       "url": "https://www.insurancejournal.com/news/national/2026/03/26/863479.htm",
+       "publisher": "insurancejournal.com",
+       "published_at": "2026-03-26T15:12:06",
+       "lede": "a federal judge dismissed a lawsuit on wednesday accusing mutual fund giant fidelity of cheating many investors in its $439.1 billion fidelity government money market fund by keeping them in higher-cost share classes than they were eligible for.u.s. district judge margaret garnett in manhattan rejected claims that fidelity unjustly enriched",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1037c37f6c5e662a5ec5",
+       "headline": "EXCLUSIVE: Ohio Gubernatorial Candidate Amy Acton’s Insane Deleted COVID Tweets Surface",
+       "url": "https://www.foxnews.com/analysis/exclusive-ohio-gubernatorial-candidate-blasts-nfl-fans-over-covid-rules-resurfaced-posts",
+       "publisher": "foxnews.com",
+       "published_at": "2026-03-20T11:51:58",
+       "lede": "this material may not be published, broadcast, rewritten, or redistributed. ©2026 fox news network, llc. all rights reserved. quotes displayed in real-time or delayed by at least 15 minutes. market data provided by factset . powered and implemented by factset digital solutions . legal statement . mutual fund and etf",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cba9a97aa9ae690c9520fe",
+       "headline": "From money-shy to money-smart, it’s a woman’s day",
+       "url": "https://www.financialexpress.com/business/news/from-money-shy-to-money-smart-its-a-womans-day/4165603/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-03-07T17:52:11",
+       "lede": "in her book mango millionaire, edelweiss mutual fund ceo & md radhika gupta describes a scene where her father and brother are discussing money, and her mother and sister-in-law tune out of the conversation. while being money-shy is still true for many women, data points towards a shifting needle.gupta shares",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.48
+        },
+        {
+         "code": 259,
+         "path": "/Finance/Financial Planning & Management/Asset & Portfolio Management",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9c9e8b7c587db32fe8e9f",
+       "headline": "HDFC oldest fund turns Rs 1,000 SIP into Rs 1.6 crore, grows lump sum 195 times since launch",
+       "url": "https://www.financialexpress.com/money/hdfcs-oldest-fund-turns-rs-1000-sip-into-rs-1-6-crore-grows-lump-sum-195-times-since-launch-4153347/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-02-24T15:47:59",
+       "lede": "when it comes to longevity in india’s mutual fund industry, very few schemes can match the track record of the hdfc balanced advantage fund – regular plan. launched on february 1, 1994 (earlier known as hdfc prudence fund), it has now completed 32 years — making it the oldest scheme",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.95,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.7
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bb993ac08180591b8395cf",
+       "headline": "Gold ETF Inflows Jump 50%, Exceed Equity Funds in Jan: AMFI",
+       "url": "https://www.newkerala.com/news/a/gold-etfs-see-steep-50-pc-rise-rs-520.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-02-10T12:06:07",
+       "lede": "gold exchange-traded funds witnessed a dramatic 50% surge in inflows to approximately rs 24,040 crore in january, exceeding the inflows into the entire equity mutual fund segment for the month. the mutual fund industry's total flows turned positive at rs 1.56 lakh crore, primarily driven by strong inflows into debt",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.71
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.55
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d14b7c6753a2d526b633e8",
+       "headline": "Gold ETF inflows eclipse equity funds as investors chase bullion boom in record-breaking rally - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-etf-inflows-eclipse-equity-funds-as-investors-chase-bullion-boom-in-record-breaking-rally/printarticle/128146979.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-02-10T07:21:00",
+       "lede": "in a dramatic reversal in investor behaviour, gold etf inflows surged to a record rs 24,040 crore in january, marginally surpassing equity mutual fund inflows of rs 24,029 crore and raising questions over whether fear of missing out (fomo) on the precious-metal rally is disrupting traditional asset-allocation strategies.the 106% month-on-month",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.76
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.67
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf607786b898e2d87ff012",
+       "headline": "Gold ETF inflows eclipse equity funds as investors chase bullion boom in record-breaking rally",
+       "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-etf-inflows-eclipse-equity-funds-as-investors-chase-bullion-boom-in-record-breaking-rally/articleshow/128146979.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-02-10T07:21:00",
+       "lede": "in a dramatic reversal in investor behaviour, gold etf inflows surged to a record rs 24,040 crore in january, marginally surpassing equity mutual fund inflows of rs 24,029 crore and raising questions over whether fear of missing out (fomo) on the precious-metal rally is disrupting traditional asset-allocation strategies.the 106% month-on-month",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.76
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.67
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc5f990ad23ae1114f25c7",
+       "headline": "PGIM India MF resumes subscription in 3 international funds",
+       "url": "https://economictimes.indiatimes.com/mf/mf-news/pgim-india-mf-resumes-subscription-in-3-international-funds/articleshow/127982330.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-02-06T09:44:00",
+       "lede": "pgim india mutual fund announced the reopening of subscriptions in its three international funds, effective february 6. the funds are: pgim india global equity opportunities fund of fund, pgim india emerging markets equity fund of fund, and pgim india global select real estate securities fund of fund.the fund house communicated",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.27,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.71
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2a2403aab8d96aa325183",
+       "headline": "India’s mutual fund Industry to more than double in 5 years",
+       "url": "https://www.thehindubusinessline.com/markets/indias-mutual-fund-industry-to-more-than-double-in-5-years/article70592564.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-02-04T15:25:11",
+       "lede": ", the mutual fund industry is projected to more than double over the next five years, with the economy growing at 10 per cent annually and a shift in money from savings accounts with low interest rates into investment accounts which give higher returns, said kv kamath, chairman, jio financial",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.49
+        },
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "jio"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cf642e78f2c338e71a13b9",
+       "headline": "SBI MF to take at least 10% of Adani Group's biggest rupee bond issue, bankers say",
+       "url": "https://www.thehindu.com/business/markets/sbi-mf-to-take-at-least-10-of-adani-groups-biggest-rupee-bond-issue-bankers-say/article70534918.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-01-21T16:31:33",
+       "lede": "state bank of india’s ‍mutual fund unit has committed to pick up at least ​10% of adani power’s nearly $820 million rupee-denominated bond ‌issue, likely to be launched later this ​week, three merchant bankers said on wednesday (january 21, 2026). the mutual fund, india’s biggest in terms of assets under",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.52
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "state bank of india",
+        "adani power",
+        "adani"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a7affc37f6c5e66c1c1e7",
+       "headline": "SBI Mutual Fund to Anchor Adani Power’s $820 Million Rupee Bond Issue | Unique Times Magazine",
+       "url": "https://uniquetimes.org/sbi-mutual-fund-to-anchor-adani-powers-820-million-rupee-bond-issue/",
+       "publisher": "uniquetimes.org",
+       "published_at": "2026-01-21T14:10:43",
+       "lede": "state bank of india’s mutual fund arm has committed to invest at least 10% in adani power’s nearly $820 million (75 billion rupees) rupee-denominated bond issue, which is expected to be launched later this week, according to three merchant bankers. sbi mutual fund, india’s largest mutual fund by assets under",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6b6b5cefb83fe8fff49b",
+       "headline": "SEBI Quarterly Compliances for Listed Companies under LODR Regulations",
+       "url": "https://taxguru.in/sebi/sebi-quarterly-compliances-listed-companies-lodr-regulations.html",
+       "publisher": "taxguru.in",
+       "published_at": "2026-04-21T06:29:29",
+       "lede": "under the sebi (listing obligations and disclosure requirements) regulations, 2015 (“sebi lodr”), listed entities are required to undertake periodic disclosures to ensure transparency, accountability, and investor protection. these regulations apply to entities with listed securities such as equity shares, debt instruments, and mutual fund units. key quarterly compliances include closure",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.6
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5b495cefb83fe8f539b4",
+       "headline": "Dov Forman",
+       "url": "https://www.foxnews.com/person/f/dov-forman",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-20T15:53:40",
+       "lede": "this material may not be published, broadcast, rewritten, or redistributed. ©2026 fox news network, llc. all rights reserved. quotes displayed in real-time or delayed by at least 15 minutes. market data provided by factset . powered and implemented by factset digital solutions . legal statement . mutual fund and etf",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 520,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMCAxNTo1Mzo0MCIsImkiOiI2YTJhNWI0OTVjZWZiODNmZThmNTM5YjQiLCJwIjo3fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.488,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.491
+    }
+   }
+  }
+ ]
+}

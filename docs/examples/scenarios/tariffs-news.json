@@ -1,0 +1,1074 @@
+{
+ "slug": "tariffs-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:04Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "tariffs",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "tariffs",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 63958,
+     "tone": {
+      "carrying": 63943,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 41555,
+        "share_pct": 64.99
+       },
+       {
+        "group": "neutral",
+        "count": 6111,
+        "share_pct": 9.56
+       },
+       {
+        "group": "positive",
+        "count": 16277,
+        "share_pct": 25.46
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 63953,
+      "count": 48124,
+      "share_pct": 75.25
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.513,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.516
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "tariffs",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "tariffs",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 32199,
+       "critical": 24416,
+       "critical_pct": 75.8,
+       "negative": 22218,
+       "positive": 9200,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 13166,
+       "critical": 9476,
+       "critical_pct": 72.0,
+       "negative": 8733,
+       "positive": 4036,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 32519,
+       "critical": 22733,
+       "critical_pct": 69.9,
+       "negative": 23455,
+       "positive": 7913,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 30174,
+       "critical": 23247,
+       "critical_pct": 77.0,
+       "negative": 21244,
+       "positive": 7824,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 18887,
+       "critical": 14658,
+       "critical_pct": 77.6,
+       "negative": 12566,
+       "positive": 5722,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 17036,
+       "critical": 13367,
+       "critical_pct": 78.5,
+       "negative": 11193,
+       "positive": 5370,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 10254,
+       "critical": 7781,
+       "critical_pct": 75.9,
+       "negative": 6745,
+       "positive": 3153,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 8864,
+       "critical": 6653,
+       "critical_pct": 75.1,
+       "negative": 5460,
+       "positive": 3119,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 17608,
+       "critical": 14063,
+       "critical_pct": 79.9,
+       "negative": 12519,
+       "positive": 4577,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 27953,
+       "critical": 19956,
+       "critical_pct": 71.4,
+       "negative": 16510,
+       "positive": 6518,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 8514,
+       "critical": 6571,
+       "critical_pct": 77.2,
+       "negative": 5821,
+       "positive": 2392,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 9883,
+       "critical": 7534,
+       "critical_pct": 76.2,
+       "negative": 6705,
+       "positive": 2790,
+       "partial_period": false
+      }
+     ],
+     "total": 227057,
+     "critical_total": 170455,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-07-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.085,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.088
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "tariffs",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "tariffs",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 63958,
+     "carrying": 31960,
+     "availability_pct": 49.97,
+     "items": [
+      {
+       "country": "united states",
+       "count": 19432,
+       "share_pct": 30.38
+      },
+      {
+       "country": "india",
+       "count": 5792,
+       "share_pct": 9.06
+      },
+      {
+       "country": "china",
+       "count": 1632,
+       "share_pct": 2.55
+      },
+      {
+       "country": "canada",
+       "count": 503,
+       "share_pct": 0.79
+      },
+      {
+       "country": "united kingdom",
+       "count": 452,
+       "share_pct": 0.71
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 4149
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.739,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.766
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "tariffs",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "tariffs",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "trade agreements and free trade zones",
+       "count": 1368,
+       "share": 3.47,
+       "lift": 283.12,
+       "baseline_count": 1,
+       "previous_period_count": 452,
+       "delta_pct": 202.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "political economy and resource allocation",
+       "count": 1229,
+       "share": 3.12,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 499,
+       "delta_pct": 146.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "economy news: trade deficit/surplus announcements",
+       "count": 1168,
+       "share": 2.96,
+       "lift": 241.73,
+       "baseline_count": 1,
+       "previous_period_count": 566,
+       "delta_pct": 106.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: global trade agreements",
+       "count": 1830,
+       "share": 4.64,
+       "lift": 189.37,
+       "baseline_count": 2,
+       "previous_period_count": 1220,
+       "delta_pct": 50.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "trade policies and agreements",
+       "count": 14430,
+       "share": 36.58,
+       "lift": 63.54,
+       "baseline_count": 47,
+       "previous_period_count": 13904,
+       "delta_pct": 3.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 63958,
+     "carrying": 39443,
+     "carrier_share_pct": 61.67,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.895,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.899
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "tariffs",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "tariffs",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2e3e10e6594f7ebaf434e8",
+       "headline": "Portion of road to close for 1 week in Moraine",
+       "url": "https://www.yahoo.com/news/articles/portion-road-close-1-week-072959599.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-27T07:29:59",
+       "lede": "donald trump’s false claims about the iran war, epstein files, tariffs and inflation have left some supporters who have traditionally believed all he says feeling duped and abandoned. why now? the declaration of independence isn’t just a philosophical breakup letter. it was a strategic move to secure vital support for",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.85
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e5009e430a4927fdc39bee",
+       "headline": "Trump threatens 50% tariff on China if it sends arms to Iran",
+       "url": "https://www.dailysabah.com/world/mid-east/trump-threatens-50-tariff-on-china-if-it-sends-arms-to-iran",
+       "publisher": "dailysabah.com",
+       "published_at": "2026-04-12T16:12:00",
+       "lede": "president donald trump on sunday said the united states would impose “staggering” new tariffs on chinese goods if beijing provides military support to iran during the u.s.-israeli war. \"if we catch them doing that, they get a 50 percent tariff, which is a staggering -- that's a staggering amount,\" trump",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.79,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.87
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.76
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e4f21fd5e7fc42ee071246",
+       "headline": "Relief in the streets as US, Iran agree to a 2-week truce",
+       "url": "https://www.businesstimes.com.sg/international/global/relief-streets-us-iran-agree-2-week-truce",
+       "publisher": "businesstimes.com.sg",
+       "published_at": "2026-04-07T22:55:31",
+       "lede": "trump announced new tariffs of 50 per cent on all goods from any country that supplies iran with arms. photo: reuters [washington/dubai/tel aviv/beirut] the united states and iran agreed to a two-week ceasefire brokered by pakistan, suspending a six-week-old war that has killed thousands, spread across the middle east and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.82
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.69
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.68
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.67
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ca35ba432e9a01d29f3a1d",
+       "headline": "Trump cheers death of Iranian leader, says strikes will continue - Middle East and Africa - The Jakarta Post",
+       "url": "http://www.thejakartapost.com/world/2026/03/01/trump-cheers-death-of-iranian-leader-says-strikes-will-continue.html",
+       "publisher": "thejakartapost.com",
+       "published_at": "2026-03-01T03:10:42",
+       "lede": "united states president donald trump speaks during a press briefing at the white house in washington, d.c. on feb. 20, 2026 following the supreme court's ruling that trump had exceeded his authority when he imposed tariffs. (reuters/jonathan ernst)the strikes, which trump said were aimed at destroying iranian missiles and annihilating",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.91
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.76
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69ca20dd432e9a01d29eb939",
+       "headline": "Trump cheers death of Iranian leader, says strikes will continue - Middle East and Africa - The Jakarta Post",
+       "url": "https://www.thejakartapost.com/world/2026/03/01/trump-cheers-death-of-iranian-leader-says-strikes-will-continue.html",
+       "publisher": "thejakartapost.com",
+       "published_at": "2026-03-01T03:10:42",
+       "lede": "united states president donald trump speaks during a press briefing at the white house in washington, d.c. on feb. 20, 2026 following the supreme court's ruling that trump had exceeded his authority when he imposed tariffs. (reuters/jonathan ernst)the strikes, which trump said were aimed at destroying iranian missiles and annihilating",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.91
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.76
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69c9ca961f37db7568887fd0",
+       "headline": "Letter: Are you going to let Trump drag us into another war?",
+       "url": "https://www.inforum.com/opinion/letters/letter-are-you-going-to-let-trump-drag-us-into-another-war",
+       "publisher": "inforum.com",
+       "published_at": "2026-02-26T19:00:00",
+       "lede": "to sens. hoeven and cramer and rep. fedorchak: will you please stand up?last april when president trump falsely declared a “national emergency” and put tariffs willy-nilly on much of the world, you said nothing. tariffs, paid by american businesses and families, that the supreme court has finally ruled are illegal.advertisementsince",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.87
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.7
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2af72a963d76f4af25b0f6",
+       "headline": "'India Deal Is On': Trump Reacts To US Supreme Court Decision On Tariffs",
+       "url": "https://news.abplive.com/news/india-deal-is-on-donald-trump-reacts-to-us-supreme-court-decision-on-tariffs-1828062",
+       "publisher": "news.abplive.com",
+       "published_at": "2026-02-21T01:39:56",
+       "lede": "in the wake of the us supreme court&rsquo;s decision on tariffs, president donald trump said there is no change in the trade deal with india and emphasised that the &ldquo;india deal is on\". &ldquo;i think my relationship with india is fantastic and we're doing trade with india. india pulled out",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.84
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e493bbf10c43d296b62e4",
+       "headline": "Trump says 32,000 people were killed in Iran's crackdown on protesters",
+       "url": "https://www.yahoo.com/news/articles/trump-says-32-000-people-200600845.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-20T20:06:00",
+       "lede": "president trump said in a news briefing friday that 32,000 people were killed during the recent protests in iran, a far higher death toll than has previously been reported. mr. trump, who made the remarks while addressing the supreme court's ruling striking down his sweeping tariffs, did not offer a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.63
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c933af0fe98f3340bc875e",
+       "headline": "Trump says 32,000 people were killed in Iran's crackdown on protesters",
+       "url": "https://www.cbsnews.com/news/donald-trump-iran-protest-crackdown-death-toll/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-02-20T20:06:00",
+       "lede": "president trump said in a news briefing friday that 32,000 people were killed during the recent protests in iran, a far higher death toll than has previously been reported.mr. trump, who made the remarks while addressing the supreme court's ruling striking down his sweeping tariffs, did not offer a source",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.63
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.61
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8e7401d51eeba947f8593",
+       "headline": "Trump calls Supreme Court decision to overturn most of his tariffs a ‘disgrace’",
+       "url": "https://english.elpais.com/usa/2026-02-20/trump-calls-supreme-court-decision-to-overturn-most-of-his-tariffs-a-disgrace.html",
+       "publisher": "english.elpais.com",
+       "published_at": "2026-02-20T18:06:46",
+       "lede": "u.s. president donald trump learned of the supreme court’s decision, which declared a large portion of his tariffs unconstitutional and pushed the republican administration’s trade policy to the brink, while attending the traditional breakfast with governors from across the country in the east room of the white house. according to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.88
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.71
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69cbadaef331a1b39ff56e06",
+       "headline": "'Would have been a nuclear war,' Trump reiterates claim of stopping India-Pakistan conflict",
+       "url": "https://economictimes.indiatimes.com/news/india/would-have-been-a-nuclear-war-trump-reiterates-claim-of-stopping-india-pakistan-conflict/articleshow/128184021.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-02-11T01:53:00",
+       "lede": "us president donald trump on wednesday again claimed that he stopped the india-pakistan conflict following operation sindoor in may 2025.trump said that he stopped the conflict using tariffs as a weapon. look, i settled eight wars. of the eight wars, at least six were settled because of tariffs. in other",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.82
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.64
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69bbf090d95eacb99a4be3d3",
+       "headline": "'Would Have Been a Nuclear War', Trump Reiterates Claim of Stopping India-Pakistan Conflict",
+       "url": "https://www.republicworld.com/world-news/would-have-been-a-nuclear-war-trump-reiterates-claim-of-stopping-india-pakistan-conflict",
+       "publisher": "republicworld.com",
+       "published_at": "2026-02-11T01:39:52",
+       "lede": "washington: us president donald trump on wednesday again claimed that he stopped the india-pakistan conflict following operation sindoor in may 2025.trump said that he stopped the conflict using tariffs as a weapon.\"look, i settled eight wars. of the eight wars, at least six were settled because of tariffs. in other",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.8
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "698f3cdb8d29a990b6f8bf1b",
+       "headline": "Iran protests: Tehran acknowledges 2,000 deaths as US pressure escalates",
+       "url": "http://gulfnews.com/world/mena/iran-protests-tehran-acknowledges-2000-deaths-as-us-pressure-escalates-1.500407132",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-01-13T12:55:08",
+       "lede": "the acknowledgment comes as us president donald trump escalated pressure on tehran, announcing 25 per cent import tariffs on goods from any country doing business with iran, a major oil exporter. trump has also said that military action remains among the options he is considering in response to the crackdown,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.77
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.65
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6986097adac7b0ca9c5dd1f2",
+       "headline": "Iran protests: Tehran acknowledges 2,000 deaths as US pressure escalates",
+       "url": "https://gulfnews.com/world/mena/iran-protests-tehran-acknowledges-2000-deaths-as-us-pressure-escalates-1.500407132",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-01-13T12:55:08",
+       "lede": "the acknowledgment comes as us president donald trump escalated pressure on tehran, announcing 25 per cent import tariffs on goods from any country doing business with iran, a major oil exporter. trump has also said that military action remains among the options he is considering in response to the crackdown,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.77
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.65
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2a5676c37f6c5e66a9be11",
+       "headline": "Trump Issues Iran Ultimatum: Slaps 25% Tariff On Any Country Doing Business With 'Islamic Republic' — Say",
+       "url": "https://www.benzinga.com/news/politics/26/01/49865053/trump-issues-iran-ultimatum-threatens-25-tariff-on-any-country-doing-business-with-islamic-republic-says-this-order-is-final",
+       "publisher": "benzinga.com",
+       "published_at": "2026-01-13T04:07:05",
+       "lede": "president donald trump announced sweeping new tariffs on any nation conducting business with iran, in a bid to escalate pressure on tehran amid widespread anti-government protests in the country. 'tariffs' on countries doing business with iran in a truth social post on monday night, trump said any country doing business",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.54
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03eef0220687a966a0ec50",
+       "headline": "Apple seeks US tariff refunds, to reinvest recovered funds in manufacturing",
+       "url": "https://www.thehindubusinessline.com/info-tech/apple-to-reinvest-tariff-refunds-in-us-innovation-says-tim-cook/article70927314.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-30T23:56:50",
+       "lede": "apple is working to get refunds for tariffs previously paid to the u.s. government but will reinvest any money it recovers ‌in the country, apple ceo tim cook said on thursday. apple has disclosed more than $3.3 billion ⁠in tariff costs during the second administration of u.s. president donald trump.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d774713680636eee3a14",
+       "headline": "Trump Uses Royalty to Excuse His Next U-Turn",
+       "url": "https://www.thedailybeast.com/trump-uses-royalty-to-excuse-his-next-u-turn/",
+       "publisher": "thedailybeast.com",
+       "published_at": "2026-04-30T23:07:26",
+       "lede": "president donald trump has tried to spin his latest u-turn as a gesture made in “honor” of king charles’s visit to the u.s. the 79-year-old president, whose mother was an immigrant from scotland, announced thursday that he would remove the tariffs he imposed last year on scottish whiskeys. “in honor",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.75
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a036506c2856acf8e888dfe",
+       "headline": "Trump removes US tariffs on UK whiskey after King Charles visit",
+       "url": "https://www.thehindubusinessline.com/news/world/trump-lifts-us-tariffs-on-uk-whiskey-after-king-charles-visit/article70926501.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-30T22:59:04",
+       "lede": "us president donald trump on thursday (local time) announced that his administration will remove tariffs and trade restrictions on whiskey from the united kingdom, in “honour” of the state visit of the british monarchs, king charles iii and queen camilla. in a post on truth social he said, “in honor",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.59
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 19633,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAyMjo1OTowNCIsImkiOiI2YTAzNjUwNmMyODU2YWNmOGU4ODhkZmUiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.061,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.064
+    }
+   }
+  }
+ ]
+}

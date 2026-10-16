@@ -1,0 +1,908 @@
+{
+ "slug": "nuclear-power-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:15:21Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "nuclear power",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nuclear power",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4587,
+     "tone": {
+      "carrying": 4579,
+      "availability_pct": 99.83,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2409,
+        "share_pct": 52.61
+       },
+       {
+        "group": "neutral",
+        "count": 140,
+        "share_pct": 3.06
+       },
+       {
+        "group": "positive",
+        "count": 2030,
+        "share_pct": 44.33
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4580,
+      "count": 3746,
+      "share_pct": 81.79
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.052,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.055
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "nuclear power",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nuclear power",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 960,
+       "critical": 723,
+       "critical_pct": 75.3,
+       "negative": 460,
+       "positive": 453,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1054,
+       "critical": 836,
+       "critical_pct": 79.3,
+       "negative": 493,
+       "positive": 532,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 772,
+       "critical": 545,
+       "critical_pct": 70.6,
+       "negative": 339,
+       "positive": 406,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1191,
+       "critical": 949,
+       "critical_pct": 79.7,
+       "negative": 604,
+       "positive": 570,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 930,
+       "critical": 717,
+       "critical_pct": 77.1,
+       "negative": 297,
+       "positive": 617,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 906,
+       "critical": 735,
+       "critical_pct": 81.1,
+       "negative": 344,
+       "positive": 537,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 821,
+       "critical": 616,
+       "critical_pct": 75.0,
+       "negative": 323,
+       "positive": 455,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 913,
+       "critical": 708,
+       "critical_pct": 77.5,
+       "negative": 394,
+       "positive": 502,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 803,
+       "critical": 656,
+       "critical_pct": 81.7,
+       "negative": 317,
+       "positive": 468,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 894,
+       "critical": 703,
+       "critical_pct": 78.6,
+       "negative": 407,
+       "positive": 455,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1344,
+       "critical": 1130,
+       "critical_pct": 84.1,
+       "negative": 827,
+       "positive": 480,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1546,
+       "critical": 1257,
+       "critical_pct": 81.3,
+       "negative": 858,
+       "positive": 627,
+       "partial_period": false
+      }
+     ],
+     "total": 12134,
+     "critical_total": 9575,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.799,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.802
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "nuclear power",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nuclear power",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4587,
+     "carrying": 2301,
+     "availability_pct": 50.16,
+     "items": [
+      {
+       "country": "united states",
+       "count": 972,
+       "share_pct": 21.19
+      },
+      {
+       "country": "india",
+       "count": 229,
+       "share_pct": 4.99
+      },
+      {
+       "country": "iran",
+       "count": 155,
+       "share_pct": 3.38
+      },
+      {
+       "country": "japan",
+       "count": 149,
+       "share_pct": 3.25
+      },
+      {
+       "country": "russia",
+       "count": 123,
+       "share_pct": 2.68
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 673
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.373,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.385
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "nuclear power",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nuclear power",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "nuclear plant meltdowns and radiation leaks",
+       "count": 402,
+       "share": 12.98,
+       "lift": 529.62,
+       "baseline_count": 2,
+       "previous_period_count": 117,
+       "delta_pct": 243.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "critical infrastructure vulnerability assessments",
+       "count": 357,
+       "share": 11.52,
+       "lift": 134.38,
+       "baseline_count": 7,
+       "previous_period_count": 103,
+       "delta_pct": 246.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "dam breach emergency planning",
+       "count": 277,
+       "share": 8.94,
+       "lift": 145.97,
+       "baseline_count": 5,
+       "previous_period_count": 62,
+       "delta_pct": 346.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "cybersecurity breaches impacting critical infrastructure",
+       "count": 377,
+       "share": 12.17,
+       "lift": 124.17,
+       "baseline_count": 8,
+       "previous_period_count": 105,
+       "delta_pct": 259.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "space launch failures and satellite collision incidents",
+       "count": 335,
+       "share": 10.81,
+       "lift": 126.1,
+       "baseline_count": 7,
+       "previous_period_count": 80,
+       "delta_pct": 318.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4587,
+     "carrying": 3098,
+     "carrier_share_pct": 67.54,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.941,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.943
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "nuclear power",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "nuclear power",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a0365e37b84f58d6f723478",
+       "headline": "Wie ein Sicherheitstest zur Katastrophe von Tschernobyl führte",
+       "url": "https://www.derstandard.at/story/3000000317834/wie-ein-sicherheitstest-zur-katastrophe-von-tschernobyl-fuehrte",
+       "publisher": "derstandard.at",
+       "published_at": "2026-04-26T04:00:00",
+       "lede": "for about ten days, the exposed graphite burned in the reactor block 4 of the chernobyl nuclear power plant. during this time, large quantities of sand, boron and other materials were dropped by helicopter to contain the fire. imago as the first firefighters in the night on the 26th of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.86
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa1b8a54b8f07c95d8c2",
+       "headline": "Wie ein Sicherheitstest zur Katastrophe von Tschernobyl führte",
+       "url": "https://www.derstandard.de/story/3000000317834/wie-ein-sicherheitstest-zur-katastrophe-von-tschernobyl-fuehrte",
+       "publisher": "derstandard.de",
+       "published_at": "2026-04-26T04:00:00",
+       "lede": "for about ten days, the exposed graphite burned in the reactor block 4 of the chernobyl nuclear power plant. during this time, large quantities of sand, boron and other materials were dropped by helicopter to contain the fire. imago as the first firefighters in the night on the 26th of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.86
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2dbf590d9a716b4ca451c",
+       "headline": "Manpreet Sethi : Read All The Stories Published by Manpreet Sethi",
+       "url": "https://indianexpress.com/profile/guest-writer/manpreet-sethi/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-09T00:32:51",
+       "lede": "the fbrs will run on mixed oxide fuel made from uranium-238 and plutonium-239 recovered through reprocessing of the spent fuel. they would not only multiply the potential of india’s nuclear power programme but also ensure waste management, an issue of concern for nuclear power programmes the spin-off effect subscriber only",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.5
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "waste management"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a78ddc37f6c5e66c04b40",
+       "headline": "Global energy system will be ‘profoundly transformed’ by Iran war, watchdog says",
+       "url": "https://www.inkl.com/news/global-energy-system-will-be-profoundly-transformed-by-iran-war-watchdog-says",
+       "publisher": "inkl.com",
+       "published_at": "2026-04-08T11:53:19",
+       "lede": "the global energy crisis sparked by the us-israeli war on iran could accelerate a shift towards renewable and nuclear power, the head of the international energy agency said. fatih birol said the current shock, driven by iran’s closure of the strait of hormuz in retaliation for the attack, would reshape",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.44
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c9bc3aab8d96aa3ae002",
+       "headline": "Nucléaire iranien: une tension persistante au cœur de la guerre au Moyen-Orient",
+       "url": "http://www.bfmtv.com/international/moyen-orient/iran/video-nucleaire-iranien-une-tension-persistante-au-c-ur-de-la-guerre-au-moyen-orient_VN-202604080103.html",
+       "publisher": "bfmtv.com",
+       "published_at": "2026-04-08T04:26:08",
+       "lede": "iranian nuclear power: a persistent tension at the heart of the middle east war after warning that \"whole citizenship will die tonight\" if the ultimatum he set in tehran to reach an agreement expires, donald trump finally agrees to postpone his threat of attacking iran by two weeks. the us",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.75
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.46
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.45
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8c2baf0ef2e3a980ff76c",
+       "headline": "Iran War: ईरान का दावा- परमाणु ठिकानों को बनाया गया निशाना; इस्राइल बोला- सैन्य कार्रवाई को और तेज करेंगे",
+       "url": "https://www.amarujala.com/world/iran-media-claims-nuclear-facilities-have-been-targeted-after-israel-says-attacks-will-escalate-and-expand-2026-03-27",
+       "publisher": "amarujala.com",
+       "published_at": "2026-03-27T17:36:07",
+       "lede": "iran’s nuclear power organisation pointed out that a large water plant located at shahid khondab, arak and erdecan yelokack plant of the yajd province was attacked. however, there was no casualties and there is no risk of radiation. the events have emerged at a time when israel warned to further",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.87
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.43
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c44195571643fe6f004fef",
+       "headline": "Missile Strikes Iran’s Bushehr Nuclear Plant Again as IAEA Urges Restraint - APN News | Authentic Press Network News",
+       "url": "https://www.apnnews.com/missile-strikes-irans-bushehr-nuclear-plant-again-as-iaea-urges-restraint/",
+       "publisher": "apnnews.com",
+       "published_at": "2026-03-25T14:55:51",
+       "lede": "a missile struck the premises of iran’s bushehr nuclear power plant last evening, the second such incident in just over a week, amid escalating regional hostilities.according to officials, there was no damage to the nuclear reactor itself and no injuries to staff, and the plant continues to operate normally with",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.56
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc22174a99add5b296c04b",
+       "headline": "Guerre au Moyen-Orient: Les 15 conditions de Donald Trump pour mettre la fin à la guerre",
+       "url": "https://www.bfmtv.com/international/moyen-orient/iran/video-guerre-au-moyen-orient-les-15-conditions-de-donald-trump-pour-mettre-la-fin-a-la-guerre_VN-202603240956.html",
+       "publisher": "bfmtv.com",
+       "published_at": "2026-03-24T21:37:40",
+       "lede": "bfm - international - middle east - iran middle east war: donald trump's 15 conditions to end the war according to the israeli press, donald trump has targeted 15 specific points to end the war with iran. these conditions concern many subjects, including nuclear power and the dismantling of existing",
+       "sentiment": {
+        "label": "none",
+        "score": 0.84,
+        "group": "neutral"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.77
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8bb2ec0812b6b31cd9c41",
+       "headline": "Guerre au Moyen-Orient: Les 15 conditions de Donald Trump pour mettre la fin à la guerre",
+       "url": "http://www.bfmtv.com/international/moyen-orient/iran/video-guerre-au-moyen-orient-les-15-conditions-de-donald-trump-pour-mettre-la-fin-a-la-guerre_VN-202603240956.html",
+       "publisher": "bfmtv.com",
+       "published_at": "2026-03-24T21:37:40",
+       "lede": "bfm - international - middle east - iran middle east war: donald trump's 15 conditions to end the war according to the israeli press, donald trump has targeted 15 specific points to end the war with iran. these conditions concern many subjects, including nuclear power and the dismantling of existing",
+       "sentiment": {
+        "label": "none",
+        "score": 0.84,
+        "group": "neutral"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.77
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbe51a1c2c193028d5886f",
+       "headline": "Kim Jong Un calls Pyongyang's nuclear status irreversible, warns against 'most hostile' South Korea - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/world/rest-of-world/kim-jong-un-calls-pyongyangs-nuclear-status-irreversible-warns-against-most-hostile-south-korea/articleshow/129765713.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-03-24T02:22:00",
+       "lede": "kim jong un (file photo)north korean leader kim jong un has said his country will firmly maintain its status as a nuclear power, while calling south korea the âmost hostileâ state.speaking at a session of the supreme peopleâs assembly, kim said his country will firmly maintain its status as a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.68
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d12637650fca233f0fe4ab",
+       "headline": "Irán le responde a Trump sobre el estrecho de Ormuz y nueva oleada de ataques al centro de Israel",
+       "url": "https://www.eltiempo.com/mundo/iran-le-responde-a-trump-sobre-el-estrecho-de-ormuz-y-nueva-oleada-de-ataques-al-centro-de-israel-3542142",
+       "publisher": "eltiempo.com",
+       "published_at": "2026-03-22T07:38:34",
+       "lede": "while israel alerts its population for a further aggression against its territory with missiles, after wounding about 120 people in the attack on areas close to iran's nuclear power plants. this same country responds in the early morning of sunday, march 22 to trump's threats, who said he would attack",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.75
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2a3c5cefb83fe882f37a",
+       "headline": "The 5 States Where The Most People Rely On Nuclear Power",
+       "url": "https://www.yahoo.com/news/articles/5-states-where-most-people-131000151.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-18T13:10:00",
+       "lede": "nuclear power grew in popularity during the 1960s and 1970s — until 4 am on march 28, 1979, when one of the reactors at three mile island suffered a partial meltdown. it was the most significant reactor incident in u.s. history. the situation was serious enough that governor richard thornburgh",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.83
+        },
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e969de540a46fb53ac4b9",
+       "headline": "Russia says local truce established to enable repairs at Zaporizhzhia nuclear plant",
+       "url": "http://www.straitstimes.com/world/europe/russia-says-local-truce-established-to-enable-repairs-at-zaporizhzhia-nuclear-plant",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-02-27T09:39:00",
+       "lede": "sign up now: get st's newsletters delivered to your inbox the zaporizhzhia nuclear power plant has been under russian control since shortly after the start of the war in 2022. moscow - a local ceasefire took effect near the zaporizhzhia nuclear power plant in southeastern ukraine on feb 27 to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.62
+        },
+        {
+         "code": 376,
+         "path": "/Business & Industrial/Energy & Utilities/Nuclear Energy",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8972555d415ad80d23ffb",
+       "headline": "60% uranium enrichment: What we know about Iran’s nuclear programme",
+       "url": "https://theprint.in/world/60-uranium-enrichment-what-we-know-about-irans-nuclear-programme/2857665/",
+       "publisher": "theprint.in",
+       "published_at": "2026-02-18T10:34:36",
+       "lede": "the two sides restarted talks in february. it’s unclear how they’ll break a longstanding impasse on the us demand for iran to halt all enrichment of uranium, including for nuclear power. other barriers to a deal could be iran’s ballistic-missile program and support for regional militias, which the us has",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.86
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.73
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.46
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 938,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wNyAxNjo1ODoyMSIsImkiOiI2YTJlZWRjNThlNjdhMmZjYjNmNTlhNjMiLCJwIjo5fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.274,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.277
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,860 @@
+{
+ "slug": "refinery-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:29Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "refinery",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "refinery",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 7480,
+     "tone": {
+      "carrying": 7477,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4490,
+        "share_pct": 60.05
+       },
+       {
+        "group": "neutral",
+        "count": 195,
+        "share_pct": 2.61
+       },
+       {
+        "group": "positive",
+        "count": 2792,
+        "share_pct": 37.34
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 7478,
+      "count": 5982,
+      "share_pct": 79.99
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.256,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.258
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "refinery",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "refinery",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 750,
+       "critical": 522,
+       "critical_pct": 69.6,
+       "negative": 385,
+       "positive": 340,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 644,
+       "critical": 487,
+       "critical_pct": 75.6,
+       "negative": 290,
+       "positive": 342,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 800,
+       "critical": 597,
+       "critical_pct": 74.6,
+       "negative": 432,
+       "positive": 356,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 950,
+       "critical": 718,
+       "critical_pct": 75.6,
+       "negative": 458,
+       "positive": 467,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1339,
+       "critical": 1082,
+       "critical_pct": 80.8,
+       "negative": 796,
+       "positive": 508,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1230,
+       "critical": 1065,
+       "critical_pct": 86.6,
+       "negative": 716,
+       "positive": 482,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 956,
+       "critical": 767,
+       "critical_pct": 80.2,
+       "negative": 494,
+       "positive": 441,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 711,
+       "critical": 542,
+       "critical_pct": 76.2,
+       "negative": 337,
+       "positive": 362,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 868,
+       "critical": 619,
+       "critical_pct": 71.3,
+       "negative": 327,
+       "positive": 506,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 959,
+       "critical": 729,
+       "critical_pct": 76.0,
+       "negative": 401,
+       "positive": 521,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2653,
+       "critical": 2181,
+       "critical_pct": 82.2,
+       "negative": 1813,
+       "positive": 789,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3000,
+       "critical": 2453,
+       "critical_pct": 81.8,
+       "negative": 1949,
+       "positive": 976,
+       "partial_period": false
+      }
+     ],
+     "total": 14860,
+     "critical_total": 11762,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.33,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.332
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "refinery",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "refinery",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 7480,
+     "carrying": 3914,
+     "availability_pct": 52.33,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1104,
+       "share_pct": 14.76
+      },
+      {
+       "country": "india",
+       "count": 596,
+       "share_pct": 7.97
+      },
+      {
+       "country": "nigeria",
+       "count": 470,
+       "share_pct": 6.28
+      },
+      {
+       "country": "australia",
+       "count": 236,
+       "share_pct": 3.16
+      },
+      {
+       "country": "ireland",
+       "count": 137,
+       "share_pct": 1.83
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1371
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.076,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.082
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "refinery",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "refinery",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "crude oil refining methods",
+       "count": 1026,
+       "share": 18.32,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 547,
+       "delta_pct": 87.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "petroleum distillation processes",
+       "count": 621,
+       "share": 11.09,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 327,
+       "delta_pct": 89.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "crude oil storage solutions",
+       "count": 459,
+       "share": 8.2,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 156,
+       "delta_pct": 194.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "petrochemical manufacturing",
+       "count": 427,
+       "share": 7.62,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 224,
+       "delta_pct": 90.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "chemical plant explosions and hazardous material leaks",
+       "count": 781,
+       "share": 13.95,
+       "lift": 189.74,
+       "baseline_count": 6,
+       "previous_period_count": 157,
+       "delta_pct": 397.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 7480,
+     "carrying": 5600,
+     "carrier_share_pct": 74.87,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.698,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.707
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "refinery",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "refinery",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69cbd4d68518a3ddf1823590",
+       "headline": "Ukraine's Bold Strike on Crucial Russian Oil Targets | Law-Order",
+       "url": "https://www.devdiscourse.com/article/law-order/3847177-ukraines-bold-strike-on-crucial-russian-oil-targets",
+       "publisher": "devdiscourse.com",
+       "published_at": "2026-03-23T10:25:09",
+       "lede": "ukraine's armed forces have launched a bold assault on russian energy infrastructure, targeting an oil terminal at the baltic sea port of primorsk and a refinery in ufa, bashkortostan. the attack on monday signifies a significant escalation in hostilities.the ukrainian general staff reported that both reservoir facilities and essential oil",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.67
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6ce399b489398de4e45",
+       "headline": "Do Global Refinery Fires Signal Something Much Darker?",
+       "url": "https://stratnewsglobal.com/west-asia/do-global-refinery-fires-signal-something-much-darker/",
+       "publisher": "stratnewsglobal.com",
+       "published_at": "2026-04-29T00:45:06",
+       "lede": "from rajasthan to russia, refinery fires are rising. india’s incidents sharpen questions on sabotage, stress, and energy security. there are coincidences, and then there are coincidences that arrive in clusters, uninvited and just a little too well-timed. the recent surge in refinery and energy facility fires across the world falls",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.8
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.78
+        }
+       ],
+       "country": "saudi arabia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b09eb5cefb83fe86b7968",
+       "headline": "US sanctions China-based refinery_ 40 shippers over Iranian oil",
+       "url": "https://article.wn.com/view/2026/04/25/US_sanctions_Chinabased_refinery_40_shippers_over_Iranian_oi/",
+       "publisher": "article.wn.com",
+       "published_at": "2026-04-24T00:00:00",
+       "lede": "the crackdown also signals stricter enforcement of ... read full story ask about this article answer for your question of the article will be displayed here ... interpret related news us imposes sanctions on a china-based oil refinery and 40 shippers over iranian oil the eagle-tribune 2026-04-24, 19:28 u.s. imposes",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e886649baafc73569326ab",
+       "headline": "Pachpadra refinery blaze: Agencies examining CCTV footages to find out reasons of fire - Social News XYZ",
+       "url": "https://www.socialnews.xyz/2026/04/22/pachpadra-refinery-blaze-agencies-examining-cctv-footages-to-find-out-reasons-of-fire/",
+       "publisher": "socialnews.xyz",
+       "published_at": "2026-04-22T05:58:30",
+       "lede": "jaipur, april 22 (socialnews.xyz) a high-level inquiry has been initiated into the massive fire that broke out at the pachpadra refinery in rajasthan's balotra district. a key aspect under examination is whether the incident points to a security lapse, particularly in the context of prime minister narendra modi’s protocol, or",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.52
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "xyz"
+       ],
+       "people": [
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "69e99928d47fc0283217667c",
+       "headline": "Fire at Pachpadra Refinery Postpones PM Modi's Rajasthan Visit",
+       "url": "https://www.newkerala.com/news/a/rajasthan-pm-modis-visit-postponed-after-fire-pachpadra-280.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-20T18:36:21",
+       "lede": "a fire broke out at the pachpadra refinery in rajasthan, leading to the postponement of its scheduled inauguration by prime minister narendra modi. the blaze, which started in the crude distillation unit, was brought under control with no reported casualties. former chief minister ashok gehlot expressed deep concern, calling the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.8
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "ashok gehlot",
+        "narendra modi",
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "69e99160bdd09a23d089d562",
+       "headline": "Rajasthan CM orders high-level probe into Pachpadra refinery fire, calls it 'unfortunate' - Yes Punjab News",
+       "url": "https://yespunjab.com/rajasthan-cm-orders-high-level-probe-into-pachpadra-refinery-fire-calls-it-unfortunate/",
+       "publisher": "yespunjab.com",
+       "published_at": "2026-04-20T14:37:55",
+       "lede": "jaipur, april 20, 2026 rajasthan chief minister bhajan lal sharma on monday termed the fire incident at the hpcl rajasthan refinery in pachpadra as “extremely unfortunate” and said he held immediate consultations with administrative officials and refinery management to assess the situation. authorities confirmed that the situation is now fully",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.83
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.7
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e991b9d47fc028321163aa",
+       "headline": "Rajasthan CM orders high-level probe into Pachpadra refinery fire, calls it 'unfortunate' - Social News XYZ",
+       "url": "https://www.socialnews.xyz/2026/04/20/rajasthan-cm-orders-high-level-probe-into-pachpadra-refinery-fire-calls-it-unfortunate/",
+       "publisher": "socialnews.xyz",
+       "published_at": "2026-04-20T13:34:54",
+       "lede": "jaipur, april 20 (socialnews.xyz) rajasthan chief minister bhajan lal sharma on monday termed the fire incident at the hpcl rajasthan refinery in pachpadra as “extremely unfortunate” and said he held immediate consultations with administrative officials and refinery management to assess the situation. authorities confirmed that the situation is now fully",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.77
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.71
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "xyz"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e87d5a7bb1410d4c84e7af",
+       "headline": "Fire at Rajasthan Pachpadra Refinery a day before inauguration; situation brought under control",
+       "url": "https://munsifdaily.com/fire-at-rajasthan-pachpadra-refinery-a-day/",
+       "publisher": "munsifdaily.com",
+       "published_at": "2026-04-20T10:44:50",
+       "lede": "jaipur: fire tenders were rushed to pachpadra refinery in barmer, rajasthan, on monday as fire broke out in one of its units, just a day before its scheduled inauguration. the incident triggered brief panic among officials, as the refinery is located barely one km from the event venue. according to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.73
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e867007bb1410d4c768e9a",
+       "headline": "'Plenty of fuel': Tasmanian government says Geelong refinery fire won't be a problem",
+       "url": "https://www.abc.net.au/news/2026-04-17/viva-geelong-refinery-fire-impact-on-tasmania-petrol-diesel/106574822",
+       "publisher": "abc.net.au",
+       "published_at": "2026-04-17T07:16:15",
+       "lede": "viva energy is one of tasmania's major suppliers of fuel, with its geelong refinery in corio producing 50 per cent of victoria's and 10 per cent of australia's fuel. this week, a major fire at the refinery has fanned the flames of national fuel anxiety, with petrol production at the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.72
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "viva energy",
+        "corio"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ad9d3c37f6c5e6603ebc0",
+       "headline": "Australien: Großbrand in Öl-Raffinerie verschärft Treibstoffkrise dramatisch",
+       "url": "https://www.braunschweiger-zeitung.de/panorama/article411728210/grossbrand-in-oel-raffinerie-verschaerft-australiens-treibstoffkrise.html",
+       "publisher": "braunschweiger-zeitung.de",
+       "published_at": "2026-04-16T04:52:52",
+       "lede": "there could hardly have been a worse time. shortly before midnight on wednesday, a big fire broke out in the corio refinery of viva energy in geelong, southwest of melbourne. explosions, flames, a tower full of liquefied gas, which the fire brigade must cool from a distance, because the heat",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.67
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b85d9baafc7356baa77d",
+       "headline": "Bangladesh eyes India route to refine Russian crude amid supply crunch - The Economic Times",
+       "url": "http://economictimes.indiatimes.com/news/india/bangladesh-eyes-india-route-to-refine-russian-crude-amid-supply-crunch/printarticle/130196122.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-11T17:40:00",
+       "lede": "new delhi: bangladesh is exploring an arrangement to refine russian crude in india before importing the processed fuels, as it seeks to address supply disruptions caused by the west asia conflict.under the plan being considered, bangladesh will bear the cost of crude import, refining in india and transportation of the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.83
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b4ae7bb1410d4caf0737",
+       "headline": "Bangladesh eyes India route to refine Russian crude amid supply crunch - The Economic Times",
+       "url": "https://m.economictimes.com/news/india/bangladesh-eyes-india-route-to-refine-russian-crude-amid-supply-crunch/printarticle/130196122.cms",
+       "publisher": "m.economictimes.com",
+       "published_at": "2026-04-11T17:40:00",
+       "lede": "new delhi: bangladesh is exploring an arrangement to refine russian crude in india before importing the processed fuels, as it seeks to address supply disruptions caused by the west asia conflict.under the plan being considered, bangladesh will bear the cost of crude import, refining in india and transportation of the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.83
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e506db9d0e7fe469aa87ae",
+       "headline": "Bangladesh eyes India route to refine Russian crude amid supply crunch",
+       "url": "https://economictimes.indiatimes.com/news/india/bangladesh-eyes-india-route-to-refine-russian-crude-amid-supply-crunch/articleshow/130196122.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-11T17:40:00",
+       "lede": "new delhi: bangladesh is exploring an arrangement to refine russian crude in india before importing the processed fuels, as it seeks to address supply disruptions caused by the west asia conflict.under the plan being considered, bangladesh will bear the cost of crude import, refining in india and transportation of the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.83
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 495,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMSAxNzo0MDowMCIsImkiOiI2OWU1MDZkYjlkMGU3ZmU0NjlhYTg3YWUiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.103,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.104
+    }
+   }
+  }
+ ]
+}

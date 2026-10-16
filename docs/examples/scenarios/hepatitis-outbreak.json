@@ -1,0 +1,914 @@
+{
+ "slug": "hepatitis-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:29Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "hepatitis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "hepatitis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2362,
+     "tone": {
+      "carrying": 2355,
+      "availability_pct": 99.7,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 569,
+        "share_pct": 24.16
+       },
+       {
+        "group": "neutral",
+        "count": 151,
+        "share_pct": 6.41
+       },
+       {
+        "group": "positive",
+        "count": 1635,
+        "share_pct": 69.43
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2362,
+      "count": 2079,
+      "share_pct": 88.02
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.905,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.924
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "hepatitis",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "hepatitis",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 569,
+       "critical": 461,
+       "critical_pct": 81.0,
+       "negative": 163,
+       "positive": 363,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 469,
+       "critical": 383,
+       "critical_pct": 81.7,
+       "negative": 105,
+       "positive": 330,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 757,
+       "critical": 541,
+       "critical_pct": 71.5,
+       "negative": 203,
+       "positive": 500,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 700,
+       "critical": 590,
+       "critical_pct": 84.3,
+       "negative": 264,
+       "positive": 376,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 713,
+       "critical": 641,
+       "critical_pct": 89.9,
+       "negative": 268,
+       "positive": 397,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 594,
+       "critical": 529,
+       "critical_pct": 89.1,
+       "negative": 136,
+       "positive": 408,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 517,
+       "critical": 457,
+       "critical_pct": 88.4,
+       "negative": 116,
+       "positive": 364,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1196,
+       "critical": 1101,
+       "critical_pct": 92.1,
+       "negative": 441,
+       "positive": 661,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 817,
+       "critical": 744,
+       "critical_pct": 91.1,
+       "negative": 163,
+       "positive": 590,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 452,
+       "critical": 390,
+       "critical_pct": 86.3,
+       "negative": 109,
+       "positive": 314,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 542,
+       "critical": 470,
+       "critical_pct": 86.7,
+       "negative": 164,
+       "positive": 347,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 551,
+       "critical": 475,
+       "critical_pct": 86.2,
+       "negative": 133,
+       "positive": 384,
+       "partial_period": false
+      }
+     ],
+     "total": 7877,
+     "critical_total": 6782,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.31,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.314
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "hepatitis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "hepatitis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2362,
+     "carrying": 405,
+     "availability_pct": 17.15,
+     "items": [
+      {
+       "country": "united states",
+       "count": 192,
+       "share_pct": 8.13
+      },
+      {
+       "country": "india",
+       "count": 54,
+       "share_pct": 2.29
+      },
+      {
+       "country": "china",
+       "count": 26,
+       "share_pct": 1.1
+      },
+      {
+       "country": "united kingdom",
+       "count": 23,
+       "share_pct": 0.97
+      },
+      {
+       "country": "australia",
+       "count": 10,
+       "share_pct": 0.42
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 100
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.825,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.828
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "hepatitis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "hepatitis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "liver cancer and hepatitis connections",
+       "count": 175,
+       "share": 11.73,
+       "lift": 478.73,
+       "baseline_count": 2,
+       "previous_period_count": 185,
+       "delta_pct": -5.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "infectious disease research and prevention",
+       "count": 162,
+       "share": 10.86,
+       "lift": 443.17,
+       "baseline_count": 2,
+       "previous_period_count": 169,
+       "delta_pct": -4.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vaccination and immunization research",
+       "count": 116,
+       "share": 7.77,
+       "lift": 317.33,
+       "baseline_count": 2,
+       "previous_period_count": 117,
+       "delta_pct": -0.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gene therapy and crispr technologies",
+       "count": 69,
+       "share": 4.62,
+       "lift": 377.51,
+       "baseline_count": 1,
+       "previous_period_count": 59,
+       "delta_pct": 16.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "biotechnology innovations in medicine",
+       "count": 64,
+       "share": 4.29,
+       "lift": 350.16,
+       "baseline_count": 1,
+       "previous_period_count": 52,
+       "delta_pct": 23.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2362,
+     "carrying": 1492,
+     "carrier_share_pct": 63.17,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.033,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.037
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "hepatitis",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "hepatitis",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a036868c2856acf8e89f0b0",
+       "headline": "Global hepatitis infections fall, but pace lags behind 2030 targets: WHO - Türkiye Today",
+       "url": "https://www.turkiyetoday.com/lifestyle/global-hepatitis-infections-fall-but-pace-still-lags-behind-2030-targets-who-warns-3219058",
+       "publisher": "turkiyetoday.com",
+       "published_at": "2026-04-30T00:03:05",
+       "lede": "a steady decline in new hepatitis infections and related deaths is underway worldwide, yet progress remains uneven and too slow to meet global elimination goals by 2030, according to the world health organization (who). progress effective, but not enough the agency’s 2026 global hepatitis report indicates that annual new hepatitis",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.72
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.55
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8dfff9baafc7356db8104",
+       "headline": "Over 30 Gandhi Medical College Hyderabad students fall ill after water Contamination, 1 contracts hepatitis: Report",
+       "url": "https://medicaldialogues.in/news/education/medical-colleges/over-30-gandhi-medical-college-hyderabad-students-fall-ill-after-water-contamination-1-contracts-hepatitis-report-168759",
+       "publisher": "medicaldialogues.in",
+       "published_at": "2026-04-16T08:00:52",
+       "lede": "telangana: in a shocker, more than 30 undergraduate students residing in the boys' hostel at gandhi medical college in telangana reportedly fell ill due to contaminated drinking water.students reported finding worms in the drinking water tank. one of the students also contracted hepatitis. thirty students complained of diarrhoea and vomiting,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.62
+        },
+        {
+         "code": 84,
+         "path": "/Business & Industrial/Energy & Utilities/Other",
+         "score": 0.58
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd47a4edcd0af9c8892f8",
+       "headline": "'They Tried to Cover It Up' — Father's Fury After Son Faces Six Months of HIV Tests Following Royal Gwent Hospital Sterilisation Failure",
+       "url": "https://www.ibtimes.co.uk/whistleblower-exposes-nhs-sterilisation-failure-1787320",
+       "publisher": "ibtimes.co.uk",
+       "published_at": "2026-03-22T20:00:04",
+       "lede": "lee williams found out his 15-year-old son might be facing months of hiv and hepatitis testing not from the hospital that treated him, but from a stranger dressed in medical scrubs who knocked on their front door. the visitor was a whistleblower, and the letter they delivered would force a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.57
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b217d5cefb83fe87c045c",
+       "headline": "21 People Treated with Unsterilized Surgical Tools at Hospital. Patients Were Not Told for Weeks, Despite Risk of HIV",
+       "url": "https://www.yahoo.com/news/articles/21-people-treated-unsterilized-surgical-193606031.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-22T19:36:06",
+       "lede": "need to know a hospital in the u.k. treated 21 patients, including a 15-year-old boy, with unsterilized surgical instruments patients were not informed of the mistake for three weeks, despite the fact that they may have been exposed to bloodborne pathogens like hiv or hepatitis a spokesperson for the hospital",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9a988e67a2fcb3a70f74",
+       "headline": "Judge blocks vaccine rollback: Northeast Ohio health leaders warn of risks to children",
+       "url": "https://www.yahoo.com/news/articles/judge-blocks-vaccine-rollback-northeast-213629252.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-17T21:36:29",
+       "lede": "akron, ohio (wjw) – in doctor’s offices across northeast ohio, concern is growing. a federal judge has stepped in, temporarily stopping a plan that would have scaled back routine vaccines for children, including protection against flu, hepatitis and meningitis. in his ruling, the judge said the overhaul, led by health",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.84
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eaf80e540a46fb54fa452",
+       "headline": "How blood product rules are changing | Mint Ahmedabad - newspaper - Lee esta historia en Magzter.com",
+       "url": "https://www.magzter.com/es/stories/newspaper/Mint-Ahmedabad/HOW-BLOOD-PRODUCT-RULES-ARE-CHANGING",
+       "publisher": "magzter.com",
+       "published_at": "2026-03-15T00:00:00",
+       "lede": "centre plans to update the regulatory norms for blood products and life-saving medicines derived from human plasma.(reuter)mint explains the proposal to eliminate âdouble testingâ for viral markers such as hiv and hepatitis at both raw material and finished product stages.the government argues that once the source plasma is verified as",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.92,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2adeff5cefb83fe84db794",
+       "headline": "How blood product rules are changing | Mint Ahmedabad - newspaper - Bu hikayeyi Magzter.com'da okuyun",
+       "url": "https://www.magzter.com/tr/stories/newspaper/Mint-Ahmedabad/HOW-BLOOD-PRODUCT-RULES-ARE-CHANGING",
+       "publisher": "magzter.com",
+       "published_at": "2026-03-15T00:00:00",
+       "lede": "centre plans to update the regulatory norms for blood products and life-saving medicines derived from human plasma.(reuter)mint explains the proposal to eliminate âdouble testingâ for viral markers such as hiv and hepatitis at both raw material and finished product stages.the government argues that once the source plasma is verified as",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.92,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6cd206092361ea9c6e0b3b2d",
+       "headline": "Optimal Corticosteroid Therapy Based on Liver Biopsy for Severe Immune-Mediated Hepatitis During Pembrolizumab Treatment: A Case Report.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41808699/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-01T00:00:00",
+       "lede": "optimal corticosteroid therapy based on liver biopsy for severe immune-mediated hepatitis during pembrolizumab treatment: a case report.immune checkpoint inhibitors (icis), including pembrolizumab, are widely used to treat advanced non-small cell lung cancer; however, they are associated with immune-related adverse events, including immune-mediated hepatitis. although systemic corticosteroids are recommended as first-line",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.93
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc4e744755dcbc87586edb",
+       "headline": "We don’t know what’s killing us: Inside Haryana's fever-hit village",
+       "url": "https://www.indiatoday.in/india/story/chayasa-palwal-haryana-mysterious-illness-seven-deaths-liver-failure-probe-2869909-2026-02-17",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-02-17T16:16:08",
+       "lede": "a winter haze hangs low over chayasa village in haryana’s palwal district. the handpumps creak as women draw water, children weave through narrow lanes, and conversations drop to whispers at the mention of hepatitis.in less than three weeks, seven people — most of them children, have died after complaining of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.66
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc47be3ca60e76cf2ee99e",
+       "headline": "We don’t know what’s killing us: Inside Haryana's fever-hit village",
+       "url": "http://www.indiatoday.in/india/story/chayasa-palwal-haryana-mysterious-illness-seven-deaths-liver-failure-probe-2869909-2026-02-17",
+       "publisher": "indiatoday.in",
+       "published_at": "2026-02-17T16:16:08",
+       "lede": "a winter haze hangs low over chayasa village in haryana’s palwal district. the handpumps creak as women draw water, children weave through narrow lanes, and conversations drop to whispers at the mention of hepatitis.in less than three weeks, seven people — most of them children, have died after complaining of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.66
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bd5caffd89557e8dc7a835",
+       "headline": "Liver Transplant in Children with Anaemia",
+       "url": "https://www.emjreviews.com/en-us/amj/hematology/news/stem-cell-transplant-after-liver-transplant-in-children/",
+       "publisher": "emjreviews.com",
+       "published_at": "2026-01-27T09:00:14",
+       "lede": "hepatitis-associated aplastic anaemia can be successfully treated with early haematopoietic stem cell transplantation after liver transplantation, with excellent survival and long-term outcomes reported in a small but extremely high-risk paediatric cohort. new findings highlight the potential of timely transplantation strategies in a condition that is rare, rapidly progressive, and often",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.48
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "cc917b034e55fc257b3b3b85",
+       "headline": "Current Therapeutic Targets for Alcohol-Associated Liver Disease.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/40683560/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-01-01T00:00:00",
+       "lede": "current therapeutic targets for alcohol-associated liver disease.alcohol-associated liver disease (ald) is a progressive liver disorder induced by chronic excessive alcohol consumption, affecting approximately 3.5% of the global population. the clinical spectrum of ald encompasses simple steatosis, alcoholic hepatitis, fibrosis, cirrhosis, and the potential development of hepatocellular carcinoma. the pathogenesis of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "90b69bc73b15160d23aa2e78",
+       "headline": "Investigation into the Pancreatic Pathogenesis of SFTSV across Multiple Levels.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41090515/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-01-01T00:00:00",
+       "lede": "investigation into the pancreatic pathogenesis of sftsv across multiple levels.severe fever with thrombocytopenia syndrome virus (sftsv) infection induces hepatitis, myocarditis, and even multi-organ dysfunction with a high mortality rate, while the impact on the pancreas remains unknown. in a retrospective analysis of clinical parameters in a cohort of 290 patients",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.52
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "67f889de4b4f5dbd0788caf2",
+       "headline": "When to Consider AIH-PBC OverlapSyndrome in the Pathology Report.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41989769/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-15T00:00:00",
+       "lede": "when to consider aih-pbc overlapsyndrome in the pathology report.autoimmune hepatitis-primary biliary cholangitis (aih-pbc) overlap syndrome remains a diagnostic challenge due to the absence of standardized criteria and the limitations of current frameworks, such as the paris criteria. in this retrospective study, we reviewed 71 liver biopsies flagged for possible overlap",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 629,
+         "path": "/Health/Health Conditions/Genetic Disorders",
+         "score": 0.61
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.58
+        },
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.5
+        },
+        {
+         "code": 462,
+         "path": "/Health/Health Conditions/GERD & Digestive Disorders",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2ae5aff2654c79d688f14",
+       "headline": "Implementan acciones intensivas para interrumpir cadena de transmisión de hepatitis en Matanzas",
+       "url": "https://www.5septiembre.cu/implementan-acciones-intensivas-para-interrumpir-cadena-de-transmision-de-hepatitis-en-matanzas/",
+       "publisher": "5septiembre.cu",
+       "published_at": "2026-04-05T15:10:25",
+       "lede": "share in reading time approx.: 1 minutes, 24 seconds public health authorities in matanzas province alerted about the presence of isolated cases of hepatitis in most municipalities, and outbreaks located in the towns of pálpite and cidra and the neighborhoods of versailles, in the provincial capital and la marina, in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 79,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wMSAwMDowMDowMCIsImkiOiI3YjFjZDAxZTI0ZDk0ZDMyODMyOTYxODQiLCJwIjo3fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.538,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.542
+    }
+   }
+  }
+ ]
+}

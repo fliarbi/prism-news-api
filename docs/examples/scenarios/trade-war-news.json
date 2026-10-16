@@ -1,0 +1,998 @@
+{
+ "slug": "trade-war-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:05:41Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "trade war",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "trade war",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2195,
+     "tone": {
+      "carrying": 2194,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1736,
+        "share_pct": 79.12
+       },
+       {
+        "group": "neutral",
+        "count": 53,
+        "share_pct": 2.42
+       },
+       {
+        "group": "positive",
+        "count": 405,
+        "share_pct": 18.46
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2195,
+      "count": 1687,
+      "share_pct": 76.86
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.531,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.534
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "trade war",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "trade war",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 5606,
+       "critical": 4403,
+       "critical_pct": 78.5,
+       "negative": 4191,
+       "positive": 1214,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1694,
+       "critical": 1185,
+       "critical_pct": 70.0,
+       "negative": 1300,
+       "positive": 308,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2787,
+       "critical": 1812,
+       "critical_pct": 65.0,
+       "negative": 2180,
+       "positive": 529,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1430,
+       "critical": 1099,
+       "critical_pct": 76.9,
+       "negative": 1111,
+       "positive": 264,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 943,
+       "critical": 668,
+       "critical_pct": 70.8,
+       "negative": 621,
+       "positive": 280,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2228,
+       "critical": 1836,
+       "critical_pct": 82.4,
+       "negative": 1644,
+       "positive": 502,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 544,
+       "critical": 430,
+       "critical_pct": 79.0,
+       "negative": 408,
+       "positive": 118,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 489,
+       "critical": 406,
+       "critical_pct": 83.0,
+       "negative": 365,
+       "positive": 113,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 953,
+       "critical": 748,
+       "critical_pct": 78.5,
+       "negative": 793,
+       "positive": 140,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 576,
+       "critical": 469,
+       "critical_pct": 81.4,
+       "negative": 437,
+       "positive": 125,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 321,
+       "critical": 229,
+       "critical_pct": 71.3,
+       "negative": 238,
+       "positive": 76,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 345,
+       "critical": 241,
+       "critical_pct": 69.9,
+       "negative": 268,
+       "positive": 64,
+       "partial_period": false
+      }
+     ],
+     "total": 17916,
+     "critical_total": 13526,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.019,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.022
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "trade war",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "trade war",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2195,
+     "carrying": 1023,
+     "availability_pct": 46.61,
+     "items": [
+      {
+       "country": "united states",
+       "count": 636,
+       "share_pct": 28.97
+      },
+      {
+       "country": "china",
+       "count": 110,
+       "share_pct": 5.01
+      },
+      {
+       "country": "canada",
+       "count": 77,
+       "share_pct": 3.51
+      },
+      {
+       "country": "greenland",
+       "count": 37,
+       "share_pct": 1.69
+      },
+      {
+       "country": "united kingdom",
+       "count": 25,
+       "share_pct": 1.14
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 138
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.054,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.056
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "trade war",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "trade war",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "political economy and resource allocation",
+       "count": 54,
+       "share": 3.56,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 59,
+       "delta_pct": -8.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "trade policies and agreements",
+       "count": 647,
+       "share": 42.62,
+       "lift": 74.03,
+       "baseline_count": 47,
+       "previous_period_count": 1330,
+       "delta_pct": -51.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "trade agreements and free trade zones",
+       "count": 46,
+       "share": 3.03,
+       "lift": 247.36,
+       "baseline_count": 1,
+       "previous_period_count": 35,
+       "delta_pct": 31.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: trade deficit/surplus announcements",
+       "count": 38,
+       "share": 2.5,
+       "lift": 204.34,
+       "baseline_count": 1,
+       "previous_period_count": 54,
+       "delta_pct": -29.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "trade dispute resolution mechanisms",
+       "count": 36,
+       "share": 2.37,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 29,
+       "delta_pct": 24.1,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2195,
+     "carrying": 1518,
+     "carrier_share_pct": 69.16,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.502,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.513
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "trade war",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "trade war",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f880a08937ef12fc072f10",
+       "headline": "Abraham Newman, analista internacional: “El neomonarquismo de Trump nos ayuda a comprender por qué EE.UU. está tan cerca de la Argentina”",
+       "url": "https://flipr.com.ar/nacionales/economia/lanacion/abraham-newman-analista-internacional-el-neomonarquismo-de-trump-nos-ayuda-a-comprender-por-que-ee-uu-esta-tan-cerca-de-la-argentina/",
+       "publisher": "flipr.com.ar",
+       "published_at": "2026-04-25T07:36:23",
+       "lede": "washington.– in the dizzying 15 months leading the white house, donald trump shook the global order at an unusual speed with decisions of extreme impact, from foreign interventions – with the war conflict with iran as his most risky bet – to trade war and expansionist ambitions to disputes with",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.74
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8816d7bb1410d4c87849a",
+       "headline": "Top five quotes from our 2026 Economic Outlook webinar",
+       "url": "https://www.canadianmanufacturing.com/features/2026-economic-outlook-webinar-charts-a-path-for-canadas-mfg-industry/",
+       "publisher": "canadianmanufacturing.com",
+       "published_at": "2026-04-20T19:43:29",
+       "lede": "“the federal government has done a u-turn on its immigration policy. for the first time in canadian history, we’re looking at a falling population. before the trade war, the biggest issue when we spoke to members was the difficulty of finding labour and talent. it’s not a pressing issue today",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.59
+        },
+        {
+         "code": 102,
+         "path": "/Business & Industrial/Manufacturing/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69de0973cd06d0eb7802a03f",
+       "headline": "U.S. Exporters Laud China Tariff Reprieve, but Scars Remain",
+       "url": "https://www.caixinglobal.com/2025-11-07/us-exporters-laud-china-tariff-reprieve-but-scars-remain-102380133.html",
+       "publisher": "caixinglobal.com",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "a booth for u.s. brand melaleuca at the china international import expo in shanghai on nov. 4. photo: vcg china said it will extend the suspension of a 24% retaliatory tariff on certain u.s. goods for another year, providing a partial reprieve for american exporters battered by a trade war",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.76
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.61
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.46
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2ba32277be6ed2da04e41",
+       "headline": "Trump to Meet Xi Jinping During First China Visit in Eight Years - Time News",
+       "url": "https://time.news/trump-to-meet-xi-jinping-during-first-china-visit-in-eight-years/",
+       "publisher": "time.news",
+       "published_at": "2026-04-06T11:36:38",
+       "lede": "president donald trump is preparing for a high-stakes diplomatic journey to beijing this may, marking his first visit to china in eight years. the upcoming summit with president xi jinping arrives at a critical juncture as trump’s trade war with china returns to the forefront of the global economic agenda,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.66
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.59
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump",
+        "xi jinping"
+       ]
+      },
+      {
+       "id": "69d1d15fda5fc84b0bc98c92",
+       "headline": "Impacts of Trump's Liberation Day tariffs linger one year later",
+       "url": "https://www.wtxl.com/politics/economy/impacts-of-trumps-liberation-day-tariffs-linger-one-year-later",
+       "publisher": "wtxl.com",
+       "published_at": "2026-03-31T11:51:59",
+       "lede": "nearly one year ago, president donald trump announced sweeping reciprocal tariffs that would lead to market volatility, a trade war, and a major legal showdown. by invoking the international emergency economic powers act (ieepa), trump placed a universal 10% tariff rate, as well as differential reciprocal tariffs on major trading",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69d1d08b2fa4f5037a13c4ed",
+       "headline": "Impacts of Trump's Liberation Day tariffs linger one year later",
+       "url": "https://www.katc.com/politics/economy/impacts-of-trumps-liberation-day-tariffs-linger-one-year-later",
+       "publisher": "katc.com",
+       "published_at": "2026-03-31T11:51:59",
+       "lede": "nearly one year ago, president donald trump announced sweeping reciprocal tariffs that would lead to market volatility, a trade war, and a major legal showdown. by invoking the international emergency economic powers act (ieepa), trump placed a universal 10% tariff rate, as well as differential reciprocal tariffs on major trading",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69d1501818d0491e7eb4fe7f",
+       "headline": "Impacts of Trump's Liberation Day tariffs linger one year later",
+       "url": "https://www.denver7.com/politics/economy/impacts-of-trumps-liberation-day-tariffs-linger-one-year-later",
+       "publisher": "denver7.com",
+       "published_at": "2026-03-31T11:51:59",
+       "lede": "nearly one year ago, president donald trump announced sweeping reciprocal tariffs that would lead to market volatility, a trade war, and a major legal showdown. by invoking the international emergency economic powers act (ieepa), trump placed a universal 10% tariff rate, as well as differential reciprocal tariffs on major trading",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69d14faec8ed73346ef1c951",
+       "headline": "Impacts of Trump's Liberation Day tariffs linger one year later",
+       "url": "https://www.koaa.com/politics/economy/impacts-of-trumps-liberation-day-tariffs-linger-one-year-later",
+       "publisher": "koaa.com",
+       "published_at": "2026-03-31T11:51:59",
+       "lede": "nearly one year ago, president donald trump announced sweeping reciprocal tariffs that would lead to market volatility, a trade war, and a major legal showdown. by invoking the international emergency economic powers act (ieepa), trump placed a universal 10% tariff rate, as well as differential reciprocal tariffs on major trading",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69d14f813a1bafe2c15d4808",
+       "headline": "Impacts of Trump's Liberation Day tariffs linger one year later",
+       "url": "https://www.kxxv.com/politics/economy/impacts-of-trumps-liberation-day-tariffs-linger-one-year-later",
+       "publisher": "kxxv.com",
+       "published_at": "2026-03-31T11:51:59",
+       "lede": "nearly one year ago, president donald trump announced sweeping reciprocal tariffs that would lead to market volatility, a trade war, and a major legal showdown. by invoking the international emergency economic powers act (ieepa), trump placed a universal 10% tariff rate, as well as differential reciprocal tariffs on major trading",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69d10b5cff077cc15f7aef57",
+       "headline": "Impacts of Trump's Liberation Day tariffs linger one year later",
+       "url": "https://www.10news.com/politics/economy/impacts-of-trumps-liberation-day-tariffs-linger-one-year-later",
+       "publisher": "10news.com",
+       "published_at": "2026-03-31T11:51:59",
+       "lede": "nearly one year ago, president donald trump announced sweeping reciprocal tariffs that would lead to market volatility, a trade war, and a major legal showdown. by invoking the international emergency economic powers act (ieepa), trump placed a universal 10% tariff rate, as well as differential reciprocal tariffs on major trading",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69cc5dfd74cdb9f7951ddc9f",
+       "headline": "Impacts of Trump's Liberation Day tariffs linger one year later",
+       "url": "https://www.wrtv.com/politics/economy/impacts-of-trumps-liberation-day-tariffs-linger-one-year-later",
+       "publisher": "wrtv.com",
+       "published_at": "2026-03-31T11:51:59",
+       "lede": "nearly one year ago, president donald trump announced sweeping reciprocal tariffs that would lead to market volatility, a trade war, and a major legal showdown.by invoking the international emergency economic powers act (ieepa), trump placed a universal 10% tariff rate, as well as differential reciprocal tariffs on major trading partners",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69cc5dfa74cdb9f7951ddc65",
+       "headline": "Impacts of Trump's Liberation Day tariffs linger one year later",
+       "url": "https://www.wptv.com/politics/economy/impacts-of-trumps-liberation-day-tariffs-linger-one-year-later",
+       "publisher": "wptv.com",
+       "published_at": "2026-03-31T11:51:59",
+       "lede": "nearly one year ago, president donald trump announced sweeping reciprocal tariffs that would lead to market volatility, a trade war, and a major legal showdown.by invoking the international emergency economic powers act (ieepa), trump placed a universal 10% tariff rate, as well as differential reciprocal tariffs on major trading partners",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.7
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69cf5fe5bcc5e85d6b4cc2d8",
+       "headline": "Iran could emerge stronger and more dangerous from this war",
+       "url": "https://www.afr.com/world/middle-east/iran-could-emerge-stronger-and-more-dangerous-from-this-war-20260331-p5zk3d",
+       "publisher": "afr.com",
+       "published_at": "2026-03-30T20:16:03",
+       "lede": "donald trump has a perverse genius for driving american adversaries to discover new forms of leverage over the us. his trade war with china persuaded beijing to exploit its domination of rare earths and critical minerals, forcing the us to reduce its tariffs. in a similar fashion, iran has now",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.79
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.63
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 572,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0zMCAxOTo1ODowMiIsImkiOiI2OWQxNGY2OTFmYzk1NjEzMTM0NmFjMmMiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.365,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.369
+    }
+   }
+  }
+ ]
+}

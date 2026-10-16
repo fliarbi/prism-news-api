@@ -1,0 +1,888 @@
+{
+ "slug": "ebola-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:00:30Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "ebola",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ebola",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1314,
+     "tone": {
+      "carrying": 1312,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 920,
+        "share_pct": 70.12
+       },
+       {
+        "group": "neutral",
+        "count": 13,
+        "share_pct": 0.99
+       },
+       {
+        "group": "positive",
+        "count": 379,
+        "share_pct": 28.89
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1314,
+      "count": 1166,
+      "share_pct": 88.74
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.06,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.067
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "ebola",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ebola",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 297,
+       "critical": 254,
+       "critical_pct": 85.5,
+       "negative": 190,
+       "positive": 98,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 118,
+       "critical": 94,
+       "critical_pct": 79.7,
+       "negative": 50,
+       "positive": 67,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 234,
+       "critical": 170,
+       "critical_pct": 72.6,
+       "negative": 157,
+       "positive": 76,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 250,
+       "critical": 200,
+       "critical_pct": 80.0,
+       "negative": 164,
+       "positive": 83,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 459,
+       "critical": 436,
+       "critical_pct": 95.0,
+       "negative": 368,
+       "positive": 89,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 196,
+       "critical": 177,
+       "critical_pct": 90.3,
+       "negative": 104,
+       "positive": 84,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 157,
+       "critical": 148,
+       "critical_pct": 94.3,
+       "negative": 98,
+       "positive": 59,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 163,
+       "critical": 147,
+       "critical_pct": 90.2,
+       "negative": 72,
+       "positive": 84,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 214,
+       "critical": 202,
+       "critical_pct": 94.4,
+       "negative": 151,
+       "positive": 59,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 305,
+       "critical": 268,
+       "critical_pct": 87.9,
+       "negative": 201,
+       "positive": 101,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 404,
+       "critical": 353,
+       "critical_pct": 87.4,
+       "negative": 289,
+       "positive": 110,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 391,
+       "critical": 343,
+       "critical_pct": 87.7,
+       "negative": 279,
+       "positive": 109,
+       "partial_period": false
+      }
+     ],
+     "total": 3188,
+     "critical_total": 2792,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 6.62,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 6.622
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "ebola",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ebola",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1314,
+     "carrying": 353,
+     "availability_pct": 26.86,
+     "items": [
+      {
+       "country": "united states",
+       "count": 176,
+       "share_pct": 13.39
+      },
+      {
+       "country": "germany",
+       "count": 25,
+       "share_pct": 1.9
+      },
+      {
+       "country": "nigeria",
+       "count": 24,
+       "share_pct": 1.83
+      },
+      {
+       "country": "united kingdom",
+       "count": 14,
+       "share_pct": 1.07
+      },
+      {
+       "country": "democratic republic of the congo",
+       "count": 11,
+       "share_pct": 0.84
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 103
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.492,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.494
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "ebola",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ebola",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "viral hemorrhagic fevers",
+       "count": 129,
+       "share": 15.0,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 154,
+       "delta_pct": -16.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "emerging viral diseases",
+       "count": 234,
+       "share": 27.21,
+       "lift": 444.22,
+       "baseline_count": 5,
+       "previous_period_count": 279,
+       "delta_pct": -16.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "pandemic preparedness and response",
+       "count": 61,
+       "share": 7.09,
+       "lift": 579.0,
+       "baseline_count": 1,
+       "previous_period_count": 54,
+       "delta_pct": 13.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "public health emergency preparedness",
+       "count": 165,
+       "share": 19.19,
+       "lift": 313.23,
+       "baseline_count": 5,
+       "previous_period_count": 206,
+       "delta_pct": -19.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "global health emerging threats",
+       "count": 51,
+       "share": 5.93,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 23,
+       "delta_pct": 121.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1314,
+     "carrying": 860,
+     "carrier_share_pct": 65.45,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.279,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.282
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "ebola",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ebola",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2b1ad3963d76f4af3f0c56",
+       "headline": "Seattle police search for suspect after stabbing in North Seattle",
+       "url": "https://www.yahoo.com/news/articles/seattle-police-search-suspect-stabbing-161709043.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-20T16:17:09",
+       "lede": "the ebola outbreak in central africa could grow to 20,000 cases or more, depending on how quickly infected people are isolated to slow the spread, according to a new analysis by u.s. health officials. the centers for disease control and prevention published a range of scenarios generated by computer models",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.83
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b19b4963d76f4af3e3dc3",
+       "headline": "9 hurt after crash in east Charlotte, Medic confirms",
+       "url": "https://www.yahoo.com/news/articles/9-hurt-crash-east-charlotte-004545179.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-12T00:45:45",
+       "lede": "the ebola outbreak in central africa could grow to 20,000 cases or more, depending on how quickly infected people are isolated to slow the spread, according to a new analysis by u.s. health officials. the centers for disease control and prevention published a range of scenarios generated by computer models",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9cc38e67a2fcb3a8b183",
+       "headline": "Fire breaks out at Lexington County business Sunday afternoon; no injuries reported",
+       "url": "https://www.yahoo.com/news/articles/fire-breaks-lexington-county-business-010247907.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-23T01:02:47",
+       "lede": "kinshasa, june 13 () - the ‌number of ‌confirmed ebola cases ​in democratic republic of congo has increased ‌to ⁠710, including 149 deaths, ⁠government data showed on ​saturday. the ​number ​represented the ‌total number of confirmed cases as of friday, according to ‌a ​situation ​report ​that documented ‌21 new cases",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1a705cefb83fe87710b1",
+       "headline": "Dispute leads to shooting incident in parking lot in Audubon, Pa.",
+       "url": "https://www.yahoo.com/news/articles/dispute-leads-shooting-incident-parking-114906621.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-20T11:49:06",
+       "lede": "the ebola outbreak in central africa could grow to 20,000 cases or more, depending on how quickly infected people are isolated to slow the spread, according to a new analysis by u.s. health officials. the centers for disease control and prevention published a range of scenarios generated by computer models",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.7
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ab1825cefb83fe82d6f4e",
+       "headline": "Quitman ISD releases students early due to broken water main line",
+       "url": "https://www.yahoo.com/news/articles/quitman-isd-releases-students-early-164416414.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-18T16:44:16",
+       "lede": "congo’s ebola outbreak “had a big head start, and we’re still behind,” world health organization director-general tedros adhanom ghebreyesus said wednesday, but asserted that “we are catching up\" as testing improves. according to congolese authorities, 344 cases including 60 deaths have been confirmed of the rare bundibugyo type of ebola",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.79
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1f374ef7caa4b80dac167",
+       "headline": "What will shape Poroshenko and Putin's upcoming meeting?",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/what-will-shape-poroshenko-and-putin-s-upcoming-meeting-1416005236",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-12T00:00:00",
+       "lede": "up next ebola tensions ease in liberia, but panic lingers video 3:30 us attitude over syria involvement shifts after foley death video 3:15 napa valley picks up after earthquake video 3:59 after funeral, how does ferguson begin repair? video 14:00 immigration lawyer helps detainees know their rights video 9:13 what",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.73
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ferguson"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ece53e540a46fb56ce22e",
+       "headline": "Crash involving a rolled-over truck occurs along Eastbound Loop 202 Red Mountain in Tempe",
+       "url": "https://www.yahoo.com/news/articles/crash-involving-rolled-over-semi-131102628.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-05T13:11:02",
+       "lede": "the ebola outbreak in central africa could grow to 20,000 cases or more, depending on how quickly infected people are isolated to slow the spread, according to a new analysis by u.s. health officials. the centers for disease control and prevention published a range of scenarios generated by computer models",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.64
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b1aa7c37f6c5e6631c4a6",
+       "headline": "Man struck by train, killed in Hall County, deputies say",
+       "url": "https://www.yahoo.com/news/articles/man-struck-train-killed-hall-025604523.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-27T02:56:04",
+       "lede": "the ebola outbreak in central africa could grow to 20,000 cases or more, depending on how quickly infected people are isolated to slow the spread, according to a new analysis by u.s. health officials. the centers for disease control and prevention published a range of scenarios generated by computer models",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.76
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aafe8963d76f4aff3dedb",
+       "headline": "Deputies in Osceola County to give briefing regarding a 2024 murder case",
+       "url": "https://www.yahoo.com/news/articles/deputies-osceola-county-briefing-regarding-181839696.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-04T18:18:39",
+       "lede": "congo’s ebola outbreak “had a big head start, and we’re still behind,” world health organization director-general tedros adhanom ghebreyesus said wednesday, but asserted that “we are catching up\" as testing improves. according to congolese authorities, 344 cases including 60 deaths have been confirmed of the rare bundibugyo type of ebola",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a704cc37f6c5e66babe34",
+       "headline": "Ethiopia declares end of Marburg outbreak that killed nine",
+       "url": "https://health.economictimes.indiatimes.com/news/industry/ethiopia-declares-end-of-marburg-outbreak-that-killed-nine/127587629",
+       "publisher": "health.economictimes.indiatimes.com",
+       "published_at": "2026-01-27T07:40:15",
+       "lede": "addis ababa: ethiopia has declared the &#8288;end of an outbreak of marburg virus, the world health organization &zwnj;said &zwnj;on monday, after the disease &zwnj;killed at least nine people.the horn of africa country announced on november 14 the outbreak &#8203;of the highly &#8203;infectious disease similar to &zwnj;ebola. \"ethiopia &zwj;has officially declared",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.94
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.49
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ea0d18e67a2fcb3abce00",
+       "headline": "DOJ sues NJ over attempt to regulate federal law enforcement",
+       "url": "https://www.yahoo.com/news/articles/doj-sues-nj-over-attempt-110940370.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T11:09:40",
+       "lede": "kinshasa, june 13 () - the ‌number of ‌confirmed ebola cases ​in democratic republic of congo has increased ‌to ⁠710, including 149 deaths, ⁠government data showed on ​saturday. the ​number ​represented the ‌total number of confirmed cases as of friday, according to ‌a ​situation ​report ​that documented ‌21 new cases",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.27,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 23,
+         "path": "/Law & Government/Public Safety/Law Enforcement",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9c628e67a2fcb3a8674a",
+       "headline": "Iran supreme leader issues statement saying only place Americans belong in Persian Gulf is 'at the bottom of its waters'",
+       "url": "https://www.yahoo.com/news/articles/iran-supreme-leader-issues-statement-104053387.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T10:40:53",
+       "lede": "kinshasa, june 13 () - the ‌number of ‌confirmed ebola cases ​in democratic republic of congo has increased ‌to ⁠710, including 149 deaths, ⁠government data showed on ​saturday. the ​number ​represented the ‌total number of confirmed cases as of friday, according to ‌a ​situation ​report ​that documented ‌21 new cases",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.9
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ea11d83fc01faba1d6e3d",
+       "headline": "Smoke rises over Russia’s Tuapse after Ukrainian drone strikes hit oil refinery",
+       "url": "https://www.yahoo.com/news/articles/smoke-rises-over-russia-tuapse-065537819.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T06:55:37",
+       "lede": "kinshasa, june 13 () - the ‌number of ‌confirmed ebola cases ​in democratic republic of congo has increased ‌to ⁠710, including 149 deaths, ⁠government data showed on ​saturday. the ​number ​represented the ‌total number of confirmed cases as of friday, according to ‌a ​situation ​report ​that documented ‌21 new cases",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.9
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ab019c37f6c5e66e598e7",
+       "headline": "City held Friday special meeting",
+       "url": "https://www.yahoo.com/news/articles/city-held-friday-special-meeting-035900174.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T03:59:00",
+       "lede": "congo’s ebola outbreak “had a big head start, and we’re still behind,” world health organization director-general tedros adhanom ghebreyesus said wednesday, but asserted that “we are catching up\" as testing improves. according to congolese authorities, 344 cases including 60 deaths have been confirmed of the rare bundibugyo type of ebola",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.87
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 320,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0zMCAwMzo1OTowMCIsImkiOiI2YTJhYjAxOWMzN2Y2YzVlNjZlNTk4ZTciLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.931,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.933
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,908 @@
+{
+ "slug": "credit-card-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:55Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "credit card",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "credit card",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8533,
+     "tone": {
+      "carrying": 8508,
+      "availability_pct": 99.71,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2823,
+        "share_pct": 33.18
+       },
+       {
+        "group": "neutral",
+        "count": 416,
+        "share_pct": 4.89
+       },
+       {
+        "group": "positive",
+        "count": 5269,
+        "share_pct": 61.93
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 8532,
+      "count": 2954,
+      "share_pct": 34.62
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.471,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 4.474
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "credit card",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "credit card",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3171,
+       "critical": 704,
+       "critical_pct": 22.2,
+       "negative": 725,
+       "positive": 2345,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1644,
+       "critical": 459,
+       "critical_pct": 27.9,
+       "negative": 425,
+       "positive": 1173,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 3379,
+       "critical": 678,
+       "critical_pct": 20.1,
+       "negative": 824,
+       "positive": 2492,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2397,
+       "critical": 785,
+       "critical_pct": 32.7,
+       "negative": 905,
+       "positive": 1441,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2255,
+       "critical": 752,
+       "critical_pct": 33.3,
+       "negative": 762,
+       "positive": 1439,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1896,
+       "critical": 536,
+       "critical_pct": 28.3,
+       "negative": 510,
+       "positive": 1342,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1682,
+       "critical": 497,
+       "critical_pct": 29.5,
+       "negative": 501,
+       "positive": 1141,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1645,
+       "critical": 522,
+       "critical_pct": 31.7,
+       "negative": 493,
+       "positive": 1080,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1954,
+       "critical": 846,
+       "critical_pct": 43.3,
+       "negative": 738,
+       "positive": 1137,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2079,
+       "critical": 613,
+       "critical_pct": 29.5,
+       "negative": 611,
+       "positive": 1301,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2163,
+       "critical": 619,
+       "critical_pct": 28.6,
+       "negative": 628,
+       "positive": 1425,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2337,
+       "critical": 876,
+       "critical_pct": 37.5,
+       "negative": 846,
+       "positive": 1406,
+       "partial_period": false
+      }
+     ],
+     "total": 26602,
+     "critical_total": 7887,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-07-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.647,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.65
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "credit card",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "credit card",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8533,
+     "carrying": 3421,
+     "availability_pct": 40.09,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1891,
+       "share_pct": 22.16
+      },
+      {
+       "country": "india",
+       "count": 568,
+       "share_pct": 6.66
+      },
+      {
+       "country": "united kingdom",
+       "count": 162,
+       "share_pct": 1.9
+      },
+      {
+       "country": "australia",
+       "count": 104,
+       "share_pct": 1.22
+      },
+      {
+       "country": "canada",
+       "count": 76,
+       "share_pct": 0.89
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 620
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.89,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.893
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "credit card",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "credit card",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "fraud detection and prevention systems",
+       "count": 196,
+       "share": 4.49,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 63,
+       "delta_pct": 211.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "customer loyalty programs and reward systems",
+       "count": 137,
+       "share": 3.14,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 162,
+       "delta_pct": -15.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "airline loyalty programs",
+       "count": 196,
+       "share": 4.49,
+       "lift": 183.31,
+       "baseline_count": 2,
+       "previous_period_count": 151,
+       "delta_pct": 29.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "credit card rewards programs",
+       "count": 119,
+       "share": 2.73,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 190,
+       "delta_pct": -37.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "credit card debt management strategies",
+       "count": 117,
+       "share": 2.68,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 144,
+       "delta_pct": -18.8,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 8533,
+     "carrying": 4364,
+     "carrier_share_pct": 51.14,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.644,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.647
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "credit card",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "credit card",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69bced2c93b550fcb824c8db",
+       "headline": "State Police Investigating Child Welfare, Theft Incidents in Jefferson County",
+       "url": "https://gantnews.com/2026/03/03/state-police-investigating-child-welfare-theft-incidents-in-jefferson-county/",
+       "publisher": "gantnews.com",
+       "published_at": "2026-03-03T15:00:35",
+       "lede": "pennsylvania state police have released details on multiple incidents in jefferson county recently, including a child welfare incident, a stolen credit card, and a domestic incident.pennsylvania state police are investigating an alleged child welfare incident reported in jefferson county. according to psp punxsutawney, the incident occurred february 27 at approximately",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.75
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8238c37f6c5e66c6b123",
+       "headline": "Police investigating large-scale Treasure Valley credit fraud, seek victims",
+       "url": "https://ca.news.yahoo.com/police-investigating-large-scale-treasure-230111019.html",
+       "publisher": "ca.news.yahoo.com",
+       "published_at": "2026-04-30T23:01:11",
+       "lede": "law enforcement is warning treasure valley residents about ongoing large-scale credit card fraud and hoping more victims come forward. police believe suspects are stealing money from residents through a type of scam known as “ghost tapping,” a nampa police department release said thursday afternoon. ghost tapping involves fraudsters gaining access",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.8
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e7ced32561089420c5b5",
+       "headline": "Archana Puran Singh's son falls victim to digital scam, loses big money",
+       "url": "https://www.mid-day.com/entertainment/bollywood-news/article/archana-puran-singh-son-ayushmaan-loses-rs-87000-in-credit-card-scam-23627524",
+       "publisher": "mid-day.com",
+       "published_at": "2026-04-26T07:55:00",
+       "lede": "actors and couple archana puran singh and parmeet sethirsquos son aayushmaan recently fell victim to an alleged credit card scam he ended up losing rs 87000 the incident came to light through ayushmanns elder brother aaryamanns youtube vlog though the situation initially caused panic the family later laughed it off",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 322,
+         "path": "/Finance/Credit & Lending/Credit Cards",
+         "score": 0.52
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.49
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "singh"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a86795cefb83fe810f1fd",
+       "headline": "Archana Puran Singh’s Son Ayushmaan Sethi Falls Victim To Rs 87,000 Scam Trap",
+       "url": "https://news.abplive.com/entertainment/celebrities/archana-puran-singh-s-son-ayushmaan-sethi-falls-victim-to-rs-87-000-subscription-trap-1838781",
+       "publisher": "news.abplive.com",
+       "published_at": "2026-04-26T05:35:18",
+       "lede": "archana puran singh&rsquo;s family is no stranger to online scams, but this time it is her younger son, ayushmaan sethi, who has landed in trouble. the 22‑year‑old youtuber recently lost around rs 87,000 from his credit card in a tricky &ldquo;free trial&rdquo; scheme, and he spilled the beans on camera",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.55
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a728bbf1d314559a2df5",
+       "headline": "Why RBI cancelled Paytm Payments Bank’s banking licence",
+       "url": "https://indianexpress.com/article/explained/explained-economics/why-rbi-cancelled-paytm-payments-banks-banking-licence-10654383/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-24T16:17:05",
+       "lede": "more than two years after barring paytm payments bank from accepting deposits or top-ups, the reserve bank of india (rbi) friday scrapped its banking licence with immediate effect. the central bank said the bank’s operations were conducted in a way that was “detrimental to the interest of the bank and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.79
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "paytm payments bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ee3718e67a2fcb3eb2ba6",
+       "headline": "Upstate NY pair allegedly stole hundreds of credit card accounts, spent $575K before getting caught",
+       "url": "https://www.yahoo.com/news/articles/upstate-ny-pair-allegedly-stole-171510446.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T08:56:48",
+       "lede": "federal authorities arrested two upstate new york residents on tuesday morning on charges that they stole hundreds of credit card accounts and made more than half a million dollars in unauthorized purchases. opeyemi olujobi, 28, and jennie davidson, 29, both of poughkeepsie, were taken into custody and are expected to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.75
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e861137bb1410d4c72cbf5",
+       "headline": "Cardi B Threatens Credit Card Thieves After Financial Theft - Time News",
+       "url": "https://time.news/cardi-b-threatens-credit-card-thieves-after-financial-theft/",
+       "publisher": "time.news",
+       "published_at": "2026-04-09T21:14:52",
+       "lede": "global superstar cardi b has publicly addressed a security breach involving her finances, sparking a wider conversation about the vulnerability of high-net-worth individuals to sophisticated financial crimes. the rapper recently used an instagram live broadcast to express her outrage over a case of cardi b american express credit card fraud,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "american express"
+       ],
+       "people": [
+        "cardi b"
+       ]
+      },
+      {
+       "id": "69e4f6e6430a4927fdbe5414",
+       "headline": "Police accuse Bay Area nanny of defrauding client of more than $60,000",
+       "url": "https://www.eastbaytimes.com/2026/04/08/tiburon-police-accuse-nanny-of-defrauding-client/",
+       "publisher": "eastbaytimes.com",
+       "published_at": "2026-04-08T13:49:00",
+       "lede": "tiburon police arrested a nanny on allegations she charged more than $60,000 in personal expenses with her client’s credit card. the suspect worked for a tiburon household from last july to december. she was allowed to use the credit card to pay for child care expenses, tiburon police chief michelle",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2bc3e7f3a572cf4b036aa",
+       "headline": "In Your Town for April 8, 2026",
+       "url": "https://www.marinij.com/2026/04/07/in-your-town-for-april-8-2026/",
+       "publisher": "marinij.com",
+       "published_at": "2026-04-07T22:38:30",
+       "lede": "tiburon police allege fraud by nanny tiburon police arrested a nanny on allegations she charged more than $60,000 in personal expenses with her client’s credit card. the suspect worked for a tiburon household from last july to december. she was allowed to use the credit card to pay for child",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.72
+        },
+        {
+         "code": 23,
+         "path": "/Law & Government/Public Safety/Law Enforcement",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e329b0b66a657f69d2876a",
+       "headline": "Tiburon police accuse nanny of defrauding client",
+       "url": "https://www.marinij.com/2026/04/07/tiburon-police-accuse-nanny-of-defrauding-client/",
+       "publisher": "marinij.com",
+       "published_at": "2026-04-07T20:49:00",
+       "lede": "tiburon police arrested a nanny on allegations she charged more than $60,000 in personal expenses with her client’s credit card. the suspect worked for a tiburon household from last july to december. she was allowed to use the credit card to pay for child care expenses, tiburon police chief michelle",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e500fe6594f7ebaff053d",
+       "headline": "Former nanny arrested at SFO after alleged fraud targeting Marin family",
+       "url": "https://www.yahoo.com/news/articles/former-nanny-arrested-sfo-alleged-202351252.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-07T20:23:51",
+       "lede": "a san francisco woman was arrested at san francisco international airport last week in connection with a felony credit card fraud investigation after allegedly going on a $60,000 spending spree, purchasing luxury hotel stays and spa services, according to the tiburon police department. the woman was taken into custody around",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.75
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee3eae540a46fb5834ef3",
+       "headline": "S.F. nanny allegedly stole $60K from Tiburon family for travel, luxury hotels, spa treatment",
+       "url": "https://www.yahoo.com/news/articles/f-nanny-allegedly-stole-60k-063137864.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-07T06:31:37",
+       "lede": "a tiburon family's nanny was recently nabbed at the san francisco international airport, ending a spending spree that included international flights, luxury hotel stays and spa services charged to her boss's credit card, authorities said. naghmeh novbakhtian, 35, allegedly racked up about $60,000 in charges, before the san francisco resident",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2b7793aab8d96aa36d85a",
+       "headline": "UPI clocks 228B transactions in 2025 as digital payments boom",
+       "url": "https://www.newsbytesapp.com/news/business/upi-processed-228b-transactions-in-2025/story",
+       "publisher": "newsbytesapp.com",
+       "published_at": "2026-04-06T10:29:40",
+       "lede": "india's digital payments ecosystem is witnessing unprecedented growth, with unified payments interface (upi) leading the charge. according to worldline's annual india digital payments report - year 2025 in review, upi processed an astounding 228 billion transactions in 2025. the report highlights a shift toward a micro-transaction economy, where small-value digital",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 94,
+         "path": "/Business & Industrial/Business Services/E-Commerce Services",
+         "score": 0.72
+        },
+        {
+         "code": 180,
+         "path": "/Finance/Banking/Mobile Payments & Digital Wallets",
+         "score": 0.58
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e45aee6594f7ebaf8b762",
+       "headline": "Amazon packages Atlanta woman never ordered showed up on her doorstep. Turns out she paid for them",
+       "url": "https://www.yahoo.com/news/articles/amazon-packages-atlanta-woman-never-002747436.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-04T00:27:47",
+       "lede": "the packages started piling up on the front porch of marilyn bowden’s home in atlanta’s virginia highland neighborhood. luxury goods and electronics shipped from amazon were inside. all of them had bowden’s name and address, and she eventually learned that all of them, were charged to her credit card. “well,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b32f8c37f6c5e6644868c",
+       "headline": "Former Kaptur aide pleads guilty in $22K fraud scheme",
+       "url": "https://www.yahoo.com/news/articles/former-kaptur-aide-pleads-guilty-165827611.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-01T16:58:27",
+       "lede": "a former aide of u.s. representative marcy kaptur (oh-9) pleaded guilty in a virginia federal court on tuesday to a charge of wire fraud after she reportedly used kaptur's personal credit card and banking information to pay her own bills. according to kaptur's office, 40-year-old courtney melissa hruska was an",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.77,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 708,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0zMSAxMDozMzowMiIsImkiOiI2OWUyYWQ3MDI3N2JlNmVkMmQ5ZDZmYWIiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.758,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.76
+    }
+   }
+  }
+ ]
+}

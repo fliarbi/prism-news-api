@@ -1,0 +1,958 @@
+{
+ "slug": "data-center-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:10:15Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "data center",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "data center",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 17165,
+     "tone": {
+      "carrying": 17161,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3413,
+        "share_pct": 19.89
+       },
+       {
+        "group": "neutral",
+        "count": 252,
+        "share_pct": 1.47
+       },
+       {
+        "group": "positive",
+        "count": 13496,
+        "share_pct": 78.64
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 17163,
+      "count": 11598,
+      "share_pct": 67.58
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.604,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.613
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "data center",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "data center",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1835,
+       "critical": 1218,
+       "critical_pct": 66.4,
+       "negative": 203,
+       "positive": 1606,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1657,
+       "critical": 1051,
+       "critical_pct": 63.4,
+       "negative": 144,
+       "positive": 1498,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1976,
+       "critical": 1219,
+       "critical_pct": 61.7,
+       "negative": 208,
+       "positive": 1752,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2435,
+       "critical": 1632,
+       "critical_pct": 67.0,
+       "negative": 333,
+       "positive": 2075,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2816,
+       "critical": 1985,
+       "critical_pct": 70.5,
+       "negative": 337,
+       "positive": 2448,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 3231,
+       "critical": 2408,
+       "critical_pct": 74.5,
+       "negative": 477,
+       "positive": 2694,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 3156,
+       "critical": 2299,
+       "critical_pct": 72.8,
+       "negative": 436,
+       "positive": 2702,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2764,
+       "critical": 1867,
+       "critical_pct": 67.5,
+       "negative": 524,
+       "positive": 2212,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2627,
+       "critical": 1774,
+       "critical_pct": 67.5,
+       "negative": 490,
+       "positive": 2105,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4339,
+       "critical": 2932,
+       "critical_pct": 67.6,
+       "negative": 781,
+       "positive": 3495,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 4781,
+       "critical": 3165,
+       "critical_pct": 66.2,
+       "negative": 981,
+       "positive": 3740,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 5418,
+       "critical": 3727,
+       "critical_pct": 68.8,
+       "negative": 1161,
+       "positive": 4156,
+       "partial_period": false
+      }
+     ],
+     "total": 37035,
+     "critical_total": 25277,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.068,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.071
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "data center",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "data center",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 17165,
+     "carrying": 7790,
+     "availability_pct": 45.38,
+     "items": [
+      {
+       "country": "united states",
+       "count": 4792,
+       "share_pct": 27.92
+      },
+      {
+       "country": "india",
+       "count": 549,
+       "share_pct": 3.2
+      },
+      {
+       "country": "united kingdom",
+       "count": 246,
+       "share_pct": 1.43
+      },
+      {
+       "country": "china",
+       "count": 213,
+       "share_pct": 1.24
+      },
+      {
+       "country": "singapore",
+       "count": 196,
+       "share_pct": 1.14
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1794
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.02,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.022
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "data center",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "data center",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "cloud computing technologies",
+       "count": 746,
+       "share": 7.99,
+       "lift": 652.34,
+       "baseline_count": 1,
+       "previous_period_count": 790,
+       "delta_pct": -5.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "technology adoption and digital transformation",
+       "count": 1197,
+       "share": 12.82,
+       "lift": 149.53,
+       "baseline_count": 7,
+       "previous_period_count": 885,
+       "delta_pct": 35.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "enterprise cloud backup and disaster recovery",
+       "count": 308,
+       "share": 3.3,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 58,
+       "delta_pct": 431.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "cloud storage redundancy and durability features",
+       "count": 254,
+       "share": 2.72,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 56,
+       "delta_pct": 353.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "new product launches and innovations",
+       "count": 1382,
+       "share": 14.8,
+       "lift": 86.32,
+       "baseline_count": 14,
+       "previous_period_count": 1090,
+       "delta_pct": 26.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 17165,
+     "carrying": 9335,
+     "carrier_share_pct": 54.38,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.813,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.815
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "data center",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "data center",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f880d9bbf1d31455968714",
+       "headline": "Proposed mega data center draws concerns over 'heat island effect' - KSLTV.com",
+       "url": "https://ksltv.com/local-news/data-center-heat-concern/903801/",
+       "publisher": "ksltv.com",
+       "published_at": "2026-04-30T00:51:32",
+       "lede": "logan – increases in temperatures around so-called urban heat domes, or heat islands could apply to a massive data center that is proposed for the northwestern side of box elder county. project stratos, headed by shark tank star kevin o’leary’s company, would span some 40,000 acres and produce up to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d92b713680636eef809b",
+       "headline": "Proposed mega data center draws concerns over 'heat island effect'",
+       "url": "https://ksl.com/article/news/utah/science-and-tech/proposed-mega-data-center-draws-concerns-over-heat-island-effect/51490930",
+       "publisher": "ksl.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "logan — increases in temperatures around so-called urban heat domes, or heat islands, could apply to a massive data center that is proposed for the northwestern side of box elder county.project stratos, headed by &quot;shark tank&quot; star kevin o'leary's company, would span some 40,000 acres and produce up to 9",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d6f7713680636eeddbc5",
+       "headline": "Proposed mega data center draws concerns over 'heat island effect'",
+       "url": "https://www.ksl.com/article/news/utah/science-and-tech/proposed-mega-data-center-draws-concerns-over-heat-island-effect/51490930",
+       "publisher": "ksl.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "logan — increases in temperatures around so-called urban heat domes, or heat islands, could apply to a massive data center that is proposed for the northwestern side of box elder county.project stratos, headed by &quot;shark tank&quot; star kevin o'leary's company, would span some 40,000 acres and produce up to 9",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f884ffbbf1d3145598d791",
+       "headline": "Proposed mega data center draws concerns over 'heat island effect'",
+       "url": "https://www.ksl.com/article/51490930/proposed-mega-data-center-draws-concerns-over-heat-island-effect",
+       "publisher": "ksl.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "logan — increases in temperatures around so-called urban heat domes, or heat islands, could apply to a massive data center that is proposed for the northwestern side of box elder county.project stratos, headed by &quot;shark tank&quot; star kevin o'leary's company, would span some 40,000 acres and produce up to 9",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9daad713680636ef098a7",
+       "headline": "Kenya’s Tech Sector Grew in 2025 but the Cost of Living Got Worse",
+       "url": "https://techweez.com/2026/04/30/kenya-tech-sector-growth-2025-cost-of-living/",
+       "publisher": "techweez.com",
+       "published_at": "2026-04-29T22:39:11",
+       "lede": "<!-- wp:paragraph --> <p>kenya's tech sector grew in 2025 as mobile connections crossed 78 million and internet subscriptions hit 64.4 million. mobile money subscribers jumped 21.4% to 51.4 million; <a href=\"https://techweez.com/tag/konza-technopolis/\">konza technopolis</a> welcomed 8 new investors, and its data center more than doubled available storage.</p> <!-- /wp:paragraph --> <!-- wp:paragraph",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "kenya",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a74bd5cefb83fe8051f30",
+       "headline": "How We’re Building a Cleaner, More Efficient Energy Suppl",
+       "url": "https://www.3blmedia.com/news/how-were-building-cleaner-more-efficient-energy-supply-cisco-fy25-purpose-report",
+       "publisher": "3blmedia.com",
+       "published_at": "2026-04-29T12:05:00",
+       "lede": "the following is an excerpt from cisco’s fy25 purpose report. explore the full report to learn more about how we power an inclusive future for all. as data center and ai usage surge, so does the need for cleaner, more efficient energy solutions. cisco has long believed that sustainability action",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.77
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f229d4c6105443aa5d36b0",
+       "headline": "'Future-ready' UA launching School of Data Science, supercomputer",
+       "url": "https://www.tuscaloosanews.com/story/news/local/2026/04/29/ua-responds-to-ai-boom-with-new-school-for-data-technology/89840235007/",
+       "publisher": "tuscaloosanews.com",
+       "published_at": "2026-04-29T09:38:42",
+       "lede": "april 29, 2026, 4:38 a.m. ct the university of alabama is establishing a new school of data science, the first of its kind in the state. a $96 million high performance computing and data center will house a supercomputer and serve as a hub for the new school. the school",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2297cc6105443aa5d0f26",
+       "headline": "Scientists Are Building Data Centers Powered By Living Brain Cells",
+       "url": "https://wonderfulengineering.com/scientists-are-building-data-centers-powered-by-living-brain-cells/",
+       "publisher": "wonderfulengineering.com",
+       "published_at": "2026-04-29T08:23:45",
+       "lede": "image courtesy: getty images an australian startup is developing a new kind of data center that blends traditional computing with living biology. cortical labs has opened an early facility in melbourne where systems combine silicon chips with lab grown human neurons, marking one of the first attempts to integrate biological",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 383,
+         "path": "/Science/Biological Sciences/Neuroscience",
+         "score": 0.85
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.55
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "cortical labs",
+        "getty images"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e2dad325610894207679",
+       "headline": "India's AI Infrastructure Advantage: Jeet Adani",
+       "url": "https://www.newkerala.com/news/a/ai-may-written-code-it-runs-electricity-india-488.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-28T10:55:40",
+       "lede": "jeet adani, director of adani digital labs, stated that the future of ai depends on infrastructure and energy, giving india a structural advantage. speaking at the google cloud india ai hub groundbreaking in visakhapatnam, he noted that india's 1.3 gw data center capacity is set to scale dramatically. he emphasized",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.64
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "adani"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c8e5a5706a322e1002a6",
+       "headline": "Reliance Plans $17B AI Data Center in Visakhapatnam with Clean Energy Systems",
+       "url": "https://www.analyticsinsight.net/news/reliance-plans-17b-ai-data-center-in-visakhapatnam-with-clean-energy-systems",
+       "publisher": "analyticsinsight.net",
+       "published_at": "2026-04-28T10:54:47",
+       "lede": "visakhapatnam is quickly becoming one of india’s biggest centers for ai data centers. large companies like google, adani enterprises, and reliance industries have selected the city for major projects.reliance industries plans to invest approximately $17 billion in the development of a 1.5 gigawatt data center cluster near the bhogapuram airport.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "adani",
+        "reliance industries",
+        "adani enterprises",
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e227836d28f995cb5317",
+       "headline": "Jeet Adani highlights energy-first AI push at Google-linked Vizag data center hub in India",
+       "url": "https://www.domain-b.com/technology/information-technology/jeet-adani-vizag-ai-data-center-google-cloud-india-2026",
+       "publisher": "domain-b.com",
+       "published_at": "2026-04-28T07:39:49",
+       "lede": "india’s expanding data center ecosystem reflects the growing importance of infrastructure in ai development (ai generated). 1 summary jeet adani has emphasized the growing importance of energy and physical infrastructure in supporting ai systems, highlighting that compute growth is increasingly tied to power availability. a large-scale data center project in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.83,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.49
+        },
+        {
+         "code": 101,
+         "path": "/Internet & Telecom/Web Services/Cloud Storage",
+         "score": 0.48
+        },
+        {
+         "code": 214,
+         "path": "/Computers & Electronics/Networking/Distributed & Cloud Computing",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a656f5cefb83fe8fc973a",
+       "headline": "Google Launches $15bn Data Center Build in India",
+       "url": "https://baxtel.com/news/google-launches-15bn-data-center-build-in-india",
+       "publisher": "baxtel.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "google has broken ground on its $15 billion data center project in visakhapatnam (vizag), andhra pradesh, india. the company held a groundbreaking ceremony on april 28 to mark the start of construction. the event was jointly hosted by google, adaniconnex, and nxtra by airtel, and was attended by several key",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.5
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cb41a5706a322e10fbef",
+       "headline": "AMD CEO Says We're Only in Year 2 of 10-Year AI Build Out: Here's the Stock That Profits Most",
+       "url": "https://247wallst.com/investing/2026/04/27/amd-ceo-says-were-only-in-year-2-of-10-year-ai-build-out-heres-the-stock-that-profits-most/",
+       "publisher": "247wallst.com",
+       "published_at": "2026-04-27T16:00:52",
+       "lede": "the analyst who called nvidia in 2010 just named his top 10 ai stocks. get them here free . nvidia’s data center segment demonstrates successful monetization of compute ($51.33b) and networking ($10.98b, up 263% yoy) alongside blackwell gpus. the segment has grown at a compounded annual rate of almost 160%",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.66
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.58
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.49
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a77ec963d76f4afce8d7b",
+       "headline": "Related Digital secures financing for $16 billion Oracle data center in Michigan",
+       "url": "https://cio.economictimes.indiatimes.com/news/data-center/related-digital-secures-financing-for-16-billion-oracle-data-center-in-michigan/130543578",
+       "publisher": "cio.economictimes.indiatimes.com",
+       "published_at": "2026-04-27T11:00:00",
+       "lede": "data center developer related digital said on friday it has secured financing for a $16 billion data center campus it is building in michigan for oracle. the financing includes equity from related digital and &zwnj;funds affiliated &#8288;with &#8288;blackstone, as well as fixed-rate, long-term debt financing anchored by pimco-managed funds and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e9dd0c0b414d24a05bbcc",
+       "headline": "As Google AI data centre hub work begins, India to get another subsea cable gateway",
+       "url": "https://www.thehindubusinessline.com/info-tech/as-google-ai-data-centre-hub-work-begins-india-to-get-another-subsea-cable-gateway/article70909092.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-26T14:41:27",
+       "lede": "as the adani group begins construction of google’s $15-billion ai data center hub in visakhapatnam on april 28, it will add another subsea gateway for india, completing the subsea cable landings in mumbai and chennai. telecom major airtel is also associated with the project to provide support around connectivity issues.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa5b727212302c5ebcc2",
+       "headline": "Utility giant Duke Energy plans to spend industry record $103 billion on growth as data centers and affordability take center stage | Fortune",
+       "url": "https://www.fortune.com/2026/04/25/utility-giant-duke-energy-spend-industry-record-103-billion-growth-data-centers-affordability/",
+       "publisher": "fortune.com",
+       "published_at": "2026-04-25T08:02:00",
+       "lede": "utility giant duke energy may not be a household name, but it sits at the epicenter of the ai data center boom and affordability debate as it plans to spend an industry record of $103 billion for growth over just five years—and ceo harry sideris isn’t afraid to say he",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "duke energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa943a84b609af2b1d466",
+       "headline": "Utility giant Duke Energy plans to spend industry record $103 billion on growth as data centers and affordability take center stage | Fortune",
+       "url": "https://fortune.com/2026/04/25/utility-giant-duke-energy-spend-industry-record-103-billion-growth-data-centers-affordability/",
+       "publisher": "fortune.com",
+       "published_at": "2026-04-25T08:02:00",
+       "lede": "utility giant duke energy may not be a household name, but it sits at the epicenter of the ai data center boom and affordability debate as it plans to spend an industry record of $103 billion for growth over just five years—and ceo harry sideris isn’t afraid to say he",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [
+        "duke energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efaa94a84b609af2b2d366",
+       "headline": "Intel stock soars on Q1 earnings beat, strong outlook",
+       "url": "https://finance.yahoo.com/sectors/technology/article/intel-stock-soars-on-q1-earnings-beat-strong-outlook-191552257.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-04-24T20:43:05",
+       "lede": "intel (intc) stock closed up roughly 24% friday following a first quarter earnings report that beat analysts’ expectations on the top and bottom lines and provided better-than-anticipated q2 guidance on strong data center sales. intel said on thursday that it expects revenue of between $13.8 billion and $14.8 billion for",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.67
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.66
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.65
+        }
+       ],
+       "country": "taiwan",
+       "organizations": [
+        "intel",
+        "intel"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 2613,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNCAyMDo0MzowNSIsImkiOiI2OWVmYWE5NGE4NGI2MDlhZjJiMmQzNjYiLCJwIjo4fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.946,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.948
+    }
+   }
+  }
+ ]
+}

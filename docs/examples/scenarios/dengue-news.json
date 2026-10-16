@@ -1,0 +1,838 @@
+{
+ "slug": "dengue-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:52Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "dengue",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "dengue",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1890,
+     "tone": {
+      "carrying": 1890,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 808,
+        "share_pct": 42.75
+       },
+       {
+        "group": "neutral",
+        "count": 48,
+        "share_pct": 2.54
+       },
+       {
+        "group": "positive",
+        "count": 1034,
+        "share_pct": 54.71
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1889,
+      "count": 1288,
+      "share_pct": 68.18
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.885,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.902
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "dengue",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "dengue",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1171,
+       "critical": 772,
+       "critical_pct": 65.9,
+       "negative": 682,
+       "positive": 448,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 469,
+       "critical": 324,
+       "critical_pct": 69.1,
+       "negative": 270,
+       "positive": 185,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 705,
+       "critical": 477,
+       "critical_pct": 67.7,
+       "negative": 420,
+       "positive": 267,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 984,
+       "critical": 686,
+       "critical_pct": 69.7,
+       "negative": 677,
+       "positive": 284,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 864,
+       "critical": 671,
+       "critical_pct": 77.7,
+       "negative": 588,
+       "positive": 261,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 475,
+       "critical": 374,
+       "critical_pct": 78.7,
+       "negative": 299,
+       "positive": 164,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 580,
+       "critical": 450,
+       "critical_pct": 77.6,
+       "negative": 334,
+       "positive": 232,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 434,
+       "critical": 352,
+       "critical_pct": 81.1,
+       "negative": 208,
+       "positive": 213,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 432,
+       "critical": 348,
+       "critical_pct": 80.6,
+       "negative": 199,
+       "positive": 217,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 356,
+       "critical": 289,
+       "critical_pct": 81.2,
+       "negative": 156,
+       "positive": 191,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 404,
+       "critical": 293,
+       "critical_pct": 72.5,
+       "negative": 199,
+       "positive": 195,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 698,
+       "critical": 358,
+       "critical_pct": 51.3,
+       "negative": 254,
+       "positive": 431,
+       "partial_period": false
+      }
+     ],
+     "total": 7572,
+     "critical_total": 5394,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.906,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.913
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "dengue",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "dengue",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1890,
+     "carrying": 335,
+     "availability_pct": 17.72,
+     "items": [
+      {
+       "country": "india",
+       "count": 92,
+       "share_pct": 4.87
+      },
+      {
+       "country": "united states",
+       "count": 56,
+       "share_pct": 2.96
+      },
+      {
+       "country": "bangladesh",
+       "count": 24,
+       "share_pct": 1.27
+      },
+      {
+       "country": "cook islands",
+       "count": 23,
+       "share_pct": 1.22
+      },
+      {
+       "country": "brazil",
+       "count": 14,
+       "share_pct": 0.74
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 126
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.226,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.229
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "dengue",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "dengue",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "vector-borne disease mitigation",
+       "count": 290,
+       "share": 23.52,
+       "lift": 1919.93,
+       "baseline_count": 1,
+       "previous_period_count": 361,
+       "delta_pct": -19.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vector-borne disease epidemiology",
+       "count": 586,
+       "share": 47.53,
+       "lift": 969.89,
+       "baseline_count": 4,
+       "previous_period_count": 825,
+       "delta_pct": -29.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "global health challenges",
+       "count": 177,
+       "share": 14.36,
+       "lift": 1171.82,
+       "baseline_count": 1,
+       "previous_period_count": 152,
+       "delta_pct": 16.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "travel-related infectious disease risks",
+       "count": 257,
+       "share": 20.84,
+       "lift": 850.73,
+       "baseline_count": 2,
+       "previous_period_count": 223,
+       "delta_pct": 15.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "zoonotic disease prevention measures",
+       "count": 255,
+       "share": 20.68,
+       "lift": 844.11,
+       "baseline_count": 2,
+       "previous_period_count": 327,
+       "delta_pct": -22.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1890,
+     "carrying": 1233,
+     "carrier_share_pct": 65.24,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.037,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.039
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "dengue",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "dengue",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2aa9375cefb83fe8278a88",
+       "headline": "Measles surge accompanied by rising dengue prevalence",
+       "url": "http://www.dhakatribune.com/bangladesh/health/408829/measles-surge-accompanied-by-rising-dengue",
+       "publisher": "dhakatribune.com",
+       "published_at": "2026-04-27T16:16:04",
+       "lede": "a nationwide measles outbreak continues to spread across bangladesh, alongside a gradual rise in dengue cases, placing mounting pressure on the country’s healthcare system. hospitals are reporting increasing admissions, overcrowding, and growing concern among parents and health professionals as both infections circulate simultaneously. so far, 269 children have died due",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.83
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f88188bbf1d3145596f1df",
+       "headline": "Envu India Backs National Conclave Uniting India's Public Health Leaders To Advance Urban Vector-Borne Disease Control",
+       "url": "https://www.outlookindia.com/xhub/featured-insights/envu-india-backs-national-conclave-uniting-indias-public-health-leaders-to-advance-urban-vector-borne-disease-control",
+       "publisher": "outlookindia.com",
+       "published_at": "2026-04-29T14:15:33",
+       "lede": "a national technical conclave on advances in urban pest management and vector control concluded in ahmedabad on 28 april 2026, bringing together senior public health leaders, government officials, armed forces medical specialists, and scientific institutions for two days of focused scientific exchange. the conclave addressed the growing burden of dengue,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.75
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.59
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e3e6d3256108942086a4",
+       "headline": "Envu India supports national conclave uniting India's public health leadership to advance urban vector-borne disease control  - Express Healthcare",
+       "url": "https://www.expresshealthcare.in/news/envu-india-supports-national-conclave-uniting-indias-public-health-leadership-to-advance-urban-vector-borne-disease-control/453499/",
+       "publisher": "expresshealthcare.in",
+       "published_at": "2026-04-28T08:52:43",
+       "lede": "a national technical conclave on advances in urban pest management and vector control concluded in ahmedabad on 28 april 2026, bringing together senior public health leaders, government officials, armed forces medical specialists, and scientific institutions for two days of focused scientific exchange. the conclave addressed the growing burden of dengue,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.8
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.55
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aefae5cefb83fe8591679",
+       "headline": "28 dengue cases detected overnight",
+       "url": "http://www.dhakatribune.com/bangladesh/health/408705/28-dengue-cases-detected-overnight",
+       "publisher": "dhakatribune.com",
+       "published_at": "2026-04-26T11:36:21",
+       "lede": "health officials on sunday said they recorded 28 fresh cases of dengue onslaughts in the past 24 hours. \"we recorded 28 fresh cases of dengue onslaughts in 24 hours ending at 8 am on sunday,\" a spokesman of directorate general of health services (dghs) said. \"out of the 28 fresh",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.92
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab05a84b609af2b32ab9",
+       "headline": "Experts Call For Urgent Action To Bridge Dengue Treatment Gaps In India And South-East Asia",
+       "url": "https://businessnewsthisweek.com/health/experts-call-for-urgent-action-to-bridge-dengue-treatment-gaps-in-india-and-south-east-asia/",
+       "publisher": "businessnewsthisweek.com",
+       "published_at": "2026-04-24T05:22:16",
+       "lede": "apr 24: with the monsoon season approaching and dengue risks set to rise, leading health experts convened in new delhi to highlight the urgent need to address critical gaps in dengue diagnostics, treatment, and healthcare preparedness across south asia and south-east asia. the dialogue was hosted by the drugs for",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.54
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69eaf61418d3f7bd7a4bc335",
+       "headline": "Experts Urge Action on Dengue Treatment Gaps in India",
+       "url": "https://www.newkerala.com/news/a/experts-meet-india-call-urgent-action-dengue-treatment-443.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-23T14:20:36",
+       "lede": "health experts convened in new delhi to address urgent gaps in dengue care and preparedness as monsoon season approaches. india reported over 289,000 dengue cases in 2023, with experts warning of significant underreporting. the dengue alliance emphasized the critical need for effective therapeutics, alongside existing vaccines and vector control measures.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.65
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7c6a5cefb83fe80a47a6",
+       "headline": "Experts convene in India to push for urgent action on dengue treatment gaps",
+       "url": "https://www.indianpharmapost.com/public-health/experts-convene-in-india-to-push-for-urgent-action-on-dengue-treatment-gaps-19893",
+       "publisher": "indianpharmapost.com",
+       "published_at": "2026-04-23T00:00:00",
+       "lede": "with the monsoon season approaching and dengue risk set to rise, global and regional health stakeholders have called for urgent measures to address gaps in diagnosis, treatment and preparedness across south and south-east asia, where an estimated 390 million infections occur annually without specific therapeutic options. a high-level dialogue held",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e88ba27bb1410d4c8e5c7d",
+       "headline": "Dengue cases from January to March fall nearly 30% from previous quarter",
+       "url": "https://www.asiaone.com/singapore/dengue-cases-january-march-fall-nearly-30-previous-quarter",
+       "publisher": "asiaone.com",
+       "published_at": "2026-04-22T08:18:22",
+       "lede": "the number of dengue infections in singapore has continued to fall, with a 29.2 per cent drop in the opening quarter of the year. there were 410 cases reported from january to march, down from 579 cases from october to december last year, according to figures by the national environment",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.82
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2afab15cefb83fe860a8b2",
+       "headline": "India braces for monsoon dengue surge with new mosquito trap, first vaccine cleared",
+       "url": "https://khaleejtimes.com/world/asia/india-braces-for-monsoon-dengue-surge-with-new-mosquito-trap-first-vaccine-cleared",
+       "publisher": "khaleejtimes.com",
+       "published_at": "2026-04-21T05:00:00",
+       "lede": "with the southwest monsoon expected to set in by mid-june, indian civic bodies and officials are again readying to take on the challenges posed by mosquitoes, which proliferate and spread diseases, including dengue and malaria. mumbai’s municipal corporation has launched a new eco-friendly solution, called muvvi trap, to tackle the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.22,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a040bf5220687a966acabf9",
+       "headline": "Vector-Borne Infections: Current Happenings 2026\nformulated By Dr.T.V.Rao MD",
+       "url": "https://www.linkedin.com/pulse/vector-borne-infections-current-happenings-2026-formulated-dr-t-v-rao-rb5xc",
+       "publisher": "linkedin.com",
+       "published_at": "2026-04-19T02:39:40",
+       "lede": "vector-borne infections: current happenings 2026 formulated by dr.t.v.rao md the current trends on vector borne diseases certainly lead to expansion of dengue and chikungunya, alongside renewed focus on lyme disease and rocky mountain spotted fever vector-borne infections are surging globally in 2026, with dengue, chikungunya, and yellow fever driving outbreaks",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.88
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e867567bb1410d4c76c730",
+       "headline": "40-bed dengue ward ready at Civil Hospital - The Tribune",
+       "url": "https://www.tribuneindia.com/news/ludhiana/40-bed-dengue-ward-ready-at-civil-hospital/",
+       "publisher": "tribuneindia.com",
+       "published_at": "2026-04-18T20:16:49",
+       "lede": "with the onset of summer and temperatures reaching between 34°c and 38°c, ludhiana faces an increased risk of dengue. one case of dengue and three cases of malaria have already been reported from ludhiana. the civil hospital has set up a dedicated 40-bed dengue ward. separate staff had also been",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.86
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e86a2e5cfa3e5ba5f5ab60",
+       "headline": "India approves its first dengue vaccine. How it could protect you against dengue - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/toi-plus/health/india-approves-its-first-dengue-vaccine-how-it-could-protect-you-against-dengue/articleshow/130347476.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-18T08:09:00",
+       "lede": "india approves its first dengue vaccine. how it could protect you against dengue lata mishra timesofindia.com updated: apr 18, 2026, 19:03 ist ist indiaâs dengue burden has been climbing steadily â and stubbornly. over 2.3 lakh cases were reported annually in both 2023 and 2024, according to government data, a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.54
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.49
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.46
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 676,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xOCAwODowOTowMCIsImkiOiI2OWU4NmEyZTVjZmEzZTViYTVmNWFiNjAiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.572,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.578
+    }
+   }
+  }
+ ]
+}

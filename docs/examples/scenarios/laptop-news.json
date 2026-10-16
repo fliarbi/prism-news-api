@@ -1,0 +1,939 @@
+{
+ "slug": "laptop-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:12:35Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "laptop",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "laptop",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8856,
+     "tone": {
+      "carrying": 8847,
+      "availability_pct": 99.9,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1496,
+        "share_pct": 16.91
+       },
+       {
+        "group": "neutral",
+        "count": 111,
+        "share_pct": 1.25
+       },
+       {
+        "group": "positive",
+        "count": 7240,
+        "share_pct": 81.84
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 8854,
+      "count": 1384,
+      "share_pct": 15.63
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.708,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.711
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "laptop",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "laptop",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1581,
+       "critical": 230,
+       "critical_pct": 14.5,
+       "negative": 260,
+       "positive": 1297,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1129,
+       "critical": 183,
+       "critical_pct": 16.2,
+       "negative": 205,
+       "positive": 908,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 9112,
+       "critical": 250,
+       "critical_pct": 2.7,
+       "negative": 318,
+       "positive": 8754,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2410,
+       "critical": 371,
+       "critical_pct": 15.4,
+       "negative": 404,
+       "positive": 1969,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2367,
+       "critical": 225,
+       "critical_pct": 9.5,
+       "negative": 226,
+       "positive": 2124,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1609,
+       "critical": 256,
+       "critical_pct": 15.9,
+       "negative": 223,
+       "positive": 1366,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1678,
+       "critical": 200,
+       "critical_pct": 11.9,
+       "negative": 274,
+       "positive": 1376,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1310,
+       "critical": 209,
+       "critical_pct": 16.0,
+       "negative": 217,
+       "positive": 1075,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1692,
+       "critical": 218,
+       "critical_pct": 12.9,
+       "negative": 232,
+       "positive": 1439,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1977,
+       "critical": 326,
+       "critical_pct": 16.5,
+       "negative": 387,
+       "positive": 1558,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2650,
+       "critical": 366,
+       "critical_pct": 13.8,
+       "negative": 362,
+       "positive": 2253,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2537,
+       "critical": 474,
+       "critical_pct": 18.7,
+       "negative": 515,
+       "positive": 1990,
+       "partial_period": false
+      }
+     ],
+     "total": 30052,
+     "critical_total": 3308,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-07-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.959,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.962
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "laptop",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "laptop",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 8856,
+     "carrying": 2925,
+     "availability_pct": 33.03,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1237,
+       "share_pct": 13.97
+      },
+      {
+       "country": "india",
+       "count": 371,
+       "share_pct": 4.19
+      },
+      {
+       "country": "united kingdom",
+       "count": 199,
+       "share_pct": 2.25
+      },
+      {
+       "country": "italy",
+       "count": 169,
+       "share_pct": 1.91
+      },
+      {
+       "country": "south korea",
+       "count": 166,
+       "share_pct": 1.87
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 783
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.18,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.182
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "laptop",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "laptop",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "apple macbook models & macos notebooks",
+       "count": 485,
+       "share": 9.41,
+       "lift": 767.85,
+       "baseline_count": 1,
+       "previous_period_count": 272,
+       "delta_pct": 78.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gaming laptops & high-performance notebooks",
+       "count": 367,
+       "share": 7.12,
+       "lift": 581.04,
+       "baseline_count": 1,
+       "previous_period_count": 418,
+       "delta_pct": -12.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "laptops with dedicated graphics cards (gpu)",
+       "count": 314,
+       "share": 6.09,
+       "lift": 497.13,
+       "baseline_count": 1,
+       "previous_period_count": 261,
+       "delta_pct": 20.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "laptops with ai-enhanced performance features",
+       "count": 266,
+       "share": 5.16,
+       "lift": 421.13,
+       "baseline_count": 1,
+       "previous_period_count": 94,
+       "delta_pct": 183.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "thin and lightweight notebook designs",
+       "count": 244,
+       "share": 4.73,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 126,
+       "delta_pct": 93.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 8856,
+     "carrying": 5156,
+     "carrier_share_pct": 58.22,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.021,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.023
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "laptop",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "laptop",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f0e355836d28f995cb6923",
+       "headline": "Sheena Bora’s personal laptop to be produced in trial: Court tells CBI",
+       "url": "https://indianexpress.com/article/legal-news/sheena-bora-case-laptop-cbi-court-order-10658953/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-27T17:06:43",
+       "lede": "a personal laptop belonging to sheena bora, which has been lying in a central bureau of investigation (cbi) storehouse from 2016 is directed to be produced before the special court where the trial for her alleged murder is ongoing. the cbi has not relied on it as evidence but bora's",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "bora",
+        "central bureau of investigation"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea35098266d93399968266",
+       "headline": "Woman told police ‘rumour’ Noah Donohoe was injected with heroin, inquest hears",
+       "url": "https://www.readingchronicle.co.uk/news/national/26045261.woman-told-police-rumour-noah-donohoe-injected-heroin-inquest-hears/",
+       "publisher": "readingchronicle.co.uk",
+       "published_at": "2026-04-23T14:34:54",
+       "lede": "the inquest into the death of noah at belfast coroner’s court, which is being heard with a jury, is in its 12th week. on wednesday, it heard evidence from a woman who was convicted of handling stolen goods in 2021 after being found to be in possession of his laptop",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.46
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "noah"
+       ]
+      },
+      {
+       "id": "69ea33ae75c44d9ce883f9f8",
+       "headline": "Woman told police ‘rumour’ Noah Donohoe was injected with heroin, inquest hears",
+       "url": "https://www.yorkpress.co.uk/news/national/26045261.woman-told-police-rumour-noah-donohoe-injected-heroin-inquest-hears/",
+       "publisher": "yorkpress.co.uk",
+       "published_at": "2026-04-23T14:34:54",
+       "lede": "the inquest into the death of noah at belfast coroner’s court, which is being heard with a jury, is in its 12th week. on wednesday, it heard evidence from a woman who was convicted of handling stolen goods in 2021 after being found to be in possession of his laptop",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.46
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "noah"
+       ]
+      },
+      {
+       "id": "69ea31de73206aa299ed7804",
+       "headline": "Woman told police ‘rumour’ Noah Donohoe was injected with heroin, inquest hears",
+       "url": "https://www.edp24.co.uk/news/national/26045261.woman-told-police-rumour-noah-donohoe-injected-heroin-inquest-hears/",
+       "publisher": "edp24.co.uk",
+       "published_at": "2026-04-23T14:34:54",
+       "lede": "the inquest into the death of noah at belfast coroner’s court, which is being heard with a jury, is in its 12th week. on wednesday, it heard evidence from a woman who was convicted of handling stolen goods in 2021 after being found to be in possession of his laptop",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.46
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": [
+        "noah"
+       ]
+      },
+      {
+       "id": "6a2ad9ddc37f6c5e6603f302",
+       "headline": "Turns out Framework’s eGPU is even more powerful than I thought.",
+       "url": "http://theverge.com/gadgets/916917/turns-out-frameworks-egpu-is-even-more-powerful-than-i-thought",
+       "publisher": "theverge.com",
+       "published_at": "2026-04-22T18:22:22",
+       "lede": "s the verge sean hollister turns out framework’s egpu is even more powerful than i thought. framework told pcworld that its new egpu kit will include the first oculink 8i connector in a laptop — meaning eight lanes and 128gbps of pci-express connectivity, which means it should be even faster",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a65ee5cefb83fe8fcf0f2",
+       "headline": "Turns out Framework’s eGPU is even more powerful than I thought.",
+       "url": "https://theverge.com/gadgets/916917/turns-out-frameworks-egpu-is-even-more-powerful-than-i-thought",
+       "publisher": "theverge.com",
+       "published_at": "2026-04-22T18:22:22",
+       "lede": "s the verge sean hollister turns out framework’s egpu is even more powerful than i thought. framework told pcworld that its new egpu kit will include the first oculink 8i connector in a laptop — meaning eight lanes and 128gbps of pci-express connectivity, which means it should be even faster",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e98fa075f157062ca66a6d",
+       "headline": "Turns out Framework’s eGPU is even more powerful than I thought.",
+       "url": "https://www.theverge.com/gadgets/916917/turns-out-frameworks-egpu-is-even-more-powerful-than-i-thought",
+       "publisher": "theverge.com",
+       "published_at": "2026-04-22T18:22:22",
+       "lede": "s the verge sean hollister turns out framework’s egpu is even more powerful than i thought. framework told pcworld that its new egpu kit will include the first oculink 8i connector in a laptop — meaning eight lanes and 128gbps of pci-express connectivity, which means it should be even faster",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e884a57bb1410d4c899cae",
+       "headline": "Fourth search warrant in Enfield 12-year-old's death shows investigators are searching laptop",
+       "url": "https://www.nbcconnecticut.com/news/local/fourth-search-warrant-in-enfield-12-year-olds-death-shows-investigators-are-searching-laptop/3727385/",
+       "publisher": "nbcconnecticut.com",
+       "published_at": "2026-04-20T12:18:29",
+       "lede": "the fourth unsealed search warrant regarding the investigation into a 12-year-old girl's death in enfield revealed that an hp laptop is being used as evidence in the case. the 12-year-old was found dead in the bedroom of her enfield home on march 18. on april 2, her stepfather, anthony federline,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e863655cfa3e5ba5f162b9",
+       "headline": "Visually impaired student from Haryana’s Sirsa writes Class X exams with laptop, scores 96.8% - The Tribune",
+       "url": "https://www.tribuneindia.com/news/haryana/visually-impaired-sirsa-student-writes-class-x-exams-with-laptop-scores-96-8/",
+       "publisher": "tribuneindia.com",
+       "published_at": "2026-04-17T21:30:22",
+       "lede": "a visually impaired student in haryana’s sirsa district has scored 96.8% in the cbse class 10 examinations after winning a year-long struggle for the right to write the exams using a laptop.medhansh soni, a student of satluj public school, appeared in the exams without a scribe and instead used a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 73,
+         "path": "/Jobs & Education/Education/Standardized & Admissions Tests",
+         "score": 0.86
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "cbse"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e862975cfa3e5ba5f0ef65",
+       "headline": "Visually impaired student from Haryana’s Sirsa writes Class X exams with laptop, scores 96.8% - The Tribune",
+       "url": "https://www.tribuneindia.com/news/haryana/visually-impaired-sirsa-student-writes-class-x-exams-with-laptop-scores-96-8",
+       "publisher": "tribuneindia.com",
+       "published_at": "2026-04-17T21:30:22",
+       "lede": "a visually impaired student in haryana’s sirsa district has scored 96.8% in the cbse class 10 examinations after winning a year-long struggle for the right to write the exams using a laptop.medhansh soni, a student of satluj public school, appeared in the exams without a scribe and instead used a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 73,
+         "path": "/Jobs & Education/Education/Standardized & Admissions Tests",
+         "score": 0.86
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "cbse"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e867039baafc73567ed906",
+       "headline": "They Saw “THIS” and Now They’re D-E-A-D! Rep. Lauren Boebert Bombshell!",
+       "url": "https://lisahaven.news/2026/04/they-saw-this-and-now-theyre-d-e-a-d-rep-lauren-boebert-bombshell/",
+       "publisher": "lisahaven.news",
+       "published_at": "2026-04-16T17:43:00",
+       "lede": "by lisa haven new questions are surfacing after rep. lauren boebert called for a fresh look at anthony weiner’s laptop, citing claims that have fueled years of speculation online. in this video, i break down what boebert actually said, where these rumors started, what’s publicly documented, and what remains unverified.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "lauren boebert",
+        "anthony weiner",
+        "lauren boebert"
+       ]
+      },
+      {
+       "id": "69e63e992461615d5f421af4",
+       "headline": "Apple commands over 50% of the laptop market revenue on Amazon Global",
+       "url": "https://appleworld.today/2026/04/apple-commands-over-50-of-the-laptop-market-revenue-on-amazon-global/",
+       "publisher": "appleworld.today",
+       "published_at": "2026-04-13T12:44:45",
+       "lede": "the february 2026 laptop market on amazon global reveals a landscape defined by apple’s financial dominance, reports laptop global. while brands like hp and lenovo lead in product variety, apple has successfully captured the largest shares of both unit sales and total revenue, signaling a strong consumer preference for high-end",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 197,
+         "path": "/Computers & Electronics/Computer Hardware/Laptops & Notebooks",
+         "score": 0.8
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        }
+       ],
+       "country": "south korea",
+       "organizations": [
+        "lenovo"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2eebc9e540a46fb58b4445",
+       "headline": "पीएम की सुरक्षा में सेंध का प्लान बनाने वाला युवक गया जेल",
+       "url": "https://www.livehindustan.com/bihar/buxar/story-youth-arrested-for-threatening-pm-on-cia-website-cyber-crime-investigation-underway-201775918538934.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-04-11T14:42:20",
+       "lede": "after the arrest of the young man, he told the police a lot of things. a laptop, two mobile phones, two pen drives were recovered. the young man accused of threatening to kill the prime minister on the website of the us agency cia was sent to jail after necessary",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8becf81c77a16f1753e37",
+       "headline": "Analysts predict bloodbath coming to the price of laptops, and you must clutch your wallet",
+       "url": "https://www.digitaltrends.com/computing/analysts-predict-bloodbath-is-coming-to-the-price-of-laptops-and-you-must-clutch-your-wallet/",
+       "publisher": "digitaltrends.com",
+       "published_at": "2026-03-11T09:21:19",
+       "lede": "if you have been putting off buying a new laptop or desktop, you might want to reconsider. prices are expected to rise by up to 35 percent this year, and the window to buy at a reasonable price is closing fast.the culprit? skyrocketing ram prices and a shortage of entry-level",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbe1bccb52475cc83207e7",
+       "headline": "MacBook Neo may win the budget laptop war before it even starts — cheap Windows laptop prices could jump by 'hundreds of dollars'",
+       "url": "https://www.tomsguide.com/computing/laptops/macbook-neo-clear-to-dominate-laptop-prices-could-jump-by-hundreds-of-dollars-as-ramageddon-hits-dell-hp-and-others-at-worst-possible-time",
+       "publisher": "tomsguide.com",
+       "published_at": "2026-03-10T17:19:38",
+       "lede": "the hits keep coming for pc and laptop makers as ramaggeddon, and now the u.s.-iran war, disrupts everything from supply chains to component costs. apple and the macbook neo may be the beneficiaries, thanks to a disappearing market of budget-friendly computers.nikkei asia is reporting that many of the major pc",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.59
+        },
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.43
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "supply chain"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbd090d4ae0326ef5e730a",
+       "headline": "Laptop Prices Expected To Rise By 40% As Memory And CPU Prices Continue To Soar",
+       "url": "https://wccftech.com/laptop-prices-expected-to-rise-by-40-as-memory-and-cpu-prices-continue-to-soar/",
+       "publisher": "wccftech.com",
+       "published_at": "2026-03-10T10:37:35",
+       "lede": "the pc components keep getting expensive, directly affecting the laptop costs, and could introduce a nearly 40% price hike.trendforce forecasts 40% price hike for mainstream notebooks as memory and cpu availability and pricing worsenwhile desktop memory prices seem to have somewhat stabilized in some parts of the world, we have",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd113b0961fb2935fadec",
+       "headline": "Your next laptop might cost 40% more",
+       "url": "https://www.pcworld.com/article/3084338/your-next-laptop-might-cost-40-percent-more.html",
+       "publisher": "pcworld.com",
+       "published_at": "2026-03-10T00:00:00",
+       "lede": "summary created by smart answers ai in summary: pcworld reports that trendforce predicts mainstream laptop prices could surge up to 40% by 2026 due to rising component costs.ai chip demand is tightening supply chains while memory and cpu costs may reach nearly 60% of total laptop expenses.intel has already increased",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 197,
+         "path": "/Computers & Electronics/Computer Hardware/Laptops & Notebooks",
+         "score": 0.62
+        },
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "supply chain",
+        "intel"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 985,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xMCAwMDowMDowMCIsImkiOiI2OWNiZDExM2IwOTYxZmIyOTM1ZmFkZWMiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.686,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.688
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,932 @@
+{
+ "slug": "sebi-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:56:57Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "SEBI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "sebi",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5218,
+     "tone": {
+      "carrying": 5210,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1199,
+        "share_pct": 23.01
+       },
+       {
+        "group": "neutral",
+        "count": 274,
+        "share_pct": 5.26
+       },
+       {
+        "group": "positive",
+        "count": 3737,
+        "share_pct": 71.73
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 5216,
+      "count": 3676,
+      "share_pct": 70.48
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.884,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 4.898
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "SEBI",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "sebi",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1127,
+       "critical": 862,
+       "critical_pct": 76.5,
+       "negative": 449,
+       "positive": 650,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1163,
+       "critical": 900,
+       "critical_pct": 77.4,
+       "negative": 265,
+       "positive": 875,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1728,
+       "critical": 1276,
+       "critical_pct": 73.8,
+       "negative": 723,
+       "positive": 961,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2206,
+       "critical": 1533,
+       "critical_pct": 69.5,
+       "negative": 735,
+       "positive": 1400,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1862,
+       "critical": 1444,
+       "critical_pct": 77.6,
+       "negative": 607,
+       "positive": 1193,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1062,
+       "critical": 789,
+       "critical_pct": 74.3,
+       "negative": 266,
+       "positive": 772,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1077,
+       "critical": 846,
+       "critical_pct": 78.6,
+       "negative": 339,
+       "positive": 717,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1311,
+       "critical": 999,
+       "critical_pct": 76.2,
+       "negative": 322,
+       "positive": 943,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1045,
+       "critical": 778,
+       "critical_pct": 74.4,
+       "negative": 227,
+       "positive": 765,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1265,
+       "critical": 799,
+       "critical_pct": 63.2,
+       "negative": 233,
+       "positive": 940,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1610,
+       "critical": 1167,
+       "critical_pct": 72.5,
+       "negative": 434,
+       "positive": 1092,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1298,
+       "critical": 932,
+       "critical_pct": 71.8,
+       "negative": 305,
+       "positive": 940,
+       "partial_period": false
+      }
+     ],
+     "total": 16754,
+     "critical_total": 12325,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 6.308,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 6.314
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "SEBI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "sebi",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5218,
+     "carrying": 1658,
+     "availability_pct": 31.77,
+     "items": [
+      {
+       "country": "india",
+       "count": 1270,
+       "share_pct": 24.34
+      },
+      {
+       "country": "united states",
+       "count": 161,
+       "share_pct": 3.09
+      },
+      {
+       "country": "singapore",
+       "count": 43,
+       "share_pct": 0.82
+      },
+      {
+       "country": "iran",
+       "count": 28,
+       "share_pct": 0.54
+      },
+      {
+       "country": "united kingdom",
+       "count": 21,
+       "share_pct": 0.4
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 135
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.958,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.966
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "SEBI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "sebi",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "initial public offerings (ipos)",
+       "count": 773,
+       "share": 23.05,
+       "lift": 627.3,
+       "baseline_count": 3,
+       "previous_period_count": 1013,
+       "delta_pct": -23.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 268,
+       "share": 7.99,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 108,
+       "delta_pct": 148.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "regulatory changes in financial markets",
+       "count": 888,
+       "share": 26.48,
+       "lift": 308.84,
+       "baseline_count": 7,
+       "previous_period_count": 1108,
+       "delta_pct": -19.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market manipulation and fraud cases",
+       "count": 611,
+       "share": 18.22,
+       "lift": 371.88,
+       "baseline_count": 4,
+       "previous_period_count": 719,
+       "delta_pct": -15.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "initial public offerings (ipos) and listings",
+       "count": 828,
+       "share": 24.69,
+       "lift": 251.97,
+       "baseline_count": 8,
+       "previous_period_count": 1079,
+       "delta_pct": -23.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 5218,
+     "carrying": 3353,
+     "carrier_share_pct": 64.26,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.526,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.53
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "SEBI",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "sebi",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9d74ba088760d34c0ec20",
+       "headline": "Sebi clears faster launch path for AIF schemes with 30-day fast track | Mint",
+       "url": "https://www.livemint.com/industry/sebi-clears-faster-launch-path-for-aif-schemes-with-30-day-fast-track-11777551792975.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-30T13:38:05",
+       "lede": "mumbai: the securities and exchange board of india (sebi) has eased the approval process for alternative investment funds (aifs), allowing managers to launch schemes faster and deploy capital more efficiently.in a circular issued thursday, the regulator introduced a 30-day fast-track route for aifs launching new schemes. managers can proceed with",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "securities and exchange board of india",
+        "securities and exchange board of india"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9d41e713680636eebdbfd",
+       "headline": "SEBI Fast-Tracks AIF Launches: New 30-Day Rule for Fund Managers",
+       "url": "https://www.republicworld.com/business/sebi-fast-track-mechanism-aif-placement-memorandum-30-day-rule",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-30T12:49:20",
+       "lede": "india’s capital markets regulator has moved to cut the red tape for private equity and venture capital funds, operationalizing a &quot;fast-track&quot; mechanism for the launch of new investment schemes. the securities and exchange board of india (sebi) announced on thursday that alternative investment funds (aifs) will now be able to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.48
+        },
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "securities and exchange board of india",
+        "red tape"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ac3ed5cefb83fe83a3f08",
+       "headline": "Sebi clears fast track launch for AIF schemes | Mint Bangalore â newspaper â Lesen Sie diese Geschichte auf Magzter.com",
+       "url": "https://www.magzter.com/de/stories/newspaper/Mint-Bangalore/SEBI-CLEARS-FAST-TRACK-LAUNCH-FOR-AIF-SCHEMES",
+       "publisher": "magzter.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "in a circular on thursday, the market regulator introduced a 30-day fast-track route for aifs launching new schemes. managers can proceed with launches and circulate private placement memoranda (ppms) to investors 30 days after filing an application with sebi, unless mint bangalore trump pushes to end lebanon conflict in hope",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e71d836d28f995cba321",
+       "headline": "Cupid receives administrative warning from SEBI for non-compliance - Business Upturn",
+       "url": "https://www.businessupturn.com/business/cupid-receives-administrative-warning-from-sebi-for-non-compliance/",
+       "publisher": "businessupturn.com",
+       "published_at": "2026-04-28T13:52:49",
+       "lede": "cupid limited has been issued an administrative warning letter by the securities and exchange board of india (sebi) dated april 23, 2026. the letter, received by the company on april 28, 2026, highlights a violation of regulation 30(7) of the sebi (listing obligations and disclosure requirements) regulations, 2015. this regulation",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "securities and exchange board of india",
+        "securities and exchange board of india"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0ea353c0b414d24a097288",
+       "headline": "Punjab & Sind Bank plans ₹3,000-cr share sale this fiscal",
+       "url": "https://www.thehindubusinessline.com/money-and-banking/punjab-sind-bank-plans-3000-cr-share-sale-this-fiscal/article70916322.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-28T11:58:27",
+       "lede": "public sector lender punjab & sind bank is eying to mobilise up to ₹3,000 crore via share sale on a private placement basis in a bid to meet the minimum public shareholding (mps) norms of market regulator sebi. as per sebi norms, listed entities are required to have at least",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.56
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.52
+        },
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac7345cefb83fe83cd6dc",
+       "headline": "Regulators intensify global crackdown on finfluencers; SEBI steps up AI-led surveillance in India",
+       "url": "https://bfsi.economictimes.indiatimes.com/articles/global-regulators-crack-down-on-finfluencers-as-sebi-enhances-ai-surveillance-in-india/130567823",
+       "publisher": "bfsi.economictimes.indiatimes.com",
+       "published_at": "2026-04-28T08:18:50",
+       "lede": "focus is on unchecked social media financial advice spread across major platforms without disclosures.sebi has removed 1.2 lakh posts and expanded ai surveillance using its &ldquo;sudarshan&rdquo; system.regulators are shifting scrutiny to platforms and digital ecosystems, tightening global oversight.enforcement is intensifying globally as retail investor reliance on social media financial advice",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac5cb5cefb83fe83bb8eb",
+       "headline": "SEBI Imposes Penalty of Rs 1.5 Crore on Eight Entities for Front-Running Trades",
+       "url": "https://studycafe.in/sebi-imposes-penalty-of-rs-1-5-crore-on-eight-entities-for-front-running-trades-418443.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-28T07:46:56",
+       "lede": "sebi imposes penalty of rs 1.5 crore on eight entities for front-running trades the securities and exchange board of india (sebi) has fined eight entities a total of rs 1.5 crore for front-running trades using secret information from a portfolio management client. penalties range from rs 15 lakh to rs",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.8,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a63a15cefb83fe8fb52bd",
+       "headline": "Sebi Fines 8 Entities Rs 1.50 Crore For Front-Running Trades - Outlook Money",
+       "url": "https://www.outlookmoney.com/news/sebi-fines-8-entities-rs-150-crore-for-front-running-trades",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-28T07:13:51",
+       "lede": "sebi has imposed a fine on eight entities regarding front-running caseentities used non-public client trading information to book profitsthe securities and exchange board of india (sebi), has imposed a cumulative penalty of rs 1.50 crore on eight entities for engaging in front-running trades using privileged and non-public information. the action",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.49
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.43
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e91e4285a58da6f1b3d17",
+       "headline": "SEBI bans 8 including Ashok Maheshwari in front-running case",
+       "url": "https://www.thehindubusinessline.com/money-and-banking/sebi-bars-ashok-maheshwari-7-others-in-front-running-case/article70914985.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-28T05:57:31",
+       "lede": "the securities and exchange board of india (sebi) has barred eight entities, including ashok maheshwari, from the securities market for up to four years and ordered disgorgement of ₹1.29 crore in unlawful gains in a front-running case involving trades of a portfolio manager. in the final order, ashok maheshwari and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.62
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac760963d76f4af04940c",
+       "headline": "Manappuram Finance Limited Discloses SEBI Warning Against CMD in Personal Capacity",
+       "url": "https://studycafe.in/manappuram-finance-limited-discloses-sebi-warning-against-cmd-in-personal-capacity-418379.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-28T05:07:32",
+       "lede": "manappuram finance limited discloses sebi warning against cmd in personal capacity manappuram finance limited, a leading indian non-banking financial company (nbfc) specialising in gold loans, recently issued a disclosure to bse ltd, nse ltd and ifsc ltd regarding receipt of a warning letter. background the company said that the securities",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.7
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eb768e540a46fb5565a10",
+       "headline": "SEBI warns Manappuram Finance CMD over delayed shares pledge disclosure",
+       "url": "https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/sebi-warns-manappuram-finance-cmd-over-delayed-shares-pledge-disclosure/130543004",
+       "publisher": "cfo.economictimes.indiatimes.com",
+       "published_at": "2026-04-27T08:55:11",
+       "lede": "sebi warns manappuram finance cmd over delayed shares pledge disclosure the securities and exchange board of india (sebi) has issued an administrative warning to manappuram finance ltd chairman and managing director, v.p. nandakumar, for delayed disclosure of share pledge transactions, the company said in a regulatory filing on saturday.the warning",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.64
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.64
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5df1963d76f4afbe5027",
+       "headline": "SEBI crackdown in suspected pump and dump case, searches at multiple locations conducted: Sources- Moneycontrol.com",
+       "url": "https://www.moneycontrol.com/news/business/markets/sebi-crackdown-in-suspected-pump-and-dump-case-searches-at-multiple-location-conducted-sources-13900002.html",
+       "publisher": "moneycontrol.com",
+       "published_at": "2026-04-26T18:01:57",
+       "lede": "the latest action builds on similar enforcement steps taken earlier this month, underscoring a continuing crackdown on market abuse. recent orders in cases involving entities such as elitecon and rrp semiconductors reflect this ongoing regulatory push. sebi crackdown in suspected pump and dump case, searches at multiple location conducted: sources",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac574c37f6c5e66f4ec36",
+       "headline": "Sebi Proposes Key Changes To Rules Regarding Unpaid Securities  - Outlook Money",
+       "url": "https://outlookmoney.com/invest/sebi-proposes-key-changes-to-rules-regarding-unpaid-securities",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-04-26T08:54:15",
+       "lede": "sebi has proposed new rules to handle unpaid securitiesbrokers can prescribe reduce timelines for making payments the securities and exchange board of india (sebi) has proposed a set of reforms to streamline how unpaid securities are handled, with an aim to reduce ambiguity in existing rules while strengthening investor protection",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2af87f5cefb83fe85ef8ee",
+       "headline": "Sebi Chairman Pandey: Vision Needed, Not Just Regulation",
+       "url": "https://money.rediff.com/news/market/sebi-chairman-pandey-vision-needed-not-just-regulation/45951920260425",
+       "publisher": "money.rediff.com",
+       "published_at": "2026-04-25T17:24:00",
+       "lede": "mumbai, apr 25 (pti) sebi chairman tuhin kanta pandey on saturday said the coming years will demand not just regulation, but also vision.there will be a greater need for insight, more than oversight, as well, he said.the coming years will demand not just regulation, but vision. not just oversight, but",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.78
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab328a54b8f07c96aaee",
+       "headline": "SEBI Chief: Vision-Led Regulation Key for Volatile Markets",
+       "url": "https://www.newkerala.com/news/a/sebi-chief-calls-vision-led-regulations-as-markets-face-378.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-25T13:00:10",
+       "lede": "sebi chairman tuhin kanta pandey called for vision-led regulations as markets face global volatility and tech disruption at sebi's foundation day event. he highlighted india's market resilience with over 140 million investors and 5,900 listed companies. pandey outlined priorities including regulatory simplification, technology-led supervision, and stronger governance. finance minister nirmala",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaaaaa84b609af2b2e505",
+       "headline": "FM Sitharaman Urges SEBI to Strengthen Cybersecurity, Launches Mission Jagrook",
+       "url": "https://pragativadi.com/fm-sitharaman-urges-sebi-to-strengthen-cybersecurity-launches-mission-jagrook/",
+       "publisher": "pragativadi.com",
+       "published_at": "2026-04-25T10:44:03",
+       "lede": "<div class=\"intro-text\"> union finance minister nirmala sitharaman delivered the keynote address at sebi’s 38th foundation day in mumbai, urging the regulator and market entities to strengthen cybersecurity measures against evolving global threats. <hr /> </div> she warned that a single cyberattack on an exchange, depository, clearing corporation, or broker could",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.56
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "nirmala sitharaman"
+       ]
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 1766,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNSAxMDo0NDowMyIsImkiOiI2OWVmYWFhYWE4NGI2MDlhZjJiMmU1MDUiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.666,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.679
+    }
+   }
+  }
+ ]
+}

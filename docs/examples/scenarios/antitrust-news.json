@@ -1,0 +1,1056 @@
+{
+ "slug": "antitrust-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:06:11Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "antitrust",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "antitrust",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6012,
+     "tone": {
+      "carrying": 6009,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4040,
+        "share_pct": 67.23
+       },
+       {
+        "group": "neutral",
+        "count": 301,
+        "share_pct": 5.01
+       },
+       {
+        "group": "positive",
+        "count": 1668,
+        "share_pct": 27.76
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6012,
+      "count": 4932,
+      "share_pct": 82.04
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.881,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.884
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "antitrust",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "antitrust",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 972,
+       "critical": 791,
+       "critical_pct": 81.4,
+       "negative": 744,
+       "positive": 193,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 821,
+       "critical": 670,
+       "critical_pct": 81.6,
+       "negative": 564,
+       "positive": 220,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 909,
+       "critical": 674,
+       "critical_pct": 74.1,
+       "negative": 652,
+       "positive": 225,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1127,
+       "critical": 902,
+       "critical_pct": 80.0,
+       "negative": 830,
+       "positive": 246,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1592,
+       "critical": 1325,
+       "critical_pct": 83.2,
+       "negative": 1208,
+       "positive": 347,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 650,
+       "critical": 526,
+       "critical_pct": 80.9,
+       "negative": 440,
+       "positive": 180,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 953,
+       "critical": 816,
+       "critical_pct": 85.6,
+       "negative": 707,
+       "positive": 224,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1262,
+       "critical": 1098,
+       "critical_pct": 87.0,
+       "negative": 890,
+       "positive": 345,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 725,
+       "critical": 586,
+       "critical_pct": 80.8,
+       "negative": 492,
+       "positive": 204,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2697,
+       "critical": 2232,
+       "critical_pct": 82.8,
+       "negative": 1636,
+       "positive": 852,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1224,
+       "critical": 974,
+       "critical_pct": 79.6,
+       "negative": 869,
+       "positive": 325,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1366,
+       "critical": 1140,
+       "critical_pct": 83.5,
+       "negative": 1043,
+       "positive": 287,
+       "partial_period": false
+      }
+     ],
+     "total": 14298,
+     "critical_total": 11734,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.903,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.905
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "antitrust",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "antitrust",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6012,
+     "carrying": 3957,
+     "availability_pct": 65.82,
+     "items": [
+      {
+       "country": "united states",
+       "count": 3395,
+       "share_pct": 56.47
+      },
+      {
+       "country": "india",
+       "count": 100,
+       "share_pct": 1.66
+      },
+      {
+       "country": "united kingdom",
+       "count": 90,
+       "share_pct": 1.5
+      },
+      {
+       "country": "china",
+       "count": 67,
+       "share_pct": 1.11
+      },
+      {
+       "country": "italy",
+       "count": 36,
+       "share_pct": 0.6
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 269
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.213,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.239
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "antitrust",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "antitrust",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "antitrust & competition law",
+       "count": 240,
+       "share": 7.09,
+       "lift": 579.11,
+       "baseline_count": 1,
+       "previous_period_count": 330,
+       "delta_pct": -27.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "cannabis legalization trends & economic impact",
+       "count": 224,
+       "share": 6.62,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 152,
+       "share": 4.49,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 56,
+       "delta_pct": 171.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "regulatory compliance frameworks",
+       "count": 131,
+       "share": 3.87,
+       "lift": 316.1,
+       "baseline_count": 1,
+       "previous_period_count": 15,
+       "delta_pct": 773.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "medical marijuana laws & regulatory frameworks",
+       "count": 119,
+       "share": 3.52,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6012,
+     "carrying": 3383,
+     "carrier_share_pct": 56.27,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.023,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.026
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "antitrust",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "antitrust",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f8842c43843dd771d0878a",
+       "headline": "Apple accuses India’s CCI of exceeding its powers in antitrust case",
+       "url": "https://appleworld.today/2026/04/apple-accuses-indias-cci-of-exceeding-its-powers-in-antitrust-casein/",
+       "publisher": "appleworld.today",
+       "published_at": "2026-04-30T18:48:00",
+       "lede": "apple has accused india’s competition body of exceeding its powers by pushing the tech giant to submit its financials in an antitrust case related to its app store, reports reuters (a subscription is required to read the article). an april 24 non-public indian court submission ​by apple, reviewed by reuters",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0367dc7b84f58d6f731703",
+       "headline": "Apple says India antitrust body overstepping judicial authority as spat intensifies - News India Times",
+       "url": "https://newsindiatimes.com/apple-says-india-antitrust-body-overstepping-judicial-authority-as-spat-intensifies/",
+       "publisher": "newsindiatimes.com",
+       "published_at": "2026-04-30T15:58:47",
+       "lede": "- advertisement - new delhi, april 30 (reuters) – apple has accused india’s competition body of exceeding its powers by pushing the u.s. tech company to submit its financials in an antitrust case related to the iphone apps market, while apple challenges the law governing penalties, documents show. an april",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 166,
+         "path": "/Law & Government/Legal/Business & Corporate Law",
+         "score": 0.6
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03fdba220687a966a64fbf",
+       "headline": "Apple says India's antitrust body overstepping judicial authority as spat intensifies",
+       "url": "https://economictimes.indiatimes.com/industry/cons-products/electronics/apple-says-cci-overstepping-judicial-authority-as-spat-intensifies/articleshow/130640773.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T15:56:00",
+       "lede": "apple has accused india's competition body of exceeding its powers by pushing the u.s. tech company to submit its financials in an antitrust case related to the iphone apps market, while apple challenges the law governing penalties, documents show. an april 24 non-public indian court submission by apple, reviewed by",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a040a989c4aac093541229e",
+       "headline": "Italy closes antitrust probes into AI firms after commitments on 'hallucination' risks - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/italy-closes-antitrust-probes-into-ai-firms-after-commitments-on-hallucination-risks/articleshow/130635689.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-30T13:43:48",
+       "lede": "italy's antitrust authority said âon thursday it âhad closed investigations into three âai companies over allegedly unfair commercial practices involving generative artificial intelligence, after accepting binding commitments âfrom them.the â regulator, â known as the agcm, also polices consumer rights.it said it had targeted china's deepseek, france's mistral ai sas",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a04268e220687a966b8fc73",
+       "headline": "Google gets pointers from EU regulators on helping AI rivals access services - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/google-gets-pointers-from-eu-regulators-on-helping-ai-rivals-access-services/articleshow/130560529.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-27T17:06:36",
+       "lede": "alphabet's google was given pointers by eu antitrust regulators on monday on how to help online search rivals and artificial intelligence developers access its services such as those available to its gemini ai model under rules aimed at reining in big tech.the move by the european commission, which acts as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.66
+        },
+        {
+         "code": 38,
+         "path": "/Computers & Electronics/Software/Operating Systems",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e9d545272de32e8c6632",
+       "headline": "$2.67B Blue Cross Blue Shield settlement to finally start payouts soon – how to see if you’re eligible",
+       "url": "https://nypost.com/2026/04/27/business/2-67b-blue-cross-blue-shield-settlement-to-finally-start-payouts-soon-heres-how-to-know-if-youre-eligible/",
+       "publisher": "nypost.com",
+       "published_at": "2026-04-27T14:00:15",
+       "lede": "blue cross blue shield will soon start sending payments to millions of americans from its $2.67 billion fund in what is one of the largest antitrust settlements in the us healthcare industry. eligible customers who previously used blue cross blue shield for their health insurance should start receiving payments next",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e24b836d28f995cb54ac",
+       "headline": "The death of the super carrier dream as United drops pursuit of American Airlines merger",
+       "url": "https://www.domain-b.com/industry/industry-general/united-american-airlines-merger-speculation-ends-2026",
+       "publisher": "domain-b.com",
+       "published_at": "2026-04-27T12:07:15",
+       "lede": "1 summary united airlines has stepped back from exploring a potential combination with american airlines, with ceo scott kirby indicating there is no active path forward without mutual interest. reports of political resistance, including comments attributed to donald trump, and antitrust concerns around market concentration made the prospects of any",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 50,
+         "path": "/Travel & Transportation/Transportation/Air Travel",
+         "score": 0.91
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "american airlines",
+        "united airlines"
+       ],
+       "people": [
+        "donald trump",
+        "scott kirby"
+       ]
+      },
+      {
+       "id": "69efab7f727212302c5f8f68",
+       "headline": "Brazil Opens a Formal Antitrust Case Against Google Over How AI Search Uses News Content",
+       "url": "https://www.riotimesonline.com/brazil-cade-google-ai-news-antitrust-probe-april-2026/",
+       "publisher": "riotimesonline.com",
+       "published_at": "2026-04-24T09:46:57",
+       "lede": "key points —brazil’s antitrust authority cade voted unanimously on april 23 to escalate its six-year-old investigation into google’s use of journalistic content from an administrative inquiry to a full administrative process. —the new proceeding explicitly includes google’s generative ai features in search results — the first time a latin american",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "cade",
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a03698fca027fb5990e068f",
+       "headline": "DOJ Pushes Back on Apple’s Bid to Obtain Samsung Documents in Antitrust Case | PYMNTS.com",
+       "url": "https://www.pymnts.com/cpi-posts/doj-pushes-back-on-apples-bid-to-obtain-samsung-documents-in-antitrust-case/",
+       "publisher": "pymnts.com",
+       "published_at": "2026-04-21T18:15:31",
+       "lede": "the u.s. department of justice has formally challenged a recent move by apple to obtain documents from samsung electronics in south korea, marking the latest development in the ongoing antitrust battle over alleged monopoly practices. by completing this form, you agree to receive marketing communications from pymnts and to the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87fbd7bb1410d4c867690",
+       "headline": "Trump opposes United–American merger, signals support for Spirit",
+       "url": "https://neworleanscitybusiness.com/blog/2026/04/21/trump-united-american-airlines-merger-opposition/",
+       "publisher": "neworleanscitybusiness.com",
+       "published_at": "2026-04-21T16:08:16",
+       "lede": "listen to this article key takeaways: trump opposes potential united airlines and american airlines merger deal could control about 40% of u.s. domestic capacity antitrust concerns center on reduced competition and higher fares trump signals openness to spirit airlines acquisition amid bankruptcy u.s. president donald trump said on tuesday he",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 50,
+         "path": "/Travel & Transportation/Transportation/Air Travel",
+         "score": 0.69
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "spirit airlines",
+        "american airlines",
+        "united airlines"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2b05365cefb83fe8683227",
+       "headline": "Exclusive-India flips AB InBev from witness to target in antitrust probe, triggering court fight",
+       "url": "https://retail.economictimes.indiatimes.com/news/food-entertainment/grocery/exclusive-india-flips-ab-inbev-from-witness-to-target-in-antitrust-probe-triggering-court-fight/130414983",
+       "publisher": "retail.economictimes.indiatimes.com",
+       "published_at": "2026-04-21T16:07:03",
+       "lede": "indias antitrust agency has shifted anheuser-busch inbev from a cooperating witness to a party under investigation new delhi: india's antitrust agency has made anheuser-busch inbev a target of a cartel investigation after the world's leading brewer cooperated for &#8203;four years as a witness, leading to a court battle &#8203;in which",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 134,
+         "path": "/Food & Drink/Beverages/Alcoholic Beverages",
+         "score": 0.88
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e885a67bb1410d4c8a43c0",
+       "headline": "U.S. Department of Justice criticizes Apple’s request in ongoing antitrust case",
+       "url": "https://appleworld.today/2026/04/u-s-department-of-justice-criticizes-apples-request-in-ongoing-antitrust-case/",
+       "publisher": "appleworld.today",
+       "published_at": "2026-04-21T11:11:00",
+       "lede": "the u.s. department of justice has filed a response criticizing apple’s recent request to obtain evidence from samsung in south korea in the ongoing antitrust case. apparently, the doj isn’t buying apple’s arguments. according to 9to5mac, the agency says in a filing that the tech giant took too long to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        },
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.4
+        }
+       ],
+       "country": "south korea",
+       "organizations": [
+        "samsung",
+        "samsung"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ad4d65cefb83fe846a84d",
+       "headline": "Apple withholds data in India antitrust case, watchdog sets final hearing",
+       "url": "https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/apple-withholds-data-in-india-antitrust-case-watchdog-sets-final-hearing/130406514",
+       "publisher": "cfo.economictimes.indiatimes.com",
+       "published_at": "2026-04-21T08:55:15",
+       "lede": "* india wants apple to submit details to proceed in antitrust case* apple has repeatedly sought to put the case on &#8203;hold* india watchdog says case set for final &#8203;hearing in may* apple, india locked in separate tussle over penalty rulesby aditya kalranew delhi, - apple has not submitted data",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 166,
+         "path": "/Law & Government/Legal/Business & Corporate Law",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a55dfc37f6c5e66a94e19",
+       "headline": "DOJ Reportedly Launches Criminal Antitrust Probe Into Beef Companies After Trump's Call - Tyson Foods (NY",
+       "url": "https://www.benzinga.com/news/legal/26/04/51930836/doj-reportedly-launches-criminal-antitrust-probe-into-beef-companies-after-trumps-call",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-21T07:43:58",
+       "lede": "the u.s. justice department's antitrust division has reportedly initiated a criminal investigation into large meatpacking companies, following president donald trump's call for a probe into market manipulation last year. the doj is investigating whether these companies engaged in criminal anticompetitive conduct. criminal antitrust prosecutions are generally limited to cases involving",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 211,
+         "path": "/Food & Drink/Food/Meat & Seafood",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e881de9baafc73569036ad",
+       "headline": "CCI Fast-Tracks Apple Antitrust Case, Sets May 2026 Hearing",
+       "url": "https://www.electronicsforyou.biz/industry-buzz/cci-fast-tracks-apple-antitrust-case-sets-may-2026-hearing/",
+       "publisher": "electronicsforyou.biz",
+       "published_at": "2026-04-21T07:09:24",
+       "lede": "facing mounting scrutiny, apple inc. risks penalties in india as the competition commission of india accelerates its antitrust case and schedules a final hearing. india’s antitrust regulator has moved to expedite proceedings against apple inc. after the company failed to submit financial data and its response to an investigation into",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "apple inc."
+       ],
+       "people": []
+      },
+      {
+       "id": "6a036249c2856acf8e870b9c",
+       "headline": "The Corner Newsletter: Huge Ticketmaster Win, Callaci’s Book Launch, and OMI Europe Expansion — Open Markets Institute",
+       "url": "http://www.openmarketsinstitute.org/publications/the-corner-newsletter-huge-ticketmaster-win-callacis-book-launch-and-omi-europe-expansion",
+       "publisher": "openmarketsinstitute.org",
+       "published_at": "2026-04-21T03:30:13",
+       "lede": "with ticketmaster victory, state ags reinforce rule of law and constitution balances tara pincock and ben winsor last week saw one of the most tense, significant, and politicized antitrust verdicts in a generation. a manhattan jury found live nation and its subsidiary ticketmaster guilty of building an illegal monopoly, engaging",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e892805cfa3e5ba50ffbd0",
+       "headline": "The Corner Newsletter: Huge Ticketmaster Win, Callaci’s Book Launch, and OMI Europe Expansion — Open Markets Institute",
+       "url": "https://www.openmarketsinstitute.org/publications/the-corner-newsletter-huge-ticketmaster-win-callacis-book-launch-and-omi-europe-expansion",
+       "publisher": "openmarketsinstitute.org",
+       "published_at": "2026-04-21T03:30:13",
+       "lede": "with ticketmaster victory, state ags reinforce rule of law and constitution balances tara pincock and ben winsor last week saw one of the most tense, significant, and politicized antitrust verdicts in a generation. a manhattan jury found live nation and its subsidiary ticketmaster guilty of building an illegal monopoly, engaging",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.67
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ticketmaster"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e87f269baafc73568e7e88",
+       "headline": "DOJ Launches Criminal Antitrust Probe Into Major Meatpackers Amid Rising Beef Prices | PYMNTS.com",
+       "url": "https://www.pymnts.com/cpi-posts/doj-launches-criminal-antitrust-probe-into-major-meatpackers-amid-rising-beef-prices/",
+       "publisher": "pymnts.com",
+       "published_at": "2026-04-20T18:25:17",
+       "lede": "the justice department’s antitrust division has opened a criminal investigation into whether major meatpacking companies engaged in anticompetitive practices that may have affected u.s. consumers and ranchers, according to the wall street journal. by completing this form, you agree to receive marketing communications from pymnts and to the sharing of",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 211,
+         "path": "/Food & Drink/Food/Meat & Seafood",
+         "score": 0.57
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "the wall street journal"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e887637bb1410d4c8b67b0",
+       "headline": "Apple Withholds Key Data in India Antitrust Case, Final Hearing Set for May 21 - TechStory",
+       "url": "https://techstory.in/apple-withholds-key-data-in-india-antitrust-case-final-hearing-set-for-may-21/",
+       "publisher": "techstory.in",
+       "published_at": "2026-04-20T17:50:16",
+       "lede": "tech giant apple inc. is facing mounting regulatory pressure in india after the country’s antitrust watchdog said the company has failed to submit crucial financial data in an ongoing competition case. the competition commission of india (cci) has now scheduled a final hearing on may 21, 2026, signalling that the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "competition commission of india",
+        "apple inc."
+       ],
+       "people": []
+      },
+      {
+       "id": "6a04074662bbf617b042ec99",
+       "headline": "Apple Said to Have Withheld Financial Information in Antitrust Case in India",
+       "url": "https://www.republicworld.com/tech/apple-said-to-have-withheld-financial-information-in-antitrust-case-in-india",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-20T16:10:47",
+       "lede": "apple has not submitted data sought by india&#39;s antitrust body after an investigation found the u.s. firm abused its dominant position in the iphone apps market, prompting the watchdog to fast-track a decision on penalties to a final hearing next month, an order shows. the competition commission of india (cci)",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 166,
+         "path": "/Law & Government/Legal/Business & Corporate Law",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2337c37f6c5e663800a6",
+       "headline": "Apple withholds data in India antitrust case, watchdog sets final hearing",
+       "url": "https://telecom.economictimes.indiatimes.com/news/devices/apple-faces-antitrust-challenge-in-india-as-final-hearing-approaches/130388798",
+       "publisher": "telecom.economictimes.indiatimes.com",
+       "published_at": "2026-04-20T15:22:37",
+       "lede": "by aditya kalra new delhi: apple has not submitted data sought by india's antitrust body after an investigation found the u.s. firm abused its dominant position in the iphone apps market, prompting the watchdog to fast-track a decision on penalties to a final hearing next month, an order shows. the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 21,
+     "total_estimate": 1170,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMCAxNTowODoyMSIsImkiOiI2YTJhYjcwZTk2M2Q3NmY0YWZmOGU3ZjgiLCJwIjo4fQ",
+     "unresolved": 4,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.682,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "4 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.685
+    }
+   }
+  }
+ ]
+}

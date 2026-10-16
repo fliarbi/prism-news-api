@@ -1,0 +1,1000 @@
+{
+ "slug": "mortgage-rates-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:56:23Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "mortgage rates",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "mortgage rates",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3402,
+     "tone": {
+      "carrying": 3394,
+      "availability_pct": 99.76,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2109,
+        "share_pct": 62.14
+       },
+       {
+        "group": "neutral",
+        "count": 47,
+        "share_pct": 1.38
+       },
+       {
+        "group": "positive",
+        "count": 1238,
+        "share_pct": 36.48
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3402,
+      "count": 2266,
+      "share_pct": 66.61
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.782,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.789
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "mortgage rates",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "mortgage rates",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 683,
+       "critical": 411,
+       "critical_pct": 60.2,
+       "negative": 436,
+       "positive": 237,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 434,
+       "critical": 301,
+       "critical_pct": 69.4,
+       "negative": 289,
+       "positive": 127,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 773,
+       "critical": 439,
+       "critical_pct": 56.8,
+       "negative": 535,
+       "positive": 233,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 684,
+       "critical": 438,
+       "critical_pct": 64.0,
+       "negative": 395,
+       "positive": 287,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1100,
+       "critical": 876,
+       "critical_pct": 79.6,
+       "negative": 697,
+       "positive": 372,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 726,
+       "critical": 434,
+       "critical_pct": 59.8,
+       "negative": 417,
+       "positive": 286,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 588,
+       "critical": 334,
+       "critical_pct": 56.8,
+       "negative": 321,
+       "positive": 264,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1013,
+       "critical": 425,
+       "critical_pct": 42.0,
+       "negative": 541,
+       "positive": 298,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 628,
+       "critical": 421,
+       "critical_pct": 67.0,
+       "negative": 390,
+       "positive": 232,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 742,
+       "critical": 458,
+       "critical_pct": 61.7,
+       "negative": 463,
+       "positive": 267,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1027,
+       "critical": 674,
+       "critical_pct": 65.6,
+       "negative": 600,
+       "positive": 418,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1005,
+       "critical": 713,
+       "critical_pct": 70.9,
+       "negative": 656,
+       "positive": 321,
+       "partial_period": false
+      }
+     ],
+     "total": 9403,
+     "critical_total": 5924,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 6.158,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 6.163
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "mortgage rates",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "mortgage rates",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3402,
+     "carrying": 1803,
+     "availability_pct": 53.0,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1150,
+       "share_pct": 33.8
+      },
+      {
+       "country": "iran",
+       "count": 223,
+       "share_pct": 6.55
+      },
+      {
+       "country": "united kingdom",
+       "count": 180,
+       "share_pct": 5.29
+      },
+      {
+       "country": "iceland",
+       "count": 44,
+       "share_pct": 1.29
+      },
+      {
+       "country": "canada",
+       "count": 34,
+       "share_pct": 1.0
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 172
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.016,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.019
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "mortgage rates",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "mortgage rates",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "business lending and financing news",
+       "count": 448,
+       "share": 19.32,
+       "lift": 1576.98,
+       "baseline_count": 1,
+       "previous_period_count": 561,
+       "delta_pct": -20.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "fixed-rate vs adjustable-rate mortgages",
+       "count": 686,
+       "share": 29.58,
+       "lift": 1207.38,
+       "baseline_count": 2,
+       "previous_period_count": 882,
+       "delta_pct": -22.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: housing market trends",
+       "count": 424,
+       "share": 18.28,
+       "lift": 1492.5,
+       "baseline_count": 1,
+       "previous_period_count": 357,
+       "delta_pct": 18.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economic policy impact on businesses",
+       "count": 418,
+       "share": 18.03,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 264,
+       "delta_pct": 58.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mortgage refinancing guidelines",
+       "count": 717,
+       "share": 30.92,
+       "lift": 420.65,
+       "baseline_count": 6,
+       "previous_period_count": 1186,
+       "delta_pct": -39.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3402,
+     "carrying": 2319,
+     "carrier_share_pct": 68.17,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.28,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.284
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "mortgage rates",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "mortgage rates",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69dd25d477bfddb9f1ad2ff4",
+       "headline": "Tamara Keith and Amy Walter on GOP midterm concerns",
+       "url": "https://www.pbssocal.org/shows/newshour/clip/tamara-keith-and-amy-walter-on-gop-midterm-concerns-1661813389",
+       "publisher": "pbssocal.org",
+       "published_at": "2026-03-16T00:00:00",
+       "lede": "up next mortgage rates disproportionately impacting people of color video 8:55 legacy of mikhail gorbachev, final soviet leader video 8:14 mississippi flood leaves city without drinking water video 6:25 schools struggle to fill teaching jobs as students return video 5:59 pakistan, u.n. seek international aid amid historic flooding video 7:39",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": [
+        "mikhail gorbachev"
+       ]
+      },
+      {
+       "id": "6a2ac33b5cefb83fe839bbe0",
+       "headline": "Will Mortgage Rates Go Down In May? | Bankrate",
+       "url": "https://www.bankrate.com/mortgages/mortgage-interest-rates-forecast/",
+       "publisher": "bankrate.com",
+       "published_at": "2026-04-30T14:09:42",
+       "lede": "if you’re getting a mortgage this year menu list icon table of contents back to top trend unchanged icon arrow up icon if you’re getting a mortgage this year mortgage rates eased a bit in april, but they’re still above their early 2026 lows. the run-up in rates has left",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.52
+        },
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9dc9ca088760d34c4f9f1",
+       "headline": "Home sellers cut prices less even as U.S. listing prices fall again",
+       "url": "https://www.stocktitan.net/news/NWS/spring-housing-market-holds-its-ground-despite-economic-headwinds-9bya0s1zamqe.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-30T10:00:00",
+       "lede": "prices fall for a sixth straight month, and fewer price cuts signal sellers are coming to market more realistic pricing austin, texas , april 30, 2026 /prnewswire/ -- despite a turbulent start to the month marked by spiking gas prices, surging mortgage rates, and cratering consumer sentiment, the spring housing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.85
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.61
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aff4bc37f6c5e661e59ad",
+       "headline": "US Mortgage Rates Surge to 6.5 Percent Amid Middle East Tensions",
+       "url": "https://www.asatunews.co.id/en/mortgage-rates-surge-iran-tension",
+       "publisher": "asatunews.co.id",
+       "published_at": "2026-04-30T07:32:30",
+       "lede": "average 30-year fixed mortgage rates jumped to 6.5% on wednesday, april 29, 2026, marking the highest level in nearly four weeks. the surge followed reports of a prolonged naval blockade in the strait of hormuz and a hawkish tone from several federal reserve officials.according to mortgage news daily, the rate",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.6
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.48
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0efc54e2c027bd2b5b709d",
+       "headline": "Home price growth is slowing down — and even turning negative — in more of the country",
+       "url": "https://malaysia.news.yahoo.com/home-price-growth-is-slowing-down--and-even-turning-negative--in-more-of-the-country-141505810.html",
+       "publisher": "malaysia.news.yahoo.com",
+       "published_at": "2026-04-28T14:15:05",
+       "lede": "home price growth slowed again early in the year, a small relief for homebuyers still facing mortgage rates above 6% and limited inventory. the s&p cotality case-shiller 20-city composite home price index, which measures home prices in 20 of the nation’s largest metropolitan areas, rose 0.9% in february from a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.9
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.71
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6bfa5706a322e0eba3d",
+       "headline": "Home price growth is slowing down — and even turning negative — in more of the country",
+       "url": "https://finance.yahoo.com/sectors/real-estate/article/home-price-growth-is-slowing-down--and-even-turning-negative--in-more-of-the-country-141505810.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-04-28T14:15:05",
+       "lede": "home price growth slowed again early in the year, a small relief for homebuyers still facing mortgage rates above 6% and limited inventory. the s&p cotality case-shiller 20-city composite home price index, which measures home prices in 20 of the nation’s largest metropolitan areas, rose 0.9% in february from a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.92
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.7
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e506836d28f995cb87f6",
+       "headline": "What's the mortgage interest rate forecast for May 2026? Here's what some experts expect.",
+       "url": "https://cbsnews.com/news/mortgage-interest-rate-forecast-may-2026-experts/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-04-27T14:58:48",
+       "lede": "we're now in the second quarter of 2026 and the year has already been unpredictable when it comes to mortgage interest rates. after nearly four months, some rate predictions may need to be recast. if you were house-hunting in february, mortgage rates felt like they were back on track. the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f885dbbbf1d31455998a13",
+       "headline": "Current Mortgage Rates: Navigating the Landscape as of April 27, 2026",
+       "url": "https://www.theedadvocate.org/current-mortgage-rates-navigating-the-landscape-as-of-april-27-2026/",
+       "publisher": "theedadvocate.org",
+       "published_at": "2026-04-27T13:16:09",
+       "lede": "spread the love as of april 27, 2026, the landscape of mortgage rates in the united states presents a mix of fluctuations that potential homebuyers, homeowners looking to refinance, and financial analysts are closely monitoring. with the average interest rate for a 30-year fixed-rate conforming mortgage now at 6.277%, an",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.81
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac122963d76f4affff55e",
+       "headline": "Will mortgage rates rise again if interest rates go up this week?",
+       "url": "https://www.thisismoney.co.uk/money/mortgageshome/article-15768203/Will-mortgage-rates-rise-rates-week-borrowers-do.html",
+       "publisher": "thisismoney.co.uk",
+       "published_at": "2026-04-27T10:39:32",
+       "lede": "mortgage rates have been coming down over the past week or two, having previously risen on news of the war in iran. a raft of major lenders, including nationwide, halifax, tsb and santander have cut rates, offering some respite to those who need to remortgage or move. having been 4.83",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7250963d76f4afcae26f",
+       "headline": "ATTOM's US home sales report shows declining profit margin",
+       "url": "https://globalbusinessoutlook.com/real-estate/attoms-us-home-sales-report-shows-declining-profit-margin/",
+       "publisher": "globalbusinessoutlook.com",
+       "published_at": "2026-04-27T00:03:07",
+       "lede": "as per attom, home prices across the us are stabilising, while mortgage rates rise impacting home sales attom, the leading provider of property data, ai-powered analytics, and real estate intelligence solutions, released its latest “us home sales report,” which shows that homeowners made a 44.1% profit on typical single-family home",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.72
+        },
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.57
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e4f8d325610894209498",
+       "headline": "These are the types of homebuyers who should buy this spring, according to experts",
+       "url": "https://cbsnews.com/news/homebuyers-who-should-buy-spring-2026-experts-say/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-04-24T14:51:24",
+       "lede": "today's mortgage rates are lower than they were just a few weeks ago — but still higher than many borrowers had hoped for heading into this spring homebuying season. after bottoming out at just under 6% in february following a late-2025 federal reserve rate cut, the average rate on a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa946a84b609af2b1d753",
+       "headline": "These are the types of homebuyers who should buy this spring, according to experts",
+       "url": "https://www.cbsnews.com/news/homebuyers-who-should-buy-spring-2026-experts-say/",
+       "publisher": "cbsnews.com",
+       "published_at": "2026-04-24T14:51:24",
+       "lede": "today's mortgage rates are lower than they were just a few weeks ago — but still higher than many borrowers had hoped for heading into this spring homebuying season. after bottoming out at just under 6% in february following a late-2025 federal reserve rate cut, the average rate on a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "federal reserve"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99e66bdd09a23d093d19f",
+       "headline": "US homebuilders set for another ‘lost’ earnings season",
+       "url": "https://www.businesstimes.com.sg/property/us-homebuilders-set-another-lost-earnings-season",
+       "publisher": "businesstimes.com.sg",
+       "published_at": "2026-04-21T00:30:00",
+       "lede": "estimates suggest both sales and earnings have fallen further as conflict in middle east unsettles buyers and raises costs mortgage rates have jumped back on renewed inflation concerns, while higher oil prices are expected to push up the cost of construction materials. photo: bloomberg deeperdive is a beta ai feature.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.5
+        },
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9915b75f157062ca7ad57",
+       "headline": "Pending home sales see sharpest decline in three months as market headwinds mount - WestsideToday",
+       "url": "https://westsidetoday.com/2026/04/20/pending-home-sales-see-sharpest-decline-in-three-months-as-market-headwinds-mount/",
+       "publisher": "westsidetoday.com",
+       "published_at": "2026-04-20T09:32:26",
+       "lede": "rising mortgage rates and geopolitical uncertainty push the typical time-on-market to a five-year high. u.s. pending home sales dropped 2.4% year-over-year during the four weeks ending april 5, marking the sharpest contraction in three months as high mortgage rates and geopolitical instability cooled the spring housing market. “luxury buyers aren’t",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.68
+        },
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.64
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.56
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ef5ee8e67a2fcb3fd9d6d",
+       "headline": "Anyone with new mortgage in past month told 'take action, bank won't'",
+       "url": "https://www.mirror.co.uk/money/anyone-new-mortgage-past-month-37040456",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-04-20T07:28:47",
+       "lede": "borrowers who have had a mortgage offered directly with their bank over the past month or so have been warned by an expert to do one important thing, or risk spending hundreds or even thousands of pounds unnecessarily. since the war in the middle east began, mortgage rates have shot",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.86
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9917c75f157062ca7c543",
+       "headline": "UK mortgage rates show first weekly decline since February - PropertyWire",
+       "url": "https://www.propertywire.com/news/uk/uk-mortgage-rates-show-first-weekly-decline-since-february/",
+       "publisher": "propertywire.com",
+       "published_at": "2026-04-20T05:02:16",
+       "lede": "uk mortgage rates have recorded their first week-on-week decline since 27 february, signalling a potential turning point for borrowers who have faced rates approaching 6% in recent months. the decline follows the reported reopening of the strait of hormuz, which has eased pressure on global markets. two- and five-year swap",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 111,
+         "path": "/Finance/Credit & Lending/Loans",
+         "score": 0.47
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.47
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87bcc7bb1410d4c83ee4c",
+       "headline": "While higher mortgage rates and increased competition among sellers has dampened typical spring growth, the housing market has shown resilience in the face of global uncertainty, Rightmove reports. Data from the platform shows the average price of a newly listed home increased by 0.8% (+£2,929) this",
+       "url": "https://bebeez.eu/2026/04/20/rightmove-market-surprisingly-resilient-despite-mortgage-rate-rises/",
+       "publisher": "bebeez.eu",
+       "published_at": "2026-04-20T00:00:00",
+       "lede": "while higher mortgage rates and increased competition among sellers has dampened typical spring growth, the housing market has shown resilience in the face of global uncertainty, rightmove reports. data from the platform shows the average price of a newly listed home increased by 0.8% (+£2,929) this month to £373,971 –",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 82,
+         "path": "/Real Estate/Other",
+         "score": 0.93
+        },
+        {
+         "code": 25,
+         "path": "/News/Business News/Other",
+         "score": 0.81
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "rightmove"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 1087,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMCAwMDowMDowMCIsImkiOiI2OWU4N2JjYzdiYjE0MTBkNGM4M2VlNGMiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.724,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.738
+    }
+   }
+  }
+ ]
+}

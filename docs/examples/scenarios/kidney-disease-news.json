@@ -1,0 +1,827 @@
+{
+ "slug": "kidney-disease-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:04:04Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "kidney disease",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "kidney disease",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3608,
+     "tone": {
+      "carrying": 3604,
+      "availability_pct": 99.89,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 549,
+        "share_pct": 15.23
+       },
+       {
+        "group": "neutral",
+        "count": 232,
+        "share_pct": 6.44
+       },
+       {
+        "group": "positive",
+        "count": 2823,
+        "share_pct": 78.33
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3606,
+      "count": 3260,
+      "share_pct": 90.4
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.474,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.48
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "kidney disease",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "kidney disease",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 714,
+       "critical": 640,
+       "critical_pct": 89.6,
+       "negative": 125,
+       "positive": 530,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 667,
+       "critical": 608,
+       "critical_pct": 91.2,
+       "negative": 111,
+       "positive": 513,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 668,
+       "critical": 590,
+       "critical_pct": 88.3,
+       "negative": 112,
+       "positive": 490,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 732,
+       "critical": 637,
+       "critical_pct": 87.0,
+       "negative": 133,
+       "positive": 549,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 699,
+       "critical": 621,
+       "critical_pct": 88.8,
+       "negative": 100,
+       "positive": 547,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 841,
+       "critical": 740,
+       "critical_pct": 88.0,
+       "negative": 204,
+       "positive": 568,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 831,
+       "critical": 768,
+       "critical_pct": 92.4,
+       "negative": 154,
+       "positive": 613,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1120,
+       "critical": 1051,
+       "critical_pct": 93.8,
+       "negative": 128,
+       "positive": 911,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1259,
+       "critical": 1175,
+       "critical_pct": 93.3,
+       "negative": 165,
+       "positive": 991,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 708,
+       "critical": 639,
+       "critical_pct": 90.3,
+       "negative": 111,
+       "positive": 555,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 851,
+       "critical": 750,
+       "critical_pct": 88.1,
+       "negative": 154,
+       "positive": 650,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 790,
+       "critical": 696,
+       "critical_pct": 88.1,
+       "negative": 119,
+       "positive": 627,
+       "partial_period": false
+      }
+     ],
+     "total": 9880,
+     "critical_total": 8915,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.514,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.517
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "kidney disease",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "kidney disease",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3608,
+     "carrying": 445,
+     "availability_pct": 12.33,
+     "items": [
+      {
+       "country": "united states",
+       "count": 184,
+       "share_pct": 5.1
+      },
+      {
+       "country": "india",
+       "count": 76,
+       "share_pct": 2.11
+      },
+      {
+       "country": "china",
+       "count": 25,
+       "share_pct": 0.69
+      },
+      {
+       "country": "united kingdom",
+       "count": 18,
+       "share_pct": 0.5
+      },
+      {
+       "country": "nigeria",
+       "count": 17,
+       "share_pct": 0.47
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 125
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.625,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.63
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "kidney disease",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "kidney disease",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "patient safety and quality improvement studies",
+       "count": 252,
+       "share": 11.78,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 214,
+       "delta_pct": 17.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "public health initiatives and programs",
+       "count": 220,
+       "share": 10.28,
+       "lift": 839.19,
+       "baseline_count": 1,
+       "previous_period_count": 206,
+       "delta_pct": 6.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "diabetes medication management",
+       "count": 165,
+       "share": 7.71,
+       "lift": 629.39,
+       "baseline_count": 1,
+       "previous_period_count": 136,
+       "delta_pct": 21.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "health disparities and equity research",
+       "count": 333,
+       "share": 15.56,
+       "lift": 423.41,
+       "baseline_count": 3,
+       "previous_period_count": 294,
+       "delta_pct": 13.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease research publications",
+       "count": 156,
+       "share": 7.29,
+       "lift": 595.06,
+       "baseline_count": 1,
+       "previous_period_count": 137,
+       "delta_pct": 13.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3608,
+     "carrying": 2140,
+     "carrier_share_pct": 59.31,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.026,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.03
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "kidney disease",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "kidney disease",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e63f0f9e87ccc43e30dfff",
+       "headline": "World Kidney Day: Contaminated water raises alarm as Odisha sees rise in kidney diseases",
+       "url": "https://sambadenglish.com/latest-news/world-kidney-day-contaminated-water-raises-alarm-as-odisha-sees-rise-in-kidney-diseases-11204807",
+       "publisher": "sambadenglish.com",
+       "published_at": "2026-03-12T04:12:13",
+       "lede": "&amp;quot;cuttack: marking world kidney day on march 12, growing concerns have been raised over the increasing number of kidney disease cases in several districts of odisha, allegedly linked to contaminated groundwater. flagging the alarming situation across the state, scb medical college and hospital in cuttack has written to the public",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.71
+        },
+        {
+         "code": 84,
+         "path": "/Business & Industrial/Energy & Utilities/Other",
+         "score": 0.67
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9c44bbdd09a23d09768c3",
+       "headline": "A Simple Rupees 300 Test Can Catch Chronic Kidney Disease Early - Here’s Why Doctors Urge Screening",
+       "url": "https://www.timesnownews.com/health/a-simple-rupees-300-test-can-catch-chronic-kidney-disease-early-heres-why-doctors-urge-screening-article-154143351",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-23T04:30:00",
+       "lede": "chronic kidney disease, or ckd, is often called a “silent killer” - not because it is rare, but because it progresses quietly for years. most people don’t notice any symptoms until the damage is advanced and often irreversible. by then, treatment options are limited to dialysis or kidney transplantation, both",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.89
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "cdd4a20f3280753bae3c509e",
+       "headline": "Caring for Australians and New ZealandeRs with kidney Impairment guideline commentary on kidney disease: improving global outcomes 2025 guidelines for diagnosis and management of autosomal polycystic kidney disease.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42011799/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "caring for australians and new zealanders with kidney impairment guideline commentary on kidney disease: improving global outcomes 2025 guidelines for diagnosis and management of autosomal polycystic kidney disease.autosomal polycystic kidney disease (adpkd) is the most common form of inherited kidney disease. the international guideline developer, kidney disease: improving global outcomes",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.52
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.47
+        },
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e503dcd5e7fc42ee11237e",
+       "headline": "Save kidney, save resources",
+       "url": "https://www.thestar.com.my/news/nation/2026/04/13/save-kidney-save-resources",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-13T00:00:00",
+       "lede": "shah alam: the cost of treating end-stage kidney disease in malaysia has surged six-fold in just over a decade, placing mounting pressure on the nation’s healthcare system. health minister datuk seri dr dzulkefly ahmad said the country spent rm572mil on treatment in 2010 – a figure that has since ballooned",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.56
+        }
+       ],
+       "country": "malaysia",
+       "organizations": [],
+       "people": [
+        "dzulkefly ahmad"
+       ]
+      },
+      {
+       "id": "6a2b227fc37f6c5e663773de",
+       "headline": "‘Real Housewives’ Star Shares the Symptoms Leading to Frightening Diagnosis",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/real-housewives-star-shares-symptoms-193812329.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-31T19:38:12",
+       "lede": "real housewives of new york star bethenny frankel detailed the symptoms she had before learning of her kidney disease. “for years, i was experiencing a lot of dehydration, a lot of dizziness, low blood pressure,” frankel, 55, told page six on tuesday. bethenny frankel at the amazon home for the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "042cdf95bab18c55ee23634f",
+       "headline": "Implications of AKI-D Versus ESKD Status.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41881384/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-23T00:00:00",
+       "lede": "implications of aki-d versus eskd status.more than 20% of patients receiving dialysis at in-center hemodialysis facilities initiate dialysis for acute kidney injury requiring dialysis (aki-d) rather than end-stage kidney disease (eskd). the transition from aki-d to eskd status is important to reorient clinical efforts from short-term monitoring for recovery to",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.8
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.75
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.5
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a483e4f9bcdc12bc0368",
+       "headline": "Latest News Manipal Hospital Yeshwanthpur Celebrates 50+ ABO-Incompatible and 500+ Kidney Transplants on World Kidney Day 2026 - Businessfortnight",
+       "url": "https://businessfortnight.com/manipal-hospital-yeshwanthpur-celebrates-50-abo-incompatible-and-500-kidney-transplants-on-world-kidney-day-2026/",
+       "publisher": "businessfortnight.com",
+       "published_at": "2026-03-21T10:30:05",
+       "lede": "bengaluru, india, march 21, 2026 /prnewswire/ — kidney diseases are increasingly being recognised as a global health challenge, affecting millions of people and placing a substantial burden on families, healthcare systems, and economies. often progressing silently until advanced stages, chronic kidney disease (ckd) remains underdiagnosed in many communities.with an aim",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.73,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.75
+        },
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "global health"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a5337fec47653a0a88c4",
+       "headline": "Manipal Hospital Yeshwanthpur Celebrates 50+ ABO-Incompatible and 500+ Kidney Transplants on World Kidney Day 2026",
+       "url": "https://mediabulletins.com/business/manipal-hospital-yeshwanthpur-celebrates-50-abo-incompatible-and-500-kidney-transplants-on-world-kidney-day-2026/",
+       "publisher": "mediabulletins.com",
+       "published_at": "2026-03-21T09:58:22",
+       "lede": "bengaluru, india, march 21, 2026 /prnewswire/ — kidney diseases are increasingly being recognised as a global health challenge, affecting millions of people and placing a substantial burden on families, healthcare systems, and economies. often progressing silently until advanced stages, chronic kidney disease (ckd) remains underdiagnosed in many communities.with an aim",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.73,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.75
+        },
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "global health"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e4ffbf9d0e7fe469a622b2",
+       "headline": "Manipal Hospital Yeshwanthpur Celebrates 50+ ABO-Incompatible and 500+ Kidney Transplants on World Kidney Day 2026",
+       "url": "http://www.prnewswire.com/in/news-releases/manipal-hospital-yeshwanthpur-celebrates-50-abo-incompatible-and-500-kidney-transplants-on-world-kidney-day-2026-302721361.html",
+       "publisher": "prnewswire.com",
+       "published_at": "2026-03-21T09:54:00",
+       "lede": "bengaluru, india, march 21, 2026 /prnewswire/ -- kidney diseases are increasingly being recognised as a global health challenge, affecting millions of people and placing a substantial burden on families, healthcare systems, and economies. often progressing silently until advanced stages, chronic kidney disease (ckd) remains underdiagnosed in many communities. manipal hospital",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.63
+        },
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.56
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "global health"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a391e3cfcce8916b0a30",
+       "headline": "World Kidney Day 2026: Experts highlight AI and advanced technologies in fight against kidney disease",
+       "url": "https://www.kbc.co.ke/world-kidney-day-2026-experts-highlight-ai-and-advanced-technologies-in-fight-against-kidney-disease/",
+       "publisher": "kbc.co.ke",
+       "published_at": "2026-03-14T08:50:32",
+       "lede": "kenya marked world kidney day 2026 with a national commemoration at kenyatta national hospital (knh) in nairobi, bringing together policymakers, kidney specialists and healthcare providers to address the rising burden of kidney disease and highlight the growing role of modern medical technologies in improving kidney care.the event brought together public",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "kenya",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a39da528a35e1f41e831",
+       "headline": "Kidney health in the spotlight: SHEILD Ghana issues urgent call for national action on World Kidney Day - MyJoyOnline",
+       "url": "https://www.myjoyonline.com/kidney-health-in-the-spotlight-sheild-ghana-issues-urgent-call-for-national-action-on-world-kidney-day/",
+       "publisher": "myjoyonline.com",
+       "published_at": "2026-03-14T00:13:11",
+       "lede": "board directors of sheildas the global community marks the 20th anniversary of world kidney day on march 12, 2026, sustainable health education and interventions limited (sheild) ghana has issued a clarion call for a robust national response to the rising tide of kidney disease.with the theme “kidney health for all:",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 219,
+         "path": "/Health/Health Conditions/Other",
+         "score": 0.55
+        }
+       ],
+       "country": "ghana",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 180,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xMiAxMzo1MDowOSIsImkiOiI2YTJhNmRmYmMzN2Y2YzVlNjZiOTg1ZDMiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.452,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.455
+    }
+   }
+  }
+ ]
+}

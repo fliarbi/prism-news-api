@@ -1,0 +1,957 @@
+{
+ "slug": "retail-industry-news",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:51:48Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "retail industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "retail industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2009,
+     "tone": {
+      "carrying": 2009,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 565,
+        "share_pct": 28.12
+       },
+       {
+        "group": "neutral",
+        "count": 24,
+        "share_pct": 1.19
+       },
+       {
+        "group": "positive",
+        "count": 1420,
+        "share_pct": 70.68
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2009,
+      "count": 987,
+      "share_pct": 49.13
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.483,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.493
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "retail industry",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "retail industry",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 427,
+       "critical": 191,
+       "critical_pct": 44.7,
+       "negative": 146,
+       "positive": 274,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 276,
+       "critical": 127,
+       "critical_pct": 46.0,
+       "negative": 59,
+       "positive": 214,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 353,
+       "critical": 182,
+       "critical_pct": 51.6,
+       "negative": 144,
+       "positive": 204,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 431,
+       "critical": 189,
+       "critical_pct": 43.9,
+       "negative": 116,
+       "positive": 312,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 387,
+       "critical": 191,
+       "critical_pct": 49.4,
+       "negative": 94,
+       "positive": 288,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 460,
+       "critical": 246,
+       "critical_pct": 53.5,
+       "negative": 157,
+       "positive": 299,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 455,
+       "critical": 232,
+       "critical_pct": 51.0,
+       "negative": 112,
+       "positive": 340,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 446,
+       "critical": 220,
+       "critical_pct": 49.3,
+       "negative": 108,
+       "positive": 337,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 446,
+       "critical": 242,
+       "critical_pct": 54.3,
+       "negative": 136,
+       "positive": 305,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 569,
+       "critical": 293,
+       "critical_pct": 51.5,
+       "negative": 180,
+       "positive": 389,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 420,
+       "critical": 179,
+       "critical_pct": 42.6,
+       "negative": 132,
+       "positive": 284,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 574,
+       "critical": 273,
+       "critical_pct": 47.6,
+       "negative": 117,
+       "positive": 442,
+       "partial_period": false
+      }
+     ],
+     "total": 5244,
+     "critical_total": 2565,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.272,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.282
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "retail industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "retail industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2009,
+     "carrying": 988,
+     "availability_pct": 49.18,
+     "items": [
+      {
+       "country": "united states",
+       "count": 443,
+       "share_pct": 22.05
+      },
+      {
+       "country": "united kingdom",
+       "count": 179,
+       "share_pct": 8.91
+      },
+      {
+       "country": "india",
+       "count": 99,
+       "share_pct": 4.93
+      },
+      {
+       "country": "china",
+       "count": 53,
+       "share_pct": 2.64
+      },
+      {
+       "country": "australia",
+       "count": 22,
+       "share_pct": 1.1
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 192
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.875,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.88
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "retail industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "retail industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economy news: consumer confidence index updates",
+       "count": 52,
+       "share": 5.06,
+       "lift": 413.32,
+       "baseline_count": 1,
+       "previous_period_count": 71,
+       "delta_pct": -26.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: retail sales data insights",
+       "count": 79,
+       "share": 7.69,
+       "lift": 209.31,
+       "baseline_count": 3,
+       "previous_period_count": 117,
+       "delta_pct": -32.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: consumer spending patterns",
+       "count": 81,
+       "share": 7.89,
+       "lift": 107.3,
+       "baseline_count": 6,
+       "previous_period_count": 116,
+       "delta_pct": -30.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "employee benefits and workplace culture initiatives",
+       "count": 48,
+       "share": 4.67,
+       "lift": 127.17,
+       "baseline_count": 3,
+       "previous_period_count": 33,
+       "delta_pct": 45.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "corporate governance and board decisions",
+       "count": 20,
+       "share": 1.95,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 8,
+       "delta_pct": 150.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2009,
+     "carrying": 1027,
+     "carrier_share_pct": 51.12,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.168,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.179
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "retail industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "retail industry",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8ca1e9baafc7356c9edac",
+       "headline": "Consumption momentum accelerated in FY26, mid to high single growth expected in FY27 : RAI",
+       "url": "https://www.thehindubusinessline.com/news/consumption-momentum-accelerated-in-fy26-mid-to-high-single-growth-expected-in-fy27-rai/article70858424.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-13T15:39:11",
+       "lede": "retailers association of india (rai) said the growth outlook for the retail industry in fy27 is likely to be in the range of mid to high single digit growth. it added geopolitical uncertainties, logistics costs and margin pressures remain as key monitorables. rai noted that in the april 2025-february 2026",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.71
+        },
+        {
+         "code": 294,
+         "path": "/Business & Industrial/Retail Trade/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "iceland",
+       "organizations": [
+        "retailers association of india",
+        "rai"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e894d09baafc73569d5d23",
+       "headline": "Retail trade down 50% in some areas due to blockade - REI",
+       "url": "https://www.rte.ie/news/business/2026/0410/1567611-retail-protest/",
+       "publisher": "rte.ie",
+       "published_at": "2026-04-10T14:41:40",
+       "lede": "the largest body representing ireland's retail industry has warned that retail trade has fallen by up to 50% in some areas as fuel blockades continue to cause severe disruption across the country. in a statement today, retail excellence ireland has called for the blockades to end and for \"meaningful engagement",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 57,
+         "path": "/Business & Industrial/Business Operations/Management",
+         "score": 0.68
+        },
+        {
+         "code": 294,
+         "path": "/Business & Industrial/Retail Trade/Other",
+         "score": 0.67
+        }
+       ],
+       "country": "ireland",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ebfc6e540a46fb55e7462",
+       "headline": "India’s Auto Sector Hits Record 2.96 Crore Units in FY26 - Business League",
+       "url": "https://www.businessleague.in/indias-auto-sector-hits-record-2-96-crore-units-in-fy26/",
+       "publisher": "businessleague.in",
+       "published_at": "2026-04-07T15:39:22",
+       "lede": "the indian auto retail industry achieved a historic milestone in fy26, with total sales reaching 29.67 million (2.96 crore) units. this represents a robust 13.3% year-on-year growth, with five out of six vehicle categories setting all-time annual records. according to data from the federation of automobile dealers associations (fada), the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.28,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c090bd7b10565a3edea8",
+       "headline": "Indian Auto Retail Industry Hits Record High With Nearly 3 Crore Units Sold In FY26",
+       "url": "https://www.ndtv.com/auto/indian-auto-sales-clock-all-time-high-growth-in-fy26-set-to-cross-3-crore-mark-fada-11316315",
+       "publisher": "ndtv.com",
+       "published_at": "2026-04-07T12:15:14",
+       "lede": "new delhi, april 6 (ians) the indian auto retail industry delivered an all-time high of 2,96,71,064 units in fy26 with a broad-based 13.30 per cent growth (year-on-year), that saw five of six vehicle categories set new annual records, data released by the federation of automobile dealers associations (fada) said on",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.77
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2abfadc480588dc9f9ae8",
+       "headline": "FY26 Auto Sales Record: India Nears 3 Crore Retail Milestone",
+       "url": "https://www.newkerala.com/news/a/indian-auto-sales-clock-all-time-high-growth-fy26-998.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-06T09:36:11",
+       "lede": "the indian automobile retail industry achieved an all-time high of nearly 2.97 crore units in fy26, registering a 13.3% growth. five out of six vehicle categories set new annual records, with the industry approaching the significant 3-crore milestone. the growth was driven by structural factors including gst-led affordability, strong rural",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.82
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "gst"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc588e7d31e30c78514424",
+       "headline": "Retail Sector Warns Of Job Cuts As Fuel Costs Surge - channelnews",
+       "url": "https://www.channelnews.com.au/retail-sector-warns-of-job-cuts-as-fuel-costs-surge/",
+       "publisher": "channelnews.com.au",
+       "published_at": "2026-03-29T22:50:08",
+       "lede": "australia’s retail industry is urging the federal government to introduce a temporary cut to diesel fuel excise, as rising transport and supply chain costs begin to weigh heavily on businesses, employment and long-term viability.new data from the australian retail council shows that increasing expenses across fuel, freight and logistics are",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 294,
+         "path": "/Business & Industrial/Retail Trade/Other",
+         "score": 0.6
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd08f7aa9ae690c974e70",
+       "headline": "One year on from retail’s devastating cyber attacks, what’s changed? - Retail Gazette",
+       "url": "https://www.retailgazette.co.uk/blog/2026/03/one-year-cyber-attacks/",
+       "publisher": "retailgazette.co.uk",
+       "published_at": "2026-03-20T13:05:50",
+       "lede": "it’s been twelve months since a wave of sophisticated cyber attacks shook the retail industry. in the space of a few chaotic weeks, ecommerce platforms were knocked offline, supply chains faltered, and retailers were forced to confront the uncomfortable truth that the systems underpinning modern commerce were far more vulnerable",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.65
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac3cbc37f6c5e66f39a59",
+       "headline": "1,000 Leaders, 400 Brands, One Blueprint: India's Retail Decade Starts Now at Great India Retail Summit by ETRetail.com",
+       "url": "https://www.prnewswire.com/in/news-releases/1-000-leaders-400-brands-one-blueprint-indias-retail-decade-starts-now-at-great-india-retail-summit-by-etretailcom-302696933.html",
+       "publisher": "prnewswire.com",
+       "published_at": "2026-02-25T11:01:00",
+       "lede": "kajol, tamannaah bhatia, shankar mahadevan, and india's top retail ceos converged at great india retail summit 2026 mumbai, india, feb. 25, 2026 /prnewswire/ -- india's retail industry gathered its biggest names under one roof next week at great india retail summit this week at the jio world convention centre, mumbai.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 294,
+         "path": "/Business & Industrial/Retail Trade/Other",
+         "score": 0.56
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e32138adcc4eacc589830d",
+       "headline": "1,000 Leaders, 400 Brands, One Blueprint: India's Retail Decade Starts Now at Great India Retail Summit by ETRetail.com",
+       "url": "http://www.prnewswire.com/in/news-releases/1-000-leaders-400-brands-one-blueprint-indias-retail-decade-starts-now-at-great-india-retail-summit-by-etretailcom-302696933.html",
+       "publisher": "prnewswire.com",
+       "published_at": "2026-02-25T11:01:00",
+       "lede": "kajol, tamannaah bhatia, shankar mahadevan, and india's top retail ceos converged at great india retail summit 2026 mumbai, india, feb. 25, 2026 /prnewswire/ -- india's retail industry gathered its biggest names under one roof next week at great india retail summit this week at the jio world convention centre, mumbai.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 294,
+         "path": "/Business & Industrial/Retail Trade/Other",
+         "score": 0.56
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "kajol",
+        "shankar mahadevan"
+       ]
+      },
+      {
+       "id": "69c9ca5cfe85228ad69b0b6f",
+       "headline": "India’s Retail Decade Kicks Off with 1,000 Leaders and 400 Brands",
+       "url": "https://mediabulletins.com/business/indias-retail-decade-kicks-off-with-1000-leaders-and-400-brands/",
+       "publisher": "mediabulletins.com",
+       "published_at": "2026-02-25T09:10:20",
+       "lede": "mumbai , feb 25: india’s retail industry gathered its biggest names under one roof next week at the great india retail summit this week at the jio world convention centre, mumbai. themed ‘india’s blueprint for the world’, the event is set to host renowned bollywood celebrities to global retail giants.india",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9c99aeff444794ed82544",
+       "headline": "India’s Retail Decade Kicks Off with 1,000 Leaders and 400 Brands - Online Media Cafe",
+       "url": "https://onlinemediacafe.com/business/indias-retail-decade-kicks-off-with-1000-leaders-and-400-brands/",
+       "publisher": "onlinemediacafe.com",
+       "published_at": "2026-02-25T09:10:16",
+       "lede": "share post sharemumbai , feb 25: india’s retail industry gathered its biggest names under one roof next week at the great india retail summit this week at the jio world convention centre, mumbai. themed ‘india’s blueprint for the world’, the event is set to host renowned bollywood celebrities to global",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9e9ec37f6c5e66d95b73",
+       "headline": "1,000 Leaders. 400 Brands. One Blueprint. India's Retail Decade Starts Now. - PNI",
+       "url": "https://www.pninews.com/1000-leaders-400-brands-one-blueprint-indias-retail-decade-starts-now/",
+       "publisher": "pninews.com",
+       "published_at": "2026-02-25T08:07:22",
+       "lede": "mumbai: india’s retail industry gathered its biggest names under one roof next week at the great india retail summit this week at the jio world convention centre, mumbai. themed ‘india’s blueprint for the world’, the event is set to host renowned bollywood celebrities to global retail giants. india is racing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9b2d737c223031a91a331",
+       "headline": "Supreme Court Trump tariff decision: Retail industry reacts",
+       "url": "https://bitcoinethereumnews.com/finance/supreme-court-trump-tariff-decision-retail-industry-reacts/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-02-20T17:09:04",
+       "lede": "the retail industry on friday said the supreme court’s ruling that struck down some of president donald trump’s global tariffs would usher in more predictability and flexibility for innovation, freeing up businesses from the burden of higher import costs.“the supreme court’s announcement today regarding tariffs provides much-needed certainty for u.s.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.57
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2b254b963d76f4af46bc26",
+       "headline": "Investigating Amazon.com's Standing In Broadline Retail Industry Compared To Competitors - Amazon.com (NA",
+       "url": "https://www.benzinga.com/insights/news/26/04/52161170/investigating-amazon-coms-standing-in-broadline-retail-industry-compared-to-competitors",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-30T09:59:14",
+       "lede": "in today's fast-paced and highly competitive business world, it is crucial for investors and industry followers to conduct comprehensive company evaluations. in this article, we will delve into an extensive industry comparison, evaluating amazon.com (nasdaq:amzn) in relation to its major competitors in the broadline retail industry. by closely examining key",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 186,
+         "path": "/Shopping/Shopping Portals",
+         "score": 0.87
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed0a2e540a46fb56f6183",
+       "headline": "Industry Comparison: Evaluating Amazon.com Against Competitors In Broadline Retail Industry - Amazon.com",
+       "url": "https://www.benzinga.com/insights/news/26/04/52085766/industry-comparison-evaluating-amazon-com-against-competitors-in-broadline-retail-industry",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-28T09:58:59",
+       "lede": "in the fast-paced and cutthroat world of business, conducting thorough company analysis is essential for investors and industry experts. in this article, we will undertake a comprehensive industry comparison, evaluating amazon.com (nasdaq:amzn) in comparison to its major competitors within the broadline retail industry. by analyzing crucial financial metrics, market position,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 186,
+         "path": "/Shopping/Shopping Portals",
+         "score": 0.84
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c87e1e3933a6dd8e9272",
+       "headline": "Many Big Retailers Closing Locations This Year Are Found In Wisconsin",
+       "url": "https://k923.fm/ixp/150/p/retailers-closing-locations-in-wisconsin/",
+       "publisher": "k923.fm",
+       "published_at": "2026-04-28T04:15:25",
+       "lede": "overall, 2025 was a mixed-to-positive year for the retail industry. according to reports, there was solid overall growth (2.7%–3.7% forecast increase) and record-high investment in physical retail properties ($66.2+ billion). however, last year also saw many u.s. retail store closures, with estimates ranging from over 8,000 to 15,000 locations shutting",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.62
+        },
+        {
+         "code": 158,
+         "path": "/Shopping/Mass Merchants & Department Stores",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cc67a5706a322e118161",
+       "headline": "Smart Vend Group Ltd. (SVGAPP) Reshapes the Retail Industry Landscape",
+       "url": "https://www.openpr.com/news/4489360/smart-vend-group-ltd-svgapp-reshapes-the-retail-industry",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-26T12:18:08",
+       "lede": "smart vend group ltd. (svgapp) reshapes the retail industry landscape smart vend group ltd. (svgapp) has established its global command center in manhattan, new york, with a clear mission to build the next generation of intelligent retail infrastructure. positioned at the heart of global finance, the company is accelerating digital",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.45
+        },
+        {
+         "code": 439,
+         "path": "/Business & Industrial/Retail Trade/Retail Equipment & Technology",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 152,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNSAxOTo1ODo0MyIsImkiOiI2OWVmYWMwOGE4NGI2MDlhZjJiM2ZjNDIiLCJwIjo3fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.376,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.38
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,995 @@
+{
+ "slug": "smartphones-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:13:01Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "smartphones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "smartphones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13239,
+     "tone": {
+      "carrying": 13238,
+      "availability_pct": 99.99,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2087,
+        "share_pct": 15.77
+       },
+       {
+        "group": "neutral",
+        "count": 209,
+        "share_pct": 1.58
+       },
+       {
+        "group": "positive",
+        "count": 10942,
+        "share_pct": 82.66
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 13237,
+      "count": 3088,
+      "share_pct": 23.33
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.377,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.38
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "smartphones",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "smartphones",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2750,
+       "critical": 636,
+       "critical_pct": 23.1,
+       "negative": 428,
+       "positive": 2239,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2382,
+       "critical": 589,
+       "critical_pct": 24.7,
+       "negative": 460,
+       "positive": 1890,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 3315,
+       "critical": 664,
+       "critical_pct": 20.0,
+       "negative": 526,
+       "positive": 2743,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 4128,
+       "critical": 993,
+       "critical_pct": 24.1,
+       "negative": 729,
+       "positive": 3320,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3448,
+       "critical": 757,
+       "critical_pct": 22.0,
+       "negative": 418,
+       "positive": 2972,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2621,
+       "critical": 607,
+       "critical_pct": 23.2,
+       "negative": 390,
+       "positive": 2201,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2324,
+       "critical": 515,
+       "critical_pct": 22.2,
+       "negative": 310,
+       "positive": 1981,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2866,
+       "critical": 842,
+       "critical_pct": 29.4,
+       "negative": 587,
+       "positive": 2237,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2691,
+       "critical": 618,
+       "critical_pct": 23.0,
+       "negative": 434,
+       "positive": 2204,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3456,
+       "critical": 841,
+       "critical_pct": 24.3,
+       "negative": 529,
+       "positive": 2883,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3449,
+       "critical": 757,
+       "critical_pct": 21.9,
+       "negative": 497,
+       "positive": 2900,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3643,
+       "critical": 872,
+       "critical_pct": 23.9,
+       "negative": 627,
+       "positive": 2955,
+       "partial_period": false
+      }
+     ],
+     "total": 37073,
+     "critical_total": 8691,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.408,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.41
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "smartphones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "smartphones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13239,
+     "carrying": 5200,
+     "availability_pct": 39.28,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1251,
+       "share_pct": 9.45
+      },
+      {
+       "country": "india",
+       "count": 1193,
+       "share_pct": 9.01
+      },
+      {
+       "country": "south korea",
+       "count": 894,
+       "share_pct": 6.75
+      },
+      {
+       "country": "china",
+       "count": 357,
+       "share_pct": 2.7
+      },
+      {
+       "country": "united kingdom",
+       "count": 212,
+       "share_pct": 1.6
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1293
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.736,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.738
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "smartphones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "smartphones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mobile phone hardware components",
+       "count": 767,
+       "share": 9.27,
+       "lift": 756.98,
+       "baseline_count": 1,
+       "previous_period_count": 468,
+       "delta_pct": 63.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone battery performance",
+       "count": 740,
+       "share": 8.95,
+       "lift": 730.34,
+       "baseline_count": 1,
+       "previous_period_count": 568,
+       "delta_pct": 30.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "latest gadgets and consumer electronics",
+       "count": 970,
+       "share": 11.73,
+       "lift": 478.67,
+       "baseline_count": 2,
+       "previous_period_count": 783,
+       "delta_pct": 23.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile operating systems",
+       "count": 1117,
+       "share": 13.51,
+       "lift": 275.6,
+       "baseline_count": 4,
+       "previous_period_count": 1227,
+       "delta_pct": -9.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone camera technology",
+       "count": 676,
+       "share": 8.17,
+       "lift": 333.59,
+       "baseline_count": 2,
+       "previous_period_count": 521,
+       "delta_pct": 29.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 13239,
+     "carrying": 8271,
+     "carrier_share_pct": 62.47,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.693,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.696
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "smartphones",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "smartphones",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a66555cefb83fe8fd3dac",
+       "headline": "AI features and design shape India’s smartphone buying trends",
+       "url": "https://domain-b.com/technology/artificial-intelligence/india-smartphone-ai-design-trends-2026",
+       "publisher": "domain-b.com",
+       "published_at": "2026-04-30T10:38:43",
+       "lede": "indian consumers are prioritizing ai features and design over raw specifications in smartphones (ai generated). 1 summary a large share of indian consumers now consider ai features an important factor when buying smartphones, though exact figures like “89%” vary by survey and should be seen as directional. consumers are holding",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.59
+        },
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8b7b043843dd771d2f0ca",
+       "headline": "OpenAI Eyes AI-first Smartphone Launch by 2028",
+       "url": "https://www.electronicsforyou.biz/industry-buzz/openai-eyes-ai-first-smartphone-launch-by-2028/",
+       "publisher": "electronicsforyou.biz",
+       "published_at": "2026-04-30T06:22:23",
+       "lede": "will smartphones become smart enough to think for users? openai’s reported ai-first handset, backed by chip giants, signals a shift towards agent-driven, app-free mobile experiences by 2028. openai is reportedly developing an ai-centric smartphone in collaboration with qualcomm and mediatek, with manufacturing expected to be handled by china-based luxshare. the",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.66
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "qualcomm",
+        "openai",
+        "mediatek",
+        "luxshare"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ad5c2c37f6c5e660103d3",
+       "headline": "Qualcomm Stock Surges 15% on AI Chips & Data Center Push",
+       "url": "https://theoutpost.ai/news-story/qualcomm-stock-surges-15-as-ai-chips-and-data-center-expansion-fuel-investor-confidence-26073/",
+       "publisher": "theoutpost.ai",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "qualcomm stock jumps 15% as ai partnership with openai, new snapdragon chips and strong earnings boost investor confidence qualcomm stock is getting attention after strong growth in ai, smartphones and data centers. investors are watching the company closely because of new chip launches, better earnings and future ai plans. qualcomm",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.71
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0413df9c4aac0935456e28",
+       "headline": "Hormuud Telecom, Somalia’s telecom operator, has partnered with Mogadishu-based Get-Phone to launch a smartphone financing programme aimed at helping low-income users access smartphones for the first time. In many low-income markets, both smartphone devices and data are expensive relative to incomes",
+       "url": "https://www.itnewsafrica.com/2026/05/somalia-launches-smartphone-financing-model-targeting-low-income-users/",
+       "publisher": "itnewsafrica.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "hormuud telecom, somalia’s telecom operator, has partnered with mogadishu-based get-phone to launch a smartphone financing programme aimed at helping low-income users access smartphones for the first time. in many low-income markets, both smartphone devices and data are expensive relative to incomes, limiting uptake even where developed networks exist. this programme",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9da9b7b2d589e844f2fa4",
+       "headline": "OpenAI Is Building an AI Phone. Will It Take on the iPhone?",
+       "url": "https://www.republicworld.com/tech/openai-is-building-an-ai-phone-will-it-take-on-the-iphone",
+       "publisher": "republicworld.com",
+       "published_at": "2026-04-29T16:41:15",
+       "lede": "for years, silicon valley kept saying ai would replace smartphones. now openai appears to be doing the exact opposite. openai is reportedly working with qualcomm and mediatek on processors for an ai-focused smartphone expected to enter mass production around 2028. on paper, it sounds like another hardware rumour from a",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.61
+        },
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.6
+        }
+       ],
+       "country": "south korea",
+       "organizations": [
+        "qualcomm",
+        "openai",
+        "mediatek"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ca3a399b489398e02419",
+       "headline": "Smartphones Emerge as India’s Top Export, Says Ashwini Vaishnaw - India Seatrade News",
+       "url": "https://indiaseatradenews.com/smartphones-emerge-as-indias-top-export-says-ashwini-vaishnaw/",
+       "publisher": "indiaseatradenews.com",
+       "published_at": "2026-04-28T18:40:55",
+       "lede": "union minister ashwini vaishnaw on tuesday said that smartphones have become india’s largest exported product, marking a major milestone in the country’s rapidly expanding electronics manufacturing sector. speaking at the google cloud india ai hub groundbreaking ceremony, vaishnaw noted that mobile phones have overtaken traditional export leaders such as gems",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.49
+        },
+        {
+         "code": 102,
+         "path": "/Business & Industrial/Manufacturing/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": [
+        "ashwini vaishnaw"
+       ]
+      },
+      {
+       "id": "69f0e8c245272de32e8c5916",
+       "headline": "OpenAI reportedly working with Qualcomm and MediaTek to build custom chips for AI-first smartphones - The Tech Portal",
+       "url": "https://thetechportal.com/2026/04/27/openai-reportedly-working-with-qualcomm-and-mediatek-to-build-custom-chips-for-ai-first-smartphones/",
+       "publisher": "thetechportal.com",
+       "published_at": "2026-04-27T14:04:57",
+       "lede": "openai is reportedly moving beyond software into the highly competitive smartphone hardware space, with plans to develop custom chipsets in collaboration with qualcomm and mediatek. the effort is focused on building a new class of ‘ai-first’ smartphones designed around intelligent agents rather than traditional app-based usage, reports tf securities international",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.71
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.64
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "mediatek",
+        "qualcomm",
+        "openai"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c8561e3933a6dd8e7dfa",
+       "headline": "Expert issues warning to iPhone and Android users as video shows phone flashlight melting through plastic",
+       "url": "https://www.uniladtech.com/news/tech-news/expert-warning-phone-flashlight-melting-through-plastic-412827-20260427",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-04-27T11:48:59",
+       "lede": "a tiktok video shocked viewers online as it appeared to show the flashlight of a samsung device melting through a plastic bag. the clip naturally sparked concern on social media, with many people questioning just how safe their smartphones are. now, one expert has spoken out to issue a warning",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.75
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.4
+        }
+       ],
+       "country": "south korea",
+       "organizations": [
+        "tiktok",
+        "samsung"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b1f16963d76f4af42111d",
+       "headline": "OpenAI Eyes 'AI Agent' Smartphone With Qualcomm And MediaTek, Targets App-Free Experience By 2028: Report",
+       "url": "https://www.benzinga.com/markets/tech/26/04/52056811/openai-eyes-ai-agent-smartphone-with-qualcomm-and-mediatek-targets-app-free-experience-by-2028-report",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-27T10:44:34",
+       "lede": "openai is reportedly exploring a move into smartphones designed around artificial intelligence agents, potentially reshaping how users interact with mobile devices. ai agent smartphone concept emerges on sunday, analyst ming-chi kuo posted on x, openai is reportedly working with chipmakers mediatek and qualcomm inc. (nasdaq:qcom), along with manufacturing partner luxshare,",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab43a84b609af2b35a7d",
+       "headline": "📱 Aadhaar App Pre-Install Plan Dropped: Government Withdraws Proposal",
+       "url": "https://www.indiaherald.com/Politics/Read/994888495/-Aadhaar-App-PreInstall-Plan-Dropped-Government-Withdraws-Proposal",
+       "publisher": "indiaherald.com",
+       "published_at": "2026-04-25T00:00:00",
+       "lede": "the indian government has officially withdrawn a proposal to make the aadhaar app pre-installed on smartphones, after strong pushback from smartphone makers and privacy concerns. 📌 what was the proposal? earlier in 2026, the unique identification authority of india (uidai) had suggested that: 📲 the aadhaar app should come pre-installed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa9b18a54b8f07c9588a9",
+       "headline": "Kaspersky Discovers Vulnerability in Qualcomm Snapdragon Chips that can Lead to Data Loss & Device Compromise",
+       "url": "https://www.nigeriacommunicationsweek.com.ng/kaspersky-discovers-vulnerability-in-qualcomm-snapdragon-chips-that-can-lead-to-data-loss-device-compromise/",
+       "publisher": "nigeriacommunicationsweek.com.ng",
+       "published_at": "2026-04-25T00:00:00",
+       "lede": "kindly share this post kaspersky ics cert discovered a hardware-level vulnerability affecting qualcomm chipsets that are widely used in a range of consumer and industrial devices, including smartphones and tablets, car components, iot devices and more. the vulnerability resides in the bootrom – firmware embedded at the hardware level. attackers",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.56
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.56
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "iot",
+        "qualcomm"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1cf7e399b489398e29d9b",
+       "headline": "Meta’s new AI feature lets parents track teen conversations | Stuff",
+       "url": "https://www.stuff.tv/news/metas-new-ai-feature-lets-parents-track-teen-conversations/",
+       "publisher": "stuff.tv",
+       "published_at": "2026-04-23T16:22:48",
+       "lede": "the best smartphones are probably running at least one of meta’s apps. now, the company is trying to get ahead of growing concerns around teens and meta ai by giving parents a clearer window into what’s actually being asked behind the scenes. in a newly announced update, meta will let",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.78
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "meta",
+        "meta ai"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea32c675c44d9ce883c03e",
+       "headline": "Make in India booster: Smartphone production up 8 pc, exports surge 28 pc - Yes Punjab News",
+       "url": "https://yespunjab.com/make-in-india-booster-smartphone-production-up-8-pc-exports-surge-28-pc/",
+       "publisher": "yespunjab.com",
+       "published_at": "2026-04-23T13:01:46",
+       "lede": "new delhi, april 23, 2026 the shipments of ‘made in india’ smartphones grew 8 per cent (on-year) in 2025, driven by a 28 per cent surge in exports and a 1 per cent growth in domestic sell-in, according to a new report on thursday. exports accounted for approximately one-third of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.75,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea204075c44d9ce8821cb2",
+       "headline": "'Made in India' Smartphone Shipments Grow 8% in 2025 Driven by 28% Surge in Exports | 📲 LatestLY",
+       "url": "https://www.latestly.com/technology/made-in-india-smartphone-shipments-grow-8-in-2025-driven-by-28-surge-in-exports-7404527.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-04-23T11:29:32",
+       "lede": "new delhi, april 23: the shipments of &lsquo;made in india&rsquo; smartphones grew 8 per cent (on-year) in 2025, driven by a 28 per cent surge in exports and a 1 per cent growth in domestic sell-in, according to a new report on thursday. exports accounted for approximately one-third of all",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea337073206aa299edaf6b",
+       "headline": "Make in India booster: Smartphone production up 8 pc, exports surge 28 pc - Social News XYZ",
+       "url": "https://www.socialnews.xyz/2026/04/23/make-in-india-booster-smartphone-production-up-8-pc-exports-surge-28-pc/",
+       "publisher": "socialnews.xyz",
+       "published_at": "2026-04-23T10:14:35",
+       "lede": "new delhi, april 23 (socialnews.xyz) the shipments of ‘made in india’ smartphones grew 8 per cent (on-year) in 2025, driven by a 28 per cent surge in exports and a 1 per cent growth in domestic sell-in, according to a new report on thursday. exports accounted for approximately one-third of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "xyz"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ae3ebc37f6c5e660b1466",
+       "headline": "‘It's our view that smartphones represent a safeguarding risk for young people’",
+       "url": "https://www.stratford-herald.com/news/its-our-view-that-smartphones-represent-a-safeguarding-ris-9462905/",
+       "publisher": "stratford-herald.com",
+       "published_at": "2026-04-23T05:00:00",
+       "lede": "a stratford secondary will ban its youngest pupils from bringing smartphones to school, starting in september. king edward vi (kes) has written to parents of the upcoming year 7 intake, explaining their children must not bring smartphones onto the school site. it’s the first secondary school in stratford to introduce",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec38383fc01faba3c6c1c",
+       "headline": "The shipments of ‘Made in India’ smartphones grew 8 per cent (on-year) in 2025, driven by a 28 per cent surge in exports and a 1 per cent growth in domestic sell-in, according to a new report on Thursday. Exports accounted for approximately one-third of all smartphones manufactured in India, said Co",
+       "url": "https://investmentguruindia.com/newsdetail/make-in-india-booster-smartphone-production-up-8-pc-exports-surge-28-pc148579",
+       "publisher": "investmentguruindia.com",
+       "published_at": "2026-04-23T00:00:00",
+       "lede": "the shipments of ‘made in india’ smartphones grew 8 per cent (on-year) in 2025, driven by a 28 per cent surge in exports and a 1 per cent growth in domestic sell-in, according to a new report on thursday. exports accounted for approximately one-third of all smartphones manufactured in india,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ab24a5cefb83fe82df9a9",
+       "headline": "'Inaction on children's smartphone use is no longer an option'",
+       "url": "https://www.bristol247.com/opinion/your-say/inaction-children-smartphone-use-no-longer-option/",
+       "publisher": "bristol247.com",
+       "published_at": "2026-04-22T10:22:26",
+       "lede": "smartphones and the digital environment have reshaped the experience of growing up. today, 97 per cent of 12-year-olds own a smartphone, meaning children are constantly exposed to notifications and algorithmically engineered feeds designed to maximise engagement. research from the university of birmingham suggests that teenagers spend, on average, nearly 35",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.23,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 72,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 2145,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAxMDoyMjoyNiIsImkiOiI2YTJhYjI0YTVjZWZiODNmZTgyZGY5YTkiLCJwIjo4fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.572,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.577
+    }
+   }
+  }
+ ]
+}

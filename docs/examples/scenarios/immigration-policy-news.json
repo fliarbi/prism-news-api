@@ -1,0 +1,896 @@
+{
+ "slug": "immigration-policy-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:35Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "immigration policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "immigration policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2903,
+     "tone": {
+      "carrying": 2901,
+      "availability_pct": 99.93,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2530,
+        "share_pct": 87.21
+       },
+       {
+        "group": "neutral",
+        "count": 29,
+        "share_pct": 1.0
+       },
+       {
+        "group": "positive",
+        "count": 342,
+        "share_pct": 11.79
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2902,
+      "count": 2327,
+      "share_pct": 80.19
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.801,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.805
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "immigration policy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "immigration policy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 689,
+       "critical": 550,
+       "critical_pct": 79.8,
+       "negative": 591,
+       "positive": 79,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 676,
+       "critical": 503,
+       "critical_pct": 74.4,
+       "negative": 598,
+       "positive": 60,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 653,
+       "critical": 424,
+       "critical_pct": 64.9,
+       "negative": 555,
+       "positive": 88,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 677,
+       "critical": 464,
+       "critical_pct": 68.5,
+       "negative": 602,
+       "positive": 66,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 593,
+       "critical": 493,
+       "critical_pct": 83.1,
+       "negative": 488,
+       "positive": 92,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 516,
+       "critical": 429,
+       "critical_pct": 83.1,
+       "negative": 446,
+       "positive": 61,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 538,
+       "critical": 468,
+       "critical_pct": 87.0,
+       "negative": 492,
+       "positive": 40,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 688,
+       "critical": 596,
+       "critical_pct": 86.6,
+       "negative": 626,
+       "positive": 51,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 658,
+       "critical": 542,
+       "critical_pct": 82.4,
+       "negative": 601,
+       "positive": 57,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 872,
+       "critical": 682,
+       "critical_pct": 78.2,
+       "negative": 734,
+       "positive": 124,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 679,
+       "critical": 572,
+       "critical_pct": 84.2,
+       "negative": 602,
+       "positive": 70,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 694,
+       "critical": 531,
+       "critical_pct": 76.5,
+       "negative": 593,
+       "positive": 91,
+       "partial_period": false
+      }
+     ],
+     "total": 7933,
+     "critical_total": 6254,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.113,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.117
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "immigration policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "immigration policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2903,
+     "carrying": 985,
+     "availability_pct": 33.93,
+     "items": [
+      {
+       "country": "united states",
+       "count": 781,
+       "share_pct": 26.9
+      },
+      {
+       "country": "australia",
+       "count": 34,
+       "share_pct": 1.17
+      },
+      {
+       "country": "united kingdom",
+       "count": 29,
+       "share_pct": 1.0
+      },
+      {
+       "country": "canada",
+       "count": 28,
+       "share_pct": 0.96
+      },
+      {
+       "country": "india",
+       "count": 10,
+       "share_pct": 0.34
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 103
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.024,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.027
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "immigration policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "immigration policy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "immigration and border control agencies",
+       "count": 139,
+       "share": 7.59,
+       "lift": 103.28,
+       "baseline_count": 6,
+       "previous_period_count": 144,
+       "delta_pct": -3.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "work visa categories (e.g., h-1b, l-1, tier 2)",
+       "count": 40,
+       "share": 2.18,
+       "lift": 178.33,
+       "baseline_count": 1,
+       "previous_period_count": 180,
+       "delta_pct": -77.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "/people & society/social issues & advocacy/immigration policy & migrant rights",
+       "count": 475,
+       "share": 25.94,
+       "lift": 40.72,
+       "baseline_count": 52,
+       "previous_period_count": 540,
+       "delta_pct": -12.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "deportation and removal defense strategies",
+       "count": 46,
+       "share": 2.51,
+       "lift": 102.54,
+       "baseline_count": 2,
+       "previous_period_count": 60,
+       "delta_pct": -23.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "skilled migration programs and criteria",
+       "count": 27,
+       "share": 1.47,
+       "lift": 120.37,
+       "baseline_count": 1,
+       "previous_period_count": 45,
+       "delta_pct": -40.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2903,
+     "carrying": 1831,
+     "carrier_share_pct": 63.07,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.031,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.036
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "immigration policy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "immigration policy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2ed632e540a46fb5754d1f",
+       "headline": "Winning numbers drawn in Wednesday’s Ohio Pick 4 Evening",
+       "url": "https://apnews.com/article/lotteries-3f56b703051242dba7aac22cc198c15f",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-30T01:15:29",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries virginia man gets life in prison for double murder scheme in affair with au pair fishermen prepared for the longest red snapper season in recent memory.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b20495cefb83fe87b1f27",
+       "headline": "Winning numbers drawn in Wednesday’s Ohio Classic Lotto",
+       "url": "https://apnews.com/article/lotteries-855881c1fb9149a0b6d0e3738246c600",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-30T01:15:29",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries fishermen prepared for the longest red snapper season in recent memory. a court order stopped it virginia man gets life in prison for double murder scheme",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed6c98e67a2fcb3de6621",
+       "headline": "Winning numbers drawn in Tuesday’s South Carolina Cash Pop",
+       "url": "https://apnews.com/article/lotteries-f90ebc1eae18463a8ec6ef3e5a71b704",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-29T00:25:21",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries virginia man gets life in prison for double murder scheme in affair with au pair fishermen prepared for the longest red snapper season in recent memory.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6e41e3933a6dd8d9f2e",
+       "headline": "US now weighs Israel and Palestine views in green card decisions under Trump: Report - Türkiye Today",
+       "url": "https://www.turkiyetoday.com/world/us-now-weighs-israel-and-palestine-views-in-green-card-decisions-under-trump-report-3218960",
+       "publisher": "turkiyetoday.com",
+       "published_at": "2026-04-28T07:36:01",
+       "lede": "a shift in u.s. immigration policy is raising legal and political concerns after new internal guidance revealed that green card applicants could be denied permanent residency based on their views on israel and palestine. according to documents reviewed by the new york times, the administration of u.s. president donald trump",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 156,
+         "path": "/Law & Government/Government/Visa & Immigration",
+         "score": 0.78
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2b275b963d76f4af485db7",
+       "headline": "Cleveland, Toronto tied 2-2 heading to game 5",
+       "url": "https://apnews.com/article/toronto-raptors-cleveland-cavaliers-donovan-mitchell-nba-playoffs-3b9ebff71add49369cf4046855742173",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-28T06:03:10",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries virginia man gets life in prison for double murder scheme in affair with au pair fishermen prepared for the longest red snapper season in recent memory.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c7b21e3933a6dd8e29b5",
+       "headline": "Glaude: Trump Believes This Country 'Must Always Remain a White Republic'",
+       "url": "https://www.breitbart.com/clips/2026/04/27/glaude-trump-believes-this-country-must-always-remain-a-white-republic/",
+       "publisher": "breitbart.com",
+       "published_at": "2026-04-28T02:10:54",
+       "lede": "monday on ms now’s “deadline,” princeton university professor and network contributor eddie glaude, jr. claimed president donald trump’s executive orders on immigration policy showed he believed the united states “must always remain a white republic.” discussing a federal appeals court blocking trump’s 2025 executive order that ended asylum access at",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.83
+        },
+        {
+         "code": 156,
+         "path": "/Law & Government/Government/Visa & Immigration",
+         "score": 0.54
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "princeton university"
+       ],
+       "people": [
+        "donald trump",
+        "eddie glaude"
+       ]
+      },
+      {
+       "id": "6a2b26845cefb83fe87ff31b",
+       "headline": "Winning numbers drawn in Sunday’s Maryland Cash Pop",
+       "url": "https://apnews.com/article/lotteries-6080976f40ae4da5a91569ed4c9c1d51",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-27T09:20:48",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries virginia man gets life in prison for double murder scheme in affair with au pair fishermen prepared for the longest red snapper season in recent memory.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed6a583fc01faba4fe05c",
+       "headline": "Winning numbers drawn in Sunday’s Illinois Lucky Day Lotto (Evening)",
+       "url": "https://apnews.com/article/lotteries-a3b7fc889c1d40298c24de61bac7e88c",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-27T08:20:35",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries virginia man gets life in prison for double murder scheme in affair with au pair fishermen prepared for the longest red snapper season in recent memory.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed13983fc01faba4a35fc",
+       "headline": "Winning numbers drawn in Saturday’s Washington Match 4",
+       "url": "https://apnews.com/article/lotteries-faa2825f43764fbbb38b2a0fd8919c81",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-26T04:40:39",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries fishermen prepared for the longest red snapper season in recent memory. a court order stopped it virginia man gets life in prison for double murder scheme",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2577c37f6c5e6639c0c3",
+       "headline": "Winning numbers drawn in Saturday’s Arkansas Cash 4 Evening",
+       "url": "https://apnews.com/article/lotteries-406ffceb40154959b054548a3ca36917",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-26T01:20:14",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries virginia man gets life in prison for double murder scheme in affair with au pair fishermen prepared for the longest red snapper season in recent memory.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2122963d76f4af4387cd",
+       "headline": "Winning numbers drawn in Saturday’s Tennessee Cash 4",
+       "url": "https://apnews.com/article/lotteries-600e1a08d9494da1b79dfd2b7653ad97",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-26T01:20:14",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries fishermen prepared for the longest red snapper season in recent memory. a court order stopped it virginia man gets life in prison for double murder scheme",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69eaf63118d3f7bd7a4bd74f",
+       "headline": "Police chief: Austin could lose up to $20M in fight with Abbott over ICE policy",
+       "url": "https://www.statesman.com/news/local/article/austin-police-chief-abbott-ice-policy-22220524.php",
+       "publisher": "statesman.com",
+       "published_at": "2026-04-23T10:00:00",
+       "lede": "austin police chief lisa davis said wednesday she is optimistic city leaders can reach a compromise with gov. greg abbott over a contentious immigration policy, even as austin risks losing millions in state funding. by thursday evening, as a state-imposed deadline approached, the two sides agreed to spend more time",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 23,
+         "path": "/Law & Government/Public Safety/Law Enforcement",
+         "score": 0.74
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "abbott"
+       ],
+       "people": [
+        "greg abbott"
+       ]
+      },
+      {
+       "id": "6a2ed1fe8e67a2fcb3d971b3",
+       "headline": "Winning numbers drawn in Wednesday’s Florida Fantasy 5 Evening",
+       "url": "https://apnews.com/article/lotteries-7cdee1ca36424a50abadf17c68d166f0",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-23T04:45:12",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries fishermen prepared for the longest red snapper season in recent memory. a court order stopped it virginia man gets life in prison for double murder scheme",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b2952963d76f4af49f1a4",
+       "headline": "Winning numbers drawn in Wednesday’s New Jersey Pick 3 Evening",
+       "url": "https://apnews.com/article/lotteries-cb227c14a5a945909e970807ecec7b6c",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-23T03:50:37",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries virginia man gets life in prison for double murder scheme in affair with au pair fishermen prepared for the longest red snapper season in recent memory.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed1c0e540a46fb570a0f8",
+       "headline": "Winning numbers drawn in Tuesday’s Michigan Daily 3 Evening",
+       "url": "https://apnews.com/article/winning-numbers-data-skrive-b2a1bdfd475c4e928dabb2b9b1959b3d",
+       "publisher": "apnews.com",
+       "published_at": "2026-04-22T02:20:07",
+       "lede": "u.s. sections immigration weather education transportation abortion lgbtq+ notable deaths top stories a federal judge strikes down trump administration immigration policy affecting 39 countries fishermen prepared for the longest red snapper season in recent memory. a court order stopped it virginia man gets life in prison for double murder scheme",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 747,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAwMToyMDoyMSIsImkiOiI2YTJiMjdhZDk2M2Q3NmY0YWY0ODlmMGEiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.532,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.535
+    }
+   }
+  }
+ ]
+}

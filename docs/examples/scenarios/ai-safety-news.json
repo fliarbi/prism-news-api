@@ -1,0 +1,874 @@
+{
+ "slug": "ai-safety-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:55Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "AI safety",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai safety",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 680,
+     "tone": {
+      "carrying": 679,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 264,
+        "share_pct": 38.88
+       },
+       {
+        "group": "neutral",
+        "count": 1,
+        "share_pct": 0.15
+       },
+       {
+        "group": "positive",
+        "count": 414,
+        "share_pct": 60.97
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 680,
+      "count": 604,
+      "share_pct": 88.82
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.078,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.085
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "AI safety",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ai safety",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 70,
+       "critical": 58,
+       "critical_pct": 82.9,
+       "negative": 28,
+       "positive": 42,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 57,
+       "critical": 45,
+       "critical_pct": 78.9,
+       "negative": 13,
+       "positive": 44,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 62,
+       "critical": 44,
+       "critical_pct": 71.0,
+       "negative": 25,
+       "positive": 37,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 96,
+       "critical": 63,
+       "critical_pct": 65.6,
+       "negative": 24,
+       "positive": 71,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 102,
+       "critical": 90,
+       "critical_pct": 88.2,
+       "negative": 28,
+       "positive": 73,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 134,
+       "critical": 112,
+       "critical_pct": 83.6,
+       "negative": 17,
+       "positive": 117,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 99,
+       "critical": 85,
+       "critical_pct": 85.9,
+       "negative": 18,
+       "positive": 81,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 148,
+       "critical": 127,
+       "critical_pct": 85.8,
+       "negative": 31,
+       "positive": 115,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 86,
+       "critical": 74,
+       "critical_pct": 86.0,
+       "negative": 23,
+       "positive": 63,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 314,
+       "critical": 274,
+       "critical_pct": 87.3,
+       "negative": 125,
+       "positive": 188,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 129,
+       "critical": 117,
+       "critical_pct": 90.7,
+       "negative": 60,
+       "positive": 69,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 151,
+       "critical": 139,
+       "critical_pct": 92.1,
+       "negative": 56,
+       "positive": 94,
+       "partial_period": false
+      }
+     ],
+     "total": 1448,
+     "critical_total": 1228,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.611,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.628
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "AI safety",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai safety",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 680,
+     "carrying": 318,
+     "availability_pct": 46.76,
+     "items": [
+      {
+       "country": "united states",
+       "count": 144,
+       "share_pct": 21.18
+      },
+      {
+       "country": "india",
+       "count": 52,
+       "share_pct": 7.65
+      },
+      {
+       "country": "united kingdom",
+       "count": 35,
+       "share_pct": 5.15
+      },
+      {
+       "country": "australia",
+       "count": 19,
+       "share_pct": 2.79
+      },
+      {
+       "country": "canada",
+       "count": 16,
+       "share_pct": 2.35
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 52
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.511,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.514
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "AI safety",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ai safety",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "cybersecurity protocols for defense infrastructure",
+       "count": 21,
+       "share": 5.11,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1,
+       "delta_pct": 2000.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "ethical considerations in ai development",
+       "count": 141,
+       "share": 34.31,
+       "lift": 87.51,
+       "baseline_count": 32,
+       "previous_period_count": 126,
+       "delta_pct": 11.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "artificial intelligence advancements",
+       "count": 96,
+       "share": 23.36,
+       "lift": 79.45,
+       "baseline_count": 24,
+       "previous_period_count": 88,
+       "delta_pct": 9.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "explainable ai (xai) techniques",
+       "count": 13,
+       "share": 3.16,
+       "lift": 129.1,
+       "baseline_count": 2,
+       "previous_period_count": 1,
+       "delta_pct": 1200.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "ai in cybersecurity applications",
+       "count": 26,
+       "share": 6.33,
+       "lift": 86.07,
+       "baseline_count": 6,
+       "previous_period_count": 16,
+       "delta_pct": 62.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 680,
+     "carrying": 411,
+     "carrier_share_pct": 60.44,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.021,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.024
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "AI safety",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ai safety",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f8ac088937ef12fc0b1f24",
+       "headline": "Vibe coding killed PocketOS’s database, not the AI - TechCentral.ie",
+       "url": "https://www.techcentral.ie/vibe-coding-killed-pocketoss-database-not-the-ai/",
+       "publisher": "techcentral.ie",
+       "published_at": "2026-04-30T13:40:19",
+       "lede": "vibe coding killed pocketos’s database, not the ai marie boran asks which bit of 'human in the loop' is so hard for companies to grasp blogs the most viral response to last week’s pocketos database disaster was not from a technology commentator or an ai safety researcher. it was a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d9c27b2d589e844e9355",
+       "headline": "Musk recalls meeting Sam Altman.",
+       "url": "https://www.theverge.com/tech/919961/musk-recalls-meeting-sam-altman",
+       "publisher": "theverge.com",
+       "published_at": "2026-04-28T19:47:35",
+       "lede": "musk says altman, then at y combinator, was “not well known at that time” — but he agreed with musk on ai safety, which was very important. he reiterates that, by contrast, larry page called musk a “species-ist” for being concerned about humans being wiped out by ai. “openai exists",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a7d1f72b283e666362a6133",
+       "headline": "Amazon $25 Billion Anthropic Investment: AI Cloud Partnership",
+       "url": "https://savedelete.com/article/amazon-commits-25-billion-to-anthropic-in-landmark-ai-investment-deal/",
+       "publisher": "savedelete.com",
+       "published_at": "2026-04-21T02:16:46",
+       "lede": "amazon has deepened its bet on ai safety and capability by committing a total of $25 billion to anthropic, the ai safety company behind the claude family of models. the deal represents one of the largest corporate ai investments ever made and cements a strategic cloud partnership between the two",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 101,
+         "path": "/Internet & Telecom/Web Services/Cloud Storage",
+         "score": 0.54
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d156f74a6cba658b2408b1",
+       "headline": "Anthropic Security Lapses: Startling Leaks Expose Claude Code Blueprint and Internal Files",
+       "url": "https://bitcoinworld.co.in/anthropic-security-lapses-claude-code-leak/",
+       "publisher": "bitcoinworld.co.in",
+       "published_at": "2026-04-01T00:15:12",
+       "lede": "san francisco, ca – april 30, 2025 – anthropic, the artificial intelligence firm renowned for its meticulous approach to ai safety, confronts a significant reputational challenge following two separate, high-profile security oversights within a single week. these incidents exposed thousands of internal documents and the core architectural blueprint for its",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.51
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf66ead8b3a4e648c718d2",
+       "headline": "AI could lead to human extinction in just 5 years, warns ex-OpenAI researcher",
+       "url": "https://www.financialexpress.com/life/technology-ai-could-lead-to-human-extinction-in-just-5-years-warns-ex-openai-researcher-4188103/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-03-29T11:37:25",
+       "lede": "a former openai researcher has warned that rapid advances in artificial intelligence could pose an existential threat to humanity as soon as within the next five years, especially if safety measures fail to keep pace with development. daniel kokotajlo, who previously worked on ai safety at openai before becoming a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.87
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "openai"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a81c45cefb83fe80ddb1e",
+       "headline": "OpenAI $1B foundation plan targets AI safety, jobs, and health | ETIH EdTech News — EdTech Innovation Hub",
+       "url": "https://www.edtechinnovationhub.com/news/openai-outlines-1b-foundation-investment-strategy-with-focus-on-ai-safety-jobs-and-health",
+       "publisher": "edtechinnovationhub.com",
+       "published_at": "2026-03-27T01:00:04",
+       "lede": "openai has set out how its newly recapitalized foundation will deploy funding, with at least $1 billion expected to be invested over the next year across health, workforce, and ai safety initiatives. the update signals how ai development is increasingly being tied to public interest outcomes, including education, skills development,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd1347ef280d4636ac524",
+       "headline": "ISB, Punjab Police and CyberPeace Launch India’s Premier Cybersecurity & AI Safety Hackathon 2026",
+       "url": "https://cxotoday.com/media-coverage/isb-punjab-police-and-cyberpeace-launch-indias-premier-cybersecurity-ai-safety-hackathon-2026/",
+       "publisher": "cxotoday.com",
+       "published_at": "2026-03-13T10:49:10",
+       "lede": "the indian school of business (isb), through its institute of data science (iids), in collaboration with the punjab police state cyber crime division and the cyberpeace has announced the launch of the national hackathon on cybersecurity & ai safety 2026 — a major national initiative to strengthen india’s capabilities in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.26,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.5
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "indian school of business"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a9168963d76f4afdf54bd",
+       "headline": "The case for AI safety capacity-building work\n — EA Forum",
+       "url": "https://forum.effectivealtruism.org/posts/rAqKSSXankvys2Fzu/the-case-for-ai-safety-capacity-building-work",
+       "publisher": "forum.effectivealtruism.org",
+       "published_at": "2026-03-10T02:43:38",
+       "lede": "rachel got into effective altruism in high school through friends, and started a group at her university. she spent some time interning running retreats and ended-up helping with future forum, a futurism conference that required a last-minute venue switch. she took a semester off to study ai safety, but decided",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.23,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc87b7a3b9608a9aedcc0d",
+       "headline": "OpenAI partners with US Department of War for AI deployment in classified networks after Anthropic’s Dario Amodei says ‘No’",
+       "url": "https://www.financialexpress.com/life/technology-openai-partners-with-us-department-of-war-for-ai-deployment-in-classified-networks-after-anthropics-dario-amodei-says-no-4157609/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-02-28T07:02:52",
+       "lede": "openai ceo sam altman revealed today that the company has reached an agreement with the us department of war (dow) to integrate its advanced ai models into the department’s classified networks. the announcement, made via a post on x (formerly twitter), highlights a shared commitment to ai safety and ethical",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.66
+        },
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "openai"
+       ],
+       "people": [
+        "sam altman"
+       ]
+      },
+      {
+       "id": "6a0eaceac0b414d24a10e166",
+       "headline": "Rattled Pentagon Goon Melts Down on X After Snub by AI Company",
+       "url": "https://www.thedailybeast.com/rattled-pentagon-goon-melts-down-on-x-after-snub-by-ai-company/",
+       "publisher": "thedailybeast.com",
+       "published_at": "2026-02-27T10:59:11",
+       "lede": "a top pentagon official lost his cool with an ai company in full public view after it refused to bow to the demands of the so-called “war department.” undersecretary of defense emil michael’s very public meltdown was in response to fraught discussions with the ai safety and research company anthropic.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a903dc37f6c5e66cfdf33",
+       "headline": "OpenAI and Microsoft boost UK AI Alignment Project amid questions over digital sovereignty - Capacity",
+       "url": "https://capacityglobal.com/news/openai-microsoft-boost-uk-alignment-project/",
+       "publisher": "capacityglobal.com",
+       "published_at": "2026-02-20T11:15:30",
+       "lede": "the announcement comes as the uk positions itself as a global leader in ai safety research. openai is contributing approximately £5.6 million, with microsoft adding further support, lifting the total funding for the project to over £27 million. that pool already supports 60 projects across eight countries, with a second",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.61
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.5
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9b833a5dd771f46a4b32f",
+       "headline": "OpenAI and Microsoft pledge millions to fund UK's AI Security Institute - UKTN",
+       "url": "https://www.uktech.news/ai/openai-and-microsoft-pledge-millions-to-fund-uks-ai-security-institute-20260220",
+       "publisher": "uktech.news",
+       "published_at": "2026-02-20T09:26:25",
+       "lede": "openai and microsoft have pledged to provide millions in new funding to the uk government’s ai security institute in support of its ai alignment project.the project is a flagship programme run by the institute that aims to coordinate internationally to establish global standards for ai safety, ensuring the most advanced",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.87,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.59
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "microsoft",
+        "openai"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bd7ba54124545086214a41",
+       "headline": "AI Impact Summit: India gears up for global dialogue on artificial intelligence and why this matters",
+       "url": "https://www.newindianexpress.com/business/2026/Feb/15/ai-impact-summit-india-gears-up-for-global-dialogue-on-artificial-intelligence-and-why-this-matters",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-02-15T10:34:08",
+       "lede": "why this summit matters?while earlier global gatherings - including the uk's ai safety summit at bletchley park (2023), the seoul summit (2024), and the paris meet (2025) - placed significant emphasis on frontier risks, safety guardrails and voluntary commitments, india is widening the lens to foreground ai's developmental impact and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.61
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.58
+        }
+       ],
+       "country": "france",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbcf86b7032a7d5ce3280e",
+       "headline": "Anthropic researcher Sharma quits, says world is in peril - The Tribune",
+       "url": "https://www.tribuneindia.com/news/top-headlines/anthropic-researcher-sharma-quits-says-world-is-in-peril/",
+       "publisher": "tribuneindia.com",
+       "published_at": "2026-02-10T21:21:22",
+       "lede": "mrinank sharma, indian-ogirin ai safety researcher, resigned from anthropic, arguing the world is in peril, not just from ai, but a “whole series of interconnected crises”advertisementhis exit sets the stage for ai impact summit 2026, scheduled to take place in new delhi from february 16-20, where global leaders will confront",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.62
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 67,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xMCAyMToyMToyMiIsImkiOiI2OWJhZTQyMDVlMDVmNWU3ZGI3ZmZhMWEiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.536,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.538
+    }
+   }
+  }
+ ]
+}

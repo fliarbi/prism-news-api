@@ -1,0 +1,918 @@
+{
+ "slug": "typhoid-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:30Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "typhoid",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "typhoid",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 342,
+     "tone": {
+      "carrying": 342,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 200,
+        "share_pct": 58.48
+       },
+       {
+        "group": "neutral",
+        "count": 7,
+        "share_pct": 2.05
+       },
+       {
+        "group": "positive",
+        "count": 135,
+        "share_pct": 39.47
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 341,
+      "count": 251,
+      "share_pct": 73.61
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.901,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.903
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "typhoid",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "typhoid",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 64,
+       "critical": 43,
+       "critical_pct": 67.2,
+       "negative": 36,
+       "positive": 28,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 68,
+       "critical": 43,
+       "critical_pct": 63.2,
+       "negative": 43,
+       "positive": 25,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 104,
+       "critical": 57,
+       "critical_pct": 54.8,
+       "negative": 53,
+       "positive": 50,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 138,
+       "critical": 85,
+       "critical_pct": 61.6,
+       "negative": 77,
+       "positive": 55,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 129,
+       "critical": 101,
+       "critical_pct": 78.3,
+       "negative": 78,
+       "positive": 47,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 95,
+       "critical": 74,
+       "critical_pct": 77.9,
+       "negative": 46,
+       "positive": 47,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 78,
+       "critical": 56,
+       "critical_pct": 71.8,
+       "negative": 34,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 73,
+       "critical": 54,
+       "critical_pct": 74.0,
+       "negative": 27,
+       "positive": 45,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 122,
+       "critical": 100,
+       "critical_pct": 82.0,
+       "negative": 82,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 79,
+       "critical": 58,
+       "critical_pct": 73.4,
+       "negative": 45,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 71,
+       "critical": 43,
+       "critical_pct": 60.6,
+       "negative": 29,
+       "positive": 40,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 70,
+       "critical": 50,
+       "critical_pct": 71.4,
+       "negative": 44,
+       "positive": 23,
+       "partial_period": false
+      }
+     ],
+     "total": 1091,
+     "critical_total": 764,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.874,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.876
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "typhoid",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "typhoid",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 342,
+     "carrying": 172,
+     "availability_pct": 50.29,
+     "items": [
+      {
+       "country": "india",
+       "count": 89,
+       "share_pct": 26.02
+      },
+      {
+       "country": "united states",
+       "count": 26,
+       "share_pct": 7.6
+      },
+      {
+       "country": "tonga",
+       "count": 10,
+       "share_pct": 2.92
+      },
+      {
+       "country": "ghana",
+       "count": 8,
+       "share_pct": 2.34
+      },
+      {
+       "country": "united kingdom",
+       "count": 7,
+       "share_pct": 2.05
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 32
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.266,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.269
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "typhoid",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "typhoid",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "community-acquired infections",
+       "count": 27,
+       "share": 12.68,
+       "lift": 1034.75,
+       "baseline_count": 1,
+       "previous_period_count": 9,
+       "delta_pct": 200.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "community health initiatives",
+       "count": 17,
+       "share": 7.98,
+       "lift": 651.51,
+       "baseline_count": 1,
+       "previous_period_count": 8,
+       "delta_pct": 112.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "antimicrobial stewardship programs",
+       "count": 17,
+       "share": 7.98,
+       "lift": 651.51,
+       "baseline_count": 1,
+       "previous_period_count": 13,
+       "delta_pct": 30.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "diagnosis of atypical pathogens",
+       "count": 13,
+       "share": 6.1,
+       "lift": 498.21,
+       "baseline_count": 1,
+       "previous_period_count": 7,
+       "delta_pct": 85.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "sanitation and hygiene initiatives",
+       "count": 26,
+       "share": 12.21,
+       "lift": 332.14,
+       "baseline_count": 3,
+       "previous_period_count": 14,
+       "delta_pct": 85.7,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 342,
+     "carrying": 213,
+     "carrier_share_pct": 62.28,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.345,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.348
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "typhoid",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "typhoid",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e846fa9baafc73566b4134",
+       "headline": "Essential Medicine Prices Soar in Pakistan, Insulin Costs Double",
+       "url": "https://www.newkerala.com/news/a/essential-medicines-become-costlier-pakistan-doctors-warn-health-620.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-14T16:02:01",
+       "lede": "the prices of seven essential medicines have risen sharply in pakistan's khyber-pakhtunkhwa province, with insulin more than doubling in cost. other critical drugs for thyroid disorders, typhoid, and vitamin deficiencies have also seen significant price hikes. healthcare professionals warn that patients, especially from low-income families, may skip doses or seek",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.71
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.59
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e27fe4601121844c2fac7d",
+       "headline": "Drug-resistant typhoid drives 87% of India’s disease costs, children suffer most",
+       "url": "https://www.theweek.in/news/health/2026/04/01/drug-resistant-typhoid-drives-87-of-indias-disease-costs-children-suffer-most.html",
+       "publisher": "theweek.in",
+       "published_at": "2026-04-01T12:04:43",
+       "lede": "drug-resistant typhoid infections are emerging as a major public health and economic crisis in india, disproportionately affecting children and placing an overwhelming financial burden on households. at a time when antimicrobial resistance (amr) is becoming a global concern, india's struggle with typhoid highlights how rising drug resistance is not just",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.65
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "amr"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d1d098f71c44e12fd0c028",
+       "headline": "Thyrocare Technologies data shows one in three fever cases linked to infections in India - Express Healthcare",
+       "url": "https://www.expresshealthcare.in/news/thyrocare-technologies-data-shows-one-in-three-fever-cases-linked-to-infections-in-india/453209/",
+       "publisher": "expresshealthcare.in",
+       "published_at": "2026-03-31T06:16:36",
+       "lede": "thyrocare technologies has released data on fever cases in india based on testing conducted between 2023 and 2025. the analysis includes 108,324 individuals who underwent comprehensive fever package testing across the country. the findings show that nearly one in three individuals tested were diagnosed with infections including dengue, typhoid, malaria,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.67
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.59
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.45
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "thyrocare"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a945dc37f6c5e66d2c093",
+       "headline": "Antibiotic resistance fuels 87% of India's typhoid economic burden: Study",
+       "url": "https://health.economictimes.indiatimes.com/news/industry/antibiotic-resistance-fuels-87-per-cent-of-indias-typhoid-economic-burden-study/129796656",
+       "publisher": "health.economictimes.indiatimes.com",
+       "published_at": "2026-03-25T14:55:32",
+       "lede": "new delhi: antibiotic-resistant typhoid infections accounted for at least 87 per cent of india's disease-related economic burden in 2023, according to a study in the lancet regional health southeast asia.the total economic burden due to typhoid fever was estimated at rs 123 billion.children under the age of 10 incurred the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf640ea97d620e783e5118",
+       "headline": "Antibiotic resistance fuels 87% of India's typhoid economic burden: Study",
+       "url": "https://www.thehindu.com/sci-tech/health/antibiotic-resistance-fuels-87-of-indias-typhoid-economic-burden-study/article70783483.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-03-25T11:39:59",
+       "lede": "antibiotic-resistant typhoid infections accounted for at least 87% of india's disease-related economic burden in 2023, according to a study in the lancet regional health southeast asia. the total economic burden due to typhoid fever was estimated at ₹123 billion. children under the age of 10 incurred the highest economic burden,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.6
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c44096fdc6f6629da057dd",
+       "headline": "Antibiotic resistance fuels 87 per cent of India's typhoid economic burden: Study",
+       "url": "https://www.dailyexcelsior.com/antibiotic-resistance-fuels-87-per-cent-of-indias-typhoid-economic-burden-study/",
+       "publisher": "dailyexcelsior.com",
+       "published_at": "2026-03-25T10:02:26",
+       "lede": "new delhi, mar 25: antibiotic-resistant typhoid infections accounted for at least 87 per cent of india’s disease-related economic burden in 2023, according to a study in the lancet regional health southeast asia.the total economic burden due to typhoid fever was estimated at rs 123 billion.children under the age of 10",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.59
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd23c2c2570848d94bd78",
+       "headline": "Florence Nightingale Never Visited India, but Changed How Millions Lived and Died Here",
+       "url": "https://www.timesnownews.com/lifestyle/people/florence-nightingale-never-visited-india-but-changed-how-millions-lived-and-died-here-article-153791946",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-03-10T07:30:00",
+       "lede": "in 1859, sixty-nine out of every thousand british soldiers stationed in india died each year. not in battle. not in skirmishes on the frontier. they died of cholera, dysentery, and typhoid, killed by the water they drank, the barracks they slept in, and the drains that festered beneath them. from",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 51,
+         "path": "/Reference/Humanities/History",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e44dbbf10c43d2968915b",
+       "headline": "Typhoid is becoming more antibiotic-resistant and spreading across the world",
+       "url": "https://www.yahoo.com/news/articles/typhoid-becoming-more-antibiotic-resistant-232641566.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-26T23:26:41",
+       "lede": "typhoid fever, an illness that has been controlled in developed countries since the early 20th century, is evolving to be antibiotic-resistant. research published in 2022 shows that typhoid is becoming more antibiotic-resistant and those strains are spreading worldwide. typhoid is caused by a bacterium called salmonella enterica serovar typhi (s.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.87
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9b13e540a46fb53e2d80",
+       "headline": "Ancient Killer Is Rapidly Gaining Resistance to Antibiotics, Scientists Warn",
+       "url": "https://www.yahoo.com/news/articles/ancient-killer-rapidly-gaining-resistance-201211059.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-25T20:12:11",
+       "lede": "despite having plagued humans for millennia, typhoid fever is rarely considered a threat in developed countries today. but this ancient killer is still very much a danger in our modern world. research published in 2022 revealed the bacterium that causes typhoid fever is evolving extensive drug resistance, and is rapidly",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.87
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9d7fe1f37db756888e5f5",
+       "headline": "Ancient Killer Is Rapidly Gaining Resistance to Antibiotics, Scientists Warn",
+       "url": "https://www.sciencealert.com/ancient-killer-is-rapidly-gaining-resistance-to-antibiotics-scientists-warn",
+       "publisher": "sciencealert.com",
+       "published_at": "2026-02-25T20:12:11",
+       "lede": "despite having plagued humans for millennia, typhoid fever is rarely considered a threat in developed countries today. but this ancient killer is still very much a danger in our modern world.research published in 2022 revealed the bacterium that causes typhoid fever is evolving extensive drug resistance, and is rapidly replacing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.86
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5f91c37f6c5e66b05fdd",
+       "headline": "Water Contamination causes health issues in North India",
+       "url": "https://solinas.in/of-rising-typhoid-diarrhoea-numbers-in-north-india-pipeline-health/",
+       "publisher": "solinas.in",
+       "published_at": "2026-02-11T07:15:34",
+       "lede": "alarming numbers show a trend? rising cases of acute diarrhoea, typhoid & other diseases across northern india are renewing concerns about the safety of drinking water and the condition of the infrastructure that delivers it. recent health data from punjab, haryana, and himachal pradesh shows that thousands of people continue",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.71
+        },
+        {
+         "code": 84,
+         "path": "/Business & Industrial/Energy & Utilities/Other",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69865447fdcc616c15de7a4c",
+       "headline": "A 21st Century Take on Typhoid",
+       "url": "http://www.sabin.org/resources/a-21st-century-take-on-typhoid/",
+       "publisher": "sabin.org",
+       "published_at": "2026-01-29T22:00:47",
+       "lede": "typhoid fever is a life-threatening infection that the world health organization estimates affects 9 million people each year, mostly in places with no access to sanitation to destroy the salmonella enterica serotype typhi bacteria that causes it. although it can be treated with antibiotics, more than 100,000 die of typhoid",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.71
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69654ecfcd0254b652fcfb42",
+       "headline": "7 Early Signs And Symptoms Of Typhoid",
+       "url": "https://www.ndtv.com/health/7-early-signs-and-symptoms-of-typhoid-10564708",
+       "publisher": "ndtv.com",
+       "published_at": "2026-01-09T09:30:01",
+       "lede": "as india grapples with renewed public health challenges in early 2026, enteric fever, commonly known as typhoid, has re-emerged as a significant public health concern. there is an alarming typhoid fever outbreak in cities across india right now. in cities like gandhinagar, greater noida, and hyderabad, contaminated drinking water is",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.89
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bb56f29153720f4d730a14",
+       "headline": "Typhoid explained: How Salmonella Typhi spreads and why children are most vulnerable",
+       "url": "https://www.theweek.in/news/health/2026/01/09/typhoid-explained-how-salmonella-typhi-spreads-and-why-children-are-most-vulnerable.html",
+       "publisher": "theweek.in",
+       "published_at": "2026-01-09T07:00:13",
+       "lede": "typhoid, a life-threatening but preventable infection, remains a serious public health challenge, silently affecting millions every year and disproportionately hospitalising children. in india, nearly 47 lakh typhoid cases were recorded in 2023, with about 7,400 reported deaths. in fact, the current situation in gandhinagar, gujarat, has once again drawn attention",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.84
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.54
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6996ca8233af8f1ff8a16228",
+       "headline": "NHRC Notice: Gujarat Typhoid Outbreak Report Sought",
+       "url": "https://www.deccanherald.com/india/gujarat/nhrc-issues-notice-to-gujarat-govt-over-typhoid-outbreak-seeks-detailed-report-in-two-weeks-3855612",
+       "publisher": "deccanherald.com",
+       "published_at": "2026-01-08T13:35:13",
+       "lede": "&lt;p&gt;ahmedabad: days after typhoid breakout in &lt;a href=\"https://www.deccanherald.com/india/gujarat\"&gt;gujarat&lt;/a&gt;'s capital city gandhinagar due to consumption of contaminated water, the national national human rights commission (&lt;a href=\"https://www.deccanherald.com/tags/nhrc\"&gt;nhrc&lt;/a&gt;) on thursday took suo motu cognizance of the case and has sought a report from the state government in two weeks.&lt;/p&gt;&lt;p&gt;quoting a media report, the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.28,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 105,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMS0wOCAxMzozNToxMyIsImkiOiI2OTk2Y2E4MjMzYWY4ZjFmZjhhMTYyMjgiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.284,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.286
+    }
+   }
+  }
+ ]
+}

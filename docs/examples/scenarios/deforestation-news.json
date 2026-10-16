@@ -1,0 +1,869 @@
+{
+ "slug": "deforestation-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:57Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "deforestation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "deforestation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1863,
+     "tone": {
+      "carrying": 1854,
+      "availability_pct": 99.52,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 943,
+        "share_pct": 50.86
+       },
+       {
+        "group": "neutral",
+        "count": 37,
+        "share_pct": 2.0
+       },
+       {
+        "group": "positive",
+        "count": 874,
+        "share_pct": 47.14
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1861,
+      "count": 1529,
+      "share_pct": 82.16
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.787,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.789
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "deforestation",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "deforestation",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 821,
+       "critical": 619,
+       "critical_pct": 75.4,
+       "negative": 479,
+       "positive": 285,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 414,
+       "critical": 343,
+       "critical_pct": 82.9,
+       "negative": 241,
+       "positive": 167,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 564,
+       "critical": 413,
+       "critical_pct": 73.2,
+       "negative": 302,
+       "positive": 248,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 515,
+       "critical": 418,
+       "critical_pct": 81.2,
+       "negative": 282,
+       "positive": 210,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 572,
+       "critical": 484,
+       "critical_pct": 84.6,
+       "negative": 294,
+       "positive": 265,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 600,
+       "critical": 500,
+       "critical_pct": 83.3,
+       "negative": 373,
+       "positive": 216,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 918,
+       "critical": 786,
+       "critical_pct": 85.6,
+       "negative": 509,
+       "positive": 369,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 610,
+       "critical": 534,
+       "critical_pct": 87.5,
+       "negative": 376,
+       "positive": 220,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 403,
+       "critical": 346,
+       "critical_pct": 85.9,
+       "negative": 227,
+       "positive": 166,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 424,
+       "critical": 350,
+       "critical_pct": 82.5,
+       "negative": 192,
+       "positive": 224,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 433,
+       "critical": 366,
+       "critical_pct": 84.5,
+       "negative": 231,
+       "positive": 192,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 603,
+       "critical": 467,
+       "critical_pct": 77.4,
+       "negative": 293,
+       "positive": 292,
+       "partial_period": false
+      }
+     ],
+     "total": 6877,
+     "critical_total": 5626,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-11-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.949,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.952
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "deforestation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "deforestation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1863,
+     "carrying": 774,
+     "availability_pct": 41.55,
+     "items": [
+      {
+       "country": "united states",
+       "count": 155,
+       "share_pct": 8.32
+      },
+      {
+       "country": "brazil",
+       "count": 84,
+       "share_pct": 4.51
+      },
+      {
+       "country": "indonesia",
+       "count": 79,
+       "share_pct": 4.24
+      },
+      {
+       "country": "india",
+       "count": 78,
+       "share_pct": 4.19
+      },
+      {
+       "country": "afghanistan",
+       "count": 48,
+       "share_pct": 2.58
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 330
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.81,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.815
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "deforestation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "deforestation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "biodiversity conservation efforts",
+       "count": 617,
+       "share": 43.18,
+       "lift": 167.84,
+       "baseline_count": 21,
+       "previous_period_count": 948,
+       "delta_pct": -34.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "deforestation prevention campaigns",
+       "count": 608,
+       "share": 42.55,
+       "lift": 165.39,
+       "baseline_count": 21,
+       "previous_period_count": 928,
+       "delta_pct": -34.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "environmental policy and legislation",
+       "count": 151,
+       "share": 10.57,
+       "lift": 143.76,
+       "baseline_count": 6,
+       "previous_period_count": 165,
+       "delta_pct": -8.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forest carbon sequestration and climate change mitigation",
+       "count": 40,
+       "share": 2.8,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 76,
+       "delta_pct": -47.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "sustainable urban planning initiatives",
+       "count": 38,
+       "share": 2.66,
+       "lift": 217.07,
+       "baseline_count": 1,
+       "previous_period_count": 16,
+       "delta_pct": 137.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1863,
+     "carrying": 1429,
+     "carrier_share_pct": 76.7,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.076,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.078
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "deforestation",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "deforestation",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a5c6b963d76f4afbd2bff",
+       "headline": "Global forest loss slows but El NiÃ±o fires could threaten progress",
+       "url": "https://www.bbc.co.uk/news/articles/c78q5pygn66o",
+       "publisher": "bbc.co.uk",
+       "published_at": "2026-04-29T13:26:08",
+       "lede": "the loss of tropical rainforests slowed last year, new satellite data suggests, led by brazil's efforts to curb deforestation in the amazon. researchers estimate that nearly 43,000 sq km (17,000 sq miles) of old-growth tropical forests were lost globally in 2025 â about the size of denmark. while it is",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.84
+        },
+        {
+         "code": 288,
+         "path": "/Business & Industrial/Agriculture & Forestry/Forestry",
+         "score": 0.8
+        },
+        {
+         "code": 198,
+         "path": "/Science/Ecology & Environment/Other",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cfaf399b489398e2c376",
+       "headline": "Tropical forest loss eases after record year: researchers",
+       "url": "https://phys.org/news/2026-04-tropical-forest-loss-eases-year.html",
+       "publisher": "phys.org",
+       "published_at": "2026-04-29T08:10:01",
+       "lede": "this article has been reviewed according to science x's editorial process and policies . editors have highlighted the following attributes while ensuring the content's credibility: world map showing the main causes of deforestation for the period 2001-2024. the pace of tropical forest destruction slowed in 2025 after record losses the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.83
+        },
+        {
+         "code": 288,
+         "path": "/Business & Industrial/Agriculture & Forestry/Forestry",
+         "score": 0.77
+        }
+       ],
+       "country": "malaysia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a040fcd220687a966ae7af9",
+       "headline": "‘Encouraging’: Global rainforest loss slows in 2025 after record year",
+       "url": "http://www.aljazeera.com/news/2026/4/29/tropical-forest-loss-slows-in-2025-after-record-year-report",
+       "publisher": "aljazeera.com",
+       "published_at": "2026-04-29T07:48:31",
+       "lede": "the researchers credit the slowdown to policies implemented by brazil’s president lula da silva to curb deforestation. click here to share on social media the pace of tropical forest destruction eased last year from a record high but has remained at alarming levels, according to a new study that praises",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.82
+        },
+        {
+         "code": 288,
+         "path": "/Business & Industrial/Agriculture & Forestry/Forestry",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22efbc6105443aa5e5b28",
+       "headline": "‘Encouraging’: Global rainforest loss slows in 2025 after record year",
+       "url": "https://www.aljazeera.com/news/2026/4/29/tropical-forest-loss-slows-in-2025-after-record-year-report",
+       "publisher": "aljazeera.com",
+       "published_at": "2026-04-29T07:48:31",
+       "lede": "the researchers credit the slowdown to policies implemented by brazil’s president lula da silva to curb deforestation. click here to share on social media the pace of tropical forest destruction eased last year from a record high but has remained at alarming levels, according to a new study that praises",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.82
+        },
+        {
+         "code": 288,
+         "path": "/Business & Industrial/Agriculture & Forestry/Forestry",
+         "score": 0.75
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa7e5963d76f4afee4c3b",
+       "headline": "El futuro de los bosques de todo el mundo se juega en Europa: así es su papel clave para frenar la deforestación",
+       "url": "https://www.elespanol.com/enclave-ods/historias/20260413/futuro-bosques-mundo-juega-europa-papel-clave-frenar-deforestacion/1003744202499_0.html",
+       "publisher": "elespanol.com",
+       "published_at": "2026-04-12T23:08:01",
+       "lede": "the planet’s forest mass is being reduced to leaps and bounds. an average of 10.9 million hectares of forest have been lost annually in the last decade, according to data from the food and agriculture organization of the united nations (fao). this is a phenomenon, deforestation, which worsens with each",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 288,
+         "path": "/Business & Industrial/Agriculture & Forestry/Forestry",
+         "score": 0.87
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.78
+        },
+        {
+         "code": 198,
+         "path": "/Science/Ecology & Environment/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c43ecb272ca905f401142e",
+       "headline": "Brasil encontrou rumo no combate ao desmatamento",
+       "url": "https://oglobo.globo.com/opiniao/editorial/coluna/2026/02/brasil-encontrou-rumo-no-combate-ao-desmatamento.ghtml",
+       "publisher": "oglobo.globo.com",
+       "published_at": "2026-02-18T03:10:29",
+       "lede": "the decline of 11% in deforestation in the legal amazon in 2025 over the previous year, as determined by the national institute for space research (inpe), is a good sign. compared to 2022, the loss of vegetation fell by half. last year, the devastated area was estimated at 5,796 square",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.8
+        },
+        {
+         "code": 198,
+         "path": "/Science/Ecology & Environment/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986c531514cbd23b5c4d87a",
+       "headline": "Flood losses set to soar 1,000% in South-east Asia: insurance firm study",
+       "url": "https://www.businesstimes.com.sg/esg/flood-losses-set-soar-1000-south-east-asia-insurance-firm-study",
+       "publisher": "businesstimes.com.sg",
+       "published_at": "2026-01-29T10:24:56",
+       "lede": "scientists and analysts warn that deforestation, weak flood defences and lack of funding for disaster resilience heighten damagesthe year 2025 ended with three tropical cyclones, unleashing a wave of destruction from sri lanka (above) to indonesia, which caused at least us$20 billion in losses. photo: reuters[singapore] losses tied to floods",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.84
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.44
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2cc44277be6ed2da45943",
+       "headline": "The Amazon Loses the Equivalent of Six Football Fields Per Minute, WWF Warns",
+       "url": "https://colombiaone.com/2026/01/20/amazon-loses-six-football-fields-wwf/",
+       "publisher": "colombiaone.com",
+       "published_at": "2026-01-20T20:00:27",
+       "lede": "the amazon is losing the equivalent of six football fields per minute, according to wwf, as deforestation rises at an alarming rate. credit: omer bozkurt, cc by 2.0 / flickr the amazon, the largest tropical rainforest on the planet and one of the key ecosystems for global climate balance, continues",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.8
+        },
+        {
+         "code": 288,
+         "path": "/Business & Industrial/Agriculture & Forestry/Forestry",
+         "score": 0.78
+        },
+        {
+         "code": 198,
+         "path": "/Science/Ecology & Environment/Other",
+         "score": 0.52
+        }
+       ],
+       "country": "bolivia",
+       "organizations": [
+        "wwf"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0412b29c4aac093544d77a",
+       "headline": "Forest bump: Fewer trees being felled",
+       "url": "http://www.csmonitor.com/Editorials/the-monitors-view/2026/0430/Forest-bump-Fewer-trees-being-felled",
+       "publisher": "csmonitor.com",
+       "published_at": "2026-04-30T20:51:00",
+       "lede": "new data on global deforestation has the potential to infuse a breath of fresh air into conservation efforts and the world’s ongoing quest to balance environmental and economic priorities. findings released this week from the university of maryland’s global land analysis and discovery laboratory show that the rate of tree",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 288,
+         "path": "/Business & Industrial/Agriculture & Forestry/Forestry",
+         "score": 0.82
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.8
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2299fc6105443aa5d1e1b",
+       "headline": "Regenwald: Zerstörung ging 2025 um mehr als ein Drittel zurück",
+       "url": "https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/regenwald-zerstoerung-ging-2025-um-mehr-als-ein-drittel-zurueck-accg-200776585.html",
+       "publisher": "faz.net",
+       "published_at": "2026-04-29T09:05:37",
+       "lede": "tropical rainforests are part of global natural infrastructure.&nbsp; failures can directly affect costs, risks and returns in many industries. deforestation and fires contribute significantly to the human-made greenhouse gas emissions. with the disappearance of rainforests, the risks of extreme weather, crop failures, insurance and infrastructure damage and biodiversity loss are",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.77
+        },
+        {
+         "code": 288,
+         "path": "/Business & Industrial/Agriculture & Forestry/Forestry",
+         "score": 0.7
+        },
+        {
+         "code": 198,
+         "path": "/Science/Ecology & Environment/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cd4ea5706a322e120806",
+       "headline": "Une école pour les enfants qui souffrent en Haïti avec l'association Main dans la Main",
+       "url": "http://www.lindependant.fr/2026/04/27/une-ecole-pour-les-enfants-qui-souffrent-en-haiti-avec-lassociation-main-dans-la-main-13345552.php",
+       "publisher": "lindependant.fr",
+       "published_at": "2026-04-27T13:01:04",
+       "lede": "haiti alone concentrates all the evils that human beings can inflict on their fellow human beings. haiti is suffering the collapse of the abomination of slavery and the first black republic to be proclaimed, and is suffering the lightnings of three sustainable failures: ecological, economic and political. cyclones, deforestation, 60%",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e89445272de32e8c5640",
+       "headline": "US lawmakers urge EU not to water down deforestation law in review",
+       "url": "http://www.euronews.com/my-europe/2026/04/27/us-lawmakers-urge-eu-not-to-water-down-deforestation-law-ahead-of-review",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-27T12:51:49",
+       "lede": "a pair of us lawmakers has urged the european commission to stand firm against mounting pressure to dilute the european union’s anti-deforestation law, just days before the eu executive is due to review it, potentially revising the list of products covered.democratic representatives lloyd doggett and rashida tlaib called on the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.63
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "rashida tlaib"
+       ]
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 465,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAwOTo1NTo1OCIsImkiOiI2YTJlNDMzNWU2NTk0ZjdlYmFmNzM0MjUiLCJwIjo4fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.363,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.365
+    }
+   }
+  }
+ ]
+}

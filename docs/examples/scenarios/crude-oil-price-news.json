@@ -1,0 +1,976 @@
+{
+ "slug": "crude-oil-price-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:48Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "crude oil price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "crude oil price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 407,
+     "tone": {
+      "carrying": 407,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 367,
+        "share_pct": 90.17
+       },
+       {
+        "group": "neutral",
+        "count": 3,
+        "share_pct": 0.74
+       },
+       {
+        "group": "positive",
+        "count": 37,
+        "share_pct": 9.09
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 407,
+      "count": 213,
+      "share_pct": 52.33
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.438,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 4.455
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "crude oil price",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "crude oil price",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 30,
+       "critical": 9,
+       "critical_pct": 30.0,
+       "negative": 25,
+       "positive": 5,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 40,
+       "critical": 11,
+       "critical_pct": 27.5,
+       "negative": 32,
+       "positive": 8,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 33,
+       "critical": 4,
+       "critical_pct": 12.1,
+       "negative": 29,
+       "positive": 4,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 48,
+       "critical": 14,
+       "critical_pct": 29.2,
+       "negative": 39,
+       "positive": 9,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 29,
+       "critical": 5,
+       "critical_pct": 17.2,
+       "negative": 28,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 27,
+       "critical": 3,
+       "critical_pct": 11.1,
+       "negative": 20,
+       "positive": 7,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 25,
+       "critical": 1,
+       "critical_pct": 4.0,
+       "negative": 25,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 39,
+       "critical": 7,
+       "critical_pct": 17.9,
+       "negative": 34,
+       "positive": 3,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 38,
+       "critical": 4,
+       "critical_pct": 10.5,
+       "negative": 36,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 28,
+       "critical": 15,
+       "critical_pct": 53.6,
+       "negative": 26,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 172,
+       "critical": 104,
+       "critical_pct": 60.5,
+       "negative": 160,
+       "positive": 12,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 169,
+       "critical": 90,
+       "critical_pct": 53.3,
+       "negative": 145,
+       "positive": 21,
+       "partial_period": false
+      }
+     ],
+     "total": 678,
+     "critical_total": 267,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.501,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.504
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "crude oil price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "crude oil price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 407,
+     "carrying": 225,
+     "availability_pct": 55.28,
+     "items": [
+      {
+       "country": "united states",
+       "count": 138,
+       "share_pct": 33.91
+      },
+      {
+       "country": "iran",
+       "count": 34,
+       "share_pct": 8.35
+      },
+      {
+       "country": "india",
+       "count": 18,
+       "share_pct": 4.42
+      },
+      {
+       "country": "pakistan",
+       "count": 8,
+       "share_pct": 1.97
+      },
+      {
+       "country": "united kingdom",
+       "count": 6,
+       "share_pct": 1.47
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 21
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.021,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.025
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "crude oil price",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "crude oil price",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "crude oil refining methods",
+       "count": 39,
+       "share": 11.54,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 9,
+       "delta_pct": 333.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "petroleum distillation processes",
+       "count": 27,
+       "share": 7.99,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 8,
+       "delta_pct": 237.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "economic impact of oil exports",
+       "count": 68,
+       "share": 20.12,
+       "lift": 410.57,
+       "baseline_count": 4,
+       "previous_period_count": 2,
+       "delta_pct": 3300.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 36,
+       "share": 10.65,
+       "lift": 434.72,
+       "baseline_count": 2,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil and gas market trends",
+       "count": 193,
+       "share": 57.1,
+       "lift": 172.63,
+       "baseline_count": 27,
+       "previous_period_count": 19,
+       "delta_pct": 915.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 407,
+     "carrying": 338,
+     "carrier_share_pct": 83.05,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.06,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.063
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "crude oil price",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "crude oil price",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f22a66c6105443aa5d6461",
+       "headline": "Crude Oil Price Today - April 29: Brent Crude Crosses $111 Per Barrel; Check Latest Rates of WTI, Murban",
+       "url": "https://www.oneindia.com/india/crude-oil-price-today-april-29-brent-crude-crosses-111-per-barrel-check-latest-rates-of-wti-mu-8072617.html",
+       "publisher": "oneindia.com",
+       "published_at": "2026-04-29T04:42:58",
+       "lede": "crude oil price today: for the first time in three weeks, the price of the global oil price crossed $110 mark as the peace talks between us and iran have made little progress. nbsp;benchmark brent crude reached $111.25 a barrel, easing slightly after climbing nearly 3% in the previous session.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b6d67bb1410d4cb09a58",
+       "headline": "Crude Oil Price Today - April 13: Brent Crude Crosses $102 Per Barrel; Check Latest Rates of WTI, Indian Basket, Urals, Dubai Oil, Gasoline, Indian Basket",
+       "url": "https://www.oneindia.com/india/crude-oil-price-today-april-13-brent-crude-crosses-102-per-barrel-check-latest-rates-of-wti-in-8056165.html",
+       "publisher": "oneindia.com",
+       "published_at": "2026-04-13T03:47:14",
+       "lede": "crude oil price today: the fragile peace that the world had hoped for evaporated over the weekend as diplomatic efforts between washington and tehran collapsed. by monday morning, the global energy market felt the shockwaves, with oil prices aggressively breaching the $100 threshold.the catalyst for this surge was a definitive",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.96
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2868590d9a716b4b85c2a",
+       "headline": "These 6 stocks from NIFTY 100 stayed resilient despite the US-Iran war, rallied up to 12% in March",
+       "url": "https://upstox.com/news/market-news/stocks/these-6-stocks-from-nifty-100-stayed-resilient-despite-the-us-iran-war-rallied-up-to-12-in-march/article-191541/",
+       "publisher": "upstox.com",
+       "published_at": "2026-04-01T09:38:32",
+       "lede": "the nifty50 index fell over 11% in march, most in six years as us-iran war resulted into sharp rise in crude oil price, which jolted the investor sentiments. majority of the stocks witnessed sharp correction, down nearly 30% during the month. however, few stocks posted a resilient show and rallied",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd12331f507d553859ee7",
+       "headline": "नहीं सुधर रहा विदेशी निवेशकों का मूड... बाजार से निकाले ₹88000Cr, जानिए क्यों",
+       "url": "https://www.aajtak.in/business/news/story/us-iran-war-crude-price-impact-stock-market-fpi-selloff-88000-crore-rupee-tutc-dskc-2503723-2026-03-22",
+       "publisher": "aajtak.in",
+       "published_at": "2026-03-22T10:04:01",
+       "lede": "in the middle east, the fire in the war (middle east war) and oil prices (crude oil price) has sparked the world’s most countries. as the corrosion is moving, the oil crisis is also going deeper, leading to global tension extremes. in the beginning where senior leaders and military bases",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.69
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9d23c37f6c5e66d8662a",
+       "headline": "Crude Oil Price is Down 8%, Now Trading at $83 After Soaring Amid Middle East Crisis",
+       "url": "https://www.pulse.ng/story/crude-oil-drops-83-2026031010582279749",
+       "publisher": "pulse.ng",
+       "published_at": "2026-03-10T10:58:22",
+       "lede": "crude oil price is down 8%, now trading at $83 after soaring amid middle east crisis global crude oil prices have fallen to $83 per barrel after recent spikes driven by tensions involving the united states, israel, and iran. the drop raises questions about whether petrol prices in nigeria will",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.93
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.77
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbcfd336f67c5f5aa636e2",
+       "headline": "⚡Crude Oil Price Climbs Above USD 100, Markets Brace for Impact",
+       "url": "https://www.latestly.com/quickly/world/crude-oil-price-surges-above-usd-100-as-israel-iran-war-disrupts-global-supply-7347232.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-03-09T01:47:48",
+       "lede": "crude oil price surged above usd 100 per barrel for the first time in more than three-and-a-half years on sunday, march 8, 2026, as the ongoing iran war disrupted oil production and shipping across west asia. the sharp rise has raised concerns about global inflation and economic slowdown as energy",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.93
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.76
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbcfd2bf09457014d4bdfa",
+       "headline": "⚡Crude Oil Price Climbs Above USD 100, Markets Brace for Impact",
+       "url": "https://www.latestly.com/quickly/world/crude-oil-price-climbs-above-usd-100-markets-brace-for-impact-7347232.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-03-09T01:47:48",
+       "lede": "crude oil price surged above usd 100 per barrel for the first time in more than three-and-a-half years on sunday, march 8, 2026, as the ongoing iran war disrupted oil production and shipping across west asia. the sharp rise has raised concerns about global inflation and economic slowdown as energy",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.93
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.76
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22b3d122c4392e0cfd2a5",
+       "headline": "Govt On Petrol-Diesel Hike: क्या देश में महंगा होने वाला है पेट्रोल-डीजल? आ गया सरकार का बयान",
+       "url": "https://www.aajtak.in/business/utility/story/modi-govt-denies-petrol-diesel-rate-hike-says-it-fake-and-mischevious-news-tutc-dskc-2531536-2026-04-23",
+       "publisher": "aajtak.in",
+       "published_at": "2026-04-23T08:46:06",
+       "lede": "stress in the us-iran (us-iran tension), tension at the peak of the hormuz strait, increased crude oil prices (crude oil price), among the most reported that petrol-diesel prices in the country may have izafa (petrol-diesel price hike) and may be seen after the ongoing assembly elections in the states. now",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.68
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e352fd158f9ddd5d7767e4",
+       "headline": "Crude Oil Price Today: ट्रंप के एक 'सीजफायर' से दुनिया भर में गिरे तेल का दाम! अब कितने पर पहुंचा क्रूड ऑयल?",
+       "url": "https://hindi.oneindia.com/news/business/crude-oil-price-today-fuel-plunge-globally-after-us-iran-ceasefire-agreement-1537033.html",
+       "publisher": "hindi.oneindia.com",
+       "published_at": "2026-04-08T04:39:19",
+       "lede": "crude oil price today: crude oil prices in the global market recorded tremendous decline on wednesday. between the rising tension between the u.s. and iran, the brent crude and the u.s. west texas intermediate (wti) have come under the level of both $100 per barrel after the president donald trump",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.93
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.61
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "wti",
+        "global market"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e2bc23ff2654c79d6ba8bf",
+       "headline": "Crude Oil Price Today - April 8: Check Prices of Brent, WTI, Urals, ESPO, Murban, and More As Markets Crash",
+       "url": "https://www.oneindia.com/international/crude-oil-price-today-april-8-check-prices-of-brent-wti-urals-espo-murban-and-more-as-market-011-8051119.html",
+       "publisher": "oneindia.com",
+       "published_at": "2026-04-08T03:57:46",
+       "lede": "crude oil price today: global oil prices slipped back under $100 per barrel after u.s. president donald trump said iran had agreed to a two‑week ceasefire linked to the immediate and safe reopening of the strait of hormuz, easing fears of prolonged supply interruption through the key gulf shipping route.by",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.95
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69c417425f3ab35e69b3bc9f",
+       "headline": "युद्ध से तेल की कीमतों में आग... 2022 के बाद पहली बार कीमत $100 के पार, PAK-बांग्लादेश में हाहाकार",
+       "url": "https://www.aajtak.in/business/news/story/crude-oil-price-cross-100-dollar-per-barrel-after-2022-amid-us-israel-iran-war-big-crisis-pakistan-bangladesh-tutc-dskc-2490253-2026-03-09",
+       "publisher": "aajtak.in",
+       "published_at": "2026-03-09T06:35:23",
+       "lede": "the war released between the us-israel and iran (us-israel war with iran) has brought the tension of the world to the extreme (global tension) and is made of raw oil. yes, the speed of corrosion has fired at the global prices of crude oil and crude oil price has emerged",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.87
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bcc593dfa7512de387c354",
+       "headline": "ईरान-इजरायल तनाव के बीच होर्मुज स्ट्रेट बंद, क्या तेल की कीमतों में आएगा बड़ा उछाल? जानें डिटेल",
+       "url": "https://www.abplive.com/business/crude-oil-price-today-1-march-iran-airstrike-on-dubai-bahrain-us-israel-war-news-3095946",
+       "publisher": "abplive.com",
+       "published_at": "2026-03-01T06:20:19",
+       "lede": "crude oil price today: us and israel have jointly taken military action on several iranian bases on february 28. according to information, iran’s supreme leader ayatula ali khamenei died in the attack. since the entire west asia has become more sensitive. the uncertainty in this area is increased in advance.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.77,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.96
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e882429baafc7356907b45",
+       "headline": "Crude Price Surge: हांगकांग से कोरिया तक गिरावट, अचानक उछला कच्चा तेल, तो दबाव में विदेशी बाजार",
+       "url": "https://www.aajtak.in/business/news/story/crude-oil-price-surge-again-asian-market-up-down-what-signal-for-india-tutc-dskc-2530279-2026-04-22",
+       "publisher": "aajtak.in",
+       "published_at": "2026-04-22T03:24:28",
+       "lede": "the talk on the second round peace talks in the u.s. and iran (us-iran) is moving, but on the other hand the crude oil is getting to see once again. in the early business on tuesday where crude oil price came to the price movement and came under the barrel",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9931075f157062ca8fc57",
+       "headline": "Hormuz संकट के बीच क्रूड ऑयल की कीमतों ने फिर पकड़ी रफ्तार, भारत में 17 फीसदी कम रहा इंपोर्ट",
+       "url": "https://www.abplive.com/business/crude-oil-price-today-20-april-brent-wti-surge-iran-us-tension-india-import-decline-news-3117779",
+       "publisher": "abplive.com",
+       "published_at": "2026-04-20T06:19:52",
+       "lede": "crude oil price today: the impact of increasing tension between the us and iran is clearly visible on the oil market. after the attacks on commercial ships in the hormuz straight have become more severe. increased conflicts. the direct impact of this news shows at crude oil prices. today, the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.83
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc4cdf7d31e30c78506f17",
+       "headline": "Crude Oil Price: कच्चे तेल के दाम में भारी उछाल, आपके शहर में आज क्या है LPG, Petrol -Diesel के दाम?",
+       "url": "https://hindi.oneindia.com/news/business/crude-oil-price-today-check-fuel-prices-petrol-diesel-lpg-cng-delhi-mumbai-kolkata-chennai-hindi-1523135.html",
+       "publisher": "hindi.oneindia.com",
+       "published_at": "2026-03-20T02:54:43",
+       "lede": "crude oil price: heavy boom in the price of crude oil, what is today in your city? crude oil price today 20 march: the price of crude oil is fired between the us-israel and iran corrosion. international crude oil prices have reached above $108 per barrel; however, the domestic retail",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        },
+        {
+         "code": 300,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Gas Prices & Vehicle Fueling",
+         "score": 0.71
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ab5a7c37f6c5e66e9a242",
+       "headline": "Crude Oil Skyrockets 30% As Escalating Iran War Disrupts Global Supply - Outlook Money",
+       "url": "https://www.outlookmoney.com/invest/crude-oil-skyrockets-30-as-escalating-iran-war-disrupts-global-supply",
+       "publisher": "outlookmoney.com",
+       "published_at": "2026-03-09T04:05:11",
+       "lede": "crude oil price today: crude oil prices skyrocketed as much as 31 per cent in early trade on march 9, 2026, hitting their highest since july 2022, as the widening us-israel-iran war prompted some west asian producers to cut supplies. at the same time, concerns are growing about possible disruptions",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.79
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 24,
+     "next_cursor": null,
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.453,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.462
+    }
+   }
+  }
+ ]
+}

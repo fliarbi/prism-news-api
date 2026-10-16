@@ -1,0 +1,844 @@
+{
+ "slug": "open-source-ai-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:50Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "open source AI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "open source ai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 213,
+     "tone": {
+      "carrying": 213,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 30,
+        "share_pct": 14.08
+       },
+       {
+        "group": "neutral",
+        "count": 0,
+        "share_pct": 0.0
+       },
+       {
+        "group": "positive",
+        "count": 183,
+        "share_pct": 85.92
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 213,
+      "count": 151,
+      "share_pct": 70.89
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.903,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.91
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "open source AI",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "open source ai",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 38,
+       "critical": 31,
+       "critical_pct": 81.6,
+       "negative": 2,
+       "positive": 36,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 33,
+       "critical": 25,
+       "critical_pct": 75.8,
+       "negative": 9,
+       "positive": 24,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 36,
+       "critical": 27,
+       "critical_pct": 75.0,
+       "negative": 5,
+       "positive": 31,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 43,
+       "critical": 37,
+       "critical_pct": 86.0,
+       "negative": 3,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 23,
+       "critical": 18,
+       "critical_pct": 78.3,
+       "negative": 4,
+       "positive": 19,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 21,
+       "critical": 17,
+       "critical_pct": 81.0,
+       "negative": 5,
+       "positive": 16,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 36,
+       "critical": 29,
+       "critical_pct": 80.6,
+       "negative": 4,
+       "positive": 32,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 48,
+       "critical": 37,
+       "critical_pct": 77.1,
+       "negative": 5,
+       "positive": 43,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 42,
+       "critical": 33,
+       "critical_pct": 78.6,
+       "negative": 5,
+       "positive": 37,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 56,
+       "critical": 41,
+       "critical_pct": 73.2,
+       "negative": 11,
+       "positive": 45,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 50,
+       "critical": 33,
+       "critical_pct": 66.0,
+       "negative": 9,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 65,
+       "critical": 44,
+       "critical_pct": 67.7,
+       "negative": 5,
+       "positive": 60,
+       "partial_period": false
+      }
+     ],
+     "total": 491,
+     "critical_total": 372,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.042,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.052
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "open source AI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "open source ai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 213,
+     "carrying": 91,
+     "availability_pct": 42.72,
+     "items": [
+      {
+       "country": "united states",
+       "count": 40,
+       "share_pct": 18.78
+      },
+      {
+       "country": "india",
+       "count": 18,
+       "share_pct": 8.45
+      },
+      {
+       "country": "china",
+       "count": 11,
+       "share_pct": 5.16
+      },
+      {
+       "country": "colombia",
+       "count": 5,
+       "share_pct": 2.35
+      },
+      {
+       "country": "singapore",
+       "count": 3,
+       "share_pct": 1.41
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 14
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.052,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.057
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "open source AI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "open source ai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "open-source software developments",
+       "count": 51,
+       "share": 36.43,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 34,
+       "delta_pct": 50.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "edge computing and ai integration",
+       "count": 12,
+       "share": 8.57,
+       "lift": 699.69,
+       "baseline_count": 1,
+       "previous_period_count": 9,
+       "delta_pct": 33.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "machine learning applications",
+       "count": 11,
+       "share": 7.86,
+       "lift": 641.38,
+       "baseline_count": 1,
+       "previous_period_count": 5,
+       "delta_pct": 120.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "ai hardware acceleration",
+       "count": 10,
+       "share": 7.14,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 8,
+       "delta_pct": 25.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "deep neural network architectures",
+       "count": 5,
+       "share": 3.57,
+       "lift": 291.54,
+       "baseline_count": 1,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 213,
+     "carrying": 140,
+     "carrier_share_pct": 65.73,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.155,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.16
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "open source AI",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "open source ai",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8d80c7bb1410d4ccc073d",
+       "headline": "India’s Open Source AI Boom Outpaces Patents, Says Stanford - Open Source For You",
+       "url": "https://www.opensourceforu.com/2026/04/indias-open-source-ai-boom-outpaces-patents-says-stanford/",
+       "publisher": "opensourceforu.com",
+       "published_at": "2026-04-15T08:14:22",
+       "lede": "india’s growing share of high-impact open source ai projects is emerging as the clearest proof of its developer strength, even as stanford flags weak patent ownership and rising ai anxiety as the country scales adoption. india’s ai rise is increasingly being written in open source, with the country now accounting",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.8
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c4193f2979c51416d928f0",
+       "headline": "Nvidia Targets Open AI Leadership With $26 Billion Model Development Plan - Open Source For You",
+       "url": "https://www.opensourceforu.com/2026/03/nvidia-targets-open-ai-leadership-with-26-billion-model-development-plan/",
+       "publisher": "opensourceforu.com",
+       "published_at": "2026-03-12T08:12:46",
+       "lede": "nvidia is investing $26 billion to develop open source ai models aligned with its gpus, aiming to expand beyond chips and build a powerful developer-driven ai ecosystem.nvidia plans to invest $26 billion over the next five years to develop open-source artificial intelligence models, marking a major expansion beyond its traditional",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.84
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bb7c419a756ebbcf2ab80c",
+       "headline": "Hydra Dependency Creates Systemic AI Security Risk Across Hugging Face Models - Open Source For You",
+       "url": "https://www.opensourceforu.com/2026/01/hydra-dependency-creates-systemic-ai-security-risk-across-hugging-face-models/",
+       "publisher": "opensourceforu.com",
+       "published_at": "2026-01-15T07:02:16",
+       "lede": "critical flaws in widely used open source ai libraries from nvidia, salesforce, and apple expose hugging face models to remote code execution via poisoned metadata, highlighting growing supply chain risks in shared ai tooling.critical security vulnerabilities have been uncovered in widely used open-source python ai and machine learning libraries powering",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.58
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.41
+        }
+       ],
+       "country": "algeria",
+       "organizations": [
+        "meta",
+        "rce",
+        "nvidia",
+        "salesforce"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f880ea43843dd771ced0c0",
+       "headline": "Aktien von D-Wave, IonQ und Rigetti uneinheitlich: Pause nach der Kursrally nur bei einigen Branchenvertretern",
+       "url": "https://www.finanzen.ch/nachrichten/aktien/aktien-von-d-wave-ionq-und-rigetti-uneinheitlich-pause-nach-der-kursrally-nur-bei-einigen-branchenvertretern-1036037670",
+       "publisher": "finanzen.ch",
+       "published_at": "2026-04-20T20:11:00",
+       "lede": "• nvidia opens its ai toolbox for quantum computers• fantasy at d-wave, ionq and rigetti in the previous week• sector remains speculative – investors are becoming more reticent again nvidia positions itself as infrastructure partner for the quantum computing industry with new open source ai tools. the chip designer has",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 262,
+         "path": "/Science/Physics",
+         "score": 0.65
+        },
+        {
+         "code": 518,
+         "path": "/Science/Computer Science/Other",
+         "score": 0.44
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aec22c37f6c5e6610bf3e",
+       "headline": "DeepSeek : l'IA open source qui défie ChatGPT 2026",
+       "url": "https://www.blog-nouvelles-technologies.fr/350483/quest-ce-que-deepseek/",
+       "publisher": "blog-nouvelles-technologies.fr",
+       "published_at": "2026-03-26T08:45:17",
+       "lede": "home » what is deepseek? the chinese giant of the open source ai that challenges openai in 2026 what is deepseek? the chinese giant of the open source ai that challenges openai in 2026 what is deepseek? the chinese giant that challenges openai and google deepseek is the chinese open",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.84
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cb5702794d48006cff5ec3",
+       "headline": "Europe's AI Opportunity: Countering Digital Cultural Colonialism",
+       "url": "https://www.linkedin.com/pulse/europes-ai-opportunity-countering-digital-cultural-dirk-riehle-wl4jf",
+       "publisher": "linkedin.com",
+       "published_at": "2026-02-24T09:00:53",
+       "lede": "this mit technology review article on \"open source ai\" argues that chinese companies, with governmental backing, are embracing an open source approach to ai. they don't, it is typically only open models that are being provided, not full-blown open source ais. however, the story is appealing. still the underdog when",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.69
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.48
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bbc8fccdd5bea27ae9948d",
+       "headline": "Alibaba launches open source AI model RynnBrain for robotics",
+       "url": "https://www.techzine.eu/news/analytics/138662/alibaba-launches-open-source-ai-model-rynnbrain-for-robotics/",
+       "publisher": "techzine.eu",
+       "published_at": "2026-02-10T10:37:19",
+       "lede": "alibaba has launched rynnbrain, an open source ai model that helps robots and smart devices perform complex tasks in the real world. the model combines spatial understanding with time awareness.alibaba’s damo academy introduced the foundation model that enables interaction with the environment. rynnbrain can map objects, predict trajectories, and navigate",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.76
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "alibaba"
+       ],
+       "people": []
+      },
+      {
+       "id": "69653dd5cd0254b652fbb482",
+       "headline": "'Open source AI models' is a theme at the Nvidia keynote",
+       "url": "https://techcrunch.com/snippet/3080039/open-source-ai-models-is-a-theme-at-the-nvidia-keynote/",
+       "publisher": "techcrunch.com",
+       "published_at": "2026-01-05T14:30:48",
+       "lede": "nvidia ceo jensen huang is all about open source ai models, and his keynote during ces 2026 illustrated that point.while onstage, huang announced a number of new open source ai models, signaling the company’s intent to expand its influence in the open model ecosystem. the models are designed for a",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.59
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.54
+        },
+        {
+         "code": 532,
+         "path": "/Computers & Electronics/Software/Open Source",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "nvidia"
+       ],
+       "people": [
+        "jensen huang"
+       ]
+      },
+      {
+       "id": "69e990b3bdd09a23d089584f",
+       "headline": "Pourquoi Thunderbolt, la nouvelle IA de Mozilla, pourrait sauver vos donnÃ©es privÃ©esÂ ?",
+       "url": "https://www.frandroid.com/culture-tech/intelligence-artificielle/3070409_mozilla-devoile-thunderbolt-un-client-ia-a-heberger-soi-meme",
+       "publisher": "frandroid.com",
+       "published_at": "2026-04-20T08:49:58",
+       "lede": "to counter the initiatives of the giants of tech and their ia solutions, mozilla makes the choice of the source lsopen. thought for professionals, its solution allows you to run an ai client locally to keep your hands on its data. mozilla deploys thunderbolt. an open source ai client \"designed",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e3179baafc7356de0200",
+       "headline": "Nvidia Aktie: Quantensprung ausgelöst",
+       "url": "https://www.boerse-express.com/news/articles/nvidia-aktie-quantensprung-ausgeloest-893659",
+       "publisher": "boerse-express.com",
+       "published_at": "2026-04-17T10:54:36",
+       "lede": "new open source ai tools from nvidia have set the quantum computing sector up this week. the so-called \"ising\" model family aims directly at the biggest technological hurdles in the industry: qubit calibration and error correction. both are considered to be crucial bottlenecks for the practical use of quantum computers.the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e28a5dbd7b10565a33e6ef",
+       "headline": "गूगल ने लॉन्च किया Gemma 4, अब स्मार्टफोन भी बनेंगे सुपर स्मार्ट, बिना इंटरनेट चलेगा AI",
+       "url": "https://www.tv9hindi.com/technology/google-launches-gemma-4-ai-models-for-smartphones-and-data-centres-with-powerful-on-device-capabilities-3740828.html",
+       "publisher": "tv9hindi.com",
+       "published_at": "2026-04-04T04:11:57",
+       "lede": "tech veterans google has launched its new open source ai model series gemma 4, which can now work everywhere from data center to smartphone. the company claims that this model gives extremely powerful performance even in low size. ceo sundar pichai and deepmind chief demis hasabis has told it the",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google",
+        "deepmind"
+       ],
+       "people": [
+        "sundar pichai"
+       ]
+      },
+      {
+       "id": "6a2ac3c6963d76f4af01b73d",
+       "headline": "Mistral AI : champion européen de l'IA open source 2026",
+       "url": "https://www.blog-nouvelles-technologies.fr/319394/mistral-ai-modeles-open-source/",
+       "publisher": "blog-nouvelles-technologies.fr",
+       "published_at": "2026-03-26T09:35:18",
+       "lede": "home » what is mistral ai? the european open source ai champion in 2026 what is mistral ai? the european champion of the open source ai in 2026 what is mistral ai, the french ai that challenges openai and google! mistral ai is a french startup specializing in open source",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 6,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.81
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 12,
+     "total_estimate": 30,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yNiAwOTozNToxOCIsImkiOiI2YTJhNzliYzVjZWZiODNmZTgwODgyYjMiLCJwIjo2fQ",
+     "unresolved": 13,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.279,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "13 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.297
+    }
+   }
+  }
+ ]
+}

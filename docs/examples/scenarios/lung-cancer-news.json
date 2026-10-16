@@ -1,0 +1,1048 @@
+{
+ "slug": "lung-cancer-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:00Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "lung cancer",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "lung cancer",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6826,
+     "tone": {
+      "carrying": 6816,
+      "availability_pct": 99.85,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1251,
+        "share_pct": 18.35
+       },
+       {
+        "group": "neutral",
+        "count": 157,
+        "share_pct": 2.3
+       },
+       {
+        "group": "positive",
+        "count": 5408,
+        "share_pct": 79.34
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6818,
+      "count": 6298,
+      "share_pct": 92.37
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.575,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.578
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "lung cancer",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "lung cancer",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1369,
+       "critical": 1235,
+       "critical_pct": 90.2,
+       "negative": 231,
+       "positive": 1095,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1216,
+       "critical": 1155,
+       "critical_pct": 95.0,
+       "negative": 158,
+       "positive": 1034,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1445,
+       "critical": 1303,
+       "critical_pct": 90.2,
+       "negative": 257,
+       "positive": 1147,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1536,
+       "critical": 1388,
+       "critical_pct": 90.4,
+       "negative": 305,
+       "positive": 1197,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1463,
+       "critical": 1355,
+       "critical_pct": 92.6,
+       "negative": 190,
+       "positive": 1241,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1569,
+       "critical": 1467,
+       "critical_pct": 93.5,
+       "negative": 210,
+       "positive": 1330,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1637,
+       "critical": 1523,
+       "critical_pct": 93.0,
+       "negative": 290,
+       "positive": 1315,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2073,
+       "critical": 1958,
+       "critical_pct": 94.5,
+       "negative": 222,
+       "positive": 1806,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2232,
+       "critical": 2087,
+       "critical_pct": 93.5,
+       "negative": 266,
+       "positive": 1906,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1411,
+       "critical": 1298,
+       "critical_pct": 92.0,
+       "negative": 283,
+       "positive": 1094,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1504,
+       "critical": 1361,
+       "critical_pct": 90.5,
+       "negative": 285,
+       "positive": 1190,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1679,
+       "critical": 1552,
+       "critical_pct": 92.4,
+       "negative": 417,
+       "positive": 1218,
+       "partial_period": false
+      }
+     ],
+     "total": 19134,
+     "critical_total": 17682,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.051,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.062
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "lung cancer",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "lung cancer",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6826,
+     "carrying": 1217,
+     "availability_pct": 17.83,
+     "items": [
+      {
+       "country": "united states",
+       "count": 721,
+       "share_pct": 10.56
+      },
+      {
+       "country": "united kingdom",
+       "count": 114,
+       "share_pct": 1.67
+      },
+      {
+       "country": "india",
+       "count": 83,
+       "share_pct": 1.22
+      },
+      {
+       "country": "china",
+       "count": 61,
+       "share_pct": 0.89
+      },
+      {
+       "country": "canada",
+       "count": 27,
+       "share_pct": 0.4
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 211
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.043,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.05
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "lung cancer",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "lung cancer",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "lung cancer early detection methods",
+       "count": 3050,
+       "share": 55.43,
+       "lift": 2262.55,
+       "baseline_count": 2,
+       "previous_period_count": 2863,
+       "delta_pct": 6.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oncology and targeted therapy advancements",
+       "count": 562,
+       "share": 10.21,
+       "lift": 833.81,
+       "baseline_count": 1,
+       "previous_period_count": 557,
+       "delta_pct": 0.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "liquid biopsy for early detection",
+       "count": 473,
+       "share": 8.6,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 415,
+       "delta_pct": 14.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "radiation-induced tissue damage mitigation",
+       "count": 346,
+       "share": 6.29,
+       "lift": 513.34,
+       "baseline_count": 1,
+       "previous_period_count": 366,
+       "delta_pct": -5.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "tumor marker blood tests",
+       "count": 249,
+       "share": 4.53,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 241,
+       "delta_pct": 3.3,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6826,
+     "carrying": 5502,
+     "carrier_share_pct": 80.6,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.108,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.115
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "lung cancer",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "lung cancer",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2efc1983fc01faba7032e7",
+       "headline": "Lorraine Kelly admits 'I burst into tears' as she addresses 'false' diagnosis",
+       "url": "https://www.mirror.co.uk/3am/celebrity-news/lorraine-kelly-admits-i-burst-37074394",
+       "publisher": "mirror.co.uk",
+       "published_at": "2026-04-27T08:59:37",
+       "lede": "lorraine kelly “burst into tears” after her father was given a “false diagnosis”. lorraine’s dad john kelly went into hospital during the covid pandemic and was diagnosed with lung cancer. the 66-year-old tv presenter says the experience was “hellish” and described it as the “worst possible time” to get the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d302601121844c40f144",
+       "headline": "The Young and the Restless star Dee Freeman dies aged 66 from lung cancer",
+       "url": "https://metro.co.uk/2026/04/04/the-young-and-the-restless-star-dee-freeman-dies-aged-66-from-lung-cancer-27849473/",
+       "publisher": "metro.co.uk",
+       "published_at": "2026-04-04T08:35:28",
+       "lede": "dee&#8217;s family announced the news on instagram (picture: wendell teodoro) dee freeman, who&#8217;s best known for starring on the young and the restless, has died aged 66. dee&#8217;s family announced the news on instagram, where they revealed she&#8217;d passed away on thursday from stage four lung cancer. the post read:",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8a6d743843dd771d24883",
+       "headline": "The Truth Behind 7 Common Lung Cancer Myths",
+       "url": "https://www.visionmonday.com/eyecare/health-watch/article/the-truth-behind-7-common-lung-cancer-myths/",
+       "publisher": "visionmonday.com",
+       "published_at": "2026-04-30T08:03:00",
+       "lede": "eyecare: health watch the truth behind 7 common lung cancer myths staff by lung cancer kills more americans than any other form of cancer: more than prostate cancer and colon cancer combined, and nearly three times as many as breast cancer. but while pink ribbons are a familiar sight and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.96
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d445a088760d34bedf02",
+       "headline": "Optimizing Lung Cancer Therapy With OSA Management | www.PhysiciansWeekly.com",
+       "url": "https://www.physiciansweekly.com/post/optimizing-lung-cancer-therapy-efficacy-through-osa-management",
+       "publisher": "physiciansweekly.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "optimizing lung cancer therapy efficacy through osa management by maria asimopoulos - last updated: april 30, 2026 researchers in frontiers in immunology advocate for diagnosing and treating obstructive sleep apnea (osa) in patients with lung cancer undergoing immunotherapy. references pisanu l, et al. front immunol . 2026;17:1741875. doi: 10.3389/fimmu.2026.1741875 researchers",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.91
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2296d122c4392e0cf40f0",
+       "headline": "If you're in the medical field, keep reading",
+       "url": "https://www.newsbytesapp.com/news/science/ai-tools-boosting-healthcare-diagnosis-accuracy/story",
+       "publisher": "newsbytesapp.com",
+       "published_at": "2026-04-29T11:46:57",
+       "lede": "artificial intelligence is revolutionizing healthcare by improving diagnostic capabilities exponentially. in fields such as medical imaging for lung cancer and retinal disorders, ai tools often score over 95% accuracy. these technologies mine large-scale datasets, detect subtle patterns that humans may miss, and reduce errors. this enables faster and more accurate",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.91
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.7
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c94da5706a322e1033af",
+       "headline": "Alex Cole-Hamilton pledges lung cancer test expansion after Edinburgh pilot success",
+       "url": "https://www.heraldscotland.com/news/26060627.lib-dems-pledge-lung-cancer-screening-expansion-edinburgh-pilot/",
+       "publisher": "heraldscotland.com",
+       "published_at": "2026-04-29T06:30:00",
+       "lede": "“in scotland, more people die of lung cancer than any other disease, with survival rates down for other forms of cancer too,” he told the herald. “we should be moving heaven and earth to deliver on prevention and early diagnosis.” the plan would establish a national lung cancer screening programme",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.51
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "a74ecb014c5482fd6cd3e552",
+       "headline": "Cascade Cell-Assisted Enhanced Fluorescence Strategy for Highly Sensitive Detection of Lung Adenocarcinoma Cells in Whole Blood.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42059301/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "cascade cell-assisted enhanced fluorescence strategy for highly sensitive detection of lung adenocarcinoma cells in whole blood.circulating tumor cells (ctcs) serve as critical biomarkers for diagnosis, treatment monitoring, and prognosis evaluation of lung cancer. however, their trace abundance in blood makes the development of integrated technologies for ctcs isolation, enrichment, and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.73,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.83
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.62
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "912d9e8f6bc9310f2374eb16",
+       "headline": "Lung cancer brain metastases management at the dawn of personalized medicine: are we ready to break the barriers?",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42061818/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "lung cancer brain metastases management at the dawn of personalized medicine: are we ready to break the barriers?brain metastases (bm) occur in nearly half of patients with lung cancer and significantly impair survival and quality of life. historically, limited blood-brain barrier penetration and low intracranial efficacy of systemic therapies restricted",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.96
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e8c845272de32e8c59b9",
+       "headline": "Early detection of bowel Cancer in the UK represents success of screening program - Pharmaceutical Technology",
+       "url": "https://www.pharmaceutical-technology.com/analyst-comment/early-detection-of-bowel-cancer-in-the-uk-represents-success-of-screening-program/",
+       "publisher": "pharmaceutical-technology.com",
+       "published_at": "2026-04-27T19:07:52",
+       "lede": "image of a sealed envelope containing the test sample of a bowel cancer test, ready to be sent off by post for testing. image credit: [yau ming low]/shutterstock.com bowel cancer, also known as colorectal cancer, is the second most lethal cancer after lung cancer, with the highest incidence rates being",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.26,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.95
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03f4819c4aac09353864df",
+       "headline": "Cambio de paradigma en el diagnóstico del cáncer en Europa: más detección, pero menos mortalidad",
+       "url": "https://www.consalud.es/pacientes/cambio-de-paradigma-en-el-diagnostico-del-cancer-en-europa-mas-diagnosticos-pero-menos-mortalidad.html",
+       "publisher": "consalud.es",
+       "published_at": "2026-04-27T07:00:02",
+       "lede": "lung cancer remains the leading cause of cancer death in the eu. in 2022 228,987 people died of this disease, representing 19.8 % of all cancer deaths and 4.4 % of all deaths due to any cause. that is, about one in five oncological deaths were related to trachea, bronchial,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.95
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "3a6ced5b3b773e6e0743af33",
+       "headline": "Platycodon D promotes immunogenic cell death in lung cancer cells by targeting NFS1 to induce PANoptosis.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42068882/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-26T00:00:00",
+       "lede": "platycodon d promotes immunogenic cell death in lung cancer cells by targeting nfs1 to induce panoptosis.background: lung cancer remains one of the most lethal malignancies worldwide, with therapeutic resistance and low response rates representing major clinical challenges. the biosynthetic enzyme nfs1 has been implicated in tumour progression across various cancer",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.84
+        },
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4738e6594f7ebaf9a62a",
+       "headline": "Barry Manilow Makes First Public Appearance After Lung Cancer Surgery",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/barry-manilow-makes-first-public-020907819.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-25T02:09:07",
+       "lede": "barry manilow has been photographed in public for the first time since he underwent a lobectomy to treat lung cancer. in the photos taken on friday, apr. 24, the singer was seen smiling while exiting a car in new york city. the outing comes four months after his surgery in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.27,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4a4fbf10c43d296c290a",
+       "headline": "Barry Manilow, 82, Steps Out in N.Y.C. for First Time After Undergoing Lobectomy for Lung Cancer",
+       "url": "https://www.yahoo.com/entertainment/music/articles/barry-manilow-82-steps-n-014431929.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-25T01:44:31",
+       "lede": "need to know barry manilow is seen in public for the first time since undergoing a lobectomy procedure following a lung cancer diagnosis the “mandy” singer shared the news with his fans in a december social media post following the announcement, manilow postponed his farewell tour to recover from the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eb54be540a46fb5545213",
+       "headline": "Higher consumption of fruits, vegetables tied to lung cancer risk in younger non-smokers: Study   - Connected to India News I Singapore l UAE l UK l USA l NRI",
+       "url": "https://www.connectedtoindia.com/higher-consumption-of-fruits-vegetables-tied-to-lung-cancer-risk-in-younger-non-smokers-study/",
+       "publisher": "connectedtoindia.com",
+       "published_at": "2026-04-24T04:30:50",
+       "lede": "a new study says eating fruits, vegetables and whole grains may increase the chance of early-onset lung cancer. photo: unsplash a diet rich in fruit, vegetables and whole grains is generally recommended for better health and to lower the risk of cancer and other diseases. however, new research from usc",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.75
+        },
+        {
+         "code": 246,
+         "path": "/Health/Nutrition/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efabc3727212302c5fc454",
+       "headline": "Fruits, veggies, whole grains under scanner — Hidden cancer risk revealed by new study? | Indiablooms - First Portal on Digital News Management",
+       "url": "https://www.indiablooms.com/health/fruits-veggies-whole-grains-under-scanner-hidden-cancer-risk-revealed-by-new-study/details",
+       "publisher": "indiablooms.com",
+       "published_at": "2026-04-24T04:18:00",
+       "lede": "new study says eating fruits, vegetables and whole grains may increase chance of early onset lung cancer. photo: unsplash a diet rich in fruit, vegetables and whole grains is generally recommended for better health and to lower the risk of cancer and other diseases. however, new research from usc norris",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.76
+        },
+        {
+         "code": 246,
+         "path": "/Health/Nutrition/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ec1e36836bff4eb9759bec",
+       "headline": "Surprising study finds healthy fruit, vegetable diet may increase risk of lung cancer in younger people",
+       "url": "https://www.ktvu.com/news/surprising-research-finds-eating-fruit-vegetable-whole-grains-may-lead-early-onset-lung-cancer",
+       "publisher": "ktvu.com",
+       "published_at": "2026-04-23T22:39:25",
+       "lede": "it sounds highly counter-intuitive, but surprising new research has found that eating a healthy diet packed with&#xa0;fruits, vegetables, and whole grains may lead to a greater risk of lung cancer among younger, non-smoking adults.&quot;too many young people diagnosed with lung cancer are left asking, &#x2018;how did this happen?&#x2019; especially when",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99565bdd09a23d08d0a3c",
+       "headline": "Eating Fruits And Vegetables May Increase Chances Of Lung Cancer, According To New Study",
+       "url": "https://brobible.com/culture/article/eating-fruits-vegetables-increase-chances-cancer-study/",
+       "publisher": "brobible.com",
+       "published_at": "2026-04-22T20:50:45",
+       "lede": "istockphoto non-smokers under the age of 50 who consume a diet heavy in fruits, vegetables, and whole grains have a higher risk of developing lung cancer, according to a recent study. interestingly, the researchers discovered that lung cancer patients under 50 frequently had better-than-average diets, suggesting that pesticide exposure from",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.53
+        },
+        {
+         "code": 246,
+         "path": "/Health/Nutrition/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f89eee8937ef12fc0acb20",
+       "headline": "Successful Surgery for Dr Tyneil Cargill Sparks Hope as Cancer Fight Continues - ZNS BAHAMAS",
+       "url": "https://znsbahamas.com/successful-surgery-for-dr-tyneil-cargill-sparks-hope-as-cancer-fight-continues/",
+       "publisher": "znsbahamas.com",
+       "published_at": "2026-04-22T17:33:35",
+       "lede": "community health advocate dr tyneil cargill is now resting following a successful surgery, marking a significant and hopeful milestone in his ongoing battle with lung cancer. the procedure was carried out at doctors hospital by dr duane sands and his medical team, with loved ones expressing deep gratitude for the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.31,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.87
+        }
+       ],
+       "country": "the bahamas",
+       "organizations": [
+        "cargill"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0e98349341f3dc2ad6ab94",
+       "headline": "In lab studies, Actinium drug matched breast cancer therapy in resistant tumors",
+       "url": "https://www.stocktitan.net/news/ATNM/actinium-pharmaceuticals-inc-announces-compelling-pan-tumor-data-for-pnf6kvnpimm1.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-22T11:00:00",
+       "lede": "atnm-400 demonstrates pan-tumor activity across prostate, lung, and breast cancer models, supporting multi-indication development potential in prostate cancer, atnm-400 demonstrates efficacy across both high psma-expressing and, importantly, low psma-expressing prostate cancer models, unlike many psma-targeted radioligand therapies that work only in psma-high settings in egfr-mutant non-small cell lung cancer, atnm-400",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.94
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a99fe963d76f4afe54432",
+       "headline": "Dritter Viersener Onkologietag",
+       "url": "https://www.meine-woche.de/gesundheit/dritter-viersener-onkologietag_aid-147205319",
+       "publisher": "meine-woche.de",
+       "published_at": "2026-04-22T08:41:00",
+       "lede": "two cigarettes a day increase the risk of lung cancer by 100 percent. the risk is almost twice as high in men as in women. \"smoking is the most common cause of lung cancer (bronchial cancer) at 85 percent,\" says the chief physician of the internal medicine and pneumology clinic,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.91
+        },
+        {
+         "code": 499,
+         "path": "/Health/Substance Abuse/Smoking & Smoking Cessation",
+         "score": 0.87
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 20,
+     "total_estimate": 1800,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAwODo0MTowMCIsImkiOiI2YTJhOTlmZTk2M2Q3NmY0YWZlNTQ0MzIiLCJwIjo4fQ",
+     "unresolved": 5,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.549,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "5 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.555
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1121 @@
+{
+ "slug": "sanctions-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:07:17Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "sanctions",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "sanctions",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 32207,
+     "tone": {
+      "carrying": 32189,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 26953,
+        "share_pct": 83.73
+       },
+       {
+        "group": "neutral",
+        "count": 1444,
+        "share_pct": 4.49
+       },
+       {
+        "group": "positive",
+        "count": 3792,
+        "share_pct": 11.78
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 32193,
+      "count": 28773,
+      "share_pct": 89.38
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.699,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.708
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "sanctions",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "sanctions",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 7536,
+       "critical": 6399,
+       "critical_pct": 84.9,
+       "negative": 6313,
+       "positive": 828,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 4078,
+       "critical": 3431,
+       "critical_pct": 84.1,
+       "negative": 3412,
+       "positive": 493,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 7365,
+       "critical": 6011,
+       "critical_pct": 81.6,
+       "negative": 6354,
+       "positive": 661,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 7279,
+       "critical": 6312,
+       "critical_pct": 86.7,
+       "negative": 6378,
+       "positive": 604,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 8024,
+       "critical": 7211,
+       "critical_pct": 89.9,
+       "negative": 6976,
+       "positive": 763,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 6396,
+       "critical": 5721,
+       "critical_pct": 89.4,
+       "negative": 5304,
+       "positive": 795,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4566,
+       "critical": 4070,
+       "critical_pct": 89.1,
+       "negative": 3723,
+       "positive": 646,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 5244,
+       "critical": 4714,
+       "critical_pct": 89.9,
+       "negative": 4327,
+       "positive": 718,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 5947,
+       "critical": 5337,
+       "critical_pct": 89.7,
+       "negative": 5067,
+       "positive": 678,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 8161,
+       "critical": 7207,
+       "critical_pct": 88.3,
+       "negative": 6591,
+       "positive": 1077,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 8416,
+       "critical": 7520,
+       "critical_pct": 89.4,
+       "negative": 7222,
+       "positive": 856,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 9683,
+       "critical": 8709,
+       "critical_pct": 89.9,
+       "negative": 8073,
+       "positive": 1181,
+       "partial_period": false
+      }
+     ],
+     "total": 82695,
+     "critical_total": 72642,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.057,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.06
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "sanctions",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "sanctions",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 32207,
+     "carrying": 14124,
+     "availability_pct": 43.85,
+     "items": [
+      {
+       "country": "united states",
+       "count": 7766,
+       "share_pct": 24.11
+      },
+      {
+       "country": "russia",
+       "count": 1098,
+       "share_pct": 3.41
+      },
+      {
+       "country": "iran",
+       "count": 778,
+       "share_pct": 2.42
+      },
+      {
+       "country": "india",
+       "count": 562,
+       "share_pct": 1.74
+      },
+      {
+       "country": "china",
+       "count": 530,
+       "share_pct": 1.65
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 3390
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.089,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.092
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "sanctions",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "sanctions",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "international certifications for oil & gas",
+       "count": 686,
+       "share": 3.01,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 265,
+       "delta_pct": 158.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "economic impact of oil exports",
+       "count": 1676,
+       "share": 7.35,
+       "lift": 150.09,
+       "baseline_count": 4,
+       "previous_period_count": 1136,
+       "delta_pct": 47.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "geopolitical factors in oil supply",
+       "count": 2820,
+       "share": 12.37,
+       "lift": 91.83,
+       "baseline_count": 11,
+       "previous_period_count": 1951,
+       "delta_pct": 44.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oil tanker transportation logistics",
+       "count": 1855,
+       "share": 8.14,
+       "lift": 94.93,
+       "baseline_count": 7,
+       "previous_period_count": 745,
+       "delta_pct": 149.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "environmental policy and climate governance",
+       "count": 429,
+       "share": 1.88,
+       "lift": 76.84,
+       "baseline_count": 2,
+       "previous_period_count": 143,
+       "delta_pct": 200.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 32207,
+     "carrying": 22788,
+     "carrier_share_pct": 70.75,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.088,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.097
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "sanctions",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "sanctions",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69efaaa2a84b609af2b2df5e",
+       "headline": "Ukraine-Krieg aktuell: Russland greift mit hunderten Drohnen an – Selenskyj appelliert an Partner",
+       "url": "https://www.fr.de/politik/ins-visier-ukraine-krieg-aktuell-putins-verluste-steigen-weiter-eu-nimmt-russlands-wirtschaft-zr-94276764.html",
+       "publisher": "fr.de",
+       "published_at": "2026-04-26T02:46:19",
+       "lede": "ukraine war current: russia attacks with hundreds of drones – selenskyj appeals to partners by: christian stör, jens kiffmeier, felix busjaeger print share follow us on google latest news about the ukraine war in the ticker. new attack at night. russia's losses continue to rise. the eu is sharpening sanctions.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.92
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d66b713680636eed7ac4",
+       "headline": "Ukraine: des frappes à Dnipro font au moins cinq morts, Volodymyr Zelensky demande plus de sanctions",
+       "url": "https://www.bfmtv.com/international/europe/ukraine/ukraine-des-frappes-a-dnipro-font-au-moins-cinq-morts-volodymyr-zelensky-demande-plus-de-sanctions_AD-202604250228.html",
+       "publisher": "bfmtv.com",
+       "published_at": "2026-04-25T13:57:57",
+       "lede": "at least five people were killed and 34 others injured, including two children, in russian strikes in dnipro, in the east centre of ukraine, announced saturday, april 25, leading volodymyr zelensky to demand new sanctions against moscow. in total, the latest russian attacks in ukraine have resulted in at least",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.96,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2afa23c37f6c5e661a79bf",
+       "headline": "Prime minister: EU should tax Russian goods to pay for Ukraine reconstruction",
+       "url": "https://news.err.ee/1610006431/prime-minister-eu-should-tax-russian-goods-to-pay-for-ukraine-reconstruction",
+       "publisher": "news.err.ee",
+       "published_at": "2026-04-25T06:20:00",
+       "lede": "the european union should levy taxes on russian imports not subject to sanctions, to help fund ukraine's post-war reconstruction, prime minister kristen michal (reform) told politico. the bill to reconstruct ukraine is likely to run into the hundreds of billions of euros, politico reported, and michal spoke to the publication",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.78
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.53
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e996b9bdd09a23d08e16b2",
+       "headline": "Trump Extends Iran Ceasefire Indefinitely, Delays Talks As US Maintains Blockade | Outlook India",
+       "url": "https://www.outlookindia.com/international/trump-extends-iran-ceasefire-indefinitely-delays-talks-as-us-maintains-blockade",
+       "publisher": "outlookindia.com",
+       "published_at": "2026-04-22T02:29:40",
+       "lede": "trump extended the iran ceasefire indefinitely at pakistan’s request, delaying us-led peace talks.the us will maintain its blockade and warned action depends on iran presenting a unified proposal.fresh sanctions and hormuz tensions persist, keeping oil prices high amid ongoing conflict.us president donald trump has indefinitely extended the ceasefire with iran",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.87
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.65
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.56
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.53
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e871a67bb1410d4c7d9592",
+       "headline": "Zelensky slams oil sanctions relief for Russia",
+       "url": "https://www.bangkokpost.com/world/3239798/zelensky-slams-oil-sanctions-relief-for-russia",
+       "publisher": "bangkokpost.com",
+       "published_at": "2026-04-19T09:45:00",
+       "lede": "\"every dollar paid for russian oil is money for the war\" and the billions of dollars involved are used for devastating strikes on ukraine, zelensky said in a post on x.he did not mention the united states, but president donald trump's administration on friday issued a month-long sanctions waiver allowing",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.7
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.59
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.57
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.45
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e35f98158f9ddd5d7a618f",
+       "headline": "Iran set for peace talks but doubts emerge over Lebanon, sanctions",
+       "url": "https://www.radionz.co.nz/news/world/592100/iran-set-for-peace-talks-but-doubts-emerge-over-lebanon-sanctions",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-04-11T04:23:58",
+       "lede": "photo: farooq naeem / afp iran demands ceasefire in lebanon, sanctions relief before talks begin fighting continues in lebanon despite us-iran ceasefire iran seeks control over strait of hormuz, compensation for war damage the us and iran were to hold negotiations in the pakistani capital, islamabad, on saturday (local time)",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.9
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.71
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e88ac69baafc73569632b8",
+       "headline": "Ukraine, Zelensky calls for reinstatement of oil sanctions against Russia",
+       "url": "https://en.ilsole24ore.com/art/ukraine-zelensky-calls-for-reinstatement-of-oil-sanctions-against-russia-AIPdrbQC",
+       "publisher": "en.ilsole24ore.com",
+       "published_at": "2026-04-10T07:03:00",
+       "lede": "ukrainian president volodymyr zelensky said he wanted energy sanctions against russia to be reinstated following the us-iran ceasefire agreement that reopened the strait of hormuz, vital for global energy supplies. \"a ceasefire is now beginning in the middle east and the gulf. and i expect the sanctions on russian oil",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.88
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.48
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e85d997bb1410d4c70c4de",
+       "headline": "Carney says Canada not considering sanctioning Israel over Lebanon strikes",
+       "url": "https://www.castanetkamloops.net/edition/news-story-607902-4-.htm",
+       "publisher": "castanetkamloops.net",
+       "published_at": "2026-04-09T17:41:00",
+       "lede": "canada news carney says canada not considering sanctioning israel over lebanon strikes no sanctions from canada photo: the canadian press prime minister mark carney speaks during an event announcing the start of construction on the contrecoeur terminal expansion at the port of montreal in contrecoeur, que., thursday, april 9, 2026.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.88
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.64
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "port of montreal",
+        "que"
+       ],
+       "people": [
+        "mark carney"
+       ]
+      },
+      {
+       "id": "69e85bd65cfa3e5ba5ed15ee",
+       "headline": "Carney says Canada not considering sanctioning Israel over Lebanon strikes",
+       "url": "https://www.castanetkamloops.net/news/Canada/607902/Carney-says-Canada-not-considering-sanctioning-Israel-over-Lebanon-strikes",
+       "publisher": "castanetkamloops.net",
+       "published_at": "2026-04-09T17:41:00",
+       "lede": "canada news carney says canada not considering sanctioning israel over lebanon strikes no sanctions from canada photo: the canadian press prime minister mark carney speaks during an event announcing the start of construction on the contrecoeur terminal expansion at the port of montreal in contrecoeur, que., thursday, april 9, 2026.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.88
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.64
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "port of montreal",
+        "que"
+       ],
+       "people": [
+        "mark carney"
+       ]
+      },
+      {
+       "id": "69e2df6e277be6ed2da8b272",
+       "headline": "Iran-U.S Ceasefire: It Is Alive, But Very Shaky; Will It Hold?",
+       "url": "https://www.oneindia.com/international/iran-u-s-ceasefire-it-is-alive-but-very-shaky-will-it-hold-8052455.html",
+       "publisher": "oneindia.com",
+       "published_at": "2026-04-09T08:19:48",
+       "lede": "as of now, this looks less like a solid peace deal and more like a temporary, conditional pause. the u.s., iran and israel have agreed to a two-week ceasefire, but the underlying disputes that triggered the conflict are not resolved - especially over irans nuclear programme, missile capabilities, sanctions and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.8
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.66
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.55
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2db377f3a572cf4b73059",
+       "headline": "Why Iran thinks it won the war despite huge military losses | Mint",
+       "url": "https://www.livemint.com/global/why-iran-thinks-it-won-the-war-despite-huge-military-losses-11775704982317.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-09T03:32:58",
+       "lede": "but so far, it is trump who has appeared more conciliatory. the cease-fire would give u.s. and iranian negotiators time to hammer out a deal, he said. a 10-point iranian proposal calling for sweeping u.s. concessions, including a promise not to attack iran again, lifting of all sanctions on tehran",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.77
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.61
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e503399d0e7fe469a82f46",
+       "headline": "„Totaler Sieg“ im Iran-Krieg - doch diese Punkte im Friedensplan werden zum Problem für Trump",
+       "url": "https://www.gmuender-tagespost.de/welt/politik/nahost-krieg-wird-trump-den-10-punkte-plan-des-iran-akzeptieren-zr-94253725.html",
+       "publisher": "gmuender-tagespost.de",
+       "published_at": "2026-04-08T16:53:49",
+       "lede": "middle east war: iran's 10-point peace plan – and how trump responds print share follow us on google the proposed deal in the middle east war provides for tehran to control the hormus strait and lift all sanctions against the country. the us, israel and iran agreed at the last",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.85
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.6
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.5
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2cec9277be6ed2da4ebf4",
+       "headline": "„Totaler Sieg“ im Iran-Krieg - doch diese Punkte im Friedensplan werden zum Problem für Trump",
+       "url": "https://www.fr.de/politik/nahost-krieg-wird-trump-den-10-punkte-plan-des-iran-akzeptieren-zr-94253725.html",
+       "publisher": "fr.de",
+       "published_at": "2026-04-08T16:53:49",
+       "lede": "middle east war: iran's 10-point peace plan – and how trump responds print share follow us on google the proposed deal in the middle east war provides for tehran to control the hormus strait and lift all sanctions against the country. the us, israel and iran agreed at the last",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.85
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.6
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.5
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2cf95d754bf662ce0dcdd",
+       "headline": "Reports: Iran's 10-Point Peace Plan Demands Full End to Sanctions",
+       "url": "https://www.breitbart.com/middle-east/2026/04/08/reports-irans-10-point-peace-plan-demands-full-end-sanctions-control-strait-hormuz-reparations/",
+       "publisher": "breitbart.com",
+       "published_at": "2026-04-08T15:18:12",
+       "lede": "reports citing iranian state media suggested that iran’s “ten-point plan” to end hostilities with the united states and israel, which president donald trump suggested may be “a workable basis on which to negotiate,” includes provisions such as the lifting of all sanctions on the rogue terror state and “compensation” to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.84
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.61
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69e2d28b7f3a572cf4b53a59",
+       "headline": "UPDATE 3-Trump says US will work closely with Iran, discuss sanctions | Politics",
+       "url": "https://www.devdiscourse.com/article/politics/3866891-update-3-trump-says-us-will-work-closely-with-iran-discuss-sanctions",
+       "publisher": "devdiscourse.com",
+       "published_at": "2026-04-08T15:03:08",
+       "lede": "the united ‌states ​will work closely with iran and the two countries are discussing tariff and sanctions relief, u.s. president donald trump said on wednesday, following the announcement of a two-week ceasefire. trump's upbeat talk towards iran in three wednesday social media posts marks a dramatic, 24-hour turn in tone.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.9
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.69
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2a7806c37f6c5e66bfb19d",
+       "headline": "US and Iran Claim Victory After Last-Minute Ceasefire, Iran Agrees Safe Passage of Vessels Through Hormuz",
+       "url": "https://eng.ruralvoice.in/us-and-iran-claim-victory-after-last-minute-ceasefire-iran-agrees-safe-passage-of-vessels-through-hormuz",
+       "publisher": "eng.ruralvoice.in",
+       "published_at": "2026-04-08T14:00:07",
+       "lede": "the us and iran have agreed to a two-week ceasefire after weeks of escalating conflict, each claiming victory. the deal includes reopening the strait of hormuz and sets the stage for negotiations in islamabad. while israel has joined the truce, tensions persist, with unresolved issues on nuclear policy, sanctions, and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.65
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.64
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.62
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2b83ed754bf662cdbab32",
+       "headline": "Tehran says US must accept uranium program and lift all sanctions in 10-point peace plan",
+       "url": "https://www.malaymail.com/news/world/2026/04/08/tehran-says-us-must-accept-uranium-program-and-lift-all-sanctions-in-10-point-peace-plan/215477",
+       "publisher": "malaymail.com",
+       "published_at": "2026-04-08T09:17:29",
+       "lede": "tehran, april 8 —tehran said today its 10-point plan for securing an end to the war with the united states would require washington to accept its uranium enrichment program and the lifting of all sanctions. the islamic republic claimed victory and said in a statement, released alongside a list of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.7
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.59
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.57
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 8320,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wOCAwOToxNzoyOSIsImkiOiI2OWUyYjgzZWQ3NTRiZjY2MmNkYmFiMzIiLCJwIjo5fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.355,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.363
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,965 @@
+{
+ "slug": "cyclone-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:14:17Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "cyclone",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cyclone",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3976,
+     "tone": {
+      "carrying": 3965,
+      "availability_pct": 99.72,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2309,
+        "share_pct": 58.23
+       },
+       {
+        "group": "neutral",
+        "count": 238,
+        "share_pct": 6.0
+       },
+       {
+        "group": "positive",
+        "count": 1418,
+        "share_pct": 35.76
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3975,
+      "count": 2848,
+      "share_pct": 71.65
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.027,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.03
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "cyclone",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "cyclone",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 562,
+       "critical": 316,
+       "critical_pct": 56.2,
+       "negative": 331,
+       "positive": 188,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 438,
+       "critical": 249,
+       "critical_pct": 56.8,
+       "negative": 227,
+       "positive": 175,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 507,
+       "critical": 259,
+       "critical_pct": 51.1,
+       "negative": 268,
+       "positive": 214,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 848,
+       "critical": 394,
+       "critical_pct": 46.5,
+       "negative": 406,
+       "positive": 395,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 594,
+       "critical": 402,
+       "critical_pct": 67.7,
+       "negative": 388,
+       "positive": 145,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1917,
+       "critical": 1540,
+       "critical_pct": 80.3,
+       "negative": 1481,
+       "positive": 364,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1481,
+       "critical": 1244,
+       "critical_pct": 84.0,
+       "negative": 1145,
+       "positive": 267,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1376,
+       "critical": 1124,
+       "critical_pct": 81.7,
+       "negative": 927,
+       "positive": 405,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 622,
+       "critical": 449,
+       "critical_pct": 72.2,
+       "negative": 351,
+       "positive": 227,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 776,
+       "critical": 584,
+       "critical_pct": 75.3,
+       "negative": 485,
+       "positive": 243,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1126,
+       "critical": 779,
+       "critical_pct": 69.2,
+       "negative": 637,
+       "positive": 425,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1452,
+       "critical": 1036,
+       "critical_pct": 71.3,
+       "negative": 836,
+       "positive": 523,
+       "partial_period": false
+      }
+     ],
+     "total": 11699,
+     "critical_total": 8376,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-10-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.697,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.7
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "cyclone",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cyclone",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3976,
+     "carrying": 2367,
+     "availability_pct": 59.53,
+     "items": [
+      {
+       "country": "united states",
+       "count": 631,
+       "share_pct": 15.87
+      },
+      {
+       "country": "australia",
+       "count": 571,
+       "share_pct": 14.36
+      },
+      {
+       "country": "new zealand",
+       "count": 387,
+       "share_pct": 9.73
+      },
+      {
+       "country": "sri lanka",
+       "count": 119,
+       "share_pct": 2.99
+      },
+      {
+       "country": "india",
+       "count": 111,
+       "share_pct": 2.79
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 548
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.244,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.248
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "cyclone",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "cyclone",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "weather-related travel disruptions",
+       "count": 352,
+       "share": 11.43,
+       "lift": 933.22,
+       "baseline_count": 1,
+       "previous_period_count": 149,
+       "delta_pct": 136.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "extreme weather events",
+       "count": 631,
+       "share": 20.49,
+       "lift": 418.22,
+       "baseline_count": 4,
+       "previous_period_count": 791,
+       "delta_pct": -20.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hurricane and typhoon tracking",
+       "count": 759,
+       "share": 24.65,
+       "lift": 223.58,
+       "baseline_count": 9,
+       "previous_period_count": 1354,
+       "delta_pct": -43.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "tornado and cyclone reports",
+       "count": 438,
+       "share": 14.23,
+       "lift": 290.3,
+       "baseline_count": 4,
+       "previous_period_count": 565,
+       "delta_pct": -22.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hurricane/cyclone impact studies and preparedness",
+       "count": 814,
+       "share": 26.44,
+       "lift": 196.19,
+       "baseline_count": 11,
+       "previous_period_count": 1168,
+       "delta_pct": -30.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3976,
+     "carrying": 3079,
+     "carrier_share_pct": 77.44,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.738,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.741
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "cyclone",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "cyclone",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8a0cb9baafc7356a723b3",
+       "headline": "New Zealand braces for Cyclone Vaianu, North Island evacuations ordered",
+       "url": "https://www.thestar.com.my/news/world/2026/04/11/new-zealand-braces-for-cyclone-vaianu-north-island-evacuations-ordered",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-11T10:15:00",
+       "lede": "april 11 (reuters) - thousands ⁠of new zealanders were ordered to evacuate their ⁠homes on saturday as the country's north island ‌braced for cyclone vaianu, which authorities warned could cause coastal flooding and landslides. vaianu, forecast to bring heavy rain and winds of up ​to 130 kmh (80 mph), was",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.64
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.6
+        }
+       ],
+       "country": "new zealand",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8a4755cfa3e5ba51e2bb7",
+       "headline": "New Zealand’s North Island braces for Cyclone Vaianu with thousands ordered to evacuate",
+       "url": "https://www.theguardian.com/world/2026/apr/11/new-zealands-north-island-braces-for-cyclone-vaianu-with-thousands-ordered-to-evacuate",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-11T03:49:49",
+       "lede": "thousands of new zealanders were ordered to evacuate their homes on saturday as the country’s north island braced for cyclone vaianu, which authorities warned could cause coastal flooding and landslides. vaianu, forecast to bring heavy rain and winds of up to 130 km/h (80 mp/h), was expected to hit on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.65
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.57
+        }
+       ],
+       "country": "new zealand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e89f669baafc7356a5f963",
+       "headline": "New Zealand braces for Cyclone Vaianu, North Island evacuations ordered",
+       "url": "https://www.straitstimes.com/asia/new-zealand-braces-for-cyclone-vaianu-north-island-evacuations-ordered",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-11T01:56:40",
+       "lede": "sign up now: get insights on asia's fast-moving developments april 11 - thousands of new zealanders were ordered to evacuate their homes on saturday as the country's north island braced for cyclone vaianu, which authorities warned could cause coastal flooding and landslides. vaianu, forecast to bring heavy rain and winds",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.57
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.46
+        }
+       ],
+       "country": "new zealand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e852b95cfa3e5ba5e7cb91",
+       "headline": "Cyclone Vaianu moves away from Fiji, but heavy rain warning remains in force",
+       "url": "http://www.radionz.co.nz/international/pacific-news/591750/cyclone-vaianu-moves-away-from-fiji-but-heavy-rain-warning-remains-in-force",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-04-07T22:54:43",
+       "lede": "photo: facebook / fiji roads authority severe tropical cyclone vaianu is currently moving away from fiji, the country's weather office says. vaianu, a category 3 system, battered fiji with heavy rain and winds and caused widespread flooding across the country. \"by 3:00pm today, it is forecast to be located about",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.5
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.42
+        }
+       ],
+       "country": "fiji",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2ce20277be6ed2da4c6af",
+       "headline": "Cyclone Vaianu moves away from Fiji, but heavy rain warning remains in force",
+       "url": "https://www.radionz.co.nz/international/pacific-news/591750/cyclone-vaianu-moves-away-from-fiji-but-heavy-rain-warning-remains-in-force",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-04-07T22:54:43",
+       "lede": "photo: facebook / fiji roads authority severe tropical cyclone vaianu is currently moving away from fiji, the country's weather office says. vaianu, a category 3 system, battered fiji with heavy rain and winds and caused widespread flooding across the country. \"by 3:00pm today, it is forecast to be located about",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.5
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.42
+        }
+       ],
+       "country": "fiji",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c818cb05362d569df212fa",
+       "headline": "Qld and NT brace for Tropical Cyclone Narelle  - ABC listen",
+       "url": "https://www.abc.net.au/listen/programs/pm/qld-and-nt-brace-for-tropical-cyclone-narelle-/106475298",
+       "publisher": "abc.net.au",
+       "published_at": "2026-03-19T06:30:00",
+       "lede": "samantha donovan: communities in far north queensland are preparing for one of the most severe storms they've seen in decades. category 5 cyclone norelle is approaching the east coast of australia and is expected to hit tomorrow morning. in the northern territory, residents of catherine are still cleaning up after",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.66
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.48
+        }
+       ],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbad7236f67c5f5aa45905",
+       "headline": "Cyclone Gabrielle inquest: Wives of volunteer firefighters proud of their work",
+       "url": "https://www.radionz.co.nz/news/national/588049/cyclone-gabrielle-inquest-wives-of-volunteer-firefighters-proud-of-their-work",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-02-26T04:50:56",
+       "lede": "photo: suppliedthe wives of two firefighters killed in a landslide during cyclone gabrielle have recounted the moment they learned their husbands had died.volunteer firefighters dave van zwanenberg and craig stevens were buried while responding to slips on muriwai's motutara road on 13 february 2023.stevens was freed from the pile but",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.75
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "dave",
+        "steven"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bced5193b550fcb824ca0a",
+       "headline": "Cyclone Gabrielle inquest: Wives of volunteer firefighters proud of their work",
+       "url": "http://www.radionz.co.nz/news/national/588049/cyclone-gabrielle-inquest-wives-of-volunteer-firefighters-proud-of-their-work",
+       "publisher": "radionz.co.nz",
+       "published_at": "2026-02-26T04:50:56",
+       "lede": "photo: suppliedthe wives of two firefighters killed in a landslide during cyclone gabrielle have recounted the moment they learned their husbands had died.volunteer firefighters dave van zwanenberg and craig stevens were buried while responding to slips on muriwai's motutara road on 13 february 2023.stevens was freed from the pile but",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.75
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "dave",
+        "steven"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bc7ebf72dfd2e900a3c2bd",
+       "headline": "Cyclone Gabrielle inquest: Wives of volunteer firefighters proud of their work",
+       "url": "https://www.rnz.co.nz/news/national/588049/cyclone-gabrielle-inquest-wives-of-volunteer-firefighters-proud-of-their-work",
+       "publisher": "rnz.co.nz",
+       "published_at": "2026-02-26T04:50:56",
+       "lede": "photo: suppliedthe wives of two firefighters killed in a landslide during cyclone gabrielle have recounted the moment they learned their husbands had died.volunteer firefighters dave van zwanenberg and craig stevens were buried while responding to slips on muriwai's motutara road on 13 february 2023.stevens was freed from the pile but",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.75
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "dave",
+        "steven"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b16ff963d76f4af3c59fa",
+       "headline": "Dozens killed and thousands displaced as powerful cyclone rips through nation: 'It looks like a catastrophic landscape'",
+       "url": "https://www.yahoo.com/news/articles/dozens-killed-thousands-displaced-powerful-010000421.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-02-14T01:00:00",
+       "lede": "tropical cyclone gezani killed at least 31 people after slamming into madagascar's eastern coast this week, leaving thousands without homes and a major city in ruins, reported the ap news. what's happening? gezani tore through toamasina, a port city of about 300,000 on the island's east side, late on tuesday",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b0ecac37f6c5e6629632e",
+       "headline": "Flood warning as ex-cyclone wreaks havoc on far north",
+       "url": "http://www.sbs.com.au/nitv/article/flood-warning-as-ex-cyclone-wreaks-havoc-on-far-north/5zviu7wda",
+       "publisher": "sbs.com.au",
+       "published_at": "2026-01-12T01:04:48",
+       "lede": "queenslanders are bracing for devastating floods as repairs are under way after a tropical cyclone battered the far north coast. after days of intense build-up, ex-tropical cyclone koji ran out of power as it crossed the queensland coast and was downgraded to a tropical low. cyclone warnings have been cancelled,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.77
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c7241e3933a6dd8dcbcf",
+       "headline": "Calls for Early NPF Withdrawals Following Cyclone Damage - Solomon Star News",
+       "url": "https://www.solomonstarnews.com/calls-for-early-npf-withdrawals-following-cyclone-damage/",
+       "publisher": "solomonstarnews.com",
+       "published_at": "2026-04-29T03:33:00",
+       "lede": "by ulutah gina solomon star, gizo calls are mounting from workers and public servants in western province for access to a portion of their national provident fund (npf) savings to support recovery efforts following the recent tropical cyclone that struck parts of western and choiseul provinces. many contributors have expressed",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.66
+        }
+       ],
+       "country": "sri lanka",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e864205cfa3e5ba5f1d753",
+       "headline": "Man dead in Logan County motorcycle crash - WV MetroNews",
+       "url": "https://wvmetronews.com/2026/04/16/one-dead-in-logan-county-motorcycle-crash/",
+       "publisher": "wvmetronews.com",
+       "published_at": "2026-04-16T14:37:51",
+       "lede": "news man dead in logan county motorcycle crash by metronews staff april 16, 2026 - 10:37 am rita, w.va. — a wyoming county man is dead after a motorcycle crash on state route 10 in logan county. sheriff’s deputies said jackie toler, 66, of cyclone, lost control and was thrown",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.65
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "rita"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e856195cfa3e5ba5e9cbbf",
+       "headline": "A safer home: Two cyclone-smashed marae given $27m to rebuild in new location",
+       "url": "https://www.nzherald.co.nz/nz/tangoio-and-petane-marae-to-be-rebuilt-on-safer-hawkes-bay-sites-with-government-funding/Q5GHCNEN4BEH5OY3IQB3RZREGU/",
+       "publisher": "nzherald.co.nz",
+       "published_at": "2026-04-16T00:34:59",
+       "lede": "after the cyclone, both marae were placed in red-zoned land known as category 3. homes and community facilities in these areas were considered unsafe to rebuild, with unmitigable risk to life from future flooding or landslides. “marae play a vital role in supporting whānau and communities, particularly during emergencies,” potaka",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ad2c7bb1410d4ca91686",
+       "headline": "'Most dangerous period': Conditions deteriorate as Cyclone Vaianu makes landfall",
+       "url": "https://www.nzherald.co.nz/nz/cyclone-vaianu-live-updates-rare-red-wind-warnings-in-force-with-cyclone-set-to-make-landfall-today/HXNDWMWBNND57CV476XROHB5JI/",
+       "publisher": "nzherald.co.nz",
+       "published_at": "2026-04-12T03:52:09",
+       "lede": "live home / new zealand cyclone vaianu live updates: rare red wind warnings in force as cyclone makes landfall today nz herald 12 apr, 2026 03:52 am quick read subscribe to listen access to herald premium articles require a premium subscription. subscribe now to listen. subscribe now already a subscriber?",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.61
+        },
+        {
+         "code": 406,
+         "path": "/Science/Earth Sciences/Atmospheric Science",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f47a9d0e7fe4699fb323",
+       "headline": "Neuseeland bereitet sich mit Evakuierungen auf Zyklon \"Vaianu\" vor",
+       "url": "https://www.tagesschau.de/ausland/ozeanien/neuseeland-zyklon-102.html",
+       "publisher": "tagesschau.de",
+       "published_at": "2026-04-11T15:42:58",
+       "lede": "thousands of people in northern new zealand are forced to leave their homes because of a approaching hurricane. the prime minister calls for mutual assistance. the warnings bring back bad memories. new zealand is preparing for the arrival of the cyclone \"vaianu\". the authorities on the north island have asked",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.47
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e34625392cc5e9e8f95690",
+       "headline": "Weather tracker: Cyclone Maila batters Solomon Islands with 115mph winds",
+       "url": "https://www.theguardian.com/environment/2026/apr/10/weather-tracker-cyclone-maila-solomon-islands",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-10T09:11:48",
+       "lede": "severe tropical cyclone maila, currently in the solomon sea, is expected to continue moving south-westwards over the coming days. according to the australian bureau of meteorology, maila had peak sustained winds of 115mph (185km/h), with gusts up to 160mph on thursday, making it the strongest cyclone recorded this far north",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.89
+        }
+       ],
+       "country": "vietnam",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 243,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xMCAwOToxMTo0OCIsImkiOiI2OWUzNDYyNTM5MmNjNWU5ZThmOTU2OTAiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.528,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.531
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,783 @@
+{
+ "slug": "floods-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:14:50Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "floods",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "floods",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6637,
+     "tone": {
+      "carrying": 6599,
+      "availability_pct": 99.43,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 4679,
+        "share_pct": 70.9
+       },
+       {
+        "group": "neutral",
+        "count": 164,
+        "share_pct": 2.49
+       },
+       {
+        "group": "positive",
+        "count": 1756,
+        "share_pct": 26.61
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6632,
+      "count": 5352,
+      "share_pct": 80.7
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.496,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.499
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "floods",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "floods",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1582,
+       "critical": 1285,
+       "critical_pct": 81.2,
+       "negative": 1189,
+       "positive": 349,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1452,
+       "critical": 1211,
+       "critical_pct": 83.4,
+       "negative": 1110,
+       "positive": 308,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 4616,
+       "critical": 3835,
+       "critical_pct": 83.1,
+       "negative": 3815,
+       "positive": 739,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 4119,
+       "critical": 3588,
+       "critical_pct": 87.1,
+       "negative": 3306,
+       "positive": 744,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3845,
+       "critical": 3491,
+       "critical_pct": 90.8,
+       "negative": 2729,
+       "positive": 1035,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2075,
+       "critical": 1737,
+       "critical_pct": 83.7,
+       "negative": 1495,
+       "positive": 511,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1741,
+       "critical": 1536,
+       "critical_pct": 88.2,
+       "negative": 1335,
+       "positive": 371,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1858,
+       "critical": 1700,
+       "critical_pct": 91.5,
+       "negative": 1411,
+       "positive": 410,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1078,
+       "critical": 894,
+       "critical_pct": 82.9,
+       "negative": 756,
+       "positive": 300,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2306,
+       "critical": 1842,
+       "critical_pct": 79.9,
+       "negative": 1685,
+       "positive": 543,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1384,
+       "critical": 1109,
+       "critical_pct": 80.1,
+       "negative": 952,
+       "positive": 402,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1869,
+       "critical": 1507,
+       "critical_pct": 80.6,
+       "negative": 1286,
+       "positive": 511,
+       "partial_period": false
+      }
+     ],
+     "total": 27925,
+     "critical_total": 23735,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-07-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 6.672,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 6.674
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "floods",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "floods",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6637,
+     "carrying": 1871,
+     "availability_pct": 28.19,
+     "items": [
+      {
+       "country": "united states",
+       "count": 416,
+       "share_pct": 6.27
+      },
+      {
+       "country": "indonesia",
+       "count": 204,
+       "share_pct": 3.07
+      },
+      {
+       "country": "india",
+       "count": 183,
+       "share_pct": 2.76
+      },
+      {
+       "country": "new zealand",
+       "count": 93,
+       "share_pct": 1.4
+      },
+      {
+       "country": "australia",
+       "count": 75,
+       "share_pct": 1.13
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 900
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.407,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.408
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "floods",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "floods",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "hurricane/cyclone impact studies and preparedness",
+       "count": 1271,
+       "share": 27.61,
+       "lift": 204.91,
+       "baseline_count": 11,
+       "previous_period_count": 1664,
+       "delta_pct": -23.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "flood mitigation strategies and case studies",
+       "count": 2301,
+       "share": 49.99,
+       "lift": 131.63,
+       "baseline_count": 31,
+       "previous_period_count": 3749,
+       "delta_pct": -38.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "weather-related travel disruptions",
+       "count": 171,
+       "share": 3.71,
+       "lift": 303.25,
+       "baseline_count": 1,
+       "previous_period_count": 116,
+       "delta_pct": 47.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "extreme weather events",
+       "count": 373,
+       "share": 8.1,
+       "lift": 165.37,
+       "baseline_count": 4,
+       "previous_period_count": 504,
+       "delta_pct": -26.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "flood risk assessments",
+       "count": 759,
+       "share": 16.49,
+       "lift": 84.13,
+       "baseline_count": 16,
+       "previous_period_count": 870,
+       "delta_pct": -12.8,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6637,
+     "carrying": 4603,
+     "carrier_share_pct": 69.35,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.858,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.86
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "floods",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "floods",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8e1e85cfa3e5ba54edd66",
+       "headline": "State of emergency declared in Whanganui district",
+       "url": "https://www.nzherald.co.nz/whanganui-chronicle/news/state-of-emergency-declared-in-whanganui-district-with-flooding-forecast-residents-asked-to-prepare-for-evacuation/F2N7XTJPARGNBHFJU3VVDBCUZY/",
+       "publisher": "nzherald.co.nz",
+       "published_at": "2026-04-19T00:41:45",
+       "lede": "during the 2015 floods the peak there was 9.1m. the whanganui river at te rewa is at 16.12m as of 11.40am and is forecast to peak at about 2pm at about 17m. it is 11.75m at pipiriki and receding. a review of whether evacuations will be necessary is expected by",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.51
+        }
+       ],
+       "country": "new zealand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e993a3bdd09a23d08b8d16",
+       "headline": "Mozambique - Proposal for a Grant of USD 1,000,000.00 Emergency Relief Assistance Project in Response to the 2026 Floods in Maputo–Gaza Provinces, From the Special Relief Fund (SRF)",
+       "url": "https://www.afdb.org/ar/documents/mozambique-proposal-grant-usd-100000000-emergency-relief-assistance-project-response-2026-floods-maputo-gaza-provinces-special-relief-fund-srf",
+       "publisher": "afdb.org",
+       "published_at": "2026-04-14T21:20:51",
+       "lede": "mozambique is highly exposed to recurrent climate related hazards, including floods, cyclones, droughts and storm surges, which frequently result in humanitarian crises, malnutrition vulnerability, and significant socioeconomic losses. over recent decades, the country’s vulnerability to extreme weather events has intensified due to climate change, environmental degradation, rapid urbanization in flood",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.59
+        }
+       ],
+       "country": "mozambique",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2e275bd7b10565a4684c6",
+       "headline": "Pakistan et Afghanistan | Des intempéries font 188 morts",
+       "url": "https://www.lapresse.ca/international/asie-et-oceanie/2026-04-07/pakistan-et-afghanistan/des-intemperies-font-188-morts.php",
+       "publisher": "lapresse.ca",
+       "published_at": "2026-04-07T13:48:47",
+       "lede": "(kabul) the heavy rains, floods and snowfalls that have hit afghanistan and pakistan for more than two weeks have killed 188 people, the disaster management agencies of both countries said on tuesday. in afghanistan, already facing one of the worst humanitarian crises in the world, \"123 people have died since",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.78,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e296a53aab8d96aa300f57",
+       "headline": "Nearly 100 Dead In Afghanistan In Storms And Earthquakes",
+       "url": "https://independent.ng/nearly-100-dead-in-afghanistan-in-storms-and-earthquakes/",
+       "publisher": "independent.ng",
+       "published_at": "2026-04-06T08:11:58",
+       "lede": "the country has been hit by heavy rains, floods and a powerful earthquake since march 26. according to the latest update from taliban-controlled authorities, 99 people have died and about 100 others have been injured. thousands of people are reported to have been forced to flee their homes. in recent",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.62
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2b222bd7b10565a3b9f8e",
+       "headline": "Floods, landslides triggered by heavy rain in Afghanistan leave 77 dead in 10 days, authorities say",
+       "url": "https://www.ajc.com/news/2026/04/floods-landslides-triggered-by-heavy-rain-in-afghanistan-leave-77-dead-in-10-days-authorities-say/",
+       "publisher": "ajc.com",
+       "published_at": "2026-04-04T14:51:16",
+       "lede": "nation & world news floods, landslides triggered by heavy rain in afghanistan leave 77 dead in 10 days, authorities say the afghanistan disaster management authority says widespread flooding, landslides and lightning strikes triggered by heavy rain and storms across the country have left 77 people dead and 137 injured over",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.78
+        }
+       ],
+       "country": "afghanistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1566eb63306cd5fc7bc2f",
+       "headline": "'Inherent resilience': Hawaii governor praises community as state recovers from historic floods",
+       "url": "https://us.headtopics.com/news/inherent-resilience-hawaii-governor-praises-community-as-81408233",
+       "publisher": "us.headtopics.com",
+       "published_at": "2026-03-24T20:39:00",
+       "lede": "&amp;#39;inherent resilience&amp;#39;: hawaii governor praises community as state recovers from historic floods cleanup is underway in hawaii after the worst floods in two decades hit oahu and maui, causing an estimated $1 billion in damage. cleanup is underway in hawaii after the state was hit with its worst floods in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.84
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d1469b322e6b3ea7d3f5",
+       "headline": "Mass evacuations in Canaries Storm Therese brings MORE misery to isles",
+       "url": "https://www.the-sun.com/news/16125403/canaries-floods-landslides-storm-therese-misery-isles-set/",
+       "publisher": "the-sun.com",
+       "published_at": "2026-03-23T17:02:23",
+       "lede": "storm therese has sparked mass evacuations across the canaries as the islands are hit by floods, landslides and ferocious winds. british tourists have been caught in the chaos just days before the easter holidays. sign up for the us sun newsletter thank you! email address please provide a valid email.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.82,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.81
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbe0d512cf28a458fc809d",
+       "headline": "Wildfires, Storms, Floods Account for Record 92% of Global Insured Losses: Swiss Re",
+       "url": "https://www.insurancejournal.com/news/national/2026/03/23/863087.htm",
+       "publisher": "insurancejournal.com",
+       "published_at": "2026-03-23T16:10:25",
+       "lede": "wildfires, severe convective storms and floods — also known as secondary perils — accounted for a record 92% of total global natural catastrophe insured losses of us$107 billion in 2025, according to swiss re institute.wildfires set a new loss record after the palisades and eaton fires in los angeles in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.91
+        },
+        {
+         "code": 151,
+         "path": "/Finance/Insurance/Other",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "eaton"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a4efe4f9bcdc12bc0699",
+       "headline": "Ethiopia declares national mourning as flood death toll rises to 80",
+       "url": "https://gulfnews.com/world/africa/ethiopia-declares-national-mourning-as-flood-death-toll-rises-to-80-1.500474045",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-03-14T02:20:51",
+       "lede": "addis ababa: the death toll from floods and landslides in southern ethiopia has risen to 80, with many individuals still missing and thousands displaced as search and rescue operations continue..ethiopian media reported that the house of peoples' representatives has declared three days of national mourning, commencing this saturday..director-general of the",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.77
+        }
+       ],
+       "country": "ethiopia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1d23f17c374136f830a61",
+       "headline": "Unsichtbare Gefahr im Wasser: Behörden in Australien sprechen Warnung aus",
+       "url": "https://www.t-online.de/nachrichten/panorama/naturgewalten/id_101160998/australien-warnung-vor-krokodilen-nach-schweren-ueberflutungen.html",
+       "publisher": "t-online.de",
+       "published_at": "2026-03-09T06:58:40",
+       "lede": "floods in australia warning of invisible danger in water by t-online , dpa 09.03.2026 reading time: 1 min. vehicles travel through flooded roads in katherine south in australia: after heavy floods, the authorities issued a warning to the population. (source: jas streben/dpa) read out current time: 0:00 total time: 0:00",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.75
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbbd6d8518a3ddf180efc2",
+       "headline": "United Nations concerned over devastating floods in Kenya, sends condolence to families who lost love ones - Ghanamma.com",
+       "url": "https://www.ghanamma.com/2026/03/08/united-nations-concerned-over-devastating-floods-in-kenya-sends-condolence-to-families-who-lost-love-ones/",
+       "publisher": "ghanamma.com",
+       "published_at": "2026-03-08T10:54:10",
+       "lede": "the united nations (un) kenya has expressed deep concerns and expressed its regret after devastating floods in nairobi and other parts of the country claimed lives of more than 23 people, displaced and left thousands of families affected.through the un resident coordinator in kenya, dr stephen jackson, the un kenya",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.5
+        }
+       ],
+       "country": "kenya",
+       "organizations": [],
+       "people": [
+        "stephen jackson"
+       ]
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 451,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0yNiAwMDo0Nzo1MSIsImkiOiI2OWJjYzYyOGVjOTQ5MDdkZjEwZGVjZDMiLCJwIjo5fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 11.344,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 11.349
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,926 @@
+{
+ "slug": "nickel-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:28Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "nickel",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nickel",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5117,
+     "tone": {
+      "carrying": 5113,
+      "availability_pct": 99.92,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1095,
+        "share_pct": 21.42
+       },
+       {
+        "group": "neutral",
+        "count": 99,
+        "share_pct": 1.94
+       },
+       {
+        "group": "positive",
+        "count": 3919,
+        "share_pct": 76.65
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 5117,
+      "count": 2182,
+      "share_pct": 42.64
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.886,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.888
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "nickel",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "nickel",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 980,
+       "critical": 353,
+       "critical_pct": 36.0,
+       "negative": 222,
+       "positive": 729,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 838,
+       "critical": 304,
+       "critical_pct": 36.3,
+       "negative": 165,
+       "positive": 650,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1204,
+       "critical": 438,
+       "critical_pct": 36.4,
+       "negative": 322,
+       "positive": 865,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1563,
+       "critical": 460,
+       "critical_pct": 29.4,
+       "negative": 417,
+       "positive": 1109,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1018,
+       "critical": 408,
+       "critical_pct": 40.1,
+       "negative": 168,
+       "positive": 815,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1029,
+       "critical": 367,
+       "critical_pct": 35.7,
+       "negative": 172,
+       "positive": 818,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1090,
+       "critical": 403,
+       "critical_pct": 37.0,
+       "negative": 207,
+       "positive": 853,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1150,
+       "critical": 417,
+       "critical_pct": 36.3,
+       "negative": 230,
+       "positive": 890,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1045,
+       "critical": 436,
+       "critical_pct": 41.7,
+       "negative": 209,
+       "positive": 814,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1370,
+       "critical": 613,
+       "critical_pct": 44.7,
+       "negative": 316,
+       "positive": 1023,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1095,
+       "critical": 441,
+       "critical_pct": 40.3,
+       "negative": 204,
+       "positive": 869,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1607,
+       "critical": 692,
+       "critical_pct": 43.1,
+       "negative": 366,
+       "positive": 1213,
+       "partial_period": false
+      }
+     ],
+     "total": 13989,
+     "critical_total": 5332,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.388,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.391
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "nickel",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nickel",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5117,
+     "carrying": 3139,
+     "availability_pct": 61.34,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1944,
+       "share_pct": 37.99
+      },
+      {
+       "country": "canada",
+       "count": 301,
+       "share_pct": 5.88
+      },
+      {
+       "country": "united kingdom",
+       "count": 132,
+       "share_pct": 2.58
+      },
+      {
+       "country": "indonesia",
+       "count": 115,
+       "share_pct": 2.25
+      },
+      {
+       "country": "china",
+       "count": 93,
+       "share_pct": 1.82
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 554
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.945,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.948
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "nickel",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "nickel",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mineral exploration drilling techniques",
+       "count": 166,
+       "share": 5.42,
+       "lift": 442.4,
+       "baseline_count": 1,
+       "previous_period_count": 123,
+       "delta_pct": 35.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "metal commodity trading trends",
+       "count": 89,
+       "share": 2.91,
+       "lift": 237.19,
+       "baseline_count": 1,
+       "previous_period_count": 20,
+       "delta_pct": 345.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "battery charging systems",
+       "count": 89,
+       "share": 2.91,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 68,
+       "delta_pct": 30.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "industrial metal market analysis",
+       "count": 122,
+       "share": 3.98,
+       "lift": 162.57,
+       "baseline_count": 2,
+       "previous_period_count": 37,
+       "delta_pct": 229.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "battery backup systems for electronics",
+       "count": 67,
+       "share": 2.19,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 51,
+       "delta_pct": 31.4,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 5117,
+     "carrying": 3063,
+     "carrier_share_pct": 59.86,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.37,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.376
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "nickel",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "nickel",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e85d159baafc735678b995",
+       "headline": "Nickel Mines shooter's widow plans to remarry",
+       "url": "https://lancasteronline.com/news/nickel-mines-shooters-widow-plans-to-remarry/article_26f70c69-1eec-54ca-ac5b-3fc0ce590e69.html",
+       "publisher": "lancasteronline.com",
+       "published_at": "2026-04-16T00:00:00",
+       "lede": "marie roberts, widow of the georgetown man who killed five young amish girls in a nickel mines schoolhouse last october, plans to remarry. roberts, 29, has three young children. her fiance, an insurance salesman, is divorced and has two children. they plan to marry in the fall, the new york",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.82,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.6
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "marie"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8dfe65cfa3e5ba54d4318",
+       "headline": "NASA's Perseverance Detects That 3-Billion-Year-Old Mars Rocks Contain Something Never Seen Before at This Scale",
+       "url": "https://dailygalaxy.com/2026/04/rover-found-mars-rocks-contain-something/",
+       "publisher": "dailygalaxy.com",
+       "published_at": "2026-04-16T11:45:00",
+       "lede": "nasa’s perseverance rover has spotted unusually high levels of nickel in ancient mars rocks, pointing to a surprisingly rich chemical environment billions of years ago. the finding comes from neretva vallis and echoes mineral patterns that, on earth, are sometimes linked to microbial activity. this does not prove that life",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 254,
+         "path": "/Science/Earth Sciences/Geology",
+         "score": 0.63
+        },
+        {
+         "code": 131,
+         "path": "/Science/Astronomy",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dbdaffc2165b0294314776",
+       "headline": "Hyundai Motor Group partners Korea Zinc on nickel value chain for EV business | Autocar Professional",
+       "url": "https://www.autocarpro.in/news-international/hyundai-motor-group-partners-korea-zinc-on-nickel-value-chain-for-ev-business-116571",
+       "publisher": "autocarpro.in",
+       "published_at": "2026-04-12T00:00:00",
+       "lede": "will work towards establishing a stable supply chain for nickel, a critical raw material for ev batteries; involves joint sourcing and processing of nickel raw material, ensuring a stable supply of processed nickel and battery materials, and exploring new businesses, including battery recycling. hyundai motor group announced today the signing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.94,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.56
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.55
+        },
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "south korea",
+       "organizations": [
+        "hyundai motor group",
+        "supply chain"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e28f8edc480588dc9a1ece",
+       "headline": "Indonesia’s Electric Vehicle Vision Boosted by South Korea’s Strategic Partnership: A Key to Tourism and Economic Growth - Travel And Tour World",
+       "url": "https://www.travelandtourworld.com/news/article/indonesias-electric-vehicle-vision-boosted-by-south-koreas-strategic-partnership-a-key-to-tourism-and-economic-growth/",
+       "publisher": "travelandtourworld.com",
+       "published_at": "2026-04-05T08:52:45",
+       "lede": "indonesia’s electric vehicle vision boosted by south korea’s strategic partnership: a key to tourism and economic growth image generated with ai indonesia, the world’s largest nickel producer, is keen to transition from being a supplier of raw materials to a full-fledged electric vehicle (ev) and battery hub. south korea is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.84,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 63,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
+         "score": 0.55
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.52
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.47
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a778b5cefb83fe807055d",
+       "headline": "Nickel: Regulator action is driving increased digital asset investment",
+       "url": "https://www.financialinvestigator.nl/nl/nieuws-detailpagina/2026/04/01/nickel-regulator-action-is-driving-increased-digital-asset-investment",
+       "publisher": "financialinvestigator.nl",
+       "published_at": "2026-04-01T07:10:00",
+       "lede": "nickel: regulator action is driving increased digital asset investment 1 april 2026 improvements to digital asset regulatory frameworks are the main reason convincing professional investors to take their first stakes in the sector, according to new global research by nickel digital asset management (nickel). its study with institutional investors and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.95
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1ee3fef7caa4b80daa11a",
+       "headline": "【SMM Analysis】Windfall or Export Levy? Inside Indonesia's Upcoming Commodities’ Tax - Shanghai Metals Market (SMM)",
+       "url": "https://news.metal.com/en/newscontent/103829040-SMM-AnalysisWindfall-or-Export-Levy-Inside-Indonesias-Upcoming-Commodities%E2%80%99-Tax",
+       "publisher": "news.metal.com",
+       "published_at": "2026-03-27T00:00:00",
+       "lede": "recent volatility in the indonesian commodities sector has been driven by mixed signals regarding new fiscal policies. market participants are currently evaluating the implications of two distinct regulatory mechanisms: a broader windfall tax on bulk commodities like coal, nickel, and a targeted export duty. the conflation of these two policies",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.46
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e17e5cfa3e5ba54e86ea",
+       "headline": "Global Alloy Price Shock and Its Impact on the Mold Steel Market: A Structural Analysis",
+       "url": "https://www.linkedin.com/pulse/global-alloy-price-shock-its-impact-mold-steel-market-structural-ryi2c",
+       "publisher": "linkedin.com",
+       "published_at": "2026-02-27T09:43:20",
+       "lede": "the mold steel industry is confronting unprecedented cost pressures in early 2026, driven by a synchronized global surge in prices of critical alloying elements—molybdenum (mo), vanadium (v), and nickel (ni) . unlike previous price cycles dominated by traditional raw materials, this round constitutes a fundamental global pricing reset with profound",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.78
+        },
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.72
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8d2a79baafc7356d0b99c",
+       "headline": "Inside India’s battery recycling push: securing materials for the next phase of EV manufacturing - Manufacturing Today India",
+       "url": "https://www.manufacturingtodayindia.com/inside-indias-battery-recycling-push-securing-materials-for-the-next-phase-of-ev-manufacturing",
+       "publisher": "manufacturingtodayindia.com",
+       "published_at": "2026-02-24T05:27:11",
+       "lede": "india’s electric vehicle manufacturing ambitions are entering a decisive phase. the early push focused on incentives, vehicle assembly lines, and consumer adoption. the next stage will be defined by access to materials. lithium, cobalt, nickel, graphite, copper, manganese, and rare earth elements are no longer abstract inputs. they are the",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.69
+        },
+        {
+         "code": 63,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc558d6e63f1d2405610e9",
+       "headline": "China set to seek new nickel sources amid US agreement",
+       "url": "https://www.pressreader.com/china/south-china-morning-post-6150/20260224/281951729289783",
+       "publisher": "pressreader.com",
+       "published_at": "2026-02-23T21:07:00",
+       "lede": "south china morning postchina set to seek new nickel sources amid us agreementdeal expected to threaten beijing’s ‘entrenched position’ in the indonesian market, analysts say2026-02-24 - kandy.wong@scmp.com kandy wong additional reporting by ji siqi - kandy.wong@scmp.com kandy wong additional reporting by ji siqichina will accelerate investment in alternativ­e nickel supply",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.48
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.47
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc11184755dcbc8757d2ca",
+       "headline": "Nickel jumps as top Indonesia mine gets lower output quota",
+       "url": "https://www.zawya.com/en/business/commodities/nickel-jumps-as-top-indonesia-mine-gets-lower-output-quota-ukxxca5r",
+       "publisher": "zawya.com",
+       "published_at": "2026-02-11T12:14:08",
+       "lede": "nickel rose for a fourth straight session on wednesday after the ​world's biggest nickel ⁠mine in indonesia received a sharply reduced output quota for this year.benchmark ‌three-month nickel on the london metal exchange was up 2.1% to $17,860 per metric ton as ​of 1000 gmt. the metal used to make",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.73
+        },
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.69
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986b5439438ce100b18756d",
+       "headline": "China investors flood metals markets amid economic slowdown",
+       "url": "https://bitcoinethereumnews.com/finance/china-investors-flood-metals-markets-amid-economic-slowdown/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-02-06T05:47:32",
+       "lede": "chinese investors are rushing into metals. prices for copper, gold, and silver have exploded. this isn’t because factories need more materials. it’s because people in china have too much cash and nowhere real to put it.trading on chinese futures exchanges has gone wild. silver, aluminum, nickel, tin, and steel wire",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bb5bcf51c35210b7b77c3b",
+       "headline": "China investors flood metals markets amid economic slowdown - Cryptopolitan",
+       "url": "https://www.cryptopolitan.com/china-investors-flood-metals-markets/",
+       "publisher": "cryptopolitan.com",
+       "published_at": "2026-02-06T05:39:29",
+       "lede": "chinese investors are rushing into metals. prices for copper, gold, and silver have exploded. this isn’t because factories need more materials. it’s because people in china have too much cash and nowhere real to put it.trading on chinese futures exchanges has gone wild. silver, aluminum, nickel, tin, and steel wire",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.53
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a98b8c37f6c5e66d5c9f9",
+       "headline": "India to unveil incentives for lithium, nickel processing, sources say - BatteryIndustry.net",
+       "url": "https://batteryindustry.net/india-to-unveil-incentives-for-lithium-nickel-processing-sources-say/",
+       "publisher": "batteryindustry.net",
+       "published_at": "2026-01-29T14:55:35",
+       "lede": "nickel and lithium are critical to india’s ev supply chain, especially when it comes to batteries, as new delhi targets 30% electric car penetration and 80% for two-wheelers by 2030 from 4% and 6% at present. the incentive plan proposes a 15% capital subsidy for eligible investments in lithium and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.69
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986087c11e3205ec98f401a",
+       "headline": "China’s Metals Markets Surge on Bullish Outlooks | OilPrice.com",
+       "url": "http://oilprice.com/Energy/Energy-General/Chinas-Metals-Markets-Surge-on-Bullish-Outlooks.html",
+       "publisher": "oilprice.com",
+       "published_at": "2026-01-11T22:00:00",
+       "lede": "traders are betting record amounts of money on china’s metals markets, expecting a continued rally in the prices of base metals and lithium.at the end of 2025 and the start of 2026, speculators held record-high open interest in the base metals copper, zinc, nickel, tin, lead, and aluminum traded on",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 97,
+         "path": "/Finance/Investing/Commodities & Futures Trading",
+         "score": 0.78
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.69
+        },
+        {
+         "code": 114,
+         "path": "/Business & Industrial/Metals & Mining/Precious Metals",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 276,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMS0xMSAyMjowMDowMCIsImkiOiI2OTg2MDg3YzExZTMyMDVlYzk4ZjQwMWEiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.129,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.132
+    }
+   }
+  }
+ ]
+}

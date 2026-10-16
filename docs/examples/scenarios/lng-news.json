@@ -1,0 +1,1090 @@
+{
+ "slug": "lng-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:15:27Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "LNG",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "lng",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 31429,
+     "tone": {
+      "carrying": 31406,
+      "availability_pct": 99.93,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 19781,
+        "share_pct": 62.98
+       },
+       {
+        "group": "neutral",
+        "count": 454,
+        "share_pct": 1.45
+       },
+       {
+        "group": "positive",
+        "count": 11171,
+        "share_pct": 35.57
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 31427,
+      "count": 26802,
+      "share_pct": 85.28
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.692,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.713
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "LNG",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "lng",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2132,
+       "critical": 1635,
+       "critical_pct": 76.7,
+       "negative": 700,
+       "positive": 1396,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2216,
+       "critical": 1773,
+       "critical_pct": 80.0,
+       "negative": 916,
+       "positive": 1279,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2254,
+       "critical": 1700,
+       "critical_pct": 75.4,
+       "negative": 835,
+       "positive": 1388,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3126,
+       "critical": 2545,
+       "critical_pct": 81.4,
+       "negative": 986,
+       "positive": 2102,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3003,
+       "critical": 2366,
+       "critical_pct": 78.8,
+       "negative": 1043,
+       "positive": 1929,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2946,
+       "critical": 2431,
+       "critical_pct": 82.5,
+       "negative": 1152,
+       "positive": 1756,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2737,
+       "critical": 2207,
+       "critical_pct": 80.6,
+       "negative": 875,
+       "positive": 1812,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2760,
+       "critical": 2157,
+       "critical_pct": 78.2,
+       "negative": 838,
+       "positive": 1886,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2901,
+       "critical": 2199,
+       "critical_pct": 75.8,
+       "negative": 942,
+       "positive": 1909,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4024,
+       "critical": 3108,
+       "critical_pct": 77.2,
+       "negative": 1366,
+       "positive": 2578,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 14692,
+       "critical": 13311,
+       "critical_pct": 90.6,
+       "negative": 11511,
+       "positive": 3014,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 9812,
+       "critical": 8184,
+       "critical_pct": 83.4,
+       "negative": 5962,
+       "positive": 3670,
+       "partial_period": false
+      }
+     ],
+     "total": 52603,
+     "critical_total": 43616,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 5.801,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 5.823
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "LNG",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "lng",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 31429,
+     "carrying": 17033,
+     "availability_pct": 54.2,
+     "items": [
+      {
+       "country": "united states",
+       "count": 6604,
+       "share_pct": 21.01
+      },
+      {
+       "country": "india",
+       "count": 1921,
+       "share_pct": 6.11
+      },
+      {
+       "country": "iran",
+       "count": 878,
+       "share_pct": 2.79
+      },
+      {
+       "country": "china",
+       "count": 812,
+       "share_pct": 2.58
+      },
+      {
+       "country": "united arab emirates",
+       "count": 637,
+       "share_pct": 2.03
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 6181
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.025,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.027
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "LNG",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "lng",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "natural gas liquefaction processes",
+       "count": 4397,
+       "share": 19.64,
+       "lift": 267.18,
+       "baseline_count": 6,
+       "previous_period_count": 2087,
+       "delta_pct": 110.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "liquefied natural gas (lng) storage",
+       "count": 4646,
+       "share": 20.75,
+       "lift": 241.98,
+       "baseline_count": 7,
+       "previous_period_count": 2125,
+       "delta_pct": 118.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "international certifications for oil & gas",
+       "count": 911,
+       "share": 4.07,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 123,
+       "delta_pct": 640.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "natural gas extraction processes",
+       "count": 2979,
+       "share": 13.31,
+       "lift": 181.02,
+       "baseline_count": 6,
+       "previous_period_count": 1402,
+       "delta_pct": 112.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "gas flaring reduction techniques",
+       "count": 1357,
+       "share": 6.06,
+       "lift": 247.37,
+       "baseline_count": 2,
+       "previous_period_count": 542,
+       "delta_pct": 150.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 31429,
+     "carrying": 22390,
+     "carrier_share_pct": 71.24,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.537,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.544
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "LNG",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "lng",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69efaa83a84b609af2b2c6ce",
+       "headline": "West Asia conflict could cause 120 bcm of LNG supply loss from 2026-2030, says International Energy Agency",
+       "url": "https://www.thehindu.com/business/Industry/west-asia-conflict-could-cause-120-bcm-of-lng-supply-loss-from-2026-2030-says-international-energy-agency/article70900839.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-04-24T07:57:37",
+       "lede": "the west asia conflict could result in the loss ​of around 120 billion cubic metres (bcm) of cumulative ‌liquefied natural gas (lng) supply between 2026 and ​2030, or 15% of expected global ⁠supply, due to short-term disruptions to flows and slower capacity growth, the international energy agency (iea) said on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        }
+       ],
+       "country": "qatar",
+       "organizations": [
+        "international energy agency"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efabf88a54b8f07c974be7",
+       "headline": "Transport blackout in 40 days – €50 billion and 500 million barrels of oil sunk in the Persian Gulf – Waterloo for tourism",
+       "url": "https://www.bankingnews.gr/analyseis-ektheseis/articles/870696/transport-blackout-in-40-days-50-billion-and-500-million-barrels-of-oil-sunk-in-the-persian-gulf-waterloo-for-tourism",
+       "publisher": "bankingnews.gr",
+       "published_at": "2026-04-24T00:00:00",
+       "lede": "state-owned qatar energy completely halted lng production and declared force majeure on long-term supply contracts. qatar lost one-fifth of its lng export capacity. recovery is expected to take at least three to five years. due to the inability to export oil, the onshore and offshore tanks of middle east exporters",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.9
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.51
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e879175cfa3e5ba5ff17d3",
+       "headline": "LNG shortage triggers extensive blackouts in Pakistan",
+       "url": "https://theprint.in/world/lng-shortage-triggers-extensive-blackouts-in-pakistan/2906583/",
+       "publisher": "theprint.in",
+       "published_at": "2026-04-16T12:15:23",
+       "lede": "the south asian country is facing its biggest energy crisis in years as the war in iran has effectively shut the strait of hormuz, while qatar was forced to halt exports at the world’s largest lng plant after attacks in early march. the country’s power shortfall touched 4,500 megawatts on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        }
+       ],
+       "country": "united arab emirates",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9b935cefb83fe81e9416",
+       "headline": "Energy prices set to rise as last Gulf Tankers reach Europe",
+       "url": "https://euronews.com/my-europe/2026/04/14/energy-prices-set-to-rise-as-last-gulf-tankers-reach-europe-analysts-say",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-14T14:04:21",
+       "lede": "europe should prepare for a renewed surge in energy prices, as the last oil and lng tankers to depart the strait of hormuz before the middle east conflict have now reached their destinations, analysts warned.eu countries have been relying on emergency oil reserves released by the international energy agency on",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.88
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8416e9baafc735667cfdc",
+       "headline": "Strait of Hormuz Shipping Traffic: Security Risks and Future Outlook - Time News",
+       "url": "https://time.news/strait-of-hormuz-shipping-traffic-security-risks-and-future-outlook/",
+       "publisher": "time.news",
+       "published_at": "2026-04-14T13:05:54",
+       "lede": "the strait of hormuz remains the world’s most critical maritime chokepoint, a narrow corridor of water where global energy security meets volatile geopolitics. for the global economy, the math is simple but precarious: the vast majority of the world’s liquefied natural gas (lng) and roughly one-fifth of the global oil",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 81,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Maritime Transport",
+         "score": 0.88
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e85fc29baafc73567a39bc",
+       "headline": "Which Asian Countries Are Most at Risk From the Iran Energy Shock?",
+       "url": "https://thediplomat.com/2026/04/which-asian-countries-are-most-at-risk-from-the-iran-energy-shock/",
+       "publisher": "thediplomat.com",
+       "published_at": "2026-04-13T20:26:00",
+       "lede": "the conflict in the middle east effectively halted shipments through the strait of hormuz, all but cutting off a fifth of the world’s supply of oil and liquefied natural gas (or lng). few regions have been impacted as much as the asia-pacific. in total, around 60 percent of the region’s",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.78
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.52
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.45
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e85e2e5cfa3e5ba5ee5a2d",
+       "headline": "Southeast Asia Faces Energy Reality Check as War Bites",
+       "url": "https://www.energyintel.com/0000019d-620b-d7a3-a59d-72af30f30000",
+       "publisher": "energyintel.com",
+       "published_at": "2026-04-09T20:07:25",
+       "lede": "the energy crisis unleashed by the us-israeli war against iran is hitting southeast asia not as a distant market shock but as a direct test of the region's economic model. asia is a fast-growing demand center, but much of southeast asia remains heavily dependent on imported oil and lng, leaving",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.77
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c8e3bd7b10565a40b68c",
+       "headline": "Facts about the Strait of Hormuz since its negotiated reopening",
+       "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/04/08/facts-about-the-strait-of-hormuz-since-its-negotiated-reopening",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-08T21:30:00",
+       "lede": "paris: here are the latest key facts about the situation in the strait of hormuz, a crucial shipping lane that iran has agreed to reopening if the us-israeli attacks cease, with two ships passing since. around a fifth of global crude oil and liquefied natural gas (lng) passes through the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.81
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2d05b3aab8d96aa3c648d",
+       "headline": "Shippers seek clarity on Hormuz reopening after US-Iran ceasefire deal",
+       "url": "https://journalrecord.com/2026/04/08/hormuz-strait-shipping-clarity-us-iran-ceasefire/",
+       "publisher": "journalrecord.com",
+       "published_at": "2026-04-08T16:29:12",
+       "lede": "listen to this article listen to this article summary: – traffic through the strait of hormuz, a key oil and lng route, halted for six weeks. – major shippers including maersk and hapag lloyd remain cautious until ceasefire details are confirmed. – interest grows among asian refiners and global traders",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 81,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Maritime Transport",
+         "score": 0.82
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.71
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.6
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e4f3ee430a4927fdbc9ebd",
+       "headline": "Key Facts on Strait of Hormuz Following Its Negotiated Reopening",
+       "url": "https://www.deccanchronicle.com/world/key-facts-on-the-strait-of-hormuz-following-its-negotiated-reopening-1949299",
+       "publisher": "deccanchronicle.com",
+       "published_at": "2026-04-08T14:30:13",
+       "lede": "paris: here are the latest key facts about the situation in the strait of hormuz, a crucial shipping lane that iran has agreed to reopening if the us-israeli attacks cease, with two ships passing since. around a fifth of global crude oil and liquefied natural gas (lng) passes through the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.82
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e874739baafc735687bfc9",
+       "headline": "US ceasefire may boost LPG, LNG supplies to India in short term",
+       "url": "https://www.thehindubusinessline.com/markets/commodities/us-ceasefire-may-boost-lpg-lng-supplies-to-india-in-short-term/article70837696.ece",
+       "publisher": "thehindubusinessline.com",
+       "published_at": "2026-04-08T08:33:57",
+       "lede": "the two-week ceasefire declared by the us president donald trump is expected to help ease supplies of lpg and lng to india, even as it will take months for crude oil and refined product flows to normalise. besides, the development is bearish for crude oil and product prices in the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.78
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.68
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.58
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.4
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "lpg"
+       ],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "6a2a7c98c37f6c5e66c2d42a",
+       "headline": "Why I'm Fading a 'Ceasefire Rally' as Trump's Iran Deadline Approaches | TheStreet Pro",
+       "url": "https://pro.thestreet.com/market-commentary/why-im-fading-a-ceasefire-rally-as-trumps-iran-deadline-approaches",
+       "publisher": "pro.thestreet.com",
+       "published_at": "2026-04-06T13:35:00",
+       "lede": "donald trump i continue to fade any “ceasefire” type of rally. a ceasefire will allow shipments to transit the strait of hormuz. the bottlenecks in oil, gas, lng, etc. will be reduced. supplies will be stockpiled. a short ceasefire won’t get the economy back to where it was before the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.76
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.53
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.46
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e293dfdc480588dc9ade44",
+       "headline": "International Ships Resume Passage Through Strait of Hormuz Amid Iran Conflict - Time News",
+       "url": "https://time.news/international-ships-resume-passage-through-strait-of-hormuz-amid-iran-conflict/",
+       "publisher": "time.news",
+       "published_at": "2026-04-06T09:06:56",
+       "lede": "the narrow waters of the strait of hormuz, the world’s most critical artery for liquefied natural gas (lng), are seeing a cautious return of activity. for the first time since the current regional conflict escalated, ships carrying qatari lng are attempting to exit the persian gulf, signaling a tentative test",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.7
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.52
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e897037bb1410d4c96e8fd",
+       "headline": "How war on Iran turned Pakistan’s LNG surplus into a looming shortage",
+       "url": "http://www.aljazeera.com/news/2026/4/3/how-war-on-iran-turned-pakistans-lng-surplus-into-a-looming-shortage",
+       "publisher": "aljazeera.com",
+       "published_at": "2026-04-03T04:55:17",
+       "lede": "islamabad, pakistan – at the start of this year, pakistan had more imported liquefied natural gas (lng) than it could use. demand had been falling for three straight years, from a peak of 8.2 million tonnes in 2021 to 6.1 million tonnes by late 2025, as cheap solar panels flooded",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.64
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e27cb9a85be7e50654b723",
+       "headline": "How war on Iran turned Pakistan’s LNG surplus into a looming shortage",
+       "url": "https://www.aljazeera.com/news/2026/4/3/how-war-on-iran-turned-pakistans-lng-surplus-into-a-looming-shortage",
+       "publisher": "aljazeera.com",
+       "published_at": "2026-04-03T04:55:17",
+       "lede": "islamabad, pakistan – at the start of this year, pakistan had more imported liquefied natural gas (lng) than it could use. demand had been falling for three straight years, from a peak of 8.2 million tonnes in 2021 to 6.1 million tonnes by late 2025, as cheap solar panels flooded",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.64
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e283cfc1991f786ce248d0",
+       "headline": "Iran US war LIVE Updates: US F-15 fighter jet shot down in Iran; rescue ops launched | Today News",
+       "url": "https://www.livemint.com/news/world/iran-us-war-news-live-updates-april-3-strait-of-hormuz-donald-trump-netanyahu-araghchi-brent-crude-oil-prices-gold-11775180285895.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-03T02:24:49",
+       "lede": "iran us war live updates: as tensions escalate across west asia, mea spokesperson randhir jaiswal said that india is in touch with iran and other countries to ensure unimpeded transit and safe passage for indian ships carrying lpg, lng, and other productsiran us war live: what happened in the last",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.92
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.46
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "mea",
+        "lpg"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d1108727737c4d41400cdb",
+       "headline": "Crude oil and LNG supply are at risk of the worst-possible scenario: Russell | BOE Report",
+       "url": "https://boereport.com/2026/03/29/crude-oil-and-lng-supply-are-at-risk-of-the-worst-possible-scenario-russell/",
+       "publisher": "boereport.com",
+       "published_at": "2026-03-30T00:22:49",
+       "lede": "a month after u.s. and israeli strikes on iran, global markets for the supply of crude oil, refined products and liquefied natural gas are already in the second-worst possible scenario. everything hinges on the strait of hormuz. this chokepoint, which normally carries around 20% of global crude, products and lng,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.66
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.6
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.59
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8b0de9baafc7356b4b613",
+       "headline": "L’Iran entrouvre (un peu) la porte d’Ormuz, mais pas à tout le monde",
+       "url": "https://www.lesoir.be/736903/article/2026-03-25/liran-entrouvre-un-peu-la-porte-dormuz-mais-pas-tout-le-monde",
+       "publisher": "lesoir.be",
+       "published_at": "2026-03-25T16:25:15",
+       "lede": "since the start of the \"epic furia\" operation, traffic in the strait of ormuz has fallen by more than 90%. this vital artery for world trade saw the transit of about one-fifth of the oil and liquefied natural gas (lng) that feed the planet daily. but the war between the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a7534c37f6c5e66bdc2dd",
+       "headline": "Qatar LNG Crisis Deepens Amid Escalating Iran Conflict | SeaNews",
+       "url": "https://www.seanews.com.tr/article/qatar-lng-damage-yanbu-strikes-deepen-crisis-mn3ga6lv",
+       "publisher": "seanews.com.tr",
+       "published_at": "2026-03-23T17:19:11",
+       "lede": "the iran war has inflicted its most severe blow yet on global energy infrastructure, with qatarenergy confirming catastrophic damage to two lng trains and fresh strikes on middle east energy hubs, reports singapore's splash 247. qatarenergy stated that rasgas trains 4 and 6, representing 12.8 million tonnes per annum of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.59
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.57
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.53
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 19,
+     "total_estimate": 7666,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yMyAxNzoxOToxMSIsImkiOiI2YTJhNzUzNGMzN2Y2YzVlNjZiZGMyZGQiLCJwIjo5fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.391,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.393
+    }
+   }
+  }
+ ]
+}

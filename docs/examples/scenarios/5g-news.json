@@ -1,0 +1,768 @@
+{
+ "slug": "5g-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:13:35Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "5G",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "5g",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12258,
+     "tone": {
+      "carrying": 12254,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 592,
+        "share_pct": 4.83
+       },
+       {
+        "group": "neutral",
+        "count": 183,
+        "share_pct": 1.49
+       },
+       {
+        "group": "positive",
+        "count": 11479,
+        "share_pct": 93.68
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 12257,
+      "count": 5697,
+      "share_pct": 46.48
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.036,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.038
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "5G",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "5g",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2445,
+       "critical": 977,
+       "critical_pct": 40.0,
+       "negative": 141,
+       "positive": 1987,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2350,
+       "critical": 1184,
+       "critical_pct": 50.4,
+       "negative": 137,
+       "positive": 2176,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2824,
+       "critical": 1158,
+       "critical_pct": 41.0,
+       "negative": 220,
+       "positive": 2540,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 4374,
+       "critical": 1756,
+       "critical_pct": 40.1,
+       "negative": 340,
+       "positive": 3477,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 3042,
+       "critical": 1373,
+       "critical_pct": 45.1,
+       "negative": 145,
+       "positive": 2862,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2572,
+       "critical": 1421,
+       "critical_pct": 55.2,
+       "negative": 127,
+       "positive": 2433,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2532,
+       "critical": 1338,
+       "critical_pct": 52.8,
+       "negative": 141,
+       "positive": 2365,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 3420,
+       "critical": 1091,
+       "critical_pct": 31.9,
+       "negative": 105,
+       "positive": 2305,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2345,
+       "critical": 1031,
+       "critical_pct": 44.0,
+       "negative": 154,
+       "positive": 2116,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3101,
+       "critical": 1525,
+       "critical_pct": 49.2,
+       "negative": 142,
+       "positive": 2915,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3573,
+       "critical": 1788,
+       "critical_pct": 50.0,
+       "negative": 145,
+       "positive": 3402,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3239,
+       "critical": 1353,
+       "critical_pct": 41.8,
+       "negative": 151,
+       "positive": 3046,
+       "partial_period": false
+      }
+     ],
+     "total": 35817,
+     "critical_total": 15995,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.181,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.186
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "5G",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "5g",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12258,
+     "carrying": 5741,
+     "availability_pct": 46.83,
+     "items": [
+      {
+       "country": "india",
+       "count": 1772,
+       "share_pct": 14.46
+      },
+      {
+       "country": "united states",
+       "count": 1382,
+       "share_pct": 11.27
+      },
+      {
+       "country": "china",
+       "count": 298,
+       "share_pct": 2.43
+      },
+      {
+       "country": "south korea",
+       "count": 244,
+       "share_pct": 1.99
+      },
+      {
+       "country": "united kingdom",
+       "count": 207,
+       "share_pct": 1.69
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1838
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.992,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.994
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "5G",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "5g",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mobile phone battery performance",
+       "count": 1116,
+       "share": 15.23,
+       "lift": 1243.16,
+       "baseline_count": 1,
+       "previous_period_count": 1338,
+       "delta_pct": -16.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone connectivity standards (5g, lte)",
+       "count": 1003,
+       "share": 13.69,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 639,
+       "delta_pct": 57.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mobile phone hardware components",
+       "count": 995,
+       "share": 13.58,
+       "lift": 1108.38,
+       "baseline_count": 1,
+       "previous_period_count": 1078,
+       "delta_pct": -7.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "5g network infrastructure",
+       "count": 1209,
+       "share": 16.5,
+       "lift": 673.38,
+       "baseline_count": 2,
+       "previous_period_count": 1012,
+       "delta_pct": 19.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile phone storage solutions",
+       "count": 583,
+       "share": 7.96,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1174,
+       "delta_pct": -50.3,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 12258,
+     "carrying": 7328,
+     "carrier_share_pct": 59.78,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.008,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.012
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "5G",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "5g",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2e42ec3a4d098b40b7c703",
+       "headline": "Orange weighs Nvidia against Intel for 5G chips ahead of new RFP",
+       "url": "https://lightreading.com/5g/orange-weighs-nvidia-against-intel-for-5g-chips-ahead-of-new-rfp",
+       "publisher": "lightreading.com",
+       "published_at": "2026-04-29T08:00:00",
+       "lede": "the telecom industry shines at raising and dashing hopes. the 5g standard launched in 2019 promised remote surgery and billions of connected objects, and for some unfathomable reason was supposedly needed in self-driving cars. seven years later, its main use case is speeding up tiktok downloads. undaunted, 6g's salespeople are",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.6
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e3f1836d28f995cb78e2",
+       "headline": "Google to build $15 billion, 1 GW AI data centre in Andhra Pradesh; state targets 6.5 GW digital capacity",
+       "url": "https://www.fortuneindia.com/technology/google-to-build-15-billion-1-gw-ai-data-centre-in-andhra-pradesh-state-targets-65-gw-digital-capacity/134657",
+       "publisher": "fortuneindia.com",
+       "published_at": "2026-04-28T05:44:44",
+       "lede": "andhra pradesh chief minister n. chandrababu naidu on tuesday laid the foundation stone for a $15 billion google-backed artificial intelligence (ai) data centre near visakhapatnam, marking one of the largest technology infrastructure investments in india’s digital economy. the 1 gigawatt (gw) capacity facility is expected to significantly boost the country’s",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 101,
+         "path": "/Internet & Telecom/Web Services/Cloud Storage",
+         "score": 0.57
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.45
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "google"
+       ],
+       "people": [
+        "n. chandrababu naidu"
+       ]
+      },
+      {
+       "id": "69f0e8c445272de32e8c5932",
+       "headline": "Forex, domestic declines weigh on ZTE",
+       "url": "https://www.mobileworldlive.com/ranvendors/forex-domestic-declines-weigh-on-zte/",
+       "publisher": "mobileworldlive.com",
+       "published_at": "2026-04-27T10:35:55",
+       "lede": "chinese vendor zte recorded a 6 per cent revenue increase year-on-year in q1 following gains across most business segments, however the picture was dampened by a significant drop in net profit due to weaker demand from domestic operators in its home market. net profit declined 46.6 per cent to cny1.3",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.6
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "zte"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e1fe45272de32e8be719",
+       "headline": "AI & 5G: Experts Call for Secure Digital Ecosystem",
+       "url": "https://www.newkerala.com/news/a/experts-call-secure-resilient-ai-driven-digital-ecosystem-493.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-25T14:45:09",
+       "lede": "tier 2 and 3 cities to drive next phase of digital growth government officials and industry leaders at the coai digicom summit 2026 called for a secure, resilient, and ai-driven digital ecosystem powered by next-gen telecom networks. manish sinha of dot stressed the need for digital trust and tackling spam",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.54
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa0b727212302c5e8218",
+       "headline": "Sekhar Pemmasani Calls for Deeper Industry Role to Shape 6G Future - TelecomDrive",
+       "url": "https://telecomdrive.com/sekhar-pemmasani-calls-for-deeper-industry-role-to-shape-6g-future/",
+       "publisher": "telecomdrive.com",
+       "published_at": "2026-04-25T03:30:55",
+       "lede": "the coai digicom summit 2026, the 2nd of the digicom series by coai, commenced with government officials, regulators and industry leaders calling for a secure, resilient and innovation-driven digital ecosystem, underpinned by next-generation telecom networks and emerging technologies such as artificial intelligence and 5g. the event kickstarted with the inaugural",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 220,
+         "path": "/Internet & Telecom/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "5g"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a040e89220687a966adfbe3",
+       "headline": "Reliance Jio clocks strong FY26 with Rs 30,053 crore profit; IPL tailwinds to aid growth momentum",
+       "url": "https://storyboard18.com/digital/reliance-jio-q4-profit-up-13-percent-on-5g-and-arpu-growth-ws-l-96168.htm",
+       "publisher": "storyboard18.com",
+       "published_at": "2026-04-24T14:26:14",
+       "lede": "reliance jio, the telecom arm of reliance industries, reported a strong set of numbers for the fourth quarter of fy26, aided by steady subscriber additions, rising arpu and continued expansion in 5g and broadband services. the company posted quarterly revenue of rs 44,929 crore, up 12.7% year-on-year, while profit after",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa8f08a54b8f07c94fc26",
+       "headline": "Building India’s Digital Triangle: The Backbone of a 5G, IoT, and AI-Ready Economy",
+       "url": "https://cxotoday.com/expert-opinion/building-indias-digital-triangle-the-backbone-of-a-5g-iot-and-ai-ready-economy/",
+       "publisher": "cxotoday.com",
+       "published_at": "2026-04-24T12:43:37",
+       "lede": "by sudhir kunder india’s digital transformation is entering a pivotal phase. the rapid convergence of 5g networks, the internet of things (iot), and artificial intelligence (ai) is creating a powerful digital triangle, an interconnected ecosystem where connectivity, data generation, and intelligent computing come together to drive innovation and economic growth.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.96,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.59
+        },
+        {
+         "code": 171,
+         "path": "/Internet & Telecom/Mobile & Wireless/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "5g",
+        "iot"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2acce95cefb83fe8410242",
+       "headline": "MoS calls for Design-led Innovation and Deeper Industry Role to Shape 6G Future",
+       "url": "https://timestech.in/mos-calls-for-design-led-innovation-and-deeper-industry-role-to-shape-6g-future/",
+       "publisher": "timestech.in",
+       "published_at": "2026-04-24T11:55:54",
+       "lede": "the coai digicom summit 2026, the 2nd of the digicom series by coai, commenced with government officials, regulators and industry leaders calling for a secure, resilient and innovation-driven digital ecosystem, underpinned by next-generation telecom networks and emerging technologies such as artificial intelligence and 5g. the event kickstarted with the inaugural",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 220,
+         "path": "/Internet & Telecom/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a980a963d76f4afe3fefb",
+       "headline": "Zero Trust in India's public sector: why it matters now",
+       "url": "https://techobserver.in/news/opinion/zero-trust-india-public-sector-technology-backbone-323393/",
+       "publisher": "techobserver.in",
+       "published_at": "2026-04-24T10:25:12",
+       "lede": "india’s public sector is going digital at a rapid pace. initiatives like digital india and pm gati shakti are pushing everything from citizen services to infrastructure management onto connected platforms. add to that the rollout of 5g, growing use of cloud, and ai-driven systems, and you get an ecosystem that",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.67
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa8f8a84b609af2b19fd1",
+       "headline": "MoS Chandra Sekhar Pemmasani calls for Design-led Innovation and Deeper Industry Role to Shape 6G Future",
+       "url": "https://cxotoday.com/media-coverage/mos-chandra-sekhar-pemmasani-calls-for-design-led-innovation-and-deeper-industry-role-to-shape-6g-future/",
+       "publisher": "cxotoday.com",
+       "published_at": "2026-04-24T09:37:55",
+       "lede": "the coai digicom summit 2026, the 2nd of the digicom series by coai, commenced today with government officials, regulators and industry leaders calling for a secure, resilient and innovation-driven digital ecosystem, underpinned by next-generation telecom networks and emerging technologies such as artificial intelligence and 5g. the event kickstarted with the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 220,
+         "path": "/Internet & Telecom/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "5g"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 2739,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNCAwOTozNzo1NSIsImkiOiI2OWVmYThmOGE4NGI2MDlhZjJiMTlmZDEiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.984,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.992
+    }
+   }
+  }
+ ]
+}

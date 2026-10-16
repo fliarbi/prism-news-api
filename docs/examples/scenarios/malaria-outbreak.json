@@ -1,0 +1,814 @@
+{
+ "slug": "malaria-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:33Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "malaria",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "malaria",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2782,
+     "tone": {
+      "carrying": 2771,
+      "availability_pct": 99.6,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 759,
+        "share_pct": 27.39
+       },
+       {
+        "group": "neutral",
+        "count": 68,
+        "share_pct": 2.45
+       },
+       {
+        "group": "positive",
+        "count": 1944,
+        "share_pct": 70.16
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2780,
+      "count": 2102,
+      "share_pct": 75.61
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.019,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.063
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "malaria",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "malaria",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 713,
+       "critical": 570,
+       "critical_pct": 79.9,
+       "negative": 256,
+       "positive": 439,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 542,
+       "critical": 429,
+       "critical_pct": 79.2,
+       "negative": 160,
+       "positive": 368,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 852,
+       "critical": 620,
+       "critical_pct": 72.8,
+       "negative": 286,
+       "positive": 550,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 858,
+       "critical": 618,
+       "critical_pct": 72.0,
+       "negative": 387,
+       "positive": 447,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 898,
+       "critical": 706,
+       "critical_pct": 78.6,
+       "negative": 396,
+       "positive": 482,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 610,
+       "critical": 528,
+       "critical_pct": 86.6,
+       "negative": 183,
+       "positive": 405,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 660,
+       "critical": 569,
+       "critical_pct": 86.2,
+       "negative": 188,
+       "positive": 460,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 645,
+       "critical": 545,
+       "critical_pct": 84.5,
+       "negative": 199,
+       "positive": 424,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 572,
+       "critical": 506,
+       "critical_pct": 88.5,
+       "negative": 116,
+       "positive": 437,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 516,
+       "critical": 448,
+       "critical_pct": 86.8,
+       "negative": 188,
+       "positive": 313,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 499,
+       "critical": 405,
+       "critical_pct": 81.2,
+       "negative": 162,
+       "positive": 321,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1195,
+       "critical": 743,
+       "critical_pct": 62.2,
+       "negative": 293,
+       "positive": 873,
+       "partial_period": false
+      }
+     ],
+     "total": 8560,
+     "critical_total": 6687,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.68,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.683
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "malaria",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "malaria",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2782,
+     "carrying": 786,
+     "availability_pct": 28.25,
+     "items": [
+      {
+       "country": "united states",
+       "count": 199,
+       "share_pct": 7.15
+      },
+      {
+       "country": "india",
+       "count": 129,
+       "share_pct": 4.64
+      },
+      {
+       "country": "nigeria",
+       "count": 94,
+       "share_pct": 3.38
+      },
+      {
+       "country": "kenya",
+       "count": 33,
+       "share_pct": 1.19
+      },
+      {
+       "country": "united kingdom",
+       "count": 29,
+       "share_pct": 1.04
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 302
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.132,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.135
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "malaria",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "malaria",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "neglected tropical diseases",
+       "count": 562,
+       "share": 32.04,
+       "lift": 871.84,
+       "baseline_count": 3,
+       "previous_period_count": 531,
+       "delta_pct": 5.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vector-borne disease epidemiology",
+       "count": 599,
+       "share": 34.15,
+       "lift": 696.93,
+       "baseline_count": 4,
+       "previous_period_count": 606,
+       "delta_pct": -1.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "vector-borne disease mitigation",
+       "count": 156,
+       "share": 8.89,
+       "lift": 726.01,
+       "baseline_count": 1,
+       "previous_period_count": 144,
+       "delta_pct": 8.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "parasitic infections in humans",
+       "count": 538,
+       "share": 30.67,
+       "lift": 312.98,
+       "baseline_count": 8,
+       "previous_period_count": 506,
+       "delta_pct": 6.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "community health initiatives",
+       "count": 81,
+       "share": 4.62,
+       "lift": 376.97,
+       "baseline_count": 1,
+       "previous_period_count": 34,
+       "delta_pct": 138.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2782,
+     "carrying": 1754,
+     "carrier_share_pct": 63.05,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.0,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.025
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "malaria",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "malaria",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a95fe963d76f4afe29c0a",
+       "headline": "Malaria Cases Spike In Gauteng 2026 | Symptoms And Warning",
+       "url": "https://www.joburgetc.com/news/malaria-cases-gauteng-2026-warning/",
+       "publisher": "joburgetc.com",
+       "published_at": "2026-04-21T10:25:50",
+       "lede": "a quiet but dangerous health threat is gaining ground in gauteng, and officials are urging residents not to ignore the warning signs. the province, which is not typically known as a malaria hotspot, is seeing a sharp rise in infections and deaths in early 2026. health authorities say the numbers",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.6
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a945ec37f6c5e66d2c111",
+       "headline": "Gold Fields Foundation supports Tarkwa Nsuaem Health Directorate to mark World Malaria Day - MyJoyOnline",
+       "url": "https://www.myjoyonline.com/gold-fields-foundation-supports-tarkwa-nsuaem-health-directorate-to-mark-world-malaria-day/",
+       "publisher": "myjoyonline.com",
+       "published_at": "2026-04-30T11:50:20",
+       "lede": "more than 5.3 million malaria cases were recorded in ghana in 2025, underscoring the continued burden of the disease despite years of intervention. in response, gold fields ghana foundation has supported the commemoration of the 2026 world malaria day with a community engagement initiative aimed at strengthening awareness, prevention, and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69fa08ce7b2d589e84539535",
+       "headline": "Creating proteins to fight malaria",
+       "url": "https://www.path.org/our-impact/articles/creating-proteins-to-fight-malaria/",
+       "publisher": "path.org",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "malaria is a life-threatening disease caused by the plasmodium parasite, which is spread to humans by anopheles mosquitoes. in 2024, over 280 million people were infected with malaria across 80 countries, with more than 600,000 deaths. there are five species of the plasmodium parasite, some of which require different treatments.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.91
+        }
+       ],
+       "country": "afghanistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d89da088760d34c1df2f",
+       "headline": "...Nigeria bears 27% global disease burden –WHO",
+       "url": "https://thesun.ng/nigeria-bears-27-global-disease-burden-who/",
+       "publisher": "thesun.ng",
+       "published_at": "2026-04-29T23:12:56",
+       "lede": "by doris obinna as the world marks world malaria day 2026 emzor pharmaceutical industries has called for urgent and coordinated action to eliminate malaria in nigeria, emphasising the need for strengthened local drug manufacturing, strategic investments in active pharmaceutical ingredients (apis), and expanded access to life-saving treatments for vulnerable populations.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.75
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "api",
+        "emzor"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a7403963d76f4afcbe0a4",
+       "headline": "WHO Clears First Malaria Drug for Newborns - Current Affairs Usthadian Academy",
+       "url": "https://www.usthadian.com/who-clears-first-malaria-drug-for-newborns/",
+       "publisher": "usthadian.com",
+       "published_at": "2026-04-29T11:30:34",
+       "lede": "new milestone in malaria treatment who clears first malaria drug for newborns: the world health organization (who) has granted prequalification approval to the first malaria drug specifically designed for newborns and infants. this marks a major advancement in reducing infant mortality caused by malaria, especially in sub-saharan africa. the drug,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.81
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f21882da8ae7be8d221ad4",
+       "headline": "Serum Institute of India, University of Oxford Sign Licensing Pact for Multi-Stage Malaria Vaccine R78C",
+       "url": "https://medicaldialogues.in/news/industry/pharma/serum-institute-of-india-university-of-oxford-sign-licensing-pact-for-multi-stage-malaria-vaccine-r78c-169621",
+       "publisher": "medicaldialogues.in",
+       "published_at": "2026-04-29T10:23:02",
+       "lede": "new delhi: the university of oxford and serum institute of india (sii) have hit a significant milestone in the global fight against malaria with a pact to develop a new multi-stage vaccine.oxford university innovation (oui) and the world's largest vaccine manufacturer by volume announced a licence agreement this week to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.87,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.84
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.78
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "oui",
+        "university of oxford",
+        "oxford university innovation",
+        "university of oxford",
+        "serum institute of india",
+        "university of oxford"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f2290fc6105443aa5cdef2",
+       "headline": "Oxford University strikes new malaria vaccine pact with Serum Institute of India",
+       "url": "https://www.dailyexcelsior.com/oxford-university-strikes-new-malaria-vaccine-pact-with-serum-institute-of-india-2/",
+       "publisher": "dailyexcelsior.com",
+       "published_at": "2026-04-29T08:29:04",
+       "lede": "london, apr 28: the university of oxford and serum institute of india (sii) have hit a significant milestone in the global fight against malaria with a pact to develop a new multi-stage vaccine. oxford university innovation (oui) and the world’s largest vaccine manufacturer by volume announced a licence agreement this",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.75,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.9
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.79
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "oui",
+        "university of oxford",
+        "oxford university innovation",
+        "university of oxford",
+        "serum institute of india",
+        "university of oxford"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c9ca399b489398dfe2fd",
+       "headline": "Envu India Backs National Conclave on Urban Vector Control, Charts Path to Eliminate Dengue-Malaria in Cities",
+       "url": "https://indiamedtoday.com/envu-india-backs-national-conclave-on-urban-vector-control-charts-path-to-eliminate-dengue-malaria-in-cities/",
+       "publisher": "indiamedtoday.com",
+       "published_at": "2026-04-29T04:17:27",
+       "lede": "a two-day national conclave on urban pest management and vector-borne disease control concluded in ahmedabad, uniting public health leaders to tackle rising dengue, malaria, and chikungunya cases in india’s cities. organised by the indian society for malaria and other communicable diseases (ismocd) with ahmedabad municipal corporation (amc) and supported by",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.68
+        },
+        {
+         "code": 442,
+         "path": "/Home & Garden/Pest Control",
+         "score": 0.66
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.58
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6f46963d76f4afc90d4f",
+       "headline": "FG Targets 50% Reduction Of Malaria Burden By 2030",
+       "url": "https://sciencenigeria.com/fg-targets-50-reduction-of-malaria-burden-by-2030/",
+       "publisher": "sciencenigeria.com",
+       "published_at": "2026-04-28T20:08:24",
+       "lede": "- advertisement - - advertisement - - advertisement - - advertisement - the minister of state for health and social welfare, dr. iziaq salako. the federal government has unveiled a new national malaria strategic plan covering 2026 to 2030, with the target of reducing malaria prevalence and mortality by 50",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6fd1e3933a6dd8db090",
+       "headline": "Oxford & Serum Institute Team Up for Next-Gen Malaria Vaccine",
+       "url": "https://www.easterneye.biz/oxford-serum-institute-multi-stage-malaria-vaccine-deal/",
+       "publisher": "easterneye.biz",
+       "published_at": "2026-04-28T15:24:30",
+       "lede": "highlights oxford university innovation and serum institute of india have agreed a licence deal for r78c, a multi-stage malaria vaccine candidate the agreement covers development, large-scale manufacture, and commercialisation malaria affects hundreds of millions of people annually, predominantly children in sub-saharan africa the university of oxford and serum institute of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.84,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.8
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.73
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "oxford university innovation",
+        "serum institute of india",
+        "university of oxford"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0362f97b84f58d6f70c502",
+       "headline": "22 राज्यों के मुख्य सचिवों को एनएचआरसी का नोटिस,बढ़ते लू पर जताई चिंता",
+       "url": "https://www.tarunmitra.in/national/nhrc-notice-to-chief-secretaries-of-22-states-expressed-concern/article-139623",
+       "publisher": "tarunmitra.in",
+       "published_at": "2026-04-28T13:54:12",
+       "lede": "new delhi. the national human rights commission (nhrc) has taken a tough stance in view of rising temperatures and outbreaks of malaria in the country. the commission has issued a notice to the chief secretaries of 22 states including national capital region delhi, requesting a report. according to the nhrc,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 967,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAwOTo0MjoxOSIsImkiOiI2OWYwZTJmMDgzNmQyOGY5OTVjYjVmZmQiLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 2,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.326,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.333
+    }
+   }
+  }
+ ]
+}

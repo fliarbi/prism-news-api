@@ -1,0 +1,678 @@
+{
+ "slug": "medical-device-industry-news",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:54:50Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "medical device industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "medical device industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 158,
+     "tone": {
+      "carrying": 158,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 28,
+        "share_pct": 17.72
+       },
+       {
+        "group": "neutral",
+        "count": 0,
+        "share_pct": 0.0
+       },
+       {
+        "group": "positive",
+        "count": 130,
+        "share_pct": 82.28
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 158,
+      "count": 90,
+      "share_pct": 56.96
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.706,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.709
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "medical device industry",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "medical device industry",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 30,
+       "critical": 18,
+       "critical_pct": 60.0,
+       "negative": 6,
+       "positive": 24,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 27,
+       "critical": 17,
+       "critical_pct": 63.0,
+       "negative": 4,
+       "positive": 23,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 27,
+       "critical": 14,
+       "critical_pct": 51.9,
+       "negative": 0,
+       "positive": 27,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 23,
+       "critical": 13,
+       "critical_pct": 56.5,
+       "negative": 2,
+       "positive": 21,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 34,
+       "critical": 22,
+       "critical_pct": 64.7,
+       "negative": 5,
+       "positive": 29,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 44,
+       "critical": 28,
+       "critical_pct": 63.6,
+       "negative": 3,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 94,
+       "critical": 16,
+       "critical_pct": 17.0,
+       "negative": 1,
+       "positive": 92,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 43,
+       "critical": 18,
+       "critical_pct": 41.9,
+       "negative": 2,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 35,
+       "critical": 19,
+       "critical_pct": 54.3,
+       "negative": 5,
+       "positive": 30,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 34,
+       "critical": 22,
+       "critical_pct": 64.7,
+       "negative": 9,
+       "positive": 25,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 49,
+       "critical": 28,
+       "critical_pct": 57.1,
+       "negative": 10,
+       "positive": 39,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 40,
+       "critical": 21,
+       "critical_pct": 52.5,
+       "negative": 4,
+       "positive": 36,
+       "partial_period": false
+      }
+     ],
+     "total": 480,
+     "critical_total": 236,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-11-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.066,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.07
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "medical device industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "medical device industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 158,
+     "carrying": 84,
+     "availability_pct": 53.16,
+     "items": [
+      {
+       "country": "united states",
+       "count": 42,
+       "share_pct": 26.58
+      },
+      {
+       "country": "china",
+       "count": 11,
+       "share_pct": 6.96
+      },
+      {
+       "country": "india",
+       "count": 9,
+       "share_pct": 5.7
+      },
+      {
+       "country": "brazil",
+       "count": 6,
+       "share_pct": 3.8
+      },
+      {
+       "country": "united kingdom",
+       "count": 3,
+       "share_pct": 1.9
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 13
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.025,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.031
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "medical device industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "medical device industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "quality control in pharmaceutical manufacturing",
+       "count": 8,
+       "share": 8.42,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 7,
+       "delta_pct": 14.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "disposable medical supplies and consumables",
+       "count": 8,
+       "share": 8.42,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 3,
+       "delta_pct": 166.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "medical device safety and compliance standards",
+       "count": 7,
+       "share": 7.37,
+       "lift": 601.48,
+       "baseline_count": 1,
+       "previous_period_count": 9,
+       "delta_pct": -22.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "regulatory compliance (fda, ema, etc.)",
+       "count": 7,
+       "share": 7.37,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 4,
+       "delta_pct": 75.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "pharmaceutical manufacturing techniques",
+       "count": 6,
+       "share": 6.32,
+       "lift": 515.56,
+       "baseline_count": 1,
+       "previous_period_count": 3,
+       "delta_pct": 100.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 158,
+     "carrying": 95,
+     "carrier_share_pct": 60.13,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.042,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.045
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "medical device industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "medical device industry",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69c9ca5963ac913d8d4020e4",
+       "headline": "AdvaMed calls for 'certainty and stability' after Trump tariffs ruled illegal",
+       "url": "https://www.medicaldesignandoutsourcing.com/advamed-trump-tariffs-ruled-illegal/",
+       "publisher": "medicaldesignandoutsourcing.com",
+       "published_at": "2026-02-23T22:59:54",
+       "lede": "advamed president and ceo scott whitaker said there’s a “clear and constructive path” for the medical device industry to work with the trump administration after the supreme court ruled against his tariffs“as an industry that is primarily u.s.-based, with trade surpluses in most major markets worldwide, we look forward to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "advamed"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0afa1447abc155c28a8713",
+       "headline": "Director Chen Sicheng discusses his new movie Being Towards Deathat a recent promotional event in Beijing.[Photo provided to chinadaily.com.cn] In 2018, at a dinner with actor Wang Baoqiang, filmmaker Chen Sicheng encountered an insider from the medical device industry, who shared stories rarely hea",
+       "url": "http://www.chinadaily.com.cn/a/202604/29/WS69f1a309a310d6866eb4637d.html",
+       "publisher": "chinadaily.com.cn",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "director chen sicheng discusses his new movie being towards deathat a recent promotional event in beijing.[photo provided to chinadaily.com.cn] in 2018, at a dinner with actor wang baoqiang, filmmaker chen sicheng encountered an insider from the medical device industry, who shared stories rarely heard outside hospital walls — of strangers",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 226,
+         "path": "/Arts & Entertainment/Movies/Drama Films",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8834d43843dd771d00d78",
+       "headline": "Director Chen Sicheng discusses his new movie Being Towards Deathat a recent promotional event in Beijing.[Photo provided to chinadaily.com.cn] In 2018, at a dinner with actor Wang Baoqiang, filmmaker Chen Sicheng encountered an insider from the medical device industry, who shared stories rarely hea",
+       "url": "https://www.chinadaily.com.cn/a/202604/29/WS69f1a309a310d6866eb4637d.html",
+       "publisher": "chinadaily.com.cn",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "director chen sicheng discusses his new movie being towards deathat a recent promotional event in beijing.[photo provided to chinadaily.com.cn] in 2018, at a dinner with actor wang baoqiang, filmmaker chen sicheng encountered an insider from the medical device industry, who shared stories rarely heard outside hospital walls — of strangers",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.29,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 226,
+         "path": "/Arts & Entertainment/Movies/Drama Films",
+         "score": 0.52
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": [
+        "wang baoqiang",
+        "chen sicheng"
+       ]
+      },
+      {
+       "id": "6a0ea1c79341f3dc2add2dc7",
+       "headline": "Rising Tide in Southeast Asia: A New Global Chapter for China’s MedTech Industry",
+       "url": "https://www.lek.com/insights/medtech/rising-tide-southeast-asia-new-global-chapter-chinas-medtech-industry",
+       "publisher": "lek.com",
+       "published_at": "2026-04-27T13:52:44",
+       "lede": "china’s medical device industry is entering a new phase of globalization in which international expansion is no longer optional but a strategic imperative for sustained growth. as domestic pricing pressure intensifies and policy reforms reshape the competitive landscape, leading companies are accelerating the shift from volume-driven growth to innovation-led, globally",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.52
+        },
+        {
+         "code": 88,
+         "path": "/Health/Medical Facilities & Services/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e7fbd32561089420c81c",
+       "headline": "Baja California alcanza los 100 mil empleos en la industria de dispositivos médicos; Marina del Pilar destaca innovación | El Universal",
+       "url": "https://www.eluniversal.com.mx/estados/baja-california-alcanza-los-100-mil-empleos-en-la-industria-de-dispositivos-medicos-marina-del-pilar-destaca-innovacion/",
+       "publisher": "eluniversal.com.mx",
+       "published_at": "2026-04-25T03:05:37",
+       "lede": "the medical device industry in baja california consolidated a workforce of over 100,000 workers distributed across 100 companies, following the inauguration of the third building of the intuitive company in mexicali. “lower california is today an international benchmark in advanced manufacturing and technological innovation,” said pilar ávila olmeda, governor of",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "698e1f298d29a990b6e36077",
+       "headline": "India-EU FTA a Boost for Medical Device Sector, Say Experts - India Seatrade News",
+       "url": "https://indiaseatradenews.com/india-eu-fta-a-boost-for-medical-device-sector-say-experts/",
+       "publisher": "indiaseatradenews.com",
+       "published_at": "2026-01-28T18:48:47",
+       "lede": "experts have welcomed the recently concluded india-european union free trade agreement (fta) as a significant positive development for india’s medical device industry, saying the pact could strengthen the sector’s global competitiveness and expand market access.industry representatives pointed out that the trade deal, which is expected to be implemented in 2026–27,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.67
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "696536836d771ebea9b6e9ff",
+       "headline": "Med device task guide for UK conformity post-Brexit | Pharmaceutical Commerce",
+       "url": "https://www.pharmaceuticalcommerce.com/view/med-device-task-guide-for-uk-conformity-post-brexit",
+       "publisher": "pharmaceuticalcommerce.com",
+       "published_at": "2026-01-01T18:42:11",
+       "lede": "as the medical device industry prepares to enforce new rules post-brexit, maetrics, a global life sciences consulting firm, unveiled a 10-task guide that consolidates the requirements of the new uk government and suggests areas that manufacturers should focus on. this includes information relevant to the uk conformity assessment certification (ukca",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.73,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.7
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 7,
+     "total_estimate": 10,
+     "next_cursor": null,
+     "unresolved": 3,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.477,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "3 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.48
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,953 @@
+{
+ "slug": "food-processing-industry",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:51:11Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "food processing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "food processing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3086,
+     "tone": {
+      "carrying": 3086,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 344,
+        "share_pct": 11.15
+       },
+       {
+        "group": "neutral",
+        "count": 62,
+        "share_pct": 2.01
+       },
+       {
+        "group": "positive",
+        "count": 2680,
+        "share_pct": 86.84
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3086,
+      "count": 1322,
+      "share_pct": 42.84
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.772,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.775
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "food processing",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "food processing",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 448,
+       "critical": 190,
+       "critical_pct": 42.4,
+       "negative": 44,
+       "positive": 391,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 381,
+       "critical": 150,
+       "critical_pct": 39.4,
+       "negative": 47,
+       "positive": 322,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 484,
+       "critical": 225,
+       "critical_pct": 46.5,
+       "negative": 62,
+       "positive": 414,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 570,
+       "critical": 259,
+       "critical_pct": 45.4,
+       "negative": 68,
+       "positive": 492,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 792,
+       "critical": 370,
+       "critical_pct": 46.7,
+       "negative": 48,
+       "positive": 730,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 528,
+       "critical": 230,
+       "critical_pct": 43.6,
+       "negative": 27,
+       "positive": 493,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 677,
+       "critical": 291,
+       "critical_pct": 43.0,
+       "negative": 53,
+       "positive": 613,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 637,
+       "critical": 262,
+       "critical_pct": 41.1,
+       "negative": 50,
+       "positive": 574,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 594,
+       "critical": 259,
+       "critical_pct": 43.6,
+       "negative": 46,
+       "positive": 542,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 784,
+       "critical": 304,
+       "critical_pct": 38.8,
+       "negative": 95,
+       "positive": 674,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 862,
+       "critical": 386,
+       "critical_pct": 44.8,
+       "negative": 119,
+       "positive": 728,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 846,
+       "critical": 373,
+       "critical_pct": 44.1,
+       "negative": 84,
+       "positive": 736,
+       "partial_period": false
+      }
+     ],
+     "total": 7603,
+     "critical_total": 3299,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.54,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.545
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "food processing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "food processing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3086,
+     "carrying": 1531,
+     "availability_pct": 49.61,
+     "items": [
+      {
+       "country": "united states",
+       "count": 599,
+       "share_pct": 19.41
+      },
+      {
+       "country": "india",
+       "count": 405,
+       "share_pct": 13.12
+      },
+      {
+       "country": "united kingdom",
+       "count": 90,
+       "share_pct": 2.92
+      },
+      {
+       "country": "china",
+       "count": 69,
+       "share_pct": 2.24
+      },
+      {
+       "country": "nigeria",
+       "count": 29,
+       "share_pct": 0.94
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 339
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.594,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.597
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "food processing",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "food processing",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "farm-to-table logistics and distribution",
+       "count": 148,
+       "share": 9.09,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 90,
+       "delta_pct": 64.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "agri-business financing and investment",
+       "count": 143,
+       "share": 8.78,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 103,
+       "delta_pct": 38.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "agricultural supply chain optimization",
+       "count": 124,
+       "share": 7.61,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 70,
+       "delta_pct": 77.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "agricultural technology and precision farming tools",
+       "count": 102,
+       "share": 6.26,
+       "lift": 511.13,
+       "baseline_count": 1,
+       "previous_period_count": 64,
+       "delta_pct": 59.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "post-harvest storage and preservation",
+       "count": 181,
+       "share": 11.11,
+       "lift": 302.33,
+       "baseline_count": 3,
+       "previous_period_count": 129,
+       "delta_pct": 40.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3086,
+     "carrying": 1629,
+     "carrier_share_pct": 52.79,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.215,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.218
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "food processing",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "food processing",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f215d2187a3fe46c57c6d1",
+       "headline": "L’Afsca rappelle un produit alimentaire en raison de substances cancérigènes",
+       "url": "https://www.lesoir.be/743729/article/2026-04-29/lafsca-rappelle-un-produit-alimentaire-en-raison-de-substances-cancerigenes",
+       "publisher": "lesoir.be",
+       "published_at": "2026-04-29T09:02:23",
+       "lede": "the federal agency for food chain safety (afsca) recalled \"buldak spicy ramen hot chicken flavour\" on wednesday due to too high a content of 3-mcpd (3-monochloropropane) and ester glycidol fatty acids. these food processing contaminants are considered genotoxic carcinogens.[scald=33439301:sdl_editor_representation]the product concerned is labelled as a minimum durability date (mdd) on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.89,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.49
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa9805cefb83fe827beaf",
+       "headline": "PLISFPI drives jobs, capacity in food processing sector",
+       "url": "https://www.edexlive.com/news/plisfpi-drives-jobs-capacity-in-food-processing-sector",
+       "publisher": "edexlive.com",
+       "published_at": "2026-04-21T09:15:00",
+       "lede": "new delhi, april 21 (ians): the production linked incentive scheme for food processing industry (plisfpi) has driven capacity expansion in food processing, job creation, and export growth, with beneficiaries receiving a total incentive of rs 2,162.55 crore, the government said on tuesday..food processing and preservation capacity has grown by 34",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.75,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.8
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c7b1a85be7e506641602",
+       "headline": "Centre introduces new LPG allocation formula to support key industries amid Middle East tensions - Yes Punjab News",
+       "url": "https://yespunjab.com/centre-introduces-new-lpg-allocation-formula-to-support-key-industries-amid-middle-east-tensions/",
+       "publisher": "yespunjab.com",
+       "published_at": "2026-04-08T11:04:29",
+       "lede": "new delhi, april 8, 2026 amid rising tensions in the middle east, the indian government on wednesday introduced a new formula for lpg allocation aimed at supporting critical sectors such as pharmaceuticals, food processing, and agriculture. according to the ministry of petroleum and natural gas, the revised policy will ensure",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.94
+        }
+       ],
+       "country": "cameroon",
+       "organizations": [
+        "lpg"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2c5ccbd7b10565a4005f4",
+       "headline": "LPG Supply Policy Update: Govt Announces 70% Supply Rule for Industries, Sets Sector Cap, Focus on Critical Sectors | 📰 LatestLY",
+       "url": "https://www.latestly.com/india/news/lpg-supply-policy-update-govt-announces-70-supply-rule-for-industries-sets-sector-cap-focus-on-critical-sectors-7384849.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-04-08T10:04:34",
+       "lede": "new delhi, april 8: amid rising tensions in the middle east, the indian government on wednesday introduced a new formula for lpg allocation aimed at supporting critical sectors such as pharmaceuticals, food processing, and agriculture. according to the ministry of petroleum and natural gas, the revised policy will ensure bulk",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.95
+        }
+       ],
+       "country": "cameroon",
+       "organizations": [
+        "lpg"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2a7e0277be6ed2d9c45df",
+       "headline": "Food PLI Scheme: Rs 9,207 Cr Investment, 3.29 Lakh Jobs Created",
+       "url": "https://www.newkerala.com/news/a/food-pli-scheme-attracts-rs-9207-crore-investment-775.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-07T16:11:51",
+       "lede": "the production-linked incentive scheme for food processing has successfully attracted investments exceeding rs 9,200 crore and created approximately 3.29 lakh jobs since its launch. with 128 approved companies covering 274 units, the scheme has significantly boosted processing capacity and modernized the industry. it has particularly driven a massive increase in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.97,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.82
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2a734601121844c3724ba",
+       "headline": "India-Japan MSME Partnerships Drive Next Growth Wave",
+       "url": "https://www.newkerala.com/news/a/india-japan-msme-partnerships-likely-drive-next-wave-growth-303.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-07T14:01:19",
+       "lede": "a new report positions india as a strategic long-term investment and production base for japanese mid-sized companies as global supply chains diversify. key areas for accelerated cooperation include semiconductors, electronics, and food processing, with india's large domestic market and trade agreements providing a stable platform. collaboration is already advancing in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.53
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5c89c37f6c5e66ae0e6d",
+       "headline": "PLI Scheme Draws ₹9,200 Cr Investment, Boosts Food Processing Capacity - Agro & Food Processing",
+       "url": "https://agronfoodprocessing.com/pli-scheme-draws-%e2%82%b99200-cr-investment-boosts-food-processing-capacity/",
+       "publisher": "agronfoodprocessing.com",
+       "published_at": "2026-03-31T06:08:09",
+       "lede": "the government’s production-linked incentive scheme for the food processing sector has attracted investments of over ₹9,200 crore as of december 31, 2025, signalling strong industry participation and capacity expansion. in a written reply in the rajya sabha, minister of state for food processing industries ravneet singh stated that 168 applicants",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.85
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8be23c0812b6b31cdafd0",
+       "headline": "PLI Scheme in Food Processing Attracts Investment of Over Rs 9,200 Cr Till Dec 31, 2025 – Outlook Business",
+       "url": "https://www.outlookbusiness.com/economy-and-policy/pli-scheme-in-food-processing-attracts-investment-of-over-9200-cr-till-dec-31-2025",
+       "publisher": "outlookbusiness.com",
+       "published_at": "2026-03-27T12:56:11",
+       "lede": "more than ₹9,200 crore investments have been made by 168 approved applicants under the production-linked incentive scheme in the food processing sector, the government said on friday in the rajya sabha.in a written reply, minister of state for food processing industries ravneet singh said, \"under the production-linked incentive scheme for",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.82
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "singh"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c8bfe181c77a16f17542fc",
+       "headline": "Massive Investments Transform India's Food Processing Sector | Business",
+       "url": "https://www.devdiscourse.com/article/business/3852950-massive-investments-transform-indias-food-processing-sector",
+       "publisher": "devdiscourse.com",
+       "published_at": "2026-03-27T12:21:06",
+       "lede": "the indian government announced that investments exceeding rs 9,200 crore have been made by 168 approved applicants as part of the production-linked incentive scheme in the food processing sector. minister of state for food processing industries, ravneet singh, revealed this in a written statement presented to the rajya sabha.the scheme,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.86,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.79
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6bf0963d76f4afc76c13",
+       "headline": "Union Minister, Chirag Paswan Calls for Technological Revolution in Food Processing at the 33rd Convergence India Expo 2026 - Hybiz TV",
+       "url": "https://hybiz.tv/union-minister-chirag-paswan-calls-for-technological-revolution-in-food-processing-at-the-33rd-convergence-india-expo-2026/",
+       "publisher": "hybiz.tv",
+       "published_at": "2026-03-25T07:08:33",
+       "lede": "as the chief guest at the 33rd convergence india & 11th smart future cities india expo 2026, shri chirag paswan, hon’ble union minister, ministry of food processing industries, addressed a large gathering of delegates at the bharat mandapam, new delhi. in his address, the minister underscored the importance of integrating",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.75,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.82
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a6db35cefb83fe80114e4",
+       "headline": "India Can Become Global Food Powerhouse with Stronger Processing: ITPO - Agro & Food Processing",
+       "url": "https://agronfoodprocessing.com/india-can-become-global-food-powerhouse-with-stronger-processing-itpo/",
+       "publisher": "agronfoodprocessing.com",
+       "published_at": "2026-03-10T06:24:23",
+       "lede": "india’s large agricultural output and expanding food processing industry give it the potential to become a global food powerhouse, but stronger value addition and supply chains are needed, said jawed ashraf. speaking at the curtain raiser for the aahar – international food & hospitality fair at bharat mandapam, ashraf highlighted",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.82
+        },
+        {
+         "code": 140,
+         "path": "/Business & Industrial/Business Services/Corporate Events",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbb2b271a014f1df2b493a",
+       "headline": "From Teacher to Entrepreneur: Vietnamese Woman Builds Thriving Business & Gives Back - News Directory 3",
+       "url": "https://www.newsdirectory3.com/from-teacher-to-entrepreneur-vietnamese-woman-builds-thriving-business-gives-back/",
+       "publisher": "newsdirectory3.com",
+       "published_at": "2026-03-08T01:29:20",
+       "lede": "from teaching preschoolers to building a diversified agricultural and food processing business, nguyen thi anh dao’s journey exemplifies resilience and entrepreneurial spirit. facing unexpected unemployment in 1993, dao transformed adversity into opportunity, establishing hung dung international co., ltd., a company now generating annual revenues of approximately 35 billion vietnamese dong",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        }
+       ],
+       "country": "vietnam",
+       "organizations": [
+        "dao"
+       ],
+       "people": []
+      },
+      {
+       "id": "290d6a13b8dd813ad4a7a49b",
+       "headline": "Acrylamide exposure induces neurotoxicity via the PI3K/Akt/NF-κB pathway: Evidence from network toxicology and experimental validation.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41734622/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-01T00:00:00",
+       "lede": "acrylamide exposure induces neurotoxicity via the pi3k/akt/nf-κb pathway: evidence from network toxicology and experimental validation.acrylamide (acr) is a chemical compound widely used in industrial production and food processing, the underlying mechanisms of its neurotoxicity have yet to be fully elucidated. through the integration of network toxicology, molecular docking, and experimental",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a5c265cefb83fe8f5d59a",
+       "headline": "Centre Boosts PMKSY Outlay to Accelerate Food Processing Infrastructure and Farmer Gains - Agro & Food Processing",
+       "url": "https://agronfoodprocessing.com/centre-boosts-pmksy-outlay-to-accelerate-food-processing-infrastructure-and-farmer-gains/",
+       "publisher": "agronfoodprocessing.com",
+       "published_at": "2026-02-19T05:41:50",
+       "lede": "the government of india has strengthened its push to modernize the country’s food processing ecosystem by expanding support under the pradhan mantri kisan sampada yojana (pmksy), a flagship programme designed to enhance value addition and reduce post-harvest losses across the agricultural supply chain. announcing the update in the lok sabha,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.84
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bcd75a4755dcbc8759e345",
+       "headline": "Need to focus on value addition in food processing: Chirag Paswan | India News - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/india/need-to-focus-on-value-addition-in-food-processing-chirag-paswan/articleshow/128326537.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-02-13T22:45:00",
+       "lede": "new delhi: india has the volume to support food security of many other countries, but the full potential of the food processing sector has not been tapped yet, food processing minister chirag paswan said on friday, while emphasising the need to take this sector deeper into the rural india.paswan said",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.82
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.61
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "chirag paswan"
+       ]
+      },
+      {
+       "id": "69bc7694595be15cddd21e7a",
+       "headline": "PMKSY Strengthening Food Processing Infrastructure Across India",
+       "url": "https://orissadiary.com/pmksy-strengthening-food-processing-infrastructure-across-india/",
+       "publisher": "orissadiary.com",
+       "published_at": "2026-02-12T13:03:53",
+       "lede": "the ministry of food processing industries (mofpi) is implementing central sector umbrella scheme – pradhan mantri kisan sampada yojana (pmksy) since 2017. the scheme is demand driven and applications from across the country for extending the support are invited through issue of expression of interest (eoi) from time to time",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 36,
+         "path": "/Business & Industrial/Agriculture & Forestry/Other",
+         "score": 0.65
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 412,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xMiAxMzowMzo1MyIsImkiOiI2OWJjNzY5NDU5NWJlMTVjZGRkMjFlN2EiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.32,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.323
+    }
+   }
+  }
+ ]
+}

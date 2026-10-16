@@ -1,0 +1,856 @@
+{
+ "slug": "unemployment-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:14Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "unemployment",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "unemployment",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10581,
+     "tone": {
+      "carrying": 10537,
+      "availability_pct": 99.58,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 6977,
+        "share_pct": 66.21
+       },
+       {
+        "group": "neutral",
+        "count": 343,
+        "share_pct": 3.26
+       },
+       {
+        "group": "positive",
+        "count": 3217,
+        "share_pct": 30.53
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 10577,
+      "count": 7849,
+      "share_pct": 74.21
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.841,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.871
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "unemployment",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "unemployment",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3252,
+       "critical": 2293,
+       "critical_pct": 70.5,
+       "negative": 2207,
+       "positive": 914,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1740,
+       "critical": 1279,
+       "critical_pct": 73.5,
+       "negative": 1105,
+       "positive": 570,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2420,
+       "critical": 1505,
+       "critical_pct": 62.2,
+       "negative": 1526,
+       "positive": 806,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3808,
+       "critical": 2783,
+       "critical_pct": 73.1,
+       "negative": 2698,
+       "positive": 1047,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2663,
+       "critical": 2091,
+       "critical_pct": 78.5,
+       "negative": 1756,
+       "positive": 832,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1761,
+       "critical": 1354,
+       "critical_pct": 76.9,
+       "negative": 1174,
+       "positive": 512,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1760,
+       "critical": 1318,
+       "critical_pct": 74.9,
+       "negative": 1108,
+       "positive": 596,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2336,
+       "critical": 1824,
+       "critical_pct": 78.1,
+       "negative": 1526,
+       "positive": 714,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1878,
+       "critical": 1395,
+       "critical_pct": 74.3,
+       "negative": 1243,
+       "positive": 577,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2909,
+       "critical": 2182,
+       "critical_pct": 75.0,
+       "negative": 1897,
+       "positive": 914,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2596,
+       "critical": 1976,
+       "critical_pct": 76.1,
+       "negative": 1820,
+       "positive": 671,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3198,
+       "critical": 2296,
+       "critical_pct": 71.8,
+       "negative": 2017,
+       "positive": 1055,
+       "partial_period": false
+      }
+     ],
+     "total": 30321,
+     "critical_total": 22296,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.016,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.018
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "unemployment",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "unemployment",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 10581,
+     "carrying": 4383,
+     "availability_pct": 41.42,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1947,
+       "share_pct": 18.4
+      },
+      {
+       "country": "india",
+       "count": 524,
+       "share_pct": 4.95
+      },
+      {
+       "country": "united kingdom",
+       "count": 324,
+       "share_pct": 3.06
+      },
+      {
+       "country": "iran",
+       "count": 192,
+       "share_pct": 1.81
+      },
+      {
+       "country": "south africa",
+       "count": 164,
+       "share_pct": 1.55
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1232
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.287,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.289
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "unemployment",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "unemployment",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economy news: unemployment rate trends",
+       "count": 3372,
+       "share": 49.35,
+       "lift": 503.54,
+       "baseline_count": 8,
+       "previous_period_count": 2392,
+       "delta_pct": 41.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: labor market dynamics",
+       "count": 3350,
+       "share": 49.03,
+       "lift": 400.21,
+       "baseline_count": 10,
+       "previous_period_count": 2226,
+       "delta_pct": 50.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "unemployment insurance benefits & claims",
+       "count": 216,
+       "share": 3.16,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 669,
+       "delta_pct": -67.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "demographic economics and population trends",
+       "count": 152,
+       "share": 2.22,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 109,
+       "delta_pct": 39.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "economy news: consumer confidence index updates",
+       "count": 138,
+       "share": 2.02,
+       "lift": 164.86,
+       "baseline_count": 1,
+       "previous_period_count": 112,
+       "delta_pct": 23.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 10581,
+     "carrying": 6833,
+     "carrier_share_pct": 64.58,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.093,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.099
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "unemployment",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "unemployment",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8e6b49baafc7356e12f2e",
+       "headline": "In recent years in this country Have suicides increased?",
+       "url": "https://medianews.az/en/son-illerde-bu-olkede-intiharlar-artibmi",
+       "publisher": "medianews.az",
+       "published_at": "2026-04-19T09:00:00",
+       "lede": "according to the latest data published by the turkish statistical institute (tüi̇k) in 2025, death cases related to suicide in the country have sharply increased. experts particularly call for the urgent preparation of national action plans to combat the feeling of \"hopelessness\" caused by economic difficulties, unemployment, and concerns about",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 390,
+         "path": "/Sensitive Subjects/Self-Harm",
+         "score": 0.94
+        }
+       ],
+       "country": "turkey",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2beaf601121844c3c4ed0",
+       "headline": "Jobless young Palestinians trapped as Israel holds Gaza’s economy hostage",
+       "url": "https://www.aljazeera.com/economy/2026/4/6/jobless-young-palestinians-trapped-as-israel-holds-gazas-economy-hostage",
+       "publisher": "aljazeera.com",
+       "published_at": "2026-04-06T13:01:02",
+       "lede": "with an 80 percent unemployment rate, young palestinians face an uncertain future amid israeli blockade of the enclave. mahmoud shamiya walks to the shores of the mediterranean sea every day just to pass the time. he is among gaza’s tens of thousands of young people who have no work as",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.81
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a6a9a528a35e1f41f2be",
+       "headline": "Pakistan-Occupied Kashmir Crisis: Protests, Neglect, Crackdowns",
+       "url": "https://www.newkerala.com/news/a/humanitarian-crisis-deepens-pakistan-occupied-kashmir-amid-crackdowns-systematic-886.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-03-20T14:47:26",
+       "lede": "a report details a severe humanitarian crisis in pakistan-occupied jammu and kashmir and gilgit-baltistan, marked by inflation, unemployment, and essential service failures. protests have erupted over electricity shortages and unaffordable tariffs, despite the regions hosting major hydropower projects that feed pakistan's national grid. the situation is compounded by allegations of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e640b42461615d5f4364d2",
+       "headline": "Migrant who sexually assaulted girl, 15, & then fled to UK to be deported",
+       "url": "https://www.thescottishsun.co.uk/news/15818964/migrant-sex-assault-girl-fleeing-germany-fighting-deportation/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-01-19T11:52:28",
+       "lede": "the migrant was living off €400-per-month unemployment when he was sentenced migrant fury migrant who sexually assaulted girl, 15, & then fled to uk from germany to be deported after 11 months in taxpayer hotel a migrant who sexually assaulted a 15-year-old girl and fled to the uk from germany",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.6
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22e65c6105443aa5e2849",
+       "headline": "Lloyds takes £151m hit from Iran war as it forecasts rise in UK unemployment",
+       "url": "https://www.theguardian.com/business/2026/apr/29/lloyds-iran-war-forecasts-rise-in-uk-unemployment",
+       "publisher": "theguardian.com",
+       "published_at": "2026-04-29T09:06:35",
+       "lede": "lloyds has said that the economic fallout from the middle east conflict could cost it £151m amid rising unemployment and inflation and a slowdown in the housing market. the ftse 100 group, whose brands include lloyds bank, halifax and bank of scotland, issued a downbeat economic forecast that it said",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.68
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "lloyds bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ca23399b489398e0163a",
+       "headline": "Indonesia’s AI strategy: Economically ambitious, socially hollow",
+       "url": "https://www.thestar.com.my/business/insight/2026/04/29/indonesias-ai-strategy-economically-ambitious-socially-hollow",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "the rapid development of artificial intelligence (ai) has revived a classical debate in economics regarding technological unemployment. will ai innovation bring shared prosperity, or create an unprecedented unemployment crisis? this is not merely a theoretical inquiry for academic journals. current ai systems are already demonstrating a capacity for complex reasoning",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.84
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ab7e15cefb83fe831f16f",
+       "headline": "War With U.S. And Israel Pushes Millions Of Iranians Toward Unemployment As Economy Tanks",
+       "url": "https://ibtimes.com/war-us-israel-pushes-millions-iranians-toward-unemployment-economy-tanks-3802093",
+       "publisher": "ibtimes.com",
+       "published_at": "2026-04-28T19:26:26",
+       "lede": "while sanctions and inflation already battered the iranian economy before the war with the united states and israel, a new report has indicated that the conflict has pushed millions of iranians closer to unemployment and poverty.an extensive cnn report detailed layoffs and unpaid leave across refineries, textiles, trucking, aviation, and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c980399b489398dfb76a",
+       "headline": "War With U.S. And Israel Pushes Millions Of Iranians Toward Unemployment As Economy Tanks",
+       "url": "https://www.ibtimes.com/war-us-israel-pushes-millions-iranians-toward-unemployment-economy-tanks-3802093",
+       "publisher": "ibtimes.com",
+       "published_at": "2026-04-28T19:26:26",
+       "lede": "while sanctions and inflation already battered the iranian economy before the war with the united states and israel, a new report has indicated that the conflict has pushed millions of iranians closer to unemployment and poverty.an extensive cnn report detailed layoffs and unpaid leave across refineries, textiles, trucking, aviation, and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "cnn"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c908a5706a322e101377",
+       "headline": "War With U.S. And Israel Pushes Millions Of Iranians Toward Unemployment As Economy Tanks",
+       "url": "http://www.ibtimes.com/war-us-israel-pushes-millions-iranians-toward-unemployment-economy-tanks-3802093",
+       "publisher": "ibtimes.com",
+       "published_at": "2026-04-28T19:26:26",
+       "lede": "while sanctions and inflation already battered the iranian economy before the war with the united states and israel, a new report has indicated that the conflict has pushed millions of iranians closer to unemployment and poverty.an extensive cnn report detailed layoffs and unpaid leave across refineries, textiles, trucking, aviation, and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "cnn"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c95f399b489398dfa9a8",
+       "headline": "Unemployment, migration concerns drive March and March protest",
+       "url": "https://www.enca.com/news-top-stories-videos/unemployment-migration-concerns-drive-march-and-march-protest",
+       "publisher": "enca.com",
+       "published_at": "2026-04-28T09:39:36",
+       "lede": "dstv channel 403 wednesday, 29 april 2026 search unemployment, migration concerns drive march and march protest tuesday 28 april 2026 - 11:35am pretoria - march and march is marching in pretoria for jobs. it blames the high unemployment rate on illegal immigration. activists and some political parties have joined the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "south africa",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e518836d28f995cb89c3",
+       "headline": "El paro sube en 231.500 personas hasta marzo, su mayor alza desde 2013",
+       "url": "https://capital.es/actualidad/el-paro-sube-en-231-500-personas-hasta-marzo-su-mayor-alza-desde-2013-y-se-destruyen-170-300-empleos/180548/",
+       "publisher": "capital.es",
+       "published_at": "2026-04-28T08:22:03",
+       "lede": "unemployment rose by 231,500 between january and march, which is 9.3% more than in the previous quarter, while employment fell by 170,300 people (-0.7 per cent), concentrating on the loss of employment in the private sector, where 191,400 jobs were destroyed, the national institute of statistics (ine) reported on tuesday.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.68
+        },
+        {
+         "code": 287,
+         "path": "/Law & Government/Social Services/Welfare & Unemployment",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e853836d28f995cbb973",
+       "headline": "Informe de ONU Mujeres revela brechas salariales, violencia política y cargas de cuidado no remuneradas",
+       "url": "https://www.eltiempo.com/politica/partidos-politicos/informe-de-onu-mujeres-revela-brechas-salariales-violencia-politica-y-cargas-de-cuidado-no-remuneradas-3551054",
+       "publisher": "eltiempo.com",
+       "published_at": "2026-04-27T04:01:00",
+       "lede": "every 36 minutes a colombian woman is sexually assaulted in her home, according to the institute of legal medicine and according to figures from dane, the female unemployment rate is almost twice that of men. it is clear that structural inequalities and violence affecting well-being and the full realization of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab08727212302c5f39dc",
+       "headline": "BJP to Secure 180 Seats in West Bengal: Raju Bista",
+       "url": "https://www.newkerala.com/news/a/bjp-secure-180-seats-west-bengal-raju-bista-765.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-25T16:35:15",
+       "lede": "bjp leader raju bista expressed confidence in the party securing 170-180 seats in west bengal assembly elections, citing a shift in voter sentiment. he attributed this to alleged corruption, unemployment, and public grievances under previous regimes. bista also highlighted the upcoming visit of prime minister narendra modi to sikkim as",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.55
+        },
+        {
+         "code": 20,
+         "path": "/News/Politics/Campaigns & Elections",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "narendra modi",
+        "raju bista",
+        "narendra modi",
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "69efa9c58a54b8f07c95986f",
+       "headline": "Surprise Fall In Unemployment But Threat Remains | Herefordshire & Worcestershire Chamber of Commerce",
+       "url": "https://hwchamber.co.uk/surprise-fall-in-unemployment-but-threat-remains/",
+       "publisher": "hwchamber.co.uk",
+       "published_at": "2026-04-24T13:06:11",
+       "lede": "“while unemployment has seen a surprise fall to 4.9%, the expectation is that it will rise this year as business uncertainty caused by the iran war overshadows the uk economy. “with the cost of employment also high, and expected to rise as the employment rights act comes into effect, our",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.49
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 2520,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMyAxNDoxMToxMCIsImkiOiI2OWVhMjhlZTczMjA2YWEyOTllY2Q0ZWYiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.067,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.069
+    }
+   }
+  }
+ ]
+}

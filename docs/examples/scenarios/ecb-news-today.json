@@ -1,0 +1,924 @@
+{
+ "slug": "ecb-news-today",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:58:32Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "ECB",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ecb",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6746,
+     "tone": {
+      "carrying": 6746,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3742,
+        "share_pct": 55.47
+       },
+       {
+        "group": "neutral",
+        "count": 792,
+        "share_pct": 11.74
+       },
+       {
+        "group": "positive",
+        "count": 2212,
+        "share_pct": 32.79
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6745,
+      "count": 4195,
+      "share_pct": 62.19
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.868,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.871
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "ECB",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ecb",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 959,
+       "critical": 653,
+       "critical_pct": 68.1,
+       "negative": 586,
+       "positive": 309,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1403,
+       "critical": 937,
+       "critical_pct": 66.8,
+       "negative": 757,
+       "positive": 524,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1214,
+       "critical": 708,
+       "critical_pct": 58.3,
+       "negative": 544,
+       "positive": 587,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 917,
+       "critical": 539,
+       "critical_pct": 58.8,
+       "negative": 495,
+       "positive": 367,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1154,
+       "critical": 754,
+       "critical_pct": 65.3,
+       "negative": 570,
+       "positive": 490,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 963,
+       "critical": 621,
+       "critical_pct": 64.5,
+       "negative": 462,
+       "positive": 450,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 992,
+       "critical": 661,
+       "critical_pct": 66.6,
+       "negative": 513,
+       "positive": 397,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1227,
+       "critical": 789,
+       "critical_pct": 64.3,
+       "negative": 616,
+       "positive": 491,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1013,
+       "critical": 577,
+       "critical_pct": 57.0,
+       "negative": 468,
+       "positive": 400,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1969,
+       "critical": 1209,
+       "critical_pct": 61.4,
+       "negative": 932,
+       "positive": 693,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2076,
+       "critical": 1370,
+       "critical_pct": 66.0,
+       "negative": 1320,
+       "positive": 597,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1688,
+       "critical": 1039,
+       "critical_pct": 61.6,
+       "negative": 1022,
+       "positive": 522,
+       "partial_period": false
+      }
+     ],
+     "total": 15575,
+     "critical_total": 9857,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.513,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.516
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "ECB",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ecb",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6746,
+     "carrying": 2838,
+     "availability_pct": 42.07,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1010,
+       "share_pct": 14.97
+      },
+      {
+       "country": "united kingdom",
+       "count": 350,
+       "share_pct": 5.19
+      },
+      {
+       "country": "germany",
+       "count": 218,
+       "share_pct": 3.23
+      },
+      {
+       "country": "iran",
+       "count": 140,
+       "share_pct": 2.08
+      },
+      {
+       "country": "france",
+       "count": 123,
+       "share_pct": 1.82
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 997
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.613,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.628
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "ECB",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ecb",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economy news: monetary policy changes",
+       "count": 731,
+       "share": 16.3,
+       "lift": 266.03,
+       "baseline_count": 5,
+       "previous_period_count": 461,
+       "delta_pct": 58.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: central bank interest rate decisions",
+       "count": 725,
+       "share": 16.16,
+       "lift": 263.85,
+       "baseline_count": 5,
+       "previous_period_count": 482,
+       "delta_pct": 50.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 343,
+       "share": 7.65,
+       "lift": 312.07,
+       "baseline_count": 2,
+       "previous_period_count": 213,
+       "delta_pct": 61.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: inflation rate analysis",
+       "count": 790,
+       "share": 17.61,
+       "lift": 159.73,
+       "baseline_count": 9,
+       "previous_period_count": 416,
+       "delta_pct": 89.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "forex spot market trading",
+       "count": 175,
+       "share": 3.9,
+       "lift": 318.44,
+       "baseline_count": 1,
+       "previous_period_count": 57,
+       "delta_pct": 207.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6746,
+     "carrying": 4486,
+     "carrier_share_pct": 66.5,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.075,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.078
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "ECB",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ecb",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a63f0c37f6c5e66b39424",
+       "headline": "ECB and BOE edge toward rate hikes as energy turmoil deepens- Moneycontrol.com",
+       "url": "https://www.moneycontrol.com/news/business/economy/ecb-and-boe-edge-toward-rate-hikes-as-energy-turmoil-deepens-13905013.html",
+       "publisher": "moneycontrol.com",
+       "published_at": "2026-04-30T17:31:28",
+       "lede": "ecb and bank of england signal possible june rate hikes as oil nears $130, raising inflation fears amid ongoing middle east tensions. rising oil prices and geopolitical tensions are pushing the ecb and bank of england toward potential rate hikes ecb and boe signal possible rate hikes as soon as",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b27135cefb83fe880628c",
+       "headline": "ECB holds rates at 2% as inflation rises and eurozone growth slows",
+       "url": "https://au.finance.yahoo.com/news/ecb-holds-rates-2-inflation-122126422.html",
+       "publisher": "au.finance.yahoo.com",
+       "published_at": "2026-04-30T15:21:30",
+       "lede": "the ecb maintained key interest rates at their lowest level in more than two years, matching market expectations. the frankfurt-based monetary institution held its deposit facility rate at 2% on thursday for the third consecutive meeting. \"the governing council today decided to keep the three key ecb interest rates unchanged,\"",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a66e8937ef12fc0adb17",
+       "headline": "ECB Holds the Line: Rates Stay Steady as Geopolitical Energy Risks Loom - EconoTimes",
+       "url": "https://econotimes.com/ECB-Holds-the-Line-Rates-Stay-Steady-as-Geopolitical-Energy-Risks-Loom-1740495",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-30T14:36:06",
+       "lede": "the governing council of the european central bank (ecb) maintained its three benchmark interest rates unchanged today, april 30, 2026, thereby reaffirming its dedication to a moderate policy approach. the rate of the deposit facility stays at 2.00%; the rate of the main refinancing operations stays at 2.15%; and the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european central bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f87fd5bbf1d3145595e2d9",
+       "headline": "US growth falls short in Q1 2026; EU, UK hold rates as oil prices rise - Türkiye Today",
+       "url": "https://www.turkiyetoday.com/business/us-growth-falls-short-in-q1-2026-eu-uk-hold-rates-as-oil-prices-rise-3219134",
+       "publisher": "turkiyetoday.com",
+       "published_at": "2026-04-30T14:13:27",
+       "lede": "the u.s. economy grew in the first quarter of 2026 but failed to meet expectations, as a sharp rise in energy costs pushed inflation higher and complicated the outlook for policymakers, with the european central bank (ecb) and the bank of england (boe) holding rates steady on thursday. u.s. economic",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8aa5e8937ef12fc0b0bfa",
+       "headline": "ECB holds interest rates unchanged at 2pc",
+       "url": "https://www.independent.ie/business/irish/ecb-holds-interest-rates-unchanged-at-2pc/a2056425365.html",
+       "publisher": "independent.ie",
+       "published_at": "2026-04-30T13:29:31",
+       "lede": "christine lagarde, president of the ecb, gestures at the press conference of the european central bank in frankfurt on thursday, september 11, 2025. photo: getty the european central bank (ecb) kept interest rates unchanged, with officials signaling they need more time to assess the extent of the iran war's jolt",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.44
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "european central bank"
+       ],
+       "people": [
+        "christine lagarde"
+       ]
+      },
+      {
+       "id": "6a0eb2afc0b414d24a14e7e7",
+       "headline": "EZB-Zinsentscheidung: Leitzinsen im Euroraum bleiben konstant",
+       "url": "https://kurier.at/wirtschaft/ezb-zinsentscheidung-leitzinsen-euroraum-konstant/403155581",
+       "publisher": "kurier.at",
+       "published_at": "2026-04-30T12:28:15",
+       "lede": "the ecb remains on the alert about inflation risks: \"the governing council will closely monitor the situation and take a data-based approach to setting the appropriate monetary policy stance and decide from meeting to meeting,\" the accompanying text on the interest rate decision states. the ecb's head christine lagarde is",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.43
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac1135cefb83fe838536d",
+       "headline": "ECB holds rates at 2% as inflation rises and eurozone growth slows",
+       "url": "https://euronews.com/2026/04/30/ecb-holds-rates-at-2-as-inflation-rises-and-eurozone-growth-slows",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-30T12:21:26",
+       "lede": "the ecb maintained key interest rates at their lowest level in more than two years, matching market expectations.the frankfurt-based monetary institution held its deposit facility rate at 2% on thursday for the third consecutive meeting.\"the governing council today decided to keep the three key ecb interest rates unchanged,\" the bank",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0428609c4aac09354ec09f",
+       "headline": "ECB holds rates at 2% as inflation rises and eurozone growth slows",
+       "url": "http://www.euronews.com/2026/04/30/ecb-holds-rates-at-2-as-inflation-rises-and-eurozone-growth-slows",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-30T12:21:26",
+       "lede": "the ecb maintained key interest rates at their lowest level in more than two years, matching market expectations.the frankfurt-based monetary institution held its deposit facility rate at 2% on thursday for the third consecutive meeting.\"the governing council today decided to keep the three key ecb interest rates unchanged,\" the bank",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f880cd8937ef12fc074c04",
+       "headline": "The ECB avoids making a move but warns of \"growing risks\" of inflation due to the war",
+       "url": "https://en.ara.cat/economy/the-ecb-avoids-making-move-despite-the-war-and-inflation_1_5723611.html",
+       "publisher": "en.ara.cat",
+       "published_at": "2026-04-30T12:18:21",
+       "lede": "the european central bank (ecb) remains cautious. the banking institution has once again avoided making a move prematurely and, despite the war in iran and the rebound in inflation, has decided this thursday to keep interest rates at 2% for the seventh consecutive meeting. in this way, the financial entity",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        }
+       ],
+       "country": "spain",
+       "organizations": [
+        "european central bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8a65543843dd771d24522",
+       "headline": "ECB Interest Rate Standoff: Geopolitical Fog Clouds the Path to Easing - EconoTimes",
+       "url": "https://econotimes.com/ECB-Interest-Rate-Standoff-Geopolitical-Fog-Clouds-the-Path-to-Easing-1740469",
+       "publisher": "econotimes.com",
+       "published_at": "2026-04-30T11:37:38",
+       "lede": "today, april 30, 2026, the european central bank (ecb) governing council is meeting with an official policy announcement planned for 13:15 gmt. market players are readying for a \"hawkish hold\", anticipating president christine lagarde to keep the deposit facility rate at its current 2.00% level. despite a robust labor market,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.46
+        }
+       ],
+       "country": "iran",
+       "organizations": [
+        "european central bank"
+       ],
+       "people": [
+        "christine lagarde"
+       ]
+      },
+      {
+       "id": "6a2a61d95cefb83fe8fa13c5",
+       "headline": "ECB, Bank of England Set to Hold Rates Unchanged Today",
+       "url": "https://www.fxempire.com/news/article/ecb-bank-of-england-set-to-hold-rates-unchanged-today-1594864",
+       "publisher": "fxempire.com",
+       "published_at": "2026-04-30T10:24:35",
+       "lede": "the ecb awaits further information before deciding on the direction of ratesthe iran war has not broken the euro area economy—but it has bent the trajectory in a more risky direction. the shock is not about the current damage necessarily but about what it may set in motion: a renewed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.74
+        },
+        {
+         "code": 64,
+         "path": "/People & Society/Social Sciences/Economics",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a87f65cefb83fe811f882",
+       "headline": "Euro Zone Inflation Surges Past ECB Target Amid Soaring Oil Prices",
+       "url": "https://www.globalbankingandfinance.com/euro-zone-inflation-soars-ecb-target-oil-prices/",
+       "publisher": "globalbankingandfinance.com",
+       "published_at": "2026-04-30T09:07:54",
+       "lede": "euro zone inflation reaches 3.0% in april, pushing ecb towards rate hikes april inflation data and implications for ecb policy headline and core inflation trends frankfurt, april 30 (reuters) - euro zone inflation surged further in april on soaring energy costs, eurostat data showed on thursday, adding to the case",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a64843843dd771d243a4",
+       "headline": "USD / CAD - Canadian Dollar trading aimlessly",
+       "url": "https://www.baystreet.ca/forex_trader/3737/USD-CAD--Canadian-Dollar-trading-aimlessly",
+       "publisher": "baystreet.ca",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "- oil surges on fears trump will escalate iran war - ecb and boe monetary policy meetings ahead - the us dollar is trading defensively in early ny markets usdcad open: 1.3663, overnight range 1.3664-1.3691, close 1.3686, wti 106.79, gold 4,626.96 the canadian dollar was churned overnight probably due to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aed4e963d76f4af1f1ae9",
+       "headline": "ECB to Hold Rates Steady, Signals Possible Hike Amid Inflation Fears",
+       "url": "https://www.globalbankingandfinance.com/ecb-hold-rates-steady-keep-hikes-firmly-table/",
+       "publisher": "globalbankingandfinance.com",
+       "published_at": "2026-04-29T22:03:55",
+       "lede": "ecb keeps rates unchanged but june hike firmly on table ecb decision and market reactions by balazs koranyi and francesco canepa frankfurt, april 30 (reuters) - the european central bank left interest rates unchanged as expected on thursday but extensively debated a hike to combat soaring inflation and signalled both",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c93c1e3933a6dd8ee756",
+       "headline": "EUR/GBP flat lines above 0.8650 as markets await ECB, BoE rate decisions",
+       "url": "https://bitcoinethereumnews.com/finance/eur-gbp-flat-lines-above-0-8650-as-markets-await-ecb-boe-rate-decisions/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-04-29T06:45:41",
+       "lede": "the eur/gbp cross flat lines around 0.8665 during the early european trading hours on wednesday. traders turn to a wait-and-see mode ahead of key interest rate decisions from both the european central bank (ecb) and the bank of england (boe) on thursday. the ecb is expected to keep its key",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 42,
+         "path": "/Finance/Banking/Other",
+         "score": 0.43
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22b0ec6105443aa5d7c86",
+       "headline": "The European Central Bank faces heightened uncertainty ahead of next week’s rate decision, with President Christine Lagarde warning the “stop-start nature” of the Iran war is making the economic outlook harder to assess. As the European Central Bank (ECB) enters its pre-meeting quiet period before t",
+       "url": "https://www.hellenicshippingnews.com/ecb-interest-rate-dilemma-eurozone-growth-stalls-as-iran-war-fuels-inflation/",
+       "publisher": "hellenicshippingnews.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "the european central bank faces heightened uncertainty ahead of next week’s rate decision, with president christine lagarde warning the “stop-start nature” of the iran war is making the economic outlook harder to assess. as the european central bank (ecb) enters its pre-meeting quiet period before the interest rate decision next",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.48
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.44
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "european central bank"
+       ],
+       "people": [
+        "christine lagarde"
+       ]
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 1752,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAxNzo1NTo1NCIsImkiOiI2YTJhYWQ4NjVjZWZiODNmZTgyYWEwOGIiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.498,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.502
+    }
+   }
+  }
+ ]
+}

@@ -4,7 +4,114 @@ Explore Fliar’s **450M+ news archive**. Search news, combine sentiment, priori
 
 **Private preview.** Production dashboard key issuance and the public API rollout are pending. Proposed API hosts are preview addresses, not confirmed live services. Use the `API_BASE` supplied when access is granted. Plans are drafts; there is no active checkout.
 
-## Get access and make a first request
+<!-- scenarios:start -->
+## 300 worked demonstrations
+
+Real questions, real responses: each page answers one researched search query with
+saved live API output: volume, tone, a twelve-month series, countries, themes and
+critical headlines, plus the exact CLI, curl and Python calls.
+[Browse all 300](docs/scenarios/README.md) or start with a segment:
+
+| Segment | Pages | Start with |
+| --- | ---: | --- |
+| **[Industry research](docs/scenarios/industry-research/README.md)** | 50 | [Automotive](docs/scenarios/industry-research/automotive-industry.md) · [Textile](docs/scenarios/industry-research/textile-industry.md) · [Food Processing](docs/scenarios/industry-research/food-processing-industry.md) · [Pharmaceutical](docs/scenarios/industry-research/pharmaceutical-industry.md) |
+| **[Financial research](docs/scenarios/financial-research/README.md)** | 50 | [Stock Market](docs/scenarios/financial-research/stock-market-news.md) · [Crypto](docs/scenarios/financial-research/crypto-news.md) · [GST](docs/scenarios/financial-research/gst-news.md) · [Gold Price](docs/scenarios/financial-research/gold-price-news.md) |
+| **[Disease and health research](docs/scenarios/disease-health/README.md)** | 50 | [Measles](docs/scenarios/disease-health/measles-outbreak.md) · [Ebola](docs/scenarios/disease-health/ebola-outbreak.md) · [Influenza](docs/scenarios/disease-health/influenza-outbreak.md) · [COVID](docs/scenarios/disease-health/covid-news.md) |
+| **[Policy and regulation research](docs/scenarios/policy-regulation/README.md)** | 50 | [Supreme Court](docs/scenarios/policy-regulation/supreme-court-news.md) · [Tariffs](docs/scenarios/policy-regulation/tariffs-news.md) · [AI Regulation](docs/scenarios/policy-regulation/ai-regulation-news.md) · [Food Safety](docs/scenarios/policy-regulation/food-safety-news.md) |
+| **[Technology and AI research](docs/scenarios/technology-ai/README.md)** | 50 | [Artificial Intelligence](docs/scenarios/technology-ai/artificial-intelligence-news.md) · [Tiktok](docs/scenarios/technology-ai/tiktok-news.md) · [Spacex](docs/scenarios/technology-ai/spacex-news.md) · [Cybersecurity](docs/scenarios/technology-ai/cybersecurity-news.md) |
+| **[Energy and climate research](docs/scenarios/energy-climate/README.md)** | 50 | [Natural Gas](docs/scenarios/energy-climate/natural-gas-news.md) · [Petrol Price](docs/scenarios/energy-climate/petrol-price-news.md) · [Coal](docs/scenarios/energy-climate/coal-industry.md) · [Cyclone](docs/scenarios/energy-climate/cyclone-news.md) |
+
+Topics come from [keyword research](docs/research/KEYWORD_RESEARCH.md) (India and US monthly searches).
+Captured with 1 of 14 archive shards offline, so counts are lower bounds.
+<!-- scenarios:end -->
+
+<!-- demos:start -->
+## See the API in a research UI
+
+[6 animated Claude Code / Codex workflow concepts](docs/ANIMATED_USE_CASES.md) show
+what an assistant can build on this API. They cover theme discovery, a weekly sentiment shift, comparing two topics, critical alerts, GCP content-class codes and full-article export. Each GIF labels saved API
+responses or illustrative data; these are client-built UI concepts, not recordings of
+official client interfaces or claims of live service availability. Open the
+[interactive gallery](docs/demos/index.html) locally for prompts and request recipes.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>EV theme discovery</h3>
+      <a href="docs/demos/media/ev-theme-discovery.gif"><img src="docs/demos/media/ev-theme-discovery.gif" width="420" alt="Discover the themes behind a topic"></a>
+      <p>Ask a broad topic, get ranked themes, then open the coverage behind the strongest one. Saved API responses.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Tariff sentiment shift</h3>
+      <a href="docs/demos/media/tariff-sentiment.gif"><img src="docs/demos/media/tariff-sentiment.gif" width="420" alt="Watch the tone of a story change week by week"></a>
+      <p>See when a story turned, how far it moved from the archive norm, and which headlines drove it. Saved API responses.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Compare two topics</h3>
+      <a href="docs/demos/media/ai-topic-compare.gif"><img src="docs/demos/media/ai-topic-compare.gif" width="420" alt="Compare two narratives over the same window"></a>
+      <p>Put two narratives on one scale, with exact overlap and per-topic criticality. Saved API responses.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Critical news alerts</h3>
+      <a href="docs/demos/media/critical-alerts.gif"><img src="docs/demos/media/critical-alerts.gif" width="420" alt="Surface the critical stories in a busy topic"></a>
+      <p>Quantify how much of a topic is urgent, then read just those stories. Saved API responses.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>GCP class code map</h3>
+      <a href="docs/demos/media/class-code-map.gif"><img src="docs/demos/media/class-code-map.gif" width="420" alt="Turn a topic into GCP content-class codes"></a>
+      <p>Find the right content-class codes by name, then filter any endpoint by them. Saved API responses.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Full articles to CSV</h3>
+      <a href="docs/demos/media/full-article-export.gif"><img src="docs/demos/media/full-article-export.gif" width="420" alt="Export full article text to a spreadsheet"></a>
+      <p>Move from a filter to full article text in a file your analysis tools can read. Saved API responses.</p>
+    </td>
+  </tr>
+</table>
+<!-- demos:end -->
+
+## Install in one line
+
+Requires Bash, curl and Python 3.8+. The installer adds `prism-news` and
+`prism-business-news` (one client for both APIs) to `~/.local/bin`. It never uses
+sudo, edits shell profiles or starts services. During the private preview, export
+`GH_TOKEN` with **Contents: read** access to this repository, then run:
+
+```bash
+bash -o pipefail -c 'curl -fsSL --config <(printf "header = \"Authorization: Bearer %s\"\n" "${GH_TOKEN:?Export GH_TOKEN first}") https://raw.githubusercontent.com/fliarbi/prism-news-api/main/scripts/install.sh | bash'
+```
+
+Once the repository is public, the same installer runs without a token:
+`curl -fsSL https://raw.githubusercontent.com/fliarbi/prism-news-api/main/scripts/install.sh | bash`.
+See [Getting started](docs/GETTING_STARTED.md) for options, every command and troubleshooting.
+
+## Get started in five steps
+
+| Step | Do this | You get |
+|---:|---|---|
+| 1 | Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=apikeys) → **Fliar Prism workspace → API keys** → create a key | One key for both News APIs (shared monthly quota) |
+| 2 | Run the one-line installer above | The `prism-news` and `prism-business-news` commands |
+| 3 | `prism-news login` | Base URLs and key saved owner-only in `~/.config/prism/config.json` |
+| 4 | `prism-news status`, then `prism-news me` | Data dates, your plan, limits and this month's usage |
+| 5 | Open a [demonstration](docs/scenarios/README.md), copy its commands and change the subject | Your own version of a worked example |
+
+| Task | Command | Endpoint |
+|---|---|---|
+| Subject overview | `prism-news overview "steel industry" --since 2026-01-01 --until 2026-04-30` | `POST /v1/overview` |
+| Monthly volume | `prism-news trends "inflation" --granularity monthly --table` | `POST /v1/trends` |
+| Tone | `prism-news sentiment "tariffs" --granularity weekly` | `POST /v1/sentiment` |
+| Where it was reported | `prism-news geography "dengue" --table` | `POST /v1/geography` |
+| Themes | `prism-news themes "electric vehicle" --table` | `POST /v1/themes` |
+| Critical headlines | `prism-news headlines "semiconductor" --priority-min 7 --sort priority --table` | `POST /v1/headlines` |
+| Compare subjects | `prism-news compare --json '{"queries": [{"name": "A", "filters": {"q": "AI regulation"}}, {"name": "B", "filters": {"q": "AI investment"}}]}'` | `POST /v1/compare` |
+| Full text to a file | `prism-news export "battery storage" --limit 50 -o battery.csv` | `POST /v1/export` |
+| Any endpoint | `prism-news call POST /v1/coverage '{"q": "monsoon"}'` | any |
+
+## Make a first request with curl or Python
 
 1. Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=apikeys), then open **Fliar Prism workspace → API keys**. Once enabled for your account, create a key and copy it when shown. If the control is unavailable, request preview access from Fliar.
 2. Set `API_BASE` to the News API base URL supplied with your access and `PRISM_API_KEY` to your issued key. Keep the key private.
@@ -57,55 +164,6 @@ for article in payload["data"]["items"]:
 Headline and export requests default to 100; higher limits depend on your plan. Check `/v1/me` for your caps.
 
 Read the **[User guide](docs/USER_GUIDE.md)** for authentication, filters, theme drilldown, pagination, exports, comparisons, freshness, quotas, errors and the endpoint reference. The guide is also served as Markdown at `/guide` on your supplied API base. For company events and funding, see the [Business News API guide](https://github.com/fliarbi/prism-business-news-api/blob/main/docs/USER_GUIDE.md).
-
-<!-- demos:start -->
-## See the API in a research UI
-
-[6 animated Claude Code / Codex workflow concepts](docs/ANIMATED_USE_CASES.md) show
-what an assistant can build on this API. They cover theme discovery, a weekly sentiment shift, comparing two topics, critical alerts, GCP content-class codes and full-article export. Each GIF labels saved API
-responses or illustrative data; these are client-built UI concepts, not recordings of
-official client interfaces or claims of live service availability. Open the
-[interactive gallery](docs/demos/index.html) locally for prompts and request recipes.
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>EV theme discovery</h3>
-      <a href="docs/demos/media/ev-theme-discovery.gif"><img src="docs/demos/media/ev-theme-discovery.gif" width="420" alt="Discover the themes behind a topic"></a>
-      <p>Ask a broad topic, get ranked themes, then open the coverage behind the strongest one. Saved API responses.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>Tariff sentiment shift</h3>
-      <a href="docs/demos/media/tariff-sentiment.gif"><img src="docs/demos/media/tariff-sentiment.gif" width="420" alt="Watch the tone of a story change week by week"></a>
-      <p>See when a story turned, how far it moved from the archive norm, and which headlines drove it. Saved API responses.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>Compare two topics</h3>
-      <a href="docs/demos/media/ai-topic-compare.gif"><img src="docs/demos/media/ai-topic-compare.gif" width="420" alt="Compare two narratives over the same window"></a>
-      <p>Put two narratives on one scale, with exact overlap and per-topic criticality. Saved API responses.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>Critical news alerts</h3>
-      <a href="docs/demos/media/critical-alerts.gif"><img src="docs/demos/media/critical-alerts.gif" width="420" alt="Surface the critical stories in a busy topic"></a>
-      <p>Quantify how much of a topic is urgent, then read just those stories. Saved API responses.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>GCP class code map</h3>
-      <a href="docs/demos/media/class-code-map.gif"><img src="docs/demos/media/class-code-map.gif" width="420" alt="Turn a topic into GCP content-class codes"></a>
-      <p>Find the right content-class codes by name, then filter any endpoint by them. Saved API responses.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>Full articles to CSV</h3>
-      <a href="docs/demos/media/full-article-export.gif"><img src="docs/demos/media/full-article-export.gif" width="420" alt="Export full article text to a spreadsheet"></a>
-      <p>Move from a filter to full article text in a file your analysis tools can read. Saved API responses.</p>
-    </td>
-  </tr>
-</table>
-<!-- demos:end -->
 
 ## Running the service
 

@@ -1,0 +1,1053 @@
+{
+ "slug": "whatsapp-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:09:57Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "WhatsApp",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "whatsapp",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 88703,
+     "tone": {
+      "carrying": 88556,
+      "availability_pct": 99.83,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 41532,
+        "share_pct": 46.9
+       },
+       {
+        "group": "neutral",
+        "count": 2687,
+        "share_pct": 3.03
+       },
+       {
+        "group": "positive",
+        "count": 44337,
+        "share_pct": 50.07
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 88657,
+      "count": 45412,
+      "share_pct": 51.22
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.807,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.809
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "WhatsApp",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "whatsapp",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 19012,
+       "critical": 7506,
+       "critical_pct": 39.5,
+       "negative": 8756,
+       "positive": 9705,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 14734,
+       "critical": 6097,
+       "critical_pct": 41.4,
+       "negative": 6057,
+       "positive": 8202,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 20579,
+       "critical": 8633,
+       "critical_pct": 42.0,
+       "negative": 9404,
+       "positive": 10509,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 24979,
+       "critical": 12613,
+       "critical_pct": 50.5,
+       "negative": 11810,
+       "positive": 12412,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 23028,
+       "critical": 11427,
+       "critical_pct": 49.6,
+       "negative": 10783,
+       "positive": 11436,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 18310,
+       "critical": 8655,
+       "critical_pct": 47.3,
+       "negative": 8281,
+       "positive": 9618,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 16692,
+       "critical": 8735,
+       "critical_pct": 52.3,
+       "negative": 7966,
+       "positive": 8305,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 15090,
+       "critical": 7800,
+       "critical_pct": 51.7,
+       "negative": 6717,
+       "positive": 7978,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 15153,
+       "critical": 7413,
+       "critical_pct": 48.9,
+       "negative": 6666,
+       "positive": 8122,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 18602,
+       "critical": 9538,
+       "critical_pct": 51.3,
+       "negative": 8265,
+       "positive": 9771,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 22378,
+       "critical": 11767,
+       "critical_pct": 52.6,
+       "negative": 10908,
+       "positive": 10665,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 32570,
+       "critical": 16694,
+       "critical_pct": 51.3,
+       "negative": 15693,
+       "positive": 15779,
+       "partial_period": false
+      }
+     ],
+     "total": 241127,
+     "critical_total": 116878,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.971,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.973
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "WhatsApp",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "whatsapp",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 88703,
+     "carrying": 35699,
+     "availability_pct": 40.25,
+     "items": [
+      {
+       "country": "united states",
+       "count": 11211,
+       "share_pct": 12.64
+      },
+      {
+       "country": "india",
+       "count": 7118,
+       "share_pct": 8.02
+      },
+      {
+       "country": "united kingdom",
+       "count": 3950,
+       "share_pct": 4.45
+      },
+      {
+       "country": "malaysia",
+       "count": 1805,
+       "share_pct": 2.03
+      },
+      {
+       "country": "colombia",
+       "count": 943,
+       "share_pct": 1.06
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 10672
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.158,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.16
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "WhatsApp",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "whatsapp",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "social media platform updates",
+       "count": 379,
+       "share": 0.77,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 316,
+       "delta_pct": 19.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "social media app integrations",
+       "count": 368,
+       "share": 0.75,
+       "lift": 61.0,
+       "baseline_count": 1,
+       "previous_period_count": 338,
+       "delta_pct": 8.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mobile app innovations",
+       "count": 355,
+       "share": 0.72,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 177,
+       "delta_pct": 100.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "mental health and support communities",
+       "count": 523,
+       "share": 1.06,
+       "lift": 43.35,
+       "baseline_count": 2,
+       "previous_period_count": 158,
+       "delta_pct": 231.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "cybercrime laws and digital forensics",
+       "count": 1526,
+       "share": 3.1,
+       "lift": 25.3,
+       "baseline_count": 10,
+       "previous_period_count": 1265,
+       "delta_pct": 20.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 88703,
+     "carrying": 49245,
+     "carrier_share_pct": 55.52,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.506,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 6.51
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "WhatsApp",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "whatsapp",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f88158bbf1d3145596d6b0",
+       "headline": "HKL Responds After Netizen Expresses Concern Over Congestion At Specialist Clinic",
+       "url": "https://says.com/my/news/hkl-responds-after-netizen-expresses-concern-over-congestion-at-specialist-clinic",
+       "publisher": "says.com",
+       "published_at": "2026-04-30T14:19:53",
+       "lede": "follow us on instagram, tiktok, and whatsapp for the latest stories and breaking news. a viral social media post highlighting congestion at the ophthalmology specialist clinic at hospital kuala lumpur (hkl) has prompted a response from the hospital on monday, 27 april, an x user shared a photo showing a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "tiktok",
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f87f77bbf1d3145595a97b",
+       "headline": "Everything we know about Golders Green stabbing suspect as he's named",
+       "url": "https://inews.co.uk/news/everything-we-know-about-golders-green-stabbing-attack-4389961",
+       "publisher": "inews.co.uk",
+       "published_at": "2026-04-30T10:54:33",
+       "lede": "close cancel email whatsapp link share share bookmark save the terror suspect in the golders green stabbing has been named as essa suleiman, a somali-born british national. it’s believed suleiman, who previously lived in southwark, south east london, is a somali translator who previously worked as a school security guard.",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.76,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.82
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e3f645272de32e8c073f",
+       "headline": "Condenado un entrenador en prácticas de un club deportivo de Vigo por enviar una imagen pedófila a un grupo de WhatsApp de menores",
+       "url": "https://www.elperiodico.com/es/sucesos/20260428/condenado-entrenador-practicas-club-deportivo-129596374",
+       "publisher": "elperiodico.com",
+       "published_at": "2026-04-27T22:33:52",
+       "lede": "the courtroom at plaza 3 of the criminal section of the vigo court of instance hosted this morning the hearing against a trainee coach of a vigo sports club accused of sending a pornographic image to the whatsapp group with 22 underage players. the procedure was settled with a conviction",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.94,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.71
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.62
+        },
+        {
+         "code": 30,
+         "path": "/Law & Government/Legal/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c75d399b489398deb2b9",
+       "headline": "Trump's latest brush with death will only fuel his anger",
+       "url": "https://inews.co.uk/news/world/trump-latest-brush-with-death-will-only-fuel-his-anger-4381110",
+       "publisher": "inews.co.uk",
+       "published_at": "2026-04-26T11:01:37",
+       "lede": "close cancel email whatsapp link share share bookmark save when thomas crooks opened fire at a trump rally from a rooftop in pennsylvania in july 2024, he killed one man in the crowd, severely injured two others – and grazed donald trump’s ear with a bullet, producing one of the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.93
+        },
+        {
+         "code": 20,
+         "path": "/News/Politics/Campaigns & Elections",
+         "score": 0.66
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.62
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump",
+        "thomas crooks"
+       ]
+      },
+      {
+       "id": "69efaa1aa84b609af2b275dc",
+       "headline": "'It hit me like an AK-47 bullet' - Brother shattered after family of seven killed in KZN",
+       "url": "https://www.enca.com/news/it-hit-me-ak-47-bullet-brother-shattered-after-family-seven-killed-kzn",
+       "publisher": "enca.com",
+       "published_at": "2026-04-24T17:42:13",
+       "lede": "newark - grieving brother, ronnie moonsamy said his world has been torn apart after seven members of his family were abducted from their newark home in kzn and brutally murdered just hours later in melmoth. moonsamy said he was made aware of the incident through whatsapp as he was still",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.84,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea552ab0517977015db00b",
+       "headline": "Starmer can't say his Cabinet backs him. Could a 'stalking horse' bring him down?",
+       "url": "https://inews.co.uk/news/politics/starmer-cabinet-stalking-horse-down-4375061",
+       "publisher": "inews.co.uk",
+       "published_at": "2026-04-23T16:51:34",
+       "lede": "close cancel email whatsapp link share share bookmark save sir keir starmer has been unable to assert he has the full backing from his cabinet over his handling of the mandelson scandal as labour mps continue to question his authority over the party. the prime minister has been left looking",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.8
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "keir starmer",
+        "keir starmer",
+        "keir starmer"
+       ]
+      },
+      {
+       "id": "69e9a5c9bdd09a23d09569d1",
+       "headline": "Britain is unprepared for missile 'saturation' attack if Putin launches war",
+       "url": "https://inews.co.uk/news/world/britain-unprepared-missile-saturation-putin-launches-war-4372205",
+       "publisher": "inews.co.uk",
+       "published_at": "2026-04-22T14:53:06",
+       "lede": "close cancel email whatsapp link share share bookmark save britain is woefully unprepared for the possibility of a “saturation” attack comprising hundreds of missiles that could overwhelm its air defences in the opening hours of any conflict with russia, military experts have warned. fears are growing of a direct conflict",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.7
+        },
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.56
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.51
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e89ba07bb1410d4c9a8dd3",
+       "headline": "Thrissur blast leaves at least 13 dead: ‘Felt like an earthquake,’ say residents",
+       "url": "https://www.thenewsminute.com/kerala/thrissur-blast-leaves-at-least-13-dead-felt-like-an-earthquake-say-residents",
+       "publisher": "thenewsminute.com",
+       "published_at": "2026-04-21T15:07:52",
+       "lede": "follow tnm's whatsapp channel for news updates and story links.what began as a quiet afternoon in mundathikode near thrissur turned into scenes of panic and devastation on tuesday, april 21, as a powerful explosion at a fireworks unit killed at least 13 people and left several others critically injured. authorities",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.73
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8c75f5cfa3e5ba539d909",
+       "headline": "When the map turns red: Inside the lives upended by Israel’s expulsion orders",
+       "url": "http://www.middleeasteye.net/news/when-map-turns-red-inside-lives-upended-israel-expulsion-orders",
+       "publisher": "middleeasteye.net",
+       "published_at": "2026-04-21T09:00:11",
+       "lede": "phones started pinging, and maps circulated quickly across whatsapp groups: red marking buildings, streets, and sometimes entire districts. people zoomed in, trying to recognise landmarks. within minutes, cars clogged narrow roads. families rushed into the streets carrying children and elderly parents. in some neighbourhoods, warnings arrived during school hours. students",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.93
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8c1449baafc7356c23e68",
+       "headline": "When the map turns red: Inside the lives upended by Israel’s expulsion orders",
+       "url": "https://www.middleeasteye.net/news/when-map-turns-red-inside-lives-upended-israel-expulsion-orders",
+       "publisher": "middleeasteye.net",
+       "published_at": "2026-04-21T09:00:11",
+       "lede": "phones started pinging, and maps circulated quickly across whatsapp groups: red marking buildings, streets, and sometimes entire districts. people zoomed in, trying to recognise landmarks. within minutes, cars clogged narrow roads. families rushed into the streets carrying children and elderly parents. in some neighbourhoods, warnings arrived during school hours. students",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.93
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e887ef9baafc73569432e8",
+       "headline": "Putin is nothing without war. The contrast with his overlord Xi couldn't be starker",
+       "url": "https://inews.co.uk/opinion/putin-nothing-without-war-contrast-overlord-xi-starker-4343436",
+       "publisher": "inews.co.uk",
+       "published_at": "2026-04-21T05:00:00",
+       "lede": "close cancel email whatsapp link share share bookmark save “what is putin without war?” it’s a question volodymyr zelensky posed recently in munich. it goes to the heart of vladimir putin’s predicament. putin is defined by conflict: because he cannot build, he must destroy. it is why his country is",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.82
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.53
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": [
+        "vladimir putin",
+        "vladimir putin"
+       ]
+      },
+      {
+       "id": "69e882469baafc7356907dcf",
+       "headline": "Telangana inter student sexually assaults girl, shares video on WhatsApp group",
+       "url": "https://www.siasat.com/telangana-inter-student-sexually-assaults-girl-shares-video-on-whatsapp-group-3457344/",
+       "publisher": "siasat.com",
+       "published_at": "2026-04-21T04:41:08",
+       "lede": "hyderabad: a student of a private inter college in telangana has allegedly sexually assaulted a girl and later shared the video on a whatsapp group. after the video went viral, a case has been booked under the protection of children from sexual offences (pocso) act. details of case as per",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.88
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.4
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e882fd9baafc735690fd66",
+       "headline": "The vital lesson Britain must learn from Trump’s failure in Iran",
+       "url": "https://inews.co.uk/opinion/vital-lesson-britain-learn-trumps-failure-iran-4360977",
+       "publisher": "inews.co.uk",
+       "published_at": "2026-04-20T10:00:00",
+       "lede": "close cancel email whatsapp link share share bookmark save it sounds like something from a science fiction film: the defeat of soldiers in battle by a bunch of robots. yet according to ukraine’s president, this landmark military event took place on the long and gory front line that scars his",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.81
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.53
+        },
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.51
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87a095cfa3e5ba5ffa1f3",
+       "headline": "Why the next phase of war with Iran would be more destructive",
+       "url": "https://inews.co.uk/news/world/why-next-phase-war-iran-more-destructive-4366368",
+       "publisher": "inews.co.uk",
+       "published_at": "2026-04-19T16:42:41",
+       "lede": "close cancel email whatsapp link share share bookmark save a resumption of war between the us, israel and iran could bring the most intense phase of the conflict yet, former defence officials believe. a two-week ceasefire expires on tuesday with little sign of a diplomatic breakthrough, amid ongoing military preparations",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.76
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.73
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e863a57bb1410d4c745bba",
+       "headline": "Zara Qairina inquest: 96,656 WhatsApp pages among 70GB of data extracted from 12 phones, court told",
+       "url": "https://www.malaymail.com/news/malaysia/2026/04/16/zara-qairina-inquest-96656-whatsapp-pages-among-70gb-of-data-extracted-from-12-phones-court-told/216554",
+       "publisher": "malaymail.com",
+       "published_at": "2026-04-16T19:27:18",
+       "lede": "kota kinabalu, april 16 — a staggering 96,656 pages of whatsapp chats, extracted from just one mobile phone, were presented to the coroner’s court today in the probe over zara qairina mahathir’s death. the pages are part of over 70 gigabytes (gb) of data obtained from 12 mobile phones that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "malaysia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8df027bb1410d4cd191e6",
+       "headline": "Turkey to hold funerals for school shooting victims",
+       "url": "https://gulfnews.com/world/mena/turkey-to-hold-funerals-for-school-shooting-victims-2-1.500508659",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-04-16T07:31:41",
+       "lede": "turkey: turkey will hold funerals for nine victims killed in a school shooting by a 14-year-old, an attack that has sent shockwaves across the country, with authorities saying the suspect had referenced a us mass killer in a whatsapp profile image.the attack in the southern province of kahramanmaras was turkey's",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.84
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.7
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e849699baafc73566ca6c3",
+       "headline": "Parents of student killed by Valdo Calocane slam ‘grotesque’ police actions",
+       "url": "http://www.eveshamjournal.co.uk/news/national/25967892.parents-student-killed-valdo-calocane-slam-grotesque-police-actions/",
+       "publisher": "eveshamjournal.co.uk",
+       "published_at": "2026-04-15T05:47:45",
+       "lede": "emma webber, whose son barnaby was killed in the street, said a whatsapp message sent by a nottinghamshire police officer referencing the undergraduate’s wounds is “disgusting and grotesque”. mr webber and his friend grace o’malley-kumar, a first-year medical student, were killed by calocane in ilkeston road, nottingham, in the early",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.63
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.41
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e851937bb1410d4c699d6f",
+       "headline": "Amravati Sex Abuse: Ahmed exploited 180 girls, 350 videos viral",
+       "url": "https://organiser.org/2026/04/15/348760/bharat/amravati-sex-abuse-racket-exposed-180-victims-350-videos-19-year-old-ayan-ahmed-booked-amid-fears-of-organised-network/",
+       "publisher": "organiser.org",
+       "published_at": "2026-04-15T04:00:22",
+       "lede": "in a deeply disturbing case from maharashtra’s amravati district, police have arrested a 19-year-old boy accused of sexually exploiting over 180 girls, including minors, and circulating nearly 350 obscene videos on social media platforms such as whatsapp and snapchat. the accused, identified as ayan ahmed tanveer ahmed, was apprehended by",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.99,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.87
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "social media"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e84bad5cfa3e5ba5e3b317",
+       "headline": "Petrol, energy bills and mortgages - how 'Trumpflation' will impact you",
+       "url": "https://inews.co.uk/news/politics/three-ways-trumpflation-your-pocket-4354162",
+       "publisher": "inews.co.uk",
+       "published_at": "2026-04-14T17:44:13",
+       "lede": "close cancel email whatsapp link share share bookmark save the threat to british living standards from the iran war is becoming clearer with growing warnings of more expensive petrol, energy bills and mortgages. the international monetary fund (imf) has predicted that the uk economy will take a bigger hit from",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.62
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 19,
+     "total_estimate": 9435,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNCAxMjo1OToxNiIsImkiOiI2OWU4NDJlMTdiYjE0MTBkNGM2MDg2NGYiLCJwIjo5fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.486,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.49
+    }
+   }
+  }
+ ]
+}

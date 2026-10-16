@@ -1,0 +1,824 @@
+{
+ "slug": "coal-industry",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:14:23Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "coal",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "coal",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13463,
+     "tone": {
+      "carrying": 13444,
+      "availability_pct": 99.86,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 6466,
+        "share_pct": 48.1
+       },
+       {
+        "group": "neutral",
+        "count": 438,
+        "share_pct": 3.26
+       },
+       {
+        "group": "positive",
+        "count": 6540,
+        "share_pct": 48.65
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 13448,
+      "count": 9654,
+      "share_pct": 71.79
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.042,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.045
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "coal",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "coal",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2188,
+       "critical": 1518,
+       "critical_pct": 69.4,
+       "negative": 957,
+       "positive": 1143,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1798,
+       "critical": 1261,
+       "critical_pct": 70.1,
+       "negative": 822,
+       "positive": 929,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2555,
+       "critical": 1627,
+       "critical_pct": 63.7,
+       "negative": 1308,
+       "positive": 1154,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3257,
+       "critical": 2203,
+       "critical_pct": 67.6,
+       "negative": 1616,
+       "positive": 1558,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2421,
+       "critical": 1801,
+       "critical_pct": 74.4,
+       "negative": 975,
+       "positive": 1376,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1976,
+       "critical": 1467,
+       "critical_pct": 74.2,
+       "negative": 746,
+       "positive": 1183,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2037,
+       "critical": 1459,
+       "critical_pct": 71.6,
+       "negative": 977,
+       "positive": 983,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2294,
+       "critical": 1592,
+       "critical_pct": 69.4,
+       "negative": 938,
+       "positive": 1293,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2458,
+       "critical": 1755,
+       "critical_pct": 71.4,
+       "negative": 983,
+       "positive": 1391,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3536,
+       "critical": 2657,
+       "critical_pct": 75.1,
+       "negative": 1825,
+       "positive": 1602,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3278,
+       "critical": 2386,
+       "critical_pct": 72.8,
+       "negative": 1606,
+       "positive": 1564,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 4191,
+       "critical": 2856,
+       "critical_pct": 68.1,
+       "negative": 2052,
+       "positive": 1983,
+       "partial_period": false
+      }
+     ],
+     "total": 31989,
+     "critical_total": 22582,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 7.169,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 7.174
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "coal",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "coal",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13463,
+     "carrying": 7183,
+     "availability_pct": 53.35,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2543,
+       "share_pct": 18.89
+      },
+      {
+       "country": "india",
+       "count": 2145,
+       "share_pct": 15.93
+      },
+      {
+       "country": "china",
+       "count": 327,
+       "share_pct": 2.43
+      },
+      {
+       "country": "australia",
+       "count": 236,
+       "share_pct": 1.75
+      },
+      {
+       "country": "united kingdom",
+       "count": 190,
+       "share_pct": 1.41
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1742
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.208,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.212
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "coal",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "coal",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mining safety and regulatory compliance",
+       "count": 621,
+       "share": 7.24,
+       "lift": 295.55,
+       "baseline_count": 2,
+       "previous_period_count": 348,
+       "delta_pct": 78.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mining law and policy frameworks",
+       "count": 719,
+       "share": 8.38,
+       "lift": 171.09,
+       "baseline_count": 4,
+       "previous_period_count": 384,
+       "delta_pct": 87.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 245,
+       "share": 2.86,
+       "lift": 233.2,
+       "baseline_count": 1,
+       "previous_period_count": 138,
+       "delta_pct": 77.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "artisanal and small-scale mining challenges",
+       "count": 356,
+       "share": 4.15,
+       "lift": 169.43,
+       "baseline_count": 2,
+       "previous_period_count": 160,
+       "delta_pct": 122.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "electricity generation from fossil fuels",
+       "count": 213,
+       "share": 2.48,
+       "lift": 202.74,
+       "baseline_count": 1,
+       "previous_period_count": 132,
+       "delta_pct": 61.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 13463,
+     "carrying": 8576,
+     "carrier_share_pct": 63.7,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.235,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 6.238
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "coal",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "coal",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e010b2a9936a33b35dc0af",
+       "headline": "2014 Grassroots Anti-Coal Movements To Watch",
+       "url": "https://www.sierraclub.org/compass/2014/12/2014-grassroots-anti-coal-movements-watch",
+       "publisher": "sierraclub.org",
+       "published_at": "2026-02-10T00:00:00",
+       "lede": "wherever there are coal mines, coal shipping ports, and power plants around the globe, local communities are fighting back against deadly pollution and economic destruction. today, the sierra club released our fourth annual report on some of the world’s major, ongoing grassroots coal fights around the world. pitted against unimaginable",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.83
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.63
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ca1c2d288a36c0c7bd28d9",
+       "headline": "At least 18 killed and several trapped after blast tears through coal mine",
+       "url": "https://www.thescottishsun.co.uk/news/15890189/workers-killed-trapped-india-coal-mine-blast/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-02-05T21:08:08",
+       "lede": "at least 18 workers have been killed after a powerful explosion ripped through a coal mine in india.dozens of labourers were trapped underground as the blast erupted with several people still feared missing as recovery operations continue.sign up for scottish sun newsletter thank you! email address please provide a valid",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.85
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cea0399b489398e20859",
+       "headline": "Le Haut conseil pour le climat presse l’État d’accélérer la sortie des énergies fossiles – Entrevue",
+       "url": "https://entrevue.fr/environnement/le-haut-conseil-pour-le-climat-presse-letat-daccelerer-la-sortie-des-energies-fossiles/",
+       "publisher": "entrevue.fr",
+       "published_at": "2026-04-29T08:11:00",
+       "lede": "this time, the high council for climate is not just recalling the course, it asks the government to post it black on white. in one opinion, the independent body called for a clear roadmap to get out of coal, oil and gas, while geopolitical shocks in the middle east put",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.53
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f229abc6105443aa5d2345",
+       "headline": "France unveils plan to ditch all fossil fuels by 2050",
+       "url": "https://www.enca.com/opinion/france-unveils-plan-ditch-all-fossil-fuels-2050",
+       "publisher": "enca.com",
+       "published_at": "2026-04-29T07:00:00",
+       "lede": "santa marta - france announced a \"first of its kind\" plan to phase out coal by 2030, oil by 2045 and gas by 2050 during a global conference aimed at breaking reliance on fossil fuels. the \"roadmap\" was published as dozens of nations gather in santa marta, colombia for the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.68
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.49
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.46
+        }
+       ],
+       "country": "colombia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ebdf1285a58da6f3a0479",
+       "headline": "France unveils plan to ditch all fossil fuels by 2050",
+       "url": "https://www.straitstimes.com/world/europe/france-unveils-plan-to-ditch-all-fossil-fuels-by-2050",
+       "publisher": "straitstimes.com",
+       "published_at": "2026-04-29T01:43:00",
+       "lede": "sign up now: get st's newsletters delivered to your inbox coal would be phased out by 2030, oil by 2045 and gas by 2050 for energy purposes, the road map said. santa marta, colombia – france on april 2 8 announced a “first of its kind” plan to phase out",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.8
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a79615cefb83fe80845d2",
+       "headline": "France unveils roadmap to ditch all fossil fuels by 2050",
+       "url": "https://www.inkl.com/news/france-unveils-roadmap-to-ditch-all-fossil-fuels-by-2050",
+       "publisher": "inkl.com",
+       "published_at": "2026-04-29T01:08:20",
+       "lede": "french refinery workers strike outside totalenergies’ donges site in western france, as france now sets deadlines to phase out coal by 2030, oil by 2045 and gas by 2050. ap - jeremias gonzalez santa marta (colombia) (afp) – france on tuesday announced a \"first of its kind\" plan to phase",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.85
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a04047062bbf617b041c11a",
+       "headline": "France unveils roadmap to ditch all fossil fuels by 2050",
+       "url": "https://www.rfi.fr/en/environment/20260429-france-unveils-roadmap-to-ditch-all-fossil-fuels-by-2050",
+       "publisher": "rfi.fr",
+       "published_at": "2026-04-29T01:08:20",
+       "lede": "environment santa marta (colombia) (afp) – france on tuesday announced a \"first of its kind\" plan to phase out coal by 2030, oil by 2045 and gas by 2050 during a global conference aimed at breaking reliance on fossil fuels. french refinery workers strike outside totalenergies’ donges site in western",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.76
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad988963d76f4af116b3d",
+       "headline": "France unveils plan to ditch all fossil fuels by 2050",
+       "url": "https://www.digitaljournal.com/article/france-unveils-plan-to-ditch-all-fossil-fuels-by-2050/",
+       "publisher": "digitaljournal.com",
+       "published_at": "2026-04-29T01:07:20",
+       "lede": "france on tuesday announced a “first of its kind” plan to phase out coal by 2030, oil by 2045 and gas by 2050 during a global conference aimed at breaking reliance on fossil fuels. the “roadmap” was published as dozens of nations gather in santa marta, colombia for the first-ever",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.76
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.54
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9eabc713680636ef46cc7",
+       "headline": "California’s state legislature may succeed in destroying its own oil industry, but it won’t change anything in the world. It will only export jobs and raise the cost-of-living here at home. Here’s a reality check. According to the Statistical Review of World Energy, in 2024, oil, natural gas, and co",
+       "url": "https://californiaglobe.com/fr/ringside-californias-self-destructive-war-on-oil/",
+       "publisher": "californiaglobe.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "california’s state legislature may succeed in destroying its own oil industry, but it won’t change anything in the world. it will only export jobs and raise the cost-of-living here at home. here’s a reality check. according to the statistical review of world energy, in 2024, oil, natural gas, and coal",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.71
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.42
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.4
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a74495cefb83fe804c939",
+       "headline": "Renewable energy just broke a 100-year-old streak",
+       "url": "https://vox.com/the-highlight/486845/climate-change-coal-solar-renewable-power",
+       "publisher": "vox.com",
+       "published_at": "2026-04-28T10:00:00",
+       "lede": "this story was originally published in the highlight, vox’s member-exclusive magazine. to get access to member-exclusive stories every month, become a vox member today. for more than a century, the world has run on coal. when thomas edison’s pearl street electrical station in lower manhattan fired up in 1882, it",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03fa61220687a966a50efc",
+       "headline": "India boosts coal and gas output as power demand hits record peak in heatwave - CNBC TV18",
+       "url": "https://www.cnbctv18.com/energy/india-boosts-coal-and-gas-output-as-power-demand-hits-record-peak-in-heatwave-ws-l-19894198.htm",
+       "publisher": "cnbctv18.com",
+       "published_at": "2026-04-27T11:16:27",
+       "lede": "india ramped up coal and gas-fired power generation last week as peak demand hit a record 256.1 gigawatts over the weekend amid a heatwave, official data showed.india’s peak power demand rose to a record 256.1 gw on april 25, up from the previous day’s record of 252.08 gw, federal grid",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.22,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 1495,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAxMDo0NDoxMyIsImkiOiI2YTJiMzI1OTk2M2Q3NmY0YWY1MTFiM2EiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 11.149,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 11.152
+    }
+   }
+  }
+ ]
+}

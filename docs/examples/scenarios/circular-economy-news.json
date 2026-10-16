@@ -1,0 +1,947 @@
+{
+ "slug": "circular-economy-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:18:12Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "circular economy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "circular economy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3959,
+     "tone": {
+      "carrying": 3958,
+      "availability_pct": 99.97,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 241,
+        "share_pct": 6.09
+       },
+       {
+        "group": "neutral",
+        "count": 45,
+        "share_pct": 1.14
+       },
+       {
+        "group": "positive",
+        "count": 3672,
+        "share_pct": 92.77
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3959,
+      "count": 1891,
+      "share_pct": 47.76
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.796,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.799
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "circular economy",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "circular economy",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 635,
+       "critical": 316,
+       "critical_pct": 49.8,
+       "negative": 37,
+       "positive": 592,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 691,
+       "critical": 389,
+       "critical_pct": 56.3,
+       "negative": 42,
+       "positive": 642,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 737,
+       "critical": 379,
+       "critical_pct": 51.4,
+       "negative": 39,
+       "positive": 689,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 565,
+       "critical": 297,
+       "critical_pct": 52.6,
+       "negative": 29,
+       "positive": 532,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 829,
+       "critical": 473,
+       "critical_pct": 57.1,
+       "negative": 51,
+       "positive": 767,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 886,
+       "critical": 453,
+       "critical_pct": 51.1,
+       "negative": 37,
+       "positive": 842,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 913,
+       "critical": 494,
+       "critical_pct": 54.1,
+       "negative": 48,
+       "positive": 860,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 724,
+       "critical": 397,
+       "critical_pct": 54.8,
+       "negative": 53,
+       "positive": 661,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 720,
+       "critical": 381,
+       "critical_pct": 52.9,
+       "negative": 43,
+       "positive": 671,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 954,
+       "critical": 493,
+       "critical_pct": 51.7,
+       "negative": 68,
+       "positive": 875,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1000,
+       "critical": 467,
+       "critical_pct": 46.7,
+       "negative": 59,
+       "positive": 929,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1285,
+       "critical": 550,
+       "critical_pct": 42.8,
+       "negative": 71,
+       "positive": 1197,
+       "partial_period": false
+      }
+     ],
+     "total": 9939,
+     "critical_total": 5089,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.322,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.324
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "circular economy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "circular economy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3959,
+     "carrying": 1372,
+     "availability_pct": 34.66,
+     "items": [
+      {
+       "country": "united states",
+       "count": 296,
+       "share_pct": 7.48
+      },
+      {
+       "country": "india",
+       "count": 199,
+       "share_pct": 5.03
+      },
+      {
+       "country": "united kingdom",
+       "count": 139,
+       "share_pct": 3.51
+      },
+      {
+       "country": "china",
+       "count": 98,
+       "share_pct": 2.48
+      },
+      {
+       "country": "spain",
+       "count": 73,
+       "share_pct": 1.84
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 567
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.841,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.845
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "circular economy",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "circular economy",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "circular economy principles",
+       "count": 517,
+       "share": 18.98,
+       "lift": 774.65,
+       "baseline_count": 2,
+       "previous_period_count": 499,
+       "delta_pct": 3.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "green technology innovations",
+       "count": 143,
+       "share": 5.25,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 129,
+       "delta_pct": 10.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "recycling and waste reduction initiatives",
+       "count": 131,
+       "share": 4.81,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 75,
+       "delta_pct": 74.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "composting and organic waste management",
+       "count": 259,
+       "share": 9.51,
+       "lift": 258.71,
+       "baseline_count": 3,
+       "previous_period_count": 191,
+       "delta_pct": 35.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "sustainable urban planning initiatives",
+       "count": 123,
+       "share": 4.52,
+       "lift": 368.59,
+       "baseline_count": 1,
+       "previous_period_count": 128,
+       "delta_pct": -3.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3959,
+     "carrying": 2724,
+     "carrier_share_pct": 68.81,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.049,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.051
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "circular economy",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "circular economy",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69ea207a73206aa299ec1182",
+       "headline": "Green economy to drive jobs, entrepreneurship; youth key to sustainable growth: Union MoS Jitendra Singh",
+       "url": "https://www.aninews.in/news/business/green-economy-to-drive-jobs-entrepreneurship-youth-key-to-sustainable-growth-union-mos-jitendra-singh20260423181531",
+       "publisher": "aninews.in",
+       "published_at": "2026-04-23T12:45:31",
+       "lede": "new delhi [india], april 23 (ani): union minister jitendra singh on thursday said \"green jobs\" and green entrepreneurship will be key drivers of the future economy, with sectors such as renewable energy, electric mobility, green fuels and circular economy creating large-scale employment opportunities for youth, according to an official release",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.62
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.47
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "renewable energy",
+        "green fuels"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99b0875f157062caf5ca7",
+       "headline": "TRA Warning Over Low Compliance with UK Tyre Export Verification Rules",
+       "url": "https://www.tyreandrubberrecycling.com/articles/business-news/tra-warning-over-low-compliance-with-uk-tyre-export-verification-rules/",
+       "publisher": "tyreandrubberrecycling.com",
+       "published_at": "2026-04-22T08:40:39",
+       "lede": "the tyre recovery association (tra) issued a warning that a circular economy will be at risk and out of reach if domestic processing moves abroad data from the environment agency show that, since the introduction of enhanced checks in october 2025, fewer than 2% of waste tyre shipments have met",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.22,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 164,
+         "path": "/Business & Industrial/Energy & Utilities/Waste Management",
+         "score": 0.73
+        },
+        {
+         "code": 121,
+         "path": "/Autos & Vehicles/Vehicle Parts & Services/Vehicle Parts & Accessories",
+         "score": 0.71
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "environment agency"
+       ],
+       "people": []
+      },
+      {
+       "id": "93654693ed83da0351110a07",
+       "headline": "Electrochemical Synthesis of Isolated Fluoride Reagents from PFAS.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41801112/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-25T00:00:00",
+       "lede": "electrochemical synthesis of isolated fluoride reagents from pfas.per- and polyfluoroalkyl substances (pfas) are of increasing concern due to their environmental persistence and adverse effects on health. the recovery of fluoride from the decomposition of concentrated sources of pfas (e.g., refrigerants, protective coatings, and foams) enables a circular economy. recent efforts",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 464,
+         "path": "/Science/Chemistry",
+         "score": 0.82
+        },
+        {
+         "code": 161,
+         "path": "/Business & Industrial/Chemicals Industry/Other",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c43575aeca06e4513ac23c",
+       "headline": "Prime Minister of Finland meets Prime Minister Modi",
+       "url": "https://orissadiary.com/prime-minister-of-finland-meets-prime-minister-modi/",
+       "publisher": "orissadiary.com",
+       "published_at": "2026-02-18T09:06:42",
+       "lede": "prime minister of finland, he mr. petteri orpo met the prime minister, narendra modi in delhi today.- advertisement -both nations aim to double trade, thus giving a strong boost to economic linkages.both leaders discussed enhancing cooperation in futuristic technologies like 6g, innovation, clean energy, biofuels, circular economy and more.in separate",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "narendra modi",
+        "petteri orpo"
+       ]
+      },
+      {
+       "id": "69c8bd028e7a569bab3bd174",
+       "headline": "Circular economy, decent work and government’s duty",
+       "url": "https://guardian.ng/opinion/editorial/circular-economy-decent-work-and-governments-duty/",
+       "publisher": "guardian.ng",
+       "published_at": "2026-01-26T05:27:12",
+       "lede": "the recent joint report by circle economy, the international labour organisation (ilo) and the world bank group offers a clear picture of what is possible and, by extension, a sobering reminder of the high cost of inaction. it lays bare both the promise of the circular economy and the urgent",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 164,
+         "path": "/Business & Industrial/Energy & Utilities/Waste Management",
+         "score": 0.57
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.49
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "world bank group",
+        "world bank group",
+        "circle economy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9eae1a088760d34c757de",
+       "headline": "Plastic recyclers in tune at Eurovision Song Contest • Recycling International",
+       "url": "https://recyclinginternational.com/business/business-news/plastic-recyclers-front-row-at-eurovision-song-contest/63987/",
+       "publisher": "recyclinginternational.com",
+       "published_at": "2026-04-30T14:02:24",
+       "lede": "the eurovision song contest is embracing a circular economy solution for plastics developed in austria, where this year’s edition takes place. altstoff recycling austria (ara) as the official event supplier, borouge international (formerly borealis), omv and greiner packaging are ensuring 100 000 reusable cups made from 100% recycled plastic will",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.83,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 164,
+         "path": "/Business & Industrial/Energy & Utilities/Waste Management",
+         "score": 0.67
+        },
+        {
+         "code": 230,
+         "path": "/Business & Industrial/Chemicals Industry/Plastics & Polymers",
+         "score": 0.66
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.61
+        }
+       ],
+       "country": "austria",
+       "organizations": [
+        "borouge",
+        "omv"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f882b48937ef12fc08537d",
+       "headline": "Govt rolls out policy brief to boost SMEs in circular economy",
+       "url": "https://www.capitalfm.co.ke/business/2026/04/govt-rolls-out-policy-brief-to-boost-smes-in-circular-economy/",
+       "publisher": "capitalfm.co.ke",
+       "published_at": "2026-04-29T20:17:47",
+       "lede": "nairobi, april 29 (xinhua) — kenya on tuesday introduced a policy brief to strengthen the role of small- and medium-sized enterprises (smes) in fostering circular economy practices within the national agri-food sector. the document examines kenya’s progress in policy development while highlighting persistent barriers limiting sme participation. alice nyaga, official",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "kenya",
+       "organizations": [
+        "sme"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0364aaca027fb5990c10a6",
+       "headline": "Bluealp Chosen as Technology Partner for Biobtx Project in Netherlands",
+       "url": "https://www.process-worldwide.com/bluealp-chosen-as-technology-partner-for-biobtx-project-in-netherlands-a-0cea8b5e0bb484e5e3c3bd285b69bb16/",
+       "publisher": "process-worldwide.com",
+       "published_at": "2026-04-29T15:38:27",
+       "lede": "circular economy bluealp chosen as technology partner for biobtx project in netherlands with an aim to advance circular aromatics from plastic waste, biobtx has selected bluealp as the technology partner for its project in delfzijl, the netherlands. the biobtx project is expected to convert hard-to-recycle mixed plastic waste into high-value",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 164,
+         "path": "/Business & Industrial/Energy & Utilities/Waste Management",
+         "score": 0.52
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.45
+        },
+        {
+         "code": 161,
+         "path": "/Business & Industrial/Chemicals Industry/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d59c7b2d589e844ba505",
+       "headline": "Bluealp Chosen as Technology Partner for Biobtx Project in Netherlands",
+       "url": "https://process-worldwide.com/bluealp-chosen-as-technology-partner-for-biobtx-project-in-netherlands-a-0cea8b5e0bb484e5e3c3bd285b69bb16/",
+       "publisher": "process-worldwide.com",
+       "published_at": "2026-04-29T15:38:27",
+       "lede": "circular economy bluealp chosen as technology partner for biobtx project in netherlands with an aim to advance circular aromatics from plastic waste, biobtx has selected bluealp as the technology partner for its project in delfzijl, the netherlands. the biobtx project is expected to convert hard-to-recycle mixed plastic waste into high-value",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.99,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 164,
+         "path": "/Business & Industrial/Energy & Utilities/Waste Management",
+         "score": 0.52
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.45
+        },
+        {
+         "code": 161,
+         "path": "/Business & Industrial/Chemicals Industry/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "netherlands",
+       "organizations": [
+        "biobtx",
+        "bluealp"
+       ],
+       "people": []
+      },
+      {
+       "id": "9bb478254d1d9a2e9a6bca1f",
+       "headline": "Inorganic Photoluminescent Microparticles as Identifiers for the Sorting of Lithium-Ion Battery Cathodes.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41999232/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "inorganic photoluminescent microparticles as identifiers for the sorting of lithium-ion battery cathodes.the growing demand for lithium-ion batteries in the european union contributes to critical raw material scarcity. this challenge can be addressed by establishing a circular economy, making use of highly efficient and economical recycling processes. the efficiency of these",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "32cdb9185b91dd7876949aee",
+       "headline": "Electrochemical Lithium-Ion Recovery from Battery Recycling Process Water.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42036109/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "electrochemical lithium-ion recovery from battery recycling process water.electrochemical desalination is a promising technology for the selective recovery of lithium-ions or other rare ions from spent electronics, contributing to a circular economy. due to its high-energy efficiency and selective lithium-ion recovery, this method offers a low environmental impact, making it a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.92,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0ea35836d28f995cbd27e",
+       "headline": "Pacto Português para os Plásticos define metas para 2030 e reforça ambição para a economia circular",
+       "url": "https://jornaleconomico.sapo.pt/noticias/pacto-portugues-para-os-plasticos-define-metas-para-2030-e-reforca-ambicao-para-a-economia-circular/",
+       "publisher": "jornaleconomico.sapo.pt",
+       "published_at": "2026-04-27T19:40:50",
+       "lede": "the initiative, which already has 115 entities, enters a new phase focused on accelerating the circular economy, after presenting positive results in its 5th progress report. the announcement comes in parallel with the release of the fifth progress report, which reveals significant progress, but stresses that the path to full",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.93,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.79
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2327ec6105443aa602f97",
+       "headline": "Govt working to finalise National Circular Textile Strategy by year-end",
+       "url": "https://www.tbsnews.net/economy/rmg/govt-working-finalise-national-circular-textile-strategy-year-end-1420491",
+       "publisher": "tbsnews.net",
+       "published_at": "2026-04-24T17:20:00",
+       "lede": "the ministry of commerce has reaffirmed its commitment to finalising the national strategy on circular economy for the textile and ready-made garment (rmg) sector by the end of 2026. the announcement came during a national stakeholder consultation held in dhaka yesterday (23 april), aimed at transitioning the country's largest export",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 248,
+         "path": "/Business & Industrial/Textiles & Nonwovens",
+         "score": 0.84
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.47
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [
+        "rmg"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0b017547abc155c28fc535",
+       "headline": "New regional partnerships to drive joint environmental action in Central Asia",
+       "url": "https://www.unep.org/news-and-stories/press-release/new-regional-partnerships-drive-joint-environmental-action-central",
+       "publisher": "unep.org",
+       "published_at": "2026-04-24T10:52:00",
+       "lede": "first regional ecological summit unites region’s leaders around the environment countries boost cooperation on circular economy, glaciers, biodiversity and air pollution major opportunity eyed to reduce methane emissions astana, kazakhstan, 24 april 2026 – central asian countries have united at the inaugural regional ecological summit, where they launched new regional",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.62
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69eaf8aaeb123d7f5cafcd75",
+       "headline": "RFPs: Develop Breakthrough and Sustainable Bio-Based Textile Fibres - fundsforNGOs",
+       "url": "https://www2.fundsforngos.org/innovation/rfps-develop-breakthrough-and-sustainable-bio-based-textile-fibres/",
+       "publisher": "fundsforngos.org",
+       "published_at": "2026-04-24T04:42:48",
+       "lede": "deadline: 22-sep-2026 the european union is funding projects to develop innovative bio-based textile fibres that reduce reliance on fossil-based synthetics and improve sustainability in the textile sector. the programme supports scalable fibre innovation with improved performance, reduced microplastic pollution, and stronger circular economy outcomes. projects must demonstrate lifecycle sustainability, technical",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 248,
+         "path": "/Business & Industrial/Textiles & Nonwovens",
+         "score": 0.97
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "lifecycle"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 730,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNCAwNDo0Mjo0OCIsImkiOiI2OWVhZjhhYWViMTIzZDdmNWNhZmNkNzUiLCJwIjo3fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.386,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.389
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,978 @@
+{
+ "slug": "energy-storage-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:31Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "energy storage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "energy storage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13648,
+     "tone": {
+      "carrying": 13643,
+      "availability_pct": 99.96,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1584,
+        "share_pct": 11.61
+       },
+       {
+        "group": "neutral",
+        "count": 77,
+        "share_pct": 0.56
+       },
+       {
+        "group": "positive",
+        "count": 11982,
+        "share_pct": 87.83
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 13647,
+      "count": 10375,
+      "share_pct": 76.02
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.391,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.393
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "energy storage",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "energy storage",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1893,
+       "critical": 1481,
+       "critical_pct": 78.2,
+       "negative": 103,
+       "positive": 1772,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1826,
+       "critical": 1461,
+       "critical_pct": 80.0,
+       "negative": 99,
+       "positive": 1711,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2056,
+       "critical": 1681,
+       "critical_pct": 81.8,
+       "negative": 123,
+       "positive": 1923,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1841,
+       "critical": 1449,
+       "critical_pct": 78.7,
+       "negative": 116,
+       "positive": 1706,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2202,
+       "critical": 1772,
+       "critical_pct": 80.5,
+       "negative": 80,
+       "positive": 2107,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2366,
+       "critical": 1930,
+       "critical_pct": 81.6,
+       "negative": 117,
+       "positive": 2232,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2234,
+       "critical": 1841,
+       "critical_pct": 82.4,
+       "negative": 159,
+       "positive": 2064,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 2413,
+       "critical": 1925,
+       "critical_pct": 79.8,
+       "negative": 115,
+       "positive": 2278,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3018,
+       "critical": 2543,
+       "critical_pct": 84.3,
+       "negative": 179,
+       "positive": 2827,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 3618,
+       "critical": 2580,
+       "critical_pct": 71.3,
+       "negative": 553,
+       "positive": 3045,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 3347,
+       "critical": 2440,
+       "critical_pct": 72.9,
+       "negative": 476,
+       "positive": 2845,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3665,
+       "critical": 2812,
+       "critical_pct": 76.7,
+       "negative": 376,
+       "positive": 3265,
+       "partial_period": false
+      }
+     ],
+     "total": 30479,
+     "critical_total": 23915,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.895,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.898
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "energy storage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "energy storage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 13648,
+     "carrying": 6575,
+     "availability_pct": 48.18,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2284,
+       "share_pct": 16.74
+      },
+      {
+       "country": "india",
+       "count": 994,
+       "share_pct": 7.28
+      },
+      {
+       "country": "china",
+       "count": 646,
+       "share_pct": 4.73
+      },
+      {
+       "country": "united kingdom",
+       "count": 342,
+       "share_pct": 2.51
+      },
+      {
+       "country": "australia",
+       "count": 340,
+       "share_pct": 2.49
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1969
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.993,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.996
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "energy storage",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "energy storage",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "smart grid integration for renewables",
+       "count": 1029,
+       "share": 11.5,
+       "lift": 939.15,
+       "baseline_count": 1,
+       "previous_period_count": 566,
+       "delta_pct": 81.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "battery charging systems",
+       "count": 947,
+       "share": 10.59,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 694,
+       "delta_pct": 36.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "renewable energy storage solutions (battery, thermal)",
+       "count": 2683,
+       "share": 30.0,
+       "lift": 489.74,
+       "baseline_count": 5,
+       "previous_period_count": 1813,
+       "delta_pct": 48.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "battery backup systems for electronics",
+       "count": 842,
+       "share": 9.41,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 588,
+       "delta_pct": 43.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "electricity storage solutions & battery technologies",
+       "count": 401,
+       "share": 4.48,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 232,
+       "delta_pct": 72.8,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 13648,
+     "carrying": 8944,
+     "carrier_share_pct": 65.53,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.713,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.716
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "energy storage",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "energy storage",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f880798937ef12fc0715b6",
+       "headline": "China's Largest BTM Storage Project by Great Power and Zhongfu was Put into Operation!  - Shanghai Metals Market (SMM)",
+       "url": "https://news.metal.com/en/newscontent/103881704-Chinas-Largest-BTM-Storage-Project-by-Great-Power-and-Zhongfu-was-Put-into-Operation-",
+       "publisher": "news.metal.com",
+       "published_at": "2026-04-30T00:00:00",
+       "lede": "on january 16, china's largest behind-the-meter (btm) energy storage project, jointly built by great power and sichuan zhongfu, was officially connected to the grid and put into operation. boasting a scale of 107.12mw/428.48mwh, it is also the first large-scale btm energy storage project in the aluminum industry. upon grid connection",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.98,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.55
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2291d122c4392e0cf15e5",
+       "headline": "Iron Flow Battery Achieves Record Lifespan  - Electronics For You – Official Site ElectronicsForU.com",
+       "url": "https://www.electronicsforu.com/news/iron-flow-battery-achieves-record-lifespan",
+       "publisher": "electronicsforu.com",
+       "published_at": "2026-04-29T08:33:31",
+       "lede": "a novel design reduces material loss inside the system, producing results that challenge existing limits and suggest new directions for renewable energy storage. china unveils ultra-cheap ‘all-iron flow battery’ for renewable energy storage a research team from the chinese academy of sciences has developed an “all-iron flow battery” designed to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.53
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ced7a5706a322e12b884",
+       "headline": "China's Biggest BTM Storage Project by Great Power and Zhongfu was Put into Operation!  - Shanghai Metals Market (SMM)",
+       "url": "https://news.metal.com/en/newscontent/103881704-Chinas-Biggest-BTM-Storage-Project-by-Great-Power-and-Zhongfu-was-Put-into-Operation-",
+       "publisher": "news.metal.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "on january 16, china's largest behind-the-meter (btm) energy storage project, jointly built by great power and sichuan zhongfu, was officially connected to the grid and put into operation. boasting a scale of 107.12mw/428.48mwh, it is also the first large-scale btm energy storage project in the aluminum industry. upon grid connection",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.98,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.55
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a9c5c963d76f4afe68ddc",
+       "headline": "CATL and HyperStrong sign 60GWh sodium-ion storage deal - Best Magazine",
+       "url": "https://www.bestmag.co.uk/catl-hyperstrong-60gwh-sodium-ion-storage/",
+       "publisher": "bestmag.co.uk",
+       "published_at": "2026-04-28T15:58:54",
+       "lede": "catl and hyperstrong have signed what they describe as the world’s largest sodium-ion battery energy storage cooperation agreement, covering 60gwh of supply over three years. the agreement, announced on 27 april in ningde, fujian, china, positions hyperstrong as catl’s first strategic partner for sodium-ion energy storage and spans joint work",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c87a1e3933a6dd8e90b2",
+       "headline": "Today's headlines: Two more offshore wind-killing deals, Republicans…",
+       "url": "https://www.canarymedia.com/newsletters/todays-headlines-two-more-offshore-wind-killing-deals-republicans-want-to-revive-tax-credits-and-more",
+       "publisher": "canarymedia.com",
+       "published_at": "2026-04-28T15:08:00",
+       "lede": "utility-scale solar, wind, and energy storage accounted for 91 % of all new power capacity that joined the u.s. grid last year, with clean power providing more than $ 150 billion in economic benefits in 2025 . ( report ) more than 780 gw of data center projects have been",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.91
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8a5b5cefb83fe81393a9",
+       "headline": "CATL says sodium batteries are mainstream-ready, signs massive 60 GWh deal",
+       "url": "https://electrek.co/2026/04/27/catl-sodium-ion-battery-60gwh-energy-storage-deal",
+       "publisher": "electrek.co",
+       "published_at": "2026-04-28T00:39:37",
+       "lede": "dr wu kai, catl's chief scientist (source: catl) catl, the world’s largest battery maker, signed a 60 gwh sodium-ion battery deal with energy storage integrator hyperstrong — the largest sodium-ion battery order ever placed. the three-year agreement is equivalent to half of all energy storage batteries catl delivered in 2025.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.49
+        },
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "f7d84994bdb5d05c9f52a275",
+       "headline": "Multifunctional Strategies in Lithium-Sulfur Batteries: From Fundamentals to Future Technologies.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42053108/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "multifunctional strategies in lithium-sulfur batteries: from fundamentals to future technologies.with the growing demand for energy storage and the need for sustainable solutions, there has been a shift from the widely acknowledged lithium-ion battery (libs) to other alternatives, such as the lithium-sulfur battery (lsb). with a theoretical capacity of approximately 1675",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "ae8748c0222245a12d077ef9",
+       "headline": "Taming the Temperature Extremes: An Entropy-Regulated Electrolyte for Wide-Temperature Lithium-Ion Batteries.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42048653/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "taming the temperature extremes: an entropy-regulated electrolyte for wide-temperature lithium-ion batteries.the development of high-energy lithium-ion batteries is crucial for next-generation energy storage and electric vehicle/aircraft technologies; however, their development is hindered by conventional electrolyte designs, which perform poorly across wide temperature ranges. herein, entropy-enhanced electrolytes have been developed for graphite||lini0.9co0.05mn0.05o2",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.6,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e232d325610894206d5d",
+       "headline": "Meta Boosts AI Power with Space Solar & Energy Storage",
+       "url": "https://www.newkerala.com/news/a/meta-announces-two-partnerships-boost-reliable-power-its-846.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-27T22:55:42",
+       "lede": "meta announced two energy partnerships to deliver reliable power for its ai infrastructure and data centers. it is partnering with overview energy to bring up to 1 gw of space solar energy to earth. additionally, meta is partnering with noon energy for ultra-long-duration energy storage supporting 24/7 clean power. these",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.89,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0eb53a285a58da6f34ca23",
+       "headline": "Multilateral Development Banks’ Clean Electricity Finance",
+       "url": "http://www.nrdc.org/resources/multilateral-development-banks-clean-electricity-finance",
+       "publisher": "nrdc.org",
+       "published_at": "2026-04-27T12:00:00",
+       "lede": "coauthored by diego escalante, gflac, and cliff polycarp, nrdc senior advisor to achieve global climate goals, the world needs to rapidly increase renewable energy deployment, modernize electricity grids, deploy energy storage, and improve energy efficiency. multilateral development banks (mdbs) are already investing in these four clean electricity areas and could",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.86
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e93e0285a58da6f1c9f88",
+       "headline": "Multilateral Development Banks’ Clean Electricity Finance",
+       "url": "https://www.nrdc.org/resources/multilateral-development-banks-clean-electricity-finance",
+       "publisher": "nrdc.org",
+       "published_at": "2026-04-27T12:00:00",
+       "lede": "coauthored by diego escalante, gflac, and cliff polycarp, nrdc senior advisor to achieve global climate goals, the world needs to rapidly increase renewable energy deployment, modernize electricity grids, deploy energy storage, and improve energy efficiency. multilateral development banks (mdbs) are already investing in these four clean electricity areas and could",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.86
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e9e845272de32e8c68b3",
+       "headline": "Middle East Construction News",
+       "url": "https://meconstructionnews.com/67265/saudi-invites-bids-for-12000mwh-battery-energy-storage-system",
+       "publisher": "meconstructionnews.com",
+       "published_at": "2026-04-27T04:37:00",
+       "lede": "energy saudi invites bids for 12,000mwh battery energy storage system by three of these 500mw/2000mwh projects are located in the makkah province and one each in madinah, qassim and the eastern province saudi power procurement company, under the supervision of the ministry of energy, has launched the qualification bid process",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.6
+        },
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.4
+        }
+       ],
+       "country": "saudi arabia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c8c4399b489398df69be",
+       "headline": "China’s solar giant Sungrow revives Hong Kong IPO plan amid clean energy boom",
+       "url": "https://www.scmp.com/business/china-business/article/3351515/chinas-solar-giant-sungrow-revives-hong-kong-ipo-plan-amid-rising-demand-clean-energy",
+       "publisher": "scmp.com",
+       "published_at": "2026-04-27T03:55:24",
+       "lede": "china’s solar giant sungrow power supply has filed a fresh application to list in hong kong, reviving plans initiated last year, as a wave of mainland companies seeks offshore funding to support overseas expansion. the shenzhen-listed solar inverter and energy storage system maker submitted its latest application proof to the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.89
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "sungrow",
+        "shenzhen"
+       ],
+       "people": []
+      },
+      {
+       "id": "618a2be55ddc3d0046c5bd2b",
+       "headline": "Dual Dynamic Networks Enable a Bio-Based Hydrogel Electrolyte With Simultaneous Robustness and Fast Zn2 + Transport for Highly Reversible Zinc Metal Batteries.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42035432/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-26T00:00:00",
+       "lede": "dual dynamic networks enable a bio-based hydrogel electrolyte with simultaneous robustness and fast zn2 + transport for highly reversible zinc metal batteries.zinc-ion batteries (zibs) have become attractive candidates for large-scale energy storage due to their inherent safety, eco-friendliness, and low cost. nevertheless, anode-related issues such as zn dendrites and side",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 464,
+         "path": "/Science/Chemistry",
+         "score": 0.55
+        },
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d99ca088760d34c2a163",
+       "headline": "Revenue drops as ADS-TEC Energy (NASDAQ: ADSE) posts 2025 loss",
+       "url": "https://www.stocktitan.net/sec-filings/ADSE/6-k-a-ads-tec-energy-public-ltd-co-amended-current-report-foreign-iss-0f400b7c210b.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-24T20:15:08",
+       "lede": "exhibit 99.1 ads-tec energy reports preliminary and unaudited financial results nürtingen, germany--(business wire)-- ads-tec energy plc (nasdaq: adse) (the “company”), a global leader in battery-based energy storage and fast-charging systems, today announced its preliminary and unaudited condensed consolidated financial statements for the year 2025, covering the period ended december 31,",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.79
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.41
+        }
+       ],
+       "country": "germany",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a1e0bdd09a23d09532ad",
+       "headline": "India’s Transmission Sector May Turn Around By FY27, Driven By Storage, Policy Shifts: SBICAPS",
+       "url": "https://www.saurenergy.com/solar-energy-news/indias-transmission-sector-may-turn-around-by-fy27-driven-by-storage-policy-shifts-sbicaps-11756248",
+       "publisher": "saurenergy.com",
+       "published_at": "2026-04-23T03:49:40",
+       "lede": "&quot;india&amp;quot;s power transmission sector could see a recovery by fy27 after several years of underperformance, supported by improving execution, evolving regulatory frameworks and the growing role of energy storage, according to a report by sbi capital markets (sbi caps) limited.advertisment execution recovery, but targets still at risk transmission line and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 86,
+         "path": "/Business & Industrial/Energy & Utilities/Electricity",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "sbi capital markets"
+       ],
+       "people": []
+      },
+      {
+       "id": "b0d76d5c25c98b6a26386ce0",
+       "headline": "Two-Dimensional Mesoporous Tungsten Oxynitride/Carbon Nanosheets: Enabling High-Performance Lithium-Sulfur Batteries.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42026858/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-23T00:00:00",
+       "lede": "two-dimensional mesoporous tungsten oxynitride/carbon nanosheets: enabling high-performance lithium-sulfur batteries.lithium-sulfur batteries (lsbs) hold great promise as next-generation energy storage devices, owing to their ultrahigh theoretical energy density (2600 wh kg-1). however, their real-world implementation is limited by the polysulfide shuttle effect and the poor electrical conductivity of sulfur species. to address these",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.41
+        },
+        {
+         "code": 210,
+         "path": "/Computers & Electronics/Electronics & Electrical/Power Supplies",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea1f8475c44d9ce88217b4",
+       "headline": "Graphene Market to Reach USD 4.21 Billion by 2033 as High-Growth Demand in Energy Storage, Composites, and Advanced Electronics Moves Commercialization Beyond Pilot Scale",
+       "url": "https://www.openpr.com/news/4484465/graphene-market-to-reach-usd-4-21-billion-by-2033-as-high-growth",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-22T15:27:29",
+       "lede": "graphene market to reach usd 4.21 billion by 2033 as high-growth demand in energy storage, composites, and advanced electronics moves commercialization beyond pilot scale graphene market https://www.datamintelligence.com/download-sample/graphene-market?kailas https://www.datamintelligence.com/buy-now-page?report=graphene-market?kailas https://www.datamintelligence.com/ april 22, 2026 - the global graphene market reached us$232.1 million in 2025 and is forecast to climb to us$4,212.3 million",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.85,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 221,
+         "path": "/Science/Engineering & Technology/Other",
+         "score": 0.56
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "datam"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 2856,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAxNToyNzoyOSIsImkiOiI2OWVhMWY4NDc1YzQ0ZDljZTg4MjE3YjQiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.767,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.776
+    }
+   }
+  }
+ ]
+}

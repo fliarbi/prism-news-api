@@ -1,0 +1,777 @@
+{
+ "slug": "ipo-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:56:02Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "IPO",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ipo",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 40479,
+     "tone": {
+      "carrying": 40455,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 10567,
+        "share_pct": 26.12
+       },
+       {
+        "group": "neutral",
+        "count": 825,
+        "share_pct": 2.04
+       },
+       {
+        "group": "positive",
+        "count": 29063,
+        "share_pct": 71.84
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 40471,
+      "count": 26951,
+      "share_pct": 66.59
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.567,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.569
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "IPO",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "ipo",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 6214,
+       "critical": 3773,
+       "critical_pct": 60.7,
+       "negative": 1022,
+       "positive": 5083,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 6701,
+       "critical": 4270,
+       "critical_pct": 63.7,
+       "negative": 961,
+       "positive": 5630,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 7895,
+       "critical": 4534,
+       "critical_pct": 57.4,
+       "negative": 1321,
+       "positive": 6443,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 10210,
+       "critical": 5643,
+       "critical_pct": 55.3,
+       "negative": 1765,
+       "positive": 8289,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 13512,
+       "critical": 9381,
+       "critical_pct": 69.4,
+       "negative": 2561,
+       "positive": 10751,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 7307,
+       "critical": 4665,
+       "critical_pct": 63.8,
+       "negative": 1025,
+       "positive": 6182,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 7483,
+       "critical": 4754,
+       "critical_pct": 63.5,
+       "negative": 1182,
+       "positive": 6126,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 8875,
+       "critical": 5288,
+       "critical_pct": 59.6,
+       "negative": 1164,
+       "positive": 7514,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 7021,
+       "critical": 4556,
+       "critical_pct": 64.9,
+       "negative": 983,
+       "positive": 5895,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 12990,
+       "critical": 9439,
+       "critical_pct": 72.7,
+       "negative": 5356,
+       "positive": 7426,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 8972,
+       "critical": 5625,
+       "critical_pct": 62.7,
+       "negative": 1835,
+       "positive": 6903,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 11496,
+       "critical": 7331,
+       "critical_pct": 63.8,
+       "negative": 2393,
+       "positive": 8839,
+       "partial_period": false
+      }
+     ],
+     "total": 108676,
+     "critical_total": 69259,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.237,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.239
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "IPO",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ipo",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 40479,
+     "carrying": 22469,
+     "availability_pct": 55.51,
+     "items": [
+      {
+       "country": "united states",
+       "count": 12851,
+       "share_pct": 31.75
+      },
+      {
+       "country": "india",
+       "count": 3761,
+       "share_pct": 9.29
+      },
+      {
+       "country": "china",
+       "count": 1372,
+       "share_pct": 3.39
+      },
+      {
+       "country": "united kingdom",
+       "count": 655,
+       "share_pct": 1.62
+      },
+      {
+       "country": "singapore",
+       "count": 466,
+       "share_pct": 1.15
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 3364
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.86,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.863
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "IPO",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "ipo",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "initial public offerings (ipos)",
+       "count": 5003,
+       "share": 21.45,
+       "lift": 583.73,
+       "baseline_count": 3,
+       "previous_period_count": 7166,
+       "delta_pct": -30.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stock splits and reverse splits",
+       "count": 957,
+       "share": 4.1,
+       "lift": 334.98,
+       "baseline_count": 1,
+       "previous_period_count": 961,
+       "delta_pct": -0.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "financial technology (fintech) innovations",
+       "count": 2077,
+       "share": 8.91,
+       "lift": 181.75,
+       "baseline_count": 4,
+       "previous_period_count": 2091,
+       "delta_pct": -0.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "initial public offerings (ipos) and listings",
+       "count": 3236,
+       "share": 13.88,
+       "lift": 141.59,
+       "baseline_count": 8,
+       "previous_period_count": 5353,
+       "delta_pct": -39.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mergers and acquisitions in finance",
+       "count": 1243,
+       "share": 5.33,
+       "lift": 217.54,
+       "baseline_count": 2,
+       "previous_period_count": 1114,
+       "delta_pct": 11.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 40479,
+     "carrying": 23321,
+     "carrier_share_pct": 57.61,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.052,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 6.06
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "IPO",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "ipo",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f8824fbbf1d31455975830",
+       "headline": "OnEMI Technology IPO: Price band Rs 162–171, GMP up 2% -Check key dates, expert view",
+       "url": "https://www.financialexpress.com/market/ipo-news/onemi-technology-ipo-opens-today-price-band-rs-162171-gmp-up-2-key-dates-lot-size-expert-view/4223129/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-30T09:00:05",
+       "lede": "kissht parent company, onemi technology is all set to open its ipo worth rs 925 crore today. the share price band for the same has been fixed at rs 162 to rs 171. in the unlisted markets, the shares are currently trading at a premium of more than 2%,&nbsp; the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.6
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.55
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ac534963d76f4af02daa8",
+       "headline": "SpaceX IPO ties Musk payout to $7.5 trillion Mars target",
+       "url": "https://en.cryptonomist.ch/2026/04/30/spacex-ipo-musk-pay-plan/",
+       "publisher": "en.cryptonomist.ch",
+       "published_at": "2026-04-30T08:11:17",
+       "lede": "spacex has approved a new compensation structure for elon musk ahead of the spacex ipo, according to a confidential sec filing. the plan links his potential payout to extreme valuation goals and a long-term mars colony plan. how the new award is structured under the board’s approval, musk could receive",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 128,
+         "path": "/Business & Industrial/Aerospace & Defense/Space Technology",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0afd49636c9774213677e9",
+       "headline": "SpaceX IPO filing says only Class B shareholders can remove Elon Musk, giving founder unique control over CEO and board roles - CNBC TV18",
+       "url": "https://www.cnbctv18.com/world/only-elon-musk-can-fire-elon-musk-from-spacex-filing-shows-ipo-tesla-facebook-mark-zuckerberg-ws-l-19896247.htm",
+       "publisher": "cnbctv18.com",
+       "published_at": "2026-04-30T02:02:31",
+       "lede": "spacex is telling investors that no one can fire elon musk from his role as chief executive and chairman of the board without the billionaire founder's consent, according to an excerpt of its ipo filing reviewed by reuters.the filing states that musk \"can only be removed from our board or",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e9375c0b414d24afe51e7",
+       "headline": "Bill Ackman's Pershing Square USA tumbles 18% in its stock-market debut",
+       "url": "https://www.businessinsider.com/bill-ackman-ps-psus-pershing-square-usa-ipo-trading-investing-2026-4",
+       "publisher": "businessinsider.com",
+       "published_at": "2026-04-29T20:08:30",
+       "lede": "pershing square usa had a tough first day of trading&comma; falling double digits during wednesday&apos;s session.the ipo marked bill ackman&apos;s public trading trading debut. the hedge fund legend has been vocal about his aspirations to operate a fund like warren buffett&apos;s berkshire hathaway.pershing square usa&comma; the firm&apos;s close-end fund&comma; trades",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 123,
+         "path": "/Finance/Investing/Funds",
+         "score": 0.67
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.54
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8848cbbf1d31455989302",
+       "headline": "If You'd Put $1,000 Into Chipotle Mexican Grill Stock 20 Years Ago, Here's What You'd Have Today",
+       "url": "https://www.kiplinger.com/investing/invested-1000-in-cmg-stock-worth-how-much-now",
+       "publisher": "kiplinger.com",
+       "published_at": "2026-04-29T16:05:50",
+       "lede": "at this point, it was time for mcdonald's to cash out. the cmg investment, while lucrative, was a distraction from the company's core fast-food business model. and so mcdonald's spun off chipotle mexican grill in an initial public offering for the ages. cmg went public in january 2006 at a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 277,
+         "path": "/Food & Drink/Restaurants/Fast Food",
+         "score": 0.82
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "mcdonald",
+        "chipotle mexican grill",
+        "mcdonald's",
+        "cmg"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f230a9c6105443aa5f1a00",
+       "headline": "Airtel Money IPO May Raise Up to $2 Bn, Report Says - TechStory",
+       "url": "https://techstory.in/airtel-money-ipo-may-raise-up-to-2-bn-report-says/",
+       "publisher": "techstory.in",
+       "published_at": "2026-04-29T15:17:47",
+       "lede": "<p data-start=\"53\" data-end=\"563\">in a move that could reshape africa’s fintech landscape, <span class=\"hover:entity-accent entity-underline inline cursor-pointer align-baseline\"><span class=\"whitespace-normal\">airtel africa plc</span></span> is preparing for a blockbuster initial public offering (ipo) of its mobile money business, airtel money. according to reports, the listing could raise between $1.5 billion and $2 billion, potentially",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.45
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "fintech",
+        "airtel africa"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a03644aca027fb5990be378",
+       "headline": "Only Elon Musk can fire himself from SpaceX, filing shows - The Economic Times",
+       "url": "https://economictimes.indiatimes.com/tech/technology/only-elon-musk-can-fire-himself-from-spacex-filing-shows/articleshow/130610155.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-29T14:22:45",
+       "lede": "spacex is telling investors that no one can fire elon musk from his role as chief executive and chairman of the board without the billionaire founder's consent, according to an excerpt of its ipo filing reviewed by reuters. the filing states that musk \"can only âbe removed from â our",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.73,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e9997c0b414d24a02b443",
+       "headline": "SpaceX IPO: Millions of investors may make this costly mistake — don’t be one",
+       "url": "https://economictimes.indiatimes.com/news/international/us/spacex-ipo-millions-of-investors-may-make-this-costly-mistake-dont-be-one/articleshow/130606344.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-29T12:47:00",
+       "lede": "spacex ipo 2026: the biggest ipo in stock market history is coming. fast. spacex filed confidentially with the sec on april 1, 2026. the company targets a valuation of $1.75 trillion to $2 trillion. it wants to raise $75 billion in fresh capital. the roadshow begins june 8. morgan stanley,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.7
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.6
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2abe655cefb83fe8367532",
+       "headline": "Airtel Africa is lining up a potentially sizeable IPO of its mobile money business, with the deal expected to raise between $1.5 billion and $2 billion, according to a Bloomberg report citing people familiar with the matter. The listing could value Airtel Money at as much as $10 billion, positioning",
+       "url": "https://www.developingtelecoms.com/telecom-technology/financial-services/20173-airtel-money-ipo-could-raise-up-to-2bn-in-blockbuster-listing.html",
+       "publisher": "developingtelecoms.com",
+       "published_at": "2026-04-29T12:08:20",
+       "lede": "airtel africa is lining up a potentially sizeable ipo of its mobile money business, with the deal expected to raise between $1.5 billion and $2 billion, according to a bloomberg report citing people familiar with the matter. the listing could value airtel money at as much as $10 billion, positioning",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2156dda8ae7be8d21ae3b",
+       "headline": "SpaceX IPO speculation grows; no confirmed filing or $1.75T valuation yet",
+       "url": "https://www.domain-b.com/markets/stock-markets-world/spacex-ipo-rumors-2026-no-confirmation",
+       "publisher": "domain-b.com",
+       "published_at": "2026-04-29T10:35:31",
+       "lede": "speculation around a potential spacex ipo continues, but no official plans have been confirmed (ai generated). 1 summary there is no official confirmation that spacex has filed for an ipo or is targeting a $1.75 trillion valuation. the company remains privately held, with leadership historically resistant to public listing. while",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.48
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "spacex"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 8399,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAxMDoyMDo1NyIsImkiOiI2OWYyMTVkOTdkMjUxY2NmZjY0MGY5OTQiLCJwIjo4fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 11.673,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "request_seconds": 11.677
+    }
+   }
+  }
+ ]
+}

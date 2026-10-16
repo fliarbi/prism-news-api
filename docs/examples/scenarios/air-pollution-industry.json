@@ -1,0 +1,894 @@
+{
+ "slug": "air-pollution-industry",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:16:15Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "air pollution",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "air pollution",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3888,
+     "tone": {
+      "carrying": 3880,
+      "availability_pct": 99.79,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2512,
+        "share_pct": 64.74
+       },
+       {
+        "group": "neutral",
+        "count": 85,
+        "share_pct": 2.19
+       },
+       {
+        "group": "positive",
+        "count": 1283,
+        "share_pct": 33.07
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3888,
+      "count": 3359,
+      "share_pct": 86.39
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.64,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.643
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "air pollution",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "air pollution",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 637,
+       "critical": 522,
+       "critical_pct": 81.9,
+       "negative": 354,
+       "positive": 266,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 707,
+       "critical": 576,
+       "critical_pct": 81.5,
+       "negative": 427,
+       "positive": 261,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 780,
+       "critical": 595,
+       "critical_pct": 76.3,
+       "negative": 505,
+       "positive": 252,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 754,
+       "critical": 579,
+       "critical_pct": 76.8,
+       "negative": 478,
+       "positive": 258,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 691,
+       "critical": 579,
+       "critical_pct": 83.8,
+       "negative": 365,
+       "positive": 304,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1242,
+       "critical": 1030,
+       "critical_pct": 82.9,
+       "negative": 804,
+       "positive": 416,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1590,
+       "critical": 1359,
+       "critical_pct": 85.5,
+       "negative": 1136,
+       "positive": 428,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1816,
+       "critical": 1578,
+       "critical_pct": 86.9,
+       "negative": 1303,
+       "positive": 468,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1165,
+       "critical": 1026,
+       "critical_pct": 88.1,
+       "negative": 770,
+       "positive": 360,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 948,
+       "critical": 803,
+       "critical_pct": 84.7,
+       "negative": 558,
+       "positive": 371,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 852,
+       "critical": 726,
+       "critical_pct": 85.2,
+       "negative": 575,
+       "positive": 252,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 923,
+       "critical": 804,
+       "critical_pct": 87.1,
+       "negative": 609,
+       "positive": 300,
+       "partial_period": false
+      }
+     ],
+     "total": 12105,
+     "critical_total": 10177,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-12-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.981,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.984
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "air pollution",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "air pollution",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3888,
+     "carrying": 1795,
+     "availability_pct": 46.17,
+     "items": [
+      {
+       "country": "india",
+       "count": 831,
+       "share_pct": 21.37
+      },
+      {
+       "country": "united states",
+       "count": 484,
+       "share_pct": 12.45
+      },
+      {
+       "country": "china",
+       "count": 67,
+       "share_pct": 1.72
+      },
+      {
+       "country": "united kingdom",
+       "count": 45,
+       "share_pct": 1.16
+      },
+      {
+       "country": "thailand",
+       "count": 30,
+       "share_pct": 0.77
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 338
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.405,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.409
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "air pollution",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "air pollution",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "air quality improvement initiatives",
+       "count": 1758,
+       "share": 60.66,
+       "lift": 550.21,
+       "baseline_count": 9,
+       "previous_period_count": 2570,
+       "delta_pct": -31.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "environmental policy and legislation",
+       "count": 723,
+       "share": 24.95,
+       "lift": 339.42,
+       "baseline_count": 6,
+       "previous_period_count": 633,
+       "delta_pct": 14.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "eco-friendly transportation alternatives",
+       "count": 151,
+       "share": 5.21,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 140,
+       "delta_pct": 7.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "air quality and pollution levels",
+       "count": 108,
+       "share": 3.73,
+       "lift": 304.21,
+       "baseline_count": 1,
+       "previous_period_count": 293,
+       "delta_pct": -63.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "climate change and public health",
+       "count": 76,
+       "share": 2.62,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 151,
+       "delta_pct": -49.7,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3888,
+     "carrying": 2898,
+     "carrier_share_pct": 74.54,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.693,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.702
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "air pollution",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "air pollution",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69efac14a84b609af2b407eb",
+       "headline": "Pollution de l'air : 46 % des enfants américains menacés - Nouvelles Du Monde",
+       "url": "https://www.nouvelles-du-monde.com/pollution-de-lair-46-des-enfants-americains-menaces/",
+       "publisher": "nouvelles-du-monde.com",
+       "published_at": "2026-04-25T16:13:32",
+       "lede": "metadata title: air pollution in the united states: almost half of children exposed to dangerous levels description: a report by the american lung association reveals that 33.5 million american children breathe toxic air, threatening the development of their lungs. keywords : air pollution, child health, american lung association, public health,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d9dda088760d34c2cfd9",
+       "headline": "2026 State of the Air report: 46% of pediatric population breathe polluted, unhealthy air",
+       "url": "https://healio.com/news/pulmonology/20260422/2026-state-of-the-air-report-46-of-pediatric-population-breathe-polluted-unhealthy-air",
+       "publisher": "healio.com",
+       "published_at": "2026-04-22T00:00:00",
+       "lede": "2026 state of the air report: 46% of pediatric population breathe polluted, unhealthy air key takeaways: the 2026 report covers air pollution between 2022 and 2024. the number of americans exposed to unhealthy ozone pollution went up. the number of cities deemed the cleanest continues to drop. the number of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.84
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8e4807bb1410d4cd61d59",
+       "headline": "Smogkrise in Chiang Mai verschärft sich: Waldbrände treiben Luftverschmutzung auf gefährliche Werte – Pattaya bleibt unter klarem Himmel - Pattaya Mail",
+       "url": "https://www.pattayamail.com/pattayablatt/smogkrise-in-chiang-mai-verscharft-sich-waldbrande-treiben-luftverschmutzung-auf-gefahrliche-werte-pattaya-bleibt-unter-klarem-himmel-544582",
+       "publisher": "pattayamail.com",
+       "published_at": "2026-04-18T05:12:52",
+       "lede": "pattaya, thailand – the air pollution crisis in northern thailand has intensified as persistent illegal forest fires drive the pm2.5 at dangerous heights. authorities in chiang mai have ordered a complete closure of forests and have significantly increased the enforcement of measures throughout the province. officials report that the situation",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.64
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d14e9f96395f5ca3c33ef0",
+       "headline": "Blazes cloak northern Thailand in hazardous air pollution",
+       "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/03/31/blazes-cloak-northern-thailand-in-hazardous-air-pollution",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-03-31T22:06:00",
+       "lede": "bangkok (afp): swathes of northern thailand choked under a blanket of haze caused by crop burning and forest fires, putting the country's second city atop global air pollution rankings on tuesday. seasonal air pollution is a feature of life for much of asia, associated with agricultural burning and weather patterns",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.72
+        }
+       ],
+       "country": "laos",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9f691c14329b30ec81b43",
+       "headline": "Is India's Air And Water Pollution Out of Control? Here's What Recent Reports Imply",
+       "url": "https://www.etvbharat.com/en/opinion/is-india-air-and-water-pollution-out-of-control-what-do-recent-reports-imply-enn26032903699",
+       "publisher": "etvbharat.com",
+       "published_at": "2026-03-29T13:22:01",
+       "lede": "etv bharat / opinionis india's air and water pollution out of control? here's what recent reports implyan anti-smog gun sprays water to curb the air pollution at kartavya path, in new delhi ( ani )the evidence suggests a troubling answer: yes, india's air and water pollution crisis has reached a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.68
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf67399a4fe3c882edf8a9",
+       "headline": "Nur 13 Länder haben sichere Luft – die Schweiz nicht",
+       "url": "https://www.20min.ch/story/iqair-bericht-nur-13-laender-weltweit-mit-sicherer-luftqualitaet-103536027",
+       "publisher": "20min.ch",
+       "published_at": "2026-03-29T12:18:16",
+       "lede": "according to the eu , air pollution is considered the biggest threat to health . hundreds of thousands of people die every year in europe alone as a result of the effects of pollutants. but in almost every country in the world, air quality is bad, as a new evaluation",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c8cbab9d3350d3d977a17e",
+       "headline": "Chiang Mai tops global pollution rankings as smog from forest fires pushes PM2.5 to hazardous levels - Pattaya Mail",
+       "url": "https://www.pattayamail.com/thailandnews/chiang-mai-tops-global-pollution-rankings-as-smog-from-forest-fires-pushes-pm2-5-to-hazardous-levels-540861",
+       "publisher": "pattayamail.com",
+       "published_at": "2026-03-27T20:03:47",
+       "lede": "chiang mai, thailand – northern thailand’s tourist hub of chiang mai topped global air pollution charts on friday morning, as thick smog from illegal forest fires blanketed the city.tourists at the doi suthep viewpoint reported being unable to see the cityscape, citing a heavy smell of smoke visible to the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.66
+        }
+       ],
+       "country": "thailand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c933d70fe98f3340bc88c8",
+       "headline": "Chiang Mai tops PM2.5 list",
+       "url": "https://www.bangkokpost.com/thailand/general/3225749/chiang-mai-tops-pm25-list",
+       "publisher": "bangkokpost.com",
+       "published_at": "2026-03-27T18:01:00",
+       "lede": "chiang mai tops pm2.5 listchiang mai topped global air pollution rankings yesterday morning as hazardous pm2.5 levels blanketed the province, prompting authorities to issue an urgent health warning.residents received a cell broadcast alert from the department of disaster prevention and mitigation warning that fine dust levels were affecting public health.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.65
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.63
+        }
+       ],
+       "country": "thailand",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc314762898d9e03cb156f",
+       "headline": "Top 10 most and least polluted countries in the world 2025-26: Where does India stand?",
+       "url": "https://indianexpress.com/article/trending/top-10-listing/iqair-most-and-least-polluted-countries-in-the-world-2026-10602213/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-03-26T07:24:48",
+       "lede": "top 10 most and least polluted countries in the world 2025-26: pakistan is the most polluted country of 2025.top 10 most and least polluted countries in the world 2025-26: air pollution remains one of the top global risks, as wildfire smoke and climate change continue to hinder progress in improving",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.88
+        }
+       ],
+       "country": "pakistan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c42bd9516feee34003106f",
+       "headline": "Top-10 Polluted Countries in the World as of Now, Check the List",
+       "url": "https://currentaffairs.adda247.com/top-10-polluted-countries-in-the-world-as-of-now/",
+       "publisher": "currentaffairs.adda247.com",
+       "published_at": "2026-03-24T13:02:21",
+       "lede": "did you know that the air we breathe can sometimes be more harmful than we imagine? in many parts of the world, pollution has become a serious problem affecting health, nature, and daily life. from busy cities to industrial areas, rising pollution levels are creating global concern.air pollution is mainly",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.88
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1ef879f177eb5d37736f1",
+       "headline": "When it's hot and polluted, suicide numbers climb, University of Utah study finds",
+       "url": "http://www.ksl.com/article/51467868/when-its-hot-and-polluted-suicide-numbers-climb-university-of-utah-study-finds",
+       "publisher": "ksl.com",
+       "published_at": "2026-03-23T00:00:00",
+       "lede": "salt lake city — as suicide rates have been climbing for several decades and policymakers and others look for tools to identify and protect those at risk, recognizing the impact of heat stress and air pollution could prove helpful.that's from a new study by a team at the university of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e1edd5ef7caa4b80da9ea5",
+       "headline": "When it's hot and polluted, suicide numbers climb, University of Utah study finds",
+       "url": "https://www.ksl.com/article/51467868/when-its-hot-and-polluted-suicide-numbers-climb-university-of-utah-study-finds",
+       "publisher": "ksl.com",
+       "published_at": "2026-03-23T00:00:00",
+       "lede": "salt lake city — as suicide rates have been climbing for several decades and policymakers and others look for tools to identify and protect those at risk, recognizing the impact of heat stress and air pollution could prove helpful.that's from a new study by a team at the university of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc278a1e8126b2deb1cd61",
+       "headline": "Why Europe's poorer regions are hit hardest by air pollution",
+       "url": "https://www.euronews.com/health/2026/03/19/air-pollution-linked-to-greater-health-risks-in-poorer-european-regions-study-finds",
+       "publisher": "euronews.com",
+       "published_at": "2026-03-19T14:19:38",
+       "lede": "regions with higher poverty levels and lower renewable energy adoption are at the highest risk of mortality associated with air pollution, according to a new study.advertisement advertisementthe research, published in the journal nature, found that the higher the poverty, the greater the vulnerability to air pollution.“it is not just that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.78
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc07cacb088e024d249c75",
+       "headline": "Why Europe's poorer regions are hit hardest by air pollution",
+       "url": "http://www.euronews.com/2026/03/19/air-pollution-linked-to-greater-health-risks-in-poorer-european-regions-study-finds",
+       "publisher": "euronews.com",
+       "published_at": "2026-03-19T14:19:38",
+       "lede": "regions with higher poverty levels and lower renewable energy adoption are at the highest risk of mortality associated with air pollution, according to a new study.advertisement advertisementthe research, published in the journal nature, found that the higher the poverty, the greater the vulnerability to air pollution.“it is not just that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.78
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "renewable energy"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ec311e540a46fb561a6d2",
+       "headline": "Why Europe's poorer regions are hit hardest by air pollution",
+       "url": "http://euronews.com/health/2026/03/19/air-pollution-linked-to-greater-health-risks-in-poorer-european-regions-study-finds",
+       "publisher": "euronews.com",
+       "published_at": "2026-03-19T13:19:38",
+       "lede": "regions with higher poverty levels and lower renewable energy adoption are at the highest risk of mortality associated with air pollution, according to a new study. the research, published in the journal nature, found that the higher the poverty, the greater the vulnerability to air pollution. “it is not just",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.8
+        },
+        {
+         "code": 17,
+         "path": "/Health/Public Health/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1266,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0xOSAxMzoxOTozOCIsImkiOiI2YTJlYzMxMWU1NDBhNDZmYjU2MWE2ZDIiLCJwIjo5fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.468,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.481
+    }
+   }
+  }
+ ]
+}

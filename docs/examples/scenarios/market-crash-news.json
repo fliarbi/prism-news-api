@@ -1,0 +1,864 @@
+{
+ "slug": "market-crash-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:59:33Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "market crash",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "market crash",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 578,
+     "tone": {
+      "carrying": 578,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 437,
+        "share_pct": 75.61
+       },
+       {
+        "group": "neutral",
+        "count": 1,
+        "share_pct": 0.17
+       },
+       {
+        "group": "positive",
+        "count": 140,
+        "share_pct": 24.22
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 578,
+      "count": 418,
+      "share_pct": 72.32
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.837,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.839
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "market crash",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "market crash",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 100,
+       "critical": 74,
+       "critical_pct": 74.0,
+       "negative": 54,
+       "positive": 46,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 135,
+       "critical": 75,
+       "critical_pct": 55.6,
+       "negative": 51,
+       "positive": 82,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 55,
+       "critical": 33,
+       "critical_pct": 60.0,
+       "negative": 37,
+       "positive": 18,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 79,
+       "critical": 50,
+       "critical_pct": 63.3,
+       "negative": 60,
+       "positive": 19,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 40,
+       "critical": 30,
+       "critical_pct": 75.0,
+       "negative": 29,
+       "positive": 11,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 332,
+       "critical": 255,
+       "critical_pct": 76.8,
+       "negative": 221,
+       "positive": 110,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 191,
+       "critical": 158,
+       "critical_pct": 82.7,
+       "negative": 131,
+       "positive": 59,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 73,
+       "critical": 43,
+       "critical_pct": 58.9,
+       "negative": 63,
+       "positive": 10,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 96,
+       "critical": 67,
+       "critical_pct": 69.8,
+       "negative": 72,
+       "positive": 23,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 211,
+       "critical": 156,
+       "critical_pct": 73.9,
+       "negative": 149,
+       "positive": 62,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 175,
+       "critical": 123,
+       "critical_pct": 70.3,
+       "negative": 146,
+       "positive": 29,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 96,
+       "critical": 72,
+       "critical_pct": 75.0,
+       "negative": 70,
+       "positive": 26,
+       "partial_period": false
+      }
+     ],
+     "total": 1583,
+     "critical_total": 1136,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-10-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.625,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.627
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "market crash",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "market crash",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 578,
+     "carrying": 252,
+     "availability_pct": 43.6,
+     "items": [
+      {
+       "country": "united states",
+       "count": 147,
+       "share_pct": 25.43
+      },
+      {
+       "country": "iran",
+       "count": 39,
+       "share_pct": 6.75
+      },
+      {
+       "country": "india",
+       "count": 21,
+       "share_pct": 3.63
+      },
+      {
+       "country": "china",
+       "count": 10,
+       "share_pct": 1.73
+      },
+      {
+       "country": "japan",
+       "count": 5,
+       "share_pct": 0.87
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 30
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.222,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.224
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "market crash",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "market crash",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "market volatility indicators",
+       "count": 87,
+       "share": 21.64,
+       "lift": 883.31,
+       "baseline_count": 2,
+       "previous_period_count": 11,
+       "delta_pct": 690.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stock market index composition",
+       "count": 68,
+       "share": 16.92,
+       "lift": 690.4,
+       "baseline_count": 2,
+       "previous_period_count": 6,
+       "delta_pct": 1033.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 67,
+       "share": 16.67,
+       "lift": 680.25,
+       "baseline_count": 2,
+       "previous_period_count": 37,
+       "delta_pct": 81.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market volatility and risk assessment",
+       "count": 72,
+       "share": 17.91,
+       "lift": 487.34,
+       "baseline_count": 3,
+       "previous_period_count": 47,
+       "delta_pct": 53.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "bull and bear market transitions",
+       "count": 82,
+       "share": 20.4,
+       "lift": 416.27,
+       "baseline_count": 4,
+       "previous_period_count": 65,
+       "delta_pct": 26.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 578,
+     "carrying": 402,
+     "carrier_share_pct": 69.55,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.605,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.608
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "market crash",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "market crash",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69cb5970984a596c0c7d9de9",
+       "headline": "Best Crypto to Invest In: South Korea Deploys AI Market Surveillance as Iran Strikes Crash ETH and SOL, but Pepeto Presale Defies the Downturn",
+       "url": "https://www.openpr.com/news/4408627/best-crypto-to-invest-in-south-korea-deploys-ai-market",
+       "publisher": "openpr.com",
+       "published_at": "2026-02-28T23:33:47",
+       "lede": "best crypto to invest in: south korea deploys ai market surveillance as iran strikes crash eth and sol, but pepeto presale defies the downturnhttps://pepeto.io/https://pepeto.io/https://youtu.be/wr3oolnjj64?si=v7ekv4mk69tqvntihttps://pepeto.io/https://www.tokenwire.iobest crypto to invest in during a market crash powered by war and regulation is not what most traders expect. pepeto () at $0.000000186 with three products",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bb047bb1410d4cb41c51",
+       "headline": "Market Crash Impact for NSE:RELIANCE by GlobalWolfStreet",
+       "url": "https://in.tradingview.com/chart/RELIANCE/5Zulp20m-Market-Crash-Impact/",
+       "publisher": "in.tradingview.com",
+       "published_at": "2026-02-22T00:00:00",
+       "lede": "a market crash begins with a sudden and sharp decline in stock prices across major indices. investors panic and start selling their shares rapidly, causing prices to fall even further. this creates a domino effect, where fear spreads quickly among participants. the rapid drop in valuation reduces the overall market",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.47
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9bc43288a36c0c7ba86d1",
+       "headline": "ZeroLend, Parsec Become Latest Victims in Post-October 10 Crypto Shakeout",
+       "url": "https://bitcoinethereumnews.com/crypto/zerolend-parsec-become-latest-victims-in-post-october-10-crypto-shakeout/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-02-20T20:31:21",
+       "lede": "zerolend shuts down citing unsustainable economics, shrinking margins, and rising security risks.parsec closes operations after declining defi leverage and falling nft market activity.multiple crypto firms halted operations following the october crash and prolonged liquidity contraction.the october 10 market crash has triggered a chain reaction across the crypto industry, forcing platforms",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.99
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "nft",
+        "defi"
+       ],
+       "people": []
+      },
+      {
+       "id": "698dc41f9ca02490ec0145b1",
+       "headline": "Bitcoin Cycle Killed by Grifters, Tesla Investor Gerber Says",
+       "url": "https://bitcoinethereumnews.com/bitcoin/bitcoin-cycle-killed-by-grifters-tesla-investor-gerber-says/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-02-08T11:37:40",
+       "lede": "the ‘grifter’ cycle theorya buying opportunity for ‘adults’ross gerber, the ceo of gerber kawasaki wealth and investment management, has pinned the blame for the recent market crash on internal “grift” that has poisoned the cycle.gerber has argued that the bitcoin downturn was inevitable due to a flood of speculative “scam”",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.38,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "bitcoin",
+        "kawasaki"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a92675cefb83fe818832e",
+       "headline": "Bitcoin Cycle Killed by Grifters, Tesla Investor Gerber Says - U.Today",
+       "url": "https://u.today/bitcoin-cycle-killed-by-grifters-tesla-investor-gerber-says",
+       "publisher": "u.today",
+       "published_at": "2026-02-08T10:46:40",
+       "lede": "advertisement ross gerber, the ceo of gerber kawasaki wealth and investment management, has pinned the blame for the recent market crash on internal \"grift\" that has poisoned the cycle. gerber has argued that the bitcoin downturn was inevitable due to a flood of speculative \"scam\" projects that siphoned capital away",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.85
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986b5bb11e3205ec992c567",
+       "headline": "Apocalypse now? Top economist says crypto market looks bleak",
+       "url": "https://bitcoinethereumnews.com/crypto/apocalypse-now-top-economist-says-crypto-market-looks-bleak/",
+       "publisher": "bitcoinethereumnews.com",
+       "published_at": "2026-02-05T19:17:10",
+       "lede": "the crypto market continued its recent crash today, feb. 5, with bitcoin falling below the key support at $70,000 and the valuation of all coins moving to $2.3 trillion from a record high of over $4.2 trillion.summary the crypto market crash accelerated on thursday, with bitcoin moving below $70,000.nouriel roubini,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 1.0
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "bitcoin"
+       ],
+       "people": [
+        "nouriel roubini",
+        "nouriel roubini"
+       ]
+      },
+      {
+       "id": "69bb01a428caee93d24dc33b",
+       "headline": "Dragonfly Partner: The market crash on October 11th was not solely caused by Binance and Ethena; multiple factors combined to trigger the volatility.",
+       "url": "https://www.panewslab.com/en/articles/34be1d0e-c89c-406b-b5df-0a137c99b143",
+       "publisher": "panewslab.com",
+       "published_at": "2026-01-31T11:00:19",
+       "lede": "panews reported on january 31 that haseeb qureshi, managing partner of dragonfly, commented on recent claims that the october 11 market crash was triggered by binance and ethena, stating that this narrative is untenable in terms of timeline, market propagation path, and evidence. he pointed out that bitcoin's price bottomed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "binance",
+        "bitcoin",
+        "ethena",
+        "panews"
+       ],
+       "people": []
+      },
+      {
+       "id": "69860811069c05cbe2795a80",
+       "headline": "OKX CEO Takes Aim Against Binance for October 10 Crypto Market Crash",
+       "url": "https://www.cryptotimes.io/2026/01/31/okx-ceo-takes-aim-against-binance-for-october-10-crypto-market-crash/",
+       "publisher": "cryptotimes.io",
+       "published_at": "2026-01-31T05:57:47",
+       "lede": "key highlights okx ceo star xu blamed binance’s usde campaign for the october 10 $19b crypto market crash.binance’s cz rejected the claims, calling them “far-fetched” and noting full user compensation.the event highlights risks from high-yield tokens, leverage loops, and exchange-driven market incentives.a public disagreement has emerged between the leadership of",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.99
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "okx",
+        "xu",
+        "binance"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bbbdf96cf348266d091f0c",
+       "headline": "What crash? Binance’s CZ rejects claims platform caused $19b crypto crash",
+       "url": "https://crypto.news/what-crash-binance-cz-rejects-19b-crash-claim/",
+       "publisher": "crypto.news",
+       "published_at": "2026-01-30T22:31:45",
+       "lede": "changpeng “cz” zhao, co-founder and former ceo of binance, defended the world’s largest cryptocurrency exchange against accusations that it played a central role in last october’s $19 billion market crash.speaking in a live ask-me-anything session on binance’s platform, zhao called such claims “far-fetched” and said they ignore broader market dynamics,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.98
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "market dynamics",
+        "binance"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8b7c95cfa3e5ba52cb887",
+       "headline": "Ola Electric shares slip 8%,overbought on charts; still a 'buy'? - BusinessToday",
+       "url": "https://www.businesstoday.in/markets/stocks/story/ola-electric-shares-slip-overbought-on-charts-still-a-buy-525324-2026-04-13",
+       "publisher": "businesstoday.in",
+       "published_at": "2026-04-13T06:51:46",
+       "lede": "shares of ola electric mobility ltd shares saw profitbooking amid a market crash on monday. ola electric shares, which rose over 40% in week till april 10, slipped 7.77% to rs 37.75 on bse in early deals today. however, the stock is still overbought on charts with a rsi of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.85
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.84
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ola electric",
+        "rsi"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2fa93c8e67a2fcb3018e24",
+       "headline": "Robert Kiyosaki Highlights Bitcoin Strategy as He Flags Incoming Market Crash Risk",
+       "url": "https://news.bitcoin.com/robert-kiyosaki-highlights-bitcoin-strategy-as-he-flags-incoming-market-crash-risk",
+       "publisher": "news.bitcoin.com",
+       "published_at": "2026-03-28T23:30:08",
+       "lede": "kiyosaki outlines plan to get richer during market crash market uncertainty surrounding a potential economic downturn and market crash is leading investors to reconsider portfolio strategies, as rich dad poor dad author robert kiyosaki outlined his approach on x on march 27. he referenced writings by edgar cayce and nostradamus",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc5475856d39d4c91e6ced",
+       "headline": "Robert Kiyosaki Highlights Bitcoin Strategy as He Flags Incoming Market Crash Risk",
+       "url": "https://news.bitcoin.com/robert-kiyosaki-highlights-bitcoin-strategy-as-he-flags-incoming-market-crash-risk/",
+       "publisher": "news.bitcoin.com",
+       "published_at": "2026-03-28T23:30:08",
+       "lede": "kiyosaki outlines plan to get richer during market crashmarket uncertainty surrounding a potential economic downturn and market crash is leading investors to reconsider portfolio strategies, as rich dad poor dad author robert kiyosaki outlined his approach on x on march 27. he referenced writings by edgar cayce and nostradamus in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 26,
+         "path": "/Finance/Investing/Other",
+         "score": 0.55
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "robert kiyosaki",
+        "edgar cayce",
+        "robert kiyosaki"
+       ]
+      },
+      {
+       "id": "69c3a7567fec47653a0a91a1",
+       "headline": "Stock Market Crash Reason: ये 5 कारण... जिनसे शेयर बाजार में भूचाल, 12 लाख करोड़ स्वाहा!",
+       "url": "https://www.aajtak.in/business/news/story/stock-market-crash-five-big-reason-behind-bloodbath-investors-big-loss-tutc-dskc-2504539-2026-03-23",
+       "publisher": "aajtak.in",
+       "published_at": "2026-03-23T10:30:24",
+       "lede": "on monday, the stock market saw the big crash (stock market crash) and continued until the market was closed. sensex-nifty breaks over the day and investors had to lose about rs 12 lakh crores between this fall. bombay stock exchange closed at 72,696 with a large drop of 30 shares,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.72
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "bombay stock exchange"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 45,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0yMyAxMDozMDoyNCIsImkiOiI2OWMzYTc1NjdmZWM0NzY1M2EwYTkxYTEiLCJwIjo3fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.219,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.221
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,882 @@
+{
+ "slug": "wildfire-news",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:15:04Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "wildfire",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wildfire",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5364,
+     "tone": {
+      "carrying": 5343,
+      "availability_pct": 99.61,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3695,
+        "share_pct": 69.16
+       },
+       {
+        "group": "neutral",
+        "count": 48,
+        "share_pct": 0.9
+       },
+       {
+        "group": "positive",
+        "count": 1600,
+        "share_pct": 29.95
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 5362,
+      "count": 4160,
+      "share_pct": 77.58
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.096,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.098
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "wildfire",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wildfire",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1259,
+       "critical": 1014,
+       "critical_pct": 80.5,
+       "negative": 878,
+       "positive": 358,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 951,
+       "critical": 765,
+       "critical_pct": 80.4,
+       "negative": 685,
+       "positive": 261,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2036,
+       "critical": 1465,
+       "critical_pct": 72.0,
+       "negative": 1637,
+       "positive": 386,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2734,
+       "critical": 2174,
+       "critical_pct": 79.5,
+       "negative": 2247,
+       "positive": 470,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1108,
+       "critical": 843,
+       "critical_pct": 76.1,
+       "negative": 807,
+       "positive": 298,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 655,
+       "critical": 500,
+       "critical_pct": 76.3,
+       "negative": 417,
+       "positive": 229,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 508,
+       "critical": 397,
+       "critical_pct": 78.1,
+       "negative": 318,
+       "positive": 186,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 703,
+       "critical": 553,
+       "critical_pct": 78.7,
+       "negative": 440,
+       "positive": 256,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 630,
+       "critical": 492,
+       "critical_pct": 78.1,
+       "negative": 404,
+       "positive": 218,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1129,
+       "critical": 884,
+       "critical_pct": 78.3,
+       "negative": 772,
+       "positive": 340,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1259,
+       "critical": 978,
+       "critical_pct": 77.7,
+       "negative": 839,
+       "positive": 403,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2346,
+       "critical": 1806,
+       "critical_pct": 77.0,
+       "negative": 1680,
+       "positive": 639,
+       "partial_period": false
+      }
+     ],
+     "total": 15318,
+     "critical_total": 11871,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.681,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.683
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "wildfire",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wildfire",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5364,
+     "carrying": 2777,
+     "availability_pct": 51.77,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2046,
+       "share_pct": 38.14
+      },
+      {
+       "country": "canada",
+       "count": 306,
+       "share_pct": 5.7
+      },
+      {
+       "country": "united kingdom",
+       "count": 67,
+       "share_pct": 1.25
+      },
+      {
+       "country": "india",
+       "count": 43,
+       "share_pct": 0.8
+      },
+      {
+       "country": "south korea",
+       "count": 26,
+       "share_pct": 0.48
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 289
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.752,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.754
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "wildfire",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wildfire",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "extreme weather event preparedness guides",
+       "count": 814,
+       "share": 19.67,
+       "lift": 55.37,
+       "baseline_count": 29,
+       "previous_period_count": 275,
+       "delta_pct": 196.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "wildfire containment and aftermath analysis",
+       "count": 2149,
+       "share": 51.93,
+       "lift": 33.91,
+       "baseline_count": 125,
+       "previous_period_count": 1025,
+       "delta_pct": 109.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "natural disaster response and recovery efforts",
+       "count": 740,
+       "share": 17.88,
+       "lift": 45.62,
+       "baseline_count": 32,
+       "previous_period_count": 205,
+       "delta_pct": 261.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "wildfire prevention and management strategies",
+       "count": 62,
+       "share": 1.5,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 100,
+       "delta_pct": -38.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "severe weather advisories and impact reports",
+       "count": 365,
+       "share": 8.82,
+       "lift": 45.0,
+       "baseline_count": 16,
+       "previous_period_count": 55,
+       "delta_pct": 563.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 5364,
+     "carrying": 4138,
+     "carrier_share_pct": 77.14,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.907,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.912
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "wildfire",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "wildfire",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2e50a63a4d098b40c02a1c",
+       "headline": "Extreme weather and green energy on the rise in Europe",
+       "url": "https://www.dw.com/en/extreme-weather-and-green-energy-on-the-rise-in-europe/a-76962870",
+       "publisher": "dw.com",
+       "published_at": "2026-04-29T02:00:18",
+       "lede": "europe's climate extremes have hit new highs — but renewables are now supplying nearly half of the continent's electricity. virtually no part of europe was left untouched by extreme weather and hotter temperatures in 2025. the continent endured unprecedented heat waves, experienced its largest wildfire and recorded its hottest-ever sea",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 179,
+         "path": "/Science/Ecology & Environment/Climate Change & Global Warming",
+         "score": 0.61
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f884c0bbf1d3145598b27c",
+       "headline": "Rain Brings Relief As Georgia Wildfire Grows, Boosts Containment Efforts",
+       "url": "http://religionunplugged.com/news/2026/4/28/rain-brings-relief-as-georgia-wildfire-grows-boosts-containment-efforts",
+       "publisher": "religionunplugged.com",
+       "published_at": "2026-04-28T20:55:44",
+       "lede": "hortense, ga. — up to an inch of rain fell on the highway 82 wildfire april 26, days after twin rivers baptist church and others began praying for rain, helping contain the most destructive of the largest blazes burning southeast georgia. by tuesday, the highway 82 fire was 32 percent",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.72
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6bba5706a322e0eb655",
+       "headline": "Rain Brings Relief As Georgia Wildfire Grows, Boosts Containment Efforts",
+       "url": "https://religionunplugged.com/news/2026/4/28/rain-brings-relief-as-georgia-wildfire-grows-boosts-containment-efforts",
+       "publisher": "religionunplugged.com",
+       "published_at": "2026-04-28T20:55:44",
+       "lede": "hortense, ga. — up to an inch of rain fell on the highway 82 wildfire april 26, days after twin rivers baptist church and others began praying for rain, helping contain the most destructive of the largest blazes burning southeast georgia. by tuesday, the highway 82 fire was 32 percent",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.72
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e988c83fc01faba16f54b",
+       "headline": "Rain brings some relief, but massive South Georgia wildfire still grows",
+       "url": "https://www.yahoo.com/news/articles/rain-brings-relief-massive-south-025949982.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T02:59:49",
+       "lede": "georgia (wjbf) – firefighters battling the massive highway 82 fire in brantley county are getting some relief after rainfall moved through the area, but officials warn the wildfire remains dangerous and far from contained. the georgia forestry commission says the fire has now grown to more than 22,000 acres and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.69
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6a2399b489398de2e78",
+       "headline": "Japan’s Northeast Battles Fires Amid Climate Strain",
+       "url": "https://stratnewsglobal.com/indo-pacific/japan/japans-northeast-battles-fires-amid-climate-strain/",
+       "publisher": "stratnewsglobal.com",
+       "published_at": "2026-04-27T08:00:31",
+       "lede": "the biggest earthquake ever recorded in japan triggered a deadly tsunami and swept away homes in the quiet northeastern town of otsuchi in march 2011. another natural disaster, a wildfire raging for a sixth day and threatening the community after burning through more than 1,600 hectares of forest as of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.91
+        }
+       ],
+       "country": "japan",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaaea8a54b8f07c9672aa",
+       "headline": "Wildfire continues to burn north of Lexington",
+       "url": "https://northplattebulletin.com/crews-battle-wildfire-north-of-lexington/",
+       "publisher": "northplattebulletin.com",
+       "published_at": "2026-04-25T05:39:11",
+       "lede": "as of friday, one home had been lost in the pressey wildfire that two days earlier. the fire covered an estimated 9,141 acres with 45% containment, the nebraska emergency management agency said. the fire is near oconto in custer county, named for pressey park. one primary home, multiple outbuildings, and",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa30727212302c5e9de8",
+       "headline": "Growing wildfires blamed for death of Florida firefighter, destruction of 120 Georgia homes",
+       "url": "https://triblive.com/news/world/growing-wildfires-blamed-for-death-of-florida-firefighter-destruction-of-120-georgia-homes/",
+       "publisher": "triblive.com",
+       "published_at": "2026-04-24T19:21:18",
+       "lede": "nahunta, ga. — a volunteer firefighter died battling a wildfire in northern florida while more than 120 homes have been destroyed in southeast georgia and thousands more remain threatened by two large blazes, one of which investigators suspect was sparked by a foil balloon touching power lines, officials said friday.",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.83
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea58a1b0517977015df83b",
+       "headline": "Wildfires continue to spread across South Georgia - Moultrie Observer",
+       "url": "https://moultrieobserver.com/2026/04/23/wildfires-continue-to-spread-across-south-georgia/",
+       "publisher": "moultrieobserver.com",
+       "published_at": "2026-04-23T16:55:04",
+       "lede": "this coverage is made possible through a partnership between wabe and grist, a nonprofit environmental media organization. a massive wildfire near the georgia-florida line has spread to nearly 30,000 acres and remains just 10% contained, according to the georgia forestry commission. crews are working to contain the pineland road fire",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.71
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea44057e2e51112024bfc1",
+       "headline": "Seeing or smelling smoke in Pender County? Here's why",
+       "url": "https://www.starnewsonline.com/story/news/local/2026/04/23/wildfire-burning-in-pender-county-nc-near-whitehall-plantation/89751177007/",
+       "publisher": "starnewsonline.com",
+       "published_at": "2026-04-23T15:50:57",
+       "lede": "april 23, 2026, 11:50 a.m. et an active wildfire is burning in western pender county, a news release from the pender county fire marshal's office said. according to the release, the fire is located around whitehall plantation near atkinson and has burned 275 acres with a perimeter of roughly 3.5",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e99fde540a46fb53d5b0c",
+       "headline": "'Doesn't feel real': Evacuees lean on community as fire forces families from Brantley County homes",
+       "url": "https://www.yahoo.com/news/articles/doesnt-feel-real-evacuees-lean-035158399.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T03:51:58",
+       "lede": "as a wildfire continues to rip through southeast georgia, destroying homes and forcing hundreds to evacuate, some families are leaning on neighbors and small businesses for support. outside nahunta city hall on wednesday, two food trucks served free meals to evacuees who had been forced to leave everything behind, offering",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eebc283fc01faba65367b",
+       "headline": "‘It’s horrible': Brantley County families lose homes as wildfire sweeps through area",
+       "url": "https://www.yahoo.com/news/articles/horrible-brantley-county-families-lose-002840806.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T00:28:40",
+       "lede": "a fast-moving wildfire has left behind widespread destruction in the town of waynesville, destroying homes and a wedding chapel as crews continue working to contain the fire. devastation is visible across the area, with burned structures, collapsed roofs, and charred remains scattered throughout affected neighborhoods. people who live near the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.86
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee5ca83fc01faba5f2a7a",
+       "headline": "‘It’s horrible': Brantley County families lose homes as wildfire sweeps through area",
+       "url": "https://www.yahoo.com/news/articles/horrible-brantley-county-families-lose-002840588.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T00:28:40",
+       "lede": "a fast-moving wildfire has left behind widespread destruction in the town of waynesville, destroying homes and a wedding chapel as crews continue working to contain the fire. devastation is visible across the area, with burned structures, collapsed roofs, and charred remains scattered throughout affected neighborhoods. people who live near the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.86
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a08b1574a7a0d94c122e065",
+       "headline": "Wildfire in Brantley County burns on, leaving some residents without homes",
+       "url": "https://www.gpb.org/news/2026/04/23/wildfire-in-brantley-county-burns-on-leaving-some-residents-without-homes",
+       "publisher": "gpb.org",
+       "published_at": "2026-04-23T00:00:00",
+       "lede": "nahunta, ga. — a wildfire in southeast georgia continues largely uncontained even after destroying dozens of homes and prompting the federal emergency management agency to unlock disaster aid. the highway 82 fire in brantley county still stands at about 5,000 acres in size, though dwarfed by the pineland road fire",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.75,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.72
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9a64bd47fc028321d0af8",
+       "headline": "Wildfire forecast: Here's when California could see increased risk this year",
+       "url": "https://abc7.com/post/wildfire-forecast-shows-when-california-could-see-increased-risk-year/18945497/",
+       "publisher": "abc7.com",
+       "published_at": "2026-04-22T23:58:48",
+       "lede": "wildfire forecast: here's when california could see increased risk this year los angeles (kabc) -- wildfire season is shaping up to be another active one across the country. according to accuweather, between 5.5 million to 8 million acres could burn nationwide. in california alone, the forecast calls for 500,000 to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.67
+        },
+        {
+         "code": 69,
+         "path": "/News/Weather",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "accuweather"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea4b3ff4d3fc85b34f2af9",
+       "headline": "Georgia wildfire explodes to thousands of acres, destroys homes",
+       "url": "https://www.usatoday.com/story/news/2026/04/22/georgia-wildfire-spirals-destroys-homes-and-spreads-rapidly/89729502007/",
+       "publisher": "usatoday.com",
+       "published_at": "2026-04-22T14:17:54",
+       "lede": "april 22, 2026, 10:17 a.m. et a rapidly growing wildfire in georgia has destroyed homes, forced evacuations, and sent thick smoke across parts of the state as crews race to contain the flames. the fire in brantley county has surged to around 4,000 acres, with some estimates nearing 5,000 acres,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.74
+        },
+        {
+         "code": 4,
+         "path": "/News/Local News",
+         "score": 0.42
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1418,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAxNDoxNzo1NCIsImkiOiI2OWVhNGIzZmY0ZDNmYzg1YjM0ZjJhZjkiLCJwIjo5fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.444,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.447
+    }
+   }
+  }
+ ]
+}

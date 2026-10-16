@@ -1,0 +1,929 @@
+{
+ "slug": "hypertension-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:37Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "hypertension",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "hypertension",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6532,
+     "tone": {
+      "carrying": 6518,
+      "availability_pct": 99.79,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1819,
+        "share_pct": 27.91
+       },
+       {
+        "group": "neutral",
+        "count": 441,
+        "share_pct": 6.77
+       },
+       {
+        "group": "positive",
+        "count": 4258,
+        "share_pct": 65.33
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6531,
+      "count": 5640,
+      "share_pct": 86.36
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.921,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.924
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "hypertension",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "hypertension",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1569,
+       "critical": 1246,
+       "critical_pct": 79.4,
+       "negative": 480,
+       "positive": 989,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1419,
+       "critical": 1111,
+       "critical_pct": 78.3,
+       "negative": 370,
+       "positive": 944,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1523,
+       "critical": 1194,
+       "critical_pct": 78.4,
+       "negative": 384,
+       "positive": 1001,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1529,
+       "critical": 1261,
+       "critical_pct": 82.5,
+       "negative": 390,
+       "positive": 1049,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1927,
+       "critical": 1488,
+       "critical_pct": 77.2,
+       "negative": 461,
+       "positive": 1376,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1909,
+       "critical": 1507,
+       "critical_pct": 78.9,
+       "negative": 388,
+       "positive": 1409,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1477,
+       "critical": 1292,
+       "critical_pct": 87.5,
+       "negative": 372,
+       "positive": 1006,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1851,
+       "critical": 1606,
+       "critical_pct": 86.8,
+       "negative": 466,
+       "positive": 1258,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 2174,
+       "critical": 1984,
+       "critical_pct": 91.3,
+       "negative": 505,
+       "positive": 1471,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1363,
+       "critical": 1105,
+       "critical_pct": 81.1,
+       "negative": 400,
+       "positive": 876,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1392,
+       "critical": 1194,
+       "critical_pct": 85.8,
+       "negative": 391,
+       "positive": 909,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1603,
+       "critical": 1357,
+       "critical_pct": 84.7,
+       "negative": 523,
+       "positive": 1002,
+       "partial_period": false
+      }
+     ],
+     "total": 19736,
+     "critical_total": 16345,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.76,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.764
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "hypertension",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "hypertension",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6532,
+     "carrying": 1072,
+     "availability_pct": 16.41,
+     "items": [
+      {
+       "country": "united states",
+       "count": 445,
+       "share_pct": 6.81
+      },
+      {
+       "country": "india",
+       "count": 198,
+       "share_pct": 3.03
+      },
+      {
+       "country": "china",
+       "count": 65,
+       "share_pct": 1.0
+      },
+      {
+       "country": "united kingdom",
+       "count": 54,
+       "share_pct": 0.83
+      },
+      {
+       "country": "nigeria",
+       "count": 27,
+       "share_pct": 0.41
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 283
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.737,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.741
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "hypertension",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "hypertension",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "hypertensive heart disease complications",
+       "count": 509,
+       "share": 13.12,
+       "lift": 1070.59,
+       "baseline_count": 1,
+       "previous_period_count": 586,
+       "delta_pct": -13.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hypertensive crisis management",
+       "count": 465,
+       "share": 11.98,
+       "lift": 978.05,
+       "baseline_count": 1,
+       "previous_period_count": 620,
+       "delta_pct": -25.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hypertensive emergency protocols",
+       "count": 407,
+       "share": 10.49,
+       "lift": 856.05,
+       "baseline_count": 1,
+       "previous_period_count": 519,
+       "delta_pct": -21.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "geriatric hypertension management strategies",
+       "count": 396,
+       "share": 10.2,
+       "lift": 832.92,
+       "baseline_count": 1,
+       "previous_period_count": 449,
+       "delta_pct": -11.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "public health initiatives and programs",
+       "count": 357,
+       "share": 9.2,
+       "lift": 750.89,
+       "baseline_count": 1,
+       "previous_period_count": 319,
+       "delta_pct": 11.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6532,
+     "carrying": 3881,
+     "carrier_share_pct": 59.42,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.215,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.245
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "hypertension",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "hypertension",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e9993575f157062cae0925",
+       "headline": "Is your blood pressure 'healthy'? Why it's critical to know your number",
+       "url": "https://www.floridatoday.com/story/news/healthcare/2026/04/21/what-is-considered-healthy-blood-pressure-number-american-heart-association/89700538007/",
+       "publisher": "floridatoday.com",
+       "published_at": "2026-04-21T19:49:32",
+       "lede": "april 21, 2026, 3:49 p.m. et high blood pressure, also known as hypertension, affects nearly half of american adults, many of whom are unaware they have it. the condition is often called a \"silent killer\" because it typically has no symptoms until it causes significant damage. factors like diet, obesity,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e9954ad47fc028321445d8",
+       "headline": "Is your blood pressure 'healthy'? Why it's critical to know your number",
+       "url": "https://www.news-press.com/story/news/healthcare/2026/04/21/what-is-considered-healthy-blood-pressure-number-american-heart-association/89700538007/",
+       "publisher": "news-press.com",
+       "published_at": "2026-04-21T19:49:32",
+       "lede": "april 21, 2026, 3:49 p.m. et high blood pressure, also known as hypertension, affects nearly half of american adults, many of whom are unaware they have it. the condition is often called a \"silent killer\" because it typically has no symptoms until it causes significant damage. factors like diet, obesity,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e994f2d47fc0283213fb24",
+       "headline": "Is your blood pressure 'healthy'? Why it's critical to know your number",
+       "url": "https://www.palmbeachpost.com/story/news/healthcare/2026/04/21/what-is-considered-healthy-blood-pressure-number-american-heart-association/89700538007/",
+       "publisher": "palmbeachpost.com",
+       "published_at": "2026-04-21T19:49:32",
+       "lede": "april 21, 2026, 3:49 p.m. et high blood pressure, also known as hypertension, affects nearly half of american adults, many of whom are unaware they have it. the condition is often called a \"silent killer\" because it typically has no symptoms until it causes significant damage. factors like diet, obesity,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e994ec75f157062caa9096",
+       "headline": "Is your blood pressure 'healthy'? Why it's critical to know your number",
+       "url": "https://www.theledger.com/story/news/healthcare/2026/04/21/what-is-considered-healthy-blood-pressure-number-american-heart-association/89700538007/",
+       "publisher": "theledger.com",
+       "published_at": "2026-04-21T19:49:32",
+       "lede": "april 21, 2026, 3:49 p.m. et high blood pressure, also known as hypertension, affects nearly half of american adults, many of whom are unaware they have it. the condition is often called a \"silent killer\" because it typically has no symptoms until it causes significant damage. factors like diet, obesity,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e882935cfa3e5ba504e801",
+       "headline": "Is your blood pressure 'healthy'? Why it's critical to know your number",
+       "url": "https://www.dailycommercial.com/story/news/healthcare/2026/04/21/what-is-considered-healthy-blood-pressure-number-american-heart-association/89700538007/",
+       "publisher": "dailycommercial.com",
+       "published_at": "2026-04-21T19:49:32",
+       "lede": "april 21, 2026, 3:49 p.m. et high blood pressure, also known as hypertension, affects nearly half of american adults, many of whom are unaware they have it. the condition is often called a \"silent killer\" because it typically has no symptoms until it causes significant damage. factors like diet, obesity,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e882319baafc7356906f7b",
+       "headline": "Is your blood pressure 'healthy'? Why it's critical to know your number",
+       "url": "https://www.news-journalonline.com/story/news/healthcare/2026/04/21/what-is-considered-healthy-blood-pressure-number-american-heart-association/89700538007/",
+       "publisher": "news-journalonline.com",
+       "published_at": "2026-04-21T19:49:32",
+       "lede": "april 21, 2026, 3:49 p.m. et high blood pressure, also known as hypertension, affects nearly half of american adults, many of whom are unaware they have it. the condition is often called a \"silent killer\" because it typically has no symptoms until it causes significant damage. factors like diet, obesity,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8821d7bb1410d4c87f17f",
+       "headline": "Is your blood pressure 'healthy'? Why it's critical to know your number",
+       "url": "https://www.gainesville.com/story/news/healthcare/2026/04/21/what-is-considered-healthy-blood-pressure-number-american-heart-association/89700538007/",
+       "publisher": "gainesville.com",
+       "published_at": "2026-04-21T19:49:32",
+       "lede": "april 21, 2026, 3:49 p.m. et high blood pressure, also known as hypertension, affects nearly half of american adults, many of whom are unaware they have it. the condition is often called a \"silent killer\" because it typically has no symptoms until it causes significant damage. factors like diet, obesity,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.94
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e867837bb1410d4c76e547",
+       "headline": "Man dies after overdose of ‘highly toxic’ heart drug - GPs must ‘be on alert’",
+       "url": "https://www.thesun.co.uk/health/38812151/man-dies-toxic-heart-medication-gps-alert/",
+       "publisher": "thesun.co.uk",
+       "published_at": "2026-04-14T11:09:30",
+       "lede": "a coroner has issued a warning to gps over prescribing a heart medication taken by thousands of brits following a man’s death. lee adams, 36, was first prescribed the drug propranolol in 2017, which is typically given for conditions including high blood pressure, known medically as hypertension, migraines and anxiety.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.55
+        },
+        {
+         "code": 117,
+         "path": "/Sensitive Subjects/Recreational Drugs",
+         "score": 0.47
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "lee adams"
+       ]
+      },
+      {
+       "id": "6a2a67c4963d76f4afc55965",
+       "headline": "Why hypertension remains one of the Caribbean’s deadliest health threats",
+       "url": "https://www.caribbeannationalweekly.com/posts/why-hypertension-remains-one-of-the-caribbeans-deadliest-health-threats",
+       "publisher": "caribbeannationalweekly.com",
+       "published_at": "2026-04-29T04:39:23",
+       "lede": "why hypertension remains one of the caribbean’s deadliest health threats why hypertension remains one of the caribbean’s deadliest health threats ahead of world hypertension day, health experts are again warning that hypertension—often called the “silent killer”—remains one of the region’s most persistent and underestimated health crises. observed annually on may",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.96
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ecc1ae540a46fb56a9547",
+       "headline": "Arrested right-wing speaker Gautam Khattar hospitalised",
+       "url": "https://www.newsdrum.in/national/arrested-right-wing-speaker-gautam-khattar-hospitalised-11776377",
+       "publisher": "newsdrum.in",
+       "published_at": "2026-04-28T17:10:35",
+       "lede": "&amp;quot;panaji (pti): right-wing speaker gautam khattar, arrested by goa police over his alleged derogatory remarks about st francis xavier, was admitted to a hospital in mapusa on tuesday evening. a senior police officer said that khattar was taken to the district hospital after he complained of uneasiness and hypertension. khattar,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c8dca5706a322e0ffe52",
+       "headline": "OMRON Healthcare Supports May Measurement Month 2026 with 3,000 Blood Pressure Monitors - citybuzz",
+       "url": "https://www.citybuzz.co/2026/04/28/omron-healthcare-supports-may-measurement-month-2026-with-3000-blood-pressure-monitors/",
+       "publisher": "citybuzz.co",
+       "published_at": "2026-04-28T16:12:00",
+       "lede": "omron healthcare co., ltd., a global leader in home health monitoring devices, has announced its support for may measurement month 2026, an annual blood pressure screening and awareness campaign coinciding with world hypertension day on may 17. the company will donate approximately 3,000 blood pressure monitors to screening activities worldwide,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.81
+        },
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.68
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9dd857b2d589e8451b8f6",
+       "headline": "Twice-yearly blood pressure treatment could reshape hypertension care, but doctors warn against a “fire-and-forget” approach",
+       "url": "https://news-medical.net/news/20260427/Twice-yearly-blood-pressure-treatment-could-reshape-hypertension-care-but-doctors-warn-against-a-e2809cfire-and-forgete2809d-approach.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-28T00:59:00",
+       "lede": "a new perspective argues that long-acting sirna therapies could ease the daily burden of hypertension treatment, but only if health systems turn each dose into a structured checkpoint for lifestyle advice, home bp review, and ongoing cardiovascular risk management. perspective: from daily burden to scheduled protection: the “vaccine-like” shift in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.65
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "bp"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a92fec37f6c5e66d1b3c7",
+       "headline": "OMRON Healthcare Co., Ltd. |",
+       "url": "https://www.webdisclosure.com/press-release/advancing-early-detection-omron-healthcare-supports-may-measurement-month-2026-P5kLE0PolSe",
+       "publisher": "webdisclosure.com",
+       "published_at": "2026-04-27T19:07:45",
+       "lede": "omron healthcare co., ltd. advancing early detection: omron healthcare supports may measurement month 2026 27-apr-2026 / 19:07 cet/cest the issuer is solely responsible for the content of this announcement. --------------------------------------------------------------- [omron1] global donation of 3,000 blood pressure monitors strengthens hypertension screening and afib awareness worldwide kyoto, japan, apr 27, 2026",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 106,
+         "path": "/Health/Medical Devices & Equipment/Other",
+         "score": 0.67
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea38828266d9339996bcfd",
+       "headline": "Six-Fold Renal Risk: The Potent Synergy of T2D and Hypertension in India, Study",
+       "url": "https://medicaldialogues.in/nephrology/news/six-fold-renal-risk-the-potent-synergy-of-t2d-and-hypertension-in-india-study-168517",
+       "publisher": "medicaldialogues.in",
+       "published_at": "2026-04-23T15:00:16",
+       "lede": "a six-fold risk surge in renal impairment among patients with concurrent type 2 diabetes and systemic hypertension highlights an escalating public health crisis in india, where the national prevalence of impaired kidney function stands at 3.2 percent, as detailed in the indian journal of medical research in august 2025.chronic kidney",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 355,
+         "path": "/Health/Health Conditions/Blood Sugar & Diabetes",
+         "score": 0.66
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.64
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efac21727212302c601aa4",
+       "headline": "New free headline care initiative brings hope to Ghanaians battling silent killers - MyJoyOnline",
+       "url": "https://www.myjoyonline.com/new-free-headline-care-initiative-brings-hope-to-ghanaians-battling-silent-killers/",
+       "publisher": "myjoyonline.com",
+       "published_at": "2026-04-20T11:45:47",
+       "lede": "ghana is taking a significant step to address two of its fastest-growing health challenges, hypertension and diabetes, with the introduction of the free primary health care programme. the initiative, championed by john dramani mahama and supported by the government of ghana, aims to expand access to essential health services and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "ghana",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87e069baafc73568db9d3",
+       "headline": "Free Primary Healthcare brings hope to Ghanaians battling silent killers - Adomonline.com",
+       "url": "https://www.adomonline.com/free-primary-healthcare-brings-hope-to-ghanaians-battling-silent-killers/",
+       "publisher": "adomonline.com",
+       "published_at": "2026-04-20T10:37:05",
+       "lede": "ghana has taken a significant step to address two of its fastest-growing health challenges, hypertension and diabetes, with the introduction of the free primary health care programme. the initiative, championed by president john dramani mahama aims to expand access to essential health services and promote early detection of chronic diseases.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "ghana",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e862967bb1410d4c73bb56",
+       "headline": "Louisiana Medicaid might add coverage for popular obesity treatment drugs",
+       "url": "https://neworleanscitybusiness.com/blog/2026/04/16/louisiana-medicaid-weight-loss-drugs-expansion/",
+       "publisher": "neworleanscitybusiness.com",
+       "published_at": "2026-04-16T20:42:14",
+       "lede": "listen to this article key takeaways: louisiana lawmakers are considering medicaid coverage for glp-1 weight-loss drugs starting in january eligibility would include adults with bmi 35–39 plus related chronic conditions like hypertension or prediabetes estimated program costs could reach hundreds of millions annually but may drop under a federal savings",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.44,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.68
+        },
+        {
+         "code": 242,
+         "path": "/Finance/Insurance/Health Insurance",
+         "score": 0.63
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 1102,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNSAwMDowMDowMCIsImkiOiI4YTEwNTYxOWY0OTk0MzIyNTA0ZTJlNWUiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.039,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.043
+    }
+   }
+  }
+ ]
+}

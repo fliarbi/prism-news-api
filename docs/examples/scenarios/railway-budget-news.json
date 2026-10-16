@@ -1,0 +1,785 @@
+{
+ "slug": "railway-budget-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:08:21Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "railway budget",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "railway budget",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 102,
+     "tone": {
+      "carrying": 102,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 14,
+        "share_pct": 13.73
+       },
+       {
+        "group": "neutral",
+        "count": 4,
+        "share_pct": 3.92
+       },
+       {
+        "group": "positive",
+        "count": 84,
+        "share_pct": 82.35
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 102,
+      "count": 85,
+      "share_pct": 83.33
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.734,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.737
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "railway budget",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "railway budget",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2,
+       "critical": 2,
+       "critical_pct": 100.0,
+       "negative": 0,
+       "positive": 2,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1,
+       "critical": 1,
+       "critical_pct": 100.0,
+       "negative": 0,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2,
+       "critical": 0,
+       "critical_pct": 0.0,
+       "negative": 0,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1,
+       "critical": 1,
+       "critical_pct": 100.0,
+       "negative": 0,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1,
+       "critical": 1,
+       "critical_pct": 100.0,
+       "negative": 0,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 0,
+       "critical": 0,
+       "critical_pct": null,
+       "negative": 0,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 0,
+       "critical": 0,
+       "critical_pct": null,
+       "negative": 0,
+       "positive": 0,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 4,
+       "critical": 4,
+       "critical_pct": 100.0,
+       "negative": 3,
+       "positive": 1,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 22,
+       "critical": 15,
+       "critical_pct": 68.2,
+       "negative": 3,
+       "positive": 18,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 61,
+       "critical": 52,
+       "critical_pct": 85.2,
+       "negative": 4,
+       "positive": 55,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 12,
+       "critical": 12,
+       "critical_pct": 100.0,
+       "negative": 5,
+       "positive": 6,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 7,
+       "critical": 6,
+       "critical_pct": 85.7,
+       "negative": 2,
+       "positive": 5,
+       "partial_period": false
+      }
+     ],
+     "total": 113,
+     "critical_total": 94,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.105,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.108
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "railway budget",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "railway budget",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 102,
+     "carrying": 55,
+     "availability_pct": 53.92,
+     "items": [
+      {
+       "country": "india",
+       "count": 52,
+       "share_pct": 50.98
+      },
+      {
+       "country": "united states",
+       "count": 2,
+       "share_pct": 1.96
+      },
+      {
+       "country": "united kingdom",
+       "count": 1,
+       "share_pct": 0.98
+      }
+     ],
+     "returned": 3,
+     "limit": 5,
+     "other_located_count": 0
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.033,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.035
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "railway budget",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "railway budget",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "rail infrastructure maintenance practices",
+       "count": 21,
+       "share": 42.86,
+       "lift": 1166.14,
+       "baseline_count": 3,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "high-speed train operations and amenities",
+       "count": 9,
+       "share": 18.37,
+       "lift": 1499.33,
+       "baseline_count": 1,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rail freight network infrastructure",
+       "count": 13,
+       "share": 26.53,
+       "lift": 541.42,
+       "baseline_count": 4,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "railway station facilities and services",
+       "count": 5,
+       "share": 10.2,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "government fiscal policy implementation",
+       "count": 10,
+       "share": 20.41,
+       "lift": 111.06,
+       "baseline_count": 15,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 102,
+     "carrying": 49,
+     "carrier_share_pct": 48.04,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.047,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.049
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "railway budget",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "railway budget",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2ace835cefb83fe84223ef",
+       "headline": "The government will issue a gazette notification creating the South Coastal Railway Zone, effective June 1, which is a significant step toward strengthening railway administration in Andhra Pradesh, Railway Minister Ashwini Vaishnaw said on Tuesday. Andhra Pradesh has received a record railway budge",
+       "url": "https://investmentguruindia.com/newsdetail/south-coastal-railway-zone-to-become-operational-from-june-1-ashwini-vaishnaw746453",
+       "publisher": "investmentguruindia.com",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "the government will issue a gazette notification creating the south coastal railway zone, effective june 1, which is a significant step toward strengthening railway administration in andhra pradesh, railway minister ashwini vaishnaw said on tuesday. andhra pradesh has received a record railway budget allocation of rs. 10,134 crore as projects",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d117825cbad671887defbb",
+       "headline": "Railway Budget 2026 allocation: Delhi gets Rs 2711 cr, first bullet train route announced",
+       "url": "https://indianexpress.com/article/cities/delhi/railway-budget-2026-allocation-delhi-gets-rs-2711-cr-first-bullet-train-route-announced-10509156/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-02-02T13:57:33",
+       "lede": "railway budget 2026 allocation for delhi: the ministry of railways has allocated budgetary fund of rs 2,711 crore for the development of railway infrastructure in delhi for the financial year 2026-27. this marks an increase from the rs 2,593 crore allocated to the union territory in the fiscal year 2025-26.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.76
+        },
+        {
+         "code": 93,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Rail Freight",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986cfcfca3bd326c77dbacb",
+       "headline": "Nothing For Common Man, Bengal In 'Directionless' Budget: Mamata Banerjee | Outlook India",
+       "url": "https://www.outlookindia.com/national/nothing-for-common-man-bengal-in-directionless-budget-mamata",
+       "publisher": "outlookindia.com",
+       "published_at": "2026-02-01T10:25:12",
+       "lede": "mamata banerjee described the 2026-27 budget as directionless, visionless, actionless and anti-people.banerjee asserted that the impact of the budget was visible in the way the stock market reacted.regarding the freight corridor announced between dankuni and surat, banerjee mentioned that was in her railway budget in 2009west bengal chief minister mamata",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.5
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.44
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "mamata banerjee"
+       ]
+      },
+      {
+       "id": "6a2b02aac37f6c5e6620bd46",
+       "headline": "Railway Budget 2026 expectations: a reform roadmap for India",
+       "url": "https://www.railway.supply/railway-budget-2026-expectations-a-reform-roadmap-for-india/",
+       "publisher": "railway.supply",
+       "published_at": "2026-01-25T12:07:25",
+       "lede": "railway budget 2026 expectations are now often framed around one practical issue: how to make indian railways a stronger growth engine for the viksit bharat @2047 vision. railway budget 2026 expectations: 5 reform priorities this is reported by the railway transport news portal railway supply. as the national carrier, the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.76
+        },
+        {
+         "code": 93,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Rail Freight",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd6c844f4fd4c50a327d7",
+       "headline": "Lok Sabha Today: अनुराग ठाकुर ने वित्त मंत्री सीतारमण से पूछा सवाल तो स्पीकर ओम बिरला ने ले ली चुटकी | Today News",
+       "url": "https://www.livemint.com/hindi/news/when-anurag-thakur-posed-a-question-to-finance-minister-nirmala-sitharaman-speaker-om-birla-took-a-lighthearted-jibe-241773651559127.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-03-16T09:11:36",
+       "lede": "proceedings of parliament are issued in the second phase of the budget session. the lok sabha is discussing supplementary demands for railway budget today. during the proceedings of the house, former union minister anurag thakur questioned the banking system in his area. he questioned the finance minister nirmala sitharaman in",
+       "sentiment": {
+        "label": "none",
+        "score": 0.45,
+        "group": "neutral"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "lok sabha"
+       ],
+       "people": [
+        "anurag thakur",
+        "nirmala sitharaman"
+       ]
+      },
+      {
+       "id": "6986e685514cbd23b5c59b08",
+       "headline": "रेलवे ने दिया MP को अब तक सबसे बड़ा बजट, मिलेंगे 15,188 करोड़, जानिए क्या होगा काम",
+       "url": "http://zeenews.india.com/hindi/india/madhya-pradesh-chhattisgarh/bhopal/railways-allocated-budget-15188-crore-to-madhya-pradesh-new-lines-doubling-tripling-station-development/3096297",
+       "publisher": "zeenews.india.com",
+       "published_at": "2026-02-03T05:26:02",
+       "lede": "railway budget in mp: the railway works in madhya pradesh are likely to appear faster. because madhya pradesh has been given the largest railway budget on behalf of the central government so far. this will enable the ongoing development work in the railway. the indian railways has done the allocation",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.71
+        },
+        {
+         "code": 93,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Rail Freight",
+         "score": 0.59
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "indian railways"
+       ],
+       "people": []
+      },
+      {
+       "id": "6986e248ca3bd326c77e2348",
+       "headline": "रेलवे ने दिया MP को अब तक सबसे बड़ा बजट, मिलेंगे 15,188 करोड़, जानिए क्या होगा काम",
+       "url": "https://zeenews.india.com/hindi/india/madhya-pradesh-chhattisgarh/bhopal/railways-allocated-budget-15188-crore-to-madhya-pradesh-new-lines-doubling-tripling-station-development/3096297",
+       "publisher": "zeenews.india.com",
+       "published_at": "2026-02-03T05:26:02",
+       "lede": "railway budget in mp: the railway works in madhya pradesh are likely to appear faster. because madhya pradesh has been given the largest railway budget on behalf of the central government so far. this will enable the ongoing development work in the railway. the indian railways has done the allocation",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.71
+        },
+        {
+         "code": 93,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Rail Freight",
+         "score": 0.59
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "indian railways"
+       ],
+       "people": []
+      },
+      {
+       "id": "698cf6238d29a990b6cd779f",
+       "headline": "Odisha gets record Rs 10,928 crore in Railway Budget",
+       "url": "https://www.newindianexpress.com/states/odisha/2026/Feb/03/odisha-gets-record-rs-10928-crore-in-railway-budget",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-02-03T04:40:20",
+       "lede": "bhubaneswar: odisha has received an allocation of rs 10,928 crore in the railway budget for 2026-27, rs 329 crore more than last year. the budgetary provision for railways development in the state in 2025-26 was rs 10,599 crore.addressing mediapersons, railway minister ashwini vaishnaw said the allocation for odisha this year",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 93,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Rail Freight",
+         "score": 0.88
+        },
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.72
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "ashwini vaishnaw"
+       ]
+      },
+      {
+       "id": "69c8d585314a265bf577f354",
+       "headline": "T.N. gets more than ₹7,500 crore in the railway budget 2026-27",
+       "url": "https://www.thehindu.com/news/cities/chennai/tn-gets-more-than-7500-crore-in-the-railway-budget-2026-27/article70583663.ece",
+       "publisher": "thehindu.com",
+       "published_at": "2026-02-03T00:00:00",
+       "lede": "the state has been allotted ₹7,611 crore in the railway budget presented by the union finance minister n. sitharaman on sunday. at a virtual meeting the union railway minister ashwini vaishnaw informed that this allotment was nine times higher compared to the amount of rs. 879 crore allotted from 2009-14.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 93,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Rail Freight",
+         "score": 0.93
+        },
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.81
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "ashwini vaishnaw"
+       ]
+      },
+      {
+       "id": "69bbb35b5214db4f61f7b8d6",
+       "headline": "Railway budget 2026 new train: More Vande Bharat, Amrit Bharat, Namo Bharat trains to join fleet, says Ashwini Vaishnaw",
+       "url": "https://indianexpress.com/article/india/railway-budget-2026-new-train-vande-bharat-amrit-bharat-namo-bharat-trains-ashwini-vaishnaw-10508969/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-02-02T08:29:05",
+       "lede": "the union minister also added manufacturing of these trains are in progress. (image generated using ai)railway budget new trains: the ministry of railways plans to add more vande bharat trains, including sleeper and chair car versions, along with amrit bharat and namo bharat trains in the financial year 2026–27. addressing",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 93,
+         "path": "/Business & Industrial/Shipping & Logistics/Freight Transport/Rail Freight",
+         "score": 0.84
+        },
+        {
+         "code": 60,
+         "path": "/Travel & Transportation/Transportation/Long Distance Bus & Rail",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 29,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wMiAwNDo0NTo0MCIsImkiOiI2OWJhZTg1ZGRkM2YyNmQ1NTdlZWYwZTMiLCJwIjo3fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.492,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.494
+    }
+   }
+  }
+ ]
+}

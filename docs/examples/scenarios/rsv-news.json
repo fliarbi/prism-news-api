@@ -1,0 +1,843 @@
+{
+ "slug": "rsv-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:19Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "RSV",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rsv",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5889,
+     "tone": {
+      "carrying": 5878,
+      "availability_pct": 99.81,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2015,
+        "share_pct": 34.28
+       },
+       {
+        "group": "neutral",
+        "count": 106,
+        "share_pct": 1.8
+       },
+       {
+        "group": "positive",
+        "count": 3757,
+        "share_pct": 63.92
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 5888,
+      "count": 3201,
+      "share_pct": 54.36
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.271,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.274
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "RSV",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "rsv",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1064,
+       "critical": 511,
+       "critical_pct": 48.0,
+       "negative": 281,
+       "positive": 769,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1077,
+       "critical": 712,
+       "critical_pct": 66.1,
+       "negative": 474,
+       "positive": 582,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 975,
+       "critical": 512,
+       "critical_pct": 52.5,
+       "negative": 321,
+       "positive": 632,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1644,
+       "critical": 896,
+       "critical_pct": 54.5,
+       "negative": 755,
+       "positive": 862,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1228,
+       "critical": 730,
+       "critical_pct": 59.4,
+       "negative": 430,
+       "positive": 766,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1027,
+       "critical": 538,
+       "critical_pct": 52.4,
+       "negative": 278,
+       "positive": 730,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 914,
+       "critical": 459,
+       "critical_pct": 50.2,
+       "negative": 201,
+       "positive": 698,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1221,
+       "critical": 691,
+       "critical_pct": 56.6,
+       "negative": 420,
+       "positive": 783,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1341,
+       "critical": 948,
+       "critical_pct": 70.7,
+       "negative": 553,
+       "positive": 762,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1202,
+       "critical": 690,
+       "critical_pct": 57.4,
+       "negative": 383,
+       "positive": 798,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1170,
+       "critical": 595,
+       "critical_pct": 50.9,
+       "negative": 390,
+       "positive": 752,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2176,
+       "critical": 968,
+       "critical_pct": 44.5,
+       "negative": 689,
+       "positive": 1445,
+       "partial_period": false
+      }
+     ],
+     "total": 15039,
+     "critical_total": 8250,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.48,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.482
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "RSV",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rsv",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5889,
+     "carrying": 3427,
+     "availability_pct": 58.19,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2358,
+       "share_pct": 40.04
+      },
+      {
+       "country": "ireland",
+       "count": 217,
+       "share_pct": 3.68
+      },
+      {
+       "country": "united kingdom",
+       "count": 181,
+       "share_pct": 3.07
+      },
+      {
+       "country": "china",
+       "count": 66,
+       "share_pct": 1.12
+      },
+      {
+       "country": "australia",
+       "count": 61,
+       "share_pct": 1.04
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 544
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.59,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.592
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "RSV",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "rsv",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "maternal and neonatal immunization strategies",
+       "count": 153,
+       "share": 4.35,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 122,
+       "delta_pct": 25.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "vaccine mandates and policy debates",
+       "count": 150,
+       "share": 4.27,
+       "lift": 348.45,
+       "baseline_count": 1,
+       "previous_period_count": 108,
+       "delta_pct": 38.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 epidemiology and transmission modeling",
+       "count": 139,
+       "share": 3.96,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 104,
+       "delta_pct": 33.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "community-acquired infections",
+       "count": 139,
+       "share": 3.96,
+       "lift": 322.9,
+       "baseline_count": 1,
+       "previous_period_count": 96,
+       "delta_pct": 44.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "covid-19 variants (alpha, delta, omicron) and mutations",
+       "count": 133,
+       "share": 3.78,
+       "lift": 308.96,
+       "baseline_count": 1,
+       "previous_period_count": 97,
+       "delta_pct": 37.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 5889,
+     "carrying": 3514,
+     "carrier_share_pct": 59.67,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.617,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.62
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "RSV",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "rsv",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f0e34445272de32e8bfea2",
+       "headline": "RSV infant jab reduces serious illness but long-term scheme not cost-effective, says health watchdog",
+       "url": "https://www.independent.ie/irish-news/health/rsv-infant-jab-reduces-serious-illness-but-long-term-scheme-not-cost-effective-says-health-watchdog/a635754712.html",
+       "publisher": "independent.ie",
+       "published_at": "2026-04-28T07:19:30",
+       "lede": "the rsv jab has led to a drop in infection and hospitalisation in ireland. photo: getty immunising infants to protect them from the potentially serious respiratory syncytial virus (rsv) infection is safe and significantly reduces hospitalisations – but extending it long-term is not cost effective at the current price, according",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.79
+        }
+       ],
+       "country": "ireland",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "fc68d3bb2219c94a8ae00961",
+       "headline": "Impact and cost-effectiveness of two interventions to prevent paediatric respiratory syncytial virus disease in Cameroon: a modelling approach.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42060341/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "impact and cost-effectiveness of two interventions to prevent paediatric respiratory syncytial virus disease in cameroon: a modelling approach.background: preventive interventions for respiratory syncytial virus (rsv) disease are emerging and have been approved for support by gavi, the vaccine alliance. however, their cost-effectiveness is under-researched in low- and middle-income countries, where",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.64
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "a0d3b34f095cd97055346baf",
+       "headline": "RSV ready? Exploring feasibility and acceptability of RSV immunization options in low- and middle-income countries.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41946217/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "rsv ready? exploring feasibility and acceptability of rsv immunization options in low- and middle-income countries.background: respiratory syncytial virus (rsv) is the leading cause of pneumonia-related mortality in infants younger than 6 months, with the majority of deaths occurring in low- and middle-income countries (lmics). two rsv preventive products-a maternal vaccine and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e981bc0b414d24a01a7d8",
+       "headline": "RSV hospitalizations in infants doubled after pandemic lull in Canada, surveillance shows",
+       "url": "http://www.cidrap.umn.edu/respiratory-syncytial-virus-rsv/rsv-hospitalizations-infants-doubled-after-pandemic-lull-canada",
+       "publisher": "cidrap.umn.edu",
+       "published_at": "2026-04-27T21:21:35",
+       "lede": "after respiratory syncytial virus (rsv) circulation was suppressed early in the covid-19 pandemic, the number of admissions to canadian pediatric hospitals more than doubled after public health restrictions were lifted, a team led by mcgill university researchers report today in cmaj. the team conducted surveillance to compare hospitalization and intensive",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.27,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.84
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.55
+        },
+        {
+         "code": 296,
+         "path": "/Health/Pediatrics",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ca0f399b489398e00b41",
+       "headline": "RSV hospitalizations in infants doubled after pandemic lull in Canada, surveillance shows",
+       "url": "https://www.cidrap.umn.edu/respiratory-syncytial-virus-rsv/rsv-hospitalizations-infants-doubled-after-pandemic-lull-canada",
+       "publisher": "cidrap.umn.edu",
+       "published_at": "2026-04-27T21:21:35",
+       "lede": "after respiratory syncytial virus (rsv) circulation was suppressed early in the covid-19 pandemic, the number of admissions to canadian pediatric hospitals more than doubled after public health restrictions were lifted, a team led by mcgill university researchers report today in cmaj. the team conducted surveillance to compare hospitalization and intensive",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.27,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.84
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.55
+        },
+        {
+         "code": 296,
+         "path": "/Health/Pediatrics",
+         "score": 0.51
+        }
+       ],
+       "country": "canada",
+       "organizations": [
+        "mcgill university"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b1476c37f6c5e662d4cab",
+       "headline": "ESCMID Global 2026: Zelicapavir demonstrates benefits for high-risk adults with RSV",
+       "url": "https://www.yahoo.com/news/articles/escmid-global-2026-zelicapavir-demonstrates-221830330.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-23T22:18:30",
+       "lede": "at the european society of clinical microbiology and infectious diseases (escmid) global 2026 conference, chris harris from enanta pharmaceuticals presented data from a phase iib trial that investigated zelicapavir, an oral once-daily n-protein inhibitor, for the treatment of respiratory syncytial virus (rsv) in high-risk adults. rsv is a common respiratory",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.8
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69eb2ed5cb232e514c41e4a0",
+       "headline": "ESCMID Global 2026: Zelicapavir demonstrates benefits for high-risk adults with RSV - Pharmaceutical Technology",
+       "url": "https://www.pharmaceutical-technology.com/analyst-comment/escmid-global-2026-zelicapavir-demonstrates-benefits-for-high-risk-adults-with-rsv/",
+       "publisher": "pharmaceutical-technology.com",
+       "published_at": "2026-04-23T21:18:30",
+       "lede": "rsv is a common respiratory virus that is often associated with mild cold-like symptoms. despite the launch of several novel antibodies and vaccines, innovation in rsv therapeutics is still lagging. image credit: [kittirat roekburi]/shutterstock.com at the european society of clinical microbiology and infectious diseases (escmid) global 2026 conference, chris harris",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.76
+        },
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.5
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european society of clinical microbiology and infectious diseases"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a9f545cefb83fe820ded8",
+       "headline": "Free RSV Vaccines for Older Australians: Protection Against Flu and RSV This Winter - Memesita",
+       "url": "https://www.memesita.com/free-rsv-vaccines-for-older-australians-protection-against-flu-and-rsv-this-winter/",
+       "publisher": "memesita.com",
+       "published_at": "2026-04-23T06:13:01",
+       "lede": "free rsv vaccines for older australians: a winter shield against a silent threat by dr. leona mercer, health editor, memesita published: april 5, 2026 as the crisp air of australian autumn settles in, so too does a quieter, more insidious threat: respiratory syncytial virus (rsv). often mistaken for a bad",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.89
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.5
+        },
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad077963d76f4af0b1d59",
+       "headline": "ESCMID Global 2026: real-world evidence of nirsevimab resistance",
+       "url": "https://www.yahoo.com/news/articles/escmid-global-2026-real-world-102007099.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-22T10:20:07",
+       "lede": "astrazeneca’s nirsevimab (beyfortus) is a highly effective monoclonal antibody (mab) targeting the rsv f protein, first approved in the eu in 2022, for the prevention of respiratory syncytial virus (rsv) lower respiratory tract disease (lrtd) in infants during their first rsv season and in children up to 24 months of",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.72
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.57
+        },
+        {
+         "code": 473,
+         "path": "/Health/Health Conditions/Respiratory Conditions",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99e8475f157062cb1e5a2",
+       "headline": "Why early action matters for cardiovascular health",
+       "url": "https://www.politico.eu/sponsored-content/why-early-action-matters-for-cardiovascular-health/",
+       "publisher": "politico.eu",
+       "published_at": "2026-04-21T05:00:00",
+       "lede": "respiratory infections such as influenza, covid-19 and respiratory syncytial virus (rsv) are well-established drivers of cvd and seasonal hospital strain. influenza vaccination alone can reduce major adverse cardiovascular events by over one-third. yet, across the eu a mismatch persists: high burden and low vaccination coverage rates. covid-19 vaccination rates in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 8,
+         "path": "/Health/Health Conditions/Infectious Diseases/Covid-19",
+         "score": 0.92
+        },
+        {
+         "code": 139,
+         "path": "/Health/Public Health/Health Policy",
+         "score": 0.43
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99583bdd09a23d08d1f1e",
+       "headline": "Study: Early maternal RSV vaccination leads to stronger protection for babies",
+       "url": "https://www.healio.com/news/pediatrics/20260421/study-early-maternal-rsv-vaccination-leads-to-stronger-protection-for-babies",
+       "publisher": "healio.com",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "study: early maternal rsv vaccination leads to stronger protection for babies key takeaways: maternal rsv vaccination was 81.3% effective at preventing hospitalization among infants in the u.k. protection was stronger among infants whose mothers were vaccinated earlier in pregnancy. munich — babies whose mothers were vaccinated against respiratory syncytial virus",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.68,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 70,
+         "path": "/Health/Health Conditions/Infectious Diseases/Vaccines & Immunizations",
+         "score": 0.87
+        },
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.85
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 11,
+     "total_estimate": 984,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMSAwMDowMDowMCIsImkiOiI2OWU5OTU4M2JkZDA5YTIzZDA4ZDFmMWUiLCJwIjo4fQ",
+     "unresolved": 14,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.437,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "14 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.439
+    }
+   }
+  }
+ ]
+}

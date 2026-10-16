@@ -1,0 +1,830 @@
+{
+ "slug": "fmcg-industry",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:51:47Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "fmcg",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "fmcg",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2549,
+     "tone": {
+      "carrying": 2547,
+      "availability_pct": 99.92,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 279,
+        "share_pct": 10.95
+       },
+       {
+        "group": "neutral",
+        "count": 15,
+        "share_pct": 0.59
+       },
+       {
+        "group": "positive",
+        "count": 2253,
+        "share_pct": 88.46
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2548,
+      "count": 1070,
+      "share_pct": 41.99
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.479,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.49
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "fmcg",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "fmcg",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 852,
+       "critical": 235,
+       "critical_pct": 27.6,
+       "negative": 98,
+       "positive": 750,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 976,
+       "critical": 171,
+       "critical_pct": 17.5,
+       "negative": 52,
+       "positive": 921,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1449,
+       "critical": 260,
+       "critical_pct": 17.9,
+       "negative": 84,
+       "positive": 1360,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 927,
+       "critical": 311,
+       "critical_pct": 33.5,
+       "negative": 122,
+       "positive": 801,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1123,
+       "critical": 338,
+       "critical_pct": 30.1,
+       "negative": 147,
+       "positive": 971,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 604,
+       "critical": 228,
+       "critical_pct": 37.7,
+       "negative": 76,
+       "positive": 523,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 907,
+       "critical": 228,
+       "critical_pct": 25.1,
+       "negative": 42,
+       "positive": 858,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 558,
+       "critical": 162,
+       "critical_pct": 29.0,
+       "negative": 32,
+       "positive": 524,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 608,
+       "critical": 246,
+       "critical_pct": 40.5,
+       "negative": 61,
+       "positive": 545,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 722,
+       "critical": 274,
+       "critical_pct": 38.0,
+       "negative": 61,
+       "positive": 656,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 523,
+       "critical": 255,
+       "critical_pct": 48.8,
+       "negative": 59,
+       "positive": 460,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 696,
+       "critical": 295,
+       "critical_pct": 42.4,
+       "negative": 98,
+       "positive": 592,
+       "partial_period": false
+      }
+     ],
+     "total": 9945,
+     "critical_total": 3003,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-07-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.028,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.037
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "fmcg",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "fmcg",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2549,
+     "carrying": 1402,
+     "availability_pct": 55.0,
+     "items": [
+      {
+       "country": "india",
+       "count": 716,
+       "share_pct": 28.09
+      },
+      {
+       "country": "united states",
+       "count": 229,
+       "share_pct": 8.98
+      },
+      {
+       "country": "united kingdom",
+       "count": 82,
+       "share_pct": 3.22
+      },
+      {
+       "country": "nigeria",
+       "count": 46,
+       "share_pct": 1.8
+      },
+      {
+       "country": "china",
+       "count": 32,
+       "share_pct": 1.26
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 297
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.045,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.052
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "fmcg",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "fmcg",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "market research and consumer behavior analysis",
+       "count": 70,
+       "share": 4.8,
+       "lift": 391.64,
+       "baseline_count": 1,
+       "previous_period_count": 308,
+       "delta_pct": -77.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "stock market index composition",
+       "count": 106,
+       "share": 7.27,
+       "lift": 296.53,
+       "baseline_count": 2,
+       "previous_period_count": 75,
+       "delta_pct": 41.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market volatility indicators",
+       "count": 104,
+       "share": 7.13,
+       "lift": 290.94,
+       "baseline_count": 2,
+       "previous_period_count": 78,
+       "delta_pct": 33.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "asian financial market developments",
+       "count": 58,
+       "share": 3.98,
+       "lift": 324.51,
+       "baseline_count": 1,
+       "previous_period_count": 68,
+       "delta_pct": -14.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "data governance frameworks",
+       "count": 47,
+       "share": 3.22,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 207,
+       "delta_pct": -77.3,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2549,
+     "carrying": 1459,
+     "carrier_share_pct": 57.24,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.291,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.295
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "fmcg",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "fmcg",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e851405cfa3e5ba5e6e855",
+       "headline": "FMCG stocks hit badly amid war",
+       "url": "https://www.financialexpress.com/market/fmcg-stocks-hit-badly-amid-warnbsp-4208458/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-15T16:15:44",
+       "lede": "hopes of another us-iran talk gave a brief breathing space for the domestic fast-moving consumer goods (fmcg) space on wednesday, but the pack remains one of the most beaten-up sectors of the west asia crisis. as things stand, fmcg’s defensive tag has taken a beating during these volatile times. and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.79
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e63d9b9e87ccc43e300790",
+       "headline": "Rain deficit clouds demand outlook for FMCG firms",
+       "url": "https://www.financialexpress.com/business/industry-rain-deficit-cloudsnbspdemand-outlook-for-fmcg-firms-4206071/",
+       "publisher": "financialexpress.com",
+       "published_at": "2026-04-13T14:13:59",
+       "lede": "a below-normal monsoon this year may test the rural recovery within india&#039;s fast-moving consumer goods (fmcg) sector, disrupting the growth outlook for fy27. the early forecasts of sub-par rains by the imd also comes at a time when fmcg firms are dealing with inflationary pressures triggered by the war in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.73
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "imd"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2dc23a85be7e50668c371",
+       "headline": "West Asia tensions disrupt Indian FMCG recovery for FY27-28: Report - www.lokmattimes.com",
+       "url": "https://www.lokmattimes.com/business/west-asia-tensions-disrupt-indian-fmcg-recovery-for-fy27-28-report/",
+       "publisher": "lokmattimes.com",
+       "published_at": "2026-04-09T13:44:27",
+       "lede": "new delhi [india], april 9 : the indian fast-moving consumer goods (fmcg) sector faces a shift in its growth trajectory for the fy27-28 fiscal years as geopolitical conflict in west asia has disrupted a previously anticipated volume recovery. according to a report by phillipcapital, the industry's recovery narrative, which was",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.69
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "phillipcapital"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2d979a85be7e506682b82",
+       "headline": "West Asia Tensions Disrupt Indian FMCG Sector Recovery",
+       "url": "https://www.newkerala.com/news/a/west-asia-tensions-disrupt-indian-fmcg-recovery-fy27-28-204.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-09T08:32:02",
+       "lede": "geopolitical tensions in west asia have disrupted the anticipated volume recovery for india's fmcg sector in fy27-28, according to a phillipcapital report. the industry faces a \"triple squeeze\" from limited direct demand exposure, rising raw material costs for crude derivatives, and a weakening rupee increasing import expenses. the report draws",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.28,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.7
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "phillipcapital"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2def7a85be7e5066969c1",
+       "headline": "West Asia tensions disrupt Indian FMCG recovery for FY27-28: Report",
+       "url": "https://www.aninews.in/news/business/west-asia-tensions-disrupt-indian-fmcg-recovery-for-fy27-28-report20260409081427",
+       "publisher": "aninews.in",
+       "published_at": "2026-04-09T02:44:27",
+       "lede": "new delhi [india], april 9 (ani): the indian fast-moving consumer goods (fmcg) sector faces a shift in its growth trajectory for the fy27-28 fiscal years as geopolitical conflict in west asia has disrupted a previously anticipated volume recovery. according to a report by phillipcapital, the industry's recovery narrative, which was",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.68
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "phillipcapital"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8cc575cfa3e5ba53dd831",
+       "headline": "Why India's Smartest FMCG Companies Are Buying Regional Brands and Refusing to Change Them",
+       "url": "https://www.linkedin.com/pulse/why-indias-smartest-fmcg-companies-buying-regional-brands-i4vqf",
+       "publisher": "linkedin.com",
+       "published_at": "2026-04-01T07:30:25",
+       "lede": "we just want to tell you about a conversation we had recently with someone who works in modern trade for one of india's largest fmcg companies. he said something that stuck with me. \"we spend more money in a single quarter on media than most regional brands spend in five",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "regional brands"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbd1fb7aa9ae690c976a37",
+       "headline": "West Asia conflict keeps Indian FMCG brands on watch; industry executives see limited immediate impact",
+       "url": "https://www.storyboard18.com/brand-marketing/gulf-tensions-hit-indian-fmcg-firms-dabur-marico-godrej-shares-fall-ws-l-91906.htm",
+       "publisher": "storyboard18.com",
+       "published_at": "2026-03-12T03:33:45",
+       "lede": "for indian fmcg companies with strong ties to the gulf, the escalation of conflict has led to a new layer of uncertainty.the sound of air raid sirens, missile interceptions, and distant explosions has disrupted the rhythm of daily life across west asia in recent days, unsettling a region that has",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": "saudi arabia",
+       "organizations": [
+        "ist"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ade945cefb83fe84d6a21",
+       "headline": "The",
+       "url": "https://retail.economictimes.indiatimes.com/news/blog/the-unlearning-curve-for-indias-fmcg-giants/128748231",
+       "publisher": "retail.economictimes.indiatimes.com",
+       "published_at": "2026-02-24T16:12:33",
+       "lede": "representative imageas the dust settles on the q3 fy26 results for india&rsquo;s \"big seven\" fmcg bellwethers&mdash;hul, itc, nestle, britannia, marico, dabur, and colgate-palmolive&mdash;the numbers paint a sobering picture. despite a \"goldilocks\" macro-environment&mdash;buoyed by income tax cuts, gst rationalization, and rbi interest rate pivots resulting in a massive $80 billion injection",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.67,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc2381edbbccf9199e721d",
+       "headline": "Buy or sell: Vaishali Parekh recommends three intraday stocks to buy today — 19 February 2026 | Stock Market News",
+       "url": "https://www.livemint.com/market/stock-market-news/buy-or-sell-vaishali-parekh-recommends-three-intraday-stocks-to-buy-today-19-february-2026-11771470428204.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-02-19T03:48:39",
+       "lede": "buy or sell stocks: the indian stock market ended on a mildly positive note on wednesday, as strength in banking, metal, and fmcg stocks provided a steady underpinning and helped counterbalance sharp selling in the it sector. the resilience in these heavyweight segments lent stability to the indices despite sector-specific",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.86
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.77
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bd8132ada7f1c3600334e5",
+       "headline": "Reliance Consumer Forms Nigeria JV with TGI Group",
+       "url": "https://www.newkerala.com/news/a/reliance-consumer-products-form-jv-tgi-group-expand-925.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-02-16T19:56:01",
+       "lede": "reliance consumer products limited has signed an agreement to form a majority-owned joint venture with nigeria's tropical general investments group. the partnership aims to establish a strong presence in nigeria, one of africa's largest consumer markets. it will leverage tgi's extensive manufacturing and distribution network to introduce reliance's fmcg portfolio.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.83,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.73
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "tgi"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bc9e77650bbd41e03ef174",
+       "headline": "Down 11%: What's spiking the FMCG-TV story - Exchange4media",
+       "url": "https://www.exchange4media.com/marketing-news/digital-at-64-whats-driving-fmcgs-shift-away-from-tv-151974.html",
+       "publisher": "exchange4media.com",
+       "published_at": "2026-02-13T03:26:58",
+       "lede": "for decades, television has been the default growth engine for fmcg advertising in india - the one medium capable of delivering rapid national reach, cultural salience and household trust at scale. but that dominance is steadily being recalibrated.faced with tighter margins, slower consumption growth and mounting pressure to prove returns,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 157,
+         "path": "/Business & Industrial/Advertising & Marketing/Other",
+         "score": 0.58
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bae9487a841a437be4a9a3",
+       "headline": "Inside FMCG’s digital reset: What’s taking India’s biggest advertisers online - Exchange4media",
+       "url": "https://www.exchange4media.com/digital-news/inside-fmcgs-digital-reset-whats-taking-indias-biggest-advertisers-online-151881.html",
+       "publisher": "exchange4media.com",
+       "published_at": "2026-02-11T03:22:15",
+       "lede": "india’s fmcg sector, long seen as the last stronghold of television-led advertising, appears to have crossed a decisive threshold. between 2024 and 2025, the country’s largest advertising category moved firmly into a digital-first era, signalling not just a media mix adjustment but a deeper recalibration of how brands are built,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 157,
+         "path": "/Business & Industrial/Advertising & Marketing/Other",
+         "score": 0.62
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6988ee7294d3f481f3dc39e0",
+       "headline": "FMCG raises digital ad spends to 64%: dentsu-e4m report - Exchange4media",
+       "url": "https://www.exchange4media.com/digital-news/fmcg-raises-digital-ad-spends-around-40-dentsu-e4m-report-151619.html",
+       "publisher": "exchange4media.com",
+       "published_at": "2026-02-03T08:55:36",
+       "lede": "fmcg advertisers sharply accelerated their digital push between 2024 and 2025, marking a decisive inflection point in media planning for india’s largest advertising category. higher digital spends, rising digital allocation and a deeper concentration within video- and social-led formats point to a structural shift, with digital now firmly anchoring fmcg",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 157,
+         "path": "/Business & Industrial/Advertising & Marketing/Other",
+         "score": 0.64
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 328,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMS0yOSAxMTo0NToyNiIsImkiOiI2OThlY2Q1NzhkMjlhOTkwYjZmMDg0MDciLCJwIjo4fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.315,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.32
+    }
+   }
+  }
+ ]
+}

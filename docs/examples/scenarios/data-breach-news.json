@@ -1,0 +1,976 @@
+{
+ "slug": "data-breach-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:23Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "data breach",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "data breach",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6669,
+     "tone": {
+      "carrying": 6660,
+      "availability_pct": 99.87,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 5214,
+        "share_pct": 78.29
+       },
+       {
+        "group": "neutral",
+        "count": 36,
+        "share_pct": 0.54
+       },
+       {
+        "group": "positive",
+        "count": 1410,
+        "share_pct": 21.17
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 6669,
+      "count": 5823,
+      "share_pct": 87.31
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.484,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.517
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "data breach",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "data breach",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 1721,
+       "critical": 1488,
+       "critical_pct": 86.5,
+       "negative": 1370,
+       "positive": 342,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1268,
+       "critical": 1068,
+       "critical_pct": 84.2,
+       "negative": 969,
+       "positive": 298,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1706,
+       "critical": 1291,
+       "critical_pct": 75.7,
+       "negative": 1343,
+       "positive": 360,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1719,
+       "critical": 1413,
+       "critical_pct": 82.2,
+       "negative": 1349,
+       "positive": 357,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1393,
+       "critical": 1219,
+       "critical_pct": 87.5,
+       "negative": 1081,
+       "positive": 302,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1552,
+       "critical": 1320,
+       "critical_pct": 85.1,
+       "negative": 1143,
+       "positive": 403,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1324,
+       "critical": 1133,
+       "critical_pct": 85.6,
+       "negative": 938,
+       "positive": 381,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1505,
+       "critical": 1287,
+       "critical_pct": 85.5,
+       "negative": 1168,
+       "positive": 330,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1334,
+       "critical": 1190,
+       "critical_pct": 89.2,
+       "negative": 1044,
+       "positive": 284,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1825,
+       "critical": 1559,
+       "critical_pct": 85.4,
+       "negative": 1360,
+       "positive": 444,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1486,
+       "critical": 1278,
+       "critical_pct": 86.0,
+       "negative": 1163,
+       "positive": 316,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 2024,
+       "critical": 1796,
+       "critical_pct": 88.7,
+       "negative": 1647,
+       "positive": 366,
+       "partial_period": false
+      }
+     ],
+     "total": 18857,
+     "critical_total": 16042,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.525,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.531
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "data breach",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "data breach",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 6669,
+     "carrying": 2638,
+     "availability_pct": 39.56,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1215,
+       "share_pct": 18.22
+      },
+      {
+       "country": "united kingdom",
+       "count": 252,
+       "share_pct": 3.78
+      },
+      {
+       "country": "india",
+       "count": 150,
+       "share_pct": 2.25
+      },
+      {
+       "country": "south korea",
+       "count": 95,
+       "share_pct": 1.42
+      },
+      {
+       "country": "new zealand",
+       "count": 94,
+       "share_pct": 1.41
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 832
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.615,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.625
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "data breach",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "data breach",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "data breach notification systems",
+       "count": 209,
+       "share": 5.82,
+       "lift": 475.23,
+       "baseline_count": 1,
+       "previous_period_count": 232,
+       "delta_pct": -9.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "data loss prevention (dlp) in networks",
+       "count": 308,
+       "share": 8.58,
+       "lift": 350.17,
+       "baseline_count": 2,
+       "previous_period_count": 223,
+       "delta_pct": 38.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "threat intelligence integration for networks",
+       "count": 269,
+       "share": 7.49,
+       "lift": 305.83,
+       "baseline_count": 2,
+       "previous_period_count": 155,
+       "delta_pct": 73.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "network security policy development and enforcement",
+       "count": 152,
+       "share": 4.23,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 107,
+       "delta_pct": 42.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "malware and threat analysis in network traffic",
+       "count": 209,
+       "share": 5.82,
+       "lift": 237.61,
+       "baseline_count": 2,
+       "previous_period_count": 147,
+       "delta_pct": 42.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 6669,
+     "carrying": 3590,
+     "carrier_share_pct": 53.83,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.547,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.552
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "data breach",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "data breach",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f0e2f8836d28f995cb609f",
+       "headline": "Texas University Discloses Colossal Data Breach – Personal, Health and Financial Info of 813,892 People Exposed - The Daily Hodl",
+       "url": "https://dailyhodl.com/2026/04/28/texas-university-discloses-colossal-data-breach-personal-health-and-financial-info-of-813892-people-exposed/",
+       "publisher": "dailyhodl.com",
+       "published_at": "2026-04-28T07:04:06",
+       "lede": "bad actors have compromised a public medical school in texas, leading to a massive data breach that's placing the personal info of 813,892 people at risk. the texas tech university health sciences center <a href=\"https://oag.ca.gov/ecrime/databreach/reports/sb24-622258\" rel=\"noopener\" target=\"_blank\">disclosed</a> the breach to multiple state governments last week, noting that potentially impacted information",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.77,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.87
+        },
+        {
+         "code": 31,
+         "path": "/Jobs & Education/Education/Colleges & Universities",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "texas tech university health sciences center"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e352ada60998cfe6be63aa",
+       "headline": "China’s Tianjin Supercomputing Center Hit in Alleged 10-Petabyte Data Breach - Vision Times",
+       "url": "https://www.visiontimes.com/2026/04/10/chinas-tianjin-supercomputing-center-hit-in-alleged-10-petabyte-data-breach.html",
+       "publisher": "visiontimes.com",
+       "published_at": "2026-04-10T20:05:50",
+       "lede": "according to cnn, china’s national supercomputing center in tianjin has suffered a data breach of extraordinary scale. a hacker using the alias “flamingchina” claims to have extracted roughly 10 petabytes of data — equivalent to about two billion photographs, or the entire text content of the internet several times over",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.75
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "cnn"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e859cd7bb1410d4c6e8a3d",
+       "headline": "Chinese government hit by one of the biggest hacking attack as data from national Supercomputer allegedly stolen - The Times of India",
+       "url": "https://timesofindia.indiatimes.com/technology/tech-news/chinese-government-hit-by-one-of-the-biggest-hacking-attack-as-data-from-national-supercomputer-allegedly-stolen/articleshow/130148924.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-09T16:36:00",
+       "lede": "china may have suffered its largest data breach ever after a cyberattack recently targeted one of the country's supercomputers. according to a cnn report, a hacker has allegedly accessed and stolen more than 10 petabytes of sensitive data from a state-run system, including what are said to be classified defence",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.56
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "cnn"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e85aa97bb1410d4c6f100b",
+       "headline": "Chinese government hit by one of the biggest hacking attack as data from national Supercomputer allegedly stolen - Times of India",
+       "url": "https://timesofindia.indiatimes.com/articleshowprint/130148924.cms",
+       "publisher": "timesofindia.indiatimes.com",
+       "published_at": "2026-04-09T00:00:00",
+       "lede": "how the hacker may have breached chinese supercomputer data china may have suffered its largest data breach ever after a cyberattack recently targeted one of the country's supercomputers. according to a cnn report, a hacker has allegedly accessed and stolen more than 10 petabytes of sensitive data from a state-run",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.83
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "cnn"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e27f88dc480588dc9732a0",
+       "headline": "Telehealth giant Hims & Hers says its customer support system was hacked | TechCrunch",
+       "url": "https://techcrunch.com/2026/04/02/telehealth-giant-hims-hers-says-its-customer-support-system-was-hacked/",
+       "publisher": "techcrunch.com",
+       "published_at": "2026-04-02T21:26:48",
+       "lede": "hims & hers, the telehealth company that sells weight-loss drugs and sexual health prescriptions, has confirmed a data breach affecting its third-party customer service platform. the healthcare company said in a data breach notice filed with the california attorney general’s office on thursday that the hackers stole data about user",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.81,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bced126760819e3849873d",
+       "headline": "LexisNexis confirms data breach, says hackers hit customer, business info",
+       "url": "https://www.techradar.com/pro/security/lexisnexis-confirms-data-breach-says-hackers-hit-customer-and-business-info",
+       "publisher": "techradar.com",
+       "published_at": "2026-03-04T15:05:00",
+       "lede": "hackers claim deeper access to lexisnexis data than company admitsattack allegedly exposed government and corporate user datalexisnexis insists stolen information is outdatedamerican analytics giant lexisnexis has confirmed suffering a data breach recently, but played down its importance by claiming the hackers only stole outdated and irrelevant data. the hackers, on",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.76
+        },
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "lexisnexis"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2d7febd7b10565a44298b",
+       "headline": "PRIVACY ALERT: CatalystRCM Under Investigation for Data Breach of More Than 139,000 Records",
+       "url": "https://www.prnewswire.com/news-releases/privacy-alert-catalystrcm-under-investigation-for-data-breach-of-more-than-139-000-records-302698947.html",
+       "publisher": "prnewswire.com",
+       "published_at": "2026-02-26T20:20:00",
+       "lede": "san francisco, feb. 26, 2026 /prnewswire/ -- schubert jonckheer & kolbe llp is investigating a data breach that led to unauthorized access to the sensitive information of individuals who received diagnostic laboratory testing services connected with catalystrcm, a texas-based revenue cycle management company. between november 8, 2025, and november 9,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69dc9147623c4685114af1fa",
+       "headline": "Kettering Health Notifying Patients of Interlock Breach",
+       "url": "https://www.bankinfosecurity.com/kettering-health-notifying-patients-interlock-breach-a-30774",
+       "publisher": "bankinfosecurity.com",
+       "published_at": "2026-02-17T00:00:00",
+       "lede": "fraud management & cybercrime , incident & breach response , ransomware kettering health notifying patients of interlock breach cybercrime group first listed ohio health system as a data theft victim last june kettering health is notifying an unspecified number of current and former patients and \"affiliates\" of a data breach",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.75
+        },
+        {
+         "code": 88,
+         "path": "/Health/Medical Facilities & Services/Other",
+         "score": 0.58
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "kettering health"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2ae2895cefb83fe850254d",
+       "headline": "Data breach that went unnoticed in October 2024 may have left millions of Americans vulnerable",
+       "url": "https://marketrealist.com/25-million-americans-affected-by-data-breach-from-2024/",
+       "publisher": "marketrealist.com",
+       "published_at": "2026-02-10T09:43:33",
+       "lede": "americans have it hard enough to get by, thanks to rising prices and unemployment. now, reports of a serious data breach that could affect millions are doing the rounds. perhaps the worst-affected state is texas, where, reportedly, the sensitive information of about half of its residents might be seriously compromised.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2bc13c1991f786ced7ac1",
+       "headline": "Last chance for Americans to get up to $2,500 check from $500k data breach suit",
+       "url": "https://www.the-sun.com/money/15907713/americans-2500-check-data-breach-payout-submit-form/",
+       "publisher": "the-sun.com",
+       "published_at": "2026-02-08T12:47:35",
+       "lede": "take note last chance for americans to get up to $2,500 check from $500k data breach payout – you must submit form by february 10 americans have just three days to apply for a hefty $2,500 payout from a mega $500,000 data breach suit. new york city, minnesota and wisconsin",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6996b7f30d0db262fa573762",
+       "headline": "Ingram Micro data breach affects 42,000 individuals",
+       "url": "https://www.techzine.eu/news/security/138091/ingram-micro-data-breach-affects-42000-individuals/",
+       "publisher": "techzine.eu",
+       "published_at": "2026-01-20T10:58:15",
+       "lede": "more than six months after a ransomware attack, ingram micro has announced how many people have been affected. the data breach affected more than 42,000 individuals, including employees and job applicants, whose personal data was stolen between july 2 and july 3, 2025.on july 3, 2025, the it distributor discovered",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ingram micro"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e86fd85cfa3e5ba5f953d9",
+       "headline": "Grubhub Confirms New Data Breach, Hackers Reportedly Demand Ransom",
+       "url": "https://www.pcmag.com/news/grubhub-confirms-new-data-breach-hackers-reportedly-demand-ransom",
+       "publisher": "pcmag.com",
+       "published_at": "2026-01-19T15:36:34",
+       "lede": "<p>grubhub has suffered yet another data breach and is facing an extortion demand from the hackers, bleeping computer <a href=\"https://www.bleepingcomputer.com/news/security/grubhub-confirms-hackers-stole-data-in-recent-security-breach/\" target=\"_blank\" title=\"(opens in a new tab)\">reports</a>.</p><p>in february 2025, data from the food delivery platform was <a href=\"https://www.pcmag.com/news/grubhub-hack-exposes-campus-diners-those-who-contacted-customer-service\" target=\"_self\">stolen</a> as part of a large-scale salesforce security breach. that attack was carried",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.56
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "salesforce",
+        "grubhub"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b0e00963d76f4af360189",
+       "headline": "Vastaamo Hack: Finland's Therapy Data Breach Exposed Thousands",
+       "url": "https://world.infonasional.com/vastaamo-hack-finland-therapy-data-breach",
+       "publisher": "world.infonasional.com",
+       "published_at": "2026-01-17T13:24:42",
+       "lede": "imagine your most private thoughts, shared in therapy, exposed to the world. for 33,000 finnish citizens, this nightmare became reality when vastaamo, a psychotherapy provider, suffered a massive data breach with devastating repercussions.tiina parikka, a school headteacher, was at home when she received the chilling email containing her social security",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3dab2fc89a41e8ef2e004",
+       "headline": "Covenant Health data breach affects nearly 500,000 patients",
+       "url": "https://www.foxnews.com/tech/covenant-health-data-breach-affects-nearly-500000-patients",
+       "publisher": "foxnews.com",
+       "published_at": "2026-01-10T20:40:54",
+       "lede": "new you can now listen to fox news articles!when a healthcare data breach is first disclosed, the number of people affected is often far lower than the final tally. that figure frequently climbs as investigations continue.that's exactly what happened with andover, massachusetts-based covenant health. the catholic healthcare provider has confirmed",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "andover",
+        "fox news"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8809a8937ef12fc072bb5",
+       "headline": "France investigates 15-year-old over alleged hack of national ID agency",
+       "url": "https://therecord.media/france-investigates-teen-over-national-id-agency-hack",
+       "publisher": "therecord.media",
+       "published_at": "2026-04-30T16:30:25",
+       "lede": "a teenage hacker is suspected of breaching a french government agency responsible for identity documents and attempting to sell millions of citizens’ personal data, paris prosecutors said on thursday. the minor was taken into police custody on april 25 on suspicion of involvement in a data breach affecting the national",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.54
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.52
+        },
+        {
+         "code": 206,
+         "path": "/Shopping/Consumer Resources/Identity Theft Protection",
+         "score": 0.51
+        }
+       ],
+       "country": "france",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ab040963d76f4aff4151a",
+       "headline": "Almost half of UK businesses hit by cyber attacks | Computer Weekly",
+       "url": "https://www.computerweekly.com/news/366642507/Almost-half-of-UK-businesses-hit-by-cyber-attacks",
+       "publisher": "computerweekly.com",
+       "published_at": "2026-04-30T13:06:00",
+       "lede": "the general cyber security threat to uk organisations remains “widespread and significant” with 43% of businesses, 28% of charities and 69% of large firms having suffered either a data breach or cyber attack in the past year, and 29% of respondents saying they were experiencing incidents at least once every",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.74
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a705ec37f6c5e66bacae7",
+       "headline": "Unprecedented- Private Equity Firm Potentially on Hook for Portfolio Company’s Data Breach",
+       "url": "https://natlawreview.com/article/unprecedented-private-equity-firm-potentially-hook-portfolio-companys-data-breach",
+       "publisher": "natlawreview.com",
+       "published_at": "2026-04-30T10:22:29",
+       "lede": "in a first of its kind, a california federal judge allowed claims against bain capital to proceed based on a data breach at its subsidiary, powerschool. notably, many of the claims are based on conduct that occurred before bain’s acquisition of powerschool. although the case will continue to play out,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22929122c4392e0cf1d15",
+       "headline": "Unified mobility cyber command: Why India needs a national authority",
+       "url": "https://www.auto.economictimes.indiatimes.com/news/industry/unified-mobility-cyber-command-why-india-needs-a-national-authority/130600684",
+       "publisher": "auto.economictimes.indiatimes.com",
+       "published_at": "2026-04-29T13:51:07",
+       "lede": "the push comes amid rising cybersecurity threats and growing emphasis on sovereign technologies like navic, as the sector moves toward an integrated, resilient, and security-first framework.data breaches are no longer isolated it incidents&mdash;they are signals of deeper systemic vulnerabilities. the recent ambala data breach at nh 152-d has once again",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.87
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 1200,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAxMzo1MTowNyIsImkiOiI2OWYyMjkyOTEyMmM0MzkyZTBjZjFkMTUiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.643,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.647
+    }
+   }
+  }
+ ]
+}

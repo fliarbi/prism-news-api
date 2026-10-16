@@ -1,0 +1,964 @@
+{
+ "slug": "generative-ai-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:11:25Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "generative AI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "generative ai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 16842,
+     "tone": {
+      "carrying": 16838,
+      "availability_pct": 99.98,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 2430,
+        "share_pct": 14.43
+       },
+       {
+        "group": "neutral",
+        "count": 194,
+        "share_pct": 1.15
+       },
+       {
+        "group": "positive",
+        "count": 14214,
+        "share_pct": 84.42
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 16842,
+      "count": 11294,
+      "share_pct": 67.06
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.056,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.081
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "generative AI",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "generative ai",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 4263,
+       "critical": 2433,
+       "critical_pct": 57.1,
+       "negative": 360,
+       "positive": 3864,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 3837,
+       "critical": 2581,
+       "critical_pct": 67.3,
+       "negative": 424,
+       "positive": 3388,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 4281,
+       "critical": 2851,
+       "critical_pct": 66.6,
+       "negative": 510,
+       "positive": 3723,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 3929,
+       "critical": 2737,
+       "critical_pct": 69.7,
+       "negative": 512,
+       "positive": 3376,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 4246,
+       "critical": 2825,
+       "critical_pct": 66.5,
+       "negative": 467,
+       "positive": 3733,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 4553,
+       "critical": 3022,
+       "critical_pct": 66.4,
+       "negative": 499,
+       "positive": 3995,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4081,
+       "critical": 2720,
+       "critical_pct": 66.7,
+       "negative": 449,
+       "positive": 3582,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 4026,
+       "critical": 2755,
+       "critical_pct": 68.4,
+       "negative": 477,
+       "positive": 3501,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 4277,
+       "critical": 2860,
+       "critical_pct": 66.9,
+       "negative": 545,
+       "positive": 3671,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 5084,
+       "critical": 3562,
+       "critical_pct": 70.1,
+       "negative": 778,
+       "positive": 4238,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 4093,
+       "critical": 2745,
+       "critical_pct": 67.1,
+       "negative": 640,
+       "positive": 3404,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3388,
+       "critical": 2127,
+       "critical_pct": 62.8,
+       "negative": 467,
+       "positive": 2901,
+       "partial_period": false
+      }
+     ],
+     "total": 50058,
+     "critical_total": 33218,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.26,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.269
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "generative AI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "generative ai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 16842,
+     "carrying": 7745,
+     "availability_pct": 45.99,
+     "items": [
+      {
+       "country": "united states",
+       "count": 3419,
+       "share_pct": 20.3
+      },
+      {
+       "country": "australia",
+       "count": 1075,
+       "share_pct": 6.38
+      },
+      {
+       "country": "india",
+       "count": 519,
+       "share_pct": 3.08
+      },
+      {
+       "country": "china",
+       "count": 493,
+       "share_pct": 2.93
+      },
+      {
+       "country": "united kingdom",
+       "count": 478,
+       "share_pct": 2.84
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1761
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.874,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.884
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "generative AI",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "generative ai",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "business and economy tidbits",
+       "count": 1040,
+       "share": 10.01,
+       "lift": 163.43,
+       "baseline_count": 5,
+       "previous_period_count": 753,
+       "delta_pct": 38.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "generative adversarial networks (gans)",
+       "count": 301,
+       "share": 2.9,
+       "lift": 236.51,
+       "baseline_count": 1,
+       "previous_period_count": 297,
+       "delta_pct": 1.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "influential tech leaders and ceo updates",
+       "count": 259,
+       "share": 2.49,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 191,
+       "delta_pct": 35.6,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "emerging tech startups and innovations",
+       "count": 246,
+       "share": 2.37,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 178,
+       "delta_pct": 38.2,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "natural language processing models",
+       "count": 485,
+       "share": 4.67,
+       "lift": 127.03,
+       "baseline_count": 3,
+       "previous_period_count": 490,
+       "delta_pct": -1.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 16842,
+     "carrying": 10389,
+     "carrier_share_pct": 61.69,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.104,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.111
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "generative AI",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "generative ai",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f881988937ef12fc07c28f",
+       "headline": "AI in top colleges: Is it helping students or adding to stress? A professor explains",
+       "url": "https://indianexpress.com/article/explained/genai-iits-student-stress-impact-india-10664227/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-04-30T11:54:43",
+       "lede": "the launch of chatgpt in november 2022 accelerated the adoption of generative ai (genai) across domains. it is now widely used in education, research, and industry to improve productivity and work quality, and is increasingly treated as an assistive technology. while concerns remain about its impact on jobs, genai has",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.78
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03fcb69c4aac09353b816c",
+       "headline": "Turn Business Questions into Trusted Answers: How to Operationalize Governed AI for Real Decisions - Alteryx",
+       "url": "https://www.alteryx.com/resources/webinar/how-to-operationalize-governed-ai",
+       "publisher": "alteryx.com",
+       "published_at": "2026-04-30T10:27:04",
+       "lede": "generative ai is rapidly changing how business users interact with data. but in many organizations, it’s also introducing a new layer of risk. teams can now “talk to data”, but the answers they rely on are often inconsistent, hard to validate, and increasingly used to support decisions they were never",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 125,
+         "path": "/Computers & Electronics/Enterprise Technology/Data Management",
+         "score": 0.79
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.71
+        },
+        {
+         "code": 57,
+         "path": "/Business & Industrial/Business Operations/Management",
+         "score": 0.66
+        },
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03ef6e220687a966a12469",
+       "headline": "Turn Business Questions into Trusted Answers: How to Operationalize Governed AI for Real Decisions - Alteryx",
+       "url": "https://www.alteryx.com/de/resources/webinar/how-to-operationalize-governed-ai",
+       "publisher": "alteryx.com",
+       "published_at": "2026-04-30T10:27:04",
+       "lede": "generative ai is rapidly changing how business users interact with data. but in many organizations, it’s also introducing a new layer of risk. teams can now “talk to data”, but the answers they rely on are often inconsistent, hard to validate, and increasingly used to support decisions they were never",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.54,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 125,
+         "path": "/Computers & Electronics/Enterprise Technology/Data Management",
+         "score": 0.79
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.71
+        },
+        {
+         "code": 57,
+         "path": "/Business & Industrial/Business Operations/Management",
+         "score": 0.66
+        },
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ab542c37f6c5e66e95771",
+       "headline": "AI as the Co-Pilot in Modern Supply Chains - Newspatrolling.com",
+       "url": "https://newspatrolling.com/ai-as-the-co-pilot-in-modern-supply-chains/",
+       "publisher": "newspatrolling.com",
+       "published_at": "2026-04-29T10:08:49",
+       "lede": "ai's role in supply chains is rapidly changing, from automation to intelligent augmentation. today, generative ai is starting to act as a “co-pilot” that supports human decision-making, not replaces it. ai copilots are enabling faster, data-driven decision-making across logistics, fleet management, and operations, using natural language interfaces and real-time analytics.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.89,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.68
+        },
+        {
+         "code": 57,
+         "path": "/Business & Industrial/Business Operations/Management",
+         "score": 0.57
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a69665cefb83fe8ff0b54",
+       "headline": "Generative AI raises cyber risk in machine learning",
+       "url": "https://cfotech.co.uk/story/generative-ai-raises-cyber-risk-in-machine-learning",
+       "publisher": "cfotech.co.uk",
+       "published_at": "2026-04-29T08:00:00",
+       "lede": "heriot-watt university has published research warning that businesses using generative ai in machine learning systems could increase their exposure to cyber-attacks, data breaches and bias. the study was led by professor michael lones of the university's school of mathematical and computer sciences. the paper examines how generative ai is being",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.89
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cfbe399b489398e2d087",
+       "headline": "Generative AI raises cyber risk in machine learning",
+       "url": "https://itbrief.co.uk/story/generative-ai-raises-cyber-risk-in-machine-learning",
+       "publisher": "itbrief.co.uk",
+       "published_at": "2026-04-29T08:00:00",
+       "lede": "heriot-watt university has published research warning that businesses using generative ai in machine learning systems could increase their exposure to cyber-attacks, data breaches and bias. the study was led by professor michael lones of the university's school of mathematical and computer sciences. the paper examines how generative ai is being",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.89
+        }
+       ],
+       "country": "france",
+       "organizations": [
+        "bias",
+        "heriot-watt university"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a98ccc37f6c5e66d5d7b5",
+       "headline": "CGI announces new Artificial Intelligence Center of Excellence in Portugal",
+       "url": "http://www.cgi.com/en/cgi-announces-new-artificial-intelligence-center-excellence-portugal",
+       "publisher": "cgi.com",
+       "published_at": "2026-04-28T08:00:00",
+       "lede": "lisbon, cgi (tsx: gib.a) (nyse: gib), one of the world’s largest independent it and business consulting services firms, today announced the creation of an artificial intelligence (ai) center of excellence in portugal. the center will focus on agentic ai and generative ai, enabling clients to advance digital transformation and achieve",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.6
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        },
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e3f4d325610894208723",
+       "headline": "CGI announces new Artificial Intelligence Center of Excellence in Portugal",
+       "url": "https://www.cgi.com/en/cgi-announces-new-artificial-intelligence-center-excellence-portugal",
+       "publisher": "cgi.com",
+       "published_at": "2026-04-28T08:00:00",
+       "lede": "lisbon, cgi (tsx: gib.a) (nyse: gib), one of the world’s largest independent it and business consulting services firms, today announced the creation of an artificial intelligence (ai) center of excellence in portugal. the center will focus on agentic ai and generative ai, enabling clients to advance digital transformation and achieve",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.6
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.43
+        },
+        {
+         "code": 34,
+         "path": "/Computers & Electronics/Software/Business & Productivity Software",
+         "score": 0.41
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "cgi"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f9da3e7b2d589e844eef20",
+       "headline": "Ontinue's Latest Threat Intelligence Report",
+       "url": "https://www.manufacturing.net/cybersecurity/news/22965624/ontinues-latest-threat-intelligence-report",
+       "publisher": "manufacturing.net",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "ontinue recently released their latest threat intelligence report, and the findings paint a troubling picture: ransomware attacks continue to surge. threat actors are beginning to leverage generative ai to accelerate malware development. growing risks from supply chain compromises. identity-based attacks, including password spraying and aitm phishing, are now the leading",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.78
+        },
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "supply chain"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f881e643843dd771cf5a1e",
+       "headline": "Stolen Credentials Surge as More Cybercriminals are Logging In vs. Breaking In",
+       "url": "https://inddist.com/business-technology/article/22965614/stolen-credentials-surge-as-more-cybercriminals-are-logging-in-vs-breaking-in",
+       "publisher": "inddist.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "ontinue recently released their latest threat intelligence report, and the findings paint a troubling picture: ransomware attacks continue to surge. threat actors are beginning to leverage generative ai to accelerate malware development. growing risks from supply chain compromises. identity-based attacks, including password spraying and aitm phishing, are now the leading",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 62,
+         "path": "/Computers & Electronics/Computer Security/Network Security",
+         "score": 0.9
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "ontinue",
+        "supply chain"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c8fea5706a322e100ea1",
+       "headline": "Enterprises need to think beyond GPUs for agentic AI, analysts say",
+       "url": "https://www.computerworld.com/article/4164488/enterprises-need-to-think-beyond-gpus-for-agentic-ai-analysts-say.html",
+       "publisher": "computerworld.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "the ongoing shift from generative ai (genai) to agentic ai provides an opportunity for enterprises to move to more nimble and less expensive forms of computing, according to analysts. early ai models were largely built on expensive gpus from nvidia and amd that offered raw processing power. but newer agentic",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.8,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.85
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.75
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.58
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "nvidia"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e711836d28f995cba2b4",
+       "headline": "IIM Nagpur, TimesPro announce inaugural batch of PG Certificate Programme in AI & GEN AI for Managers - Up18 News",
+       "url": "https://up18news.com/iim-nagpur-timespro-announce-inaugural-batch-of-pg-certificate-program-in-ai-gen-ai-for-managers/",
+       "publisher": "up18news.com",
+       "published_at": "2026-04-27T18:12:06",
+       "lede": "the eight-month executive programme is designed to help managers apply ai and generative ai with strategic intent, business relevance and responsible leadership nagpur (maharashtra) [india], april 27: as artificial intelligence and generative ai begin to shape not only technology functions but the broader direction of business, organisations are seeking managers",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 57,
+         "path": "/Business & Industrial/Business Operations/Management",
+         "score": 0.75
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.55
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0ea3ad32561089420e7fa",
+       "headline": "Why Latin America has an opportunity in the era of computing",
+       "url": "https://contxto.com/en/tecnologia/why-latin-america-has-an-opportunity-in-the-era-of-computing/",
+       "publisher": "contxto.com",
+       "published_at": "2026-04-27T15:12:05",
+       "lede": "while the world is discussing whether generative ai is reaching its limit, in the labs of the united states, japan, germany, and china there is a new technological race emerging: quantum computing. the quantum industry is just starting to define how it will be commercially deployed. for the giants of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.44
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "quantum computing"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e9fd1e540a46fb541d319",
+       "headline": "IIM Nagpur, TimesPro announce inaugural batch of PG Certificate Programme in AI & GEN AI for Managers - The Tribune",
+       "url": "https://www.tribuneindia.com/news/business/iim-nagpur-timespro-announce-inaugural-batch-of-pg-certificate-programme-in-ai-gen-ai-for-managers-2-2",
+       "publisher": "tribuneindia.com",
+       "published_at": "2026-04-27T11:40:04",
+       "lede": "the eight-month executive programme is designed to help managers apply ai and generative ai with strategic intent, business relevance and responsible leadership nagpur (maharashtra) [india], april 27: as artificial intelligence and generative ai begin to shape not only technology functions but the broader direction of business, organisations are seeking managers",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 57,
+         "path": "/Business & Industrial/Business Operations/Management",
+         "score": 0.73
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.56
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0ebe81285a58da6f3a8cbe",
+       "headline": "Generative AI in 2026: Is the \"Cloud-First\" Era for Inference Coming to an End?",
+       "url": "https://www.linkedin.com/pulse/generative-ai-2026-cloud-first-era-inference-coming-end-robalinho-o6fhf",
+       "publisher": "linkedin.com",
+       "published_at": "2026-04-27T11:00:01",
+       "lede": "the experimentation phase of generative ai is officially behind us. in 2026, the conversation has shifted: it’s no longer about whether ai works, but how to scale it in a way that is both sustainable and financially viable. a recent study from lenovo press on the total cost of ownership",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 11,
+         "path": "/Finance/Investing/Currencies & Foreign Exchange",
+         "score": 0.48
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.45
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 2395,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNiAwNjo0MDo0MiIsImkiOiI2YTJhNWMwZDk2M2Q3NmY0YWZiY2U5M2EiLCJwIjo4fQ",
+     "unresolved": 9,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.429,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "9 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.442
+    }
+   }
+  }
+ ]
+}

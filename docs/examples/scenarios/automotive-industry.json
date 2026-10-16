@@ -1,0 +1,774 @@
+{
+ "slug": "automotive-industry",
+ "segment": "industry-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:51:14Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "auto industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "auto industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1378,
+     "tone": {
+      "carrying": 1378,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 592,
+        "share_pct": 42.96
+       },
+       {
+        "group": "neutral",
+        "count": 11,
+        "share_pct": 0.8
+       },
+       {
+        "group": "positive",
+        "count": 775,
+        "share_pct": 56.24
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1378,
+      "count": 836,
+      "share_pct": 60.67
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.772,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.776
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "auto industry",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "auto industry",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 294,
+       "critical": 175,
+       "critical_pct": 59.5,
+       "negative": 165,
+       "positive": 128,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 276,
+       "critical": 197,
+       "critical_pct": 71.4,
+       "negative": 173,
+       "positive": 100,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 401,
+       "critical": 217,
+       "critical_pct": 54.1,
+       "negative": 210,
+       "positive": 187,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 417,
+       "critical": 234,
+       "critical_pct": 56.1,
+       "negative": 231,
+       "positive": 185,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 343,
+       "critical": 194,
+       "critical_pct": 56.6,
+       "negative": 141,
+       "positive": 201,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 296,
+       "critical": 203,
+       "critical_pct": 68.6,
+       "negative": 120,
+       "positive": 163,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 181,
+       "critical": 117,
+       "critical_pct": 64.6,
+       "negative": 86,
+       "positive": 92,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 255,
+       "critical": 186,
+       "critical_pct": 72.9,
+       "negative": 132,
+       "positive": 121,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 307,
+       "critical": 220,
+       "critical_pct": 71.7,
+       "negative": 155,
+       "positive": 147,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 421,
+       "critical": 250,
+       "critical_pct": 59.4,
+       "negative": 157,
+       "positive": 263,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 250,
+       "critical": 139,
+       "critical_pct": 55.6,
+       "negative": 108,
+       "positive": 138,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 400,
+       "critical": 227,
+       "critical_pct": 56.8,
+       "negative": 172,
+       "positive": 227,
+       "partial_period": false
+      }
+     ],
+     "total": 3841,
+     "critical_total": 2359,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.328,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.331
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "auto industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "auto industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1378,
+     "carrying": 802,
+     "availability_pct": 58.2,
+     "items": [
+      {
+       "country": "united states",
+       "count": 377,
+       "share_pct": 27.36
+      },
+      {
+       "country": "india",
+       "count": 165,
+       "share_pct": 11.97
+      },
+      {
+       "country": "china",
+       "count": 93,
+       "share_pct": 6.75
+      },
+      {
+       "country": "japan",
+       "count": 33,
+       "share_pct": 2.39
+      },
+      {
+       "country": "canada",
+       "count": 25,
+       "share_pct": 1.81
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 109
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.812,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.815
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "auto industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "auto industry",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "automotive industry market trends",
+       "count": 158,
+       "share": 20.33,
+       "lift": 829.96,
+       "baseline_count": 2,
+       "previous_period_count": 84,
+       "delta_pct": 88.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "electric vehicle (ev) technology",
+       "count": 148,
+       "share": 19.05,
+       "lift": 777.43,
+       "baseline_count": 2,
+       "previous_period_count": 107,
+       "delta_pct": 38.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "automotive industry sustainability initiatives",
+       "count": 74,
+       "share": 9.52,
+       "lift": 777.43,
+       "baseline_count": 1,
+       "previous_period_count": 47,
+       "delta_pct": 57.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "electric vehicle charging infrastructure",
+       "count": 92,
+       "share": 11.84,
+       "lift": 483.27,
+       "baseline_count": 2,
+       "previous_period_count": 74,
+       "delta_pct": 24.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "automotive industry mergers and acquisitions",
+       "count": 41,
+       "share": 5.28,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 25,
+       "delta_pct": 64.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1378,
+     "carrying": 777,
+     "carrier_share_pct": 56.39,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.078,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.08
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "auto industry",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "auto industry",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e867339baafc73567ef8f7",
+       "headline": "SAIC Motor in EL PAÍS English",
+       "url": "https://english.elpais.com/news/shanghai-automotive-industry-corporation/",
+       "publisher": "english.elpais.com",
+       "published_at": "2026-04-19T04:00:00",
+       "lede": "automakers endured a disastrous 2025, marked by steep profit declines and multibillion‑dollar losses, with chinese manufacturers standing as the only exception. the outlook points to a tough 2026. economy the auto industry’s ‘annus horribilis’: trump’s tariffs, chinese rivals and ev slowdown drag the sector into heavy losses manu granda |",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.84
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.59
+        }
+       ],
+       "country": "spain",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c810bd4f0576bfb6578594",
+       "headline": "Jeep devises new batch of bold concepts for Moab adventures",
+       "url": "https://www.autonews.com/stellantis/an-easter-jeep-safari-0326/",
+       "publisher": "autonews.com",
+       "published_at": "2026-03-26T13:00:00",
+       "lede": "regulation & safety 6 years of crisis have worn down automakers. now oil prices threaten more upheaval oil prices above $100 per barrel follow six years of pandemic disruption, semiconductor shortages, tariffs, cyberattacks and policy chaos that have exhausted auto industry executives. mb by molly boigon sales q1 auto sales",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.57
+        }
+       ],
+       "country": "iran",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a99e8963d76f4afe5371c",
+       "headline": "Another Biggie Pulls to the Side as EV Startups Forge Ahead",
+       "url": "http://brandequity.economictimes.indiatimes.com/news/business-of-brands/another-biggie-pulls-to-the-side-as-ev-startups-forge-ahead/129572241",
+       "publisher": "brandequity.economictimes.indiatimes.com",
+       "published_at": "2026-03-14T16:00:00",
+       "lede": "a slew of announcements this week provided further evidence of a widening divide in the auto industry between traditional companies that are backtracking on electric vehicles and startups pushing ahead with models that cost less and charge faster.honda said on thursday that it would scrap plans for three electric models",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 63,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Type)/Hybrid & Alternative Vehicles",
+         "score": 0.82
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.7
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6985eb129438ce100b147245",
+       "headline": "After Letting China In, Canada Hopes Korea Comes Too | Carscoops",
+       "url": "https://www.carscoops.com/2026/01/after-letting-china-in-canada-hopes-korea-comes-too/",
+       "publisher": "carscoops.com",
+       "published_at": "2026-01-30T23:32:00",
+       "lede": "canada continues to make efforts to bolster its auto industry amid trade tensions with the united stateshyundai is bidding to build 12 submarines for canada.canada may link the deal to local korean car production.korea accounts for 12 percent of car sales in the country.just two weeks after announcing a major",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.57
+        },
+        {
+         "code": 120,
+         "path": "/Business & Industrial/Shipping & Logistics/Import & Export",
+         "score": 0.52
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "698e247a8d29a990b6e3cba7",
+       "headline": "Hyundai shares take a hit after Trump threatens further hike in tariffs on S Korean auto, pharma industries - CNBC TV18",
+       "url": "https://www.cnbctv18.com/market/hyundai-shares-take-a-hit-after-trump-threatens-further-hike-in-tariffs-on-s-korean-auto-pharma-industries-19833535.htm",
+       "publisher": "cnbctv18.com",
+       "published_at": "2026-01-27T01:11:13",
+       "lede": "the shares of one of the biggest names in south korean business and one of the known forces in the auto industry, hyundai, dropped significantly on tuesday. this development came to pass after the us president, in yet another jolt to global trade, threatened to raise tariffs on south korean",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.56
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e287429b322e6b3e988997",
+       "headline": "Back in Michigan, President Trump Celebrates Auto Industry, Economic Revival",
+       "url": "https://www.whitehouse.gov/releases/2026/01/back-in-michigan-president-trump-celebrates-auto-industry-economic-revival/",
+       "publisher": "whitehouse.gov",
+       "published_at": "2026-01-13T22:23:33",
+       "lede": "releases back in michigan, president trump celebrates auto industry, economic revival today, president donald j. trump returned to michigan to underscore the progress made in revitalizing our economy, celebrate the resurgence of the american auto industry, and chart the path forward to deliver continued relief to american families. president trump",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cff0a5706a322e136932",
+       "headline": "NXP Rallies After Stronger Auto Market Bolsters Forecast (2)",
+       "url": "https://news.bloomberglaw.com/international-trade/nxp-rallies-after-stronger-automotive-market-bolsters-forecast",
+       "publisher": "news.bloomberglaw.com",
+       "published_at": "2026-04-29T07:57:50",
+       "lede": "nxp semiconductors nv jumped in late trading after giving an upbeat revenue forecast, a sign the chipmaker is bouncing back from a prolonged auto industry slump and tariff uncertainties. revenue in the second quarter will be $3.35 billion to $3.55 billion, the dutch company said in a statement on tuesday.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.62,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.73
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.48
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "nxp semiconductors",
+        "nxp semiconductors"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a040eca220687a966ae1953",
+       "headline": "Kia CEO signals price cuts in Europe to counter Chinese competition",
+       "url": "https://www.sowetanlive.co.za/motoring/2026-04-28-kia-ceo-signals-price-cuts-in-europe-to-counter-chinese-competition/",
+       "publisher": "sowetanlive.co.za",
+       "published_at": "2026-04-28T13:25:06",
+       "lede": "share current article via email share current article via facebook share current article via twitter share current article via linkedin kia ceo song ho-sung anticipates the restructuring in china's auto industry would arrive earlier than expected. south korea’s kia corp has reduced price gaps with chinese rivals in europe this",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 573,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Kia",
+         "score": 0.7
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.67
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2abcaa963d76f4affcd72d",
+       "headline": "Kia CEO signals price cuts in Europe to counter Chinese competition",
+       "url": "https://businesslive.co.za/motoring/2026-04-27-kia-ceo-signals-price-cuts-in-europe-to-counter-chinese-competition/",
+       "publisher": "businesslive.co.za",
+       "published_at": "2026-04-27T08:15:00",
+       "lede": "share current article via email share current article via facebook share current article via twitter share current article via linkedin kia ceo song ho-sung anticipates the restructuring in china's auto industry would arrive earlier than expected. south korea’s kia corp has reduced price gaps with chinese rivals in europe this",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 573,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Kia",
+         "score": 0.7
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.67
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 9,
+     "total_estimate": 68,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAwODoxNTowMCIsImkiOiI2OWYxYzZiMWE1NzA2YTMyMmUwZWFlOWEiLCJwIjo3fQ",
+     "unresolved": 16,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 11.481,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "16 requested article(s) are unavailable"
+     ],
+     "request_seconds": 11.483
+    }
+   }
+  }
+ ]
+}

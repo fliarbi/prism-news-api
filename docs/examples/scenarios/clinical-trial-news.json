@@ -1,0 +1,1035 @@
+{
+ "slug": "clinical-trial-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:41Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "clinical trial",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "clinical trial",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12198,
+     "tone": {
+      "carrying": 12162,
+      "availability_pct": 99.7,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1249,
+        "share_pct": 10.27
+       },
+       {
+        "group": "neutral",
+        "count": 298,
+        "share_pct": 2.45
+       },
+       {
+        "group": "positive",
+        "count": 10615,
+        "share_pct": 87.28
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 12197,
+      "count": 10719,
+      "share_pct": 87.88
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.782,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.785
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "clinical trial",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "clinical trial",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2539,
+       "critical": 2241,
+       "critical_pct": 88.3,
+       "negative": 255,
+       "positive": 2203,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2183,
+       "critical": 1908,
+       "critical_pct": 87.4,
+       "negative": 200,
+       "positive": 1915,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2302,
+       "critical": 2000,
+       "critical_pct": 86.9,
+       "negative": 273,
+       "positive": 1955,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 2345,
+       "critical": 2062,
+       "critical_pct": 87.9,
+       "negative": 250,
+       "positive": 2043,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2497,
+       "critical": 2205,
+       "critical_pct": 88.3,
+       "negative": 265,
+       "positive": 2162,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 2631,
+       "critical": 2356,
+       "critical_pct": 89.5,
+       "negative": 235,
+       "positive": 2301,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 2782,
+       "critical": 2545,
+       "critical_pct": 91.5,
+       "negative": 274,
+       "positive": 2420,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 3329,
+       "critical": 3018,
+       "critical_pct": 90.7,
+       "negative": 342,
+       "positive": 2878,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3620,
+       "critical": 3209,
+       "critical_pct": 88.6,
+       "negative": 295,
+       "positive": 3190,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 2598,
+       "critical": 2185,
+       "critical_pct": 84.1,
+       "negative": 318,
+       "positive": 2228,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 2788,
+       "critical": 2459,
+       "critical_pct": 88.2,
+       "negative": 293,
+       "positive": 2423,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 3192,
+       "critical": 2866,
+       "critical_pct": 89.8,
+       "negative": 343,
+       "positive": 2774,
+       "partial_period": false
+      }
+     ],
+     "total": 32806,
+     "critical_total": 29054,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.941,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.947
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "clinical trial",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "clinical trial",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 12198,
+     "carrying": 2675,
+     "availability_pct": 21.93,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1543,
+       "share_pct": 12.65
+      },
+      {
+       "country": "united kingdom",
+       "count": 206,
+       "share_pct": 1.69
+      },
+      {
+       "country": "china",
+       "count": 182,
+       "share_pct": 1.49
+      },
+      {
+       "country": "india",
+       "count": 93,
+       "share_pct": 0.76
+      },
+      {
+       "country": "canada",
+       "count": 87,
+       "share_pct": 0.71
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 564
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.257,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.261
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "clinical trial",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "clinical trial",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "oncology and targeted therapy advancements",
+       "count": 921,
+       "share": 11.75,
+       "lift": 959.56,
+       "baseline_count": 1,
+       "previous_period_count": 778,
+       "delta_pct": 18.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "clinical trials and regulatory approvals",
+       "count": 730,
+       "share": 9.32,
+       "lift": 760.56,
+       "baseline_count": 1,
+       "previous_period_count": 531,
+       "delta_pct": 37.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "clinical trial methodologies",
+       "count": 595,
+       "share": 7.59,
+       "lift": 619.91,
+       "baseline_count": 1,
+       "previous_period_count": 468,
+       "delta_pct": 27.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "rare disease therapies and orphan drugs",
+       "count": 557,
+       "share": 7.11,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 487,
+       "delta_pct": 14.4,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "gene therapy and crispr technologies",
+       "count": 466,
+       "share": 5.95,
+       "lift": 485.51,
+       "baseline_count": 1,
+       "previous_period_count": 352,
+       "delta_pct": 32.4,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 12198,
+     "carrying": 7835,
+     "carrier_share_pct": 64.23,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.963,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.967
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "clinical trial",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "clinical trial",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f9dae57b2d589e844f6616",
+       "headline": "Eliminating animal products reshapes metabolic health and environmental impact",
+       "url": "https://news-medical.net/news/20260430/Eliminating-animal-products-reshapes-metabolic-health-and-environmental-impact.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-30T20:20:00",
+       "lede": "a new randomized clinical trial provides some of the clearest evidence to date that what we eat can meaningfully reshape both human health and the health of the planet. researchers found that a low-fat vegan diet reduced food-related greenhouse gas emissions by 57%-nearly three times more than a mediterranean diet-while",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.79,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 136,
+         "path": "/Food & Drink/Cooking & Recipes/Cuisines",
+         "score": 0.61
+        },
+        {
+         "code": 415,
+         "path": "/Health/Nutrition/Special & Restricted Diets",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a7d58937ef12fc0aebd9",
+       "headline": "Eliminating animal products reshapes metabolic health and environmental impact",
+       "url": "https://www.news-medical.net/news/20260430/Eliminating-animal-products-reshapes-metabolic-health-and-environmental-impact.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-30T20:20:00",
+       "lede": "a new randomized clinical trial provides some of the clearest evidence to date that what we eat can meaningfully reshape both human health and the health of the planet. researchers found that a low-fat vegan diet reduced food-related greenhouse gas emissions by 57%-nearly three times more than a mediterranean diet-while",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.79,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 136,
+         "path": "/Food & Drink/Cooking & Recipes/Cuisines",
+         "score": 0.61
+        },
+        {
+         "code": 415,
+         "path": "/Health/Nutrition/Special & Restricted Diets",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8809abbf1d31455965ed2",
+       "headline": "EnGeneIC Announces First Patient Dosed in Recurrent Glioblastoma Clinical Trial",
+       "url": "https://www.nationaltribune.com.au/engeneic-announces-first-patient-dosed-in-recurrent-glioblastoma-clinical-trial/",
+       "publisher": "nationaltribune.com.au",
+       "published_at": "2026-04-30T19:18:26",
+       "lede": "sydney, may 01, 2026 (globe newswire) — engeneic limited today announced that the first patient has been dosed in its clinical trial evaluating engeneic’s investigational egfr-targeted edv™ (engeneic dream vector) therapy in patients with recurrent glioblastoma multiforme (gbm), an aggressive and currently incurable form of brain cancer. the trial is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.72,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.77
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.56
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.54
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "engeneic",
+        "gbm"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2eeb3483fc01faba64a361",
+       "headline": "Sydney Towle Celebrates Successful Tumor Removal with Wand and Tiara in Her Hospital Bed",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/sydney-towle-celebrates-successful-tumor-141731192.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-30T14:17:31",
+       "lede": "need to know sydney towle shared an update on tiktok after undergoing surgery to remove one of her tumors as part of a clinical trial to target her cholangiocarcinoma the trial involves growing immune cells from her tumor in a lab to potentially create a treatment within two months the",
+       "sentiment": {
+        "label": "extreme_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.84
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f885d2bbf1d3145599827d",
+       "headline": "First patients enrolled in HistoSonics WOLVERINE clinical trial - Interventional News",
+       "url": "https://interventionalnews.com/first-patients-enrolled-in-histosonics-wolverine-clinical-trial/",
+       "publisher": "interventionalnews.com",
+       "published_at": "2026-04-30T04:59:31",
+       "lede": "the first participants have been enrolled in a clinical trial to test focused ultrasound histotripsy for the treatment of symptomatic benign prostatic hyperplasia (bph). the research study, called wolverine, is exploring the safety and feasibility of using the histosonics edison histotripsy system to treat symptomatic bph. the first of 20",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.46,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 658,
+         "path": "/Health/Men's Health",
+         "score": 0.65
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.46
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "histosonics"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a50b7963d76f4afb4b766",
+       "headline": "Precision BioSciences Activates First Clinical Trial Site and Begins Patient Enrollment in Phase 1/2 FUNCTION-DMD Study",
+       "url": "https://www.biospace.com/press-releases/precision-biosciences-activates-first-clinical-trial-site-and-begins-patient-enrollment-in-phase-1-2-function-dmd-study",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-29T15:15:20",
+       "lede": "- arkansas children’s hospital activated as the first clinical trial site and now enrolling patients in the function-dmd study of pbgene-dmd - durham, n.c.--(business wire)--precision biosciences, inc. (nasdaq: dtil), a clinical stage gene editing company utilizing its novel proprietary arcus® platform to develop in vivo gene editing therapies for high",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.94,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.46
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec847e540a46fb566cc4a",
+       "headline": "Rein Therapeutics Provides Clinical Trial Update for Phase 2 RENEW Study of LTI-03 in Idiopathic Pulmonary Fibrosis",
+       "url": "https://www.biospace.com/press-releases/rein-therapeutics-provides-clinical-trial-update-for-phase-2-renew-study-of-lti-03-in-idiopathic-pulmonary-fibrosis",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-29T13:24:05",
+       "lede": "patient enrollment accelerates across expanding number of clinical trial sites in multiple countries 8 patients enrolled, with additional patients expected in the near term enrollment initiated in march 2026, with patients being added on a regular basis clinical trial sites active in the united states, australia, and poland, with additional",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.62
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22f2ec6105443aa5e7cbb",
+       "headline": "Argo Biopharma begins dosing for Phase I BW-50218 trial",
+       "url": "https://www.clinicaltrialsarena.com/news/argo-biopharma-begins-dosing-bw50218-trial/",
+       "publisher": "clinicaltrialsarena.com",
+       "published_at": "2026-04-29T10:19:33",
+       "lede": "the trial will evaluate the safety and biological activity markers to inform bw-50218’s pharmacological profile. credit: peopleimages / shutterstock.com. argo biopharmaceutical (argo biopharma) has dosed the first subject in its phase i clinical trial assessing bw-50218, a small-interfering ribonucleic acid (sirna) therapeutic targeting the transthyretin (ttr) protein. the study is",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.74
+        }
+       ],
+       "country": "australia",
+       "organizations": [
+        "biopharma",
+        "ttr"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a03fd369c4aac09353bb454",
+       "headline": "DURHAM, N.C. — Precision BioSciences, Inc. (Nasdaq: DTIL), a clinical stage gene editing company utilizing its novel proprietary ARCUS® platform to develop in vivo gene editing therapies for high unmet need diseases, today announced the activation of the first clinical trial site and the opening of ",
+       "url": "https://checkorphan.org/news/precision-biosciences-launches-first-clinical-trial-site-and-patient-enrollment-for-pbgene-dmd-gene-editing-therapy-in-duchenne-muscular-dystrophy/",
+       "publisher": "checkorphan.org",
+       "published_at": "2026-04-29T00:00:00",
+       "lede": "durham, n.c. — precision biosciences, inc. (nasdaq: dtil), a clinical stage gene editing company utilizing its novel proprietary arcus® platform to develop in vivo gene editing therapies for high unmet need diseases, today announced the activation of the first clinical trial site and the opening of patient screening and enrollment",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.87,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8808ebbf1d31455965729",
+       "headline": "AI Model Boosts Pulmonary Nodule Diagnosis",
+       "url": "https://www.emjreviews.com/respiratory/news/ai-model-boosts-pulmonary-nodule-diagnosis/",
+       "publisher": "emjreviews.com",
+       "published_at": "2026-04-28T14:08:33",
+       "lede": "pulmonary nodule assessment on ct scans is evolving as artificial intelligence tools demonstrate measurable improvements in diagnostic performance, according to a recent multi-reader, multi-case clinical trial evaluating a transformer-based model known as deepfan. pulmonary nodule diagnosis improved with ai the increasing use of ct imaging has led to a surge",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.58
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.57
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.43
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ad1e35cefb83fe8448eed",
+       "headline": "Updated: FDA claims trial 'manipulation' tainted approval of ChemoCentryx drug now owned by Amgen",
+       "url": "https://endpoints.news/fda-claims-trial-manipulation-tainted-approval-of-chemocentryx-drug/",
+       "publisher": "endpoints.news",
+       "published_at": "2026-04-28T13:09:24",
+       "lede": "the fda accused chemocentryx of manipulating the results of a pivotal clinical trial used to approve the drug tavneos, escalating the agency’s effort to pull the treatment from the market. “new information shows that the applicant’s unblinded study personnel manipulated endpoint results for the phase 3 study,” the fda said",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.77
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ce4c399b489398e1d610",
+       "headline": "FDA starts review of new lung cancer drug, decision due Feb. 2027",
+       "url": "https://www.stocktitan.net/news/CGEM/u-s-food-and-drug-administration-accepts-new-drug-application-for-o7dz8md64r08.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-04-28T11:00:00",
+       "lede": "nda submission based on the phase 2b rezilient1 clinical trial, which demonstrated clinically meaningful and durable responses in patients with relapsed egfr exon 20 insertion–mutated nsclc prescription drug user fee act (pdufa) target action date is february 27, 2027 princeton, n.j. & tokyo & cambridge, mass. --(business wire)-- taiho oncology,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.88
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.7
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.59
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c91f1e3933a6dd8ed942",
+       "headline": "AI Skin Cancer Apps: Do They Work?",
+       "url": "https://www.visionmonday.com/eyecare/health-watch/article/ai-skin-cancer-apps-do-they-work/",
+       "publisher": "visionmonday.com",
+       "published_at": "2026-04-28T07:59:00",
+       "lede": "eyecare: health watch ai skin cancer apps: do they work? staff by an ai-based skin assessment app may drive up healthcare visits for benign lesions, with unclear benefits for skin cancer detection, a dutch clinical trial has found. the trial, of nearly 20,000 patients in one health insurance plan, found",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.34,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 393,
+         "path": "/Health/Health Conditions/Skin Conditions",
+         "score": 0.63
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.61
+        },
+        {
+         "code": 72,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons",
+         "score": 0.46
+        }
+       ],
+       "country": "czech republic",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d5387b2d589e844b5df3",
+       "headline": "New cord blood approach boosts survival in blood disease patients",
+       "url": "https://news-medical.net/news/20260427/New-cord-blood-approach-boosts-survival-in-blood-disease-patients.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-28T02:42:00",
+       "lede": "a new way of using umbilical cord blood for treating blood diseases could make the treatment more accessible to patients who need a stem cell transplant. a phase 2 clinical trial of patients undergoing a cord blood transplant plus a stem cell product derived from pooled cord blood units showed",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.84
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.71
+        }
+       ],
+       "country": "italy",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e72ed32561089420bd09",
+       "headline": "New cord blood approach boosts survival in blood disease patients",
+       "url": "https://www.news-medical.net/news/20260427/New-cord-blood-approach-boosts-survival-in-blood-disease-patients.aspx",
+       "publisher": "news-medical.net",
+       "published_at": "2026-04-28T02:42:00",
+       "lede": "a new way of using umbilical cord blood for treating blood diseases could make the treatment more accessible to patients who need a stem cell transplant. a phase 2 clinical trial of patients undergoing a cord blood transplant plus a stem cell product derived from pooled cord blood units showed",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.84
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.71
+        }
+       ],
+       "country": "italy",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22a03122c4392e0cf9366",
+       "headline": "AI Skin Cancer Apps: Do They Work?",
+       "url": "https://www.medscape.com/viewarticle/ai-skin-cancer-apps-do-they-work-2026a1000dgl",
+       "publisher": "medscape.com",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "an ai-based skin assessment app may drive up healthcare visits for benign lesions, with unclear benefits for skin cancer detection, a dutch clinical trial has found. the trial, of nearly 20,000 patients in one health insurance plan, found that those given free access to the app were no more likely",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 393,
+         "path": "/Health/Health Conditions/Skin Conditions",
+         "score": 0.74
+        },
+        {
+         "code": 72,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons",
+         "score": 0.66
+        }
+       ],
+       "country": "czech republic",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "14ac6bbfeeadb4bc31cba8e7",
+       "headline": "Tiragolumab Plus Atezolizumab and Chemotherapy for Advanced Nonsquamous Non-Small Cell Lung Cancer: The Phase 3 SKYSCRAPER-06 Randomized Clinical Trial.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42060297/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "tiragolumab plus atezolizumab and chemotherapy for advanced nonsquamous non-small cell lung cancer: the phase 3 skyscraper-06 randomized clinical trial.importance: programmed cell death 1 ligand 1/programmed cell death protein 1 inhibitors, with or without chemotherapy, are standard first-line treatment for patients with advanced non-small cell lung cancer (nsclc); however, survival benefit",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.58,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.96
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.83
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b0f145cefb83fe86f1dec",
+       "headline": "Sagimet Biosciences Provides Strategic and Corporate Updates",
+       "url": "https://www.biospace.com/press-releases/sagimet-biosciences-provides-strategic-and-corporate-updates",
+       "publisher": "biospace.com",
+       "published_at": "2026-04-27T14:13:52",
+       "lede": "phase 3 clinical trial of denifanstat in moderate to severe acne patients for the u.s. planned to initiate in second half of 2026 first-in-human phase 1 clinical trial of fasn inhibitor tvb-3567 ongoing further mash development to be undertaken only upon securing non-dilutive funding sagimet to host a kol event",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.88
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 1540,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAxNDoxMzo1MiIsImkiOiI2YTJiMGYxNDVjZWZiODNmZTg2ZjFkZWMiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.614,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.619
+    }
+   }
+  }
+ ]
+}

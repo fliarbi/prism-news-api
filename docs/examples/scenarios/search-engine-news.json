@@ -1,0 +1,857 @@
+{
+ "slug": "search-engine-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:13:30Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "search engine",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "search engine",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2229,
+     "tone": {
+      "carrying": 2229,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 258,
+        "share_pct": 11.57
+       },
+       {
+        "group": "neutral",
+        "count": 98,
+        "share_pct": 4.4
+       },
+       {
+        "group": "positive",
+        "count": 1873,
+        "share_pct": 84.03
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2228,
+      "count": 755,
+      "share_pct": 33.89
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.764,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.803
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "search engine",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "search engine",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 589,
+       "critical": 279,
+       "critical_pct": 47.4,
+       "negative": 139,
+       "positive": 438,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 418,
+       "critical": 188,
+       "critical_pct": 45.0,
+       "negative": 113,
+       "positive": 287,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 548,
+       "critical": 179,
+       "critical_pct": 32.7,
+       "negative": 65,
+       "positive": 476,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 638,
+       "critical": 276,
+       "critical_pct": 43.3,
+       "negative": 175,
+       "positive": 457,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 587,
+       "critical": 254,
+       "critical_pct": 43.3,
+       "negative": 144,
+       "positive": 439,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 393,
+       "critical": 148,
+       "critical_pct": 37.7,
+       "negative": 56,
+       "positive": 333,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 369,
+       "critical": 162,
+       "critical_pct": 43.9,
+       "negative": 62,
+       "positive": 304,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 374,
+       "critical": 108,
+       "critical_pct": 28.9,
+       "negative": 79,
+       "positive": 286,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 351,
+       "critical": 108,
+       "critical_pct": 30.8,
+       "negative": 52,
+       "positive": 246,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 358,
+       "critical": 131,
+       "critical_pct": 36.6,
+       "negative": 67,
+       "positive": 286,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 570,
+       "critical": 227,
+       "critical_pct": 39.8,
+       "negative": 58,
+       "positive": 494,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 950,
+       "critical": 289,
+       "critical_pct": 30.4,
+       "negative": 81,
+       "positive": 847,
+       "partial_period": false
+      }
+     ],
+     "total": 6145,
+     "critical_total": 2349,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.956,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.959
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "search engine",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "search engine",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2229,
+     "carrying": 483,
+     "availability_pct": 21.67,
+     "items": [
+      {
+       "country": "united states",
+       "count": 252,
+       "share_pct": 11.31
+      },
+      {
+       "country": "india",
+       "count": 43,
+       "share_pct": 1.93
+      },
+      {
+       "country": "united kingdom",
+       "count": 31,
+       "share_pct": 1.39
+      },
+      {
+       "country": "germany",
+       "count": 14,
+       "share_pct": 0.63
+      },
+      {
+       "country": "canada",
+       "count": 13,
+       "share_pct": 0.58
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 130
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.07,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.074
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "search engine",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "search engine",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "digital marketing strategies and trends",
+       "count": 45,
+       "share": 6.44,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 18,
+       "delta_pct": 150.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "search engine optimization (seo) techniques",
+       "count": 76,
+       "share": 10.87,
+       "lift": 295.85,
+       "baseline_count": 3,
+       "previous_period_count": 42,
+       "delta_pct": 81.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "content marketing and storytelling",
+       "count": 30,
+       "share": 4.29,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 10,
+       "delta_pct": 200.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "natural language processing models",
+       "count": 59,
+       "share": 8.44,
+       "lift": 229.67,
+       "baseline_count": 3,
+       "previous_period_count": 91,
+       "delta_pct": -35.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "semantic seo & latent semantic indexing (lsi)",
+       "count": 25,
+       "share": 3.58,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 39,
+       "delta_pct": -35.9,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2229,
+     "carrying": 699,
+     "carrier_share_pct": 31.36,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.318,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.321
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "search engine",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "search engine",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e8e0049baafc7356db84d5",
+       "headline": "Octen raises $10M in seed funding to speed up AI agent search queries - SiliconANGLE",
+       "url": "https://siliconangle.com/2026/04/22/octen-raises-10m-seed-funding-speed-ai-agent-search-queries/",
+       "publisher": "siliconangle.com",
+       "published_at": "2026-04-22T13:00:03",
+       "lede": "the company measured its search engine’s speed using a benchmark called sealqa hard. it comprises more than 200 multistep questions that require ai models to retrieve data from the web and use reasoning methods to analyze it. octen’s search api answered the questions with a median response time of 62",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.48,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 382,
+         "path": "/Internet & Telecom/Search Engines/Other",
+         "score": 0.58
+        }
+       ],
+       "country": "singapore",
+       "organizations": [
+        "api"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2a66745cefb83fe8fd5273",
+       "headline": "Google dita o fim da pesquisa tradicional e revela o que vai mudar no teu dia a dia | TugaTech",
+       "url": "https://tugatech.com.pt/t81728-google-dita-o-fim-da-pesquisa-tradicional-e-revela-o-que-vai-mudar-no-teu-dia-a-dia",
+       "publisher": "tugatech.com.pt",
+       "published_at": "2026-04-12T00:00:00",
+       "lede": "sundar pichai, ceo of google, revealed that the search engine will evolve to an agent manager, focused on completing complex tasks rather than just presenting results lists. in an hour-long conversation with patrick collison, the stripe ceo, shared through the interview video, the executive outlined a clear timeline for this",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c3c6d754bf662cde399f",
+       "headline": "Vous faites confiance à l'IA de Google ? Elle vous ment une fois sur dix",
+       "url": "https://www.frandroid.com/culture-tech/intelligence-artificielle/google-gemini/3056091_lia-de-google-produit-des-dizaines-de-millions-derreurs-chaque-heure",
+       "publisher": "frandroid.com",
+       "published_at": "2026-04-08T07:35:26",
+       "lede": "a new york times survey shows that ia summaries are crashing once in ten. it's massive. on billions of daily requests, this represents millions of false truths served on a silver platter by gemini. google wants to turn its search engine into a definitive answer machine. you must stay at",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c3a9047a949e1e10faac1a",
+       "headline": "Adapting to change: How SEO specialists can leverage Google's generative AI update",
+       "url": "https://www.itbrief.com.au/story/adapting-to-change-how-seo-specialists-can-leverage-google-s-generative-ai-update",
+       "publisher": "itbrief.com.au",
+       "published_at": "2026-03-20T02:30:00",
+       "lede": "the seo industry is abuzz with news of google's latest ai update, which sees the incorporation of google's generative ai into its search engine. this groundbreaking development promises to revolutionise how content is indexed and ranked (even though search engine result page rank will not matter anymore, in my opinion)",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 382,
+         "path": "/Internet & Telecom/Search Engines/Other",
+         "score": 0.61
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.46
+        },
+        {
+         "code": 430,
+         "path": "/Internet & Telecom/Web Services/Search Engine Optimization & Marketing",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a499f7c4e6f108e470b0",
+       "headline": "Adapting to change: How SEO specialists can leverage Google's generative AI update",
+       "url": "https://itbrief.co.uk/story/adapting-to-change-how-seo-specialists-can-leverage-google-s-generative-ai-update",
+       "publisher": "itbrief.co.uk",
+       "published_at": "2026-03-20T02:30:00",
+       "lede": "the seo industry is abuzz with news of google's latest ai update, which sees the incorporation of google's generative ai into its search engine. this groundbreaking development promises to revolutionise how content is indexed and ranked (even though search engine result page rank will not matter anymore, in my opinion)",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 382,
+         "path": "/Internet & Telecom/Search Engines/Other",
+         "score": 0.61
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.46
+        },
+        {
+         "code": 430,
+         "path": "/Internet & Telecom/Web Services/Search Engine Optimization & Marketing",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a47883f93681eafea6b9",
+       "headline": "Adapting to change: How SEO specialists can leverage Google's generative AI update",
+       "url": "https://itbrief.com.au/story/adapting-to-change-how-seo-specialists-can-leverage-google-s-generative-ai-update",
+       "publisher": "itbrief.com.au",
+       "published_at": "2026-03-20T02:30:00",
+       "lede": "the seo industry is abuzz with news of google's latest ai update, which sees the incorporation of google's generative ai into its search engine. this groundbreaking development promises to revolutionise how content is indexed and ranked (even though search engine result page rank will not matter anymore, in my opinion)",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 382,
+         "path": "/Internet & Telecom/Search Engines/Other",
+         "score": 0.61
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.46
+        },
+        {
+         "code": 430,
+         "path": "/Internet & Telecom/Web Services/Search Engine Optimization & Marketing",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69bc82b97b829b095253e865",
+       "headline": "Baidu’s Swift $11 Billion Selloff Shows Struggle to Meet AI Hype",
+       "url": "https://finance.yahoo.com/news/baidu-swift-11-billion-selloff-235019137.html",
+       "publisher": "finance.yahoo.com",
+       "published_at": "2026-02-26T03:26:23",
+       "lede": "a 20% slide in baidu inc.’s shares over the past month serves as a crucial reminder for companies in china’s rapidly intensifying artificial intelligence race: investors are demanding tangible results.the search engine specialist kicks off december-quarter earnings for china’s big tech on thursday, amid growing concern that its ai investments",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.64
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.6
+        },
+        {
+         "code": 55,
+         "path": "/Business & Industrial/Business Finance/Venture Capital",
+         "score": 0.46
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "baidu"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e280c5bd7b10565a320916",
+       "headline": "How we search internet is changing again as Google turns search into a conversation",
+       "url": "https://economictimes.indiatimes.com/magazines/panache/how-we-search-internet-is-changing-again-as-google-turns-search-into-a-conversation/articleshow/127700633.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-01-28T11:15:00",
+       "lede": "google is reshaping how people use its search engine, pushing users away from keyword-based queries and toward a more conversational, ai-led experience. google has announced an expansion of ai overviews, now powered by gemini 3, along with the addition of an ai chat window that allows users to ask follow-up",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.63
+        },
+        {
+         "code": 382,
+         "path": "/Internet & Telecom/Search Engines/Other",
+         "score": 0.47
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8b996bbf1d314559ad30e",
+       "headline": "BREAKING NEWS: 6 injured, including suspect, in stabbing at Foss High School in Tacoma",
+       "url": "https://ktvz.com/news/top-stories/2026/04/30/breaking-news-6-injured-including-suspect-in-stabbing-at-foss-high-school-in-tacoma/",
+       "publisher": "ktvz.com",
+       "published_at": "2026-04-30T22:31:29",
+       "lede": "a powerful search engine that organizes and provides access to vast information on the internet. name description duration __host-3plsid used to sign in with google account. 1 year dv this cookies is used to collect website statistics and track conversion rates and google ad personalisation 1 year lsid this cookie",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f23427c6105443aa6166f5",
+       "headline": "Caldera High School hosts 3rd annual Life and Career Readiness Night for students",
+       "url": "https://ktvz.com/news/2026/04/29/caldera-high-school-hosts-3rd-annual-life-and-career-readiness-night-for-students/",
+       "publisher": "ktvz.com",
+       "published_at": "2026-04-29T15:54:32",
+       "lede": "a powerful search engine that organizes and provides access to vast information on the internet. name description duration __host-3plsid used to sign in with google account. 1 year dv this cookies is used to collect website statistics and track conversion rates and google ad personalisation 1 year lsid this cookie",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f2342fc6105443aa616f67",
+       "headline": "Fallen Soldier Cart to visit Central Oregon on June 25-26",
+       "url": "https://ktvz.com/news/2026/04/29/fallen-soldier-cart-to-visit-central-oregon-on-june-25-26/",
+       "publisher": "ktvz.com",
+       "published_at": "2026-04-29T15:46:26",
+       "lede": "a powerful search engine that organizes and provides access to vast information on the internet. name description duration __host-3plsid used to sign in with google account. 1 year dv this cookies is used to collect website statistics and track conversion rates and google ad personalisation 1 year lsid this cookie",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f23372c6105443aa60d2e1",
+       "headline": "The last few days of April look dry and warm",
+       "url": "https://ktvz.com/weather/local-forecast/2026/04/29/the-last-few-days-of-april-look-dry-and-warm/",
+       "publisher": "ktvz.com",
+       "published_at": "2026-04-29T09:58:34",
+       "lede": "a powerful search engine that organizes and provides access to vast information on the internet. name description duration __host-3plsid used to sign in with google account. 1 year dv this cookies is used to collect website statistics and track conversion rates and google ad personalisation 1 year lsid this cookie",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [
+        "google"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f231fbc6105443aa5fc035",
+       "headline": "Ridgeview takes down No. 1 Caldera to even season series",
+       "url": "https://ktvz.com/sports/2026/04/29/ridgeview-takes-down-no-1-caldera-to-even-season-series/",
+       "publisher": "ktvz.com",
+       "published_at": "2026-04-29T07:00:05",
+       "lede": "a powerful search engine that organizes and provides access to vast information on the internet. name description duration __host-3plsid used to sign in with google account. 1 year dv this cookies is used to collect website statistics and track conversion rates and google ad personalisation 1 year lsid this cookie",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 253,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOSAwNzowMDowNSIsImkiOiI2OWYyMzFmYmM2MTA1NDQzYWE1ZmMwMzUiLCJwIjo3fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.365,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.367
+    }
+   }
+  }
+ ]
+}

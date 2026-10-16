@@ -1,0 +1,885 @@
+{
+ "slug": "anxiety-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:03:39Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "anxiety",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "anxiety",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 55297,
+     "tone": {
+      "carrying": 55177,
+      "availability_pct": 99.78,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 14638,
+        "share_pct": 26.53
+       },
+       {
+        "group": "neutral",
+        "count": 464,
+        "share_pct": 0.84
+       },
+       {
+        "group": "positive",
+        "count": 40075,
+        "share_pct": 72.63
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 55285,
+      "count": 18082,
+      "share_pct": 32.71
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.635,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.644
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "anxiety",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "anxiety",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 9510,
+       "critical": 3373,
+       "critical_pct": 35.5,
+       "negative": 2963,
+       "positive": 6430,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 5909,
+       "critical": 2197,
+       "critical_pct": 37.2,
+       "negative": 1894,
+       "positive": 3927,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 13432,
+       "critical": 3213,
+       "critical_pct": 23.9,
+       "negative": 3092,
+       "positive": 10241,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 10075,
+       "critical": 3736,
+       "critical_pct": 37.1,
+       "negative": 3034,
+       "positive": 6939,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 7894,
+       "critical": 2918,
+       "critical_pct": 37.0,
+       "negative": 2336,
+       "positive": 5453,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 5316,
+       "critical": 2438,
+       "critical_pct": 45.9,
+       "negative": 2138,
+       "positive": 3066,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 5815,
+       "critical": 2442,
+       "critical_pct": 42.0,
+       "negative": 2194,
+       "positive": 3530,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 6113,
+       "critical": 2624,
+       "critical_pct": 42.9,
+       "negative": 2257,
+       "positive": 3756,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 13915,
+       "critical": 4326,
+       "critical_pct": 31.1,
+       "negative": 3198,
+       "positive": 10544,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 14805,
+       "critical": 4264,
+       "critical_pct": 28.8,
+       "negative": 3549,
+       "positive": 11126,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 13466,
+       "critical": 4744,
+       "critical_pct": 35.2,
+       "negative": 3827,
+       "positive": 9501,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 13111,
+       "critical": 4748,
+       "critical_pct": 36.2,
+       "negative": 4064,
+       "positive": 8904,
+       "partial_period": false
+      }
+     ],
+     "total": 119361,
+     "critical_total": 41023,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-02-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.262,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.265
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "anxiety",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "anxiety",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 55297,
+     "carrying": 15385,
+     "availability_pct": 27.82,
+     "items": [
+      {
+       "country": "united states",
+       "count": 8282,
+       "share_pct": 14.98
+      },
+      {
+       "country": "united kingdom",
+       "count": 1160,
+       "share_pct": 2.1
+      },
+      {
+       "country": "india",
+       "count": 1065,
+       "share_pct": 1.93
+      },
+      {
+       "country": "iran",
+       "count": 779,
+       "share_pct": 1.41
+      },
+      {
+       "country": "canada",
+       "count": 306,
+       "share_pct": 0.55
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 3793
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.954,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.957
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "anxiety",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "anxiety",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "herbal medicine and plant-based remedies",
+       "count": 3838,
+       "share": 14.15,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 27,
+       "delta_pct": 14114.8,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "supplements for cognitive function enhancement",
+       "count": 3095,
+       "share": 11.41,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1285,
+       "delta_pct": 140.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "adaptogenic herbs for stress relief",
+       "count": 3090,
+       "share": 11.39,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1284,
+       "delta_pct": 140.7,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "herbal supplements and their uses",
+       "count": 3072,
+       "share": 11.33,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1275,
+       "delta_pct": 140.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "emotional intelligence development",
+       "count": 621,
+       "share": 2.29,
+       "lift": 186.93,
+       "baseline_count": 1,
+       "previous_period_count": 233,
+       "delta_pct": 166.5,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 55297,
+     "carrying": 27118,
+     "carrier_share_pct": 49.04,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.443,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.453
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "anxiety",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "anxiety",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2af8b2963d76f4af26e319",
+       "headline": "Former Spandau Ballet singer jailed for 14 years for rape and sexual assault",
+       "url": "http://standard.co.uk/news/crime/spandau-ballet-singer-jailed-rape-sexual-assault-b1280593.html",
+       "publisher": "standard.co.uk",
+       "published_at": "2026-04-30T14:52:58",
+       "lede": "the woman added: “throughout april 2023, i was consumed with fear, shame and anger. i no longer felt safe in my own body. i struggled with night terrors. eventually, i developed insomnia. “ordinary situations can feel threatening, and i live with constant anxiety and hyper-vigilance. emotionally, i experience fear, sadness,",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.91
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8839dbbf1d31455980c86",
+       "headline": "Former Spandau Ballet singer jailed for 14 years for rape and sexual assault",
+       "url": "https://www.standard.co.uk/news/crime/spandau-ballet-singer-jailed-rape-sexual-assault-b1280593.html",
+       "publisher": "standard.co.uk",
+       "published_at": "2026-04-30T14:52:58",
+       "lede": "the woman added: “throughout april 2023, i was consumed with fear, shame and anger. i no longer felt safe in my own body. i struggled with night terrors. eventually, i developed insomnia. “ordinary situations can feel threatening, and i live with constant anxiety and hyper-vigilance. emotionally, i experience fear, sadness,",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.91
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2eee7c8e67a2fcb3f65344",
+       "headline": "चार दिन बाद भी सहमी छात्रा ने स्कूल जाना नहीं किया शुरू",
+       "url": "https://www.livehindustan.com/ncr/faridabad/story-fatehpur-billouch-sexual-harassment-case-victim-in-trauma-police-hunt-for-accused-201777549645072.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-04-30T11:47:27",
+       "lede": "ballabhgarh, ashok jain. the girl who was the victim of the alleged sexual assault in fatehpur billoch village is still in shock. four days after the incident, she has not started going to school, which has increased the family's anxiety. the victim, kumarpal, said that her daughter, who is in",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.66,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.86
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99522d47fc028321423b0",
+       "headline": "High school counselor pleads guilty to multiple sex crimes involving teen she was meant to help",
+       "url": "https://www.foxnews.com/us/high-school-counselor-pleads-guilty-multiple-sex-crimes-involving-teen-she-meant-help",
+       "publisher": "foxnews.com",
+       "published_at": "2026-04-21T21:02:48",
+       "lede": "a north carolina high school counselor and volleyball coach was sentenced to up to 40 years in prison after admitting to sexually abusing a teenage student she was supposed to help with anxiety, authorities said. jessica patrick finley pleaded guilty thursday to multiple felony sex offenses involving a minor, including",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.93,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.94
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "finley"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8811e9baafc73568fc026",
+       "headline": "High school counselor pleads guilty to multiple sex crimes involving teen she was meant to help",
+       "url": "https://www.aol.com/articles/high-school-counselor-pleads-guilty-210248606.html",
+       "publisher": "aol.com",
+       "published_at": "2026-04-21T21:02:48",
+       "lede": "high school counselor pleads guilty to multiple sex crimes involving teen she was meant to help a north carolina high school counselor and volleyball coach was sentenced to up to 40 years in prison after admitting to sexually abusing a teenage student she was supposed to help with anxiety, authorities",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.91,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.91
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e867837bb1410d4c76e547",
+       "headline": "Man dies after overdose of ‘highly toxic’ heart drug - GPs must ‘be on alert’",
+       "url": "https://www.thesun.co.uk/health/38812151/man-dies-toxic-heart-medication-gps-alert/",
+       "publisher": "thesun.co.uk",
+       "published_at": "2026-04-14T11:09:30",
+       "lede": "a coroner has issued a warning to gps over prescribing a heart medication taken by thousands of brits following a man’s death. lee adams, 36, was first prescribed the drug propranolol in 2017, which is typically given for conditions including high blood pressure, known medically as hypertension, migraines and anxiety.",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.55
+        },
+        {
+         "code": 117,
+         "path": "/Sensitive Subjects/Recreational Drugs",
+         "score": 0.47
+        },
+        {
+         "code": 195,
+         "path": "/Health/Health Conditions/Heart & Hypertension",
+         "score": 0.43
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "lee adams"
+       ]
+      },
+      {
+       "id": "6a0af9c5636c977421340328",
+       "headline": "When a nation starts to question its own mind",
+       "url": "https://www.monitor.co.ug/uganda/oped/commentary/when-a-nation-starts-to-question-its-own-mind-5418752",
+       "publisher": "monitor.co.ug",
+       "published_at": "2026-04-10T08:12:35",
+       "lede": "one in four ugandans is living with a mental health condition. when you first hear it, the number is almost impossible to grasp. out of a population of roughly 45 million, that means about 11 million people—children, youth, adults—quietly struggling with anxiety, depression, trauma, or other mental health challenges. breaking",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c429b5123b6766dcd37803",
+       "headline": "58 साल के शख्स पर 10 साल की बच्ची से दरिंदगी का आरोप, ठाणे में आरोपी के खिलाफ केस दर्ज",
+       "url": "https://www.aajtak.in/crime/news/story/thane-bhiwandi-minor-rape-case-pocso-accused-arrest-pvzs-dskc-2505589-2026-03-24",
+       "publisher": "aajtak.in",
+       "published_at": "2026-03-24T10:02:09",
+       "lede": "an extremely painful case has been revealed from thane district of maharashtra. where a 10-year-old innocent child was allegedly raped. this charge has been filed against an elderly of 58 years. the police shared the entire matter on tuesday, after which there is an atmosphere of indignation and anxiety in",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.97,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.91
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.42
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd0e5e6465b4d565210c8",
+       "headline": "Joe Biden Hidden Illness: Physician Claims Cancer Spread to Bone During Presidency",
+       "url": "https://www.ibtimes.co.uk/joe-biden-hidden-illness-physician-claims-cancer-spread-bone-during-presidency-1787216",
+       "publisher": "ibtimes.co.uk",
+       "published_at": "2026-03-21T17:43:21",
+       "lede": "joe biden's battle with stage 4 prostate cancer has triggered a fresh wave of anxiety in washington as a physician's assessment that the disease had already spread to his bones during his presidency coincides with reports that the 83-year-old former us leader may have less than six months to live.read",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "joe biden",
+        "joe biden"
+       ]
+      },
+      {
+       "id": "6a2ac6095cefb83fe83be9a1",
+       "headline": "Iran fires six missile volleys at Israel; few injured as interceptions limit damage",
+       "url": "https://www.yahoo.com/news/articles/teen-injured-eilat-iran-launches-154457904.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-14T15:44:57",
+       "lede": "so far, magen david adom has said that only two people were injured as a result of the missiles, and that it had evacuated at least five people to the emergency room for anxiety. iran sent at least six volleys of missiles to israel on saturday, triggering alarms across the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.93
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cf5fcb7cb89f1b0658e76f",
+       "headline": "Rapist attacked vulnerable man in Lancashire 8 years after release for same offence",
+       "url": "https://www.lancashiretelegraph.co.uk/news/25924288.rapist-attacked-vulnerable-man-lancashire-8-years-release-offence/",
+       "publisher": "lancashiretelegraph.co.uk",
+       "published_at": "2026-03-10T14:26:01",
+       "lede": "andrew morris attacked a man in his 30s in march last year and had twice previously sexually assaulted him. morris’ victim was described as vulnerable, with him suffering from anxiety and depression, and being easily manipulated. they were known to one another, with the victim reporting to a care support",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.72,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.93
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.66
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee96e83fc01faba62d1c7",
+       "headline": "Israel says more than 1,600 injured since start of Iran war",
+       "url": "https://www.yahoo.com/news/articles/israel-says-more-1-600-105817467.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-06T10:58:17",
+       "lede": "more than 1,600 people have been treated in hospitals in israel since the start of the war with iran, the israeli health ministry said on friday. the tally reportedly includes people wounded in rocket attacks, and also those injured while rushing to shelters and individuals treated for anxiety. in the",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.94
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bd1369bc0fe678ea69ee09",
+       "headline": "Traumas do estupro: medo, vergonha e culpa perseguem vítimas de violência sexual, dizem especialistas",
+       "url": "https://oglobo.globo.com/rio/noticia/2026/03/04/traumas-do-estupro-medo-vergonha-e-culpa-perseguem-vitimas-de-violencia-sexual-dizem-especialistas.ghtml",
+       "publisher": "oglobo.globo.com",
+       "published_at": "2026-03-04T07:26:23",
+       "lede": "if the fear of sexual violence haunts girls and women daily, those who have been victims can develop mental disorders at different levels of severity, such as depression, anxiety and panic attacks, experts say. the impacts are even worse when the crimes fall on people still in formation, as is",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.94,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.89
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc5b18f111344e7e7dafa7",
+       "headline": "How Israelis Feel About Another Potential War With Iran",
+       "url": "https://indianexpress.com/article/world/how-israelis-feel-about-another-potential-war-with-iran-10556020/",
+       "publisher": "indianexpress.com",
+       "published_at": "2026-02-27T12:59:48",
+       "lede": "written by aaron boxermanacross israel, hospitals have been conducting emergency drills while neighbors share locations of bomb shelters in whatsapp groups.the national mood is wavering somewhere between anxiety, resignation and anticipation as president donald trump deliberates over whether to attack iran. if he orders a strike, it will most likely",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.75
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      }
+     ],
+     "returned": 14,
+     "total_estimate": 3772,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0wNiAxMDowMzo0NyIsImkiOiI2OWM5NzZjYzI4OGEzNmMwYzdiOGQ0ZjAiLCJwIjo5fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.292,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.296
+    }
+   }
+  }
+ ]
+}

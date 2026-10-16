@@ -1,0 +1,963 @@
+{
+ "slug": "humanoid-robot-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:12:07Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "humanoid robot",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "humanoid robot",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1907,
+     "tone": {
+      "carrying": 1906,
+      "availability_pct": 99.95,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 129,
+        "share_pct": 6.77
+       },
+       {
+        "group": "neutral",
+        "count": 15,
+        "share_pct": 0.79
+       },
+       {
+        "group": "positive",
+        "count": 1762,
+        "share_pct": 92.44
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 1905,
+      "count": 1101,
+      "share_pct": 57.8
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.85,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.852
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "humanoid robot",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "humanoid robot",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 193,
+       "critical": 106,
+       "critical_pct": 54.9,
+       "negative": 21,
+       "positive": 172,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 167,
+       "critical": 102,
+       "critical_pct": 61.1,
+       "negative": 27,
+       "positive": 139,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 209,
+       "critical": 111,
+       "critical_pct": 53.1,
+       "negative": 13,
+       "positive": 195,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 396,
+       "critical": 233,
+       "critical_pct": 58.8,
+       "negative": 12,
+       "positive": 380,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 186,
+       "critical": 118,
+       "critical_pct": 63.4,
+       "negative": 4,
+       "positive": 182,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 226,
+       "critical": 105,
+       "critical_pct": 46.5,
+       "negative": 10,
+       "positive": 216,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 293,
+       "critical": 182,
+       "critical_pct": 62.1,
+       "negative": 31,
+       "positive": 259,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 180,
+       "critical": 109,
+       "critical_pct": 60.6,
+       "negative": 14,
+       "positive": 164,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 407,
+       "critical": 226,
+       "critical_pct": 55.5,
+       "negative": 18,
+       "positive": 388,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 291,
+       "critical": 152,
+       "critical_pct": 52.2,
+       "negative": 11,
+       "positive": 277,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 525,
+       "critical": 322,
+       "critical_pct": 61.3,
+       "negative": 68,
+       "positive": 455,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 684,
+       "critical": 401,
+       "critical_pct": 58.6,
+       "negative": 32,
+       "positive": 642,
+       "partial_period": false
+      }
+     ],
+     "total": 3757,
+     "critical_total": 2167,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.069,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.072
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "humanoid robot",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "humanoid robot",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 1907,
+     "carrying": 909,
+     "availability_pct": 47.67,
+     "items": [
+      {
+       "country": "china",
+       "count": 353,
+       "share_pct": 18.51
+      },
+      {
+       "country": "united states",
+       "count": 349,
+       "share_pct": 18.3
+      },
+      {
+       "country": "india",
+       "count": 44,
+       "share_pct": 2.31
+      },
+      {
+       "country": "spain",
+       "count": 28,
+       "share_pct": 1.47
+      },
+      {
+       "country": "germany",
+       "count": 20,
+       "share_pct": 1.05
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 115
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.023,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.026
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "humanoid robot",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "humanoid robot",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "entertainment and companion robotics",
+       "count": 426,
+       "share": 38.31,
+       "lift": 521.2,
+       "baseline_count": 6,
+       "previous_period_count": 167,
+       "delta_pct": 155.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "human-robot interaction and collaborative robotics",
+       "count": 201,
+       "share": 18.08,
+       "lift": 737.75,
+       "baseline_count": 2,
+       "previous_period_count": 78,
+       "delta_pct": 157.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "domestic service robotics for household tasks",
+       "count": 415,
+       "share": 37.32,
+       "lift": 507.74,
+       "baseline_count": 6,
+       "previous_period_count": 178,
+       "delta_pct": 133.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "robotic actuators and mechanisms",
+       "count": 76,
+       "share": 6.83,
+       "lift": 557.9,
+       "baseline_count": 1,
+       "previous_period_count": 25,
+       "delta_pct": 204.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "artificial intelligence in robotic decision-making",
+       "count": 62,
+       "share": 5.58,
+       "lift": 455.13,
+       "baseline_count": 1,
+       "previous_period_count": 24,
+       "delta_pct": 158.3,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 1907,
+     "carrying": 1112,
+     "carrier_share_pct": 58.31,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.047,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.049
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "humanoid robot",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "humanoid robot",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e9c47875f157062cb54a7e",
+       "headline": "Elon Musk Says Optimus V3 Unveil To Be Closer To Robot's Production As Rivals 'Copy' Everything Tesla Doe",
+       "url": "https://benzinga.com/markets/tech/26/04/51989926/elon-musk-says-optimus-v3-unveil-to-be-closer-to-robots-production-as-rivals-copy-everything-tesla-does",
+       "publisher": "benzinga.com",
+       "published_at": "2026-04-23T06:52:36",
+       "lede": "tesla inc. (nasdaq:tsla) ceo elon musk on wednesday accused rivals in the humanoid robot space of copying the ev giant's robotics technology. frame-by-frame analysis during the earnings call with investors, musk was asked about the progress of the next generation of optimus robots. \"we've found out our competitors literally do",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.45,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 176,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Tesla Motors",
+         "score": 0.95
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "optimus"
+       ],
+       "people": [
+        "elon musk"
+       ]
+      },
+      {
+       "id": "6a0af8f9636c97742133727a",
+       "headline": "Robot named Lightning blows past human runners to set half-marathon record in Beijing",
+       "url": "https://www.latimes.com/sports/story/2026-04-20/humanoid-robot-lightning-sets-half-marathon-record-in-beijing",
+       "publisher": "latimes.com",
+       "published_at": "2026-04-20T19:15:01",
+       "lede": "slide over, jacob kiplimo. the world's fastest human in the half-marathon is still just that, but the ugandan's record time of 57 minutes, 20 seconds, was obliterated sunday in beijing by a 5-foot-5 humanoid robot named lightning. lightning was one of more than 100 robots running the 13.1-mile race in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.82,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 145,
+         "path": "/Sports/International Sports Competitions/Olympics",
+         "score": 0.59
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8812f7bb1410d4c875e27",
+       "headline": "China's humanoid robot smashes half marathon world record",
+       "url": "https://www.indy100.com/science-tech/humanoid-robot-beijing-half-marathon-honor-china",
+       "publisher": "indy100.com",
+       "published_at": "2026-04-20T11:48:57",
+       "lede": "a humanoid robot has achieved a remarkable feat in beijing, completing a half-marathon faster than the human world record, underscoring china's rapid advancements in artificial intelligence and robotics. the groundbreaking performance occurred during a robot race held in the capital on sunday. the winning robot, developed by chinese smartphone manufacturer",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.89
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e87b3d5cfa3e5ba5005c2c",
+       "headline": "A humanoid robot sprints to victory in Beijing, beating world record",
+       "url": "https://www.thestar.com.my/tech/tech-news/2026/04/20/a-humanoid-robot-sprints-to-victory-in-beijing-beating-the-human-half-marathon-world-record",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-20T09:00:00",
+       "lede": "beijing: a humanoid robot that won a half-marathon race for robots in beijing on sunday ran faster than the human world record in a show of china's technological leaps. the winner from honor, a chinese smartphone maker, completed the 21-kilometre (13-mile) race in 50 minutes and 26 seconds, according to",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.78,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.68
+        },
+        {
+         "code": 369,
+         "path": "/Sports/Individual Sports/Running & Walking",
+         "score": 0.53
+        },
+        {
+         "code": 145,
+         "path": "/Sports/International Sports Competitions/Olympics",
+         "score": 0.42
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e87a2c7bb1410d4c82f364",
+       "headline": "A humanoid robot sprints past the human half-marathon world record in Beijing race",
+       "url": "https://lethbridgeherald.com/sports/national-sports/2026/04/19/a-humanoid-robot-sprints-past-the-human-half-marathon-world-record-in-beijing-race/",
+       "publisher": "lethbridgeherald.com",
+       "published_at": "2026-04-20T04:21:09",
+       "lede": "a humanoid robot sprints past the human half-marathon world record in beijing race by canadian press on april 19, 2026. a robot starts off for the beijing e-town half marathon and humanoid half marathon on the outskirts of beijing on sunday, april 19, 2026. (ap photo/ng han guan) a robot",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.55,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 369,
+         "path": "/Sports/Individual Sports/Running & Walking",
+         "score": 0.83
+        },
+        {
+         "code": 145,
+         "path": "/Sports/International Sports Competitions/Olympics",
+         "score": 0.49
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f880bc43843dd771ceb528",
+       "headline": "A humanoid robot sprints past the human half-marathon world record in Beijing race",
+       "url": "https://www.dallasnews.com/news/world/article/a-humanoid-robot-sprints-to-victory-in-beijing-22214260.php",
+       "publisher": "dallasnews.com",
+       "published_at": "2026-04-20T04:16:47",
+       "lede": "beijing (ap) — a humanoid robot that won a half-marathon race for robots in beijing on sunday ran faster than the human world record in a show of china's technological leaps. the winner from honor, a chinese smartphone maker, completed the 21-kilometer (13-mile) race in 50 minutes and 26 seconds,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.71,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.66
+        },
+        {
+         "code": 369,
+         "path": "/Sports/Individual Sports/Running & Walking",
+         "score": 0.53
+        },
+        {
+         "code": 145,
+         "path": "/Sports/International Sports Competitions/Olympics",
+         "score": 0.43
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e98fffbdd09a23d088d3ec",
+       "headline": "Humanoid Robot Smashes Human Half Marathon Record in Beijing — Nearly 3x Faster Than Last Year! (VIDEO) | The Gateway Pundit | by Ben Kew",
+       "url": "https://www.thegatewaypundit.com/2026/04/humanoid-robot-smashes-human-half-marathon-record-beijing/",
+       "publisher": "thegatewaypundit.com",
+       "published_at": "2026-04-20T00:20:28",
+       "lede": "a humanoid robot has set a new world record for the half-marathon in beijing, marking a major escalation in the capabilities of artificial intelligence and robotics. the robot, developed by chinese firm honor, completed the 21-kilometer race in 50 minutes and 26 seconds. that is well ahead of the human",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.64,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.69
+        },
+        {
+         "code": 369,
+         "path": "/Sports/Individual Sports/Running & Walking",
+         "score": 0.53
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99f4775f157062cb2735f",
+       "headline": "Humanoid robot wins Beijing half-marathon, defeating the human world record",
+       "url": "https://www.pbs.org/newshour/world/humanoid-robot-wins-beijing-half-marathon-defeating-the-human-world-record",
+       "publisher": "pbs.org",
+       "published_at": "2026-04-19T15:14:01",
+       "lede": "beijing (ap) — a humanoid robot that won a half-marathon race for robots in beijing on sunday ran faster than the human world record in a show of china's technological leaps. the winner from honor, a chinese smartphone maker, completed the 21-kilometer (13-mile) race in 50 minutes and 26 seconds,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.66,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.78
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b30e55cefb83fe8883a0a",
+       "headline": "Robot wins half-marathon in time faster than human world record",
+       "url": "https://www.dailystar.co.uk/news/latest-news/robot-wins-half-marathon-time-37038020",
+       "publisher": "dailystar.co.uk",
+       "published_at": "2026-04-19T09:58:33",
+       "lede": "a chinese robot has smashed the human world record for half-marathons in a jaw-dropping display of futuristic technology. the humanoid robot from smartphone maker honor completed the 21-kilometre race in beijing in just 50 minutes and 26 seconds – nearly seven minutes faster than uganda's jacob kiplimo's world record. the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.84,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.78
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e870df5cfa3e5ba5fa02c4",
+       "headline": "A humanoid robot sprints to victory in Beijing, beating the human half-marathon world record - WTOP News",
+       "url": "https://wtop.com/funny-weird-news/2026/04/a-humanoid-robot-sprints-to-victory-in-beijing-beating-the-human-half-marathon-world-record/",
+       "publisher": "wtop.com",
+       "published_at": "2026-04-19T07:05:00",
+       "lede": "beijing (ap) — a humanoid robot that won a half-marathon race for robots in beijing on sunday ran faster than… beijing (ap) — a humanoid robot that won a half-marathon race for robots in beijing on sunday ran faster than the human world record in a show of china’s technological",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.79
+        }
+       ],
+       "country": "china",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8e5425cfa3e5ba551bb66",
+       "headline": "Humanoid robot wins half-marathon in China; beats world record",
+       "url": "https://www.espn.co.uk/athletics/story/_/id/48529282/humanoid-robot-wins-half-marathon-china-beats-world-record",
+       "publisher": "espn.co.uk",
+       "published_at": "2026-04-19T06:57:49",
+       "lede": "open extended reactions a humanoid robot that won a half-marathon race for robots in beijing on sunday ran faster than the human world record. the winner from honor, a chinese smartphone maker, completed the 21-kilometer (13-mile) race in 50 minutes and 26 seconds, according to a wechat post by the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.8,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 145,
+         "path": "/Sports/International Sports Competitions/Olympics",
+         "score": 0.53
+        },
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.48
+        },
+        {
+         "code": 369,
+         "path": "/Sports/Individual Sports/Running & Walking",
+         "score": 0.42
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2af834c37f6c5e6618fc10",
+       "headline": "Siemens tests Nvidia AI-powered humanoid robot in German factory",
+       "url": "https://euronews.com/2026/04/19/can-ai-robots-work-alongside-humans-siemens-and-nvidia-trial-a-humanoid-robot",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-19T05:58:16",
+       "lede": "german technology company siemens and chip giant nvidia have tested a humanoid robot on a live factory floor.the test in partnership with robotics company humanoid based in the united kingdom, marks a step towards artificial intelligence-driven production where machines and humans work alongside each other. siemens said in an announcement",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.94
+        },
+        {
+         "code": 200,
+         "path": "/Business & Industrial/Manufacturing/Factory Automation",
+         "score": 0.58
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99b04bdd09a23d09165a7",
+       "headline": "Siemens tests Nvidia AI-powered humanoid robot in German factory",
+       "url": "http://www.euronews.com/2026/04/19/can-ai-robots-work-alongside-humans-siemens-and-nvidia-trial-a-humanoid-robot",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-19T05:58:16",
+       "lede": "german technology company siemens and chip giant nvidia have tested a humanoid robot on a live factory floor.the test in partnership with robotics company humanoid based in the united kingdom, marks a step towards artificial intelligence-driven production where machines and humans work alongside each other. siemens said in an announcement",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.94
+        },
+        {
+         "code": 200,
+         "path": "/Business & Industrial/Manufacturing/Factory Automation",
+         "score": 0.58
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.51
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "nvidia",
+        "siemens"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8e9ab7bb1410d4cda4755",
+       "headline": "Siemens tests Nvidia AI-powered humanoid robot in German factory",
+       "url": "https://www.euronews.com/next/2026/04/19/can-ai-robots-work-alongside-humans-siemens-and-nvidia-trial-a-humanoid-robot",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-19T05:58:16",
+       "lede": "german technology company siemens and chip giant nvidia have tested a humanoid robot on a live factory floor.the test in partnership with robotics company humanoid based in the united kingdom, marks a step towards artificial intelligence-driven production where machines and humans work alongside each other. siemens said in an announcement",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.94
+        },
+        {
+         "code": 200,
+         "path": "/Business & Industrial/Manufacturing/Factory Automation",
+         "score": 0.58
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "nvidia",
+        "siemens"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8859b7bb1410d4c8a3ca7",
+       "headline": "Siemens tests Nvidia AI-powered humanoid robot in German factory",
+       "url": "https://www.euronews.com/2026/04/19/can-ai-robots-work-alongside-humans-siemens-and-nvidia-trial-a-humanoid-robot",
+       "publisher": "euronews.com",
+       "published_at": "2026-04-19T05:58:16",
+       "lede": "german technology company siemens and chip giant nvidia have tested a humanoid robot on a live factory floor.the test in partnership with robotics company humanoid based in the united kingdom, marks a step towards artificial intelligence-driven production where machines and humans work alongside each other. siemens said in an announcement",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.49,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 175,
+         "path": "/Science/Engineering & Technology/Robotics",
+         "score": 0.94
+        },
+        {
+         "code": 200,
+         "path": "/Business & Industrial/Manufacturing/Factory Automation",
+         "score": 0.58
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.51
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "nvidia",
+        "siemens"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 483,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xOSAwNTo1ODoxNiIsImkiOiI2OWU4ODU5YjdiYjE0MTBkNGM4YTNjYTciLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.521,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.524
+    }
+   }
+  }
+ ]
+}

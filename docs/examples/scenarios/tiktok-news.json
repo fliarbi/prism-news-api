@@ -1,0 +1,956 @@
+{
+ "slug": "tiktok-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:09:34Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "TikTok",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "tiktok",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 97813,
+     "tone": {
+      "carrying": 97585,
+      "availability_pct": 99.77,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 36617,
+        "share_pct": 37.52
+       },
+       {
+        "group": "neutral",
+        "count": 926,
+        "share_pct": 0.95
+       },
+       {
+        "group": "positive",
+        "count": 60042,
+        "share_pct": 61.53
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 97786,
+      "count": 32624,
+      "share_pct": 33.36
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.498,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.513
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "TikTok",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "tiktok",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 18200,
+       "critical": 5786,
+       "critical_pct": 31.8,
+       "negative": 6798,
+       "positive": 11207,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 16812,
+       "critical": 4889,
+       "critical_pct": 29.1,
+       "negative": 5824,
+       "positive": 10724,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 22192,
+       "critical": 6252,
+       "critical_pct": 28.2,
+       "negative": 8860,
+       "positive": 13053,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 23204,
+       "critical": 7168,
+       "critical_pct": 30.9,
+       "negative": 8994,
+       "positive": 13984,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 26749,
+       "critical": 10942,
+       "critical_pct": 40.9,
+       "negative": 11303,
+       "positive": 14878,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 19725,
+       "critical": 6568,
+       "critical_pct": 33.3,
+       "negative": 7336,
+       "positive": 12199,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 17745,
+       "critical": 5740,
+       "critical_pct": 32.3,
+       "negative": 6486,
+       "positive": 11101,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 18602,
+       "critical": 6527,
+       "critical_pct": 35.1,
+       "negative": 7066,
+       "positive": 11336,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 18210,
+       "critical": 6102,
+       "critical_pct": 33.5,
+       "negative": 6737,
+       "positive": 11270,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 24239,
+       "critical": 8818,
+       "critical_pct": 36.4,
+       "negative": 9640,
+       "positive": 14237,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 25156,
+       "critical": 8498,
+       "critical_pct": 33.8,
+       "negative": 9892,
+       "positive": 14978,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 30208,
+       "critical": 9206,
+       "critical_pct": 30.5,
+       "negative": 10348,
+       "positive": 19557,
+       "partial_period": false
+      }
+     ],
+     "total": 261042,
+     "critical_total": 86496,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 9.262,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 9.266
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "TikTok",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "tiktok",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 97813,
+     "carrying": 46714,
+     "availability_pct": 47.76,
+     "items": [
+      {
+       "country": "united states",
+       "count": 27520,
+       "share_pct": 28.14
+      },
+      {
+       "country": "united kingdom",
+       "count": 4215,
+       "share_pct": 4.31
+      },
+      {
+       "country": "australia",
+       "count": 1291,
+       "share_pct": 1.32
+      },
+      {
+       "country": "china",
+       "count": 1106,
+       "share_pct": 1.13
+      },
+      {
+       "country": "malaysia",
+       "count": 1069,
+       "share_pct": 1.09
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 11513
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.873,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.877
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "TikTok",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "tiktok",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "mental health and support communities",
+       "count": 1778,
+       "share": 3.52,
+       "lift": 143.54,
+       "baseline_count": 2,
+       "previous_period_count": 973,
+       "delta_pct": 82.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "parenting and family-oriented social groups",
+       "count": 1347,
+       "share": 2.66,
+       "lift": 108.75,
+       "baseline_count": 2,
+       "previous_period_count": 860,
+       "delta_pct": 56.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "social media marketing campaigns",
+       "count": 627,
+       "share": 1.24,
+       "lift": 101.24,
+       "baseline_count": 1,
+       "previous_period_count": 542,
+       "delta_pct": 15.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "regulatory compliance frameworks",
+       "count": 513,
+       "share": 1.01,
+       "lift": 82.83,
+       "baseline_count": 1,
+       "previous_period_count": 42,
+       "delta_pct": 1121.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "legal aspects of intellectual property",
+       "count": 653,
+       "share": 1.29,
+       "lift": 52.72,
+       "baseline_count": 2,
+       "previous_period_count": 113,
+       "delta_pct": 477.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 97813,
+     "carrying": 50556,
+     "carrier_share_pct": 51.69,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.181,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.183
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "TikTok",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "tiktok",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f885db8937ef12fc0a47ab",
+       "headline": "Prosecutors say singer D4vd stabbed 14-year-old Celeste Rivas Hernandez to death to silence her | Houston Public Media",
+       "url": "https://houstonpublicmedia.org/articles/news/crime/2026/04/30/550585/prosecutors-say-singer-d4vd-stabbed-14-year-old-celeste-rivas-hernandez-to-death-to-silence-her/",
+       "publisher": "houstonpublicmedia.org",
+       "published_at": "2026-04-30T18:00:13",
+       "lede": "prosecutors say singer d4vd killed 14-year-old celeste rivas hernandez by stabbing her multiple times. the los angeles county district attorney’s office shared what they said the evidence would show in a document filed wednesday. ted soqui/pool photo via ap los angeles (ap) — prosecutors said wednesday that singer d4vd killed",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 1.0,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.77
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f87f8a8937ef12fc068259",
+       "headline": "Prosecutors say singer D4vd stabbed 14-year-old Celeste Rivas Hernandez to death to silence her | Houston Public Media",
+       "url": "https://www.houstonpublicmedia.org/articles/news/crime/2026/04/30/550585/prosecutors-say-singer-d4vd-stabbed-14-year-old-celeste-rivas-hernandez-to-death-to-silence-her/",
+       "publisher": "houstonpublicmedia.org",
+       "published_at": "2026-04-30T18:00:13",
+       "lede": "prosecutors say singer d4vd killed 14-year-old celeste rivas hernandez by stabbing her multiple times. the los angeles county district attorney’s office shared what they said the evidence would show in a document filed wednesday. ted soqui/pool photo via ap los angeles (ap) — prosecutors said wednesday that singer d4vd killed",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 1.0,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.77
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f88158bbf1d3145596d6b0",
+       "headline": "HKL Responds After Netizen Expresses Concern Over Congestion At Specialist Clinic",
+       "url": "https://says.com/my/news/hkl-responds-after-netizen-expresses-concern-over-congestion-at-specialist-clinic",
+       "publisher": "says.com",
+       "published_at": "2026-04-30T14:19:53",
+       "lede": "follow us on instagram, tiktok, and whatsapp for the latest stories and breaking news. a viral social media post highlighting congestion at the ophthalmology specialist clinic at hospital kuala lumpur (hkl) has prompted a response from the hospital on monday, 27 april, an x user shared a photo showing a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "tiktok",
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8816043843dd771cf18bf",
+       "headline": "Scots mum guilty of baby's murder posted disturbing TikTok videos after newborn's death",
+       "url": "https://www.glasgowlive.co.uk/news/glasgow-news/scots-mum-guilty-babys-murder-33866226",
+       "publisher": "glasgowlive.co.uk",
+       "published_at": "2026-04-30T12:23:15",
+       "lede": "the scottish mother found guilty of murdering her newborn baby posted a series of erratic videos to social media in the days following her death. nicole blain, 30, was convicted of killing 19-day-old thea jane wilson at the high court in glasgow on wednesday (april 29). the court heard that",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.86,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.54
+        },
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.48
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "social media"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f88311bbf1d3145597bd2a",
+       "headline": "‘Horror’ gender reveal before mum kills baby",
+       "url": "https://www.news.com.au/lifestyle/real-life/news-life/glasgow-mum-nicole-blain-found-guilty-of-killing-newborn-after-blaming-another-child/news-story/169f0782eca61b2dc650900a01a3f45e",
+       "publisher": "news.com.au",
+       "published_at": "2026-04-30T07:11:00",
+       "lede": "a mother who tried to blame another child for the death of her 19-day-old daughter has been convicted of murder. nicole blain, 30, was found guilty at the high court in glasgow during a trial over the death of her newborn daughter, thea wilson. the young baby died in july",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.9,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.71
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.61
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2edca683fc01faba561e6d",
+       "headline": "Josh Duggar Reportedly Placed in Solitary Confinement for ‘Rule Violations’",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/josh-duggar-reportedly-placed-solitary-164753114.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-29T16:47:53",
+       "lede": "convicted sex offender josh duggar was placed in solitary confinement after violating prison rules, according to his cousin amy duggar. “his release date has been pushed back, so we can praise god for that,” she shared via tiktok on friday, april 24. “he’s lost more ‘good time’ credit because of",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.81,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.75
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22ede27117df83f9571a2",
+       "headline": "Two Jewish men seriously injured in Golders Green knife rampage",
+       "url": "https://www.thescottishsun.co.uk/news/16207191/two-stabbed-golders-green-knifeman-targeting-jewish-members-public/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-04-29T11:26:16",
+       "lede": "two jewish men have been seriously injured after a knifeman went on a stabbing rampage in london, with cops arresting a 45-year-old. a knifeman stabbed two men – in their 70s and 30s – near a synagogue in golders green, north london, at 11.15 this morning. sign up for scottish",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.57
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.53
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c7271e3933a6dd8dceb8",
+       "headline": "Texas man charged with paying 13-year-old Montgomery County girl for child porn",
+       "url": "https://www.philly.com/crime/montgomery-county-texas-child-porn-arrest-20260428.html",
+       "publisher": "philly.com",
+       "published_at": "2026-04-28T23:40:20",
+       "lede": "listen to article • 0:00 min a 31-year-old texas man was charged with allegedly paying a 13-year-old girl in montgomery county to make child pornography, authorities said tuesday. mitchell van dusen was extradited last week and was being held at the montgomery county correctional facility in lieu of $500,000 cash",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.97,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.78
+        },
+        {
+         "code": 351,
+         "path": "/Adult",
+         "score": 0.74
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "montgomery county"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f229bc122c4392e0cf6a29",
+       "headline": "Human remains found as search for 2nd missing USF student continues",
+       "url": "https://www.usatoday.com/story/news/nation/2026/04/27/usf-missing-students-nahida-bristy-zamil-limon-updates/89816026007/",
+       "publisher": "usatoday.com",
+       "published_at": "2026-04-27T12:52:31",
+       "lede": "updated april 27, 2026, 11:01 a.m. et human remains were recovered in tampa, florida, as officials look for missing university of south florida doctoral student nahida bristy, according to the hillsborough county sheriff’s office. the remains were found on the night of sunday, april 26, in waterways near an interstate",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.69
+        }
+       ],
+       "country": "costa rica",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa96e727212302c5e1233",
+       "headline": "My brother’s kidnappers demanded N5m before going silent – Sibling",
+       "url": "https://punchng.com/my-brothers-kidnappers-demanded-n5m-before-going-silent-sibling/",
+       "publisher": "punchng.com",
+       "published_at": "2026-04-25T23:01:31",
+       "lede": "what is your relationship with the kidnapped victim? i am the younger brother of dania scott. i am a final-year student of human anatomy at edo state university, iyamho. my brother is the firstborn in our family. he is a graduate of ambrose alli university, ekpoma, where he studied computer",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 99,
+         "path": "/Sensitive Subjects/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "nigeria",
+       "organizations": [
+        "ambrose alli university"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa9068a54b8f07c950c23",
+       "headline": "Gunfire, blasts rock Mali's Bamako and other cities, army says unidentified terrorist groups targeted locations | Today News",
+       "url": "https://www.livemint.com/news/world/gunfire-blasts-rock-malis-bamako-and-other-cities-army-says-unidentified-terrorist-groups-targeted-locations-11777113315184.html",
+       "publisher": "livemint.com",
+       "published_at": "2026-04-25T10:43:22",
+       "lede": "gunmen launched attacks on several locations in mali's capital, bamako, and other cities early saturday in a possible coordinated assault, ap reported, citing residents and authorities. mali’s army, in a statement, said, “unidentified armed terrorist groups targeted certain locations and barracks in the capital.” it added that soldiers were “currently",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.93
+        }
+       ],
+       "country": "mali",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b3222c37f6c5e6643dcb9",
+       "headline": "Chris Olsen Posts Tearful Tribute to Late Grandmother as He Admits He's 'Sad and Angry' About Her Death",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/chris-olsen-posts-tearful-tribute-175944965.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-24T17:59:44",
+       "lede": "need to know chris olsen is remembering his late grandmother in a tiktok video posted to his second account on april 23, the influencer reflected on grief and shared some of his late-night feelings as he recalled memories with his grandma \"tonight my grief has come in the form of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.53
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea4461b0517977015cbd2e",
+       "headline": "Hearing in D4vd case set as autopsy details death of Celeste Rivas Hernandez",
+       "url": "https://abc7.com/post/d4vd-celeste-rivas-hernandez-murder-case-updates-hearing-singers-set-autopsy-report-released/18950633/",
+       "publisher": "abc7.com",
+       "published_at": "2026-04-23T15:36:00",
+       "lede": "hearing in d4vd case set as autopsy details death of celeste rivas hernandez los angeles (kabc) -- new details emerged in the murder case against singer d4vd as a status hearing is set for thursday. this comes after the release of celeste rivas hernandez's autopsy report that describes what prosecutors",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.76
+        },
+        {
+         "code": 23,
+         "path": "/Law & Government/Public Safety/Law Enforcement",
+         "score": 0.52
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "celeste"
+       ],
+       "people": [
+        "d4vd",
+        "d4vd"
+       ]
+      },
+      {
+       "id": "69ec1e111e448cd078920fc5",
+       "headline": "See maps of where wildfires are burning in Georgia and Florida",
+       "url": "https://www.freep.com/story/news/nation/2026/04/23/wildfires-florida-georgia-maps/89747161007/",
+       "publisher": "freep.com",
+       "published_at": "2026-04-23T13:16:52",
+       "lede": "april 23, 2026, 9:16 a.m. et wildfires in georgia and florida continue to spread, causing evacuations and destroying homes. on april 22, georgia gov. brian kemp declared a state of emergency for 91 counties in the state due to the wildfires, according to a news release published by georgia's office",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "kemp"
+       ],
+       "people": [
+        "brian kemp"
+       ]
+      },
+      {
+       "id": "69ec1dfd1e448cd0789201b0",
+       "headline": "See maps of where wildfires are burning in Georgia and Florida",
+       "url": "https://www.jsonline.com/story/news/nation/2026/04/23/wildfires-florida-georgia-maps/89747161007/",
+       "publisher": "jsonline.com",
+       "published_at": "2026-04-23T13:16:52",
+       "lede": "april 23, 2026, 8:16 a.m. ct wildfires in georgia and florida continue to spread, causing evacuations and destroying homes. on april 22, georgia gov. brian kemp declared a state of emergency for 91 counties in the state due to the wildfires, according to a news release published by georgia's office",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "kemp"
+       ],
+       "people": [
+        "brian kemp"
+       ]
+      },
+      {
+       "id": "69eafa4518d3f7bd7a4c4830",
+       "headline": "See maps of where wildfires are burning in Georgia and Florida",
+       "url": "https://www.tuscaloosanews.com/story/news/nation/2026/04/23/wildfires-florida-georgia-maps/89747161007/",
+       "publisher": "tuscaloosanews.com",
+       "published_at": "2026-04-23T13:16:52",
+       "lede": "april 23, 2026, 8:16 a.m. ct wildfires in georgia and florida continue to spread, causing evacuations and destroying homes. on april 22, georgia gov. brian kemp declared a state of emergency for 91 counties in the state due to the wildfires, according to a news release published by georgia's office",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "kemp"
+       ],
+       "people": [
+        "brian kemp"
+       ]
+      }
+     ],
+     "returned": 16,
+     "total_estimate": 30449,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMyAxMzoxNjo1MiIsImkiOiI2OWVhZmE0NTE4ZDNmN2JkN2E0YzQ4MzAiLCJwIjo5fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.288,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.29
+    }
+   }
+  }
+ ]
+}

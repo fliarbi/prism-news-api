@@ -1,0 +1,862 @@
+{
+ "slug": "inflation-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:57:15Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "inflation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "inflation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 88963,
+     "tone": {
+      "carrying": 88904,
+      "availability_pct": 99.93,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 59640,
+        "share_pct": 67.08
+       },
+       {
+        "group": "neutral",
+        "count": 3673,
+        "share_pct": 4.13
+       },
+       {
+        "group": "positive",
+        "count": 25591,
+        "share_pct": 28.78
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 88940,
+      "count": 60876,
+      "share_pct": 68.45
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.024,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.027
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "inflation",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "inflation",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 16010,
+       "critical": 9682,
+       "critical_pct": 60.5,
+       "negative": 9776,
+       "positive": 5400,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 10990,
+       "critical": 7202,
+       "critical_pct": 65.5,
+       "negative": 6484,
+       "positive": 3963,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 14725,
+       "critical": 8446,
+       "critical_pct": 57.4,
+       "negative": 9380,
+       "positive": 4805,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 14801,
+       "critical": 9547,
+       "critical_pct": 64.5,
+       "negative": 8989,
+       "positive": 5179,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 15673,
+       "critical": 10207,
+       "critical_pct": 65.1,
+       "negative": 8812,
+       "positive": 6166,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 13409,
+       "critical": 9116,
+       "critical_pct": 68.0,
+       "negative": 7759,
+       "positive": 5187,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 12431,
+       "critical": 8443,
+       "critical_pct": 67.9,
+       "negative": 7229,
+       "positive": 4710,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 15147,
+       "critical": 9849,
+       "critical_pct": 65.0,
+       "negative": 8486,
+       "positive": 5979,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 13877,
+       "critical": 9393,
+       "critical_pct": 67.7,
+       "negative": 7875,
+       "positive": 5455,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 17562,
+       "critical": 11751,
+       "critical_pct": 66.9,
+       "negative": 10580,
+       "positive": 6146,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 26933,
+       "critical": 19295,
+       "critical_pct": 71.6,
+       "negative": 20098,
+       "positive": 5827,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 30591,
+       "critical": 20437,
+       "critical_pct": 66.8,
+       "negative": 21087,
+       "positive": 8163,
+       "partial_period": false
+      }
+     ],
+     "total": 202149,
+     "critical_total": 133368,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.419,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.422
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "inflation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "inflation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 88963,
+     "carrying": 39630,
+     "availability_pct": 44.55,
+     "items": [
+      {
+       "country": "united states",
+       "count": 17993,
+       "share_pct": 20.23
+      },
+      {
+       "country": "india",
+       "count": 4478,
+       "share_pct": 5.03
+      },
+      {
+       "country": "iran",
+       "count": 3432,
+       "share_pct": 3.86
+      },
+      {
+       "country": "united kingdom",
+       "count": 2202,
+       "share_pct": 2.48
+      },
+      {
+       "country": "australia",
+       "count": 1022,
+       "share_pct": 1.15
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 10503
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.035,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.037
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "inflation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "inflation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "economy news: inflation rate analysis",
+       "count": 12978,
+       "share": 21.43,
+       "lift": 194.33,
+       "baseline_count": 9,
+       "previous_period_count": 8183,
+       "delta_pct": 58.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "market sentiment and investor behavior",
+       "count": 3991,
+       "share": 6.59,
+       "lift": 268.92,
+       "baseline_count": 2,
+       "previous_period_count": 1236,
+       "delta_pct": 222.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: central bank interest rate decisions",
+       "count": 6952,
+       "share": 11.48,
+       "lift": 187.37,
+       "baseline_count": 5,
+       "previous_period_count": 5765,
+       "delta_pct": 20.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "economy news: monetary policy changes",
+       "count": 6905,
+       "share": 11.4,
+       "lift": 186.1,
+       "baseline_count": 5,
+       "previous_period_count": 5668,
+       "delta_pct": 21.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "foreign exchange (forex) rate fluctuations",
+       "count": 3455,
+       "share": 5.7,
+       "lift": 232.8,
+       "baseline_count": 2,
+       "previous_period_count": 1542,
+       "delta_pct": 124.1,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 88963,
+     "carrying": 60574,
+     "carrier_share_pct": 68.09,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.824,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.828
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "inflation",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "inflation",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2e3e10e6594f7ebaf434e8",
+       "headline": "Portion of road to close for 1 week in Moraine",
+       "url": "https://www.yahoo.com/news/articles/portion-road-close-1-week-072959599.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-27T07:29:59",
+       "lede": "donald trump’s false claims about the iran war, epstein files, tariffs and inflation have left some supporters who have traditionally believed all he says feeling duped and abandoned. why now? the declaration of independence isn’t just a philosophical breakup letter. it was a strategic move to secure vital support for",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.85
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e99286d47fc02832120435",
+       "headline": "War-linked energy shock pushing inflation higher in Europe: IMF expert",
+       "url": "https://www.fibre2fashion.com/news/economics/war-linked-energy-shock-pushing-inflation-higher-in-europe-imf-expert-309803-newsdetails.htm",
+       "publisher": "fibre2fashion.com",
+       "published_at": "2026-04-22T00:00:00",
+       "lede": "in the euro area, where inflation is close to target and medium-term expectations are broadly anchored, the european central bank has some scope to wait and observe the shock evolve before acting. imf now expects a cumulative 50 basis point increase in the policy rate by the end of this",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european central bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2eaf7d83fc01faba2a26a8",
+       "headline": "Government predicts €1.2bn budget deficit and says inflation could reach 6.7% in 2026",
+       "url": "http://www.irishexaminer.com/news/politics/arid-41831243.html",
+       "publisher": "irishexaminer.com",
+       "published_at": "2026-04-21T11:30:00",
+       "lede": "the department of finance is predicting a €1.2bn budget deficit in 2026, and forecasts inflation peaking at 6.7% as part of a worst case scenario if the war in the middle east continues. as part of its annual progress report and spring economic forecast, the department outlined three scenarios, depending",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.65
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e888829baafc7356949c17",
+       "headline": "War-linked energy shock pushing inflation higher in Europe: IMF expert",
+       "url": "https://www.fibre2fashion.com/news/textile-news/war-linked-energy-shock-pushing-inflation-higher-in-europe-imf-expert-309803-newsdetails.htm",
+       "publisher": "fibre2fashion.com",
+       "published_at": "2026-04-21T00:00:00",
+       "lede": "in the euro area, where inflation is close to target and medium-term expectations are broadly anchored, the european central bank has some scope to wait and observe the shock evolve before acting. imf now expects a cumulative 50 basis point increase in the policy rate by the end of this",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.69
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "european central bank"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e87eed7bb1410d4c85ee36",
+       "headline": "Iranians Fear No Relief After War Ends",
+       "url": "https://www.ibtimes.sg/calm-streets-cafes-reopen-rising-fears-repression-grip-even-after-war-iran-85527",
+       "publisher": "ibtimes.sg",
+       "published_at": "2026-04-20T06:55:04",
+       "lede": "shops and public spaces reopen in parts of urban iran many citizens fear stronger repression after conflict ends war worsened economy through damage, inflation and restrictions analysts say social anger and divisions remain unresolved on the surface, parts of urban iran appear to be regaining rhythm. shops, restaurants and government",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.65
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e862035cfa3e5ba5f0972f",
+       "headline": "Mit dem Unglück leben – die einfachen Russen und ihre ganz normale Misere",
+       "url": "https://www.nzz.ch/feuilleton/zunehmender-frust-die-einfachen-russen-beginnen-zu-ahnen-dass-ihre-misere-auch-mit-dem-krieg-zusammenhaengt-ld.1932570",
+       "publisher": "nzz.ch",
+       "published_at": "2026-04-16T05:30:00",
+       "lede": "increasing frustration – the simple russians begin to suspect that their misery is also connected with war security madness, repression and inflation – life in moscow is also getting harder. the anger about the authorities is great, but there is no open protest – no one wants to ruin his",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e3cdfdb8c34c1508f76345",
+       "headline": "Opinião de Jorge Noutel: A injustiça, a ganância, o louco e a catástrofe - Jornal o Interior",
+       "url": "https://www.ointerior.pt/opiniao/opiniao-de-jorge-noutel-a-injustica-a-ganancia-o-louco-e-a-catastrofe/",
+       "publisher": "ointerior.pt",
+       "published_at": "2026-04-11T11:00:33",
+       "lede": "the world will suffer from the severe economic crisis triggered by the war in the middle east. the most fragile and sector-dependent economies, such as tourism, will suffer even more. the inflation we are witnessing will determine an even more unequal planet than the one that already existed and, therefore,",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e895087bb1410d4c956a9e",
+       "headline": "IMF Warns Iran War Will Leave Lasting Scars on Global Economy | OilPrice.com",
+       "url": "https://oilprice.com/Energy/Energy-General/IMF-Warns-Iran-War-Will-Leave-Lasting-Scars-on-Global-Economy.html",
+       "publisher": "oilprice.com",
+       "published_at": "2026-04-10T16:00:00",
+       "lede": "several fuel shortages, hunger, and spiralling inflation will be some of the consequences of the iran war as the head of the international monetary fund said that it would leave \"scarring effects\" on the global economy. in a speech by kristalina georgieva, the imf's managing director, global policymakers were warned",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.59
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        }
+       ],
+       "country": "france",
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e85a5b5cfa3e5ba5ec3d0c",
+       "headline": "Fuel shortages and inflation: IMF warns of ‘scarring’ harm from war",
+       "url": "https://www.cityam.com/fuel-shortages-hunger-inflation-spiral-imf-fears-scarring-harm-from-iran-war/",
+       "publisher": "cityam.com",
+       "published_at": "2026-04-09T14:00:00",
+       "lede": "fuel shortages, hunger, inflation spiral: imf fears ‘scarring’ harm from iran war kristalina georgieva has warned of mass fuel shortages. several fuel shortages, hunger and spiralling inflation will be some of the consequences of the iran war as the head of the international monetary fund said that it would leave",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.58
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.55
+        }
+       ],
+       "country": "france",
+       "organizations": [
+        "international monetary fund",
+        "international monetary fund"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e2cb65d754bf662cdfe7cd",
+       "headline": "Singapore's overall inflation for 2026 expected to rise amid ongoing Middle East conflict",
+       "url": "https://www.asiaone.com/singapore/overall-inflation-2026-expected-rise-middle-east-conflict",
+       "publisher": "asiaone.com",
+       "published_at": "2026-04-07T05:45:14",
+       "lede": "singapore's overall inflation for 2026 is expected to rise above the earlier projection of between 1 to 2 per cent because of the ongoing middle east conflict. deputy prime minister gan kim yong — who is also trade and industry minister — told parliament so on tuesday (april 7) in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.61
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.6
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "gan kim yong"
+       ]
+      },
+      {
+       "id": "69e2a9ae3aab8d96aa33c38d",
+       "headline": "No end in sight to hip-pocket pain amid Middle East tensions",
+       "url": "https://thewest.com.au/business/sean-smith-no-end-in-sight-to-hip-pocket-agony-amid-middle-east-tensions-c-22082868",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-04-04T18:00:00",
+       "lede": "the blind optimism of investors is on full show. they desperately want to believe the middle east war is near its end and the strait of hormuz will soon open, restoring energy flows and reducing the threat of a global inflation tsunami. but the more likely outcome is that we’re",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.72
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.7
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e290c2c1991f786ce47698",
+       "headline": "No end in sight to hip-pocket pain amid Middle East tensions",
+       "url": "https://www.thewest.com.au/business/sean-smith-no-end-in-sight-to-hip-pocket-agony-amid-middle-east-tensions-c-22082868",
+       "publisher": "thewest.com.au",
+       "published_at": "2026-04-04T18:00:00",
+       "lede": "the blind optimism of investors is on full show. they desperately want to believe the middle east war is near its end and the strait of hormuz will soon open, restoring energy flows and reducing the threat of a global inflation tsunami. but the more likely outcome is that we’re",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.72
+        },
+        {
+         "code": 33,
+         "path": "/People & Society/Social Sciences/Political Science",
+         "score": 0.7
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2b86990d9a716b4c2351a",
+       "headline": "Letter to the editor: Trump not Making America Great Again",
+       "url": "https://triblive.com/opinion/letter-to-the-editor-trump-not-making-america-great-again/",
+       "publisher": "triblive.com",
+       "published_at": "2026-04-03T07:00:00",
+       "lede": "during his 2024 campaign, president trump claimed he was going to decrease inflation dramatically on day one if he was elected. he was also going to solve immigration, save manufacturing and coal jobs, and not start any wars, as if he had a bag of fairy dust to sprinkle around",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.56,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.75
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 23141,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0wMyAwNzowMDowMCIsImkiOiI2OWUyYjg2OTkwZDlhNzE2YjRjMjM1MWEiLCJwIjo5fQ",
+     "unresolved": 12,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.571,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "12 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.573
+    }
+   }
+  }
+ ]
+}

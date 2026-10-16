@@ -1,0 +1,1021 @@
+{
+ "slug": "content-moderation-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:08:07Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "content moderation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "content moderation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 562,
+     "tone": {
+      "carrying": 562,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 354,
+        "share_pct": 62.99
+       },
+       {
+        "group": "neutral",
+        "count": 7,
+        "share_pct": 1.25
+       },
+       {
+        "group": "positive",
+        "count": 201,
+        "share_pct": 35.77
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 562,
+      "count": 450,
+      "share_pct": 80.07
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.565,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.569
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "content moderation",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "content moderation",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 143,
+       "critical": 112,
+       "critical_pct": 78.3,
+       "negative": 109,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 147,
+       "critical": 117,
+       "critical_pct": 79.6,
+       "negative": 111,
+       "positive": 31,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 141,
+       "critical": 73,
+       "critical_pct": 51.8,
+       "negative": 92,
+       "positive": 49,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 128,
+       "critical": 93,
+       "critical_pct": 72.7,
+       "negative": 97,
+       "positive": 30,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 195,
+       "critical": 168,
+       "critical_pct": 86.2,
+       "negative": 170,
+       "positive": 23,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 93,
+       "critical": 71,
+       "critical_pct": 76.3,
+       "negative": 69,
+       "positive": 23,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 80,
+       "critical": 64,
+       "critical_pct": 80.0,
+       "negative": 57,
+       "positive": 22,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 148,
+       "critical": 126,
+       "critical_pct": 85.1,
+       "negative": 99,
+       "positive": 44,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 163,
+       "critical": 143,
+       "critical_pct": 87.7,
+       "negative": 94,
+       "positive": 66,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 125,
+       "critical": 94,
+       "critical_pct": 75.2,
+       "negative": 78,
+       "positive": 46,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 149,
+       "critical": 119,
+       "critical_pct": 79.9,
+       "negative": 111,
+       "positive": 35,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 125,
+       "critical": 94,
+       "critical_pct": 75.2,
+       "negative": 71,
+       "positive": 54,
+       "partial_period": false
+      }
+     ],
+     "total": 1637,
+     "critical_total": 1274,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.067,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.07
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "content moderation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "content moderation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 562,
+     "carrying": 312,
+     "availability_pct": 55.52,
+     "items": [
+      {
+       "country": "united states",
+       "count": 176,
+       "share_pct": 31.32
+      },
+      {
+       "country": "colombia",
+       "count": 21,
+       "share_pct": 3.74
+      },
+      {
+       "country": "india",
+       "count": 17,
+       "share_pct": 3.02
+      },
+      {
+       "country": "united kingdom",
+       "count": 16,
+       "share_pct": 2.85
+      },
+      {
+       "country": "indonesia",
+       "count": 14,
+       "share_pct": 2.49
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 68
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.015,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.019
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "content moderation",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "content moderation",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "social media platform updates",
+       "count": 19,
+       "share": 8.19,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 4,
+       "delta_pct": 375.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "political and activism-focused networks",
+       "count": 12,
+       "share": 5.17,
+       "lift": 422.22,
+       "baseline_count": 1,
+       "previous_period_count": 4,
+       "delta_pct": 200.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "legal aspects of intellectual property",
+       "count": 12,
+       "share": 5.17,
+       "lift": 211.11,
+       "baseline_count": 2,
+       "previous_period_count": 2,
+       "delta_pct": 500.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "social news aggregation and discussion sites",
+       "count": 7,
+       "share": 3.02,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 3,
+       "delta_pct": 133.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "regulatory compliance frameworks",
+       "count": 7,
+       "share": 3.02,
+       "lift": 246.3,
+       "baseline_count": 1,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 562,
+     "carrying": 232,
+     "carrier_share_pct": 41.28,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.056,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.059
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "content moderation",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "content moderation",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e84bae5cfa3e5ba5e3b3f4",
+       "headline": "ADL warns Meta policy shift could hurt ad revenue as report notes rise in hateful, extremist content",
+       "url": "https://www.foxbusiness.com/media/adl-warns-meta-policy-shift-could-hurt-ad-revenue-report-notes-rise-hateful-extremist-content",
+       "publisher": "foxbusiness.com",
+       "published_at": "2026-04-15T15:30:30",
+       "lede": "meta announced a rollback of its content moderation policies last year in a major shift from what it had done in the past. the anti-defamation league (adl) is warning that the move has not only allowed hateful and even pro-terror content to spread, but has also put a source of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 85,
+         "path": "/Online Communities/Social Networks",
+         "score": 0.61
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "anti-defamation league",
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2b26135cefb83fe87f974a",
+       "headline": "Hate content thrives on Instagram due to lax Meta ‘removal’ policies: report",
+       "url": "https://www.yahoo.com/news/articles/hate-content-thrives-instagram-due-110000607.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-15T11:00:00",
+       "lede": "meta’s rollback of content moderation policies has allowed antisemitism, white supremacy and terrorist propaganda to flourish on instagram, a new report released wednesday by the anti-defamation league’s center on extremism claims. the analysis — ‘“how meta’s content moderation changes risk turning instagram into a hub for hate”– reveals that instagram",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 85,
+         "path": "/Online Communities/Social Networks",
+         "score": 0.79
+        },
+        {
+         "code": 99,
+         "path": "/Sensitive Subjects/Other",
+         "score": 0.62
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8d8067bb1410d4ccc03d6",
+       "headline": "Forgetting the basics? Resurgent Islamic State on Facebook - VOX - Pol",
+       "url": "https://voxpol.eu/forgetting-the-basics-resurgent-islamic-state-on-facebook/",
+       "publisher": "voxpol.eu",
+       "published_at": "2026-04-15T11:00:00",
+       "lede": "by sean mccafferty in recent years there has been suggestion of a tech backslide by major social media platforms, leading to a reduction in proactive content moderation. this has become a significant concern for scholars of online terrorism. this blog post examines a sample of empirical data from facebook that",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 85,
+         "path": "/Online Communities/Social Networks",
+         "score": 0.75
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.58
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "social media",
+        "facebook"
+       ],
+       "people": [
+        "sean mccafferty"
+       ]
+      },
+      {
+       "id": "69e8d4b45cfa3e5ba544562b",
+       "headline": "Hate content thrives on Instagram due to lax Meta ‘removal’ policies: report",
+       "url": "https://nypost.com/2026/04/15/tech/hate-content-flourishing-on-metas-instagram-adl-report-claims/",
+       "publisher": "nypost.com",
+       "published_at": "2026-04-15T11:00:00",
+       "lede": "meta’s rollback of content moderation policies has allowed antisemitism, white supremacy and terrorist propaganda to flourish on instagram, a new report released wednesday by the anti-defamation league’s center on extremism claims. the analysis — ‘“how meta’s content moderation changes risk turning instagram into a hub for hate”– reveals that instagram",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 85,
+         "path": "/Online Communities/Social Networks",
+         "score": 0.78
+        },
+        {
+         "code": 99,
+         "path": "/Sensitive Subjects/Other",
+         "score": 0.61
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "instagram",
+        "anti-defamation league",
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e29009a85be7e5065862eb",
+       "headline": "Balancing Humans and AI in Content Moderation - Concentrix",
+       "url": "https://www.concentrix.com/insights/blog/ai-in-content-moderation-striking-the-right-balance-in-trust-and-safety-operations/",
+       "publisher": "concentrix.com",
+       "published_at": "2026-04-01T13:07:01",
+       "lede": "the verdict is in: you can’t fully replace moderators with ai. for the past few years, the conversation around ai in content moderation has leaned toward a vision of fully automating trust and safety operations. yet, adopters across the digital safety ecosystem know the reality is much more complex. the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.8
+        }
+       ],
+       "country": "france",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc501074cdb9f7951d2308",
+       "headline": "Musk and Zuckerberg's Relationship: From Cage Match to Cozy Collaboration?",
+       "url": "https://us.headtopics.com/news/musk-and-zuckerberg-s-relationship-from-cage-match-to-cozy-81539284",
+       "publisher": "us.headtopics.com",
+       "published_at": "2026-03-28T03:15:00",
+       "lede": "new court filings reveal private communications between elon musk and mark zuckerberg, showcasing a shift from a potential cage match to a collaborative relationship. the documents detail discussions about content moderation, political activity, and a potential joint venture involving openai, highlighting the complex dynamics between the tech titans, particularly in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "openai"
+       ],
+       "people": [
+        "elon musk",
+        "mark zuckerberg",
+        "mark zuckerberg"
+       ]
+      },
+      {
+       "id": "69cc47ff4a99add5b2985d09",
+       "headline": "Brendan Carr says his broadcast license threat wasn’t really about Iran war coverage",
+       "url": "http://www.theverge.com/policy/902132/brendan-carr-iran-broadcast-license-threat",
+       "publisher": "theverge.com",
+       "published_at": "2026-03-26T23:53:16",
+       "lede": "is a senior policy reporter at the verge, covering the intersection of silicon valley and capitol hill. she spent 5 years covering tech policy at cnbc, writing about antitrust, privacy, and content moderation reform.posts from this author will be added to your daily email digest and your homepage feed.federal communications",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "cnbc",
+        "the verge"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c8a44f79a596b4f7c05c78",
+       "headline": "Brendan Carr says his broadcast license threat wasn’t really about Iran war coverage",
+       "url": "https://www.theverge.com/policy/902132/brendan-carr-iran-broadcast-license-threat",
+       "publisher": "theverge.com",
+       "published_at": "2026-03-26T23:53:16",
+       "lede": "is a senior policy reporter at the verge, covering the intersection of silicon valley and capitol hill. she spent 5 years covering tech policy at cnbc, writing about antitrust, privacy, and content moderation reform.posts from this author will be added to your daily email digest and your homepage feed.federal communications",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "cnbc",
+        "the verge"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cc1e54fc7cf9505388a536",
+       "headline": "Meta watchdog says grassroots fact checks risk harm to users",
+       "url": "https://www.digitaljournal.com/world/meta-watchdog-says-grassroots-fact-checks-risk-harm-to-users/article",
+       "publisher": "digitaljournal.com",
+       "published_at": "2026-03-26T10:12:20",
+       "lede": "meta has already axed third-party fact checking in the us - copyright afp/file julien de rosathe body created by facebook to review content moderation decisions warned thursday that user-generated fact-checks could harm people living under repression or conflict if they are introduced worldwide.facebook parent meta announced last year that it",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 85,
+         "path": "/Online Communities/Social Networks",
+         "score": 0.85
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "meta",
+        "facebook"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbd4b1e6465b4d565246b6",
+       "headline": "Meta plans to increase use of AI systems for moderation",
+       "url": "https://www.rte.ie/news/2026/0319/1564272-meta-ai-moderation/",
+       "publisher": "rte.ie",
+       "published_at": "2026-03-19T20:07:41",
+       "lede": "facebook parent company meta has announced plans to use advanced ai systems in the future which it said will reduce its reliance on third-party vendors for content moderation.the company today rolled out a meta ai support assistant on facebook and instagram, designed to help resolve account problems for users.the issues",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.42,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 85,
+         "path": "/Online Communities/Social Networks",
+         "score": 0.89
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.62
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.47
+        }
+       ],
+       "country": "ireland",
+       "organizations": [
+        "meta",
+        "meta ai",
+        "facebook",
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e64b3c2461615d5f4957bd",
+       "headline": "Meta replaces moderation staff with AI, expands access to AI support bot",
+       "url": "https://www.socialmediatoday.com/news/meta-replaces-moderation-staff-with-ai-expands-access-to-ai-support-bot/815268/",
+       "publisher": "socialmediatoday.com",
+       "published_at": "2026-03-19T19:18:00",
+       "lede": "listen to the article 4 min this audio is auto-generated. please let us know if you have feedback in the first of what will likely be many similar announcements from the company, meta has today announced that it’s expanding its reliance on artificial intelligence tools for content moderation, and reducing",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.43,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.63
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.57
+        }
+       ],
+       "country": "colombia",
+       "organizations": [
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c3a896cce5bf5634ec4ca7",
+       "headline": "Meta says AI will reduce reliance on external vendors",
+       "url": "https://www.rte.ie/news/business/2026/0319/1564262-meta-ai-vendors/",
+       "publisher": "rte.ie",
+       "published_at": "2026-03-19T18:41:45",
+       "lede": "facebook parent company meta has announced plans to use advanced ai systems in the future, which it said will reduce its reliance on third-party vendors for content moderation.the company today rolled out a meta ai support assistant on facebook and instagram, designed to help resolve account problems for users.the issues",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 85,
+         "path": "/Online Communities/Social Networks",
+         "score": 0.89
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.64
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "meta",
+        "meta ai",
+        "facebook",
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e863e27bb1410d4c74845b",
+       "headline": "Meta will move away from human content moderators in favor of more AI",
+       "url": "https://www.engadget.com/social-media/meta-will-move-away-from-human-content-moderators-in-favor-of-more-ai-183000435.html",
+       "publisher": "engadget.com",
+       "published_at": "2026-03-19T18:30:00",
+       "lede": "a little more than a year after ditching third-party fact checkers and rolling back much of its proactive content moderation, the company says it will further \"transform\" its approach by drastically reducing the number of human moderators in favor of ai-based systems. the company says the change will happen \"over",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d1d1bc9f8928f2970f4316",
+       "headline": "EU’s New Rules Put TikTok Under Pressure for Enhanced Content Moderation",
+       "url": "https://www.theedadvocate.org/eus-new-rules-put-tiktok-under-pressure-for-enhanced-content-moderation/",
+       "publisher": "theedadvocate.org",
+       "published_at": "2026-03-19T13:11:24",
+       "lede": "spread the love the european union (eu) is ramping up its efforts to regulate social media platforms, particularly tiktok, by proposing new legislation aimed at enhancing content moderation systems. this initiative, unveiled by eu digital commissioner thierry breton, places a significant emphasis on protecting minors from harmful content and misinformation,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 85,
+         "path": "/Online Communities/Social Networks",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "tiktok"
+       ],
+       "people": [
+        "thierry breton"
+       ]
+      },
+      {
+       "id": "6a2ac0445cefb83fe837b39d",
+       "headline": "Hackers reportedly stole nearly 1,000TB of data from Telus Digital",
+       "url": "https://mobilesyrup.com/2026/03/12/hackers-steal-nearly-1000tb-of-data-from-telus-digital/",
+       "publisher": "mobilesyrup.com",
+       "published_at": "2026-03-12T21:17:34",
+       "lede": "telus confirms that telus digital has suffered a security incident after hackers reportedly stole nearly a petabyte (1,000tb) of data over several months. the telus digital arm of telus provides customer support, content moderation, ai data services and other operational services to companies worldwide. the hackers, known as shinyhunters (likely",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 152,
+         "path": "/Computers & Electronics/Computer Security/Hacking & Cracking",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbab3cd4ae0326ef5c7527",
+       "headline": "Indonesia issues 'stern warning' to Meta over disinformation and online gambling",
+       "url": "https://www.domain-b.com/technology/technology-general/indonesia-meta-warning-disinformation-2026",
+       "publisher": "domain-b.com",
+       "published_at": "2026-03-05T11:06:32",
+       "lede": "indonesia’s ministry of communications and digital affairs is demanding immediate improvements to meta’s content moderation efforts. (ai generated)1summaryindonesia’s communications ministry has issued a stern warning to meta after finding low compliance with government takedown requests targeting disinformation and online gambling content. the move highlights growing regulatory pressure on major tech",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.36,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "indonesia",
+       "organizations": [
+        "meta"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c97dffb68ade25f5c6bd65",
+       "headline": "Trump admin develops ‘Freedom.gov’ portal for Europeans, others to access banned content - Amed Post",
+       "url": "https://amedpost.com/trump-admin-develops-freedom-gov-portal-for-europeans-others-to-access-banned-content/",
+       "publisher": "amedpost.com",
+       "published_at": "2026-02-19T21:36:08",
+       "lede": "washington — the state department is developing an internal portal to give foreign nationals in europe and elsewhere a tool to skirt their home country’s governmental content moderation policies.sporting the domain “freedom.gov,” the portal being developed is intended to help combat internet censorship around the world, including by european allies.“digital",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.54
+        },
+        {
+         "code": 220,
+         "path": "/Internet & Telecom/Other",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e2c027c1991f786cee65ae",
+       "headline": "AI rules: 2-hour deepfake takedown timeline lands Big Tech in compliance furore",
+       "url": "https://startupnews.fyi/post/ai-rules-2-hour-deepfake-takedown-timeline-lands-big-tech-in-compliance-furore",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-02-11T14:57:44",
+       "lede": "new delhi: india’s first-ever artificial intelligence (ai) law, notified on tuesday, may set big tech scrambling to put in place adequate content moderation teams after new delhi drastically shortened timelines for taking down deepfake posts with nudity, defamatory and other illicit content. the centre has maintained that most technology firms",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.32,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 351,
+         "path": "/Adult",
+         "score": 0.51
+        }
+       ],
+       "country": "singapore",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 90,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0xMSAxNDo1Nzo0NCIsImkiOiI2OWUyYzAyN2MxOTkxZjc4NmNlZTY1YWUiLCJwIjo4fQ",
+     "unresolved": 7,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.483,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "7 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.485
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1077 @@
+{
+ "slug": "drones-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:10:48Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "drones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "drones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 30448,
+     "tone": {
+      "carrying": 30420,
+      "availability_pct": 99.91,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 20785,
+        "share_pct": 68.33
+       },
+       {
+        "group": "neutral",
+        "count": 1843,
+        "share_pct": 6.06
+       },
+       {
+        "group": "positive",
+        "count": 7792,
+        "share_pct": 25.61
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 30443,
+      "count": 25215,
+      "share_pct": 82.83
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.581,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.583
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "drones",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "drones",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 5803,
+       "critical": 4716,
+       "critical_pct": 81.3,
+       "negative": 4122,
+       "positive": 1497,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 4798,
+       "critical": 3987,
+       "critical_pct": 83.1,
+       "negative": 3397,
+       "positive": 1255,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 4592,
+       "critical": 3377,
+       "critical_pct": 73.5,
+       "negative": 3049,
+       "positive": 1405,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 4238,
+       "critical": 3158,
+       "critical_pct": 74.5,
+       "negative": 2418,
+       "positive": 1710,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 8629,
+       "critical": 7123,
+       "critical_pct": 82.5,
+       "negative": 6412,
+       "positive": 1848,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 4596,
+       "critical": 3616,
+       "critical_pct": 78.7,
+       "negative": 3007,
+       "positive": 1432,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 3596,
+       "critical": 2857,
+       "critical_pct": 79.4,
+       "negative": 2127,
+       "positive": 1340,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 3397,
+       "critical": 2758,
+       "critical_pct": 81.2,
+       "negative": 2023,
+       "positive": 1263,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 3200,
+       "critical": 2561,
+       "critical_pct": 80.0,
+       "negative": 1808,
+       "positive": 1284,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 4901,
+       "critical": 3834,
+       "critical_pct": 78.2,
+       "negative": 2929,
+       "positive": 1776,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 13294,
+       "critical": 11814,
+       "critical_pct": 88.9,
+       "negative": 10479,
+       "positive": 2372,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 9053,
+       "critical": 7006,
+       "critical_pct": 77.4,
+       "negative": 5569,
+       "positive": 2360,
+       "partial_period": false
+      }
+     ],
+     "total": 70097,
+     "critical_total": 56807,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.91,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.912
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "drones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "drones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 30448,
+     "carrying": 13472,
+     "availability_pct": 44.25,
+     "items": [
+      {
+       "country": "united states",
+       "count": 4590,
+       "share_pct": 15.07
+      },
+      {
+       "country": "ukraine",
+       "count": 1424,
+       "share_pct": 4.68
+      },
+      {
+       "country": "iran",
+       "count": 1337,
+       "share_pct": 4.39
+      },
+      {
+       "country": "united arab emirates",
+       "count": 1139,
+       "share_pct": 3.74
+      },
+      {
+       "country": "russia",
+       "count": 969,
+       "share_pct": 3.18
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 4013
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.134,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 4.136
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "drones",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "drones",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "war journalism and media coverage",
+       "count": 1786,
+       "share": 7.68,
+       "lift": 208.94,
+       "baseline_count": 3,
+       "previous_period_count": 448,
+       "delta_pct": 298.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "naval and aerial combat operations",
+       "count": 7651,
+       "share": 32.89,
+       "lift": 89.51,
+       "baseline_count": 30,
+       "previous_period_count": 4205,
+       "delta_pct": 82.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "military technology advancements",
+       "count": 8939,
+       "share": 38.43,
+       "lift": 71.3,
+       "baseline_count": 44,
+       "previous_period_count": 5467,
+       "delta_pct": 63.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "space warfare and militarization of space",
+       "count": 4630,
+       "share": 19.91,
+       "lift": 90.27,
+       "baseline_count": 18,
+       "previous_period_count": 3406,
+       "delta_pct": 35.9,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "cybersecurity and cyber warfare",
+       "count": 7220,
+       "share": 31.04,
+       "lift": 70.39,
+       "baseline_count": 36,
+       "previous_period_count": 4698,
+       "delta_pct": 53.7,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 30448,
+     "carrying": 23259,
+     "carrier_share_pct": 76.39,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.391,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.393
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "drones",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "drones",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2abdeac37f6c5e66ef8ca4",
+       "headline": "Ukrainian Drones Strike Perm Oil Refinery as Putin Proposes Truce",
+       "url": "https://world.infonasional.com/ukraine-drones-perm-oil-ceasefire",
+       "publisher": "world.infonasional.com",
+       "published_at": "2026-04-30T22:04:01",
+       "lede": "ukrainian long-range drones targeted a major oil refinery in perm on thursday, april 30, 2026, marking an expansion of strikes against russian energy infrastructure located over 1,500km from the front lines. the operation targeted a lukoil-owned facility, which ranks among the largest refineries in the russian federation.the security service of",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.85
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.56
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e949683fc01faba140653",
+       "headline": "As Tuapse oil refinery fire spreads, Russian tour operators downplay risks to summer tourists",
+       "url": "https://www.yahoo.com/news/articles/people-once-envied-us-tuapse-180224935.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-29T18:02:24",
+       "lede": "local russian authorities are struggling to deal with the aftermath of ukrainian strikes on the oil refinery in tuapse on the black sea coast, even as tour operators continue to count on a busy resort season. ukrainian drones struck an oil facility in krasnodar krai, which processes about 12 million",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.75
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.62
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.56
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ed7e68e67a2fcb3df9be1",
+       "headline": "Ukraine Strikes Russian Oil Pumping Station",
+       "url": "https://marinelink.com/news/ukraine-strikes-russian-oil-pumping-538607",
+       "publisher": "marinelink.com",
+       "published_at": "2026-04-29T13:27:04",
+       "lede": "ukraine struck what it said was an oil pumping station 1,500 km (900 miles) into russia near the ural mountains with drones overnight, and president volodymyr zelenskiy said kyiv would keep increasing the range of its strikes. kyiv has stepped up its attacks inside russia in recent weeks, aiming to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.86
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.53
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22fc6c6105443aa5eb58e",
+       "headline": "Ukraine says it hits Russian oil pumping station 1,500 km away",
+       "url": "https://www.detroitnews.com/story/news/world/2026/04/29/ukraine-hits-russian-oil-pumping-station-1500-km-away/89852773007/",
+       "publisher": "detroitnews.com",
+       "published_at": "2026-04-29T13:19:05",
+       "lede": "reuters april 29, 2026, 9:19 a.m. et ukraine struck what it said was an oil pumping station 1,500 km (900 miles) into russia near the ural mountains with drones overnight, and president volodymyr zelenskiy said kyiv would keep increasing the range of its strikes. kyiv has stepped up its attacks",
+       "sentiment": {
+        "label": "fair_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.82
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.63
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.55
+        }
+       ],
+       "country": "russia",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2aad7f5cefb83fe82a9b17",
+       "headline": "Ukraine says it hits Russian oil pumping station 1,500 km away",
+       "url": "https://economictimes.indiatimes.com/news/defence/ukraine-says-it-hits-russian-oil-pumping-station-1500-km-away/articleshow/130608654.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-29T13:18:00",
+       "lede": "ukraine struck what it said was an oil pumping station 1,500 km (900 miles) into russia near the ural mountains with drones overnight, and president volodymyr zelenskiy said kyiv would keep increasing the range of its strikes.kyiv has stepped up its attacks inside russia in recent weeks, aiming to knock",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.85
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.51
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2b29085cefb83fe881f858",
+       "headline": "Ukraine Extends Range of Strikes on Russia, Hits Oil Targets",
+       "url": "http://globalbankingandfinance.com/zelenskiy-ukraine-continue-extending-range-strikes-russia/",
+       "publisher": "globalbankingandfinance.com",
+       "published_at": "2026-04-29T10:31:38",
+       "lede": "ukraine says it hits russian oil pumping station 1,500 km away ukrainian drone strikes deep inside russia and their impact april 29 (reuters) - ukraine struck what it said was an oil pumping station 1,500 km (900 miles) into russia near the ural mountains with drones overnight, and president volodymyr",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.5,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.86
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.8
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8852e43843dd771d11b70",
+       "headline": "Ukraine says it shot down 33,000 Russian drones in March, a monthly record",
+       "url": "https://www.ajc.com/news/2026/04/ukraine-says-it-shot-down-33000-russian-drones-in-march-a-monthly-record/",
+       "publisher": "ajc.com",
+       "published_at": "2026-04-29T02:32:01",
+       "lede": "nation & world news ukraine says it shot down 33,000 russian drones in march, a monthly record ukraine’s defense minister says the country's armed forces shot down more than 33,000 russian drones of various types in march, a record monthly figure since moscow launched its all-out invasion more than four",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.87
+        },
+        {
+         "code": 78,
+         "path": "/Business & Industrial/Aerospace & Defense/Other",
+         "score": 0.64
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.44
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.4
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cd8d399b489398e1a2af",
+       "headline": "Wladimir Putin News: Putin beklagt Angriffe Kiews auf zivile Infrastruktur in Russland",
+       "url": "https://www.news.de/politik/859565860/putin-beklagt-angriffe-kiews-auf-zivile-infrastruktur-in-russland-wladimir-putin-news-der-dpa-aktuell-zu-krieg-und-konflikte/1/",
+       "publisher": "news.de",
+       "published_at": "2026-04-28T19:26:02",
+       "lede": "kremlin chief vladimir putin has complained of a proliferation of ukrainian attacks on civilian objects in russia. \"more and more often drones are used to hit civilian infrastructure,\" he said at a meeting on security issues in the upcoming duma elections in the autumn. he referred to the recent attacks",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.79,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.76
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2293927117df83f93f5c6",
+       "headline": "Third Ukrainian strike hits Russian oil refinery and prompts evacuations",
+       "url": "https://www.nation.com.pk/29-Apr-2026/third-ukrainian-strike-hits-russian-oil-refinery-prompts-evacuations",
+       "publisher": "nation.com.pk",
+       "published_at": "2026-04-28T19:00:00",
+       "lede": "kyiv - a major russian oil refinery on the black sea has been hit for the third time this month by ukrainian drones, causing a “massive fire” and forcing the evacuation of people living nearby, local officials have said. earlier strikes in the past two weeks at the tuapse refinery",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.63,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.79
+        },
+        {
+         "code": 32,
+         "path": "/Business & Industrial/Energy & Utilities/Oil & Gas",
+         "score": 0.44
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.43
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e9ab0e540a46fb53de380",
+       "headline": "Russian Iskander missile storage facility in occupied Crimea hit, Ukraine's Special Forces release video",
+       "url": "https://www.yahoo.com/news/articles/russian-iskander-missile-storage-facility-172958134.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T17:29:58",
+       "lede": "ukrainian drones struck an iskander missiles storage facility in russian-occupied crimea, ukraine's special operations forces (sof) reported on april 28. the storage facility was located on the territory of a former missile base near the village of ovrazhki, 40 kilometers (around 25 miles) from the city of simferopol, sof said.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.87
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2afe2bc37f6c5e661d8008",
+       "headline": "Hezbollah Drone Strikes and Israeli Air Raids Strain Lebanon Ceasefire",
+       "url": "https://www.asatunews.co.id/en/hezbollah-drone-strikes-israeli-air-raids-lebanon-ceasefire",
+       "publisher": "asatunews.co.id",
+       "published_at": "2026-04-28T16:31:18",
+       "lede": "a fragile ceasefire between hezbollah and israel continues to fray as both sides engaged in fresh military actions on tuesday. as reported by the guardian, hezbollah launched multiple drones targeting israeli troops positioned in southern lebanon.while hezbollah claimed the operation resulted in several injuries among israeli soldiers, the israeli military",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.97
+        },
+        {
+         "code": 65,
+         "path": "/News/World News",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d6d4713680636eedc0b3",
+       "headline": "Desperate Russian troops ‘shooting down OWN drones to claim battle bonuses’",
+       "url": "https://www.thescottishsun.co.uk/news/16202145/russian-troops-shoot-drones-claim-bonuses-cannibal-horror/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-04-28T09:41:23",
+       "lede": "hopeless russian soldiers are reportedly shooting down their own drones and then disguising them as ukrainian aircraft so they can claim battle bonuses. it comes as horror claims emerge that vladimir putin’s soldiers are turning to cannibalism as they run low on provisions. sign up for scottish sun newsletter thank",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.89
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "russia",
+       "organizations": [],
+       "people": [
+        "vladimir putin"
+       ]
+      },
+      {
+       "id": "6a2e4ed3bf10c43d296ecc56",
+       "headline": "At least 2 killed, 20 injured in Russian attacks on Ukraine over past day",
+       "url": "https://www.yahoo.com/news/articles/least-2-killed-20-injured-085818626.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-28T08:58:18",
+       "lede": "at least two people have been killed and 20 others injured in russian attacks against ukraine over the past day, local authorities said on april 28. russian forces launched 123 drones against ukraine overnight, of which about 80 were shahed-type ones, the air force said. it reported downing 95 of",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.77,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.85
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0e94279341f3dc2ad3c466",
+       "headline": "Guerre en Ukraine: trois morts dans une attaque de drones ukrainiens dans la région de Belgorod",
+       "url": "http://www.dhnet.be/actu/monde/2026/04/28/guerre-en-ukraine-trois-morts-dans-une-attaque-de-drones-ukrainiens-dans-la-region-de-belgorod-2VVU54EZXZBRZBRBRH3E3Y5NH4/",
+       "publisher": "dhnet.be",
+       "published_at": "2026-04-28T07:23:42",
+       "lede": "\"three civilians were killed as a result of the drone attacks of the ukrainian armed forces,\" he wrote on telegram, stating that three other people were injured. the drones targeted a car in the locality of voznessenovka, killing a man, and a vehicle in the locality of bobrava, where a",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.93
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f881bcbbf1d31455970bcc",
+       "headline": "Russian drone attack wounds 14 while Ukrainian drones kill 2 in Russia-held area",
+       "url": "https://www.ajc.com/news/2026/04/russian-drone-attack-wounds-14-while-ukrainian-drones-kill-2-in-russia-held-area/",
+       "publisher": "ajc.com",
+       "published_at": "2026-04-28T02:52:02",
+       "lede": "nation & world news russian drone attack wounds 14 while ukrainian drones kill 2 in russia-held area authorities in ukraine say a russian drone attack on ukraine’s southern city of odesa has wounded 14 people including two children a person walks near residential houses damaged by a russian strike in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.93
+        }
+       ],
+       "country": "ukraine",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a4d33963d76f4afb229e1",
+       "headline": "A predawn Russian drone strike hits Ukraine's Odesa, wounding 14; 2 killed in Russian-held Kherson",
+       "url": "https://www.dtnext.in/news/world/a-predawn-russian-drone-strike-hits-ukraines-odesa-wounding-14-2-killed-in-russian-held-kherson",
+       "publisher": "dtnext.in",
+       "published_at": "2026-04-27T11:41:40",
+       "lede": "kyiv: a russian drone attack before dawn on ukraine's southern city of odesa wounded 14 people, including two children, authorities said monday, in the latest barrage of civilian areas that have been a hallmark of moscow's full-scale invasion, now in its fifth year..the drones hit residential neighborhoods and civilian infrastructure,",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.93
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4aba3a4d098b40bcc2d2",
+       "headline": "At least 4 killed, 26 injured in Russian attacks on Ukraine over past day",
+       "url": "https://www.yahoo.com/news/articles/least-4-killed-26-injured-082404988.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-04-27T08:24:04",
+       "lede": "at least four people have been killed and 23 others injured in russian attacks against ukraine over the past day, local authorities said on april 27. russia launched 94 drones at ukraine overnight, the air force said, adding that air defenses intercepted 74, while 20 strikes were recorded across 15",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.79,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c6ad399b489398de364a",
+       "headline": "Ukraine-Krieg aktuell: Geheimdienstzentrale fliegt in die Luft - Drohnen schalten Putin-Spione aus",
+       "url": "https://www.news.de/politik/859555173/wladimir-putins-geheimdienstzentrale-in-donezk-gesprengt-video-zeigt-schlag-kreml-spione-bei-drohnenangriff-ausgeschaltet/1/",
+       "publisher": "news.de",
+       "published_at": "2026-04-27T06:47:22",
+       "lede": "ukraine war current: putin spies on drone strike shut down attack blasts putin headquarters for sabotage and terrorist operations putin drones cause damage to nato territory drones play an increasingly central role in the ukraine war - both in offensive operations and with unintended consequences for neighboring states. two recent",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.59,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.86
+        },
+        {
+         "code": 75,
+         "path": "/Law & Government/Military/Other",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e286836d28f995cb57d1",
+       "headline": "Ukraine marks 40 years since Chernobyl disaster with warning",
+       "url": "https://www.independent.ie/world-news/europe/ukraine-marks-40-years-since-chernobyl-disaster-with-warning/a582233375.html",
+       "publisher": "independent.ie",
+       "published_at": "2026-04-27T04:30:00",
+       "lede": "fears russian drones could cause another major disaster members of the chernobyl nuclear plant staff carry candles at a memorial dedicated to firefighters and workers who died after the 1986 nuclear disaster, during a night commemorative service to mark its 40th anniversary, in slavutych, ukraine. photo: reuters ukraine commemorated the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.41,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.61
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.59
+        }
+       ],
+       "country": "russia",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 19,
+     "total_estimate": 9138,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNyAwNDozMDowMCIsImkiOiI2OWYwZTI4NjgzNmQyOGY5OTVjYjU3ZDEiLCJwIjo5fQ",
+     "unresolved": 6,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.21,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "6 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.211
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,963 @@
+{
+ "slug": "census-latest",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:06:04Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "census",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "census",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 9051,
+     "tone": {
+      "carrying": 9046,
+      "availability_pct": 99.94,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 3643,
+        "share_pct": 40.27
+       },
+       {
+        "group": "neutral",
+        "count": 923,
+        "share_pct": 10.2
+       },
+       {
+        "group": "positive",
+        "count": 4480,
+        "share_pct": 49.52
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 9038,
+      "count": 4877,
+      "share_pct": 53.96
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.56,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.566
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "census",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "census",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2766,
+       "critical": 1471,
+       "critical_pct": 53.2,
+       "negative": 1365,
+       "positive": 1142,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 1637,
+       "critical": 875,
+       "critical_pct": 53.5,
+       "negative": 765,
+       "positive": 684,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 2782,
+       "critical": 1428,
+       "critical_pct": 51.3,
+       "negative": 1666,
+       "positive": 997,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 4294,
+       "critical": 2670,
+       "critical_pct": 62.2,
+       "negative": 2743,
+       "positive": 1353,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 2211,
+       "critical": 1529,
+       "critical_pct": 69.2,
+       "negative": 1371,
+       "positive": 713,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1360,
+       "critical": 820,
+       "critical_pct": 60.3,
+       "negative": 717,
+       "positive": 558,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1337,
+       "critical": 753,
+       "critical_pct": 56.3,
+       "negative": 644,
+       "positive": 576,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1238,
+       "critical": 733,
+       "critical_pct": 59.2,
+       "negative": 570,
+       "positive": 563,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1219,
+       "critical": 706,
+       "critical_pct": 57.9,
+       "negative": 536,
+       "positive": 551,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1765,
+       "critical": 1026,
+       "critical_pct": 58.1,
+       "negative": 864,
+       "positive": 758,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1964,
+       "critical": 1028,
+       "critical_pct": 52.3,
+       "negative": 753,
+       "positive": 998,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 4103,
+       "critical": 2117,
+       "critical_pct": 51.6,
+       "negative": 1490,
+       "positive": 2173,
+       "partial_period": false
+      }
+     ],
+     "total": 26676,
+     "critical_total": 15156,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-08-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.78,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.785
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "census",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "census",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 9051,
+     "carrying": 4862,
+     "availability_pct": 53.72,
+     "items": [
+      {
+       "country": "united states",
+       "count": 2363,
+       "share_pct": 26.11
+      },
+      {
+       "country": "india",
+       "count": 1809,
+       "share_pct": 19.99
+      },
+      {
+       "country": "china",
+       "count": 83,
+       "share_pct": 0.92
+      },
+      {
+       "country": "united kingdom",
+       "count": 71,
+       "share_pct": 0.78
+      },
+      {
+       "country": "cameroon",
+       "count": 58,
+       "share_pct": 0.64
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 478
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.359,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.362
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "census",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "census",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "government census and demographic data",
+       "count": 866,
+       "share": 17.45,
+       "lift": 356.16,
+       "baseline_count": 4,
+       "previous_period_count": 278,
+       "delta_pct": 211.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "census methodology and data collection techniques",
+       "count": 195,
+       "share": 3.93,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 118,
+       "delta_pct": 65.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "government public records management",
+       "count": 667,
+       "share": 13.44,
+       "lift": 109.73,
+       "baseline_count": 10,
+       "previous_period_count": 171,
+       "delta_pct": 290.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "internal migration and regional population shifts",
+       "count": 108,
+       "share": 2.18,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 37,
+       "delta_pct": 191.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "migration patterns and immigration rates",
+       "count": 94,
+       "share": 1.89,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 39,
+       "delta_pct": 141.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 9051,
+     "carrying": 4962,
+     "carrier_share_pct": 54.82,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.463,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.467
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "census",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "census",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e2da6190d9a716b4c9eb7e",
+       "headline": "Stats Show Trump's Immigration Policies Are Doing Very Real and Long Term Damage to the Political Power of Blue Cities and States | The Gateway Pundit | by Mike LaChance",
+       "url": "https://www.thegatewaypundit.com/2026/04/stats-show-trumps-immigration-policies-are-doing-very/",
+       "publisher": "thegatewaypundit.com",
+       "published_at": "2026-04-09T02:20:50",
+       "lede": "now that president trump has shut down the border and stopped the flow of new people into blue cities and states, they are not able to maintain their population levels as people flee to better places like texas and florida. with smaller populations, these cities and states are going to",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.74,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.77
+        },
+        {
+         "code": 67,
+         "path": "/People & Society/Social Issues & Advocacy/Other",
+         "score": 0.49
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6986b5edfdcc616c15e05897",
+       "headline": "Bangladesh’s street children battle cold, hunger and neglect",
+       "url": "https://www.dhakatribune.com/bangladesh/400664/bangladesh%E2%80%99s-street-children-battle-cold-hunger",
+       "publisher": "dhakatribune.com",
+       "published_at": "2026-01-09T18:05:00",
+       "lede": "from bangladesh’s population of around 180 million, nearly one percent of children live on the streets.although no comprehensive national census of street children has yet been conducted, estimates vary widely. human rights organizations suggest the number is around 1.5 million, while a recent report titled the quality study on children",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.45,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 279,
+         "path": "/People & Society/Social Issues & Advocacy/Poverty & Hunger",
+         "score": 0.62
+        }
+       ],
+       "country": "bangladesh",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23222c6105443aa5fe154",
+       "headline": "'National initiative shaping India's future': Rajasthan CM on Census 2027",
+       "url": "https://www.aninews.in/news/national/general-news/national-initiative-shaping-indias-future-rajasthan-cm-on-census-202720260429163542",
+       "publisher": "aninews.in",
+       "published_at": "2026-04-29T11:05:42",
+       "lede": "jaipur (rajasthan) [india], april 29 (ani): rajasthan chief minister bhajan lal sharma on wednesday described the census of india 2027 as a 'national initiative that sets the direction for the future of the nation.' the chief minister also stated that the exercise is an example of how the government plans",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.6
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ced3399b489398e22760",
+       "headline": "Rajasthan Census 2027 self-enumeration begins May 1, 2026",
+       "url": "https://thenewsmill.com/2026/04/rajasthan-to-begin-census-2027-with-self-enumeration-in-may/",
+       "publisher": "thenewsmill.com",
+       "published_at": "2026-04-29T06:42:09",
+       "lede": "rajasthan chief minister bhajanlal sharma has announced that the census 2027 process will start in the state on may 1, urging residents to participate actively and provide accurate information. the self-enumeration phase will take place from may 1 to may 15, 2026, after which census officials will carry out door-to-door",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.5,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 358,
+         "path": "/People & Society/Social Sciences/Demographics",
+         "score": 0.57
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e339836d28f995cb66d0",
+       "headline": "MP Congress Chief Jitu Patwari Demands Women's Reservation",
+       "url": "https://www.newkerala.com/news/a/bjp-should-implement-womens-reservation-existing-seats-mp-364.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-27T14:05:35",
+       "lede": "madhya pradesh congress president jitu patwari has demanded that the bjp government implement women's reservation on the existing 230 assembly seats without waiting for delimitation. speaking during a special assembly session, patwari criticized the bjp's linking of reservation to census and delimitation exercises. congress leaders phool singh baraiya and umang",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.58
+        },
+        {
+         "code": 87,
+         "path": "/Law & Government/Government/Legislative Branch",
+         "score": 0.57
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "jitu patwari"
+       ]
+      },
+      {
+       "id": "6a2a6e82c37f6c5e66b9ce82",
+       "headline": "Two Teachers on Census Duty Die of Suspected Heatstroke in Odisha Within Two Days",
+       "url": "https://www.thebridgechronicle.com/news/odisha-teachers-census-duty-heatstroke-deaths-mp99",
+       "publisher": "thebridgechronicle.com",
+       "published_at": "2026-04-27T12:51:48",
+       "lede": "odisha has reported two more deaths of school teachers engaged in census duties within a span of just two days, with officials suspecting heatstroke as the cause amid soaring temperatures above 37°c in several districts. the incidents, reported from mayurbhanj and sundargarh, mark the third such case linked to census",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.52
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.47
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a8426c37f6c5e66c7ec93",
+       "headline": "Two Odisha Teachers Die Of Suspected Sunstroke In 2 Days During Census 2027 Fieldwork",
+       "url": "https://odishabytes.com/two-odisha-teachers-die-of-suspected-sunstroke-in-2-days-during-census-2027-fieldwork/",
+       "publisher": "odishabytes.com",
+       "published_at": "2026-04-27T10:53:21",
+       "lede": "bhubaneswar/baripada: two school teachers engaged in fieldwork for census 2027 died within two days in separate incidents in odisha, with officials suspecting sunstroke amid a severe heatwave that has pushed temperatures above 40°c in several districts. in mayurbhanj, rajkapur hembram, a teacher at baidyanath high school in betnoti block, died",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.41
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e35bd325610894207bd3",
+       "headline": "Census 2027: Telangana CM Registers for Self-Enumeration",
+       "url": "https://www.newkerala.com/news/a/telangana-cm-registers-details-under-census-2027-self-enumeration-727.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-26T16:25:14",
+       "lede": "this is india's first fully digital census and telangana's first as a separate state after online phase, door-to-door house listing operation runs may 11 to june 9 self-enumeration phase runs april 26 to may 10 in cure region covering ghmc, cyberabad, malkajgiri telangana chief minister a. revanth reddy participated in",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.53
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab0c8a54b8f07c968d69",
+       "headline": "Mann Ki Baat Best Learning Platform: Delhi BJP Chief",
+       "url": "https://www.newkerala.com/news/a/no-better-platform-learning-than-mann-ki-baat-175.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-26T14:15:27",
+       "lede": "delhi bjp president virender sachdeva praised pm modi's 133rd mann ki baat episode as a great learning platform. he highlighted the mention of census 2027 as a \"need of the time\" for the country. pm modi detailed the digital transformation of the census, including a mobile app for enumerators. the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.74,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee10d83fc01faba5a7058",
+       "headline": "Interactive map shows how vulnerable your neighborhood is to disaster",
+       "url": "https://www.wkrn.com/news/national/interactive-map-shows-how-vulnerable-your-neighborhood-is-to-disaster/",
+       "publisher": "wkrn.com",
+       "published_at": "2026-04-26T14:05:15",
+       "lede": "(nexstar) – think you live in a safe neighborhood? an interactive map from the u.s. census bureau may change your mind about just how safe it is where you live. the map isn't tracking things like crime rates or car accidents. instead, it measures the threat level in every census",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.58
+        },
+        {
+         "code": 358,
+         "path": "/People & Society/Social Sciences/Demographics",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efac10a84b609af2b403a7",
+       "headline": "Pradhan Attends PM Modi’s Mann Ki Baat in Odisha Village",
+       "url": "https://www.newkerala.com/news/a/dharmendra-pradhan-listens-pm-narendra-modis-mann-ki-343.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-26T13:55:15",
+       "lede": "union minister dharmendra pradhan listened to pm modi’s 133rd mann ki baat at his ancestral village nalam in odisha. pm modi urged citizens to participate in the digital census 2027, calling it a shared responsibility. he also announced beating retreat music is now available on waves ott platform. the prime",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.77,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "dharmendra pradhan"
+       ]
+      },
+      {
+       "id": "69efaa698a54b8f07c9614ba",
+       "headline": "PM Modi Urges Participation in Digital Census 2027",
+       "url": "https://www.newkerala.com/news/a/pm-modi-urges-citizens-participate-census-2027-calls-894.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-26T13:05:32",
+       "lede": "pm modi urges citizens to join census 2027, highlighting its digital framework and self-enumeration. he calls it a \"shared responsibility\" in mann ki baat. new delhi, april 26 prime minister narendra modi on sunday urged citizens to actively participate in the upcoming census 2027, calling it a \"shared responsibility of",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.37,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "narendra modi"
+       ],
+       "people": [
+        "narendra modi",
+        "narendra modi",
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "6a0408ad9c4aac0935404f3e",
+       "headline": "Modi appeals for making Census a success, assures data shared is secure, protected",
+       "url": "https://economictimes.indiatimes.com/news/india/modi-urges-citizens-to-securely-participate-in-census-2027-amidst-political-debates/articleshow/130530587.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-26T11:28:00",
+       "lede": "new delhi: prime minister narendra modi has appealed to the people to make the ongoing census and house listing exercise a success, assuring that the information shared by people digitally is completely secure, confidential and protected. in his monthly “mann ki baat” address, he also underscored india’s success in harnessing",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.4,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa93ba84b609af2b1ced3",
+       "headline": "\"No better platform for learning than Mann Ki Baat\": Delhi BJP President Virender Sachdev",
+       "url": "https://www.aninews.in/news/national/general-news/no-better-platform-for-learning-than-mann-ki-baat-delhi-bjp-president-virender-sachdev20260426140950",
+       "publisher": "aninews.in",
+       "published_at": "2026-04-26T08:39:50",
+       "lede": "new delhi [india], april 26 (ani): delhi bjp president virender sachdeva on sunday hailed the 133rd episode of prime minister narendra modi's 'mann ki baat' and recognised the mention of census in the address as a \"need of the time.\" speaking with mediapersons here, sachdeva described mann ki baat as",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [
+        "narendra modi"
+       ],
+       "people": [
+        "narendra modi",
+        "narendra modi",
+        "narendra modi",
+        "narendra modi"
+       ]
+      },
+      {
+       "id": "6a2a90d4963d76f4afdf000d",
+       "headline": "'Your Participation In Census 2027 Is Vital': PM Modi Urges Citizens In 'Mann Ki Baat'",
+       "url": "https://news.abplive.com/news/india/pm-modi-urges-citizens-participation-in-digital-census-2027-is-vital-mann-ki-baat-address-1838808",
+       "publisher": "news.abplive.com",
+       "published_at": "2026-04-26T08:15:31",
+       "lede": "prime minister narendra modi on sunday called on citizens to actively participate in the upcoming census 2027, stressing that the nationwide exercise is a shared responsibility and not merely a government-led initiative. speaking during his monthly radio programme mann ki baat, modi assured people that the data collected during the",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab84a84b609af2b38cea",
+       "headline": "Ludhiana: Census work for teachers halts classes at meritorious school",
+       "url": "https://www.hindustantimes.com/cities/chandigarh-news/ludhiana-census-work-for-teachers-halts-classes-at-meritorious-school-101777142823898.html",
+       "publisher": "hindustantimes.com",
+       "published_at": "2026-04-25T22:48:08",
+       "lede": "academic activity at the senior secondary school for meritorious students came to a halt after an overwhelming majority of its teaching and support staff was deployed for work related to census and election commission’s special intensive revision exercise, academicians said.the development comes despite a clear communication from the district education",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.7,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.72
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efab63a84b609af2b37259",
+       "headline": "India’s Digital Census 2027: Key Features & Impact",
+       "url": "https://www.newkerala.com/news/a/indias-first-digital-enumeration-census-2027-boost-data-driven-686.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-25T12:05:12",
+       "lede": "india's census 2027 will be the first fully digital enumeration, using mobile-based data collection for real-time monitoring. the cabinet has approved caste enumeration, expanding beyond scheduled castes and tribes. with a budget of over rs. 11,700 crore, the exercise features self-enumeration and strengthened data security. this digital shift aims to",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.33,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.56
+        },
+        {
+         "code": 358,
+         "path": "/People & Society/Social Sciences/Demographics",
+         "score": 0.52
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a041a289c4aac0935485f68",
+       "headline": "Census 2027 to be India's first digital enumeration exercise",
+       "url": "https://economictimes.indiatimes.com/news/india/census-2027-to-be-indias-first-digital-enumeration-exercise/articleshow/130510258.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-25T07:15:00",
+       "lede": "new delhi: census is the process of collecting, compiling, analysing, and disseminating demographic, social, cultural and economic data relating to all persons in the country or a designated area. the wealth of information collected through the census makes it the richest source of data for planners, administrators, research scholars and",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 358,
+         "path": "/People & Society/Social Sciences/Demographics",
+         "score": 0.78
+        },
+        {
+         "code": 49,
+         "path": "/People & Society/Other",
+         "score": 0.49
+        },
+        {
+         "code": 773,
+         "path": "/Reference/General Reference/Public Records",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 18,
+     "total_estimate": 1517,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNSAwNzoxNTowMCIsImkiOiI2YTA0MWEyODljNGFhYzA5MzU0ODVmNjgiLCJwIjo4fQ",
+     "unresolved": 4,
+     "duplicates_dropped": 3,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.176,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "4 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.18
+    }
+   }
+  }
+ ]
+}

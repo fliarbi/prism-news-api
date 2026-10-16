@@ -1,0 +1,970 @@
+{
+ "slug": "gst-news",
+ "segment": "financial-research",
+ "kind": "captured",
+ "captured_at": "2026-10-16T04:55:32Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "GST",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gst",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 23717,
+     "tone": {
+      "carrying": 23698,
+      "availability_pct": 99.92,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 11532,
+        "share_pct": 48.66
+       },
+       {
+        "group": "neutral",
+        "count": 379,
+        "share_pct": 1.6
+       },
+       {
+        "group": "positive",
+        "count": 11787,
+        "share_pct": 49.74
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 23709,
+      "count": 9404,
+      "share_pct": 39.66
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.431,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.439
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "GST",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "gst",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 3685,
+       "critical": 1378,
+       "critical_pct": 37.4,
+       "negative": 1675,
+       "positive": 1903,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 2918,
+       "critical": 1380,
+       "critical_pct": 47.3,
+       "negative": 859,
+       "positive": 1958,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 4117,
+       "critical": 1645,
+       "critical_pct": 40.0,
+       "negative": 1551,
+       "positive": 2459,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 11901,
+       "critical": 4578,
+       "critical_pct": 38.5,
+       "negative": 3306,
+       "positive": 8364,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 15526,
+       "critical": 8322,
+       "critical_pct": 53.6,
+       "negative": 4304,
+       "positive": 10776,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 6100,
+       "critical": 2863,
+       "critical_pct": 46.9,
+       "negative": 1402,
+       "positive": 4590,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 4781,
+       "critical": 2276,
+       "critical_pct": 47.6,
+       "negative": 1186,
+       "positive": 3529,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 4725,
+       "critical": 2498,
+       "critical_pct": 52.9,
+       "negative": 1324,
+       "positive": 3277,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 4936,
+       "critical": 2599,
+       "critical_pct": 52.7,
+       "negative": 2121,
+       "positive": 2734,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 6240,
+       "critical": 2240,
+       "critical_pct": 35.9,
+       "negative": 3284,
+       "positive": 2875,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 5948,
+       "critical": 2170,
+       "critical_pct": 36.5,
+       "negative": 3250,
+       "positive": 2598,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 6593,
+       "critical": 2395,
+       "critical_pct": 36.3,
+       "negative": 2877,
+       "positive": 3580,
+       "partial_period": false
+      }
+     ],
+     "total": 77470,
+     "critical_total": 34344,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.349,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.351
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "GST",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gst",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 23717,
+     "carrying": 17371,
+     "availability_pct": 73.24,
+     "items": [
+      {
+       "country": "india",
+       "count": 8271,
+       "share_pct": 34.87
+      },
+      {
+       "country": "united states",
+       "count": 6301,
+       "share_pct": 26.57
+      },
+      {
+       "country": "united kingdom",
+       "count": 610,
+       "share_pct": 2.57
+      },
+      {
+       "country": "australia",
+       "count": 336,
+       "share_pct": 1.42
+      },
+      {
+       "country": "canada",
+       "count": 259,
+       "share_pct": 1.09
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 1594
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.599,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.601
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "GST",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "gst",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "suzuki fuel efficiency & eco-friendly technologies",
+       "count": 757,
+       "share": 5.96,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 4,
+       "delta_pct": 18825.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "new model year updates and changes",
+       "count": 1460,
+       "share": 11.5,
+       "lift": 312.81,
+       "baseline_count": 3,
+       "previous_period_count": 700,
+       "delta_pct": 108.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "suzuki compact car lineup",
+       "count": 363,
+       "share": 2.86,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1,
+       "delta_pct": 36200.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "suzuki engine technologies & specifications",
+       "count": 314,
+       "share": 2.47,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 0,
+       "delta_pct": null,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "economy news: tax reform implications",
+       "count": 255,
+       "share": 2.01,
+       "lift": 163.9,
+       "baseline_count": 1,
+       "previous_period_count": 1500,
+       "delta_pct": -83.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 23717,
+     "carrying": 12700,
+     "carrier_share_pct": 53.55,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 4.51,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 4.515
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "GST",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "gst",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "6a2a9b025cefb83fe81e3fe6",
+       "headline": "Mere GST Deposit not payment until debited and appropriated to Government: High Court",
+       "url": "https://studycafe.in/mere-gst-deposit-not-payment-until-debited-and-appropriated-to-government-high-court-418476.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-30T11:17:36",
+       "lede": "mere gst deposit not payment until debited and appropriated to government: high court the petitioner, a registered gst dealer engaged in trading scrap purchased from indian railways, was liable to pay gst under the reverse charge mechanism. during audit for fy 2017–18 and 2018–19, it was found that although the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.49
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.45
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a53fbbf1d314559a1534",
+       "headline": "Meesho to appeal $1.5m tax demand in India",
+       "url": "https://startupnews.fyi/ecommerce/meesho-to-appeal-1-5m-tax-demand-in-india",
+       "publisher": "startupnews.fyi",
+       "published_at": "2026-04-30T10:37:51",
+       "lede": "three months after meesho listed on indian stock exchanges at a 46% premium — one of the stronger consumer internet debuts in recent years — the bengaluru-based e-commerce platform received something that no freshly public company wants: a tax demand letter. the assessment unit of india's income tax department issued",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 153,
+         "path": "/Finance/Accounting & Auditing/Tax Preparation & Planning",
+         "score": 0.66
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "meesho",
+        "income tax department"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2e41fce6594f7ebaf68e66",
+       "headline": "Anticipatory Bail Allowed in GST Case Involving Cancelled Supplier Entity",
+       "url": "https://studycafe.in/anticipatory-bail-allowed-in-gst-case-involving-cancelled-supplier-entity-418616.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-30T05:22:41",
+       "lede": "anticipatory bail allowed in gst case involving cancelled supplier entity this case is a prime example of the “innocent buyer” trap in the gst regime, where a legitimate business finds itself under fire because of its supplier’s status. the managing director of bhagyanagar india limited recently had to approach the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9ea70a088760d34c754ae",
+       "headline": "Partner who acted on Ponzi scheme fined £30k over conflict of interest",
+       "url": "https://www.legalfutures.co.uk/latest-news/partner-who-acted-on-ponzi-scheme-fined-30k-over-conflict-of-interest",
+       "publisher": "legalfutures.co.uk",
+       "published_at": "2026-04-29T23:07:27",
+       "lede": "a partner who acted on what turned out to be a fraudulent ponzi scheme has been fined £30,000 for accepting a role as director of a company designed to protect the interest of the scheme’s bondholders, despite the “obvious” conflict of interest. the solicitor disciplinary tribunal (sdt) said alexander william",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.74
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f9d75f7b2d589e844cd5a6",
+       "headline": "Three ways the spring economic update affects your wallet",
+       "url": "https://www.theglobeandmail.com/investing/personal-finance/article-three-ways-the-spring-economic-statement-affects-your-wallet/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-29T20:46:59",
+       "lede": "open this photo in gallery: a for sale sign outside a home in west vancouver, b.c., in october, 2025. the federal government plans to temporarily extend the repayment grace period for the home buyers’ plan, which allows canadians to withdraw up to $60,000 from their registered retirement savings plan to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22e2ec6105443aa5e0519",
+       "headline": "Maruti Suzuki Share Price",
+       "url": "https://www.newsdrum.in/business/maruti-shares-end-nearly-3-pc-higher-market-valuation-surges-by-rs-11422-cr-11778944",
+       "publisher": "newsdrum.in",
+       "published_at": "2026-04-29T11:55:35",
+       "lede": "&amp;quot;new delhi (pti): shares of maruti suzuki india on wednesday climbed nearly 3 per cent after the country&amp;amp;#x27;s largest carmaker reported a record annual consolidated net profit of rs 14,679.5 crore in fy26, riding on its best-ever annual sales of over 24.22 lakh units. the stock rallied 2.82 per cent",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 460,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Suzuki",
+         "score": 0.92
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.73
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.53
+        },
+        {
+         "code": 5,
+         "path": "/News/Business News/Financial Markets News",
+         "score": 0.46
+        },
+        {
+         "code": 14,
+         "path": "/Finance/Investing/Stocks & Bonds",
+         "score": 0.46
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "maruti suzuki"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c7eaa5706a322e0f80c0",
+       "headline": "Tesla’s  Make-or-Break Play",
+       "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/teslas-make-or-break-play/130594720",
+       "publisher": "brandequity.economictimes.indiatimes.com",
+       "published_at": "2026-04-29T08:55:40",
+       "lede": "on a weekday afternoon at the tesla experience centre in mumbai, visitors linger. nine months after tesla entered india, its pull remains unmistakable. what hasn&rsquo;t followed is scale.tesla vehicles are show at a tesla dealership in buena park, california, u.s., january 28, 2026. reuters/mike blakewith just 347 cars sold since",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 176,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Tesla Motors",
+         "score": 0.99
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f22925c6105443aa5ce7af",
+       "headline": "CGST officer, consultant arrested in Rs 20 lakh bribe case in Gujrat",
+       "url": "https://assamtribune.com/national/cgst-officer-consultant-arrested-in-rs-20-lakh-bribe-case-in-gujrat-1611084",
+       "publisher": "assamtribune.com",
+       "published_at": "2026-04-29T08:16:17",
+       "lede": "rajkot, april 29: a trap operation by the gujarat anti-corruption bureau (acb) in rajkot has resulted in the arrest of a central gst (cgst) superintendent and a tax consultant for allegedly accepting a rs 20 lakh bribe, officials said on wednesday.mukesh kumar, 43, a superintendent posted with cgst division-1, range-5",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.74
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "acb",
+        "gst"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c6fca5706a322e0ee5cf",
+       "headline": "Liberals target affordability to meet era of uncertainty in spring fiscal update",
+       "url": "https://cheknews.ca/liberals-target-affordability-to-meet-era-of-uncertainty-in-spring-fiscal-update-1321487/",
+       "publisher": "cheknews.ca",
+       "published_at": "2026-04-28T22:55:32",
+       "lede": "the federal liberals say they’re putting the windfall from an unexpected boost in revenues into measures to make life more affordable, build up the economy and promote the skilled trades. but ottawa’s spring economic update also sees some darker clouds on the horizon as uncertainty over the iran war and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.53
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.46
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.44
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23298c6105443aa604705",
+       "headline": "Liberals target affordability to meet era of uncertainty in spring fiscal update",
+       "url": "https://www.torontotoday.ca/local/more-news/liberals-target-affordability-to-meet-era-of-uncertainty-in-spring-fiscal-update-12206060",
+       "publisher": "torontotoday.ca",
+       "published_at": "2026-04-28T20:15:00",
+       "lede": "government touts windfall from better-than-expected fiscal revenues, but there are some darker clouds on the horizon as iran war and u.s. tariffs threaten growth in years ahead ottawa — the federal liberals say they're getting a windfall from better-than-expected fiscal revenues and are largely putting that money back into circulation",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.47
+        },
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.46
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.45
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.43
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ca69a5706a322e10d61a",
+       "headline": "Nine highlights from the spring economic update",
+       "url": "https://www.theglobeandmail.com/politics/article-spring-economic-update-highlights-cpp-sports-defence-april-28/",
+       "publisher": "theglobeandmail.com",
+       "published_at": "2026-04-28T20:03:24",
+       "lede": "open this photo in gallery: parliament hill's on centre block in ottawa.sean kilpatrick/the canadian press the liberal government’s spring economic update is framed as the next step of prime minister mark carney’s promise to keep canada’s economy on solid footing despite the geopolitical earthquakes set off by the trump administration.",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.56
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.51
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.49
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": [
+        "mark carney",
+        "sean kilpatrick"
+       ]
+      },
+      {
+       "id": "69f22960122c4392e0cf3a9d",
+       "headline": "Liberals target affordability to meet era of uncertainty in spring fiscal update",
+       "url": "https://www.winnipegfreepress.com/business/2026/04/28/liberals-target-affordability-to-meet-era-of-uncertainty-in-spring-fiscal-update",
+       "publisher": "winnipegfreepress.com",
+       "published_at": "2026-04-28T20:02:56",
+       "lede": "ottawa – the federal liberals say they’re putting the windfall from an unexpected boost in revenues into measures to make life more affordable, build up the economy and promote the skilled trades. but ottawa’s spring economic update also sees some darker clouds on the horizon as uncertainty over the iran",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 2,
+         "path": "/Law & Government/Government/Other",
+         "score": 0.58
+        },
+        {
+         "code": 83,
+         "path": "/News/Business News/Fiscal Policy News",
+         "score": 0.45
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "canada",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e4222bf10c43d2966f21a",
+       "headline": "Delhi HC Imposes Fine on Firm Due to Fake GST ITC Claim Using Fake Invoices",
+       "url": "https://studycafe.in/delhi-hc-imposes-fine-on-firm-due-to-fake-gst-itc-claim-using-fake-invoices-418406.html",
+       "publisher": "studycafe.in",
+       "published_at": "2026-04-28T16:26:30",
+       "lede": "delhi hc imposes fine on firm due to fake gst itc claim using fake invoices the delhi high court has levied a penalty on a private company for illegally claiming the wrongly claimed input tax credit (itc). the court warned that such fraud could cause harm to the gst credit",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.3,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 236,
+         "path": "/Shopping/Consumer Resources/Consumer Advocacy & Protection",
+         "score": 0.51
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2a60125cefb83fe8f8ca76",
+       "headline": "Maruti Suzuki not chasing market share, growth tied to capacity addition: Chairman R C Bhargava- Moneycontrol.com",
+       "url": "https://www.moneycontrol.com/automobile/maruti-suzuki-not-chasing-market-share-growth-tied-to-capacity-addition-chairman-r-c-bhargava-article-13902311.html",
+       "publisher": "moneycontrol.com",
+       "published_at": "2026-04-28T14:01:15",
+       "lede": "with capacity utilisation already stretched, maruti suzuki's near-term growth will hinge on how effectively it ramps up additional 2,50,000 units becoming available this year. bhargava attributed maruti suzuki's record fy26 performance to gst rate cuts. maruti suzuki's growth hinges on expanding production capacity. fy26 record sales even as market share",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 460,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Suzuki",
+         "score": 0.97
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.76
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f8a86abbf1d314559a4072",
+       "headline": "Maruti Suzuki posts record sales in FY26 but rising costs hit profit",
+       "url": "https://www.forbesindia.com/article/news/maruti-suzuki-posts-record-sales-in-fy26-but-rising-costs-hit-profit/2993525/1",
+       "publisher": "forbesindia.com",
+       "published_at": "2026-04-28T13:59:24",
+       "lede": "maruti suzuki india delivered its highest-ever sales, revenue and exports in fy26, even as a surge in raw material costs hurt profit growth at the country’s largest carmaker.despite a 20 percent surge in net sales to rs1.74 lakh crore, net profit for the full year went up just 1 percent",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 460,
+         "path": "/Autos & Vehicles/Motor Vehicles (By Brand)/Suzuki",
+         "score": 0.86
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.78
+        },
+        {
+         "code": 56,
+         "path": "/Business & Industrial/Automotive Industry",
+         "score": 0.74
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "maruti suzuki"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 4888,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAxMTo0NjowMCIsImkiOiI2OWYwZTFmNjQ1MjcyZGUzMmU4YmU1NGEiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 9.198,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 9.207
+    }
+   }
+  }
+ ]
+}

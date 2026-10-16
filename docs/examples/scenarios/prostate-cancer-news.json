@@ -1,0 +1,965 @@
+{
+ "slug": "prostate-cancer-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:21Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "prostate cancer",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "prostate cancer",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4397,
+     "tone": {
+      "carrying": 4378,
+      "availability_pct": 99.57,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 1094,
+        "share_pct": 24.99
+       },
+       {
+        "group": "neutral",
+        "count": 149,
+        "share_pct": 3.4
+       },
+       {
+        "group": "positive",
+        "count": 3135,
+        "share_pct": 71.61
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 4397,
+      "count": 4021,
+      "share_pct": 91.45
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.691,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.721
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "prostate cancer",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "prostate cancer",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 2306,
+       "critical": 2012,
+       "critical_pct": 87.3,
+       "negative": 1352,
+       "positive": 899,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 904,
+       "critical": 793,
+       "critical_pct": 87.7,
+       "negative": 159,
+       "positive": 701,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 904,
+       "critical": 783,
+       "critical_pct": 86.6,
+       "negative": 184,
+       "positive": 688,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 790,
+       "critical": 708,
+       "critical_pct": 89.6,
+       "negative": 166,
+       "positive": 594,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1040,
+       "critical": 932,
+       "critical_pct": 89.6,
+       "negative": 206,
+       "positive": 778,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1163,
+       "critical": 1060,
+       "critical_pct": 91.1,
+       "negative": 310,
+       "positive": 813,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1165,
+       "critical": 1027,
+       "critical_pct": 88.2,
+       "negative": 222,
+       "positive": 901,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1103,
+       "critical": 1027,
+       "critical_pct": 93.1,
+       "negative": 154,
+       "positive": 914,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1249,
+       "critical": 1153,
+       "critical_pct": 92.3,
+       "negative": 215,
+       "positive": 972,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 921,
+       "critical": 801,
+       "critical_pct": 87.0,
+       "negative": 184,
+       "positive": 693,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 957,
+       "critical": 878,
+       "critical_pct": 91.7,
+       "negative": 158,
+       "positive": 764,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1270,
+       "critical": 1189,
+       "critical_pct": 93.6,
+       "negative": 537,
+       "positive": 706,
+       "partial_period": false
+      }
+     ],
+     "total": 13772,
+     "critical_total": 12363,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-05-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.1,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.103
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "prostate cancer",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "prostate cancer",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 4397,
+     "carrying": 1003,
+     "availability_pct": 22.81,
+     "items": [
+      {
+       "country": "united states",
+       "count": 519,
+       "share_pct": 11.8
+      },
+      {
+       "country": "united kingdom",
+       "count": 156,
+       "share_pct": 3.55
+      },
+      {
+       "country": "canada",
+       "count": 85,
+       "share_pct": 1.93
+      },
+      {
+       "country": "israel",
+       "count": 32,
+       "share_pct": 0.73
+      },
+      {
+       "country": "australia",
+       "count": 30,
+       "share_pct": 0.68
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 181
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.039,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.041
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "prostate cancer",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "prostate cancer",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "prostate cancer risk factors",
+       "count": 2313,
+       "share": 65.32,
+       "lift": 5332.11,
+       "baseline_count": 1,
+       "previous_period_count": 2309,
+       "delta_pct": 0.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "radiation-induced tissue damage mitigation",
+       "count": 399,
+       "share": 11.27,
+       "lift": 919.81,
+       "baseline_count": 1,
+       "previous_period_count": 359,
+       "delta_pct": 11.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "oncology and targeted therapy advancements",
+       "count": 222,
+       "share": 6.27,
+       "lift": 511.77,
+       "baseline_count": 1,
+       "previous_period_count": 198,
+       "delta_pct": 12.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "hormone therapy for breast cancer",
+       "count": 130,
+       "share": 3.67,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 94,
+       "delta_pct": 38.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "liquid biopsy for early detection",
+       "count": 115,
+       "share": 3.25,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 106,
+       "delta_pct": 8.5,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 4397,
+     "carrying": 3541,
+     "carrier_share_pct": 80.53,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.349,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.352
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "prostate cancer",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "prostate cancer",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69cbd0e5e6465b4d565210c8",
+       "headline": "Joe Biden Hidden Illness: Physician Claims Cancer Spread to Bone During Presidency",
+       "url": "https://www.ibtimes.co.uk/joe-biden-hidden-illness-physician-claims-cancer-spread-bone-during-presidency-1787216",
+       "publisher": "ibtimes.co.uk",
+       "published_at": "2026-03-21T17:43:21",
+       "lede": "joe biden's battle with stage 4 prostate cancer has triggered a fresh wave of anxiety in washington as a physician's assessment that the disease had already spread to his bones during his presidency coincides with reports that the 83-year-old former us leader may have less than six months to live.read",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.61
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "joe biden",
+        "joe biden"
+       ]
+      },
+      {
+       "id": "69d112fac47f8fc6a166bb30",
+       "headline": "Exclusive: Patriots DC Terrell Williams cancer-free after battle with prostate cancer",
+       "url": "https://www.bostonherald.com/2026/01/30/exclusive-patriots-dc-terrell-williams-cancer-free-after-battle-with-prostate-cancer/",
+       "publisher": "bostonherald.com",
+       "published_at": "2026-01-30T22:19:12",
+       "lede": "foxboro — days out from his first super bowl, patriots defensive coordinator terrell williams has already bagged the biggest win of his life. this month, he beat cancer. williams has received a clean bill of health after a four-month battle with prostate cancer, which started with his diagnosis on sept.",
+       "sentiment": null,
+       "priority": 9,
+       "classes": [
+        {
+         "code": 68,
+         "path": "/Sports/Team Sports/American Football",
+         "score": 0.97
+        },
+        {
+         "code": 3,
+         "path": "/News/Sports News",
+         "score": 0.74
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "terrell williams"
+       ]
+      },
+      {
+       "id": "69f1c8d51e3933a6dd8eb80e",
+       "headline": "JOE.ie - Prostate cancer symptoms as Chris Hoy issues new health update",
+       "url": "https://www.joe.ie/news/prostate-cancer-symptoms-as-chris-hoy-issues-new-health-update-870332",
+       "publisher": "joe.ie",
+       "published_at": "2026-04-28T11:50:29",
+       "lede": "the former olympian shared his devastating diagnosis last year. chris hoy has issued a new update on his terminal cancer battle nearly three years after he was diagnosed with stage four prostate cancer. the cyclist was given two to four years to live after being diagnosed with primary prostate cancer",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": [
+        "chris hoy"
+       ]
+      },
+      {
+       "id": "d2d58824f73b3ed8c9fffa57",
+       "headline": "The Equivalents Are Coming! Developing a Shared Nomenclature for Radiopharmaceutical Therapy of Neuroendocrine Tumors, Prostate Cancer, and Beyond.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42061947/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "the equivalents are coming! developing a shared nomenclature for radiopharmaceutical therapy of neuroendocrine tumors, prostate cancer, and beyond.as radiopharmaceutical therapy (rpt) expands beyond neuroendocrine tumors and prostate cancer, it is important to understand the u.s. food and drug administration (fda) approval process and to establish a shared vocabulary for effective",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.41,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.83
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.69
+        },
+        {
+         "code": 77,
+         "path": "/Health/Pharmacy/Drugs & Medications",
+         "score": 0.5
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "5369fa86424147bffb024f30",
+       "headline": "HF-125, a first-in-class computer-modeled novel inhibitor of Tribbles 2, for therapy of enzalutamide resistant, neuroendocrine prostate cancer.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42094475/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "hf-125, a first-in-class computer-modeled novel inhibitor of tribbles 2, for therapy of enzalutamide resistant, neuroendocrine prostate cancer.second generation antiandrogens, such as enzalutamide, are commonly prescribed to treat advanced prostate cancer. however, enzalutamide resistant prostate cancer (erpc) invariably develops with more aggressive features. management of erpc is extremely difficult not only",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.51,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.89
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.44
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "22294c43a92cfdb832d6e37a",
+       "headline": "Prostate Cancer, Part 2: PSMA and Beyond.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42049456/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "prostate cancer, part 2: psma and beyond.prostate-specific membrane antigen (psma) has fundamentally reshaped prostate cancer imaging and therapy, delivering an unprecedented combination of high lesion conspicuity, broad clinical applicability, and direct theranostic linkage between molecular imaging and radionuclide treatment. building on the broader non-psma radioligand landscape reviewed in part 1,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.79
+        },
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.49
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1ce56a5706a322e127094",
+       "headline": "Bracing for the Flood: How Should We Manage Prostate Cancer Care by 2050?",
+       "url": "https://www.emjreviews.com/urology/article/bracing-for-the-flood-how-should-we-manage-prostate-cancer-care-by-2050-j18126/",
+       "publisher": "emjreviews.com",
+       "published_at": "2026-04-27T06:30:46",
+       "lede": "with an ever-growing world population and increasing life-expectancy, the incidence of different types of cancer is expected to rise in the coming decades. prostate cancer (pca) is already the most commonly diagnosed cancer among males, ranking as the first to third most common cause of cancer-related death in western countries.",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.86
+        },
+        {
+         "code": 658,
+         "path": "/Health/Men's Health",
+         "score": 0.77
+        }
+       ],
+       "country": "belgium",
+       "organizations": [
+        "pca"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c6f61e3933a6dd8dacc6",
+       "headline": "Netanyahu confirma que fue diagnosticado con cáncer de próstata",
+       "url": "https://www.excelsior.com.mx/internacional/netanyahu-confirma-que-fue-diagnosticado-con-cancer-prostata",
+       "publisher": "excelsior.com.mx",
+       "published_at": "2026-04-25T20:34:30",
+       "lede": "while benjamin netanyahu was waging the war on gaza, deepening the devastation in palestinian territories and raising the regional confrontation with iran, he was simultaneously concealing a medical diagnosis relevant to israeli public opinion. the prime minister now confirmed that he was treated for prostate cancer, a information reserved for",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0369aac2856acf8e8a7812",
+       "headline": "Le dÃ©pistage du cancer de la prostate rate sa cible en Suisse",
+       "url": "https://www.tdg.ch/cancer-de-la-prostate-le-depistage-rate-sa-cible-en-suisse-849307124777",
+       "publisher": "tdg.ch",
+       "published_at": "2026-04-25T08:28:29",
+       "lede": "a study of 140â    , 000 cases shows that the screening of prostate cancer is missing its target in switzerland. one third of the tests involve men too old to get a benefit. too many tests for some, not enough for others prostate cancer is becoming less",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.43,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 658,
+         "path": "/Health/Men's Health",
+         "score": 0.97
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.87
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efabdba84b609af2b3d526",
+       "headline": "Israel PM Benjamin Netanyahu Treated For Early-Stage Prostate Cancer",
+       "url": "https://www.oneindia.com/international/israel-pm-benjamin-netanyahu-treated-for-early-stage-prostate-cancer-011-8069089.html",
+       "publisher": "oneindia.com",
+       "published_at": "2026-04-25T08:11:25",
+       "lede": "israeli prime minister benjamin netanyahu has revealed that he was diagnosed with an early-stage prostate cancer.. however, nbsp;the 76-year-old leader has successfully undergone treatment, with no remaining signs of the disease, according to an official medical report.the details of netanyahu rsquo;s condition appeared on friday in the annual medical report,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.55,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.89
+        }
+       ],
+       "country": "israel",
+       "organizations": [],
+       "people": [
+        "benjamin netanyahu",
+        "benjamin netanyahu"
+       ]
+      },
+      {
+       "id": "6a2ae57d963d76f4af19c490",
+       "headline": "Israel's Benjamin Netanyahu says he was treated for prostate cancer and is now healthy",
+       "url": "http://gulfnews.com/world/mena/israels-benjamin-netanyahu-says-he-was-treated-for-prostate-cancer-and-is-now-healthy-1.500518163",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-04-25T07:32:43",
+       "lede": "jerusalem: israeli prime minister benjamin netanyahu said friday that he has undergone treatment for prostate cancer in his first public acknowledgment of the diagnosis..he said that roughly a year and a half ago he had prostate surgery. then two and a half months ago, his doctors discovered and treated a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.58
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a03f83b9c4aac093539deb0",
+       "headline": "Israel's Benjamin Netanyahu says he was treated for prostate cancer and is now healthy",
+       "url": "https://gulfnews.com/world/mena/israels-benjamin-netanyahu-says-he-was-treated-for-prostate-cancer-and-is-now-healthy-1.500518163",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-04-25T07:32:43",
+       "lede": "jerusalem: israeli prime minister benjamin netanyahu said friday that he has undergone treatment for prostate cancer in his first public acknowledgment of the diagnosis..he said that roughly a year and a half ago he had prostate surgery. then two and a half months ago, his doctors discovered and treated a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.58
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efa91ea84b609af2b1bab1",
+       "headline": "Netanyahu ocultó su tratamiento contra un cáncer de próstata",
+       "url": "https://www.diariodeleon.es/internacional/260425/2082883/netanyahu-oculto-tratamiento-cancer-prostata.html",
+       "publisher": "diariodeleon.es",
+       "published_at": "2026-04-25T04:00:00",
+       "lede": "benjamin netanyahu hid his treatment for prostate cancer to prevent iran from using it as a \"propaganda\" to charge israel. the 76-year-old hebrew prime minister claims that the tumor was in its early stages and that after radiation therapy sessions there is no \"trace left.\" in full conflict with the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.84,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.64
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efabfa8a54b8f07c974e0c",
+       "headline": "Netanyahu : cancer de la prostate et rapport médical caché - Nouvelles Du Monde",
+       "url": "https://www.nouvelles-du-monde.com/netanyahu-cancer-de-la-prostate-et-rapport-medical-cache/",
+       "publisher": "nouvelles-du-monde.com",
+       "published_at": "2026-04-25T03:53:40",
+       "lede": "benjamin netanyahu reveals he has been fighting prostate cancer in secret jerusalem — israeli prime minister benjamin netanyahu announced on friday that he had been receiving treatment for prostate cancer at an early stage, admitting that he had deliberately concealed this information from the public for two months for reasons",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22936122c4392e0cf23da",
+       "headline": "Netanyahu reveló que se sometió discretamente a un tratamiento para cáncer de próstata",
+       "url": "https://flipr.com.ar/nacionales/ultimo-momento/cronica/netanyahu-revelo-que-se-sometio-discretamente-a-un-tratamiento-para-cancer-de-prostata/",
+       "publisher": "flipr.com.ar",
+       "published_at": "2026-04-25T03:08:16",
+       "lede": "generating summary with ai... based on the article and its multimedia content israeli prime minister benjamin netanyahu discreetly underwent treatment for prostate cancer, as he said today when he released the results of his annual medical examination. it is the first time that the leader with the longest mandate in",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.59
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaa03727212302c5e7d20",
+       "headline": "Netanyahu ocultó su tratamiento contra un cáncer de próstata para no dar bazas a Irán",
+       "url": "https://www.heraldo.es/noticias/internacional/2026/04/25/netanyahu-oculto-su-tratamiento-contra-un-cancer-prostata-para-no-dar-bazas-iran-2015033.html",
+       "publisher": "heraldo.es",
+       "published_at": "2026-04-25T03:00:00",
+       "lede": "benjamin netanyahu hid his treatment for prostate cancer to prevent iran from using it as a \"propaganda\" to charge israel. the 76-year-old hebrew prime minister claims that the tumor was in its early stages and that after radiation therapy sessions there is no \"trace left\". in full conflict with the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.89,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.66
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a036443ca027fb5990bdf19",
+       "headline": "'Had minor medical issue...': Netanyahu says he was successfully treated for prostate cancer",
+       "url": "http://economictimes.indiatimes.com/news/international/world-news/had-minor-medical-issue-netanyahu-says-he-was-successfully-treated-for-prostate-cancer/videoshow/130507119.cms",
+       "publisher": "economictimes.indiatimes.com",
+       "published_at": "2026-04-25T02:54:00",
+       "lede": "israeli prime minister benjamin netanyahu revealed that he was diagnosed with prostate cancer and has since undergone treatment. \"i had a minor medical issue with my prostate that was completely treated. thank god, it's behind me,\" netanyahu posted on x. \"a year and a half ago, i underwent successful surgery",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.84
+        },
+        {
+         "code": 658,
+         "path": "/Health/Men's Health",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 1496,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yNSAwMjo1NDowMCIsImkiOiI2YTAzNjQ0M2NhMDI3ZmI1OTkwYmRmMTkiLCJwIjo4fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.263,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.267
+    }
+   }
+  }
+ ]
+}

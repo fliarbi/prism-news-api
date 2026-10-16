@@ -1,0 +1,900 @@
+{
+ "slug": "waqf-news",
+ "segment": "policy-regulation",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:06:18Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "waqf",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "waqf",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 387,
+     "tone": {
+      "carrying": 386,
+      "availability_pct": 99.74,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 237,
+        "share_pct": 61.4
+       },
+       {
+        "group": "neutral",
+        "count": 20,
+        "share_pct": 5.18
+       },
+       {
+        "group": "positive",
+        "count": 129,
+        "share_pct": 33.42
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 387,
+      "count": 303,
+      "share_pct": 78.29
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.795,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.801
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "waqf",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "waqf",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 486,
+       "critical": 400,
+       "critical_pct": 82.3,
+       "negative": 368,
+       "positive": 62,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 155,
+       "critical": 101,
+       "critical_pct": 65.2,
+       "negative": 92,
+       "positive": 51,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 256,
+       "critical": 156,
+       "critical_pct": 60.9,
+       "negative": 203,
+       "positive": 38,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 118,
+       "critical": 89,
+       "critical_pct": 75.4,
+       "negative": 69,
+       "positive": 44,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 540,
+       "critical": 492,
+       "critical_pct": 91.1,
+       "negative": 421,
+       "positive": 80,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 172,
+       "critical": 144,
+       "critical_pct": 83.7,
+       "negative": 125,
+       "positive": 41,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 103,
+       "critical": 82,
+       "critical_pct": 79.6,
+       "negative": 53,
+       "positive": 33,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 244,
+       "critical": 208,
+       "critical_pct": 85.2,
+       "negative": 167,
+       "positive": 51,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 94,
+       "critical": 81,
+       "critical_pct": 86.2,
+       "negative": 63,
+       "positive": 26,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 89,
+       "critical": 69,
+       "critical_pct": 77.5,
+       "negative": 54,
+       "positive": 29,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 95,
+       "critical": 68,
+       "critical_pct": 71.6,
+       "negative": 47,
+       "positive": 43,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 109,
+       "critical": 85,
+       "critical_pct": 78.0,
+       "negative": 73,
+       "positive": 31,
+       "partial_period": false
+      }
+     ],
+     "total": 2461,
+     "critical_total": 1975,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2025-09-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.025,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.029
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "waqf",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "waqf",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 387,
+     "carrying": 219,
+     "availability_pct": 56.59,
+     "items": [
+      {
+       "country": "india",
+       "count": 171,
+       "share_pct": 44.19
+      },
+      {
+       "country": "israel",
+       "count": 20,
+       "share_pct": 5.17
+      },
+      {
+       "country": "united states",
+       "count": 11,
+       "share_pct": 2.84
+      },
+      {
+       "country": "nigeria",
+       "count": 3,
+       "share_pct": 0.78
+      },
+      {
+       "country": "bangladesh",
+       "count": 2,
+       "share_pct": 0.52
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 12
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.833,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.836
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "waqf",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "waqf",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "religious laws and governance",
+       "count": 30,
+       "share": 14.63,
+       "lift": 298.65,
+       "baseline_count": 4,
+       "previous_period_count": 161,
+       "delta_pct": -81.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "religion and politics",
+       "count": 50,
+       "share": 24.39,
+       "lift": 117.12,
+       "baseline_count": 17,
+       "previous_period_count": 214,
+       "delta_pct": -76.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "religious persecution and freedom",
+       "count": 19,
+       "share": 9.27,
+       "lift": 189.14,
+       "baseline_count": 4,
+       "previous_period_count": 23,
+       "delta_pct": -17.4,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "religious conflicts and resolutions",
+       "count": 35,
+       "share": 17.07,
+       "lift": 107.21,
+       "baseline_count": 13,
+       "previous_period_count": 66,
+       "delta_pct": -47.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "endowment funds for social good",
+       "count": 5,
+       "share": 2.44,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 1,
+       "delta_pct": 400.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 387,
+     "carrying": 205,
+     "carrier_share_pct": 52.97,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.075,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.077
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "waqf",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "waqf",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e84ab95cfa3e5ba5e3300c",
+       "headline": "NHRC Notices on Bhopal Waqf Mismanagement in Mecca, Medina",
+       "url": "https://www.newkerala.com/news/a/nhrc-takes-cognisance-bhopal-waqf-properties-mismanagement-mecca-345.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-15T02:16:42",
+       "lede": "the national human rights commission has taken serious note of alleged mismanagement and financial irregularities concerning bhopal waqf properties, known as 'rubats', located in the holy cities of mecca and medina. it has issued formal notices to the ministry of external affairs, the ministry of minority affairs, and the madhya",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.42,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "saudi arabia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8450f5cfa3e5ba5df9b1a",
+       "headline": "NHRC seeks reports from MP govt, MEA over alleged irregularities in Bhopal Waqf properties in Mecca-Medina",
+       "url": "https://www.thehansindia.com/news/national/nhrc-seeks-reports-from-mp-govt-mea-over-alleged-irregularities-in-bhopal-waqf-properties-in-mecca-medina-1065647",
+       "publisher": "thehansindia.com",
+       "published_at": "2026-04-14T10:00:46",
+       "lede": "new delhi: the national human rights commission (nhrc) has sought an action taken report (atr) within two weeks from multiple authorities, including the madhya pradesh government and the centre, over allegations of financial irregularities and mismanagement of waqf properties linked to bhopal in mecca and medina. a bench presided over",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.56
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8ca8f9baafc7356ca42c9",
+       "headline": "NHRC seeks reports from MP govt, MEA over alleged irregularities in Bhopal Waqf properties in Mecca-Medina",
+       "url": "https://www.punjabnewsexpress.com/national/news/nhrc-seeks-reports-from-mp-govt-mea-over-alleged-irregularities-in-bhopal-waqf-properties-in-mecca-medina-322274",
+       "publisher": "punjabnewsexpress.com",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "new delhi: the national human rights commission (nhrc) has sought an action taken report (atr) within two weeks from multiple authorities, including the madhya pradesh government and the centre, over allegations of financial irregularities and mismanagement of waqf properties linked to bhopal in mecca and medina. a bench presided over",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.69,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.55
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e8bdbf5cfa3e5ba531b487",
+       "headline": "Hundreds of Israeli settlers storm Al-Aqsa Mosque under police protection",
+       "url": "https://www.dailysabah.com/world/mid-east/hundreds-of-israeli-settlers-storm-al-aqsa-mosque-under-police-protection",
+       "publisher": "dailysabah.com",
+       "published_at": "2026-04-13T18:53:00",
+       "lede": "more than 200 israeli settlers, accompanied by a rabbi, entered the al-aqsa mosque compound on monday under police protection, according to a waqf official. an official from the islamic waqf department in jerusalem, who asked to remain anonymous, told anadolu agency (aa) that \"215 extremists stormed the mosque during the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.92
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.84
+        }
+       ],
+       "country": "israel",
+       "organizations": [
+        "anadolu agency"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e34600a8697b10fabbed8b",
+       "headline": "South India Dargah Mosque Association Supports AIADMK-NDA",
+       "url": "https://www.newkerala.com/news/a/south-india-dargah-mosque-association-extends-support-aiadmk-nda-152.htm",
+       "publisher": "newkerala.com",
+       "published_at": "2026-04-10T10:56:49",
+       "lede": "the south india dargah mosque association and eight other muslim organisations have declared unconditional support for the aiadmk-led nda alliance. their support comes with a major grievance regarding the state government's appointment of a chief qazi without consulting the sunni muslim community. the association also highlighted long-pending issues concerning waqf",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.33,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.8
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69e323cec5a11d238528096b",
+       "headline": "Supreme Court Daily Round-Up : April 7, 2026",
+       "url": "https://www.livelaw.in/supreme-court/supreme-court-daily-round-up-april-7-2026-529418",
+       "publisher": "livelaw.in",
+       "published_at": "2026-04-07T17:05:26",
+       "lede": "links to today's reports :wb sir | appeals may take time, but can't order interim inclusion of deleted voters just because they're earlier mapped: supreme courtsajjadanashin of dargah & mutawalli of waqf not same : supreme courts.528 bnss | criminal proceedings can be quashed when reliable material disproves allegations :",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.61,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.8
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d14eb4b3ae2d64de41adc3",
+       "headline": "Munambam Waqf issue sparks local heat, Assembly polls impact uncertain",
+       "url": "https://www.newindianexpress.com/states/kerala/2026/Mar/31/munambam-waqf-issue-sparks-local-heat-statewide-effect-uncertain",
+       "publisher": "newindianexpress.com",
+       "published_at": "2026-03-31T01:55:27",
+       "lede": "kochi: the munambam waqf issue, which had been simmering in this tiny coastal hamlet in the vypeen assembly constituency since 1962, erupted in 2024. frustrated with political apathy towards their pleas seeking restoration of revenue rights, residents here began an indefinite relay hunger strike.backed by the latin catholic church and",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.37,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.5
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c4278ac1a152bc6805d554",
+       "headline": "India dismisses UN rapporteur’s report on Waqf law as false",
+       "url": "https://telanganatoday.com/india-dismisses-un-rapporteurs-report-on-waqf-law-as-false",
+       "publisher": "telanganatoday.com",
+       "published_at": "2026-03-20T05:09:47",
+       "lede": "india dismisses un rapporteur’s report on waqf law as falseat the united nations, india rejected a minority issues report criticizing the waqf amendment act 2025, calling it inaccurate and biased. india defended the law as progressive, promoting transparency, gender equality, and inclusion while reaffirming its commitment to minority rightsby ians",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.4,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc4da7f038a023dcc3e790",
+       "headline": "Waqf Land Row in Karnataka: Majority of encroachers are Islamists",
+       "url": "https://organiser.org/2026/03/17/344469/bharat/waqf-land-row-in-karnataka-minister-zameer-ahmed-claims-majority-of-encroachers-are-islamists/",
+       "publisher": "organiser.org",
+       "published_at": "2026-03-17T11:30:42",
+       "lede": "bengaluru: a major political and social debate has been triggered in karnataka after state waqf and minority welfare minister bz zameer ahmed khan revealed in the assembly that a significant portion of waqf land encroachments in the state has been carried out by members of the muslim community.speaking during the",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.35,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2aa8f1c37f6c5e66e074c0",
+       "headline": "What Is 'Waqf By User' & Why Is It A Scary Concept",
+       "url": "https://edtimes.in/what-is-waqf-by-user-why-is-it-a-scary-concept/",
+       "publisher": "edtimes.in",
+       "published_at": "2026-02-28T16:25:34",
+       "lede": "in 2025, the waqf (amendment) act triggered one of the most closely watched constitutional challenges before the supreme court of india. although parliament passed the law and it received presidential assent, its most controversial provisions, especially the removal of waqf by user and expanded powers to question waqf land, were",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.58,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.84
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bc1707de89f3fa1c9a9359",
+       "headline": "Delhi High Court issues notice to DDA in Shahi Idgah's plea",
+       "url": "https://www.aninews.in/news/national/general-news/delhi-high-court-issues-notice-to-dda-in-shahi-idgahs-plea20260211220309",
+       "publisher": "aninews.in",
+       "published_at": "2026-02-11T16:33:09",
+       "lede": "new delhi [india], february 11 (ani): the delhi high court on wednesday issued notice to the dda regarding a petition by the shahi idgah management committee. the committee stated that the matter is pending before the waqf tribunal, yet dda was proceeding with the board on the land.the committee prayed",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 37,
+         "path": "/Law & Government/Government/Courts & Judiciary",
+         "score": 0.76
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69860ac5ca3bd326c779c8e2",
+       "headline": "Left, right and Waqf: Secularism, reform and the 'double standards' debate at MBIFL 2026",
+       "url": "https://english.mathrubhumi.com/features/mbifl-2026/left-right-waqf-secularism-reform-mbifl-2026-rwv44std",
+       "publisher": "english.mathrubhumi.com",
+       "published_at": "2026-01-31T06:25:16",
+       "lede": "questions around secularism, reform and ideological consistency took centre stage at mbifl 2026 during the session titled “left, right and centre: the paradox of positions,” where bjp mp tejasvi surya and cpi(m) mp john brittas engaged in a pointed debate on waqf reforms and the uniform application of constitutional principles.tejasvi",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.74
+        },
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.43
+        }
+       ],
+       "country": "cameroon",
+       "organizations": [],
+       "people": [
+        "john brittas",
+        "tejasvi surya"
+       ]
+      },
+      {
+       "id": "6989a2c094d3f481f3e974c4",
+       "headline": "Jagan Pledges to Safeguard Waqf Lands",
+       "url": "https://www.deccanchronicle.com/southern-states/andhra-pradesh/jagan-pledges-to-safeguard-waqf-lands-1933347",
+       "publisher": "deccanchronicle.com",
+       "published_at": "2026-01-28T16:58:51",
+       "lede": "vijayawada: former chief minister and ysrc president y.s. jagan mohan reddy on wednesday assured representatives of the muslim community that his party would protect waqf properties across andhra pradesh.a delegation of the muslim united forum met jagan mohan reddy at the ysrc central office in tadepalli and submitted a memorandum",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.45
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6997326ee0523bedf7b35158",
+       "headline": "BJP and Allies Targeting Waqf Board, Vote Them Out: Owaisi in Maharashtra",
+       "url": "https://www.deccanchronicle.com/nation/politics/bjp-and-allies-targeting-waqf-board-vote-them-out-owaisi-in-maharashtra-1928615",
+       "publisher": "deccanchronicle.com",
+       "published_at": "2026-01-06T05:27:15",
+       "lede": "chhatrapati sambhajinagar: all india majlis-e-ittehadul muslimeen (aimim) president asaduddin owaisi has accused the ruling bharatiya janata party and its allies of attempting to undermine muslim religious institutions through the waqf act.addressing a rally in nanded on monday evening, owaisi alleged that the recently passed waqf act is being used to",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.83,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 20,
+         "path": "/News/Politics/Campaigns & Elections",
+         "score": 0.55
+        },
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.43
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": [
+        "asaduddin owaisi"
+       ]
+      },
+      {
+       "id": "6a2e3e9d3a4d098b40b54fab",
+       "headline": "यूपी में वक्फ संपत्तियों को लेकर चलेगी बड़ी मुहिम",
+       "url": "https://www.livehindustan.com/uttar-pradesh/kanpur/story-crisis-over-12-135-waqf-properties-in-up-jamiat-ulama-s-rescue-mission-201777465851765.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-04-29T12:31:03",
+       "lede": "kanpur. uttar pradesh is in a state of shock after 12,135 waqf properties were canceled. to save it, jamiat ulma has devised a strategy in kanpur to save them by running a campaign. it will be announced at the meeting of the provincial working committee to be held in lucknow",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f88188bbf1d3145596f1f3",
+       "headline": "वक्फ संपत्ति पर अवैध कब्जे का आरोप, केस दर्ज",
+       "url": "https://www.livehindustan.com/uttar-pradesh/gorakhpur/story-illegal-occupation-of-wakf-property-in-gorakhpur-case-filed-by-secretary-201777408825188.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-04-28T20:40:27",
+       "lede": "gorakhpur, the case of re-invalid capture of the waqf property located in the major correspondent bitiary terrain has come to the forefront. secretary of the waqf committee naurulhak has entered the case in the cantonment thane. the secretary pointed out that the said property is in the erana maruti centre,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ee8ff83fc01faba625fce",
+       "headline": "करोड़ों की वक्फ संपत्ति फर्जीवाड़ा कर बेची, हिस्ट्रीशीटर और चेयरमैन समेत छह पर मुकदमा",
+       "url": "https://www.livehindustan.com/uttar-pradesh/meerut/story-waqf-properties-worth-crores-fraudulently-sold-six-including-history-sheeter-and-chairman-sued-201776372122230.html",
+       "publisher": "livehindustan.com",
+       "published_at": "2026-04-16T20:42:36",
+       "lede": "six persons including shia wakf board chairman, historian zia abbas and former district panchayat member rohtash pawlwan have been charged with falsifying and confiscating the worth of crores of rupees worth of waqf property in kankarkhedha. former bjp minority front chief minister mohammad afak saifi and abdullapur resident jafar abbas",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.53,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 12,
+         "path": "/People & Society/Religion & Belief",
+         "score": 0.52
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 73,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0xNiAyMDo0MjozNiIsImkiOiI2YTJlZThmZjgzZmMwMWZhYmE2MjVmY2UiLCJwIjo3fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.467,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.469
+    }
+   }
+  }
+ ]
+}

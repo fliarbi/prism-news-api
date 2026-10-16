@@ -1,0 +1,932 @@
+{
+ "slug": "smart-home-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:12:27Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "smart home",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "smart home",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5535,
+     "tone": {
+      "carrying": 5535,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 225,
+        "share_pct": 4.07
+       },
+       {
+        "group": "neutral",
+        "count": 20,
+        "share_pct": 0.36
+       },
+       {
+        "group": "positive",
+        "count": 5290,
+        "share_pct": 95.57
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 5535,
+      "count": 745,
+      "share_pct": 13.46
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.428,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 3.43
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "smart home",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "smart home",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 843,
+       "critical": 122,
+       "critical_pct": 14.5,
+       "negative": 53,
+       "positive": 784,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 777,
+       "critical": 84,
+       "critical_pct": 10.8,
+       "negative": 34,
+       "positive": 742,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 1443,
+       "critical": 109,
+       "critical_pct": 7.6,
+       "negative": 102,
+       "positive": 1335,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 1209,
+       "critical": 149,
+       "critical_pct": 12.3,
+       "negative": 68,
+       "positive": 1140,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 1532,
+       "critical": 127,
+       "critical_pct": 8.3,
+       "negative": 44,
+       "positive": 1481,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 1251,
+       "critical": 152,
+       "critical_pct": 12.2,
+       "negative": 52,
+       "positive": 1198,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 1220,
+       "critical": 122,
+       "critical_pct": 10.0,
+       "negative": 39,
+       "positive": 1178,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 1127,
+       "critical": 118,
+       "critical_pct": 10.5,
+       "negative": 46,
+       "positive": 1067,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1519,
+       "critical": 192,
+       "critical_pct": 12.6,
+       "negative": 41,
+       "positive": 1476,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 1253,
+       "critical": 183,
+       "critical_pct": 14.6,
+       "negative": 85,
+       "positive": 1164,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 1533,
+       "critical": 208,
+       "critical_pct": 13.6,
+       "negative": 52,
+       "positive": 1475,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 1230,
+       "critical": 162,
+       "critical_pct": 13.2,
+       "negative": 47,
+       "positive": 1175,
+       "partial_period": false
+      }
+     ],
+     "total": 14937,
+     "critical_total": 1728,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-03-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.482,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.484
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "smart home",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "smart home",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 5535,
+     "carrying": 2593,
+     "availability_pct": 46.85,
+     "items": [
+      {
+       "country": "united states",
+       "count": 1492,
+       "share_pct": 26.96
+      },
+      {
+       "country": "south korea",
+       "count": 228,
+       "share_pct": 4.12
+      },
+      {
+       "country": "india",
+       "count": 175,
+       "share_pct": 3.16
+      },
+      {
+       "country": "china",
+       "count": 136,
+       "share_pct": 2.46
+      },
+      {
+       "country": "united kingdom",
+       "count": 131,
+       "share_pct": 2.37
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 431
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.984,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.987
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "smart home",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "smart home",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "internet of things (iot) devices",
+       "count": 155,
+       "share": 6.0,
+       "lift": 489.65,
+       "baseline_count": 1,
+       "previous_period_count": 130,
+       "delta_pct": 19.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "smart home devices and systems",
+       "count": 255,
+       "share": 9.87,
+       "lift": 268.52,
+       "baseline_count": 3,
+       "previous_period_count": 212,
+       "delta_pct": 20.3,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "smart lighting systems",
+       "count": 118,
+       "share": 4.57,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 104,
+       "delta_pct": 13.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "home automation hubs",
+       "count": 99,
+       "share": 3.83,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 69,
+       "delta_pct": 43.5,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "surveillance camera systems",
+       "count": 145,
+       "share": 5.61,
+       "lift": 229.03,
+       "baseline_count": 2,
+       "previous_period_count": 148,
+       "delta_pct": -2.0,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 5535,
+     "carrying": 2584,
+     "carrier_share_pct": 46.68,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.073,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.076
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "smart home",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "smart home",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69ea50e0b0517977015d84ab",
+       "headline": "Semiconductor Market Poised for Strong Growth Amid AI and Chip Demand Surge Through 2033",
+       "url": "https://www.openpr.com/news/4486068/semiconductor-market-poised-for-strong-growth-amid-ai-and-chip",
+       "publisher": "openpr.com",
+       "published_at": "2026-04-23T16:42:11",
+       "lede": "semiconductor market poised for strong growth amid ai and chip demand surge through 2033 https://www.skyquestt.com/sample-request/semiconductors-market https://www.skyquestt.com/speak-with-analyst/semiconductors-market https://www.skyquestt.com/report/semiconductors-market https://www.skyquestt.com/ semiconductors market expansion accelerates as digital transformation and ai drive global chip demandsemiconductors are at the core of modern technological advancement, powering everything from smartphones and electric vehicles to artificial intelligence and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.45
+        },
+        {
+         "code": 184,
+         "path": "/Computers & Electronics/Electronics & Electrical/Electronic Components",
+         "score": 0.45
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.42
+        }
+       ],
+       "country": "japan",
+       "organizations": [
+        "intel"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e86d6c7bb1410d4c7acb90",
+       "headline": "Anker Innovation's Jeffrey Liu on AI, ecosystem growth and Middle East expansion",
+       "url": "https://gulfbusiness.com/en/2026/interviews/anker-meas-gm-on-ai-ecosystem-growth-and-regional-expansion/",
+       "publisher": "gulfbusiness.com",
+       "published_at": "2026-04-19T09:00:26",
+       "lede": "jeffrey liu, gm for mea at anker innovation, outlines how the company is balancing hardware-first innovation with ai-driven features and regional growth priorities anker innovations prioritises product innovation, particularly in hardware, whilst expanding into connected services and ai. they're managing inflationary pressures through cost controls, not compromising product quality. anker",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.52,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.52
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "anker innovations",
+        "anker",
+        "mea"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e8e1885cfa3e5ba54e8ed3",
+       "headline": "Apple Veteran Stan Ng To Retire After 31 Years, Marketing Chief for Apple Watch and AirPods To Step Down Amid Broader Executive Shuffle | 📲 LatestLY",
+       "url": "https://www.latestly.com/technology/apple-veteran-stan-ng-to-retire-after-31-years-marketing-chief-for-apple-watch-and-airpods-to-step-down-amid-broader-executive-shuffle-7396290.html",
+       "publisher": "latestly.com",
+       "published_at": "2026-04-17T04:44:51",
+       "lede": "stan ng, a prominent apple executive who has overseen marketing for the apple watch, airpods, health, and smart home divisions, has announced his retirement. a veteran with 31 years at the company, ng played a pivotal role in launching the original apple watch and has been instrumental in the growth",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 119,
+         "path": "/Computers & Electronics/Consumer Electronics/Gadgets & Portable Electronics",
+         "score": 0.81
+        },
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.42
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "smart home"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d14eb5b63306cd5fc6aaa9",
+       "headline": "India’s Consumer IoT Market Grows at 12.1% CAGR",
+       "url": "https://www.electronicsforyou.biz/eb-specials/industry-report/indias-consumer-iot-market-grows-at-12-1-cagr/",
+       "publisher": "electronicsforyou.biz",
+       "published_at": "2026-03-31T06:26:25",
+       "lede": "rising smartphone use, smart city investment, and domestic chip innovation propel india’s consumer iot market from us$9.68 billion in 2025 to us$27.05 billion by 2034. source: imarc india’s consumer internet of things (iot) market is projected to expand significantly, rising from us$9678.01 million (roughly us$9.68 billion) in 2025 to us$27,045.64",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.84,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.51
+        }
+       ],
+       "country": "india",
+       "organizations": [
+        "iot"
+       ],
+       "people": []
+      },
+      {
+       "id": "69d11fbb44cbe22144543de1",
+       "headline": "AI dreams: How tech boom is redefining work, creativity and daily life",
+       "url": "https://www.philstar.com/business/technology/2026/03/30/2514066/ai-dreams-how-tech-boom-redefining-work-creativity-and-daily-life",
+       "publisher": "philstar.com",
+       "published_at": "2026-03-30T01:53:00",
+       "lede": "ai dreams: how tech boom is redefining work, creativity and daily life manila, philippines — from ai assistants that draft your emails to robots cooking dinner, china’s ai boom is not just transforming tools, but redefining day-to-day lives and the world of work. but what does this really mean? will",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.76
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.61
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d0a8762d18626fa6624b60",
+       "headline": "AI dreams: How tech boom is redefining work, creativity and daily life",
+       "url": "https://www.philstar.com/technology/2026/03/30/2514066/ai-dreams-how-tech-boom-redefining-work-creativity-and-daily-life",
+       "publisher": "philstar.com",
+       "published_at": "2026-03-30T01:53:00",
+       "lede": "ai dreams: how tech boom is redefining work, creativity and daily life manila, philippines — from ai assistants that draft your emails to robots cooking dinner, china’s ai boom is not just transforming tools, but redefining day-to-day lives and the world of work. but what does this really mean? will",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.88,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.76
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.61
+        }
+       ],
+       "country": "philippines",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69d0a34387ce168b100359a3",
+       "headline": "Samsung Topples LG in OLED Showdown as TV War Intensifies - channelnews",
+       "url": "https://www.channelnews.com.au/samsung-topples-lg-in-oled-showdown-as-tv-war-intensifies/",
+       "publisher": "channelnews.com.au",
+       "published_at": "2026-03-29T20:49:02",
+       "lede": "in a dramatic shift in the global tv power balance, samsung electronics has seized the crown in the fiercely contested oled market—long dominated by rival lg electronics—after being named the best tv brand of 2026 by consumer reports, one of the world’s most influential consumer authorities. the ranking marks a",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.32,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 225,
+         "path": "/Computers & Electronics/Consumer Electronics/TV & Video Equipment",
+         "score": 0.79
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "lg electronics",
+        "lg",
+        "samsung",
+        "consumer reports",
+        "samsung electronics"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbe628837ebf2e172b2211",
+       "headline": "TuyaClaw pushes AI off the screen to control lights, apps and home tasks",
+       "url": "https://www.stocktitan.net/news/TUYA/tuya-smart-launches-tuya-claw-still-the-same-claw-but-actually-does-yt0of5hq84tw.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-03-24T06:10:00",
+       "lede": "new york , march 24, 2026 /prnewswire/ -- tuya smart (nyse: tuya, hkex: 2391), a global ai cloud platform service provider, has officially launched tuyaclaw, the ai agent that connects the digital and physical worlds. built on the openclaw architecture, it significantly reduces deployment barriers while combining \"digital employee\" and",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.39,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.48
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.41
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "tuya"
+       ],
+       "people": []
+      },
+      {
+       "id": "69cbd1e5d5ebd7d5be534a7d",
+       "headline": "Amazon eyes ‘Star Trek’-style smartphone years after Fire Phone failure",
+       "url": "https://www.storyboard18.com/digital/amazon-ai-led-transformer-phone-to-revive-smartphone-ambitions-ws-l-92827.htm",
+       "publisher": "storyboard18.com",
+       "published_at": "2026-03-21T07:53:09",
+       "lede": "the smartphone is being designed with shopping as a central feature, offering integration with amazon’s ecosystem, including delivery benefits and discounts linked to its prime membership.amazon is reportedly planning a return to the smartphone market more than a decade after the failure of its fire phone, signalling a renewed push",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 40,
+         "path": "/Internet & Telecom/Mobile & Wireless/Mobile Phones",
+         "score": 0.47
+        }
+       ],
+       "country": "south korea",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cbd08f8518a3ddf181f798",
+       "headline": "Amazon working on new smartphone with Alexa at its core, report says | TechCrunch",
+       "url": "https://techcrunch.com/2026/03/20/amazon-working-on-new-smartphone-with-alexa-at-its-core-report-says/",
+       "publisher": "techcrunch.com",
+       "published_at": "2026-03-20T14:51:30",
+       "lede": "looks like amazon’s getting back into the smartphone game. more than 11 years after the e-commerce giant pulled the plug on its failed first effort, the fire phone, the company is now developing a new smartphone codenamed “transformer,” reuters reported, citing anonymous sources.the device is being developed by the company’s",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.38,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.63
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e88e547bb1410d4c906ad8",
+       "headline": "Music and podcasts are coming to 100M Samsung smart TVs",
+       "url": "https://www.stocktitan.net/news/LVO/live-one-nasdaq-lvo-announces-b2b-partnership-with-samsung-tv-x43f0tbnybj1.html",
+       "publisher": "stocktitan.net",
+       "published_at": "2026-03-19T12:00:00",
+       "lede": "samsung adds ~10–15m new devices annually targets the $100b+ connected tv market delivers music, podcasts, vodcasts, 10+ hours of video content, and live entertainment directly to the living room expands b2b partnerships with amazon, apple, dax, paramount, spotify, telly, tesla, textnow, vizio, and youtube los angeles, march 19, 2026 (globe",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.81,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 0,
+         "path": "/News/Business News/Company News",
+         "score": 0.51
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "samsung",
+        "spotify"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e28a983aab8d96aa2dffcb",
+       "headline": "Ceva's NeuPro-Nano NPU Wins Artificial Intelligence Award at embedded world 2026 - Ceva",
+       "url": "https://www.ceva-ip.com/press/cevas-neupro-nano-npu-wins-artificial-intelligence-award-at-embedded-world-2026/",
+       "publisher": "ceva-ip.com",
+       "published_at": "2026-03-12T04:18:33",
+       "lede": "ultra-efficient npu ip recognized for advancing edge ai in resource-constrained devices nuremberg, germany, march 12, 2026 /prnewswire/ — embedded world — ceva, inc. (nasdaq: ceva), the leading licensor of silicon and software ip for the smart edge, today announced that its ceva-neupro-nano neural processing unit npu ip has won the",
+       "sentiment": {
+        "label": "extreme_pos",
+        "score": 0.59,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 130,
+         "path": "/Computers & Electronics/Computer Hardware/Computer Components",
+         "score": 0.56
+        },
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.46
+        },
+        {
+         "code": 76,
+         "path": "/Science/Computer Science/Machine Learning & Artificial Intelligence",
+         "score": 0.4
+        }
+       ],
+       "country": "germany",
+       "organizations": [
+        "ceva"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a08b44b4a7a0d94c1245b8e",
+       "headline": "New Apple 'HomePad' Leak Tips 2026 Launch, MagSafe-Like Wall Mount",
+       "url": "https://www.pcmag.com/news/new-apple-homepad-leak-tips-2026-launch-magsafe-like-wall-mount",
+       "publisher": "pcmag.com",
+       "published_at": "2026-03-09T16:50:30",
+       "lede": "<p>apple has been <a href=\"https://www.pcmag.com/news/apple-may-launch-ipad-smart-home-control-device-march-2025\" target=\"_self\">rumored</a> to be working on a smart home hub for a couple of years, and a new <a href=\"https://x.com/kosutami_ito/status/2030044449263456400?s=20\" target=\"_blank\" title=\"(opens in a new tab)\">leak</a> suggests the device could launch this year with magsafe-like magnets for wall mounting.</p><p>the leak comes from x user <a href=\"https://x.com/kosutami_ito/status/2030044449263456400?s=20\"",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.36,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.54
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c9ca2e0fe98f3340c0542d",
+       "headline": "Engineer Tracked Homes with Vacuums: Privacy Concerns? - TIme News",
+       "url": "https://time.news/engineer-tracked-homes-with-vacuums-privacy-concerns/",
+       "publisher": "time.news",
+       "published_at": "2026-02-26T14:56:50",
+       "lede": "the convenience of a robot vacuum cleaning your floors may come at a hidden cost: your privacy. a spanish software engineer discovered a security flaw allowing him to access and control nearly 7,000 robotic vacuums across 24 countries, raising concerns about the vulnerability of smart home devices and the potential",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.39,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.48
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "smart home"
+       ],
+       "people": []
+      },
+      {
+       "id": "69c9d9ee03caa0b7b4a52c1f",
+       "headline": "One man accidentally gained access to thousands of robot vacuums, exposing the AI cyber nightmare risk facing millions of Americans | Fortune",
+       "url": "https://fortune.com/2026/02/25/who-is-sammy-azdoufal-robot-vacuum-cleaner-access-to-thousands-cyber-ai-agent-risk/",
+       "publisher": "fortune.com",
+       "published_at": "2026-02-25T17:36:20",
+       "lede": "when software engineer sammy azdoufal sat down to steer his new dji romo robot vacuum with a playstation 5 video game controller, he didn’t expect to accidentally commandeer a global surveillance network. using an ai coding assistant to reverse-engineer how the vacuum communicated with dji’s remote servers, azdoufal extracted a",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.35,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 9,
+         "path": "/News/Technology News",
+         "score": 0.63
+        },
+        {
+         "code": 340,
+         "path": "/Computers & Electronics/Consumer Electronics/Home Automation",
+         "score": 0.54
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 15,
+     "total_estimate": 1737,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMi0yNCAwODo0ODoyMyIsImkiOiI2OWQxNTBlYzNhMWJhZmUyYzE1ZDc2YzUiLCJwIjo4fQ",
+     "unresolved": 10,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 7.532,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "10 requested article(s) are unavailable"
+     ],
+     "request_seconds": 7.534
+    }
+   }
+  }
+ ]
+}

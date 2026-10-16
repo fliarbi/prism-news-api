@@ -1,0 +1,835 @@
+{
+ "slug": "wind-turbines-industry",
+ "segment": "energy-climate",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:17:47Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "wind turbines",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wind turbines",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2317,
+     "tone": {
+      "carrying": 2317,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 628,
+        "share_pct": 27.1
+       },
+       {
+        "group": "neutral",
+        "count": 79,
+        "share_pct": 3.41
+       },
+       {
+        "group": "positive",
+        "count": 1610,
+        "share_pct": 69.49
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 2315,
+      "count": 1472,
+      "share_pct": 63.59
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.695,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.698
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "wind turbines",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "wind turbines",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 346,
+       "critical": 213,
+       "critical_pct": 61.6,
+       "negative": 79,
+       "positive": 248,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 321,
+       "critical": 176,
+       "critical_pct": 54.8,
+       "negative": 77,
+       "positive": 223,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 481,
+       "critical": 301,
+       "critical_pct": 62.6,
+       "negative": 149,
+       "positive": 317,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 443,
+       "critical": 280,
+       "critical_pct": 63.2,
+       "negative": 168,
+       "positive": 259,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 448,
+       "critical": 305,
+       "critical_pct": 68.1,
+       "negative": 110,
+       "positive": 329,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 398,
+       "critical": 253,
+       "critical_pct": 63.6,
+       "negative": 73,
+       "positive": 303,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 395,
+       "critical": 263,
+       "critical_pct": 66.6,
+       "negative": 94,
+       "positive": 287,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 462,
+       "critical": 309,
+       "critical_pct": 66.9,
+       "negative": 136,
+       "positive": 300,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 447,
+       "critical": 296,
+       "critical_pct": 66.2,
+       "negative": 117,
+       "positive": 318,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 510,
+       "critical": 310,
+       "critical_pct": 60.8,
+       "negative": 129,
+       "positive": 359,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 626,
+       "critical": 397,
+       "critical_pct": 63.4,
+       "negative": 143,
+       "positive": 459,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 734,
+       "critical": 469,
+       "critical_pct": 63.9,
+       "negative": 239,
+       "positive": 474,
+       "partial_period": false
+      }
+     ],
+     "total": 5611,
+     "critical_total": 3572,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.213,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.216
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "wind turbines",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wind turbines",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 2317,
+     "carrying": 785,
+     "availability_pct": 33.88,
+     "items": [
+      {
+       "country": "united states",
+       "count": 245,
+       "share_pct": 10.57
+      },
+      {
+       "country": "united kingdom",
+       "count": 105,
+       "share_pct": 4.53
+      },
+      {
+       "country": "germany",
+       "count": 77,
+       "share_pct": 3.32
+      },
+      {
+       "country": "china",
+       "count": 45,
+       "share_pct": 1.94
+      },
+      {
+       "country": "india",
+       "count": 43,
+       "share_pct": 1.86
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 270
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.014,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 3.017
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "wind turbines",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "wind turbines",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "wind turbine technology & onshore wind farms",
+       "count": 1139,
+       "share": 62.51,
+       "lift": 1020.6,
+       "baseline_count": 5,
+       "previous_period_count": 762,
+       "delta_pct": 49.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "offshore floating wind turbine technology",
+       "count": 296,
+       "share": 16.25,
+       "lift": 1326.15,
+       "baseline_count": 1,
+       "previous_period_count": 181,
+       "delta_pct": 63.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "offshore wind energy development",
+       "count": 713,
+       "share": 39.13,
+       "lift": 798.6,
+       "baseline_count": 4,
+       "previous_period_count": 425,
+       "delta_pct": 67.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "renewable energy policy & regulation",
+       "count": 59,
+       "share": 3.24,
+       "lift": 264.33,
+       "baseline_count": 1,
+       "previous_period_count": 25,
+       "delta_pct": 136.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "wind energy conversion & electricity production",
+       "count": 39,
+       "share": 2.14,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 20,
+       "delta_pct": 95.0,
+       "new_vs_baseline": true
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 2317,
+     "carrying": 1822,
+     "carrier_share_pct": 78.64,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.57,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.572
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "wind turbines",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "wind turbines",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f8a95dbbf1d314559a4a05",
+       "headline": "India’s Dependence on Mineral Imports Threatens Clean Energy Security: IEEFA Report - India Seatrade News",
+       "url": "https://indiaseatradenews.com/indias-dependence-on-mineral-imports-threatens-clean-energy-security-ieefa-report/",
+       "publisher": "indiaseatradenews.com",
+       "published_at": "2026-04-30T18:41:54",
+       "lede": "india’s growing dependence on imported critical minerals is emerging as a major challenge to its clean energy ambitions, according to a report by the institute for energy economics and financial analysis (ieefa). the study warns that reliance on overseas supplies of minerals essential for batteries, solar panels, wind turbines and",
+       "sentiment": {
+        "label": "fair_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 54,
+         "path": "/Business & Industrial/Metals & Mining/Other",
+         "score": 0.82
+        },
+        {
+         "code": 15,
+         "path": "/News/Business News/Economy News",
+         "score": 0.41
+        }
+       ],
+       "country": "india",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f884748937ef12fc094888",
+       "headline": "What's behind the loud booms rattling neighbors? Wind turbines coming down near Mart.",
+       "url": "https://www.kxxv.com/news/local-news/in-your-neighborhood/whats-behind-the-loud-booms-rattling-neighbors-wind-turbines-coming-down-near-mart",
+       "publisher": "kxxv.com",
+       "published_at": "2026-04-30T12:58:33",
+       "lede": "residents near mart have been hearing loud booms around their homes this week, and many have been turning to local facebook groups for answers — wondering if spacex or a new rock pit might be to blame.watch full story here: the source of the noise is wind turbines coming down.engie,",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.71,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "engie",
+        "spacex",
+        "facebook"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a0407d662bbf617b0432556",
+       "headline": "Offshore wind farms rise along Rhode Island's coast, even as Trump tries to stop them",
+       "url": "https://www.latimes.com/environment/story/2026-04-27/offshore-wind-farms-rise-along-rhode-islands-coast-even-as-trump-tries-to-stop-them",
+       "publisher": "latimes.com",
+       "published_at": "2026-04-27T10:00:00",
+       "lede": "offshore wind turbines roughly three times the height of the statue of liberty are now spinning far off the coast of rhode island, sending clean electricity to the region. wind farms are taking shape and operating along the east coast, even as president trump seeks to end the u.s. offshore",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.47,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.98
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f23263c6105443aa6018a7",
+       "headline": "Offshore wind farms take shape along Rhode Island's coast, even as Trump wants to stop them",
+       "url": "http://gulfnews.com/business/energy/ap-us-climate-offshore-wind-1.500517333",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-04-24T01:12:33",
+       "lede": "off the coast of rhode island: offshore wind turbines roughly three times the height of the statue of liberty were spinning off the coast of rhode island on thursday, sending clean electricity to the region. .wind farms are taking shape and operating along the east coast, even as president donald",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.98
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e9c5836d28f995cbcc27",
+       "headline": "Offshore wind farms take shape along Rhode Island's coast, even as Trump wants to stop them",
+       "url": "https://gulfnews.com/business/energy/ap-us-climate-offshore-wind-1.500517333",
+       "publisher": "gulfnews.com",
+       "published_at": "2026-04-24T01:12:33",
+       "lede": "off the coast of rhode island: offshore wind turbines roughly three times the height of the statue of liberty were spinning off the coast of rhode island on thursday, sending clean electricity to the region. .wind farms are taking shape and operating along the east coast, even as president donald",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.63,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.98
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2ec774e540a46fb565f8af",
+       "headline": "Offshore wind farms take shape along Rhode Island’s coast, even as Trump wants to stop them",
+       "url": "https://www.sandiegouniontribune.com/2026/04/23/climate-offshore-wind/",
+       "publisher": "sandiegouniontribune.com",
+       "published_at": "2026-04-23T23:39:28",
+       "lede": "by jennifer mcdermott off the coast of rhode island (ap) — offshore wind turbines roughly three times the height of the statue of liberty were spinning far off the coast of rhode island on thursday, sending clean electricity to the region. wind farms are taking shape and operating along the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.97
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69efaac6727212302c5f0b51",
+       "headline": "Offshore wind farms take shape along Rhode Island’s coast, even as Trump wants to stop them",
+       "url": "https://www.timesherald.com/2026/04/23/climate-offshore-wind/",
+       "publisher": "timesherald.com",
+       "published_at": "2026-04-23T23:39:28",
+       "lede": "by jennifer mcdermott off the coast of rhode island (ap) — offshore wind turbines roughly three times the height of the statue of liberty were spinning far off the coast of rhode island on thursday, sending clean electricity to the region. wind farms are taking shape and operating along the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.97
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa9f08a54b8f07c95b833",
+       "headline": "Offshore wind farms take shape along Rhode Island’s coast, even as Trump wants to stop them",
+       "url": "https://www.citizensvoice.com/2026/04/23/climate-offshore-wind/",
+       "publisher": "citizensvoice.com",
+       "published_at": "2026-04-23T23:39:28",
+       "lede": "by jennifer mcdermott off the coast of rhode island (ap) — offshore wind turbines roughly three times the height of the statue of liberty were spinning far off the coast of rhode island on thursday, sending clean electricity to the region. wind farms are taking shape and operating along the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.97
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa9e9727212302c5e69f9",
+       "headline": "Offshore wind farms take shape along Rhode Island’s coast, even as Trump wants to stop them",
+       "url": "https://www.themorningsun.com/2026/04/23/climate-offshore-wind/",
+       "publisher": "themorningsun.com",
+       "published_at": "2026-04-23T23:39:28",
+       "lede": "by jennifer mcdermott off the coast of rhode island (ap) — offshore wind turbines roughly three times the height of the statue of liberty were spinning far off the coast of rhode island on thursday, sending clean electricity to the region. wind farms are taking shape and operating along the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.97
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69efa8eb727212302c5db5e1",
+       "headline": "Offshore wind farms take shape along Rhode Island’s coast, even as Trump wants to stop them",
+       "url": "https://www.dailydemocrat.com/2026/04/23/climate-offshore-wind/",
+       "publisher": "dailydemocrat.com",
+       "published_at": "2026-04-23T23:39:28",
+       "lede": "by jennifer mcdermott off the coast of rhode island (ap) — offshore wind turbines roughly three times the height of the statue of liberty were spinning far off the coast of rhode island on thursday, sending clean electricity to the region. wind farms are taking shape and operating along the",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.61,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.97
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69eaf62a18d3f7bd7a4bd1dc",
+       "headline": "Offshore wind farms take shape along Rhode Island's coast, even as Trump wants to stop them",
+       "url": "https://www.wral.com/news/ap/62211-offshore-wind-farms-take-shape-along-rhode-islands-coast-even-as-trump-wants-to-stop-them/",
+       "publisher": "wral.com",
+       "published_at": "2026-04-23T20:13:15",
+       "lede": "off the coast of rhode island (ap) — offshore wind turbines roughly three times the height of the statue of liberty were spinning off the coast of rhode island on thursday, sending clean electricity to the region. wind farms are taking shape and operating along the east coast, even as",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.7,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.97
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69ea4ae67e2e5111202560aa",
+       "headline": "The Plant That Could End America's Reliance on Foreign Rare-Earth Metals",
+       "url": "https://indiandefencereview.com/the-plant-that-could-end-rare-earth-metals/",
+       "publisher": "indiandefencereview.com",
+       "published_at": "2026-04-23T12:30:00",
+       "lede": "rare-earth elements power everything from electric vehicles to wind turbines, yet securing a reliable domestic supply has long eluded the united states. researchers have now developed a method that brings one unconventional solution significantly closer to reality. the technique works on living plant tissue and leaves the plant entirely intact,",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.65,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69de037a574a48be0d73524d",
+       "headline": "Weekend Long Read: Why Offshore Wind Farms Can Be Deadly to Migratory Birds",
+       "url": "https://www.caixinglobal.com/2025-03-01/weekend-long-read-why-offshore-wind-farms-can-be-deadly-to-migratory-birds-102293242.html",
+       "publisher": "caixinglobal.com",
+       "published_at": "2026-04-14T00:00:00",
+       "lede": "as countries transition to green energy, the rapid installation of wind turbines poses new challenges for wildlife, with scientists urging caution to avoid harming vulnerable species. offshore wind farms are rapidly expanding, with global capacity projected to reach 80.9 gigawatts by the end of 2024, driven largely by china, which",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 45,
+         "path": "/Business & Industrial/Energy & Utilities/Renewable & Alternative Energy",
+         "score": 0.8
+        },
+        {
+         "code": 574,
+         "path": "/Pets & Animals/Pets/Birds",
+         "score": 0.68
+        },
+        {
+         "code": 28,
+         "path": "/People & Society/Social Issues & Advocacy/Green Living & Environmental Issues",
+         "score": 0.45
+        }
+       ],
+       "country": "china",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 13,
+     "total_estimate": 508,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wMy0zMSAxNTozODoyNSIsImkiOiI2OWUyYmFlZDdmM2E1NzJjZjRhZmViZmYiLCJwIjo4fQ",
+     "unresolved": 11,
+     "duplicates_dropped": 1,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.941,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "11 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.943
+    }
+   }
+  }
+ ]
+}

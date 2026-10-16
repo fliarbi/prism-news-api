@@ -1,0 +1,616 @@
+{
+ "slug": "candida-auris-outbreak",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:57Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "candida auris",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "candida auris",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 140,
+     "tone": {
+      "carrying": 140,
+      "availability_pct": 100.0,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 39,
+        "share_pct": 27.86
+       },
+       {
+        "group": "neutral",
+        "count": 5,
+        "share_pct": 3.57
+       },
+       {
+        "group": "positive",
+        "count": 96,
+        "share_pct": 68.57
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 140,
+      "count": 137,
+      "share_pct": 97.86
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.437,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.44
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "candida auris",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "candida auris",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 49,
+       "critical": 48,
+       "critical_pct": 98.0,
+       "negative": 26,
+       "positive": 19,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 14,
+       "critical": 13,
+       "critical_pct": 92.9,
+       "negative": 2,
+       "positive": 11,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 23,
+       "critical": 23,
+       "critical_pct": 100.0,
+       "negative": 1,
+       "positive": 21,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 40,
+       "critical": 38,
+       "critical_pct": 95.0,
+       "negative": 22,
+       "positive": 16,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 34,
+       "critical": 27,
+       "critical_pct": 79.4,
+       "negative": 23,
+       "positive": 10,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 19,
+       "critical": 16,
+       "critical_pct": 84.2,
+       "negative": 4,
+       "positive": 13,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 19,
+       "critical": 18,
+       "critical_pct": 94.7,
+       "negative": 7,
+       "positive": 10,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 26,
+       "critical": 26,
+       "critical_pct": 100.0,
+       "negative": 10,
+       "positive": 15,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 57,
+       "critical": 57,
+       "critical_pct": 100.0,
+       "negative": 20,
+       "positive": 35,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 29,
+       "critical": 27,
+       "critical_pct": 93.1,
+       "negative": 1,
+       "positive": 27,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 32,
+       "critical": 32,
+       "critical_pct": 100.0,
+       "negative": 10,
+       "positive": 21,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 22,
+       "critical": 21,
+       "critical_pct": 95.5,
+       "negative": 8,
+       "positive": 13,
+       "partial_period": false
+      }
+     ],
+     "total": 364,
+     "critical_total": 346,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 2.062,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 2.071
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "candida auris",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "candida auris",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 140,
+     "carrying": 26,
+     "availability_pct": 18.57,
+     "items": [
+      {
+       "country": "united states",
+       "count": 16,
+       "share_pct": 11.43
+      },
+      {
+       "country": "norway",
+       "count": 4,
+       "share_pct": 2.86
+      },
+      {
+       "country": "india",
+       "count": 2,
+       "share_pct": 1.43
+      },
+      {
+       "country": "france",
+       "count": 1,
+       "share_pct": 0.71
+      },
+      {
+       "country": "italy",
+       "count": 1,
+       "share_pct": 0.71
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 2
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.07,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.074
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "candida auris",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "candida auris",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "latent infections",
+       "count": 27,
+       "share": 23.28,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 25,
+       "delta_pct": 8.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "antimicrobial stewardship programs",
+       "count": 27,
+       "share": 23.28,
+       "lift": 1900.01,
+       "baseline_count": 1,
+       "previous_period_count": 10,
+       "delta_pct": 170.0,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "opportunistic infections in immunocompromised patients",
+       "count": 68,
+       "share": 58.62,
+       "lift": 1196.3,
+       "baseline_count": 4,
+       "previous_period_count": 48,
+       "delta_pct": 41.7,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "diagnosis of atypical pathogens",
+       "count": 24,
+       "share": 20.69,
+       "lift": 1688.9,
+       "baseline_count": 1,
+       "previous_period_count": 13,
+       "delta_pct": 84.6,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "endotoxin-mediated septic shock",
+       "count": 57,
+       "share": 49.14,
+       "lift": 1002.78,
+       "baseline_count": 4,
+       "previous_period_count": 46,
+       "delta_pct": 23.9,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 140,
+     "carrying": 116,
+     "carrier_share_pct": 82.86,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 3.048,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 3.052
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "candida auris",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "candida auris",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "55d007dee6bf1d5af4926581",
+       "headline": "Understanding the epidemiology of Candidozyma auris: a case-control study at an acute hospital in London, UK.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41831616/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-12T00:00:00",
+       "lede": "understanding the epidemiology of candidozyma auris: a case-control study at an acute hospital in london, uk.introduction: candidozyma auris (formerly candida auris) is an emerging cause of healthcare-associated infection with increasing global prevalence and significant clinical implications. since september 2023, an outbreak of c. auris occurred at a london national health",
+       "sentiment": {
+        "label": "slight_pos",
+        "score": 0.56,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.55
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.53
+        },
+        {
+         "code": 19,
+         "path": "/News/Health News",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "de57b05d2048aca7a78e9dfc",
+       "headline": "Mortality of Candidozyma auris Candidemia Compared with Non-C. auris Candidemia.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42042329/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-25T00:00:00",
+       "lede": "mortality of candidozyma auris candidemia compared with non-c. auris candidemia.candidozyma auris (formerly candida auris) is frequently multidrug-resistant, resulting in limited treatment options and high mortality. comparable mortality between c. auris candidemia and non-c. auris candidemia in recent studies requires confirmation in the middle east after adjustment for confounders. this study",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.31,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.57
+        },
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.55
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "c2596336f7d0ba87c0700221",
+       "headline": "Successful Management of Candida auris Bloodstream Infection in an Elderly Patient: A Case Report.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41743364/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-03-01T00:00:00",
+       "lede": "successful management of candida auris bloodstream infection in an elderly patient: a case report.candida auris is an emerging multidrug-resistant pathogen frequently misidentified by conventional methods, posing diagnostic and infection-control challenges, particularly in low- and middle-income countries. we report a 74-year-old male in dhaka, bangladesh, with multiple comorbidities who developed candidemia.",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.53,
+        "group": "positive"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 138,
+         "path": "/Science/Biological Sciences/Other",
+         "score": 0.44
+        },
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.41
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69bb29f492d3c72cc1abf6ac",
+       "headline": "Síntomas y cómo se contagia el hongo mortal que se propaga de California a Carolina del Norte: lo que dicen los expertos",
+       "url": "https://www.lanacion.com.ar/estados-unidos/sintomas-y-como-se-contagia-el-hongo-mortal-que-se-propaga-de-california-a-carolina-del-norte-lo-que-nid04012026/",
+       "publisher": "lanacion.com.ar",
+       "published_at": "2026-01-04T17:38:00",
+       "lede": "the 2025 closure brought some warning signals to the u.s. health authorities. the centers for disease control and prevention (cdc) monitor cases of candida auris, a potentially deadly fungus that infected thousands of people over the past year. symptoms may look like other infections, so it is important to pay",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 7,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.74
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 4,
+     "total_estimate": 9,
+     "next_cursor": null,
+     "unresolved": 5,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.448,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "5 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.451
+    }
+   }
+  }
+ ]
+}

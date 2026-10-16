@@ -1,0 +1,1004 @@
+{
+ "slug": "instagram-news",
+ "segment": "technology-ai",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:09:55Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "instagram",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "instagram",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 247357,
+     "tone": {
+      "carrying": 246319,
+      "availability_pct": 99.58,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 89867,
+        "share_pct": 36.48
+       },
+       {
+        "group": "neutral",
+        "count": 2286,
+        "share_pct": 0.93
+       },
+       {
+        "group": "positive",
+        "count": 154166,
+        "share_pct": 62.59
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 247164,
+      "count": 70138,
+      "share_pct": 28.38
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.566,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.569
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "instagram",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "instagram",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 43371,
+       "critical": 11428,
+       "critical_pct": 26.3,
+       "negative": 15327,
+       "positive": 27426,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 36419,
+       "critical": 9060,
+       "critical_pct": 24.9,
+       "negative": 12023,
+       "positive": 23947,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 59047,
+       "critical": 13533,
+       "critical_pct": 22.9,
+       "negative": 20879,
+       "positive": 37525,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 68154,
+       "critical": 17132,
+       "critical_pct": 25.1,
+       "negative": 23042,
+       "positive": 44355,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 52877,
+       "critical": 15798,
+       "critical_pct": 29.9,
+       "negative": 18949,
+       "positive": 33170,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 42431,
+       "critical": 10542,
+       "critical_pct": 24.8,
+       "negative": 13463,
+       "positive": 28469,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 40727,
+       "critical": 11536,
+       "critical_pct": 28.3,
+       "negative": 13594,
+       "positive": 26652,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 43391,
+       "critical": 11580,
+       "critical_pct": 26.7,
+       "negative": 14308,
+       "positive": 28570,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 43293,
+       "critical": 11648,
+       "critical_pct": 26.9,
+       "negative": 15553,
+       "positive": 27219,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 59994,
+       "critical": 18926,
+       "critical_pct": 31.5,
+       "negative": 23553,
+       "positive": 35708,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 65520,
+       "critical": 18427,
+       "critical_pct": 28.1,
+       "negative": 24206,
+       "positive": 40319,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 78550,
+       "critical": 21137,
+       "critical_pct": 26.9,
+       "negative": 26555,
+       "positive": 50920,
+       "partial_period": false
+      }
+     ],
+     "total": 633774,
+     "critical_total": 170747,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-04-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 3.123,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 3.125
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "instagram",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "instagram",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 247357,
+     "carrying": 102805,
+     "availability_pct": 41.56,
+     "items": [
+      {
+       "country": "united states",
+       "count": 56036,
+       "share_pct": 22.65
+      },
+      {
+       "country": "india",
+       "count": 11699,
+       "share_pct": 4.73
+      },
+      {
+       "country": "united kingdom",
+       "count": 7400,
+       "share_pct": 2.99
+      },
+      {
+       "country": "australia",
+       "count": 2270,
+       "share_pct": 0.92
+      },
+      {
+       "country": "italy",
+       "count": 1953,
+       "share_pct": 0.79
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 23447
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.475,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 5.478
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "instagram",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "instagram",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "sustainable construction materials and practices",
+       "count": 1977,
+       "share": 1.44,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 322,
+       "delta_pct": 514.0,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "green building certifications and standards",
+       "count": 1974,
+       "share": 1.43,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 320,
+       "delta_pct": 516.9,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "building automation and smart systems",
+       "count": 1969,
+       "share": 1.43,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 314,
+       "delta_pct": 527.1,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "indoor air quality management in buildings",
+       "count": 1968,
+       "share": 1.43,
+       "lift": 116.69,
+       "baseline_count": 1,
+       "previous_period_count": 315,
+       "delta_pct": 524.8,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "mental health and support communities",
+       "count": 2191,
+       "share": 1.59,
+       "lift": 64.96,
+       "baseline_count": 2,
+       "previous_period_count": 967,
+       "delta_pct": 126.6,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 247357,
+     "carrying": 137668,
+     "carrier_share_pct": 55.66,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 5.48,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 5.483
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "instagram",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "instagram",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69f885db8937ef12fc0a47ab",
+       "headline": "Prosecutors say singer D4vd stabbed 14-year-old Celeste Rivas Hernandez to death to silence her | Houston Public Media",
+       "url": "https://houstonpublicmedia.org/articles/news/crime/2026/04/30/550585/prosecutors-say-singer-d4vd-stabbed-14-year-old-celeste-rivas-hernandez-to-death-to-silence-her/",
+       "publisher": "houstonpublicmedia.org",
+       "published_at": "2026-04-30T18:00:13",
+       "lede": "prosecutors say singer d4vd killed 14-year-old celeste rivas hernandez by stabbing her multiple times. the los angeles county district attorney’s office shared what they said the evidence would show in a document filed wednesday. ted soqui/pool photo via ap los angeles (ap) — prosecutors said wednesday that singer d4vd killed",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 1.0,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.77
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f87f8a8937ef12fc068259",
+       "headline": "Prosecutors say singer D4vd stabbed 14-year-old Celeste Rivas Hernandez to death to silence her | Houston Public Media",
+       "url": "https://www.houstonpublicmedia.org/articles/news/crime/2026/04/30/550585/prosecutors-say-singer-d4vd-stabbed-14-year-old-celeste-rivas-hernandez-to-death-to-silence-her/",
+       "publisher": "houstonpublicmedia.org",
+       "published_at": "2026-04-30T18:00:13",
+       "lede": "prosecutors say singer d4vd killed 14-year-old celeste rivas hernandez by stabbing her multiple times. the los angeles county district attorney’s office shared what they said the evidence would show in a document filed wednesday. ted soqui/pool photo via ap los angeles (ap) — prosecutors said wednesday that singer d4vd killed",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 1.0,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.77
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f8b996bbf1d314559ad30d",
+       "headline": "Donald Trump Jr. needs dad to end Iran war so he can get married again",
+       "url": "https://www.eastbaytimes.com/2026/04/30/donald-trump-jr-iran-war-wedding/",
+       "publisher": "eastbaytimes.com",
+       "published_at": "2026-04-30T17:47:37",
+       "lede": "it looks like there’s another consequence of donald trump’s decision to launch a war against iran. the wedding of his oldest son, donald trump jr., to palm beach socialite bettina anderson has been put on hold until he finds a way to end the conflict in the middle east, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.77
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.44
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump jr.",
+        "donald trump jr.",
+        "donald trump jr."
+       ]
+      },
+      {
+       "id": "69f8810cbbf1d3145596a60a",
+       "headline": "Donald Trump Jr. needs dad to end Iran war so he can get married again",
+       "url": "https://www.marinij.com/2026/04/30/donald-trump-jr-iran-war-wedding/",
+       "publisher": "marinij.com",
+       "published_at": "2026-04-30T17:47:37",
+       "lede": "it looks like there’s another consequence of donald trump’s decision to launch a war against iran. the wedding of his oldest son, donald trump jr., to palm beach socialite bettina anderson has been put on hold until he finds a way to end the conflict in the middle east, the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.48,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.77
+        },
+        {
+         "code": 16,
+         "path": "/Sensitive Subjects/War & Conflict",
+         "score": 0.44
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump jr.",
+        "donald trump jr.",
+        "donald trump jr."
+       ]
+      },
+      {
+       "id": "69f88158bbf1d3145596d6b0",
+       "headline": "HKL Responds After Netizen Expresses Concern Over Congestion At Specialist Clinic",
+       "url": "https://says.com/my/news/hkl-responds-after-netizen-expresses-concern-over-congestion-at-specialist-clinic",
+       "publisher": "says.com",
+       "published_at": "2026-04-30T14:19:53",
+       "lede": "follow us on instagram, tiktok, and whatsapp for the latest stories and breaking news. a viral social media post highlighting congestion at the ophthalmology specialist clinic at hospital kuala lumpur (hkl) has prompted a response from the hospital on monday, 27 april, an x user shared a photo showing a",
+       "sentiment": {
+        "label": "slight_neg",
+        "score": 0.34,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 58,
+         "path": "/Health/Medical Facilities & Services/Hospitals & Treatment Centers",
+         "score": 0.73
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "tiktok",
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f23418c6105443aa6157bd",
+       "headline": "Anonymous tip system started in wake of Sandy Hook shooting has fielded nearly 400,000 reports",
+       "url": "https://www.nbcconnecticut.com/news/local/anonymous-tip-system-started-in-wake-of-sandy-hook-shooting-has-fielded-nearly-400000-reports/3730799/",
+       "publisher": "nbcconnecticut.com",
+       "published_at": "2026-04-29T11:25:16",
+       "lede": "less than two years after her 6-year-old son was killed at sandy hook elementary school in 2012, nicole hockley was in an ohio church basement teaching the first class of a program she hoped would help prevent future school shootings. the program, born in the grief of one of the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.78
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.46
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f2288e122c4392e0cec854",
+       "headline": "Former FBI Director James Comey charged with threatening Donald Trump's life with creepy Instagram post",
+       "url": "https://www.uniladtech.com/news/tech-news/former-fbi-director-james-comey-charged-threatening-donald-trump-life-073889-20260429",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-04-29T10:54:12",
+       "lede": "while politicians and the general public alike remind us of the first amendment, the former head of the fbi is finding out the consequences of what you post online. the white house is taking its security detail especially seriously in the aftermath of the latest potential attempt against president donald",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.67,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.91
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.7
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f22e11c6105443aa5df76c",
+       "headline": "Mother fakes child cancer to fund lavish life in disturbing Australian case - Türkiye Today",
+       "url": "https://www.turkiyetoday.com/lifestyle/mother-fakes-child-cancer-to-fund-lavish-life-in-disturbing-australia-case-3219053",
+       "publisher": "turkiyetoday.com",
+       "published_at": "2026-04-29T09:43:06",
+       "lede": "how far would you go to get the life you want? in australia, that question now has a clear and disturbing answer. a court in south australia has sentenced a 45-year-old mother to more than four years in prison after she fabricated her six-year-old son’s cancer diagnosis to solicit donations",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.49,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [],
+       "country": "australia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1cfbfa5706a322e13597b",
+       "headline": "VIDEO: Father Beats Up Son With Belt On Instagram LIVE! Internet Divided",
+       "url": "https://www.timesnownews.com/viral/viral-video-father-beats-up-son-with-belt-on-instagram-live-internet-divided-article-154196813",
+       "publisher": "timesnownews.com",
+       "published_at": "2026-04-29T08:46:47",
+       "lede": "it’s one thing to discipline a kid, and it’s a completely different thing to discipline a young child live on social media! a video is circulating on the internet, leaving netizens debating between ‘good vs bad parenting’. the video, in actuality, is an instagram live, which showed a man beating",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.95,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.8
+        },
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.69
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "social media",
+        "instagram"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1ca7c1e3933a6dd8f9c42",
+       "headline": "Anonymous tip system started in wake of Sandy Hook shooting has fielded nearly 400,000 reports",
+       "url": "https://www.durangoherald.com/articles/anonymous-tip-system-started-in-wake-of-sandy-hook-shooting-has-fielded-nearly-400000-reports/",
+       "publisher": "durangoherald.com",
+       "published_at": "2026-04-29T08:07:10",
+       "lede": "× hanover, mass. (ap) — less than two years after her 6-year-old son was killed at sandy hook elementary school in 2012, nicole hockley was in an ohio church basement teaching the first class of a program she hoped would help prevent future school shootings. the program, born in the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.44,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.83
+        },
+        {
+         "code": 43,
+         "path": "/Jobs & Education/Education/Primary & Secondary Schooling (K-12)",
+         "score": 0.44
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "ap"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f1c96da5706a322e104357",
+       "headline": "Former FBI director James Comey indicted over alleged threat to Trump - Social News XYZ",
+       "url": "https://www.socialnews.xyz/2026/04/28/former-fbi-director-james-comey-indicted-over-alleged-threat-to-trump/",
+       "publisher": "socialnews.xyz",
+       "published_at": "2026-04-29T00:18:53",
+       "lede": "washington, april 29 (socialnews.xyz) a federal grand jury has indicted former fbi director james comey on charges of threatening to harm us president donald trump, authorities said. the two-count indictment, returned in the eastern district of north carolina, alleges that comey “knowingly and willfully” made a threat to take the",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.82
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.65
+        }
+       ],
+       "country": "united states",
+       "organizations": [
+        "xyz"
+       ],
+       "people": [
+        "donald trump",
+        "james comey",
+        "james comey"
+       ]
+      },
+      {
+       "id": "69f1c74a399b489398dea51a",
+       "headline": "Violencia sexual organizada",
+       "url": "https://www.informacion.es/opinion/2026/04/28/violencia-sexual-organizada-129629404.html",
+       "publisher": "informacion.es",
+       "published_at": "2026-04-28T20:00:05",
+       "lede": "this is happening right now on telegram: \"can i borrow your girlfriend to humiliate her?\", \"contact the administrator to show your friends, girlfriends or daughters,\" \"i expose my ex for a private message,\" \"can anyone undress them?\", \"can someone do oral sex for my cousin?\", \"who has this whore's instagram?\",",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.51,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.75
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a0b07c1636c9774213d746f",
+       "headline": "Laughing California teacher's disturbing nickname for boy, 13, she raped - AOL",
+       "url": "https://www.aol.com/entertainment/laughing-california-teachers-disturbing-nickname-164913355.html",
+       "publisher": "aol.com",
+       "published_at": "2026-04-28T16:49:13",
+       "lede": "prosecutors said that the teacher messaged the boy on instagram saying \"he is her crystal meth\" -credit:police a teacher who called her teenage rape victim her \"crystal meth\" was seen smiling as she faced sentencing in a los angeles courtroom. colleen jo matarico, 44, stood before the judge in a",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.96,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 10,
+         "path": "/Sensitive Subjects/Violence & Abuse",
+         "score": 0.77
+        },
+        {
+         "code": 6,
+         "path": "/Law & Government/Public Safety/Crime & Justice",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f1c8a3399b489398df5eab",
+       "headline": "White House responds directly to viral social media claims WHCD attempted shooting was 'staged'",
+       "url": "https://www.uniladtech.com/news/tech-news/white-house-whcd-staged-claims-response-cole-tomas-allen-521460-20260428",
+       "publisher": "uniladtech.com",
+       "published_at": "2026-04-28T15:48:23",
+       "lede": "the white house is in turmoil, and the secret service is set for a major review after a third attempt was seemingly made against president donald trump’s life in just two years. following july 2024's shooting at a rally in butler, pennsylvania, there was also an incident involving an ak-47-style",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 1,
+         "path": "/News/Politics/Other",
+         "score": 0.87
+        },
+        {
+         "code": 13,
+         "path": "/Law & Government/Government/Executive Branch",
+         "score": 0.64
+        }
+       ],
+       "country": "united states",
+       "organizations": [],
+       "people": [
+        "donald trump"
+       ]
+      },
+      {
+       "id": "69f0e3db836d28f995cb761d",
+       "headline": "Indonesia commuter train crash toll rises to 15 as rescuers complete evacuation",
+       "url": "https://www.thestar.com.my/news/world/2026/04/28/indonesia-commuter-train-crash-toll-rises-to-14-as-rescuers-complete-evacuation",
+       "publisher": "thestar.com.my",
+       "published_at": "2026-04-28T14:46:00",
+       "lede": "jakarta, april 28 (reuters) - the death toll ⁠from a train collision near the indonesian capital jakarta has risen to 15 with another 88 injured, a senior minister ⁠said on tuesday, as emergency teams completed work to rescue passengers trapped in the wreckage. the collision between a commuter train ‌and",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.68,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.85
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.53
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      },
+      {
+       "id": "69f0e619836d28f995cb94fc",
+       "headline": "Jakarta train crash death toll doubles to 14 as rescue operation ends",
+       "url": "https://www.malaymail.com/news/world/2026/04/28/jakarta-train-crash-death-toll-doubles-to-14-as-rescue-operation-ends/217982",
+       "publisher": "malaymail.com",
+       "published_at": "2026-04-28T14:09:35",
+       "lede": "jakarta, april 28 — the death toll from a train ​collision near the indonesian capital jakarta has risen to 14 with another 84 injured, the train operator said on tuesday, as rescuers completed work to extract survivors still ‌trapped in the wreckage. the collision between a commuter train and a",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.64,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.88
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.45
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69f0e4aa45272de32e8c1651",
+       "headline": "Indonesia train crash toll rises to 14 as rescuers complete evacuation",
+       "url": "https://asia.nikkei.com/business/transportation/indonesia-train-crash-toll-rises-to-14-as-rescuers-complete-evacuation",
+       "publisher": "asia.nikkei.com",
+       "published_at": "2026-04-28T06:08:26",
+       "lede": "jakarta (reuters) -- the death toll from a train collision near the indonesian capital jakarta has risen to 14 with another 84 injured, the train operator said on tuesday, as rescuers completed work to extract survivors still trapped in the wreckage. the collision between a commuter train and a long-distance",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.52,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.85
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.46
+        }
+       ],
+       "country": "indonesia",
+       "organizations": [
+        "reuters"
+       ],
+       "people": []
+      }
+     ],
+     "returned": 17,
+     "total_estimate": 64668,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yOCAwMzo1NjowMCIsImkiOiI2OWYxY2QwMDM5OWI0ODkzOThlMTRhZjYiLCJwIjo5fQ",
+     "unresolved": 8,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 8.926,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "8 requested article(s) are unavailable"
+     ],
+     "request_seconds": 8.929
+    }
+   }
+  }
+ ]
+}

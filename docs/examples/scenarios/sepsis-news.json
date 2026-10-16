@@ -1,0 +1,794 @@
+{
+ "slug": "sepsis-news",
+ "segment": "disease-health",
+ "kind": "captured",
+ "captured_at": "2026-10-16T05:02:49Z",
+ "coverage_note": "93% of archive rows (1 of 14 shards offline)",
+ "calls": [
+  {
+   "name": "overview",
+   "request": {
+    "method": "POST",
+    "path": "/v1/overview",
+    "body": {
+     "q": "sepsis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.overview",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "sepsis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3149,
+     "tone": {
+      "carrying": 3134,
+      "availability_pct": 99.52,
+      "groups": [
+       {
+        "group": "negative",
+        "count": 806,
+        "share_pct": 25.72
+       },
+       {
+        "group": "neutral",
+        "count": 158,
+        "share_pct": 5.04
+       },
+       {
+        "group": "positive",
+        "count": 2170,
+        "share_pct": 69.24
+       }
+      ]
+     },
+     "critical": {
+      "min_priority": 7,
+      "carrying": 3149,
+      "count": 2894,
+      "share_pct": 91.9
+     }
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.916,
+     "notes": [
+      "Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating."
+     ],
+     "request_seconds": 2.925
+    }
+   }
+  },
+  {
+   "name": "trends",
+   "request": {
+    "method": "POST",
+    "path": "/v1/trends",
+    "body": {
+     "q": "sepsis",
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "granularity": "monthly"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.trends",
+    "subject": {
+     "filters": {
+      "since": "2025-05-01",
+      "until": "2026-04-30",
+      "limit": 100,
+      "sort": "newest",
+      "q": "sepsis",
+      "match": "any"
+     },
+     "granularity": "monthly"
+    },
+    "data": {
+     "granularity": "monthly",
+     "points": [
+      {
+       "period": "2025-05-01",
+       "articles": 571,
+       "critical": 496,
+       "critical_pct": 86.9,
+       "negative": 162,
+       "positive": 369,
+       "partial_period": false
+      },
+      {
+       "period": "2025-06-01",
+       "articles": 484,
+       "critical": 446,
+       "critical_pct": 92.1,
+       "negative": 130,
+       "positive": 319,
+       "partial_period": false
+      },
+      {
+       "period": "2025-07-01",
+       "articles": 565,
+       "critical": 508,
+       "critical_pct": 89.9,
+       "negative": 160,
+       "positive": 368,
+       "partial_period": false
+      },
+      {
+       "period": "2025-08-01",
+       "articles": 625,
+       "critical": 572,
+       "critical_pct": 91.5,
+       "negative": 168,
+       "positive": 416,
+       "partial_period": false
+      },
+      {
+       "period": "2025-09-01",
+       "articles": 809,
+       "critical": 743,
+       "critical_pct": 91.8,
+       "negative": 286,
+       "positive": 485,
+       "partial_period": false
+      },
+      {
+       "period": "2025-10-01",
+       "articles": 636,
+       "critical": 570,
+       "critical_pct": 89.6,
+       "negative": 183,
+       "positive": 413,
+       "partial_period": false
+      },
+      {
+       "period": "2025-11-01",
+       "articles": 596,
+       "critical": 559,
+       "critical_pct": 93.8,
+       "negative": 126,
+       "positive": 432,
+       "partial_period": false
+      },
+      {
+       "period": "2025-12-01",
+       "articles": 756,
+       "critical": 706,
+       "critical_pct": 93.4,
+       "negative": 156,
+       "positive": 556,
+       "partial_period": false
+      },
+      {
+       "period": "2026-01-01",
+       "articles": 1161,
+       "critical": 1098,
+       "critical_pct": 94.6,
+       "negative": 187,
+       "positive": 894,
+       "partial_period": false
+      },
+      {
+       "period": "2026-02-01",
+       "articles": 617,
+       "critical": 551,
+       "critical_pct": 89.3,
+       "negative": 172,
+       "positive": 410,
+       "partial_period": false
+      },
+      {
+       "period": "2026-03-01",
+       "articles": 719,
+       "critical": 662,
+       "critical_pct": 92.1,
+       "negative": 260,
+       "positive": 430,
+       "partial_period": false
+      },
+      {
+       "period": "2026-04-01",
+       "articles": 652,
+       "critical": 583,
+       "critical_pct": 89.4,
+       "negative": 187,
+       "positive": 436,
+       "partial_period": false
+      }
+     ],
+     "total": 8191,
+     "critical_total": 7494,
+     "complete_periods": 12,
+     "partial_periods": 0,
+     "peak": "2026-01-01"
+    },
+    "window": {
+     "since": "2025-05-01",
+     "until": "2026-04-30",
+     "days": 365,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial",
+     "granularity": "monthly"
+    },
+    "meta": {
+     "seconds": 4.769,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "zero-count periods are included; partial_period marks buckets the window only partly covers"
+     ],
+     "request_seconds": 4.784
+    }
+   }
+  },
+  {
+   "name": "geography",
+   "request": {
+    "method": "POST",
+    "path": "/v1/geography",
+    "body": {
+     "q": "sepsis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.geography",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "sepsis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "matched": 3149,
+     "carrying": 481,
+     "availability_pct": 15.27,
+     "items": [
+      {
+       "country": "united states",
+       "count": 189,
+       "share_pct": 6.0
+      },
+      {
+       "country": "united kingdom",
+       "count": 111,
+       "share_pct": 3.52
+      },
+      {
+       "country": "china",
+       "count": 23,
+       "share_pct": 0.73
+      },
+      {
+       "country": "india",
+       "count": 22,
+       "share_pct": 0.7
+      },
+      {
+       "country": "canada",
+       "count": 16,
+       "share_pct": 0.51
+      }
+     ],
+     "returned": 5,
+     "limit": 5,
+     "other_located_count": 120
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.389,
+     "notes": [
+      "Country shares use all matching articles. Location information is incomplete and varies by period."
+     ],
+     "request_seconds": 2.392
+    }
+   }
+  },
+  {
+   "name": "themes",
+   "request": {
+    "method": "POST",
+    "path": "/v1/themes",
+    "body": {
+     "q": "sepsis",
+     "since": "2026-01-01",
+     "until": "2026-04-30"
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.themes",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 5,
+      "sort": "newest",
+      "q": "sepsis",
+      "match": "any"
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "theme": "infectious disease research and prevention",
+       "count": 305,
+       "share": 15.22,
+       "lift": 621.19,
+       "baseline_count": 2,
+       "previous_period_count": 200,
+       "delta_pct": 52.5,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "antimicrobial stewardship programs",
+       "count": 179,
+       "share": 8.93,
+       "lift": 729.13,
+       "baseline_count": 1,
+       "previous_period_count": 172,
+       "delta_pct": 4.1,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "patient safety and quality improvement studies",
+       "count": 172,
+       "share": 8.58,
+       "lift": null,
+       "baseline_count": 0,
+       "previous_period_count": 143,
+       "delta_pct": 20.3,
+       "new_vs_baseline": true
+      },
+      {
+       "theme": "biomedical research grant proposals",
+       "count": 140,
+       "share": 6.99,
+       "lift": 570.27,
+       "baseline_count": 1,
+       "previous_period_count": 53,
+       "delta_pct": 164.2,
+       "new_vs_baseline": false
+      },
+      {
+       "theme": "diagnosis of atypical pathogens",
+       "count": 133,
+       "share": 6.64,
+       "lift": 541.76,
+       "baseline_count": 1,
+       "previous_period_count": 91,
+       "delta_pct": 46.2,
+       "new_vs_baseline": false
+      }
+     ],
+     "returned": 5,
+     "total_estimate": null,
+     "next_cursor": null,
+     "matched": 3149,
+     "carrying": 2004,
+     "carrier_share_pct": 63.64,
+     "previous_period": {
+      "since": "2025-09-03",
+      "until": "2025-12-31"
+     },
+     "baseline": {
+      "since": "2026-07-26",
+      "until": "2026-08-24",
+      "days": 30,
+      "articles": 13835,
+      "carrying": 8163,
+      "note": "Archive comparison over the 30 days ending at data_through"
+     },
+     "min_articles": 5,
+     "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 2.869,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Theme shares use articles with identified themes; articles may have more than one theme."
+     ],
+     "request_seconds": 2.872
+    }
+   }
+  },
+  {
+   "name": "headlines",
+   "request": {
+    "method": "POST",
+    "path": "/v1/headlines",
+    "body": {
+     "q": "sepsis",
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "match": "focused",
+     "priority_min": 6,
+     "sort": "priority",
+     "limit": 25
+    }
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "feature": "news.headlines",
+    "subject": {
+     "filters": {
+      "since": "2026-01-01",
+      "until": "2026-04-30",
+      "limit": 25,
+      "sort": "priority",
+      "q": "sepsis",
+      "match": "focused",
+      "priority_min": 6
+     }
+    },
+    "data": {
+     "items": [
+      {
+       "id": "69e2ca1d90d9a716b4c62ae0",
+       "headline": "Scots oil worker dies in Australia after message of support from Celtic fans",
+       "url": "https://www.thescottishsun.co.uk/news/16130082/scots-oil-worker-dies-infection-australia-celtic-fans-support/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-04-08T11:19:32",
+       "lede": "shock death tragic scots oil worker dies from infection in australia after celtic fans sent message of support ​a “fit and healthy” oil rig worker tragically died six days after picking up a bacterial infection working offshore in australia. ​colin kennedy, 43, developed sepsis while he was isolating on the",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.62,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.87
+        },
+        {
+         "code": 18,
+         "path": "/Sensitive Subjects/Accidents & Disasters",
+         "score": 0.71
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "6a2e93468e67a2fcb3a19aed",
+       "headline": "Kristen Johnston Slams Perez Hilton for Past Remarks About Her Weight During ‘Darkest Time’ of Her Life",
+       "url": "https://www.yahoo.com/entertainment/celebrity/articles/kristen-johnston-slams-perez-hilton-034451130.html",
+       "publisher": "yahoo.com",
+       "published_at": "2026-03-26T03:44:51",
+       "lede": "former sex and the city star kristen johnston has called on perez hilton to “make amends” to those he has hurt following his recent hospitalization for sepsis. “many years ago my guts [were] basically ripped open as a result of my longterm abuse of opiates. (i wrote a whole book",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.57,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.67
+        },
+        {
+         "code": 105,
+         "path": "/News/Gossip & Tabloid News/Other",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69cc1d819b458c791486562e",
+       "headline": "Kristen Johnston Slams Perez Hilton for Past Remarks About Her Weight During ‘Darkest Time’ of Her Life",
+       "url": "https://www.aol.com/articles/kristen-johnston-slams-perez-hilton-034451647.html",
+       "publisher": "aol.com",
+       "published_at": "2026-03-26T03:44:51",
+       "lede": "kevin winter/getty imagesformer sex and the city star kristen johnston has called on perez hilton to “make amends” to those he has hurt following his recent hospitalization for sepsis.“many years ago my guts [were] basically ripped open as a result of my longterm abuse of opiates. (i wrote a whole",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.6,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 7,
+         "path": "/Arts & Entertainment/Celebrities & Entertainment News",
+         "score": 0.76
+        },
+        {
+         "code": 105,
+         "path": "/News/Gossip & Tabloid News/Other",
+         "score": 0.46
+        }
+       ],
+       "country": null,
+       "organizations": [
+        "hilton"
+       ],
+       "people": [
+        "kristen johnston",
+        "perez hilton"
+       ]
+      },
+      {
+       "id": "69e28336a85be7e506563438",
+       "headline": "Lancaster University student’s death by sepsis linked to hospital's 'inadequate' hygiene",
+       "url": "https://thetab.com/2026/03/19/lancaster-university-students-death-by-sepsis-linked-to-hospitals-inadequate-hygiene",
+       "publisher": "thetab.com",
+       "published_at": "2026-03-19T12:40:15",
+       "lede": "2 weeks ago a coroner has concluded a lancaster university student who died from sepsis likely contracted it from poor hand hygiene at a hospital. joshua abbott-littler, who was in his second year of studying a master’s in maths, died on 26th june 2025 as a result of treatment-induced acute",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.46,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.47
+        },
+        {
+         "code": 92,
+         "path": "/Health/Health Conditions/Cancer",
+         "score": 0.42
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "lancaster university"
+       ],
+       "people": [
+        "joshua"
+       ]
+      },
+      {
+       "id": "69bb156beec96a734300c70e",
+       "headline": "‘It started as a UTI’: British traveller’s close call after infection turns to sepsis",
+       "url": "https://www.nzherald.co.nz/lifestyle/sepsis-from-uti-how-a-common-infection-became-life-threatening-for-rosie-beveridge/MCGFL5VOWNACPHVJOQU3XEKUYQ/",
+       "publisher": "nzherald.co.nz",
+       "published_at": "2026-02-11T22:25:58",
+       "lede": "rosie beveridge become ill while on holiday in new zealand. photo / @rosiebevrosie beveridge become ill while on holiday in new zealand. photo / @rosiebeva british tourist says a routine urinary tract infection almost killed her after it developed into sepsis while visiting new zealand.rosie beveridge spent four nights in",
+       "sentiment": {
+        "label": "very_neg",
+        "score": 0.47,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.71
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69c995e30fe98f3340bf0337",
+       "headline": "I gave birth but all went black after I vomited blood - I ended up in a coma",
+       "url": "https://www.thescottishsun.co.uk/fabulous/15772753/breastfed-baby-nearly-died-lucky-alive/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-01-07T17:55:19",
+       "lede": "a mum has revealed how the happiest day of her life turned into a living nightmare – as she almost died of sepsis while breastfeeding her baby for the first time.ellie marples says she started to feel unwell when she was taken into the recovery room after giving birth to",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.54,
+        "group": "negative"
+       },
+       "priority": 9,
+       "classes": [
+        {
+         "code": 59,
+         "path": "/People & Society/Family & Relationships/Family/Other",
+         "score": 0.94
+        },
+        {
+         "code": 21,
+         "path": "/Sensitive Subjects/Death & Tragedy",
+         "score": 0.51
+        }
+       ],
+       "country": "united kingdom",
+       "organizations": [
+        "ellie"
+       ],
+       "people": []
+      },
+      {
+       "id": "6a2aecf4963d76f4af1ed8ca",
+       "headline": "Volition Reports Successful Finger-Prick Detection of Nucleosomes for Sepsis Testing",
+       "url": "https://clpmag.com/diagnostic-technologies/immunoassay/immunoassay-reagents-kits/volition-finger-prick-nucleosome-test-sepsis-detection/",
+       "publisher": "clpmag.com",
+       "published_at": "2026-04-29T14:34:02",
+       "lede": "a lateral flow prototype allows for rapid testing at the point of care using capillary blood samples. volitionrx ltd announced the successful detection of nucleosomes in capillary blood from critically ill sepsis patients using a lateral flow prototype. this finger-prick sample test is designed for use at the bedside, in",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.75,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 22,
+         "path": "/Business & Industrial/Pharmaceuticals & Biotech",
+         "score": 0.52
+        },
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.4
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "e21564d0529b411d6c5e3972",
+       "headline": "The role of astrocytic GSDME in Sepsis-associated cognitive dysfunction.",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42055495/",
+       "publisher": "pubmed.ncbi.nlm.nih.gov",
+       "published_at": "2026-04-28T00:00:00",
+       "lede": "the role of astrocytic gsdme in sepsis-associated cognitive dysfunction.sepsis-associated encephalopathy (sae) is a neurofunctional disorder resulting from sepsis, primarily manifested as acute brain dysfunction and long-term cognitive decline. this study utilizes the cecal ligation and puncture (clp) model to investigate the role of gasdermin e (gsdme)-mediated pyroptosis in hippocampal astrocytes",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.57,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 52,
+         "path": "/Health/Health Foundations & Medical Research",
+         "score": 0.48
+        }
+       ],
+       "country": null,
+       "organizations": [],
+       "people": []
+      },
+      {
+       "id": "69ea29f98266d93399957fd1",
+       "headline": "My botched boob job has cost taxpayers thousands - I needed 3 NHS ops to fix it",
+       "url": "https://www.thescottishsun.co.uk/fabulous/16186160/botched-turkey-boob-job-cost-taxpayers-thousands/",
+       "publisher": "thescottishsun.co.uk",
+       "published_at": "2026-04-23T13:55:58",
+       "lede": "when devastated emma chester woke up to discover she’d been stripped naked after a botched boob op in turkey she thought she would at least receive an apology. instead, despite contracting sepsis, being left disfigured for life and needing three emergency operations back in the uk, she is the one",
+       "sentiment": {
+        "label": "extreme_neg",
+        "score": 0.65,
+        "group": "negative"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 110,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Other",
+         "score": 0.64
+        },
+        {
+         "code": 625,
+         "path": "/Health/Medical Facilities & Services/Medical Procedures/Surgery/Cosmetic Surgery",
+         "score": 0.51
+        }
+       ],
+       "country": "turkey",
+       "organizations": [
+        "emma",
+        "she"
+       ],
+       "people": []
+      },
+      {
+       "id": "69e99ddd75f157062cb16daa",
+       "headline": "A Deep Dive Into Artificial Intelligence Naics Code",
+       "url": "https://www.thedetroitbureau.com/www-news/a-deep-dive-into-artificial-intelligence-naics-code-dhzd8bwjbg99",
+       "publisher": "thedetroitbureau.com",
+       "published_at": "2026-04-22T03:32:49",
+       "lede": "paris (apr 23) — one of the most alarming aspects of sepsis is its potential to affect anyone, regardless of age or health status. while certain populations, such as the elderly, young children, and those with weakened immune systems, are at higher risk, no one is completely immune. early detection",
+       "sentiment": {
+        "label": "very_pos",
+        "score": 0.29,
+        "group": "positive"
+       },
+       "priority": 8,
+       "classes": [
+        {
+         "code": 39,
+         "path": "/Health/Health Conditions/Infectious Diseases/Other",
+         "score": 0.45
+        },
+        {
+         "code": 74,
+         "path": "/Health/Medical Literature & Resources/Other",
+         "score": 0.4
+        }
+       ],
+       "country": "brazil",
+       "organizations": [],
+       "people": []
+      }
+     ],
+     "returned": 10,
+     "total_estimate": 670,
+     "next_cursor": "eyJ2IjoxLCJzIjoicHJpb3JpdHkiLCJkIjoiMjAyNi0wNC0yMiAwMzozMjo0OSIsImkiOiI2OWU5OWRkZDc1ZjE1NzA2MmNiMTZkYWEiLCJwIjo4fQ",
+     "unresolved": 15,
+     "duplicates_dropped": 0,
+     "limit": 25,
+     "sort": "priority"
+    },
+    "window": {
+     "since": "2026-01-01",
+     "until": "2026-04-30",
+     "days": 120,
+     "data_through": "2026-08-24",
+     "freshness": "volume thins after 2026-05; the last months are partial"
+    },
+    "meta": {
+     "seconds": 6.523,
+     "coverage": {
+      "available": false
+     },
+     "notes": [
+      "Some requested articles are temporarily unavailable.",
+      "15 requested article(s) are unavailable"
+     ],
+     "request_seconds": 6.525
+    }
+   }
+  }
+ ]
+}
