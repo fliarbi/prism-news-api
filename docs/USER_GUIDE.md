@@ -333,7 +333,7 @@ The article count is supplied by Fliar; query counts reflect the available match
 
 Overview, comparison, geography and coverage can return successful zero counts. When the denominator is zero, percentages are `null`. These results differ from a failed coverage check (`503`) or the `404 no_data` used by some listing and discovery endpoints.
 
-`/v1/status` returns `data.healthy`, `data.data_through`, `data.freshness`, `data.location_coverage_note` and `data.archive`. The `archive` object describes the news data and has `article_count_display="450M+"`, `scope="Fliar news archive"` and `note`. Read `data.healthy` even when the status endpoint returns HTTP 200; use `/v1/coverage` to examine your own query's available signals.
+`/v1/status` returns `data.healthy`, `data.data_through`, `data.freshness`, `data.location_coverage_note` and `data.archive`. The `archive` object describes the news data and has `article_count_display="450M+"`, `scope="Fliar historical and real-time news"` and `note`. Read `data.healthy` even when the status endpoint returns HTTP 200; use `/v1/coverage` to examine your own query's available signals.
 
 ### Related reading
 
