@@ -7,10 +7,11 @@ then lists every command of the `prism-news` client.
 
 ## 1. Get a key
 
-Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=apikeys) and open
-**Fliar Prism workspace → API keys**. Create a key and copy it when it is shown; it is
-displayed once. One key works on both the News API and the Business News API, and both
-share one monthly quota. During the private preview you also receive the API base URL(s).
+During the private preview, API keys are issued by Fliar on request: ask Fliar for a
+preview key and you receive the key and the API base URL(s). Self-service key creation
+in the Fliar dashboard is not live yet; it will appear there when the API launches. One
+key works on both the News API and the Business News API, and both share one monthly
+quota. Keep the key private; it is shown once.
 
 ## 2. Install the client in one line
 

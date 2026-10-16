@@ -20,8 +20,8 @@ Explore Fliar’s **450M+ news archive**. Discover relevant themes, compare subj
 
 ## Access and authentication
 
-1. Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=apikeys).
-2. Open **Fliar Prism workspace → API keys**. When key issuance is enabled for your account, create a named key and copy it when shown. If the control is absent or disabled, request preview access from Fliar; dashboard production rollout is pending.
+1. Request a preview API key from Fliar. Self-service key creation in the Fliar dashboard is not live yet; it will appear there when the API launches.
+2. You receive the key once; copy it when shown.
 3. Use the News API base URL supplied with your access. For business endpoints, use the separately supplied business base URL.
 4. Keep the key in an environment variable or your application's secret storage. Use it from your application backend; do not embed it in a public page, repository or URL.
 

@@ -139,7 +139,7 @@ def authenticate(headers: Mapping[str, str]) -> Principal:
     if not key:
         raise ApiError("unauthenticated",
                        "no API key: send `X-API-Key: pna_…` or `Authorization: Bearer pna_…`. "
-                       "Keys are issued in the Fliar dashboard (Fliar Prism workspace → API keys).")
+                       "During the preview, keys are issued by Fliar on request.")
     if not KEY_RE.match(key):
         raise ApiError("invalid_key", "malformed key: expected pna_ followed by 40 hex characters")
     h = hash_key(key)
