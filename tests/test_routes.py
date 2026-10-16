@@ -207,7 +207,7 @@ def test_request_quota_402_with_upgrade_url(client, principal):
     r = client.get("/v1/headlines", headers=H(client))
     b = _env(r)
     assert r.status_code == 402 and b["error"]["kind"] == "quota_exceeded"
-    assert b["error"]["upgrade_url"] == "https://fliarbi.com/radar/dashboard?tab=apikeys"
+    assert b["error"]["upgrade_url"] == "https://fliarbi.com/radar/dashboard?tab=radarapi"
     assert b["meta"]["quota"]["requests"]["used"] == 1 and r.headers["X-Quota-Requests-Remaining"] == "0"
     assert client.get("/v1/me", headers=H(client)).status_code == 200      # unmetered still works
 

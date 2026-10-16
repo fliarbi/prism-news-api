@@ -92,3 +92,91 @@ def test_plans_catalog_shape(plans):
             assert isinstance(cfg[k], int), (name, k)
     assert plans["free"]["history_days"] == 365
     assert config.public_plan(plans["free"])["label"] == "Free"
+
+
+# ── rdr_ keys: one key for Radar API and Prism News ──────────────────────────
+RDR = "rdr_" + "cd" * 32
+USER_ID = "64b7f0c2a1b2c3d4e5f60718"
+
+
+@pytest.fixture
+def gateway(monkeypatch):
+    """A stand-in for the Radar API gateway's private key check."""
+    import json
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+
+    seen = {}
+    reply = {"ok": True, "data": {"active": True, "account_id": USER_ID, "key_id": "k1", "name": "My app",
+                                  "last4": "cdcd", "scopes": ["*"], "expires_at": 0}}
+
+    class H(BaseHTTPRequestHandler):
+        def do_POST(self):
+            seen["path"], seen["secret"], seen["host"] = self.path, self.headers.get("X-Introspect-Secret"), self.headers.get("Host")
+            seen["body"] = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+            out = json.dumps(reply).encode()
+            self.send_response(200)
+            self.send_header("Content-Length", str(len(out)))
+            self.end_headers()
+            self.wfile.write(out)
+
+        def log_message(self, *a):
+            pass
+
+    srv = HTTPServer(("127.0.0.1", 0), H)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    monkeypatch.setattr(config, "RADAR_KEYS_URL", f"http://127.0.0.1:{srv.server_port}")
+    monkeypatch.setattr(config, "RADAR_KEYS_SECRET", "x" * 40)
+    monkeypatch.setattr(config, "RADAR_KEYS_HOST", "radar-api.example")
+
+    from bson import ObjectId
+
+    class Users:
+        def find_one(self, q, proj=None):
+            return {"_id": q["_id"], "email": "a@example.com", "email_verified": True} if q["_id"] == ObjectId(USER_ID) else None
+
+    class DB:
+        users = Users()
+
+    monkeypatch.setattr(auth, "mongo_db", lambda: DB())
+    monkeypatch.setattr(auth, "touch_last_used", lambda key_id: None)
+    auth.clear_cache()
+    yield seen, reply
+    srv.shutdown()
+    auth.clear_cache()
+
+
+def test_radar_key_resolves_to_the_same_account_and_news_plan(gateway):
+    seen, _ = gateway
+    p = auth.authenticate({"x-api-key": RDR})
+    assert p.user_id == USER_ID and p.plan == "free" and p.key_prefix == "rdr_…cdcd" and p.key_id == "rdr:k1"
+    assert seen["path"] == "/internal/keys/introspect" and seen["secret"] == "x" * 40
+    assert seen["host"] == "radar-api.example" and seen["body"] == {"api_key": RDR}
+
+
+@pytest.mark.parametrize("data,reason", [({"active": False, "reason": "unauthorized"}, "revoked"),
+                                         ({"active": True, "account_id": USER_ID, "scopes": ["companies"]}, "news access"),
+                                         ({"active": True, "account_id": "64b7f0c2a1b2c3d4e5f60719", "scopes": ["news"]}, "no account")])
+def test_radar_key_rejected_when_inactive_unscoped_or_unknown(gateway, data, reason):
+    _, reply = gateway
+    reply["data"] = data
+    with pytest.raises(ApiError) as e:
+        auth.authenticate({"x-api-key": RDR})
+    assert e.value.kind == "invalid_key" and reason in e.value.reason
+
+
+def test_radar_keys_refused_when_not_configured(monkeypatch):
+    monkeypatch.setattr(config, "RADAR_KEYS_URL", "")
+    auth.clear_cache()
+    with pytest.raises(ApiError) as e:
+        auth.authenticate({"x-api-key": RDR})
+    assert e.value.kind == "invalid_key"
+
+
+def test_radar_key_service_down_is_upstream_not_invalid(monkeypatch):
+    monkeypatch.setattr(config, "RADAR_KEYS_URL", "http://127.0.0.1:9")
+    monkeypatch.setattr(config, "RADAR_KEYS_SECRET", "x" * 40)
+    auth.clear_cache()
+    with pytest.raises(ApiError) as e:
+        auth.authenticate({"x-api-key": RDR})
+    assert e.value.kind == "upstream"

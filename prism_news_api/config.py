@@ -20,7 +20,8 @@ PACKAGE_DIR = Path(__file__).resolve().parent
 PRODUCT = "prism_api"
 KEY_PREFIX = "pna_"
 KEY_LENGTH = 44                      # "pna_" + 40 hex
-UPGRADE_URL = "https://fliarbi.com/radar/dashboard?tab=apikeys"
+UPGRADE_URL = "https://fliarbi.com/radar/dashboard?tab=radarapi"
+KEYS_URL = "https://fliarbi.com/radar-api/developer"   # create and manage keys (shared with Radar API)
 
 
 def load_env_file(path: Path | str) -> None:
@@ -60,6 +61,11 @@ EXPECTED_ROWS = 255_586_690
 # lets the coverage gate pass, so documentation can be captured during a shard
 # outage. Counts are then lower bounds. Never set on a serving deployment.
 PARTIAL_CAPTURE = _env("PRISM_PARTIAL_CAPTURE", "") == "1"
+# One key for Radar and Prism News: rdr_ keys are confirmed by the Radar API gateway's
+# private key check (local address + shared secret). Unset -> only pna_ keys work.
+RADAR_KEYS_URL = _env("PRISM_RADAR_KEYS_URL", "").rstrip("/")
+RADAR_KEYS_HOST = _env("PRISM_RADAR_KEYS_HOST", "")
+RADAR_KEYS_SECRET = _env("PRISM_RADAR_KEYS_SECRET", "")
 
 # ── MongoDB (identity) ───────────────────────────────────────────────────────
 MONGO_URI = _env("PRISM_MONGO_URI", "mongodb://localhost:27017/")
