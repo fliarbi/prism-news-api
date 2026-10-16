@@ -230,7 +230,7 @@ def require_coverage() -> dict:
 
 def partial_note() -> str | None:
     """The lower-bound note added to every response while partial serving answers
-    from the reachable part of the archive. None when the archive is complete."""
+    from the reachable part of the news index. None when it is complete."""
     if not config.PARTIAL_CAPTURE:
         return None
     try:
@@ -240,7 +240,7 @@ def partial_note() -> str | None:
     if not c.get("partial"):
         return None
     share = f"about {c['pct']:.0f}% of" if c.get("pct") else "part of"
-    return (f"Part of the archive is temporarily offline; this answer uses {share} archived "
+    return (f"Part of the news index is temporarily offline; this answer uses {share} indexed "
             "articles, so counts are lower bounds.")
 
 

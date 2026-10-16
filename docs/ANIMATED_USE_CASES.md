@@ -20,7 +20,7 @@ render below on GitHub. Each carries a persistent data-provenance badge.
 | GCP class code map | Class discovery for two topics |
 | Full articles to CSV | One full-article export batch |
 
-Green badges cite saved responses of the real API, captured on the date shown. These were captured while part of the archive was offline (93% of archive rows (1 of 14 shards offline)), so counts are lower bounds, and some articles could not be fetched; each demo says how many.
+Green badges cite saved responses of the real API, captured on the date shown. These were captured while part of the news index was offline (93% of indexed articles (1 of 14 shards offline)), so counts are lower bounds, and some articles could not be fetched; each demo says how many.
 
 To ask an agent for a similar view, prepend this instruction to a prompt:
 
@@ -30,11 +30,11 @@ To ask an agent for a similar view, prepend this instruction to a prompt:
 
 ## EV theme discovery
 
-![Discover the themes behind a topic. Captured data · 15 Oct 2026 · 93% of archive rows.](demos/media/ev-theme-discovery.gif)
+![Discover the themes behind a topic. Captured data · 15 Oct 2026 · 93% of indexed articles.](demos/media/ev-theme-discovery.gif)
 
 **Prompt:** What is driving electric vehicle news in March and April 2026? Rank the themes, then show me the headlines behind the strongest one.
 
-**What you would see:** Theme discovery ranks up to five themes for a required phrase by lift: how much more often a theme appears in this coverage than in the 30-day archive baseline, weighted by support. The chart shows lift with each theme's article count and period-over-period change, then the detail view opens newest headlines for the strongest theme with sentiment, priority and class kept visible. Headlines do not carry theme metadata; the selected theme is passed back as a filter.
+**What you would see:** Theme discovery ranks up to five themes for a required phrase by lift: how much more often a theme appears in this coverage than in the 30-day all-news baseline, weighted by support. The chart shows lift with each theme's article count and period-over-period change, then the detail view opens newest headlines for the strongest theme with sentiment, priority and class kept visible. Headlines do not carry theme metadata; the selected theme is passed back as a filter.
 
 **Request recipe:** `POST /v1/themes`, `POST /v1/headlines`. Selection, charting and file writing are client actions.
 
@@ -44,11 +44,11 @@ Captured responses: [ev-themes.json](examples/demo/ev-themes.json), [ev-theme-he
 
 ## Tariff sentiment shift
 
-![Watch the tone of a story change week by week. Captured data · 15 Oct 2026 · 93% of archive rows.](demos/media/tariff-sentiment.gif)
+![Watch the tone of a story change week by week. Captured data · 15 Oct 2026 · 93% of indexed articles.](demos/media/tariff-sentiment.gif)
 
 **Prompt:** Track the tone of tariff coverage week by week from March to April 2026. When was it most negative, and which important headlines carried that tone?
 
-**What you would see:** The weekly sentiment timeline splits labelled articles into negative, neutral and positive groups. The stacked columns show the most negative week, and the summary compares the window's negative-to-positive ratio with the archive baseline. The detail view lists negative headlines rated priority 6 or higher from the same window, so a reader can see which stories carried the tone. Shares divide by articles carrying a sentiment label.
+**What you would see:** The weekly sentiment timeline splits labelled articles into negative, neutral and positive groups. The stacked columns show the most negative week, and the summary compares the window's negative-to-positive ratio with the all-news baseline. The detail view lists negative headlines rated priority 6 or higher from the same window, so a reader can see which stories carried the tone. Shares divide by articles carrying a sentiment label.
 
 **Request recipe:** `POST /v1/sentiment`, `POST /v1/headlines`. Selection, charting and file writing are client actions.
 
@@ -58,7 +58,7 @@ Captured responses: [tariff-sentiment.json](examples/demo/tariff-sentiment.json)
 
 ## Compare two topics
 
-![Compare two narratives over the same window. Captured data · 15 Oct 2026 · 93% of archive rows.](demos/media/ai-topic-compare.gif)
+![Compare two narratives over the same window. Captured data · 15 Oct 2026 · 93% of indexed articles.](demos/media/ai-topic-compare.gif)
 
 **Prompt:** Compare AI regulation and AI investment coverage over March–April 2026. Which grew faster, how much do they overlap, and how critical is each?
 
@@ -72,11 +72,11 @@ Captured responses: [ai-compare.json](examples/demo/ai-compare.json), [ai-regula
 
 ## Critical news alerts
 
-![Surface the critical stories in a busy topic. Captured data · 15 Oct 2026 · 93% of archive rows.](demos/media/critical-alerts.gif)
+![Surface the critical stories in a busy topic. Captured data · 15 Oct 2026 · 93% of indexed articles.](demos/media/critical-alerts.gif)
 
 **Prompt:** Show how semiconductor news splits by priority in March–April 2026, then list only the critical stories rated 7 or higher.
 
-**What you would see:** The priority distribution counts articles in bands 1–9 and reports the critical share (7–9) against the archive baseline. The detail view requests only priority 7 and above, so the reader sees just the urgent stories; repeated headlines from one publisher are shown once. Priority is an urgency rating from the pipeline, not a reliability judgement, and a keyword match can pull in non-news sources, so read the publisher.
+**What you would see:** The priority distribution counts articles in bands 1–9 and reports the critical share (7–9) against the all-news baseline. The detail view requests only priority 7 and above, so the reader sees just the urgent stories; repeated headlines from one publisher are shown once. Priority is an urgency rating from the pipeline, not a reliability judgement, and a keyword match can pull in non-news sources, so read the publisher.
 
 **Request recipe:** `POST /v1/priority`, `POST /v1/headlines`. Selection, charting and file writing are client actions.
 
@@ -86,7 +86,7 @@ Captured responses: [semiconductor-priority.json](examples/demo/semiconductor-pr
 
 ## GCP class code map
 
-![Turn a topic into GCP content-class codes. Captured data · 15 Oct 2026 · 93% of archive rows.](demos/media/class-code-map.gif)
+![Turn a topic into GCP content-class codes. Captured data · 15 Oct 2026 · 93% of indexed articles.](demos/media/class-code-map.gif)
 
 **Prompt:** Which GCP content-class codes cover vehicles and banking? Give me the codes and full paths so I can filter headlines by class.
 
@@ -100,7 +100,7 @@ Captured responses: [class-map-vehicle.json](examples/demo/class-map-vehicle.jso
 
 ## Full articles to CSV
 
-![Export full article text to a spreadsheet. Captured data · 15 Oct 2026 · 93% of archive rows.](demos/media/full-article-export.gif)
+![Export full article text to a spreadsheet. Captured data · 15 Oct 2026 · 93% of indexed articles.](demos/media/full-article-export.gif)
 
 **Prompt:** Export the full text of battery-storage articles from March–April 2026 to a CSV with headline, publisher, date, sentiment, priority and classes.
 

@@ -18,8 +18,8 @@ from fastapi.openapi.utils import get_openapi
 from . import __version__, ch, config, routers, explore_routes
 
 DESCRIPTION = """
-Explore a 450M+ news archive by topic, sentiment, importance, GCP content class,
-and combinations of filters. Archive size is supplied by Fliar; query counts
+Explore 450M+ historical and real-time news articles by topic, sentiment, importance, GCP content class,
+and combinations of filters. The article count is supplied by Fliar; query counts
 reflect available matching coverage. Browse 100 headlines or export 100 full
 articles by default. Discover up to five themes with a specific search phrase.
 

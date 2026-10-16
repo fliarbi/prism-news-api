@@ -42,7 +42,7 @@ def captured_on(names: list[str]) -> str:
 
 
 def coverage_note(names: list[str]) -> str | None:
-    """A partial-archive note carried by any captured source (counts are lower bounds)."""
+    """A partial-news-index note carried by any captured source (counts are lower bounds)."""
     notes = {read(n).get("coverage_note") for n in names} - {None}
     return "; ".join(sorted(notes)) or None
 

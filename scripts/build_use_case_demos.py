@@ -112,7 +112,7 @@ def provenance(stories: list[dict]) -> str:
     out = "Green badges cite saved responses of the real API, captured on the date shown."
     notes = {coverage_note([src["file"].rsplit("/", 1)[1][:-5]]) for st in stories for src in st["sources"] if src["kind"] == "captured"} - {None}
     if notes:
-        out += (f" These were captured while part of the archive was offline ({'; '.join(sorted(notes))}), so counts "
+        out += (f" These were captured while part of the news index was offline ({'; '.join(sorted(notes))}), so counts "
                 "are lower bounds, and some articles could not be fetched; each demo says how many.")
     if any(st["kind"] == "illustrative" for st in stories):
         out += (" Purple badges mark illustrative fixtures: fictional articles, publishers (.example domains) and counts in the "
@@ -133,8 +133,8 @@ def build() -> None:
         steps=[step("ev-themes", "Discover up to five themes"), step("ev-theme-headlines", "Read the selected theme's headlines"),
                local("Chart lift and support", "Client-side ranking view")],
         overview={"type": "bars", "title": "Five themes behind electric-vehicle coverage", "labelWidth": 500,
-                  "subtitle": f"Ranked by lift over the 30-day archive share · {themes['matched']:,} matching articles",
-                  "axisLabel": "Lift: theme share vs archive share",
+                  "subtitle": f"Ranked by lift over the 30-day all-news share · {themes['matched']:,} matching articles",
+                  "axisLabel": "Lift: theme share vs all-news share",
                   "rows": [{"label": label(t["theme"]), "sub": f"{t['count']:,} articles" + (f" · {t['delta_pct']:+.0f}% vs previous period" if t["delta_pct"] is not None else ""),
                             "value": t["lift"] or 0, "display": f"{t['lift']:.0f}× lift" if t["lift"] else "new vs baseline"} for t in themes["items"]],
                   "stats": [{"value": f"{themes['matched']:,}", "label": "matching articles"},
@@ -145,7 +145,7 @@ def build() -> None:
                 "subtitle": f"{theme_heads['total_estimate']:,} matching headlines · newest first · sentiment and priority kept",
                 "items": [card(a) for a in unique(theme_heads["items"])[:4]],
                 "note": "Headlines omit theme metadata; the theme was selected through discovery and passed as a filter." + missing(theme_heads)},
-        footnote="Lift compares with a 30-day archive baseline ending at data_through, when ingest is thin; it is relative prominence, not reliability.",
+        footnote="Lift compares with a 30-day all-news baseline ending at data_through, when ingest is thin; it is relative prominence, not reliability.",
         takeaway="Ask a broad topic, get ranked themes, then open the coverage behind the strongest one.",
         evidence_summary="Theme discovery plus headlines for the top theme",
         guide=f"{GUIDE}#discover-themes-and-read-articles"))
@@ -175,9 +175,9 @@ def build() -> None:
         detail={"type": "cards", "title": "Negative tariff headlines that mattered",
                 "subtitle": "sentiment = negative · priority ≥ 6 · same window · newest first",
                 "items": [card(a) for a in unique(neg["items"])[:4]],
-                "note": f"Baseline negative-to-positive ratio is {sent['baseline']['negative_to_positive_ratio']}; this window runs {sent['vs_baseline_ratio']}× the archive norm." + missing(neg)},
+                "note": f"Baseline negative-to-positive ratio is {sent['baseline']['negative_to_positive_ratio']}; this window runs {sent['vs_baseline_ratio']}× the all-news norm." + missing(neg)},
         footnote="Shares divide by articles carrying a sentiment label. A recent decline can reflect thinner coverage.",
-        takeaway="See when a story turned, how far it moved from the archive norm, and which headlines drove it.",
+        takeaway="See when a story turned, how far it moved from the all-news norm, and which headlines drove it.",
         evidence_summary="Weekly sentiment timeline plus negative headlines",
         guide=f"{GUIDE}#tone-priority-and-trends"))
 
@@ -227,7 +227,7 @@ def build() -> None:
                   "series": [{"name": "Articles", "values": [b["count"] for b in pri["bands"]]}],
                   "stats": [{"value": f"{pri['carrying']:,}", "label": "articles with a priority"},
                             {"value": f"{pri['critical']['count']:,}", "label": "critical (7–9)"},
-                            {"value": f"{pri['critical']['share']:.1f}%", "label": f"critical share (archive {pri['baseline']['critical_share']}%)"},
+                            {"value": f"{pri['critical']['share']:.1f}%", "label": f"critical share (all news {pri['baseline']['critical_share']}%)"},
                             {"value": f"{pri['mean_priority']}", "label": "mean priority"}]},
         detail={"type": "cards", "title": "Critical semiconductor stories", "subtitle": "priority_min = 7 · newest first",
                 "items": [card(a) for a in unique(crit["items"])[:4]],
@@ -293,10 +293,10 @@ def build() -> None:
         s["title"] = s["title"]
     kinds = Counter(s["kind"] for s in stories)
     paragraphs = {
-        "ev-theme-discovery": "Theme discovery ranks up to five themes for a required phrase by lift: how much more often a theme appears in this coverage than in the 30-day archive baseline, weighted by support. The chart shows lift with each theme's article count and period-over-period change, then the detail view opens newest headlines for the strongest theme with sentiment, priority and class kept visible. Headlines do not carry theme metadata; the selected theme is passed back as a filter.",
-        "tariff-sentiment": "The weekly sentiment timeline splits labelled articles into negative, neutral and positive groups. The stacked columns show the most negative week, and the summary compares the window's negative-to-positive ratio with the archive baseline. The detail view lists negative headlines rated priority 6 or higher from the same window, so a reader can see which stories carried the tone. Shares divide by articles carrying a sentiment label.",
+        "ev-theme-discovery": "Theme discovery ranks up to five themes for a required phrase by lift: how much more often a theme appears in this coverage than in the 30-day all-news baseline, weighted by support. The chart shows lift with each theme's article count and period-over-period change, then the detail view opens newest headlines for the strongest theme with sentiment, priority and class kept visible. Headlines do not carry theme metadata; the selected theme is passed back as a filter.",
+        "tariff-sentiment": "The weekly sentiment timeline splits labelled articles into negative, neutral and positive groups. The stacked columns show the most negative week, and the summary compares the window's negative-to-positive ratio with the all-news baseline. The detail view lists negative headlines rated priority 6 or higher from the same window, so a reader can see which stories carried the tone. Shares divide by articles carrying a sentiment label.",
         "ai-topic-compare": "Compare returns each query's count and the exact union of both, so overlap is measured rather than guessed. Weekly trends for each query, over identical dates, draw the two lines. The detail table adds each topic's peak week and critical share from its trend totals. Shares divide by the union and can sum past 100%.",
-        "critical-alerts": "The priority distribution counts articles in bands 1–9 and reports the critical share (7–9) against the archive baseline. The detail view requests only priority 7 and above, so the reader sees just the urgent stories; repeated headlines from one publisher are shown once. Priority is an urgency rating from the pipeline, not a reliability judgement, and a keyword match can pull in non-news sources, so read the publisher.",
+        "critical-alerts": "The priority distribution counts articles in bands 1–9 and reports the critical share (7–9) against the all-news baseline. The detail view requests only priority 7 and above, so the reader sees just the urgent stories; repeated headlines from one publisher are shown once. Priority is an urgency rating from the pipeline, not a reliability judgement, and a keyword match can pull in non-news sources, so read the publisher.",
         "class-code-map": "Class discovery searches the GCP content-class taxonomy by name and returns up to five integer codes per query with full paths, parents and article volumes for the last 30 days of data. The tree shows the codes for two topics; the detail table turns them into ready-to-use `classes=` filters.",
         "full-article-export": "A JSON export returns full article bodies, not the short ledes in headline lists, and charges one export per delivered article. Articles that cannot be fetched, and republished copies of one article under different URLs, are dropped and not charged; the stats show both. The chart compares body lengths; the detail view shows the same batch in the CSV column layout. Continue with `next_cursor` from a JSON export when you need the next batch.",
     }

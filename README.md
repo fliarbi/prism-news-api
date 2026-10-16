@@ -1,8 +1,8 @@
 # Prism News API
 
-Explore Fliar’s **450M+ news archive**. Search news, combine sentiment, priority and GCP content codes, discover themes, compare subjects, and retrieve headlines or full articles.
+Explore **450M+ historical and real-time news articles** from Fliar. Search news, combine sentiment, priority and GCP content codes, discover themes, compare subjects, and retrieve headlines or full articles.
 
-**Live.** Base URL `https://radar-api.fliarbi.com/news` (business endpoints: `https://radar-api.fliarbi.com/business-news`). Create your own key in the Fliar dashboard; one key works on the Radar API and both News APIs. Free tier included; see [plans and prices](#plans-and-prices). While part of the archive is offline, answers say so in `meta.notes` and their counts are lower bounds.
+**Live.** Base URL `https://radar-api.fliarbi.com/news` (business endpoints: `https://radar-api.fliarbi.com/business-news`). Create your own key in the Fliar dashboard; one key works on the Radar API and both News APIs. Free tier included; see [plans and prices](#plans-and-prices). While part of the news index is offline, answers say so in `meta.notes` and their counts are lower bounds.
 
 <!-- scenarios:start -->
 ## 300 worked demonstrations
@@ -22,7 +22,7 @@ critical headlines, plus the exact CLI, curl and Python calls.
 | **[Energy and climate research](docs/scenarios/energy-climate/README.md)** | 50 | [Natural Gas](docs/scenarios/energy-climate/natural-gas-news.md) · [Petrol Price](docs/scenarios/energy-climate/petrol-price-news.md) · [Coal](docs/scenarios/energy-climate/coal-industry.md) · [Cyclone](docs/scenarios/energy-climate/cyclone-news.md) |
 
 Topics come from [keyword research](docs/research/KEYWORD_RESEARCH.md) (India and US monthly searches).
-Captured with 1 of 14 archive shards offline, so counts are lower bounds.
+Captured with 1 of 14 news-index shards offline, so counts are lower bounds.
 <!-- scenarios:end -->
 
 <!-- demos:start -->
@@ -44,7 +44,7 @@ official client interfaces or claims of live service availability. Open the
     <td width="50%" valign="top">
       <h3>Tariff sentiment shift</h3>
       <a href="docs/demos/media/tariff-sentiment.gif"><img src="docs/demos/media/tariff-sentiment.gif" width="420" alt="Watch the tone of a story change week by week"></a>
-      <p>See when a story turned, how far it moved from the archive norm, and which headlines drove it. Saved API responses.</p>
+      <p>See when a story turned, how far it moved from the all-news norm, and which headlines drove it. Saved API responses.</p>
     </td>
   </tr>
   <tr>
@@ -113,14 +113,21 @@ See [Getting started](docs/GETTING_STARTED.md) for options, every command and tr
 | Plan | Price / month (excl. GST) | Requests | Full-text exports | Headlines per call | History |
 |---|---|---:|---:|---:|---|
 | Free | ₹0 | 1,000 | 100 | 100 | Last 365 days |
-| Pro | ₹4,000 (US$49) | 25,000 | 2,500 | 100 | Full archive |
-| Business | ₹15,000 (US$180) | 150,000 | 15,000 | 500 | Full archive |
-| Enterprise | Custom | 2,000,000 | 200,000 | 1,000 | Full archive |
+| Pro | ₹4,000 (US$49) | 25,000 | 2,500 | 100 | Full history |
+| Business | ₹15,000 (US$180) | 150,000 | 15,000 | 500 | Full history |
+| Enterprise | Custom | 2,000,000 | 200,000 | 1,000 | Full history |
 
 One plan covers both the Prism News API and the Prism Business News API. Upgrade in the
 [Fliar dashboard](https://fliarbi.com/radar/dashboard?ws=marketai&tab=radarapi) under
 **API keys → Prism News API plans**; Enterprise is by arrangement with Fliar. `/v1/me`
 always shows the limits that apply to your key.
+
+**Pay as you go.** When a plan's monthly allowance is used up, requests continue on
+prepaid credits instead of stopping: **1 credit per request and 1 per full-text article**
+delivered (₹0.84 or US$0.01 per credit; minimum top-up 500 credits, US$5). Credits are
+bought on the [API key page](https://fliarbi.com/radar-api/developer), are shared with
+the Radar API, and stop at the monthly spending limit you set there. Failed requests are
+refunded, and a response paid with credits says so in `meta.notes`.
 
 ## Make a first request with curl or Python
 

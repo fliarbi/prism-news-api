@@ -1,6 +1,6 @@
 # Prism News API user guide
 
-Explore Fliar’s **450M+ news archive**. Discover relevant themes, compare subjects, and retrieve articles using the same filters throughout a workflow. This guide also defines the shared authentication, GCP content codes, exports and error handling used by the [Business News API](https://github.com/fliarbi/prism-business-news-api/blob/main/docs/USER_GUIDE.md).
+Explore **450M+ historical and real-time news articles** from Fliar. Discover relevant themes, compare subjects, and retrieve articles using the same filters throughout a workflow. This guide also defines the shared authentication, GCP content codes, exports and error handling used by the [Business News API](https://github.com/fliarbi/prism-business-news-api/blob/main/docs/USER_GUIDE.md).
 
 **Access status: live.** Base URL `https://radar-api.fliarbi.com/news`; business endpoints are at `https://radar-api.fliarbi.com/business-news`. Create a key in the Fliar dashboard under **API keys** (one key works on the Radar API and both News APIs). Free, Pro (₹4,000/month), Business (₹15,000/month) and Enterprise plans; prices exclude GST. Your `/v1/me` response gives the limits that apply to your key.
 
@@ -327,13 +327,13 @@ Country shares divide by **all matching articles**, including those without a kn
 
 ### Coverage
 
-Archive size is supplied by Fliar; query counts reflect the available matching coverage.
+The article count is supplied by Fliar; query counts reflect the available matching coverage.
 
 `GET/POST /v1/coverage` returns `data.matched` and `data.availability`. Its `sentiment`, `theme` and `location` entries each have `count` and `percentage`, measured within your filters. It reports availability of those signals, without exposing theme names. Percentages use matching articles as the denominator.
 
 Overview, comparison, geography and coverage can return successful zero counts. When the denominator is zero, percentages are `null`. These results differ from a failed coverage check (`503`) or the `404 no_data` used by some listing and discovery endpoints.
 
-`/v1/status` returns `data.healthy`, `data.data_through`, `data.freshness`, `data.location_coverage_note` and `data.archive`. The archive description has `article_count_display="450M+"`, `scope="Fliar news archive"` and `note`. Read `data.healthy` even when the status endpoint returns HTTP 200; use `/v1/coverage` to examine your own query's available signals.
+`/v1/status` returns `data.healthy`, `data.data_through`, `data.freshness`, `data.location_coverage_note` and `data.archive`. The `archive` object describes the news data and has `article_count_display="450M+"`, `scope="Fliar news archive"` and `note`. Read `data.healthy` even when the status endpoint returns HTTP 200; use `/v1/coverage` to examine your own query's available signals.
 
 ### Related reading
 
@@ -354,13 +354,13 @@ Related headlines must satisfy your filters and share relevant themes with the s
 
 ## Interpret results and freshness
 
-Always record the filters and dates alongside a count. A successful response establishes that the request succeeded, not that the archive is current to today or complete for every country and subject.
+Always record the filters and dates alongside a count. A successful response establishes that the request succeeded, not that the news data is current to today or complete for every country and subject.
 
 - **`data_through`** is the latest available date for the relevant coverage. It is not a promise of complete coverage through that day.
 - **`since` and `until`** describe the query that ran. Dates beyond `data_through` are reduced to available coverage; history allowances may shorten the beginning. Read `meta.notes`.
 - **`freshness`** describes limitations such as sparse recent coverage. A recent decline can reflect incomplete coverage rather than fewer real-world events.
 - **Coverage status** describes availability for the response. `503 coverage_unavailable` is not an empty result.
-- **Partial archive.** When part of the archive is temporarily offline, the service answers from the available part and puts "Part of the archive is temporarily offline … counts are lower bounds" first in `meta.notes`. Treat those counts as minimums.
+- **Partial news index.** When part of the news index is temporarily offline, the service answers from the available part and puts "Part of the news index is temporarily offline … counts are lower bounds" first in `meta.notes`. Treat those counts as minimums.
 - **`partial_period`** marks a time bucket only partly covered by the requested date interval. It does not certify that unflagged periods contain complete reporting. Compare complete periods with compatible freshness.
 - **`total_estimate`** on an article list counts matches before unavailable articles and page-level duplicate removal. It can exceed the number of unique articles you can download. Theme and class discovery return `total_estimate=null`; they do not expose a complete result dictionary.
 
@@ -374,7 +374,7 @@ Always record the filters and dates alongside a count. A successful response est
 
 ### Theme scores
 
-Theme `share` is a percentage of matching articles carrying themes, not all matching articles. Multiple themes can occur in one article, so shares need not sum to 100%. `lift` compares that share with a 30-day archive baseline; the ranking also weights article support. A high lift is relative prominence, not evidence of factual reliability.
+Theme `share` is a percentage of matching articles carrying themes, not all matching articles. Multiple themes can occur in one article, so shares need not sum to 100%. `lift` compares that share with a 30-day all-news baseline; the ranking also weights article support. A high lift is relative prominence, not evidence of factual reliability.
 
 `previous_period_count` uses the immediately preceding interval of equal length when that interval is within your plan’s history allowance. If it is outside the allowance, `previous_period`, `previous_period_count` and `delta_pct` are `null`, with a note. `delta_pct` is also `null` when the previous count is zero. `lift=null` with `new_vs_baseline=true` means no finite baseline ratio is available. Inspect the returned comparison dates; they can differ from the analysis window.
 
@@ -392,7 +392,7 @@ Counts describe reporting in available coverage. They are not counts of unique r
 
 ## Quotas, errors and retry
 
-Check `/v1/me` for `data.limits` and `data.usage`; it is authoritative for your key. Upgrade in the Fliar dashboard under **API keys → Prism News API plans**. Relevant limits include `requests_per_month`, `exports_per_month`, `rate_per_minute`, `history_days`, `max_results` and `max_export_batch`.
+Check `/v1/me` for `data.limits` and `data.usage`; it is authoritative for your key. Upgrade in the Fliar dashboard under **API keys → Prism News API plans**. After the plan allowance, requests and full-text articles continue pay-as-you-go on prepaid credits (1 credit each, ₹0.84 or US$0.01) bought on the API key page, up to the monthly spending limit you set; a paid response says so in `meta.notes`, and export responses report `charged_exports` (plan) and `charged_credits` (prepaid). Relevant limits include `requests_per_month`, `exports_per_month`, `rate_per_minute`, `history_days`, `max_results` and `max_export_batch`.
 
 Both headlines and exports default to **100**, on every plan. The caps per plan are below; your `/v1/me` response is authoritative for your access. Discovery remains capped at five regardless of plan.
 

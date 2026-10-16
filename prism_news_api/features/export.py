@@ -26,7 +26,7 @@ from typing import Optional
 
 from pydantic import Field
 
-from .. import articles, ch, config, envelope, filters, quota
+from .. import articles, ch, config, envelope, filters, payg, quota
 from ..auth import Principal
 from ..envelope import ApiError
 from . import _common as c
@@ -51,12 +51,13 @@ def run(p: Principal, req: ExportRequest, endpoint: str = "/v1/export") -> dict:
                              cap_field="max_export_batch")
     limit = int(p.plan_cfg.get("exports_per_month") or 0)
     remaining = quota.exports_remaining(p.user_id, p.key_id, limit)
-    if remaining <= 0:
-        raise ApiError("quota_exceeded",
-                       f"monthly export quota reached ({limit:,}/{limit:,}); resets on the 1st (UTC). "
-                       f"Upgrade at {config.UPGRADE_URL}",
-                       fields={"upgrade_url": config.UPGRADE_URL})
-    if r.limit > remaining:
+    exhausted = ApiError("quota_exceeded",
+                         f"monthly export quota reached ({limit:,}/{limit:,}); resets on the 1st (UTC). "
+                         f"Upgrade at {config.UPGRADE_URL}",
+                         fields={"upgrade_url": config.UPGRADE_URL})
+    if remaining <= 0 and not payg.enabled():
+        raise exhausted
+    if r.limit > remaining and not payg.enabled():
         r.notes.append(f"only {remaining} export(s) left this month; limit reduced from {r.limit}")
         r.limit = remaining
 
@@ -72,10 +73,22 @@ def run(p: Principal, req: ExportRequest, endpoint: str = "/v1/export") -> dict:
     has_more = len(rows) > r.limit
     page = rows[:r.limit]
 
-    granted = quota.reserve_exports(p.user_id, p.key_id, len(page), limit)
+    try:
+        granted = quota.reserve_exports(p.user_id, p.key_id, len(page), limit)
+    except ApiError as e:
+        if e.kind != "quota_exceeded":
+            raise
+        granted = 0
+    credit_id, credits = None, 0
     if granted < len(page):
-        r.notes.append(f"export batch reduced to {granted} by the remaining monthly quota")
-        page, has_more = page[:granted], True
+        try:   # the rest of the batch on prepaid credits, one per article delivered
+            credit_id = payg.reserve(p.user_id, "news:" + endpoint, len(page) - granted, exhausted)
+            credits = len(page) - granted
+        except ApiError as e:
+            if granted == 0 or e.kind != "quota_exceeded":
+                raise
+            r.notes.append(f"export batch reduced to {granted} by the remaining monthly quota")
+            page, has_more = page[:granted], True
     try:
         recs, store_errors = articles.resolve([row[0] for row in page], full=True)
         items, seen, unresolved, dups = [], set(), 0, 0
@@ -97,9 +110,14 @@ def run(p: Principal, req: ExportRequest, endpoint: str = "/v1/export") -> dict:
             items.append(c.item_of(row, rec, full=True))
     except BaseException:
         quota.refund_exports(p.user_id, p.key_id, granted)
+        payg.settle(credit_id, 0)
         raise
     delivered = len(items)
-    quota.refund_exports(p.user_id, p.key_id, granted - delivered)
+    from_plan = min(delivered, granted)
+    quota.refund_exports(p.user_id, p.key_id, granted - from_plan)
+    payg.settle(credit_id, delivered - from_plan)
+    if credits:
+        r.notes.append(f"{delivered - from_plan} full-text article(s) beyond the plan allowance used prepaid credits")
     quota.record_daily(p.user_id, p.key_id, endpoint, requests=0, exports=delivered)
 
     next_cursor = None
@@ -111,7 +129,8 @@ def run(p: Principal, req: ExportRequest, endpoint: str = "/v1/export") -> dict:
         notes.append(f"{unresolved} requested article(s) are unavailable; not charged")
     data = envelope.list_data(items, total_estimate=total, next_cursor=next_cursor,
                               unresolved=unresolved, duplicates_dropped=dups,
-                              charged_exports=delivered, format=fmt, limit=r.limit)
+                              charged_exports=from_plan, charged_credits=delivered - from_plan,
+                              format=fmt, limit=r.limit)
     env = envelope.ok(FEATURE, data, subject={"filters": r.subject(), "format": fmt},
                       window=window, meta=c.meta(t0, notes))
     return {"format": fmt, "envelope": env, "items": items}

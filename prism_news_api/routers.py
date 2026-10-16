@@ -25,7 +25,7 @@ from fastapi.responses import JSONResponse
 from pydantic import Field
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from . import auth, ch, config, envelope, quota, public
+from . import auth, ch, config, envelope, payg, quota, public
 from .auth import Principal
 from .ch import CHError
 from .envelope import ApiError
@@ -93,8 +93,19 @@ def _maybe_refresh_quota(request: Request) -> None:
     request.state.refresh_quota = False
 
 
+def settle_payg(request: Request, ok: bool) -> None:
+    """Charge the request's pay-as-you-go credit on success; refund it otherwise."""
+    for rid, units in _state(request, "payg") or []:
+        payg.settle(rid, units if ok else 0)
+    request.state.payg = []
+
+
 def respond(request: Request, env: dict, status: int | None = None,
             headers: dict | None = None) -> Response:
+    settle_payg(request, bool(env.get("ok")))
+    if _state(request, "payg_note") and env.get("ok"):
+        meta = env.setdefault("meta", {})
+        meta["notes"] = list(meta.get("notes") or []) + [_state(request, "payg_note")]
     _maybe_refresh_quota(request)
     env = _decorate(request, env)
     return EnvelopeJSON(env, status_code=status or envelope.status_of(env),
@@ -161,7 +172,14 @@ def _rate(request: Request, p: Principal) -> dict:
 
 def metered(request: Request, p: Principal = Depends(principal_dep)) -> Principal:
     rate = _rate(request, p)
-    quota.check_requests(p.user_id, p.key_id, int(p.plan_cfg.get("requests_per_month") or 0))
+    try:
+        quota.check_requests(p.user_id, p.key_id, int(p.plan_cfg.get("requests_per_month") or 0))
+    except ApiError as e:
+        if e.kind != "quota_exceeded":
+            raise
+        # Plan allowance used: continue on prepaid credits when the account has them.
+        request.state.payg = [(payg.reserve(p.user_id, "news:" + _route_path(request), 1, e), 1)]
+        request.state.payg_note = "Plan request allowance used; this request uses 1 prepaid credit."
     request.state.quota = quota.usage(p.user_id, p.key_id, p.plan_cfg, rate)
     quota.record_daily(p.user_id, p.key_id, _route_path(request))
     return p
@@ -226,6 +244,7 @@ def export_post(request: Request, req: export.ExportRequest, p: Principal = Depe
 
     def run():
         res = export.run(p, req, _route_path(request))
+        settle_payg(request, True)
         _maybe_refresh_quota(request)
         env = _decorate(request, res["envelope"])
         fmt = res["format"]

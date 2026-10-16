@@ -32,8 +32,8 @@ _FAILURES = {
 
 def archive() -> dict:
     return {"article_count_display": config.ARCHIVE_SIZE_DISPLAY,
-            "scope": "Fliar news archive",
-            "note": "Archive size is supplied by Fliar. Query counts reflect available matching coverage."}
+            "scope": "Fliar historical and real-time news",
+            "note": "The article count is supplied by Fliar. Query counts reflect available matching coverage."}
 
 
 def coverage(value: dict | None) -> dict:

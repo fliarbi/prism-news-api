@@ -110,7 +110,7 @@ Exit status is 0 on success and 1 on an API error, so the commands work in scrip
 | `prism-news headlines "phrase"` | `POST /v1/headlines` | Headlines for a filter set |
 | `prism-news me` | `GET /v1/me` | Your key, plan, limits and usage |
 | `prism-news overview "phrase"` | `POST /v1/overview` | Article count, tone and critical share |
-| `prism-news priority "phrase"` | `POST /v1/priority` | Priority distribution against the archive |
+| `prism-news priority "phrase"` | `POST /v1/priority` | Priority distribution against all news |
 | `prism-news related ID` | `GET /v1/articles/{arg}/related` | Related headlines |
 | `prism-news sentiment "phrase"` | `POST /v1/sentiment` | Sentiment distribution and timeline |
 | `prism-news status` | `GET /v1/status` | Service readiness and data dates |
@@ -129,10 +129,10 @@ Exit status is 0 on success and 1 on an API error, so the commands work in scrip
 | `Not configured` | Run `prism-news login`, or set `PRISM_API_BASE` and `PRISM_API_KEY` |
 | `command not found` | Add `~/.local/bin` to your `PATH`, or run it by full path |
 | `401 unauthenticated` / `invalid_key` | The key is wrong or revoked; create a new one in the dashboard and log in again |
-| `402 quota_exceeded` | Check `prism-news me`; the quota resets monthly |
+| `402 quota_exceeded` | The plan allowance is used and no prepaid credits are available: add credits and a monthly spending limit on the [API key page](https://fliarbi.com/radar-api/developer), upgrade the plan, or wait for the monthly reset |
 | `404 no_data` | The filters matched nothing in the window; drop a filter or widen the dates |
 | `429 rate_limited` | Wait for `Retry-After` and lower concurrency |
-| `503 coverage_unavailable` | Part of the archive is offline; retry later and do not record the result as zero |
+| `503 coverage_unavailable` | Part of the news index is offline; retry later and do not record the result as zero |
 | Download failed during install | Check your connection to github.com; a private fork also needs `GH_TOKEN` with Contents: read |
 
 The full API contract (filters, pagination, exports, errors) is in the [User guide](USER_GUIDE.md).

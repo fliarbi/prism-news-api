@@ -5,7 +5,7 @@ Each fixture has the exact response shape of its endpoint, but every article,
 publisher, organization and number in it is fictional (publishers and URLs use
 the reserved `.example` domain). Files are labelled `"kind": "illustrative"`
 and are never written over a real capture: run capture_demo_examples.py when
-the archive is fully available and the real responses replace these.
+the news index is fully available and the real responses replace these.
 """
 from __future__ import annotations
 
@@ -81,7 +81,7 @@ def fixtures() -> dict[str, dict]:
         "returned": 5, "total_estimate": None, "next_cursor": None, "matched": 3870, "carrying": 2140,
         "carrier_share_pct": 55.3, "previous_period": {"since": "2026-01-05", "until": "2026-03-01"},
         "baseline": {"since": "2026-07-26", "until": "2026-08-24", "days": 30, "articles": 1800000,
-                     "carrying": 990000, "note": "Archive comparison over the 30 days ending at data_through"},
+                     "carrying": 990000, "note": "Comparison with all news over the 30 days ending at data_through"},
         "min_articles": 5, "ranked_by": "lift over the theme's corpus-wide share, weighted by sqrt(count)"},
         filters(q="electric vehicle", limit=5))
     out["ev-theme-headlines"] = headlines([
@@ -112,7 +112,7 @@ def fixtures() -> dict[str, dict]:
         "groups": [{"group": g, "count": n, "share": round(n / carrying * 100, 2)} for g, n in groups.items()],
         "negative_to_positive_ratio": round(groups["negative"] / groups["positive"], 2),
         "baseline": {"since": "2026-07-26", "until": "2026-08-24", "days": 30, "articles": 1800000, "carrying": 1700000,
-                     "note": "Archive comparison over the 30 days ending at data_through",
+                     "note": "Comparison with all news over the 30 days ending at data_through",
                      "groups": {"negative": {"count": 610000, "share": 35.88}, "neutral": {"count": 330000, "share": 19.41},
                                 "positive": {"count": 760000, "share": 44.71}}, "negative_to_positive_ratio": 0.8},
         "vs_baseline_ratio": round(groups["negative"] / groups["positive"] / 0.8, 2), "granularity": "weekly",
@@ -151,7 +151,7 @@ def fixtures() -> dict[str, dict]:
         "critical": {"min_band": 7, "count": sum(bands[6:]), "share": round(sum(bands[6:]) / carrying * 100, 2)},
         "mean_priority": 5.1,
         "baseline": {"since": "2026-07-26", "until": "2026-08-24", "days": 30, "articles": 1800000, "carrying": 1700000,
-                     "note": "Archive comparison over the 30 days ending at data_through", "critical_share": 16.7,
+                     "note": "Comparison with all news over the 30 days ending at data_through", "critical_share": 16.7,
                      "mean_priority": 4.9},
         "vs_baseline_critical": round(sum(bands[6:]) / carrying * 100 / 16.7, 2)}, filters(q="semiconductor"))
     out["semiconductor-critical"] = headlines([

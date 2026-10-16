@@ -3,7 +3,7 @@
 [Technology and AI research](README.md) · [All demonstrations](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [User guide](../../USER_GUIDE.md)
 
 > **Search demand:** “digital identity news” · 20/month India · 320/month US  
-> **Data:** Captured 16 Oct 2026 from the live API · 93% of archive rows (1 of 14 shards offline): counts are lower bounds. Five saved API responses: [digital-identity-news.json](../../examples/scenarios/digital-identity-news.json).
+> **Data:** Captured 16 Oct 2026 from the live API · 93% of indexed articles (1 of 14 shards offline): counts are lower bounds. Five saved API responses: [digital-identity-news.json](../../examples/scenarios/digital-identity-news.json).
 
 **Question.** How much digital identity coverage appeared between January and April 2026, how did it trend over twelve months, and which themes and critical headlines stood out?
 
@@ -39,7 +39,7 @@ Monthly matching articles for `digital identity` (`POST /v1/trends`, `granularit
 | Mar 2026 | 1,053 | 68% | 233 | 806 | █████████████████ |
 | Apr 2026 | 1,230 | 66% | 255 | 962 | ████████████████████ |
 
-The last four complete months averaged 1,038 articles a month against 677 in the first four (+53%). Archive intake also varies by month, so treat changes as coverage signals rather than event counts.
+The last four complete months averaged 1,038 articles a month against 677 in the first four (+53%). News intake also varies by month, so treat changes as coverage signals rather than event counts.
 
 ## Where it was reported
 
@@ -55,7 +55,7 @@ Top five countries (`POST /v1/geography`). 44% of matching articles carry a loca
 
 ## Themes that stood out
 
-Ranked by lift over each theme's share of the whole archive (`POST /v1/themes`). Change compares with 3 Sep 2025 – 31 Dec 2025.
+Ranked by lift over each theme's share of all news (`POST /v1/themes`). Change compares with 3 Sep 2025 – 31 Dec 2025.
 
 | Theme | Articles | Share | Change vs previous period |
 | --- | ---: | ---: | ---: |
@@ -65,7 +65,7 @@ Ranked by lift over each theme's share of the whole archive (`POST /v1/themes`).
 | network access control (nac) solutions | 85 | 3.5% | +49% |
 | payment systems and real-time transaction technologies | 70 | 2.9% | +169% |
 
-Lift compares with the archive's most recent 30 days, which are thin (intake slows after May 2026), so very large lift values mostly reflect that small baseline. Use the ranking, not the size of the lift.
+Lift compares with the most recent 30 days of all news, which are thin (intake slows after May 2026), so very large lift values mostly reflect that small baseline. Use the ranking, not the size of the lift.
 
 ## Critical headlines
 
@@ -115,7 +115,7 @@ for a in r.json()["data"]["items"]:
 
 - Window: 1 Jan – 30 Apr 2026 for counts, tone, locations, themes and headlines; May 2025 – Apr 2026 for the monthly series. Data runs through 24 Aug 2026; intake thins after May 2026.
 - `q` matches the opening text, article tags and named organisations or people, so broad words match broadly. Add `match=focused` or other filters to narrow it.
-- Captured while part of the archive was offline (93% of archive rows (1 of 14 shards offline)). Every count is a lower bound.
+- Captured while part of the news index was offline (93% of indexed articles (1 of 14 shards offline)). Every count is a lower bound.
 - Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating.
 - zero-count periods are included; partial_period marks buckets the window only partly covers
 - Country shares use all matching articles. Location information is incomplete and varies by period.

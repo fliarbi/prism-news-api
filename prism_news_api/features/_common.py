@@ -143,7 +143,7 @@ def baseline(name: str, label_expr: str, carrier: str, dt: str) -> dict:
 def baseline_block(b: dict) -> dict:
     return {"since": b["since"], "until": b["until"], "days": b["days"],
             "articles": b["articles"], "carrying": b["carrying"],
-            "note": "Archive comparison over the 30 days ending at data_through"}
+            "note": "Comparison with all news over the 30 days ending at data_through"}
 
 
 # ── time buckets ─────────────────────────────────────────────────────────────

@@ -18,12 +18,12 @@ screen. The [walkthroughs](../ANIMATED_USE_CASES.md) explain each case.
 ## Data
 
 All six news demos read **captured responses** (15 Oct 2026). They were captured
-while one of the archive's 14 shards was offline: 93% of rows were readable, and part
+while one of the news index's 14 shards was offline: 93% of rows were readable, and part
 of the article store was unreachable. The capture ran with `PRISM_PARTIAL_CAPTURE=1`, a
 demo-capture switch that is off by default and must never be set on a serving
 deployment, so every count shown is a lower bound and each badge says so. Headline and
 export demos state how many matching articles could not be fetched. Re-run the capture
-with the archive fully available (and without the switch) to replace them.
+with the news index fully available (and without the switch) to replace them.
 
 `scripts/illustrative_demo_fixtures.py` can still write fictional stand-ins in the real
 response shape (labelled "Illustrative data") for any capture that is missing; it
@@ -41,7 +41,7 @@ WebSocket), Chrome/Chromium, FFmpeg with GIF palette filters, and Pillow. Set
 ```bash
 PRISM_API_BASE=http://127.0.0.1:8800 PRISM_API_KEY=pna_... python3 scripts/capture_demo_examples.py
 # during a shard outage only, against a separate capture instance started with PRISM_PARTIAL_CAPTURE=1:
-#   PRISM_CAPTURE_COVERAGE="93% of archive rows (1 of 14 shards offline)" python3 scripts/capture_demo_examples.py
+#   PRISM_CAPTURE_COVERAGE="93% of indexed articles (1 of 14 shards offline)" python3 scripts/capture_demo_examples.py
 python3 scripts/build_use_case_demos.py
 node scripts/render_use_case_demos.mjs --inspect     # layout check frames in qa/private/inspect
 node scripts/render_use_case_demos.mjs --fps 10      # GIFs + posters

@@ -10,7 +10,7 @@ import re
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-from .. import articles, ch, envelope, quota
+from .. import articles, ch, envelope, payg, quota
 from datetime import date, timedelta
 from ..auth import Principal
 from ..envelope import ApiError
@@ -28,7 +28,14 @@ def article(p: Principal, article_id: str, endpoint: str = "/v1/articles/{id}") 
     ch.require_coverage()
     dt = ch.data_through()
     limit = int(p.plan_cfg.get("exports_per_month") or 0)
-    granted = quota.reserve_exports(p.user_id, p.key_id, 1, limit)
+    credit_id = None
+    try:
+        granted = quota.reserve_exports(p.user_id, p.key_id, 1, limit)
+    except ApiError as e:
+        if e.kind != "quota_exceeded":
+            raise
+        # Plan exports used: this article on one prepaid credit.
+        granted, credit_id = 0, payg.reserve(p.user_id, "news:" + endpoint, 1, e)
     try:
         until_x = (date.fromisoformat(dt) + timedelta(days=1)).isoformat()
         permitted = f"datetime < {ch.sql_str(until_x)}"
@@ -51,10 +58,12 @@ def article(p: Principal, article_id: str, endpoint: str = "/v1/articles/{id}") 
         item = c.item_of(row, rec, full=True)
     except BaseException:
         quota.refund_exports(p.user_id, p.key_id, granted)
+        payg.settle(credit_id, 0)
         raise
-    quota.record_daily(p.user_id, p.key_id, endpoint, requests=0, exports=1)
+    payg.settle(credit_id, 1)
+    quota.record_daily(p.user_id, p.key_id, endpoint, requests=0, exports=granted)
     window = {"published_at": item["published_at"], "data_through": dt,
               "freshness": ch.freshness_note()}
-    return envelope.ok(FEATURE, {"article": item, "charged_exports": 1},
+    return envelope.ok(FEATURE, {"article": item, "charged_exports": granted, "charged_credits": 0 if granted else 1},
                        subject={"id": aid}, window=window,
                        meta=c.meta(t0, c.store_notes(store_errors)))

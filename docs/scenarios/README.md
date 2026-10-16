@@ -17,7 +17,7 @@ only when the API returned populated results.
 | [Technology and AI research](technology-ai/README.md) | 50 | [Artificial Intelligence News](technology-ai/artificial-intelligence-news.md), [Tiktok News](technology-ai/tiktok-news.md), [Spacex News](technology-ai/spacex-news.md) |
 | [Energy and climate research](energy-climate/README.md) | 50 | [Natural Gas News](energy-climate/natural-gas-news.md), [Petrol Price News](energy-climate/petrol-price-news.md), [Coal Industry](energy-climate/coal-industry.md) |
 
-Captured 16 Oct 2026 from the live API. Part of the archive was offline (1 of 14 shards,
+Captured 16 Oct 2026 from the live API. Part of the news index was offline (1 of 14 shards,
 about 93% of rows available), so every count is a lower bound; some headlines were
 temporarily unavailable from the article store and each page says how many.
 

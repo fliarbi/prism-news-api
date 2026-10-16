@@ -122,3 +122,12 @@ def _strict_coverage_by_default(monkeypatch):
     (PRISM_SERVE_PARTIAL); partial-serving tests switch it on explicitly."""
     from prism_news_api import config as _config
     monkeypatch.setattr(_config, "PARTIAL_CAPTURE", False)
+
+
+@pytest.fixture(autouse=True)
+def _no_live_gateway(monkeypatch):
+    """Tests never reach the Radar API gateway the deployment .env configures
+    (rdr_ key checks, pay-as-you-go credits); gateway tests stub it explicitly."""
+    from prism_news_api import config as _config
+    monkeypatch.setattr(_config, "RADAR_KEYS_URL", "")
+    monkeypatch.setattr(_config, "RADAR_KEYS_SECRET", "")

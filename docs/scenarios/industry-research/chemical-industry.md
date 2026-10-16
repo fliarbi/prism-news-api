@@ -3,7 +3,7 @@
 [Industry research](README.md) · [All demonstrations](../README.md) · [Keyword research](../../research/KEYWORD_RESEARCH.md) · [User guide](../../USER_GUIDE.md)
 
 > **Search demand:** “chemical industry” · 5,400/month India · 2,400/month US  
-> **Data:** Captured 16 Oct 2026 from the live API · 93% of archive rows (1 of 14 shards offline): counts are lower bounds. Five saved API responses: [chemical-industry.json](../../examples/scenarios/chemical-industry.json).
+> **Data:** Captured 16 Oct 2026 from the live API · 93% of indexed articles (1 of 14 shards offline): counts are lower bounds. Five saved API responses: [chemical-industry.json](../../examples/scenarios/chemical-industry.json).
 
 **Question.** How much news did the chemical industry receive between January and April 2026, how critical and how negative was it, where was it reported, and which themes stood out?
 
@@ -39,7 +39,7 @@ Monthly matching articles for `chemical industry` (`POST /v1/trends`, `granulari
 | Mar 2026 | 542 | 54% | 175 | 348 | ████████████ |
 | Apr 2026 | 560 | 52% | 177 | 365 | ████████████ |
 
-The last four complete months averaged 600 articles a month against 310 in the first four (+94%). Archive intake also varies by month, so treat changes as coverage signals rather than event counts.
+The last four complete months averaged 600 articles a month against 310 in the first four (+94%). News intake also varies by month, so treat changes as coverage signals rather than event counts.
 
 ## Where it was reported
 
@@ -55,7 +55,7 @@ Top five countries (`POST /v1/geography`). 29% of matching articles carry a loca
 
 ## Themes that stood out
 
-Ranked by lift over each theme's share of the whole archive (`POST /v1/themes`). Change compares with 3 Sep 2025 – 31 Dec 2025.
+Ranked by lift over each theme's share of all news (`POST /v1/themes`). Change compares with 3 Sep 2025 – 31 Dec 2025.
 
 | Theme | Articles | Share | Change vs previous period |
 | --- | ---: | ---: | ---: |
@@ -65,7 +65,7 @@ Ranked by lift over each theme's share of the whole archive (`POST /v1/themes`).
 | agrochemicals development and distribution | 112 | 8.4% | +20% |
 | polymers and plastics production | 112 | 8.4% | +348% |
 
-Lift compares with the archive's most recent 30 days, which are thin (intake slows after May 2026), so very large lift values mostly reflect that small baseline. Use the ranking, not the size of the lift.
+Lift compares with the most recent 30 days of all news, which are thin (intake slows after May 2026), so very large lift values mostly reflect that small baseline. Use the ranking, not the size of the lift.
 
 ## Critical headlines
 
@@ -117,7 +117,7 @@ for a in r.json()["data"]["items"]:
 
 - Window: 1 Jan – 30 Apr 2026 for counts, tone, locations, themes and headlines; May 2025 – Apr 2026 for the monthly series. Data runs through 24 Aug 2026; intake thins after May 2026.
 - `q` matches the opening text, article tags and named organisations or people, so broad words match broadly. Add `match=focused` or other filters to narrow it.
-- Captured while part of the archive was offline (93% of archive rows (1 of 14 shards offline)). Every count is a lower bound.
+- Captured while part of the news index was offline (93% of indexed articles (1 of 14 shards offline)). Every count is a lower bound.
 - Tone shares use articles with a recognized sentiment; critical share uses articles with a priority rating.
 - zero-count periods are included; partial_period marks buckets the window only partly covers
 - Country shares use all matching articles. Location information is incomplete and varies by period.

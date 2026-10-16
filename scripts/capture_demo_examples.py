@@ -3,7 +3,7 @@
 
 Runs real requests against a running News API and saves each response under
 docs/examples/demo/, replacing the illustrative fixture of the same name.
-Requests that fail (for example `coverage_unavailable` while the archive is
+Requests that fail (for example `coverage_unavailable` while the news index is
 partly offline) are reported and leave the existing file untouched, so a demo
 stays labelled illustrative until a real capture succeeds. Account details
 (plan, quota, key) are removed before saving.
@@ -98,7 +98,7 @@ def capture(base: str, key: str, name: str) -> str:
         return f"not captured: HTTP {status} {(payload.get('error') or {}).get('kind')}"
     payload["meta"] = {k: v for k, v in (payload.get("meta") or {}).items() if k not in PRIVATE_META}
     record = {"name": name, "kind": "captured",
-              # set with PRISM_PARTIAL_CAPTURE runs, e.g. "93% of archive rows (1 of 14 shards offline)"
+              # set with PRISM_PARTIAL_CAPTURE runs, e.g. "93% of indexed articles (1 of 14 shards offline)"
               **({"coverage_note": os.environ["PRISM_CAPTURE_COVERAGE"]} if os.environ.get("PRISM_CAPTURE_COVERAGE") else {}),
               "captured_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
               "request": {"method": method, "path": path, "body": body}, "response": payload}

@@ -199,7 +199,7 @@ def test_serve_partial_answers_with_a_lower_bound_note(client, monkeypatch):
     r = client.get("/v1/headlines", headers=H(client))
     b = r.json()
     assert r.status_code == 200 and b["ok"]
-    assert b["meta"]["notes"][0].startswith("Part of the archive is temporarily offline; this answer uses about 93%")
+    assert b["meta"]["notes"][0].startswith("Part of the news index is temporarily offline; this answer uses about 93%")
     monkeypatch.setattr(ch, "coverage", lambda force=False: {"rows": 255_586_690, "expected": 255_586_690,
                                                              "pct": 100.0, "partial": False, "checked_at": 0})
     b = client.get("/v1/headlines", headers=H(client)).json()
@@ -501,4 +501,56 @@ def test_export_delivers_republished_copies_once(client, monkeypatch, fake_redis
     monkeypatch.setattr(articles, "resolve", lambda req, full=False: ({req[0]: REC[ids[0]], req[1]: copy}, []))
     b = client.post("/v1/export", json={"limit": 2}, headers=H(client)).json()
     assert b["data"]["returned"] == 1 and b["data"]["duplicates_dropped"] == 1 and b["data"]["charged_exports"] == 1
+    assert fake_redis.get(f"pna:exp:u:{principal_id()}:{quota.month_key()}") == "1"
+
+
+# ── pay-as-you-go: prepaid credits after the plan allowance ──────────────────
+@pytest.fixture
+def credits(monkeypatch):
+    """A stand-in for the gateway's credit endpoints: records reserve/settle calls."""
+    from prism_news_api import payg
+    calls = {"reserve": [], "settle": [], "refuse": False}
+
+    def post(path, body):
+        if path.endswith("/reserve"):
+            calls["reserve"].append(body)
+            if calls["refuse"]:
+                return 402, {"ok": False, "error": {"kind": "credits_required"}}
+            return 200, {"ok": True, "data": {"request_id": f"r{len(calls['reserve'])}"}}
+        calls["settle"].append(body)
+        return 200, {"ok": True, "data": {"settled": True}}
+
+    monkeypatch.setattr(payg, "enabled", lambda: True)
+    monkeypatch.setattr(payg, "_post", post)
+    return calls
+
+
+def test_requests_past_the_plan_use_one_prepaid_credit(client, principal, credits):
+    principal.plan_cfg["requests_per_month"] = 1
+    assert client.get("/v1/headlines", headers=H(client)).status_code == 200
+    assert credits["reserve"] == []
+    r = client.get("/v1/headlines", headers=H(client))
+    b = r.json()
+    assert r.status_code == 200 and credits["reserve"][0]["units"] == 1
+    assert credits["reserve"][0]["feature"] == "news:/v1/headlines"
+    assert credits["settle"] == [{"request_id": "r1", "actual": 1}]
+    assert any("1 prepaid credit" in n for n in b["meta"]["notes"])
+
+
+def test_failed_paid_request_is_refunded_and_refusal_explains_pay_as_you_go(client, principal, credits, monkeypatch):
+    principal.plan_cfg["requests_per_month"] = 0
+    monkeypatch.setattr(ch, "coverage", lambda force=False: {"rows": 1, "expected": 255_586_690,
+                                                             "pct": 0.0, "partial": True, "checked_at": 0})
+    assert client.get("/v1/headlines", headers=H(client)).status_code == 503
+    assert credits["settle"] == [{"request_id": "r1", "actual": 0}]
+    credits["refuse"] = True
+    r = client.get("/v1/headlines", headers=H(client))
+    assert r.status_code == 402 and "pay-as-you-go" in r.json()["error"]["reason"]
+
+
+def test_export_beyond_plan_charges_credits_only_for_delivered_articles(client, principal, credits, fake_redis):
+    principal.plan_cfg["exports_per_month"] = 1
+    b = client.post("/v1/export", json={"limit": 2}, headers=H(client)).json()
+    assert b["data"]["returned"] == 2 and b["data"]["charged_exports"] == 1 and b["data"]["charged_credits"] == 1
+    assert credits["reserve"][-1]["units"] == 1 and credits["settle"][-1] == {"request_id": "r1", "actual": 1}
     assert fake_redis.get(f"pna:exp:u:{principal_id()}:{quota.month_key()}") == "1"

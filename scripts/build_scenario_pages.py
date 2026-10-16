@@ -139,7 +139,7 @@ def page(s: dict, rec: dict, related: list[dict]) -> str:
             late = sum(p["articles"] for p in first[-4:]) / 4
             if early:
                 out += [f"The last four complete months averaged {n(round(late))} articles a month against {n(round(early))} in the first four ({late / early - 1:+.0%}). "
-                        "Archive intake also varies by month, so treat changes as coverage signals rather than event counts.", ""]
+                        "News intake also varies by month, so treat changes as coverage signals rather than event counts.", ""]
     if geo_items:
         out += ["## Where it was reported", "",
                 f"Top five countries (`POST /v1/geography`). {pct(geo.get('availability_pct'))} of matching articles carry a location.", "",
@@ -147,12 +147,12 @@ def page(s: dict, rec: dict, related: list[dict]) -> str:
                       [[title_case(g["country"]), n(g["count"]), pct(g["share_pct"])] for g in geo_items], "lrr"), ""]
     if themes:
         out += ["## Themes that stood out", "",
-                f"Ranked by lift over each theme's share of the whole archive (`POST /v1/themes`). Change compares with {day(th['previous_period']['since'])} – {day(th['previous_period']['until'])}." if th.get("previous_period") else "Ranked by lift (`POST /v1/themes`).", "",
+                f"Ranked by lift over each theme's share of all news (`POST /v1/themes`). Change compares with {day(th['previous_period']['since'])} – {day(th['previous_period']['until'])}." if th.get("previous_period") else "Ranked by lift (`POST /v1/themes`).", "",
                 table(["Theme", "Articles", "Share", "Change vs previous period"],
                       [[esc(t["theme"]), n(t["count"]), pct(t["share"]),
                         "new" if t.get("new_vs_baseline") and t.get("delta_pct") is None else (f"{t['delta_pct']:+.0f}%" if t.get("delta_pct") is not None else "—")]
                        for t in themes], "lrrr"), "",
-                "Lift compares with the archive's most recent 30 days, which are thin (intake slows after May 2026), so very large lift values mostly reflect that small baseline. Use the ranking, not the size of the lift.", ""]
+                "Lift compares with the most recent 30 days of all news, which are thin (intake slows after May 2026), so very large lift values mostly reflect that small baseline. Use the ranking, not the size of the lift.", ""]
     out += ["## Critical headlines", "",
             "Priority 6 and above, `match=focused`, sorted by priority (`POST /v1/headlines`, limit 25; up to 12 distinct headlines shown)."
             + (f" {unresolved} of the requested articles were temporarily unavailable from the article store at capture time, so fewer rows are shown." if unresolved else ""), ""]
@@ -166,7 +166,7 @@ def page(s: dict, rec: dict, related: list[dict]) -> str:
     caveats = [f"Window: 1 Jan – 30 Apr 2026 for counts, tone, locations, themes and headlines; May 2025 – Apr 2026 for the monthly series. Data runs through {day((sc.call_of(rec, 'overview')['response'].get('window') or {}).get('data_through'))}; intake thins after May 2026.",
                "`q` matches the opening text, article tags and named organisations or people, so broad words match broadly. Add `match=focused` or other filters to narrow it."]
     if rec.get("coverage_note"):
-        caveats.append(f"Captured while part of the archive was offline ({rec['coverage_note']}). Every count is a lower bound.")
+        caveats.append(f"Captured while part of the news index was offline ({rec['coverage_note']}). Every count is a lower bound.")
     caveats += [esc(x) for x in sc.notes(rec) if "unavailable" not in x.lower()]
     out += [f"- {c}" for c in caveats] + [""]
     out += ["## Related demonstrations", ""] + [f"- [{title_case(r['keyword']['phrase'])}]({r['slug']}.md)" for r in related] + [""]
@@ -240,7 +240,7 @@ only when the API returned populated results.
 
 {table(["Segment", "Pages", "Highest-demand pages"], rows, "lrl")}
 
-Captured {day(when)} from the live API. Part of the archive was offline (1 of 14 shards,
+Captured {day(when)} from the live API. Part of the news index was offline (1 of 14 shards,
 about 93% of rows available), so every count is a lower bound; some headlines were
 temporarily unavailable from the article store and each page says how many.
 
@@ -293,7 +293,7 @@ critical headlines, plus the exact CLI, curl and Python calls.
 {table(["Segment", "Pages", "Start with"], rows, "lrl")}
 
 Topics come from [keyword research](docs/research/KEYWORD_RESEARCH.md) (India and US monthly searches).
-Captured with 1 of 14 archive shards offline, so counts are lower bounds.
+Captured with 1 of 14 news-index shards offline, so counts are lower bounds.
 {sc.README_END}"""
     readme = sc.ROOT / "README.md"
     readme.write_text(sc.replace_section(readme.read_text(), section, sc.README_START, sc.README_END,

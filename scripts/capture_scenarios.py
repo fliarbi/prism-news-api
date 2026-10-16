@@ -10,8 +10,8 @@ Account details (plan, quota, key) are removed before saving.
     PRISM_API_BASE=http://127.0.0.1:8800 PRISM_API_KEY=pna_... \\
         python3 scripts/capture_scenarios.py [--segment ID] [--workers 4] [--redo]
 
-PRISM_CAPTURE_COVERAGE adds a coverage note (e.g. "93% of archive rows (1 of 14
-shards offline)") when the archive is only partly available.
+PRISM_CAPTURE_COVERAGE adds a coverage note (e.g. "93% of indexed articles (1 of 14
+shards offline)") when the news index is only partly available.
 """
 from __future__ import annotations
 
