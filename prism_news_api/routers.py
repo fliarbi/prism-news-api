@@ -72,6 +72,10 @@ def _decorate(request: Request, env: dict) -> dict:
             meta["quota"] = snap
         if p.notes:
             meta["notes"] = list(dict.fromkeys(list(meta.get("notes") or []) + list(p.notes)))
+    if env.get("ok"):
+        note = ch.partial_note()
+        if note:
+            meta["notes"] = list(dict.fromkeys([note] + list(meta.get("notes") or [])))
     meta.setdefault("request_seconds", round(time.time() - _state(request, "t0", time.time()), 3))
     return public.response(env)
 

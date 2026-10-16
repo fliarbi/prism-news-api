@@ -65,7 +65,7 @@ def _params(timeout: int | None) -> dict:
     return {
         "user": config.CH_USER,
         "password": config.CH_PASSWORD,
-        # strict, except in an explicit demo-capture run (config.PARTIAL_CAPTURE)
+        # strict, unless partial serving is switched on (config.PARTIAL_CAPTURE)
         "skip_unavailable_shards": "1" if config.PARTIAL_CAPTURE else "0",
         "max_execution_time": str(timeout or config.CH_MAX_EXECUTION_TIME),
         "priority": str(config.CH_PRIORITY),
@@ -216,7 +216,7 @@ def require_coverage() -> dict:
     """Called BEFORE any query a payload depends on. Partial → 503."""
     c = coverage()
     if c.get("partial") and config.PARTIAL_CAPTURE and c.get("rows"):
-        log.warning("PARTIAL_CAPTURE: serving %s of %s rows", c["rows"], c["expected"])
+        log.warning("partial serving: %s of %s rows", c["rows"], c["expected"])
         return c
     if c.get("partial"):
         why = c.get("error") or (f"strict row count {c.get('rows'):,} is below the "
@@ -226,6 +226,22 @@ def require_coverage() -> dict:
                        "answer is returned. " + why,
                        meta={"coverage": coverage_summary()})
     return c
+
+
+def partial_note() -> str | None:
+    """The lower-bound note added to every response while partial serving answers
+    from the reachable part of the archive. None when the archive is complete."""
+    if not config.PARTIAL_CAPTURE:
+        return None
+    try:
+        c = coverage()
+    except Exception:                      # the note never fails a request
+        return None
+    if not c.get("partial"):
+        return None
+    share = f"about {c['pct']:.0f}% of" if c.get("pct") else "part of"
+    return (f"Part of the archive is temporarily offline; this answer uses {share} archived "
+            "articles, so counts are lower bounds.")
 
 
 # ── data_through ─────────────────────────────────────────────────────────────

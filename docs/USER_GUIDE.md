@@ -360,6 +360,7 @@ Always record the filters and dates alongside a count. A successful response est
 - **`since` and `until`** describe the query that ran. Dates beyond `data_through` are reduced to available coverage; history allowances may shorten the beginning. Read `meta.notes`.
 - **`freshness`** describes limitations such as sparse recent coverage. A recent decline can reflect incomplete coverage rather than fewer real-world events.
 - **Coverage status** describes availability for the response. `503 coverage_unavailable` is not an empty result.
+- **Partial archive.** When part of the archive is temporarily offline, the service answers from the available part and puts "Part of the archive is temporarily offline … counts are lower bounds" first in `meta.notes`. Treat those counts as minimums.
 - **`partial_period`** marks a time bucket only partly covered by the requested date interval. It does not certify that unflagged periods contain complete reporting. Compare complete periods with compatible freshness.
 - **`total_estimate`** on an article list counts matches before unavailable articles and page-level duplicate removal. It can exceed the number of unique articles you can download. Theme and class discovery return `total_estimate=null`; they do not expose a complete result dictionary.
 

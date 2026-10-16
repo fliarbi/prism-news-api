@@ -57,10 +57,11 @@ NEWS_TABLE = _env("PRISM_NEWS_TABLE", "news.articles")
 # Strict row count on 2026-09-13. A shard outage returns SMALLER numbers, not
 # an error, so the coverage gate compares against this floor (re-measured hourly).
 EXPECTED_ROWS = 255_586_690
-# DEMO CAPTURE ONLY: `PRISM_PARTIAL_CAPTURE=1` reads past unavailable shards and
-# lets the coverage gate pass, so documentation can be captured during a shard
-# outage. Counts are then lower bounds. Never set on a serving deployment.
-PARTIAL_CAPTURE = _env("PRISM_PARTIAL_CAPTURE", "") == "1"
+# `PRISM_SERVE_PARTIAL=1` (owner decision 2026-10-16) reads past unavailable shards
+# instead of answering 503 coverage_unavailable. Every response then carries a note
+# that part of the archive is offline and counts are lower bounds.
+# `PRISM_PARTIAL_CAPTURE=1` is the older name used by documentation capture runs.
+PARTIAL_CAPTURE = _env("PRISM_SERVE_PARTIAL", "") == "1" or _env("PRISM_PARTIAL_CAPTURE", "") == "1"
 # One key for Radar and Prism News: rdr_ keys are confirmed by the Radar API gateway's
 # private key check (local address + shared secret). Unset -> only pna_ keys work.
 RADAR_KEYS_URL = _env("PRISM_RADAR_KEYS_URL", "").rstrip("/")

@@ -191,6 +191,21 @@ def test_coverage_gate_503_before_query(client, monkeypatch):
     assert len(client.fake.sql) == n                       # no query ran
 
 
+def test_serve_partial_answers_with_a_lower_bound_note(client, monkeypatch):
+    from prism_news_api import config
+    monkeypatch.setattr(ch, "coverage", lambda force=False: {"rows": 237_398_763, "expected": 255_586_690,
+                                                             "pct": 92.88, "partial": True, "checked_at": 0})
+    monkeypatch.setattr(config, "PARTIAL_CAPTURE", True)
+    r = client.get("/v1/headlines", headers=H(client))
+    b = r.json()
+    assert r.status_code == 200 and b["ok"]
+    assert b["meta"]["notes"][0].startswith("Part of the archive is temporarily offline; this answer uses about 93%")
+    monkeypatch.setattr(ch, "coverage", lambda force=False: {"rows": 255_586_690, "expected": 255_586_690,
+                                                             "pct": 100.0, "partial": False, "checked_at": 0})
+    b = client.get("/v1/headlines", headers=H(client)).json()
+    assert not any("temporarily offline" in n for n in b["meta"].get("notes") or [])
+
+
 def test_rate_limit_429_with_retry_after(client, principal):
     principal.plan_cfg["rate_per_minute"] = 2
     client.get("/v1/me", headers=H(client))
