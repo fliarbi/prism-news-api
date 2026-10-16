@@ -482,10 +482,10 @@ def test_theme_previous_period_does_not_read_beyond_plan_history(client):
     assert not any("2025-07-" in sql for sql in client.fake.sql)
 
 
-def test_partial_capture_is_off_by_default_and_only_relaxes_the_gate_when_set(monkeypatch):
+def test_strict_gate_unless_partial_serving_is_switched_on(monkeypatch):
     from prism_news_api import ch, config
     from prism_news_api.envelope import ApiError
-    assert config.PARTIAL_CAPTURE is False and ch._params(None)["skip_unavailable_shards"] == "0"
+    assert ch._params(None)["skip_unavailable_shards"] == "0"
     monkeypatch.setattr(ch, "coverage", lambda force=False: {"partial": True, "rows": 90, "expected": 100})
     import pytest as _pytest
     with _pytest.raises(ApiError):

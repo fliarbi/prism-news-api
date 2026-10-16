@@ -2,7 +2,7 @@
 
 Explore Fliar’s **450M+ news archive**. Discover relevant themes, compare subjects, and retrieve articles using the same filters throughout a workflow. This guide also defines the shared authentication, GCP content codes, exports and error handling used by the [Business News API](https://github.com/fliarbi/prism-business-news-api/blob/main/docs/USER_GUIDE.md).
 
-**Access status: private preview.** Production dashboard key issuance and the public API rollout are pending. Proposed API hosts are preview addresses, not confirmed live services. Use the `API_BASE` supplied with your access. Plans are drafts, with no active checkout; your access response supplies the limits applicable to your account.
+**Access status: live.** Base URL `https://radar-api.fliarbi.com/news`; business endpoints are at `https://radar-api.fliarbi.com/business-news`. Create a key in the Fliar dashboard under **API keys** (one key works on the Radar API and both News APIs). Free, Pro (₹4,000/month), Business (₹15,000/month) and Enterprise plans; prices exclude GST. Your `/v1/me` response gives the limits that apply to your key.
 
 ## Contents
 
@@ -22,13 +22,13 @@ Explore Fliar’s **450M+ news archive**. Discover relevant themes, compare subj
 
 1. Sign in to the [Fliar dashboard](https://fliarbi.com/radar/dashboard?tab=radarapi), open **API keys** (in the Radar or the Fliar Prism workspace) and choose **Create or manage API keys**. On the key page, choose **Connect Radar session**, pick **All data** or **News only** access and create a key. It starts with `rdr_` and also works on the Radar API.
 2. You receive the key once; copy it when shown.
-3. Use the News API base URL supplied with your access. For business endpoints, use the separately supplied business base URL.
+3. Use the base URL `https://radar-api.fliarbi.com/news`. Business endpoints are at `https://radar-api.fliarbi.com/business-news`.
 4. Keep the key in an environment variable or your application's secret storage. Use it from your application backend; do not embed it in a public page, repository or URL.
 
 For an interactive Bash session:
 
 ```bash
-read -r -p 'API base URL supplied with your access: ' API_BASE
+API_BASE=https://radar-api.fliarbi.com/news
 read -r -s -p 'API key: ' PRISM_API_KEY
 export API_BASE PRISM_API_KEY
 ```
@@ -392,11 +392,11 @@ Counts describe reporting in available coverage. They are not counts of unique r
 
 ## Quotas, errors and retry
 
-Check `/v1/me` for `data.limits` and `data.usage`; do not assume draft plan names or prices establish an active subscription. Relevant limits include `requests_per_month`, `exports_per_month`, `rate_per_minute`, `history_days`, `max_results` and `max_export_batch`.
+Check `/v1/me` for `data.limits` and `data.usage`; it is authoritative for your key. Upgrade in the Fliar dashboard under **API keys → Prism News API plans**. Relevant limits include `requests_per_month`, `exports_per_month`, `rate_per_minute`, `history_days`, `max_results` and `max_export_batch`.
 
-Both headlines and exports default to **100**, on every plan. The current draft caps are below; your `/v1/me` response is authoritative for your access. Discovery remains capped at five regardless of plan.
+Both headlines and exports default to **100**, on every plan. The caps per plan are below; your `/v1/me` response is authoritative for your access. Discovery remains capped at five regardless of plan.
 
-| Draft plan | Headline cap (`max_results`) | Export batch cap (`max_export_batch`) |
+| Plan | Headline cap (`max_results`) | Export batch cap (`max_export_batch`) |
 |---|---|---|
 | Free / Pro | 100 | 100 |
 | Business | 500 | 500 |
@@ -446,7 +446,7 @@ All `/v1` operations below require a key. “Request” means monthly request al
 | `GET /v1/articles/{article_id}` | Returned article ID; full article in `data.article`. | Request + 1 delivered article |
 | `GET /v1/articles/{article_id}/related` | Returned article ID plus required `q`; common filters, sort and cursor; 100 headlines by default, plan-bounded. | Request |
 | `POST /v1/export` | Common filters plus `format=json\|ndjson\|csv`; 100 full articles per batch by default. | Request + delivered articles |
-| `GET /v1/vocabulary` | Public sentiment labels, groups, priority bands, sort, format and plan metadata. No theme dictionary. Plans remain drafts. | No monthly request |
+| `GET /v1/vocabulary` | Public sentiment labels, groups, priority bands, sort, format and plan metadata. No theme dictionary. | No monthly request |
 | `GET /v1/me` | Account key summary, access limits and usage. | No monthly request |
 | `GET /v1/status` | Service availability and freshness; inspect `data.healthy`, not HTTP status alone. | No monthly request |
 

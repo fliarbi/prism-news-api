@@ -11,7 +11,7 @@ if [[ ${1:-} == --help ]]; then
 Install `prism-news` and `prism-business-news` (one client for both Prism News APIs).
 Requires Bash, curl and Python 3.8+.
 Environment:
-  GH_TOKEN          GitHub token with Contents: read on the repository (private preview only)
+  GH_TOKEN          GitHub token with Contents: read (only for a private fork)
   PRISM_BIN_DIR     Where the commands go (default: ~/.local/bin)
   PRISM_REF         Branch, tag or commit to install from (default: main)
   PRISM_REPO        Source repository (default: fliarbi/prism-news-api)
@@ -37,6 +37,10 @@ token=${GH_TOKEN:-${GITHUB_TOKEN:-}}
 if [[ -z $token ]] && command -v gh >/dev/null; then token=$(gh auth token 2>/dev/null || true); fi
 [[ -z $token || $token =~ ^[A-Za-z0-9_]+$ ]] || { echo 'Invalid GitHub token format.' >&2; exit 2; }
 
+# Public repositories: the raw file (no API rate limit). A token switches to the contents API,
+# which also serves private forks.
+url="https://raw.githubusercontent.com/$repo/$ref/scripts/prism_cli.py"
+[[ -z $token ]] || url="https://api.github.com/repos/$repo/contents/scripts/prism_cli.py?ref=$ref"
 echo "Downloading the Prism client from $repo ($ref)…"
 # The header arrives on stdin, so the token never appears in process arguments or files.
 if ! {
@@ -44,8 +48,8 @@ if ! {
   if [[ -n $token ]]; then printf 'header = "Authorization: Bearer %s"\n' "$token"; fi
 } | curl --config - --proto '=https' --proto-redir '=https' --fail --silent --show-error --location \
     --connect-timeout 15 --max-time 120 --retry 2 \
-    "https://api.github.com/repos/$repo/contents/scripts/prism_cli.py?ref=$ref" -o "$stage/prism_cli.py"; then
-  echo 'Download failed. During the private preview export GH_TOKEN with Contents: read access.' >&2
+    "$url" -o "$stage/prism_cli.py"; then
+  echo "Download failed. Check your connection to github.com (a private fork also needs GH_TOKEN)." >&2
   exit 1
 fi
 unset token GH_TOKEN GITHUB_TOKEN

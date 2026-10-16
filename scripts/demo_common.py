@@ -102,7 +102,7 @@ def gallery_html(data: list[dict], site: dict) -> str:
   <script src="demo-data.js" defer></script><script src="gallery.js" defer></script>
 </head>
 <body class="gallery-body">
-  <header class="gallery-top"><span class="prism-mark" aria-hidden="true"></span><a class="wordmark" href="index.html" style="color:inherit;text-decoration:none">{e(site['brand'])}</a><span class="top-divider" aria-hidden="true"></span><span class="top-name">Workflow gallery</span><span class="private">Private preview</span></header>
+  <header class="gallery-top"><span class="prism-mark" aria-hidden="true"></span><a class="wordmark" href="index.html" style="color:inherit;text-decoration:none">{e(site['brand'])}</a><span class="top-divider" aria-hidden="true"></span><span class="top-name">Workflow gallery</span><span class="private">Live API</span></header>
   <main class="gallery-main">
     <div class="gallery-intro"><h1>{site['headline']}</h1><p>{e(site['intro'])}</p></div>
     <div class="gallery-grid">

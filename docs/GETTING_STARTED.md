@@ -22,16 +22,12 @@ quota. Older `pna_` keys keep working.
 Requires Bash, curl and Python 3.8+ (standard library only).
 
 ```bash
-# private preview: GH_TOKEN needs Contents: read on this repository
-bash -o pipefail -c 'curl -fsSL --config <(printf "header = \"Authorization: Bearer %s\"\n" "${GH_TOKEN:?Export GH_TOKEN first}") https://raw.githubusercontent.com/fliarbi/prism-news-api/main/scripts/install.sh | bash'
-
-# after public release
 curl -fsSL https://raw.githubusercontent.com/fliarbi/prism-news-api/main/scripts/install.sh | bash
 ```
 
 | Installer setting | Default | Meaning |
 |---|---|---|
-| `GH_TOKEN` | — | Token for the private preview download; read from stdin by curl, never written to disk |
+| `GH_TOKEN` | — | Only for installing from a private fork; read from stdin by curl, never written to disk |
 | `PRISM_BIN_DIR` | `~/.local/bin` | Where `prism-news` and `prism-business-news` are placed |
 | `PRISM_REF` | `main` | Branch, tag or commit to install |
 | `PRISM_REPO` | `fliarbi/prism-news-api` | Repository to download the client from |
@@ -51,7 +47,7 @@ profiles or starts a service. Run `bash install.sh --help` for the same table.
 prism-news login
 ```
 
-You are asked for the News and Business News base URLs and your key (hidden input). The
+You are asked for the News and Business News base URLs (press Enter for `https://radar-api.fliarbi.com/news` and `https://radar-api.fliarbi.com/business-news`) and your key (hidden input). The
 client checks the key with `GET /v1/me` before saving anything, then stores it in
 `~/.config/prism/config.json` with owner-only permissions.
 
@@ -137,6 +133,6 @@ Exit status is 0 on success and 1 on an API error, so the commands work in scrip
 | `404 no_data` | The filters matched nothing in the window; drop a filter or widen the dates |
 | `429 rate_limited` | Wait for `Retry-After` and lower concurrency |
 | `503 coverage_unavailable` | Part of the archive is offline; retry later and do not record the result as zero |
-| Download failed during install | During the private preview, `GH_TOKEN` must have Contents: read on the repository |
+| Download failed during install | Check your connection to github.com; a private fork also needs `GH_TOKEN` with Contents: read |
 
 The full API contract (filters, pagination, exports, errors) is in the [User guide](USER_GUIDE.md).

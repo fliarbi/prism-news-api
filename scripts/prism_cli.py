@@ -30,6 +30,8 @@ from pathlib import Path
 VERSION = "1.0.0"
 CONFIG = Path(os.environ.get("XDG_CONFIG_HOME") or Path.home() / ".config") / "prism" / "config.json"
 FREE = {"me", "status", "vocabulary"}
+DEFAULT_BASES = {"news": "https://radar-api.fliarbi.com/news",
+                 "business": "https://radar-api.fliarbi.com/business-news"}
 
 # command -> (method, path); "{arg}" takes the positional argument.
 NEWS = {
@@ -79,7 +81,7 @@ def save_config(cfg: dict) -> None:
 
 def settings(product: str, env_base: str) -> tuple[str, str]:
     cfg = load_config()
-    base = os.environ.get(env_base) or cfg.get(f"{product}_base") or ""
+    base = os.environ.get(env_base) or cfg.get(f"{product}_base") or DEFAULT_BASES[product]
     key = os.environ.get("PRISM_API_KEY") or cfg.get("key") or ""
     if not base or not key:
         die(f"Not configured. Run `{prog()} login`, or set {env_base} and PRISM_API_KEY.")
@@ -176,10 +178,9 @@ def login(product: str, env_base: str) -> None:
     cfg = load_config()
     print("Prism API login. The key is stored owner-only in", CONFIG)
     for name, label in (("news", "News API base URL"), ("business", "Business News API base URL")):
-        current = cfg.get(f"{name}_base", "")
+        current = cfg.get(f"{name}_base", "") or DEFAULT_BASES[name]
         entered = input(f"{label}{f' [{current}]' if current else ''}: ").strip()
-        if entered:
-            cfg[f"{name}_base"] = entered.rstrip("/")
+        cfg[f"{name}_base"] = (entered or current).rstrip("/")
     key = getpass.getpass("API key (input hidden; leave empty to keep the saved key): ").strip()
     if key:
         cfg["key"] = key

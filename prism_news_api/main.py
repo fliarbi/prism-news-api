@@ -49,6 +49,9 @@ def create_app() -> FastAPI:
     app = FastAPI(title="Prism News Exploration API", version=__version__,
                   description=DESCRIPTION.strip(), docs_url="/docs", redoc_url=None,
                   openapi_url="/v1/openapi.json",
+                  # Public path prefix when served behind a proxy that strips it (e.g. /news),
+                  # so /docs loads the schema from the right URL. Empty when served at the root.
+                  root_path=os.environ.get("PRISM_ROOT_PATH", "").rstrip("/"),
                   contact={"name": "Fliar Business Intelligence", "url": "https://fliarbi.com"})
     app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=False,
                        allow_methods=["*"], allow_headers=["*"], expose_headers=EXPOSE_HEADERS)
