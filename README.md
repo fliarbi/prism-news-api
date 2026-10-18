@@ -1,5 +1,8 @@
 # Prism News API
 
+[![PyPI](https://img.shields.io/pypi/v/prism-news.svg?label=pip%20install%20prism-news)](https://pypi.org/project/prism-news/)
+[![Python](https://img.shields.io/pypi/pyversions/prism-news.svg)](https://pypi.org/project/prism-news/)
+
 Explore **450M+ historical and real-time news articles** from Fliar. Search news, combine sentiment, priority and GCP content codes, discover themes, compare subjects, and retrieve headlines or full articles.
 
 **Live.** Base URL `https://radar-api.fliarbi.com/news` (business endpoints: `https://radar-api.fliarbi.com/business-news`). Create your own key in the Fliar dashboard; one key works on the Radar API and both News APIs. Free tier included; see [plans and prices](#plans-and-prices). While part of the news index is offline, answers say so in `meta.notes` and their counts are lower bounds.
@@ -86,6 +89,39 @@ curl -fsSL https://raw.githubusercontent.com/fliarbi/prism-news-api/main/scripts
 ```
 
 See [Getting started](docs/GETTING_STARTED.md) for options, every command and troubleshooting.
+
+### Python package (pip)
+
+```bash
+pip install prism-news
+```
+
+The [`prism-news`](https://pypi.org/project/prism-news/) package (standard library only, Python 3.8+)
+installs the same `prism-news` and `prism-business-news` commands, a `Client` class, and loaders
+for 60 open news-topic datasets (January 2019 to July 2026):
+
+```python
+from prism_news import Client, datasets
+
+client = Client()                                   # key from PRISM_API_KEY
+client.headlines("electric vehicle", since="2026-01-01", limit=10)
+
+datasets.list_topics()                              # no key needed
+tables = datasets.load("floods")                    # sample, monthly, countries
+```
+
+Source, tests and examples: [packages/python](packages/python/README.md).
+
+### JavaScript / TypeScript client
+
+A zero-dependency ESM client with TypeScript types and a small CLI lives in
+[packages/npm](packages/npm/README.md). The npm registry release is pending; until then use it
+from a checkout:
+
+```bash
+git clone https://github.com/fliarbi/prism-news-api && cd prism-news-api/packages/npm && npm link
+prism-news --help
+```
 
 ## Get started in five steps
 

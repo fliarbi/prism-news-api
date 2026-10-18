@@ -104,7 +104,7 @@ option for a list. Environment overrides: `PRISM_API_KEY`, `PRISM_API_BASE`,
 ## Links
 
 - API docs and 300 worked examples: https://github.com/fliarbi/prism-news-api
-- JavaScript / TypeScript client: `npm install prism-news-api`
+- JavaScript / TypeScript client (zero dependencies, typed): [packages/npm](https://github.com/fliarbi/prism-news-api/tree/main/packages/npm)
 - Contact: b2b@fliarbi.com
 
 ## Licence

@@ -8,7 +8,7 @@
     datasets.list_topics()                 # 60 open topic datasets, 2019-2026
     tables = datasets.load("floods")       # sample, monthly, countries
 """
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .client import Client, PrismAPIError  # noqa: E402
 from . import datasets  # noqa: E402
