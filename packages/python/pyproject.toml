@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism-news"
+version = "0.1.0"
+description = "Python client, CLI and open topic datasets (2019-2026) for the Prism News API by Fliar"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Fliar Research", email = "b2b@fliarbi.com"}]
+requires-python = ">=3.8"
+dependencies = []
+keywords = ["news", "news-api", "datasets", "media-monitoring", "sentiment", "news-data", "open-data", "fliar"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.optional-dependencies]
+pandas = ["pandas"]
+
+[project.urls]
+Homepage = "https://fliarbi.com/"
+Documentation = "https://github.com/fliarbi/prism-news-api/tree/main/packages/python"
+Source = "https://github.com/fliarbi/prism-news-api"
+Datasets = "https://huggingface.co/fliarbi"
+
+[project.scripts]
+prism-news = "prism_news.cli:run"
+prism-business-news = "prism_news.cli:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
